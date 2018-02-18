@@ -4,6 +4,4 @@ _activated = _this select 2;
 
 if !(_activated && local _logic) exitWith {};
 
-
-
 deletevehicle _logic;
