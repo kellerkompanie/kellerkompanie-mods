@@ -1101,55 +1101,55 @@ class CfgSounds
 	sounds[] = {};
 	class keko_audio_horror_music_pack_scary
 	{
-		name = "Scary Sound 1"
+		name = "Scary Sound 1";
 		sound[] = {"\keko_audio\horror_music_pack\scary.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary1
 	{
-		name = "Scary Sound 1"
+		name = "Scary Sound 1";
 		sound[] = {"\keko_audio\horror_music_pack\scary1.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary2
 	{
-		name = "Scary Sound 2"
+		name = "Scary Sound 2";
 		sound[] = {"\keko_audio\horror_music_pack\scary2.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary3
 	{
-		name = "Scary Sound 3"
+		name = "Scary Sound 3";
 		sound[] = {"\keko_audio\horror_music_pack\scary3.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary4
 	{
-		name = "Scary Sound 4"
+		name = "Scary Sound 4";
 		sound[] = {"\keko_audio\horror_music_pack\scary4.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary5
 	{
-		name = "Scary Sound 5"
+		name = "Scary Sound 5";
 		sound[] = {"\keko_audio\horror_music_pack\scary5.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary6
 	{
-		name = "Scary Sound 6"
+		name = "Scary Sound 6";
 		sound[] = {"\keko_audio\horror_music_pack\scary6.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary7
 	{
-		name = "Scary Sound 7"
+		name = "Scary Sound 7";
 		sound[] = {"\keko_audio\horror_music_pack\scary7.ogg",1,1};
 		titles[] = {0,""};
 	};
 	class keko_audio_horror_music_pack_scary8
 	{
-		name = "Scary Sound 8"
+		name = "Scary Sound 8";
 		sound[] = {"\keko_audio\horror_music_pack\scary8.ogg",1,1};
 		titles[] = {0,""};
 	};
