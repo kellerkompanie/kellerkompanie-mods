@@ -1,0 +1,309 @@
+params ["_unit", "_faction", "_role"];
+
+hint format ["%1 %2 %3", _unit, _faction, _role];
+
+diag_log format ["_unit: %1", _unit];
+diag_log format ["_faction: %1", _faction];
+diag_log format ["_role: %1", _role];
+
+
+_role_config = configFile >> "kekoFaction" >> _faction >> _role;
+_weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
+_weapon_config = configFile >> "kekoWeapons" >> _weaponCfg;
+
+_uniform = getArray (_role_config >> "uniform");
+_uniformInventory = getArray (_role_config >> "uniformInventory");
+_vest = getArray (_role_config >> "vest");
+_vestInventory = getArray (_role_config >> "vestInventory");
+_backpack = getArray (_role_config >> "backpack");
+_backpackInventory = getArray (_role_config >> "backpackInventory");
+_helmet = getArray (_role_config >> "helmet");
+
+_medicClass = getNumber (_role_config >> "medicClass");
+_engineerClass = getNumber (_role_config >> "engineerClass");
+_rank = getText (_role_config >> "rank");
+
+_primary = getArray (_role_config >> "primary");
+_secondary = getArray (_role_config >> "secondary");
+_launcher = getArray (_role_config >> "launcher");
+
+_items = getArray (_role_config >> "items");
+
+_goggles = getArray (_role_config >> "goggles");
+
+_optics = getArray (_role_config >> "optics");
+
+
+removeAllWeapons player;
+removeAllItems player;
+removeAllAssignedItems player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
+removeGoggles player;
+
+player setVariable ["ace_medical_medicClass", _medicClass, true];
+player setVariable ["ACE_isEngineer", _engineerClass, true];
+
+player setUnitRank _rank;
+
+if(count _uniform != 0) then {
+	_random_uniform = selectRandom _uniform;
+	//_random_uniform = [_random_uniform] call keko_fnc_replaceKeyword;
+	player forceAddUniform _random_uniform;	
+};
+
+if(count _vest != 0) then {
+	_random_vest = selectRandom _vest;
+	//_random_vest = [_random_vest] call keko_fnc_replaceKeyword;
+	player addVest _random_vest;	
+};
+
+if(count _backpack != 0) then {
+	_random_backpack = selectRandom _backpack;
+	//_random_backpack = [_random_backpack] call keko_fnc_replaceKeyword;
+	player addBackpack _random_backpack;	
+};
+
+/* Workaround for Mods adding Medikits and Firstaidkits to Uniforms, Backpacks etc.*/
+clearAllItemsFromBackpack player;
+
+if(count _uniform != 0) then {
+	if(count _uniformInventory != 0) then {
+		{
+			for "_i" from 1 to (_x select 0) do {
+				_item = _x select 1;
+				//_item = [_item] call keko_fnc_replaceKeyword;
+				player addItemToUniform _item;
+			};		
+		} forEach _uniformInventory;
+	};
+};
+
+if(count _vest != 0) then {
+	if(count _vestInventory != 0) then {		
+		{ 
+			for "_i" from 1 to (_x select 0) do {
+				_item = _x select 1;
+				//_item = [_item] call keko_fnc_replaceKeyword;
+				player addItemToVest _item;
+			};		
+		} forEach _vestInventory;
+	};
+};
+
+if(count _backpack != 0) then {
+	if(count _backpackInventory != 0) then {		
+		{ 
+			for "_i" from 1 to (_x select 0) do {
+				_item = _x select 1;
+				//_item = [_item] call keko_fnc_replaceKeyword;
+				player addItemToBackpack _item;
+			};		
+		} forEach _backpackInventory;
+	};
+};
+
+
+
+if(count _helmet != 0) then {
+	_random_helmet = selectRandom _helmet;
+	//_random_helmet = [_random_helmet] call keko_fnc_replaceKeyword;
+	player addHeadgear _random_helmet;
+};
+
+
+if(count _primary != 0) then {
+	_randomPrimaryEntry = selectRandom _primary;
+	_primaryCfg = _weapon_config >> _randomPrimaryEntry;
+
+	_primary_cfgName = getText (_primaryCfg >> "cfgName");
+	_primary_items = getArray (_primaryCfg >> "items");
+	_primary_magazines = getArray (_primaryCfg >> "magazines");
+	_primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
+
+	player addWeapon _primary_cfgName;
+
+	if(count _primary_items != 0) then {
+		{ 
+			_item = _x;
+			//_item = [_item] call keko_fnc_replaceKeyword; 
+			player addPrimaryWeaponItem _item; 
+		} forEach _primary_items;
+	};	
+
+	if(count _primary_magazines != 0) then {
+		_item = _primary_magazines select 0;
+		//_item = [_item] call keko_fnc_replaceKeyword; 
+		player addItemToVest _item; 
+	};
+
+	if(count _primary_uglMagazines != 0) then {
+		_item = _primary_uglMagazines select 0;
+		//_item = [_item] call keko_fnc_replaceKeyword; 
+		player addItemToVest _item; 
+	};
+};
+
+if(count _secondary != 0) then {
+	_randomSecondaryEntry = selectRandom _secondary;
+	_secondaryCfg = _weapon_config >> _randomSecondaryEntry;
+
+	_secondary_cfgName = getText (_secondaryCfg >> "cfgName");
+	_secondary_items = getArray (_secondaryCfg >> "items");
+	_secondary_magazines = getArray (_secondaryCfg >> "magazines");
+
+	player addWeapon _secondary_cfgName;
+
+	if(count _secondary_items != 0) then {
+		{
+			_item = _x;
+			//_item = [_x] call keko_fnc_replaceKeyword; 
+			player addHandgunItem _item; 
+		} forEach _secondary_items;
+	};	
+
+	if(count _secondary_magazines != 0) then {
+		_item = _secondary_magazines select 0;
+		//_item = [_item] call keko_fnc_replaceKeyword;
+		player addItemToUniform _item; 
+	};
+};
+
+if(count _launcher != 0) then {
+	_randomLauncherEntry = selectRandom _launcher;
+	_launcherCfg = _weapon_config >> _randomLauncherEntry;
+
+	_launcher_cfgName = getText (_launcherCfg >> "cfgName");
+	_launcher_items = getArray (_launcherCfg >> "items");
+	_launcher_magazines = getArray (_launcherCfg >> "magazines");
+
+	player addWeapon _launcher_cfgName;
+
+	if(count _launcher_items != 0) then {
+		{ 
+			_item = _x;
+			//_item = [_x] call keko_fnc_replaceKeyword;
+			player addSecondaryWeaponItem _item; 
+		} forEach _launcher_items;
+	};
+
+	if(count _launcher_magazines != 0) then {
+		_item = _launcher_magazines select 0;
+		//_item = [_item] call keko_fnc_replaceKeyword;
+		player addItemToBackpack _item; 
+	};
+};
+
+
+if(count _goggles != 0) then {
+	_random_goggles = selectRandom _goggles;
+	//_random_goggles = [_random_goggles] call keko_fnc_replaceKeyword;
+	player addGoggles _random_goggles;
+};
+
+if(count _optics != 0) then {
+	_random_optics = selectRandom _optics;
+	//_random_optics = [_random_optics] call keko_fnc_replaceKeyword;
+	player addWeapon _random_optics;
+};
+
+// give map and compass
+/*if (_param_give_map == 1) then {
+	player linkItem "ItemMap";
+	player linkItem "ItemCompass";	
+};*/
+
+// add night gear
+/*switch(_param_give_nvg) do {
+	case 1: {
+		// Headlamp white
+		player linkItem "SAN_Headlamp_v1";
+	};
+	case 2: {
+		// Headlamp color
+		player linkItem "SAN_Headlamp_v2";
+	}; 
+	case 3: {
+		// NVG 1.Gen
+		player linkItem "ACE_NVG_Gen1";
+	}; 
+	case 4: {
+		// NVG 2.Gen
+		player linkItem "ACE_NVG_Gen2";
+	}; 
+	case 5: {
+		// NVG 3.Gen
+		player linkItem "NVGoggles_OPFOR";
+	}; 
+	case 6: {
+		// NVG 4.Gen
+		player linkItem "ACE_NVG_Gen4";
+	}; 
+	case 7: {
+		// NVG Wide
+		player linkItem "ACE_NVG_Wide";
+	}; 
+	case 8: {
+		// Wärmesicht
+		player linkItem "NVGogglesB_blk_F";
+	}; 
+	case 9: {
+		// (main) Ami Mono
+		player linkItem "meu_ANPVS_14";
+	}; 
+	case 10: {
+		// (main) Ami Dual
+		player linkItem "meu_ANPVS_15";
+	}; 
+	case 11: {
+		// (main) BAF Mono
+		player linkItem "UK3CB_BAF_HMNVS";
+	}; 
+	case 12: {
+		// (main) Sovjet Mono
+		player linkItem "rhs_1PN138";
+	}; 
+};*/
+
+/*if(_param_give_gps > 0 && (player getVariable "keko_current_role") != "UAV") then {
+	switch (_param_give_gps) do {
+		case 1: {
+			//GPS
+			player linkItem "ItemGPS";
+		};
+		case 2: {
+			//GPS und MicroDAGR
+			//MicroDAGR was already added to Vest, only add GPS
+			player linkItem "ItemGPS";
+		};
+		case 3: {
+			//MicroDAGR
+			//MicroDAGR was already added to Vest, do nothing
+		};
+		case 4: {
+			//cTab
+			player linkItem "itemAndroid";
+		};
+		default {};
+	};
+};*/
+
+// add watch
+player linkItem "ItemWatch";
+
+
+if(count _items != 0) then {
+	{ 
+		player linkItem _x; 
+	} forEach _items;
+};
+
+
+
+
+//[player] call keko_fnc_tfarSettings;
+//[player] call keko_fnc_giveRadio;
+
+//[player] spawn keko_fnc_setChannels;

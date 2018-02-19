@@ -1,5 +1,5 @@
-class kekoPrimaryWeaponsNato
-{
+class kekoWeaponsNato {
+	// Primary
 	class keko_W_A3_MX
 	{
 		cfgName = "arifle_MX_F";
@@ -25,7 +25,6 @@ class kekoPrimaryWeaponsNato
 	class keko_W_A3_MX_GL: keko_W_A3_MX
 	{
 		cfgName = "arifle_MX_GL_F";
-		hasUGL = true;
 		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL
@@ -76,10 +75,10 @@ class kekoPrimaryWeaponsNato
 	{
 		cfgName = "srifle_LRR_camo_F";		
 	};
-};
 
-class kekoSecondaryWeaponsNato
-{
+
+
+	// Secondary
 	class keko_W_TACTICAL: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
@@ -90,10 +89,10 @@ class kekoSecondaryWeaponsNato
 	{
 		items[] = {"muzzle_snds_acp","acc_flashlight_pistol","optic_MRD"};		
 	};
-};
 
-class kekoLauncherWeaponsNato
-{
+
+
+	// Launcher
 	class keko_W_TITAN_AT: kekoLauncherWeapon
 	{
 		cfgName = "launch_B_Titan_short_F";
@@ -108,9 +107,10 @@ class kekoLauncherWeaponsNato
 	{
 		cfgName = "launch_NLAW_F";
 	};
-};
 
-class kekoThrowableWeaponsNato {
+
+
+	// Throwables
 	class keko_W_GRENADE {
 		cfgName = "HandGrenade";
 	};

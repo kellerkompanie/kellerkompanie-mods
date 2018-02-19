@@ -3,9 +3,9 @@ class CfgPatches
 	class keko_loadout
 	{
 		units[] = {
-            "keko_ModuleAddTeleportDestination",
+            "keko_ModuleChangeLoadout",
             "keko_ModuleAddLoadoutMenu",
-            "keko_ModuleAddTeleportDestination3den",
+            "keko_ModuleChangeLoadout3den",
             "keko_ModuleAddLoadoutMenu3den"
         };
 		requiredVersion = 1.80;
@@ -50,9 +50,24 @@ class CfgVehicles
         isGlobal           = 1;
         isTriggerActivated = 1;
         isDisposable       = 0;
-        icon = "\keko_loadout\icons\teleport_menu_icon.paa";
-        picture = "\keko_loadout\icons\teleport_menu_icon.paa";
-        portrait = "\keko_loadout\icons\teleport_menu_icon.paa";
+        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
+        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
+        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
+    };
+    class keko_ModuleChangeLoadout3den: Module_F
+    {
+        scope              = 2; 
+        scopeCurator       = 1;
+        displayName        = "Change Loadout"; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_fnc_moduleChangeLoadout3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
+        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
+        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
     };
     class keko_ModuleAddLoadoutMenu: Module_F
     {
@@ -65,9 +80,24 @@ class CfgVehicles
         isGlobal           = 1;
         isTriggerActivated = 1;
         isDisposable       = 0;
-        icon = "\keko_loadout\icons\teleport_menu_icon.paa";
-        picture = "\keko_loadout\icons\teleport_menu_icon.paa";
-        portrait = "\keko_loadout\icons\teleport_menu_icon.paa";
+        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
+        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
+        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
+    };
+    class keko_ModuleChangeLoadout: Module_F
+    {
+        scope              = 1; 
+        scopeCurator       = 2;
+        displayName        = "Change Loadout"; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_fnc_moduleChangeLoadout";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
+        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
+        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
     };
 };
 
@@ -81,10 +111,19 @@ class CfgFunctions
             file = "keko_loadout\functions";
             class addLoadoutMenu {};
             class moduleAddLoadoutMenu3den {};
-            class moduleAddLoadoutMenu {};            
+            class moduleAddLoadoutMenu {};
+            class moduleChangeLoadout3den {};
+            class moduleChangeLoadout {};    
+            class dialogLoadoutMenuInit{};
+            class dialogLoadoutMenuCallback{};
+            class giveLoadout{};
         };
     };
 };
+
+#include "\keko_loadout\functions\dialog_baseClasses.hpp"
+#include "\keko_loadout\functions\dialog_changeLoadout.hpp"
+#include "\keko_loadout\functions\dialog_loadoutMenu.hpp"
 
 #include "\keko_loadout\factions\kekoWeapons.hpp"
 #include "\keko_loadout\factions\kekoSoldier.hpp"

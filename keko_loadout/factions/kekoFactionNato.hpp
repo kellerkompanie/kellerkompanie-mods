@@ -1,33 +1,4 @@
-// define weapons
-#include "kekoWeaponsNato.hpp"
-
-class kekoFactionNato: kekoFaction {
-
-	// forward declarations of classes
-	class kekoLeadNato;
-	class kekoSQLNato;
-	class kekoFTLNato;
-	class kekoDoctorNato;
-	class kekoMedicNato;
-	class kekoRiflemanNato;
-	class kekoRiflemanATNato;
-	class kekoGrenadierNato;
-	class kekoLMGNato;
-	class kekoLMGAsstNato;
-	class kekoMMGNato;
-	class kekoMMGAsstNato;
-	class kekoATSpecialistNato;
-	class kekoATSpecialistAsstNato;
-	class kekoAASpecialistNato;
-	class kekoAASpecialistAsstNato;
-	class kekoMarksmanNato;
-	class kekoSniperNato;
-	class kekoSpotterNato;
-	class kekoEODNato;
-	class kekoEngineerNato;
-	class kekoPilotNato;
-	class kekoJTACNato;
-	class kekoUAVOperatorNato;
+class kekoFactionNato: kekoFactionBase {
 
 	name = "[Minimal] NATO - North Atlantic Treaty Organization";
 	roles[] = {
@@ -60,6 +31,7 @@ class kekoFactionNato: kekoFaction {
 			kekoJTACNato,
 			kekoUAVOperatorNato}}
 	};
+	weaponCfg = kekoWeaponsNato;
 
 	class kekoSoldierNato: kekoSoldier {
 		uniform[] = {
@@ -89,6 +61,9 @@ class kekoFactionNato: kekoFaction {
 		primary[] = {
 			keko_W_A3_MX, 
 			keko_W_A3_MX_BLACK};
+
+		secondary[] = {
+			keko_W_TACTICAL};
 	};
 
 	class kekoSoldierLightNato: kekoSoldierNato {
@@ -98,7 +73,8 @@ class kekoFactionNato: kekoFaction {
 	};
 
 	class kekoLeadNato: kekoSoldierLightNato	{
-		name = "Lead";		
+		name = "Lead";
+		rank = "LIEUTENANT";		
 		uniform[] = {"U_B_CombatUniform_mcam"};
 		vest[] = {"V_Chestrig_rgr"};
 		helmet[] = {"H_Beret_02","H_Beret_Colonel","H_Beret_blk","H_MilCap_mcamo"};
@@ -107,7 +83,7 @@ class kekoFactionNato: kekoFaction {
 
 	class kekoSQLNato: kekoSoldierNato	{
 		name = "Squad Leader";
-
+		rank = "SERGEANT";
 		primary[] = {
 			keko_W_A3_MX, 
 			keko_W_A3_MX_BLACK};
@@ -117,7 +93,7 @@ class kekoFactionNato: kekoFaction {
 
 	class kekoFTLNato: kekoSoldierNato	{
 		name = "Fire Team Leader";
-
+		rank = "CORPORAL";
 		primary[] = {
 			keko_W_A3_MX, 
 			keko_W_A3_MX_BLACK};
@@ -126,6 +102,7 @@ class kekoFactionNato: kekoFaction {
 	class kekoDoctorNato: kekoSoldierLightNato {
 		name = "Doctor";
 		medicClass = 2;
+		rank = "SERGEANT";
 		vest[] = {"V_PlateCarrierSpec_rgr"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
@@ -136,6 +113,7 @@ class kekoFactionNato: kekoFaction {
 	class kekoMedicNato: kekoSoldierLightNato {
 		name = "Medic";
 		medicClass = 1;
+		rank = "CORPORAL";
 		vest[] = {"V_PlateCarrierSpec_rgr"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
@@ -149,8 +127,7 @@ class kekoFactionNato: kekoFaction {
 
 	class kekoRiflemanATNato: kekoSoldierNato	{
 		name = "Rifleman Anti-Tank";
-
-		launcherWeapon[] = {keko_W_NLAW};
+		launcher[] = {keko_W_NLAW};
 	};
 
 	class kekoGrenadierNato: kekoSoldierNato {
@@ -202,7 +179,7 @@ class kekoFactionNato: kekoFaction {
 
 		backpack[] = {"B_FieldPack_cbr"};
 
-		launcherWeapon[] = {keko_W_TITAN_AT};
+		launcher[] = {keko_W_TITAN_AT};
 	};
 
 	class kekoATSpecialistAsstNato: kekoSoldierNato {
@@ -216,7 +193,7 @@ class kekoFactionNato: kekoFaction {
 
 		backpack[] = {"B_FieldPack_cbr"};
 
-		launcherWeapon[] = {keko_W_TITAN_AA};
+		launcher[] = {keko_W_TITAN_AA};
 	};
 
 	class kekoAASpecialistAsstNato: kekoSoldierNato {

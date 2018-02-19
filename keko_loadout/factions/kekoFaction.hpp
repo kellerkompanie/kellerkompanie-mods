@@ -1,7 +1,11 @@
 class kekoFaction
 {
-	name = objNull;
-	roles[] = {};
+	class kekoFactionBase {
+		name = objNull;
+		roles[] = {};
+		weaponCfg = objNull;
+	};	
+
+	#include "kekoFactionNato.hpp"
 };
 
-#include "factions\kekoFactionNato.hpp"
