@@ -1,8 +1,9 @@
 // define weapons
-#include "NATO\kekoWeaponsNato.hpp"
+#include "kekoWeaponsNato.hpp"
 
 class kekoFactionNato: kekoFaction {
 
+	// forward declarations of classes
 	class kekoLeadNato;
 	class kekoSQLNato;
 	class kekoFTLNato;
@@ -163,8 +164,9 @@ class kekoFactionNato: kekoFaction {
 	class kekoLMGNato: kekoSoldierNato {
 		name = "Light Machine Gunner";
 		vestInventory[] = {
-[4, "#PRIMARY_MAG_LMG"],[1, "#SMOKE_WHITE"],[2, "#GRENADE"]
-		};
+			{4, "#PRIMARY_MAG_LMG"},
+			{1, "#SMOKE_WHITE"},
+			{2, "#GRENADE"}};
 		primary[] = {
 			keko_W_A3_MX_SW, 
 			keko_W_A3_MX_SW_BLACK};
@@ -180,8 +182,8 @@ class kekoFactionNato: kekoFaction {
 	class kekoMMGNato: kekoSoldierNato {
 		name = "Medium Machine Gunner";
 		vestInventory[] = {
-[2, "#PRIMARY_MAG_MMG"],[2, "#GRENADE"]
-		};
+			{2, "#PRIMARY_MAG_MMG"},
+			{2, "#GRENADE"}};
 		primary[] = {
 			keko_W_A3_MMG, 
 			keko_W_A3_MMG_BLACK};
@@ -226,8 +228,10 @@ class kekoFactionNato: kekoFaction {
 	class kekoMarksmanNato: kekoSoldierNato {
 		name = "Marksman";
 		vestInventory[] = {
-[5, "#PRIMARY_MAG_MARKSMAN"],[1, "#SMOKE_WHITE"],[2, "#GRENADE"],[5, "#PRIMARY_MAG_MARKSMAN_TRACER"]
-		};
+			{5, "#PRIMARY_MAG_MARKSMAN"},
+			{1, "#SMOKE_WHITE"},
+			{2, "#GRENADE"},
+			{5, "#PRIMARY_MAG_MARKSMAN_TRACER"}};
 		primary[] = {
 			keko_W_A3_MXM, 
 			keko_W_A3_MXM_BLACK};
@@ -253,8 +257,10 @@ class kekoFactionNato: kekoFaction {
 			{8,"ACE_fieldDressing"}};
 		vest[] = {"V_PlateCarrier2_blk"};
 		vestInventory[] = {
-[1,"SmokeShell"],[1,"SmokeShellGreen"],[8,"ACE_7Rnd_408_305gr_Mag"],[2,"11Rnd_45ACP_Mag"]
-		};
+			{1,"SmokeShell"},
+			{1,"SmokeShellGreen"},
+			{8,"ACE_7Rnd_408_305gr_Mag"},
+			{2,"11Rnd_45ACP_Mag"}};
 		helmet[] = {"H_HelmetSpecB"};
 		primary[] = {
 			keko_W_A3_LRR, 
@@ -265,8 +271,11 @@ class kekoFactionNato: kekoFaction {
 	class kekoSpotterNato: kekoSniperNato {
 		name = "Spotter";	
 		vestInventory[] = {
-[1,"SmokeShell"],[1,"SmokeShellGreen"],[2,"11Rnd_45ACP_Mag"],[10,"ACE_30Rnd_65x47_Scenar_mag"],[1,"HandGrenade"]
-		};	
+			{1,"SmokeShell"},
+			{1,"SmokeShellGreen"},
+			{2,"11Rnd_45ACP_Mag"},
+			{10,"ACE_30Rnd_65x47_Scenar_mag"},
+			{1,"HandGrenade"}};	
 		primary[] = {
 			keko_W_A3_MXM, 
 			keko_W_A3_MXM_BLACK};
@@ -287,8 +296,9 @@ class kekoFactionNato: kekoFaction {
 		uniform[] = {"U_B_HeliPilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
-[2, "#SECONDARY_MAG"],[1, "ACE_microDAGR"],[10, "ACE_quikclot"]
-		};
+			{2, "#SECONDARY_MAG"},
+			{1, "ACE_microDAGR"},
+			{10, "ACE_quikclot"}};
 		helmet[] = {"H_PilotHelmetHeli_B"};
 	};
 
@@ -311,7 +321,10 @@ class kekoFactionNato: kekoFaction {
 	class kekoUAVOperatorNato: kekoSoldierLightNato	{
 		name = "UAV Operator";
 		vestInventory[] = {
-[2,"ACE_UAVBattery"],[2, "#PRIMARY_MAG"],[2, "#PRIMARY_MAG_TRACER"],[1,"ACE_HuntIR_monitor"],[8,"ACE_HuntIR_M203"]
-		};
+			{2,"ACE_UAVBattery"},
+			{2, "#PRIMARY_MAG"},
+			{2, "#PRIMARY_MAG_TRACER"},
+			{1,"ACE_HuntIR_monitor"},
+			{8,"ACE_HuntIR_M203"}};
 	};
 };
