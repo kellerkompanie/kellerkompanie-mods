@@ -131,6 +131,6 @@ class CfgFunctions
     };
 };
 
-#include "\keko_teleport\functions\RscBaseClasses.hpp"
-#include "\keko_teleport\functions\teleportDialog.hpp"
-#include "\keko_teleport\functions\teleportDestinationDialog.hpp"
+#include "\keko_teleport\functions\dialog_baseClasses.hpp"
+#include "\keko_teleport\functions\dialog_teleport.hpp"
+#include "\keko_teleport\functions\dialog_teleportDestination.hpp"
