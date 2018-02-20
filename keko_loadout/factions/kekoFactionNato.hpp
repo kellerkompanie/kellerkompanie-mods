@@ -258,14 +258,16 @@ class kekoFactionNato: kekoFactionBase {
 			keko_W_A3_MXM_BLACK};
 	};
 
-	class kekoEODNato: kekoSoldierNato {
+	class kekoEODNato: kekoSoldierLightNato {
 		name = "Explosive Specialist";
+		backpack[] = {"B_Carryall_cbr"};
+		backpackInventory[] = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
 	};
 
-	class kekoEngineerNato: kekoSoldierNato	{
+	class kekoEngineerNato: kekoSoldierLightNato {
 		name = "Engineer";
-
 		backpack[] = {"B_Carryall_cbr"};
+		backpackInventory[] = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 	};
 
 	class kekoPilotNato: kekoSoldierLightNato {

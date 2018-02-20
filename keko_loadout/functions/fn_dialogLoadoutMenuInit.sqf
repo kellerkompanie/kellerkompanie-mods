@@ -1,7 +1,7 @@
 disableSerialization;
 
 // TODO refactor into publicVariable/MissionParameter
-keko_loadout_faction = "kekoFactionNato";
+keko_loadout_faction = "kekoFactionAAF";
 
 _display = _this select 0;
 _listBox = _display displayCtrl 1500;

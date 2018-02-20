@@ -21,5 +21,7 @@ class kekoWeapons
 		
 	};
 
-	#include "kekoWeaponsNato.hpp"	
+	#include "kekoWeaponsNato.hpp"
+	#include "kekoWeaponsAAF.hpp"
+	#include "kekoWeaponsCSAT.hpp"
 };

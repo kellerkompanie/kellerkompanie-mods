@@ -1,6 +1,5 @@
 if (_this isEqualTo "") exitWith {};
 
-diag_log format["dialogMenuCallback._this: %1", _this];
 _arr = _this splitString " ";
 
 _faction = _arr select 0;

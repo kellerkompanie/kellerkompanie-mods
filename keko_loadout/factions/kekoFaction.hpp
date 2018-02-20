@@ -7,5 +7,7 @@ class kekoFaction
 	};	
 
 	#include "kekoFactionNato.hpp"
+	#include "kekoFactionAAF.hpp"
+	#include "kekoFactionCSAT.hpp"
 };
 
