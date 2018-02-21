@@ -1,23 +1,20 @@
-class kekoWeapons
+class kekoWeaponBase {
+	cfgName = objNull;
+	items[] = {};
+	magazines[] = {};
+};
+
+class kekoPrimaryWeapon: kekoWeaponBase
 {
-	class kekoWeaponBase {
-		cfgName = objNull;
-		items[] = {};
-		magazines[] = {};
-	};
+	uglMagazines[] = {};
+};
 
-	class kekoPrimaryWeapon: kekoWeaponBase
-	{
-		uglMagazines[] = {};
-	};
+class kekoSecondaryWeapon: kekoWeaponBase
+{
+	
+};
 
-	class kekoSecondaryWeapon: kekoWeaponBase
-	{
-		
-	};
-
-	class kekoLauncherWeapon: kekoWeaponBase
-	{
-		
-	};
+class kekoLauncherWeapon: kekoWeaponBase
+{
+	
 };

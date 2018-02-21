@@ -33,7 +33,7 @@ class kekoWeaponsCSAT {
 		items[] = {"acc_pointer_IR","bipod_02_F_hex"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
-	class keko_W_A3_MMG_CSAT: kekoPrimaryWeapson {
+	class keko_W_A3_MMG_CSAT: kekoPrimaryWeapon {
 		cfgName = "MMG_01_hex_F";
 		items[] = {"acc_pointer_IR","bipod_02_F_hex"};
 		magazines[] = {PRIMARY_MAG_MMG};

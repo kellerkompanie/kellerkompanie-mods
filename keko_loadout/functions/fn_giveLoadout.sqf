@@ -9,7 +9,7 @@ diag_log format ["_role: %1", _role];
 
 _role_config = configFile >> "kekoFaction" >> _faction >> _role;
 _weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
-_weapon_config = configFile >> "kekoWeapons" >> _weaponCfg;
+_weapon_config = configFile >> "kekoFaction" >> _faction >> _weaponCfg;
 
 _uniform = getArray (_role_config >> "uniform");
 _uniformInventory = getArray (_role_config >> "uniformInventory");
