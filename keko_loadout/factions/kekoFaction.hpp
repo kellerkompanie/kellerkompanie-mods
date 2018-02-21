@@ -1,3 +1,5 @@
+#include "kekoWeapons.hpp"
+
 class kekoFaction
 {
 	class kekoFactionBase {
@@ -6,7 +8,7 @@ class kekoFaction
 		weaponCfg = objNull;
 	};	
 
-	#include "kekoFactionNato.hpp"
+	#include "kekoFactionNATO.hpp"
 	#include "kekoFactionAAF.hpp"
 	#include "kekoFactionCSAT.hpp"
 };

@@ -125,6 +125,4 @@ class CfgFunctions
 #include "\keko_loadout\functions\dialog_changeLoadout.hpp"
 #include "\keko_loadout\functions\dialog_loadoutMenu.hpp"
 
-#include "\keko_loadout\factions\kekoWeapons.hpp"
-#include "\keko_loadout\factions\kekoSoldier.hpp"
 #include "\keko_loadout\factions\kekoFaction.hpp"

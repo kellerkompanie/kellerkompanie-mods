@@ -33,6 +33,11 @@ class kekoFactionAAF: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsAAF;
 
+	// define all weapons and mags
+	#include "kekoWeaponsAAF.hpp"
+	
+	#include "kekoSoldier.hpp"
+
 	class kekoSoldierAAF: kekoSoldier {
 		uniform[] = {
 			"U_I_CombatUniform",

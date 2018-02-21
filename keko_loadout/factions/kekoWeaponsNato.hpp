@@ -1,10 +1,21 @@
+#define SMOKE_WHITE "SmokeShell"
+#define SMOKE_GREEN "SmokeShellGreen"
+#define GRENADE "HandGrenade"
+
+#define PRIMARY_MAG "30Rnd_65x39_caseless_mag"
+#define PRIMARY_MAG_TRACER "30Rnd_65x39_caseless_mag_Tracer"
+#define PRIMARY_MAG_LMG "100Rnd_65x39_caseless_mag_Tracer"
+#define PRIMARY_MAG_MMG "130Rnd_338_Mag"
+#define PRIMARY_MAG_MARKSMAN "ACE_30Rnd_65x47_Scenar_mag"
+#define SECONDARY_MAG "11Rnd_45ACP_Mag"
+
 class kekoWeaponsNato {
 	// Primary
-	class keko_W_A3_MX
+	class keko_W_A3_MX: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_MX_F";
 		items[] = {"acc_pointer_IR","optic_Hamr"};
-		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
+		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX
 	{
@@ -36,7 +47,7 @@ class kekoWeaponsNato {
 	class keko_W_A3_MXM: keko_W_A3_MX
 	{
 		cfgName = "arifle_MXM_F";
-		magazines[] = {"30Rnd_65x39_caseless_mag", "ACE_30Rnd_65x47_Scenar_mag"};
+		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
 	{
@@ -47,7 +58,7 @@ class kekoWeaponsNato {
 	class keko_W_A3_MX_SW: keko_W_A3_MX
 	{
 		cfgName = "arifle_MX_SW_F";
-		magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
+		magazines[] = {PRIMARY_MAG_LMG};
 	};
 	class keko_W_A3_MX_SW_BLACK: keko_W_A3_MX_SW
 	{
@@ -58,7 +69,7 @@ class kekoWeaponsNato {
 	class keko_W_A3_MMG: keko_W_A3_MX
 	{
 		cfgName = "MMG_02_sand_F";
-		magazines[] = {"130Rnd_338_Mag"};
+		magazines[] = {PRIMARY_MAG_MMG};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
 	{
@@ -83,7 +94,7 @@ class kekoWeaponsNato {
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
 		items[] = {};
-		magazines[] = {"11Rnd_45ACP_Mag"};
+		magazines[] = {SECONDARY_MAG};
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
@@ -112,12 +123,12 @@ class kekoWeaponsNato {
 
 	// Throwables
 	class keko_W_GRENADE {
-		cfgName = "HandGrenade";
+		cfgName = GRENADE;
 	};
 	class keko_W_SMOKE_WHITE {
-		cfgName = "SmokeShell";
+		cfgName = SMOKE_WHITE;
 	};
 	class keko_W_SMOKE_GREEN {
-		cfgName = "SmokeShellGreen";
+		cfgName = SMOKE_GREEN;
 	};
 };

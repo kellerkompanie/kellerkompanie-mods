@@ -20,10 +20,16 @@ class kekoSoldier
 		{3, "ACE_tourniquet"},
 		{1, "ACE_MapTools"},
 		{1, "ACE_Flashlight_XL50"},
-		{1, "ACE_IR_Strobe_Item"}};
-	
+		{1, "ACE_IR_Strobe_Item"},
+		{1, SECONDARY_MAG},
+		{1, SMOKE_WHITE},
+		{1, SMOKE_GREEN}};
 	vest[] = {};
-	vestInventory[] = {};
+	vestInventory[] = {
+		{5, PRIMARY_MAG},
+		{5, PRIMARY_MAG_TRACER},
+		{1, SMOKE_WHITE},
+		{3, GRENADE}};
 
 	helmet[] = {};
 	
