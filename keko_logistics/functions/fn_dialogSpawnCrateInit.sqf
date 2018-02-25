@@ -6,6 +6,9 @@ _listBox = _display displayCtrl 1500;
 lbClear _listBox;
 
 _crates = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "crates");
+_logicPos = missionNamespace getVariable "keko_logistics_spawn_crate_pos";
+_xPos = _logicPos select 0;
+_yPos = _logicPos select 1;
 
 _i = 0;
 { 
@@ -19,7 +22,7 @@ _i = 0;
 	{
 		_role_name = getText (configFile >> "kekoFaction" >> keko_var_faction >> _x >> "name");
 		lbAdd [1500, _role_name];
-		lbSetData [1500, _i, format ["%1 %2", keko_var_faction, _x]];
+		lbSetData [1500, _i, format ["%1 %2 %3 %4", keko_var_faction, _x, _xPos, _yPos]];
 		_i = _i + 1;
 	} forEach _section_crates;
 } forEach _crates;

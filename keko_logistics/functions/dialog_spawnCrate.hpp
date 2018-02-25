@@ -54,7 +54,7 @@ class keko_logistics_spawnCrateDialog {
 		};
 	};
 
-	class KEKO_LOGISTICST_UI_TEXT: RscText
+	class KEKO_LOGISTICS_UI_TEXT: RscText
 	{
 		idc = 1000;
 		text = "Güter";
