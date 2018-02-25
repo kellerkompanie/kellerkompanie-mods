@@ -90,6 +90,10 @@ if(count _vest != 0) then {
 				player addItemToVest _item;
 			};		
 		} forEach _vestInventory;
+
+		if(keko_var_giveGps == 3) then {
+			player addItemToVest "ACE_microDAGR";
+		};
 	};
 };
 
@@ -210,13 +214,17 @@ if(count _optics != 0) then {
 };
 
 // give map and compass
-/*if (_param_give_map == 1) then {
+if (keko_var_giveMap) then {
 	player linkItem "ItemMap";
+	
+};
+if (keko_var_giveCompass) then {
 	player linkItem "ItemCompass";	
-};*/
+};
+
 
 // add night gear
-/*switch(_param_give_nvg) do {
+switch(keko_var_giveNvg) do {
 	case 1: {
 		// Headlamp white
 		player linkItem "SAN_Headlamp_v1";
@@ -265,10 +273,10 @@ if(count _optics != 0) then {
 		// (main) Sovjet Mono
 		player linkItem "rhs_1PN138";
 	}; 
-};*/
+};
 
-/*if(_param_give_gps > 0 && (player getVariable "keko_current_role") != "UAV") then {
-	switch (_param_give_gps) do {
+if(keko_var_giveGps > 0) then {
+	switch (keko_var_giveGps) do {
 		case 1: {
 			//GPS
 			player linkItem "ItemGPS";
@@ -288,7 +296,7 @@ if(count _optics != 0) then {
 		};
 		default {};
 	};
-};*/
+};
 
 // add watch
 player linkItem "ItemWatch";
@@ -301,9 +309,75 @@ if(count _items != 0) then {
 };
 
 
+[player] call keko_loadout_fnc_tfarSettings;
 
+// give radio
+if (keko_var_giveRadio > 0) then {
+	switch (keko_var_giveRadio) do {
+		case 1: {
+			//Verstellbare für alle
+			switch (side player) do {
+				case west: {
+					player linkItem "TFAR_anprc152";
+				};
+				case east: {
+					player linkItem "TFAR_fadak";
+				};
+				case independent: {
+					player linkItem "TFAR_anprc148jem";
+				};
+				default {};
+			};
+		};
+		case 2: {
+			//Verstellbare für Führungspos, sonst Personal
+			if ( (rank player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
+				switch (side player) do {
+					case west: {
+						player linkItem "TFAR_anprc152";
+					};
+					case east: {
+						player linkItem "TFAR_fadak";
+					};
+					case independent: {
+						player linkItem "TFAR_anprc148jem";
+					};
+					default {};
+				};
+			} else {
+				switch (side player) do {
+					case west: {
+						player linkItem "TFAR_rf7800str";
+					};
+					case east: {
+						player linkItem "TFAR_pnr1000a";
+					};
+					case independent: {
+						player linkItem "TFAR_anprc154";
+					};
+					default {};
+				};
+			};			
+		};
+		case 3: {
+			//Nur für Führungspos
+			if ( (rank player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
+				switch (side player) do {
+					case west: {
+						player linkItem "TFAR_anprc152";
+					};
+					case east: {
+						player linkItem "TFAR_fadak";
+					};
+					case independent: {
+						player linkItem "TFAR_anprc148jem";
+					};
+					default {};
+				};
+			};
+		};
+		default {};
+	};
+};
 
-//[player] call keko_fnc_tfarSettings;
-//[player] call keko_fnc_giveRadio;
-
-//[player] spawn keko_fnc_setChannels;
+[player] spawn keko_loadout_fnc_setChannels;

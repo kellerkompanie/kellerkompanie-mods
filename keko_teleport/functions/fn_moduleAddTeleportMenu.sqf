@@ -18,6 +18,6 @@ if(isnull _object) then {
 
 if(isNull _object) exitWith{};
 
-[_object] call keko_fnc_addTeleportMenu;
+[_object] call keko_teleport_fnc_addTeleportMenu;
 
 deletevehicle _logic;

@@ -4,7 +4,7 @@ class keko_teleport_mainDialog {
 	movingEnable = true;
 	enableSimulation = true;
 
-	onLoad = "(_this) spawn keko_fnc_dialogTeleportInit;";
+	onLoad = "(_this) spawn keko_teleport_fnc_dialogTeleportInit;";
 
 	controls[] = { 
 		KEKO_TELEPORT_UI_BACK,	
@@ -73,7 +73,7 @@ class keko_teleport_mainDialog {
 		y = 11 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_fnc_dialogJump;";	
+		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogJump;";	
 	};
 	
 	class KEKO_TELEPORT_UI_BUTTON_TELEPORT: RscButton
@@ -84,7 +84,7 @@ class keko_teleport_mainDialog {
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_fnc_dialogTeleport;";	
+		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogTeleport;";	
 	};
 
 	class KEKO_TELEPORT_UI_BUTTON_CANCEL: RscButton

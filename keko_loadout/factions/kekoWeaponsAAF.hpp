@@ -1,5 +1,6 @@
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
+#define SMOKE_RED "SmokeShellRed"
 #define GRENADE "HandGrenade"
 
 #define PRIMARY_MAG "30Rnd_556x45_Stanag"
@@ -8,6 +9,14 @@
 #define PRIMARY_MAG_MMG "130Rnd_338_Mag"
 #define PRIMARY_MAG_MARKSMAN "20Rnd_762x51_Mag"
 #define SECONDARY_MAG "9Rnd_45ACP_Mag"
+
+#define RAT_LAUNCHER "launch_NLAW_F"
+#define AT_LAUNCHER "launch_I_Titan_short_F"
+#define AA_LAUNCHER "launch_I_Titan_F"
+
+#define AT_MAG "Titan_AT"
+#define AA_MAG "Titan_AA"
+#define UGL_MAG "1Rnd_HE_Grenade_shell"
 
 class kekoWeaponsAAF {
 	// Primary
@@ -18,7 +27,7 @@ class kekoWeaponsAAF {
 	};
 	class keko_W_A3_F2000_UGL: keko_W_A3_F2000 {
 		cfgName = "arifle_Mk20_GL_F";
-		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
+		uglMagazines[] = {UGL_MAG};
 	};
 	class keko_W_A3_F2000_SHORT: keko_W_A3_F2000 {
 		cfgName = "arifle_Mk20C_F";
@@ -59,15 +68,15 @@ class kekoWeaponsAAF {
 
 	// Launcher
 	class keko_W_NLAW: kekoLauncherWeapon {
-		cfgName = "launch_NLAW_F";
+		cfgName = RAT_LAUNCHER;
 	};
 	class keko_W_TITAN_AT_AAF: kekoLauncherWeapon {
-		cfgName = "launch_I_Titan_short_F";
-		magazines[] = {"Titan_AT"};
+		cfgName = AT_LAUNCHER;
+		magazines[] = {AT_MAG};
 	};
 	class keko_W_TITAN_AA_AAF: kekoLauncherWeapon {
-		cfgName = "launch_I_Titan_F";
-		magazines[] = {"Titan_AA"};
+		cfgName = AA_LAUNCHER;
+		magazines[] = {AA_MAG};
 	};
 
 
@@ -81,5 +90,8 @@ class kekoWeaponsAAF {
 	};
 	class keko_W_SMOKE_GREEN {
 		cfgName = SMOKE_GREEN;
+	};
+	class keko_W_SMOKE_RED {
+		cfgName = SMOKE_RED;
 	};
 };

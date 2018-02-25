@@ -1,14 +1,11 @@
 disableSerialization;
 
-// TODO refactor into publicVariable/MissionParameter
-keko_loadout_faction = "kekoFactionAAF";
-
 _display = _this select 0;
 _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-_roles = getArray (configFile >> "kekoFaction" >> keko_loadout_faction >> "roles");
+_roles = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "roles");
 
 _i = 0;
 { 
@@ -20,9 +17,9 @@ _i = 0;
 	_section_roles = _x select 1;
 
 	{
-		_role_name = getText (configFile >> "kekoFaction" >> keko_loadout_faction >> _x >> "name");
+		_role_name = getText (configFile >> "kekoFaction" >> keko_var_faction >> _x >> "name");
 		lbAdd [1500, _role_name];
-		lbSetData [1500, _i, format ["%1 %2", keko_loadout_faction, _x]];
+		lbSetData [1500, _i, format ["%1 %2", keko_var_faction, _x]];
 		_i = _i + 1;
 	} forEach _section_roles;
 } forEach _roles;

@@ -37,7 +37,7 @@ class keko_teleport_destinationDialog {
 		y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 4 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "[] call keko_fnc_dialogTeleportDestination;";
+		action = "[] call keko_teleport_fnc_dialogTeleportDestination;";
 	};
 	class KEKO_TELEPORT_DEST_UI_BUTTON_CANCEL: RscButton
 	{

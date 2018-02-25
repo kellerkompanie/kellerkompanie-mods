@@ -4,10 +4,10 @@ _activated = _this select 2;
 
 // Only server, dedicated, or headless beyond this point
 if (hasInterface && !isServer) exitWith {};
-diag_log "running teleport menu module init";
+//diag_log "running teleport menu module init";
 
 _objects = synchronizedObjects _logic;
 {
-	diag_log format ["adding menu to: %1", str _x];
-	[_x] call keko_fnc_addTeleportMenu;
+	//diag_log format ["adding menu to: %1", str _x];
+	[_x] call keko_logistics_fnc_addLogisticsMenu;
 } forEach _objects;

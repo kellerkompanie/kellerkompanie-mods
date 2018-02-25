@@ -1,11 +1,11 @@
 params ["_teleporterObject", "_teleporterName"];
 
-diag_log "addTeleportDestination";
-diag_log format ["_teleporterObject: %1", _teleporterObject];
-diag_log format ["_teleporterName: %1", _teleporterName];
+//diag_log "addTeleportDestination";
+//diag_log format ["_teleporterObject: %1", _teleporterObject];
+//diag_log format ["_teleporterName: %1", _teleporterName];
 
 _markerName = "teleportMarker_" + _teleporterName;
-diag_log format ["_markerName: %1", _markerName];
+//diag_log format ["_markerName: %1", _markerName];
 
 _marker = createMarker [_markerName, position _teleporterObject];
 _markerName setMarkerSize [0.5, 0.5];

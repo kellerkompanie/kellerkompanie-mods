@@ -10,6 +10,7 @@ class CfgPatches
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
+            "keko_common",
             "A3_UI_F",
             "A3_UI_F_Curator",
             "A3_Functions_F",
@@ -25,9 +26,9 @@ class CfgPatches
 class CfgFactionClasses
 {
     class NO_CATEGORY;
-    class keko_kellerkompanie: NO_CATEGORY
+    class keko_category_teleport: NO_CATEGORY
     {
-        displayName = "Kellerkompanie";
+        displayName = "Kellerkompanie Teleport";
     };
 };
 
@@ -44,9 +45,9 @@ class CfgVehicles
         scope              = 2; 
         scopeCurator       = 1;
         displayName        = "Add Fast-Travel Destination"; 
-        category           = "keko_kellerkompanie";
-        function           = "keko_fnc_moduleAddTeleportDestination3den";
-        functionPriority   = 1;
+        category           = "keko_category_teleport";
+        function           = "keko_teleport_fnc_moduleAddTeleportDestination3den";
+        functionPriority   = 2;
         isGlobal           = 1;
         isTriggerActivated = 1;
         isDisposable       = 0;
@@ -67,9 +68,9 @@ class CfgVehicles
         scope              = 2; 
         scopeCurator       = 1;
         displayName        = "Add Fast-Travel Menu"; 
-        category           = "keko_kellerkompanie";
-        function           = "keko_fnc_moduleAddTeleportMenu3den";
-        functionPriority   = 1;
+        category           = "keko_category_teleport";
+        function           = "keko_teleport_fnc_moduleAddTeleportMenu3den";
+        functionPriority   = 2;
         isGlobal           = 1;
         isTriggerActivated = 1;
         isDisposable       = 0;
@@ -82,8 +83,8 @@ class CfgVehicles
         scope              = 1; 
         scopeCurator       = 2;
         displayName        = "Add Fast-Travel Destination"; 
-        category           = "keko_kellerkompanie";
-        function           = "keko_fnc_moduleAddTeleportDestination";
+        category           = "keko_category_teleport";
+        function           = "keko_teleport_fnc_moduleAddTeleportDestination";
         functionPriority   = 1;
         isGlobal           = 1;
         isTriggerActivated = 1;
@@ -97,8 +98,8 @@ class CfgVehicles
         scope              = 1; 
         scopeCurator       = 2;
         displayName        = "Add Fast-Travel Menu"; 
-        category           = "keko_kellerkompanie";
-        function           = "keko_fnc_moduleAddTeleportMenu";
+        category           = "keko_category_teleport";
+        function           = "keko_teleport_fnc_moduleAddTeleportMenu";
         functionPriority   = 1;
         isGlobal           = 1;
         isTriggerActivated = 1;
@@ -113,7 +114,7 @@ class CfgFunctions
 {
     class keko_teleport 
     {
-        tag = "keko";
+        tag = "keko_teleport";
         class teleport 
         {
             file = "keko_teleport\functions";

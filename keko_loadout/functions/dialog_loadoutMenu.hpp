@@ -4,7 +4,7 @@ class keko_loadout_menuDialog {
 	movingEnable = true;
 	enableSimulation = true;
 	
-	onload = "(_this) spawn keko_fnc_dialogLoadoutMenuInit;";
+	onload = "(_this) spawn keko_loadout_fnc_dialogLoadoutMenuInit;";
 
 	controls[] = { 
 		KEKO_LOADOUT_UI_BACK,	
@@ -72,7 +72,7 @@ class keko_loadout_menuDialog {
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "lbData [1500, lbCurSel 1500] spawn keko_fnc_dialogLoadoutMenuCallback;";
+		action = "lbData [1500, lbCurSel 1500] spawn keko_loadout_fnc_dialogLoadoutMenuCallback;";
 	};
 
 	class KEKO_LOADOUT_UI_BUTTON_CANCEL: RscButton

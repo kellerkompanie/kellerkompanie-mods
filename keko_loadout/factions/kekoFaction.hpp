@@ -6,6 +6,7 @@ class kekoFaction
 		name = objNull;
 		roles[] = {};
 		weaponCfg = objNull;
+		crates[] = {};
 	};	
 
 	#include "kekoFactionNATO.hpp"

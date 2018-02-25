@@ -4,20 +4,18 @@ _activated = _this select 2;
 
 if !(_activated && local _logic) exitWith {};
 
-_object = objnull;
+_unit = objnull;
 _mouseOver = missionnamespace getvariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
-
 if ((_mouseOver select 0) == typename objnull) then {
-    _object = _mouseOver select 1;
+    _unit = _mouseOver select 1;
 };
-
-if(isnull _object) then {
-    [objnull, "Error - Module was not placed on any object"] call bis_fnc_showCuratorFeedbackMessage;
+if(isnull _unit) then {
+    [objnull, "Error - Module was not placed on any unit"] call bis_fnc_showCuratorFeedbackMessage;
     deletevehicle _logic;
 };
 
-if(isNull _object) exitWith{};
+if(isNull _unit) exitWith{};
 
-[_object] call keko_fnc_addTeleportMenu;
+_unit setVariable ["ACE_IsEngineer",1,true];
 
 deletevehicle _logic;
