@@ -1,7 +1,3 @@
-#define _ARMA_
-
-
-//Class config.cpp{
 class CfgPatches
 {
 	class keko_audio_mogilevka
@@ -31,6 +27,6 @@ class CfgMusic
 		name = "Ernst Busch - Arbeiter, Bauern";
 		sound[] = {"\keko_audio_mogilevka\mogilevka\arbeiter_bauern.ogg",1,1};
 		musicClass = "keko_audio_mogilevka";
-		duration = "135";
+		duration = "146";
 	};
 };
