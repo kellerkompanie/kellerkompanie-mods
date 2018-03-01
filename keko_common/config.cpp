@@ -72,8 +72,7 @@ class CfgVehicles
                 {
                     class nato  {name = "[Minimal] NATO - North Atlantic Treaty Organization";  value = "kekoFactionNATO";};
                     class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
-                    class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
-                    class custom {name = "Custom"; value = "kekoFactionCustom";};
+                    class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};                    
                 };
             };
             class giveMap {
