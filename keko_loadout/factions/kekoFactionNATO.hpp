@@ -28,7 +28,8 @@ class kekoFactionNato: kekoFactionBase {
 			kekoSpotterNato,
 			kekoEODNato,
 			kekoEngineerNato,
-			kekoPilotNato,
+			kekoHeliPilotNato,
+			kekoJetPilotNato,
 			kekoJTACNato,
 			kekoUAVOperatorNato}}
 	};
@@ -300,8 +301,8 @@ class kekoFactionNato: kekoFactionBase {
 		engineerClass = 2;
 	};
 
-	class kekoPilotNato: kekoSoldierLightNato {
-		name = "Pilot";
+	class kekoHeliPilotNato: kekoSoldierLightNato {
+		name = "Helicopter Pilot";
 		uniform[] = {"U_B_HeliPilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
