@@ -28,7 +28,7 @@ class kekoFactionAAF: kekoFactionBase {
 			kekoSpotterAAF,
 			kekoEODAAF,
 			kekoEngineerAAF,
-			kekoPilotAAF,
+			kekoHeliPilotAAF,
 			kekoJetPilotAAF,
 			kekoJTACAAF,
 			kekoUAVOperatorAAF}}
@@ -275,12 +275,13 @@ class kekoFactionAAF: kekoFactionBase {
 		engineerClass = 2;
 	};
 
-	class kekoPilotAAF: kekoSoldierLightAAF {
-		name = "Pilot";
+	class kekoHeliPilotAAF: kekoSoldierLightAAF {
+		name = "Heli Pilot";
 		uniform[] = {"U_I_HeliPilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
+			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_PilotHelmetHeli_I"};
@@ -288,11 +289,11 @@ class kekoFactionAAF: kekoFactionBase {
 		optics[] = {"Binocular"};
 	};
 
-	class kekoJetPilotAAF: kekoPilotAAF {
+	class kekoJetPilotAAF: kekoHeliPilotAAF {
 		name = "Jet Pilot";
-		uniform[] = {"U_B_HeliPilotCoveralls"};
+		uniform[] = {"U_I_pilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
-		helmet[] = {"H_PilotHelmetHeli_B"};
+		helmet[] = {"H_PilotHelmetFighter_I"};
 		optics[] = {"Binocular"};
 	};
 

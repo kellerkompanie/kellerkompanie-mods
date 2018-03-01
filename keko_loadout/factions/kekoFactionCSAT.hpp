@@ -28,8 +28,8 @@ class kekoFactionCSAT: kekoFactionBase {
 			kekoSpotterCSAT,
 			kekoEODCSAT,
 			kekoEngineerCSAT,
-			kekoPilotCSAT,
-			kekoJetPilotCSAT
+			kekoHeliPilotCSAT,
+			kekoJetPilotCSAT,
 			kekoJTACCSAT,
 			kekoUAVOperatorCSAT}}
 	};
@@ -278,12 +278,13 @@ class kekoFactionCSAT: kekoFactionBase {
 		engineerClass = 2;
 	};
 
-	class kekoPilotCSAT: kekoSoldierLightCSAT {
-		name = "Pilot";
+	class kekoHeliPilotCSAT: kekoSoldierLightCSAT {
+		name = "Heli Pilot";
 		uniform[] = {"U_O_PilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
+			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_PilotHelmetHeli_O"};
@@ -291,11 +292,11 @@ class kekoFactionCSAT: kekoFactionBase {
 		optics[] = {"Binocular"};
 	};
 
-	class kekoJetPilotCSAT: kekoPilotCSAT {
+	class kekoJetPilotCSAT: kekoHeliPilotCSAT {
 		name = "Jet Pilot";
 		uniform[] = {"U_O_PilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
-		helmet[] = {"H_PilotHelmetHeli_O"};
+		helmet[] = {"H_PilotHelmetFighter_O"};
 		optics[] = {"Binocular"};
 	};
 

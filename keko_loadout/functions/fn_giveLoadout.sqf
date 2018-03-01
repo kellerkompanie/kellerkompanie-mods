@@ -1,6 +1,6 @@
 params ["_unit", "_faction", "_role"];
 
-hint format ["%1 %2 %3", _unit, _faction, _role];
+//hint format ["%1 %2 %3", _unit, _faction, _role];
 
 diag_log format ["_unit: %1", _unit];
 diag_log format ["_faction: %1", _faction];

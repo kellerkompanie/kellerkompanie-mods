@@ -307,17 +307,18 @@ class kekoFactionNato: kekoFactionBase {
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
+			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_PilotHelmetHeli_B"};
 		optics[] = {"Binocular"};
 	};
 
-	class kekoJetPilotNato: kekoPilotNato {
+	class kekoJetPilotNato: kekoHeliPilotNato {
 		name = "Jet Pilot";
-		uniform[] = {"U_B_HeliPilotCoveralls"};
+		uniform[] = {"U_B_PilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
-		helmet[] = {"H_PilotHelmetHeli_B"};
+		helmet[] = {"H_PilotHelmetFighter_B"};
 		optics[] = {"Binocular"};
 	};
 
