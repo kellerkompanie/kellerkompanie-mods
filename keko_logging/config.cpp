@@ -5,6 +5,7 @@ class CfgPatches
         units[] = {};
         requiredVersion = 1.80;
         requiredAddons[] = {
+            "cba_xeh",
             "extDB3"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
@@ -21,7 +22,7 @@ class CfgFunctions
         {
             file = "keko_logging\functions";
             class preStart {preStart = 1;};
-            class preInit {preInit = 1;};
+            class preInit  {preInit  = 1;};
         };
     };
 };
