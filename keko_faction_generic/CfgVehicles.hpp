@@ -1,18 +1,3 @@
-#define standard_items "ItemRadio", "ItemMap", "ItemCompass", "ItemWatch"
-
-#define standard_weapons "Binocular", "Throw", "Put"
-
-//iconMan
-//iconManMedic
-//iconManEngineer
-//iconManExplosive
-//iconManRecon
-//iconManVirtual
-//iconManAT
-//iconManLeader
-//iconManMG
-//iconManOfficer
-
 class CfgVehicles {
 	//units
 	class SoldierWB;
@@ -24,7 +9,7 @@ class CfgVehicles {
 	class keko_blufor_soldier : B_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 2;
-		curatorScope = 2;
+		curatorScope = 1;
 		side = 1;
 		faction = "keko_faction_generic_blufor";
 		vehicleClass = "Men";
@@ -184,7 +169,7 @@ class CfgVehicles {
 	class keko_indfor_soldier : I_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 2;
-		curatorScope = 2;
+		curatorScope = 1;
 		side = 2;
 		faction = "keko_faction_generic_indfor";
 		vehicleClass = "Men";
@@ -350,7 +335,7 @@ class CfgVehicles {
 	class keko_opfor_soldier : O_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 2;
-		curatorScope = 2;
+		curatorScope = 1;
 		side = 0;
 		faction = "keko_faction_generic_opfor";
 		vehicleClass = "Men";		
