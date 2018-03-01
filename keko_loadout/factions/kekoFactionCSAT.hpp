@@ -29,6 +29,7 @@ class kekoFactionCSAT: kekoFactionBase {
 			kekoEODCSAT,
 			kekoEngineerCSAT,
 			kekoPilotCSAT,
+			kekoJetPilotCSAT
 			kekoJTACCSAT,
 			kekoUAVOperatorCSAT}}
 	};

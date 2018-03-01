@@ -29,6 +29,7 @@ class kekoFactionAAF: kekoFactionBase {
 			kekoEODAAF,
 			kekoEngineerAAF,
 			kekoPilotAAF,
+			kekoJetPilotAAF,
 			kekoJTACAAF,
 			kekoUAVOperatorAAF}}
 	};
