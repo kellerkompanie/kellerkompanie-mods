@@ -243,6 +243,7 @@ class CfgFunctions
             class init {};
             class initPlayerLocal {};
             class initServer {};
+            class preInit {preInit = 1;};
         };
     };
 };
