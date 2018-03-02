@@ -39,6 +39,7 @@ class CfgVehicles
     class Logic;
     class Module_F: Logic
     {
+        class EventHandlers;
         class ArgumentsBaseUnits;
         class ModuleDescription;
     };
@@ -56,6 +57,11 @@ class CfgVehicles
         icon = "\keko_common\icons\icon_init.paa";
         picture = "\keko_common\icons\icon_init.paa";
         portrait = "\keko_common\icons\icon_init.paa";
+
+        class EventHandlers: EventHandlers {
+            AttributesChanged3DEN = "_this call keko_common_fnc_3denAttributesChanged;";
+            //Init = "diag_log 'XXX EventHandler Init';";
+        };
 
         class Arguments: ArgumentsBaseUnits {
             class loadoutOnSpawn {
@@ -235,6 +241,7 @@ class CfgFunctions
             class moduleAssignRepairSpecialist{};
             class fullHeal{};
             class initMission{};
+            class 3denAttributesChanged{};
         };
         class init
         {
