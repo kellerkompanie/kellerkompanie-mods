@@ -23,7 +23,7 @@ class CfgVehicles {
 		nakedUniform = "U_BasicBody";
 		displayName = "Soldier";
 
-		class EventHandlers { 		
+		class EventHandlers: EventHandlers { 		
 			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_blufor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
@@ -183,7 +183,7 @@ class CfgVehicles {
 		nakedUniform = "U_BasicBody";
 		displayName = "INDFOR Soldier";
 
-		class EventHandlers { 			
+		class EventHandlers: EventHandlers { 			
 			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_indfor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
@@ -349,7 +349,7 @@ class CfgVehicles {
 		nakedUniform = "U_BasicBody";
 		displayName = "OPFOR Soldier";
 
-		class EventHandlers { 			
+		class EventHandlers: EventHandlers { 			
 			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_opfor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
