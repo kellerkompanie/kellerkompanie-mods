@@ -1,19 +1,22 @@
-//systemChat str _this;
+//systemChat str "InitModule 3denAttributesChanged";
 
 _module = _this select 0;
 _moduleName = str (_module get3DENAttribute "name");
 
 
 _initModuleExists = false;
+_existingInitModule = objNull;
 _gameMasterModuleExists = false;
 _hc1Exists = false;
 _hc2Exists = false;
 _hc3Exists = false;
 { 
 	_logicName = (_x get3DENAttribute "name") select 0;
+	//systemChat _logicName;
 	switch(_logicName) do {
 		case "keko_3den_initModule": {
 			_initModuleExists = true;
+			_existingInitModule = _x;
 			break;
 		};
 		case "keko_3den_gameMaster": {
@@ -36,23 +39,22 @@ _hc3Exists = false;
 
 } forEach (all3DENEntities select 3);
 
+if (_initModuleExists) then {
+	if(_module != _existingInitModule) then {
+		systemChat "ERROR: there can be only one Init Module";
+		delete3DENEntities _this;
+		if(true) exitWith {};
+	};
+}; 
 
 if !(_initModuleExists) then {
-	_module set3DENAttribute ["Name", "keko_3den_initModule"];
-
 	set3DENMissionAttributes [
-
-		["Scenario", "Author", "Schwaggot"],
-		["Scenario", "Title", "Kellerkompanie Template"],
-	    ["Scenario", "LoadScreen", "\keko_common\pictures\intro.paa"],
-	    ["Scenario", "OnLoadMission", "www.kellerkompanie.com"],
 	    ["Scenario", "SaveBinarized", false],
 	    
-	    //["Multiplayer", "enabledebugconsole", 1],
 	    ["Multiplayer", "Respawn", 3],
 	    ["Multiplayer", "RespawnDelay", 10],
 	    ["Multiplayer", "MinPlayers", 1],
-	    ["Multiplayer", "MaxPlayers", (count playableUnits) + 2],
+	    
 	    ["Multiplayer", "DisabledAI", true],
 	    ["Multiplayer", "AIKills", false],
 	    ["Multiplayer", "EnableTeamSwitch", false],
@@ -60,8 +62,42 @@ if !(_initModuleExists) then {
 
 	    ["Multiplayer", "GameType", "COOP"]
 	];
+
+	_module set3DENAttribute ["Name", "keko_3den_initModule"];
 };
 
+// update number of players + 3 for headless clients
+set3DENMissionAttributes [ ["Multiplayer", "MaxPlayers", (count playableUnits) + 3] ];
+
+// update scenario variables from module settings
+_missionTitle = _module getVariable "MissionTitle";
+_missionAuthor = _module getVariable "MissionAuthor";
+_missionPicture = _module getVariable "MissionPicture";
+_missionPictureSubtitle = _module getVariable "MissionPictureSubtitle";
+_sideRelations = _module getVariable "SideRelations";
+
+"Scenario" set3DENMissionAttribute ["Author", _missionAuthor];
+"Scenario" set3DENMissionAttribute ["IntelBriefingName", _missionTitle];
+"Scenario" set3DENMissionAttribute ["LoadScreen", _missionPicture];
+"Scenario" set3DENMissionAttribute ["OnLoadMission", _missionPictureSubtitle];
+
+switch(_sideRelations) do {
+	case 0: {		
+		"Multiplayer" set3DENMissionAttribute ["IntelIndepAllegiance",[0,0]];
+	};
+	case 1: {
+		"Multiplayer" set3DENMissionAttribute ["IntelIndepAllegiance",[1,0]];
+	};
+	case 2: {
+		"Multiplayer" set3DENMissionAttribute ["IntelIndepAllegiance",[0,1]];
+	};
+	case 3: {
+		"Multiplayer" set3DENMissionAttribute ["IntelIndepAllegiance",[1,1]];
+	};
+};
+
+
+// create additional logics on first create
 
 _modulePos = getPos _module;
 
@@ -102,5 +138,3 @@ if !(_hc3Exists) then {
 	_hc3Entity set3DENAttribute ["ControlMP", true];
 	_hc3Entity set3DENAttribute ["Description", "HC3"];
 };
-
-

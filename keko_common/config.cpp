@@ -12,6 +12,7 @@ class CfgPatches
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
+        	"3den",
             "keko_loadout",
             "A3_UI_F",
             "A3_UI_F_Curator",
@@ -40,8 +41,20 @@ class CfgVehicles
     class Module_F: Logic
     {
         class EventHandlers;
-        class ArgumentsBaseUnits;
         class ModuleDescription;
+
+        class AttributesBase
+		{
+			class Default;
+			class Edit; 
+			class Combo;
+			class Checkbox; 
+			class CheckboxNumber; 
+			class ModuleDescription;
+			class Units; 
+
+			expression = "_this setVariable ['%s',_value];";
+		};
     };
     class keko_ModuleInitMission3den: Module_F
     {
@@ -63,17 +76,44 @@ class CfgVehicles
             //Init = "diag_log 'XXX EventHandler Init';";
         };
 
-        class Arguments: ArgumentsBaseUnits {
-            class loadoutOnSpawn {
+		class Attributes: AttributesBase
+		{
+			class MissionTitle: Edit {
+				property = "keko_common_ModuleInit_MissionTitle";
+				displayName = "Title";
+				typeName = "STRING"; 
+				defaultValue = "'Kellerkompanie Mission'";				
+			};
+			class MissionAuthor: Edit {
+				property = "keko_common_ModuleInit_MissionAuthor";
+                displayName = "Author";
+                typeName = "STRING";
+                defaultValue = profileName;
+            };
+            class MissionPicture: Edit {
+            	property = "keko_common_ModuleInit_MissionPicture";
+            	displayName = "Picture";
+                typeName = "STRING";
+                defaultValue = "'\keko_common\pictures\intro.paa'";
+            };
+            class MissionPictureSubtitle: Edit {
+            	property = "keko_common_ModuleInit_MissionPictureSubtitle";
+            	displayName = "Picture Subtitle";
+                typeName = "STRING";
+                defaultValue = "'www.kellerkompanie.com'";
+            };
+            class LoadoutOnSpawn: Checkbox {
+            	property = "keko_common_ModuleInit_LoadoutOnSpawn";
                 displayName = "Give Player Loadout on Spawn";
                 typeName = "BOOL";
                 defaultValue = true;                
             };
-            class faction {
+            class Faction: Combo {
+            	property = "keko_common_ModuleInit_Faction";
                 displayName = "Default faction";
                 description = "Choose one";
                 typeName = "STRING";
-                defaultValue = "kekoFactionNATO";
+                defaultValue = "'kekoFactionNATO'";
                 class Values
                 {
                     class nato  {name = "[Minimal] NATO - North Atlantic Treaty Organization";  value = "kekoFactionNATO";};
@@ -81,17 +121,20 @@ class CfgVehicles
                     class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};                    
                 };
             };
-            class giveMap {
+            class GiveMap: Checkbox {
+            	property = "keko_common_ModuleInit_GiveMap";
                 displayName = "Give map";
                 typeName = "BOOL";
                 defaultValue = true;                
             };
-            class giveCompass {
+            class GiveCompass: Checkbox {
+            	property = "keko_common_ModuleInit_GiveCompass";
                 displayName = "Give compass";
                 typeName = "BOOL";
                 defaultValue = true;                
             };            
-            class giveGps {
+            class GiveGps: Combo {
+            	property = "keko_common_ModuleInit_GiveGps";
                 displayName = "Give GPS";
                 typeName = "NUMBER";
                 defaultValue = 4; 
@@ -103,7 +146,8 @@ class CfgVehicles
                     class cTab {name = "cTab"; value = 4;};
                 };
             };
-            class giveNvg {
+            class GiveNvg: Combo {
+            	property = "keko_common_ModuleInit_GiveNvg";
                 displayName="Give Nightvision Equipment";
                 typeName = "NUMBER";
                 defaultValue = 0;
@@ -123,7 +167,8 @@ class CfgVehicles
                     class sovMono {name = "(main) Sovjet Mono"; value = 12;};
                 };    
             };
-            class giveRadio {
+            class GiveRadio: Combo {
+            	property = "keko_common_ModuleInit_GiveRadio";
                 displayName="Give radio";
                 typeName = "NUMBER";
                 defaultValue = 1;
@@ -134,7 +179,8 @@ class CfgVehicles
                     class leadOnly {name = "Just for lead positions (rank > Corporal)"; value = 3;};
                 };
             };
-            class sideRelations {
+            class SideRelations: Combo {
+            	property = "keko_common_ModuleInit_SideRelations";
                 displayName="Independent verbündet mit";
                 typeName = "NUMBER";
                 defaultValue = 0;
@@ -144,9 +190,10 @@ class CfgVehicles
                     class blu {name = "BLUFOR"; value = 1;};
                     class none {name = "keiner"; value = 0;};
                 };
-            };           
-            
-        };
+            }; 
+
+			class ModuleDescription: ModuleDescription{};
+		};
     };
     class keko_ModuleFullHeal: Module_F
     {
@@ -242,6 +289,9 @@ class CfgFunctions
             class fullHeal{};
             class initMission{};
             class 3denAttributesChanged{};
+            class addRoleDescriptionPrefix{};
+            class replaceRoleDescription{};
+            class resetRoleDescription{};
         };
         class init
         {
@@ -254,6 +304,35 @@ class CfgFunctions
     };
 };
 
-//#include "\keko_common\functions\dialog_baseClasses.hpp"
-//#include "\keko_common\functions\dialog_changeLoadout.hpp"
-//#include "\keko_common\functions\dialog_loadoutMenu.hpp"
+#include "\keko_common\gui\keko_baseDefines.hpp"
+#include "\keko_common\gui\keko_addRoleDescriptionPrefixDisplay.hpp"
+#include "\keko_common\gui\keko_replaceRoleDescriptionDisplay.hpp"
+
+class Display3DEN {
+	class ContextMenu: ctrlMenu {
+		class Items	{
+			class Edit {
+				items[] += {
+					"keko_addRoleDescriptionPrefix",
+					"keko_removeRoleDescriptionPrefix",
+					"keko_resetRoleDescription"};
+			};
+			class keko_addRoleDescriptionPrefix	{
+				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionPrefixDisplay'";
+				Text = "Add role description prefix";
+				conditionShow = "selectedObject";
+			};	
+			class keko_removeRoleDescriptionPrefix {
+				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
+				Text = "Replace in role description";
+				conditionShow = "selectedObject";
+			};	
+			class keko_resetRoleDescription	{
+				action = "call keko_common_fnc_resetRoleDescription";
+				Text = "Reset role description";
+				conditionShow = "selectedObject";
+			};							
+		};
+	};
+};
+

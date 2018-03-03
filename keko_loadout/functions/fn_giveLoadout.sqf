@@ -2,10 +2,11 @@ params ["_unit", "_faction", "_role"];
 
 //hint format ["%1 %2 %3", _unit, _faction, _role];
 
-diag_log format ["_unit: %1", _unit];
-diag_log format ["_faction: %1", _faction];
-diag_log format ["_role: %1", _role];
+//diag_log format ["_unit: %1", _unit];
+//diag_log format ["_faction: %1", _faction];
+//diag_log format ["_role: %1", _role];
 
+player enableSimulation false;
 
 _role_config = configFile >> "kekoFaction" >> _faction >> _role;
 _weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
@@ -378,6 +379,12 @@ if (keko_var_giveRadio > 0) then {
 		};
 		default {};
 	};
+};
+
+player enableSimulation true;
+
+if !(weaponLowered player) then {
+	player action ["WeaponOnBack", player];
 };
 
 [player] spawn keko_loadout_fnc_setChannels;

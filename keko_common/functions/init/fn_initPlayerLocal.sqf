@@ -59,3 +59,11 @@ if(_param_undercover_faction > 0) then {
 		[player] execVM "INC_undercover\Scripts\initUCR.sqf";
 	};
 };*/
+
+if (keko_var_loadoutOnSpawn) then {
+	if( (player isKindOf "keko_blufor_soldier") || (player isKindOf "keko_opfor_soldier") || (player isKindOf "keko_indfor_soldier") ) then {
+		_playerObjectClass = typeOf player;
+		_loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
+		[player, keko_var_faction, _loadoutDummyClass] call keko_loadout_fnc_giveLoadout;
+	};	
+};
