@@ -30,10 +30,13 @@ class CfgPatches
 			"keko_blufor_spotter",
 			"keko_blufor_eod",
 			"keko_blufor_engineer",
+			"keko_blufor_driver",
 			"keko_blufor_heli_pilot",
+			"keko_blufor_heli_crew",
 			"keko_blufor_jet_pilot",
 			"keko_blufor_jtac",
 			"keko_blufor_uav",
+			"keko_blufor_survivor",
 
 
 			/* Indpendent units */ 
@@ -63,10 +66,13 @@ class CfgPatches
 			"keko_indfor_spotter",
 			"keko_indfor_eod",
 			"keko_indfor_engineer",
+			"keko_indfor_driver",
 			"keko_indfor_heli_pilot",
+			"keko_indfor_heli_crew",
 			"keko_indfor_jet_pilot",
 			"keko_indfor_jtac",
 			"keko_indfor_uav",
+			"keko_indfor_survivor",
 
 
 			/* OPFOR units */ 
@@ -96,10 +102,13 @@ class CfgPatches
 			"keko_opfor_spotter",
 			"keko_opfor_eod",
 			"keko_opfor_engineer",
+			"keko_opfor_driver",
 			"keko_opfor_heli_pilot",
+			"keko_opfor_heli_crew",
 			"keko_opfor_jet_pilot",
 			"keko_opfor_jtac",
-			"keko_opfor_uav"
+			"keko_opfor_uav",
+			"keko_opfor_survivor"
 		};
         weapons[] = {};
         requiredVersion = 1.80;
@@ -122,18 +131,21 @@ class cfgFactionClasses {
 		priority = 1;
 		side = 1;
 		icon = "\A3\data_f\cfgfactionclasses_blu_ca.paa";
+		scopeCurator = 1;
 	};
 	class keko_faction_generic_indfor {
 		displayName = "Kellerkompanie INDFOR";
 		priority = 1;
 		side = 2;
 		icon = "\A3\data_f\cfgfactionclasses_ind_ca.paa";
+		scopeCurator = 1;
 	};
 	class keko_faction_generic_opfor {
 		displayName = "Kellerkompanie OPFOR";
 		priority = 1;
 		side = 0;
 		icon = "\A3\data_f\cfgfactionclasses_opf_ca.paa";
+		scopeCurator = 1;
 	};
 };
 
@@ -141,14 +153,17 @@ class CfgVehicleClasses {
 	class keko_vehicleclass_generic_blufor {
 		displayName = "Men";
 		priority = 2;
+		scopeCurator = 1;
 	};
 	class keko_vehicleclass_generic_indfor {
 		displayName = "Men";
 		priority = 2;
+		scopeCurator = 1;
 	};
 	class keko_vehicleclass_generic_opfor {
 		displayName = "Men";
 		priority = 2;
+		scopeCurator = 1;
 	};
 };
 

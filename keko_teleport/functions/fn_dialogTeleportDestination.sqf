@@ -7,4 +7,6 @@ _object = profileNamespace getVariable "keko_teleport_dest_object";
 
 [_object, _text] call keko_teleport_fnc_addTeleportDestination;
 
+deleteVehicle _object;
+
 closeDialog 1;

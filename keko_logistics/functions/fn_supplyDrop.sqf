@@ -3,7 +3,7 @@ params ["_position", "_faction", "_crateCfg"];
 //[_targetPos select 0, _targetPos select 1, 300]
 _crate = [_position, _faction, _crateCfg] call keko_logistics_fnc_spawnCrate;
 
-_targetPos = [_position select 0, _position select 1, 300];
+_targetPos = [_position select 0, _position select 1, 200];
 _chute = createVehicle ["B_Parachute_02_F", _targetPos, [], 0, "NONE"];
 _crate setPos _targetPos;
 { _x addCuratorEditableObjects [[_crate],false] } forEach allCurators;

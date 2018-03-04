@@ -11,12 +11,8 @@ class CfgPatches
         requiredVersion = 1.80;
         requiredAddons[] = {
             "keko_loadout",
-            "A3_UI_F",
-            "A3_UI_F_Curator",
-            "A3_Functions_F",
-            "A3_Functions_F_Curator",
-            "A3_Modules_F",
-            "A3_Modules_F_Curator"};
+            "ace_main",
+            "ace_modules"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;       
@@ -48,11 +44,9 @@ class CfgVehicles
         function           = "keko_logistics_fnc_moduleAddLogisticsMenu";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
-        isDisposable       = 0;
-        icon = "\keko_logistics\icons\icon_logistics.paa";
-        picture = "\keko_logistics\icons\icon_logistics.paa";
-        portrait = "\keko_logistics\icons\icon_logistics.paa";
+        isTriggerActivated = 0;
+        icon               = "\keko_logistics\icons\icon_logistics.paa";
+        curatorCanAttach   = 1;
     };
     class keko_ModuleAddLogisticsMenu3den: Module_F {
         scope              = 2; 
@@ -62,11 +56,9 @@ class CfgVehicles
         function           = "keko_logistics_fnc_moduleAddLogisticsMenu3den";
         functionPriority   = 2;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
-        icon = "\keko_logistics\icons\icon_logistics.paa";
-        picture = "\keko_logistics\icons\icon_logistics.paa";
-        portrait = "\keko_logistics\icons\icon_logistics.paa";
+        icon               = "\keko_logistics\icons\icon_logistics.paa";
     };
     class keko_ModuleSpawnCrate: Module_F {
         scope              = 1; 
@@ -76,11 +68,9 @@ class CfgVehicles
         function           = "keko_logistics_fnc_moduleSpawnCrate";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
-        icon = "\keko_logistics\icons\icon_crate.paa";
-        picture = "\keko_logistics\icons\icon_crate.paa";
-        portrait = "\keko_logistics\icons\icon_crate.paa";
+        icon               = "\keko_logistics\icons\icon_crate.paa";
     };
     class keko_ModuleSupplyDrop: Module_F {
         scope              = 1; 
@@ -90,11 +80,9 @@ class CfgVehicles
         function           = "keko_logistics_fnc_moduleSupplyDrop";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
-        icon = "\keko_logistics\icons\icon_paradrop.paa";
-        picture = "\keko_logistics\icons\icon_paradrop.paa";
-        portrait = "\keko_logistics\icons\icon_paradrop.paa";
+        icon               = "\keko_logistics\icons\icon_paradrop.paa";
     };
 };
 

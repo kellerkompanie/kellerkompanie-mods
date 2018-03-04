@@ -1,20 +1,7 @@
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic"];
 
-//diag_log format ["moduleAddTeleportDestination _activated: ", _activated];
+if !(local _logic) exitWith{};
 
-if !(hasInterface) exitWith{};
+profileNamespace setVariable ["keko_teleport_dest_object", _logic];
 
-//diag_log "moduleAddTeleportDestination hasInterface is true";
-
-//diag_log "moduleAddTeleportDestination executing";
-
-if(_activated) then {
-	if (local _logic) then {
-		profileNamespace setVariable ["keko_teleport_dest_object", _logic];
-
-		createDialog "keko_teleport_destinationDialog";
-		//_logic addEventHandler ["Deleted",{hint format ["%1 was killed by %2",name (_this select 0),name (_this select 1)];}]
-	};	
-};
+createDialog "keko_teleport_destinationDialog";

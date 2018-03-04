@@ -1,23 +1,25 @@
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic"];
+if (!local _logic) exitWith {};
 
-if !(_activated && local _logic) exitWith {};
+private _object = attachedTo _logic;
+diag_log text format["[KEKO] (logistics) addLogisticsMenu: %1 %2 %3",_logic,_object,typeOf _object];
 
-_object = objnull;
-_mouseOver = missionnamespace getvariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
-
-if ((_mouseOver select 0) == typename objnull) then {
-    _object = _mouseOver select 1;
+switch (true) do {
+    case (isNull _object): {
+    	diag_log text "[KEKO] (logistics) ERROR: _object is null";
+        [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
+    };
+    case (isPlayer _object): {
+    	diag_log text "[KEKO] (logistics) ERROR: _object is player";
+        [objNull, "place on object"] call bis_fnc_showCuratorFeedbackMessage;
+    };
+    case (!alive _object): {
+    	diag_log text "[KEKO] (logistics) ERROR: _object is not alive";
+        [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
+    };
+    default {
+        [_object] call keko_logistics_fnc_addLogisticsMenu;
+    };
 };
 
-if(isnull _object) then {
-    [objnull, "Error - Module was not placed on any object"] call bis_fnc_showCuratorFeedbackMessage;
-    deletevehicle _logic;
-};
-
-if(isNull _object) exitWith{};
-
-[_object] call keko_logistics_fnc_addLogisticsMenu;
-
-deletevehicle _logic;
+deleteVehicle _logic;

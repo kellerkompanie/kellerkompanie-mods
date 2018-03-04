@@ -1,6 +1,8 @@
 params ["_teleporterName"];
 
-_markerName = "teleportMarker_" + _teleporterName;
+diag_log text format["[KEKO] (teleport) teleporting to marker: %1", _teleporterName];
+
+_markerName = "keko_teleport_" + _teleporterName;
 _pos = getMarkerPos _markerName;
 
 titleText ["", "BLACK OUT", 2];

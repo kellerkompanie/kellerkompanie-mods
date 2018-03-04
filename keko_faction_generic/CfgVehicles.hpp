@@ -158,9 +158,19 @@ class CfgVehicles {
 		loadoutDummy = "kekoEngineer";
 	};
 
+	class keko_blufor_driver : keko_blufor_soldier {
+		displayName = "Driver/Crewman";
+		loadoutDummy = "kekoDriver";
+	};
+
 	class keko_blufor_heli_pilot : keko_blufor_soldier {
 		displayName = "Helicopter Pilot";
 		loadoutDummy = "kekoHeliPilot";
+	};
+
+	class keko_blufor_heli_crew : keko_blufor_soldier {
+		displayName = "Helicopter Crew";
+		loadoutDummy = "kekoHeliCrew";
 	};
 
 	class keko_blufor_jet_pilot : keko_blufor_soldier {
@@ -176,6 +186,11 @@ class CfgVehicles {
 	class keko_blufor_uav : keko_blufor_soldier {
 		displayName = "UAV Operator";
 		loadoutDummy = "kekoUAVOperator";
+	};
+
+	class keko_blufor_survivor : keko_blufor_soldier {
+		displayName = "Survivor";
+		loadoutDummy = "kekoSurvivor";
 	};
 
 
@@ -341,9 +356,19 @@ class CfgVehicles {
 		loadoutDummy = "kekoEngineer";
 	};
 
+	class keko_indfor_driver : keko_indfor_soldier {
+		displayName = "Driver/Crewman";
+		loadoutDummy = "kekoDriver";
+	};
+
 	class keko_indfor_heli_pilot : keko_indfor_soldier {
 		displayName = "Helicopter Pilot";
 		loadoutDummy = "kekoHeliPilot";
+	};
+
+	class keko_indfor_heli_crew : keko_indfor_soldier {
+		displayName = "Helicopter Crew";
+		loadoutDummy = "kekoHeliCrew";
 	};
 
 	class keko_indfor_jet_pilot : keko_indfor_soldier {
@@ -361,6 +386,10 @@ class CfgVehicles {
 		loadoutDummy = "kekoUAVOperator";
 	};
 
+	class keko_indfor_survivor : keko_indfor_soldier {
+		displayName = "Survivor";
+		loadoutDummy = "kekoSurvivor";
+	};
 
 
 
@@ -530,9 +559,19 @@ class CfgVehicles {
 		loadoutDummy = "kekoEngineer";
 	};
 
+	class keko_opfor_driver : keko_opfor_soldier {
+		displayName = "Driver/Crewman";
+		loadoutDummy = "kekoDriver";
+	};
+
 	class keko_opfor_heli_pilot : keko_opfor_soldier {
 		displayName = "Helicopter Pilot";
 		loadoutDummy = "kekoHeliPilot";
+	};
+
+	class keko_opfor_heli_crew : keko_opfor_soldier {
+		displayName = "Helicopter Crew";
+		loadoutDummy = "kekoHeliCrew";
 	};
 
 	class keko_opfor_jet_pilot : keko_opfor_soldier {
@@ -548,6 +587,11 @@ class CfgVehicles {
 	class keko_opfor_uav : keko_opfor_soldier {
 		displayName = "UAV Operator";
 		loadoutDummy = "kekoUAVOperator";
+	};
+
+	class keko_opfor_survivor : keko_opfor_soldier {
+		displayName = "Survivor";
+		loadoutDummy = "kekoSurvivor";
 	};
 
 

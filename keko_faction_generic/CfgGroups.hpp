@@ -78,7 +78,7 @@ class CfgGroups
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_rifleman_at";
+						vehicle = "keko_blufor_at";
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
@@ -107,7 +107,7 @@ class CfgGroups
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_rifleman_at";
+						vehicle = "keko_blufor_aa";
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
@@ -178,6 +178,64 @@ class CfgGroups
 					class Unit3
 					{
 						vehicle = "keko_blufor_uav";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_blufor_ft_7
+				{
+					name = "Fire Team (Logistics)";
+					
+					class Unit0
+					{
+						vehicle = "keko_blufor_engineer";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_blufor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_blufor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_blufor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_blufor_ft_8
+				{
+					name = "Fire Team (EOD)";
+					
+					class Unit0
+					{
+						vehicle = "keko_blufor_eod";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_blufor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_blufor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_blufor_eod";
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
@@ -533,6 +591,69 @@ class CfgGroups
 						position[] = {6,0,0};
 					};
 				};
+				class keko_faction_generic_blufor_heli_crew_doorgunner
+				{
+					name = "Helicopter Crew (with Gunners)";
+					
+					class Unit0
+					{
+						vehicle = "keko_blufor_heli_pilot";
+						rank = "SERGEANT";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_blufor_heli_pilot";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_blufor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {0,3,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_blufor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {3,3,0};
+					};
+				};
+				class keko_faction_generic_blufor_sniper
+				{
+					name = "Sniper Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_blufor_sniper";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_blufor_spotter";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+				};
+				class keko_faction_generic_blufor_uav
+				{
+					name = "UAV Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_blufor_uav";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_blufor_engineer";
+						rank = "PRIVATE";
+						position[] = {3,0,0};
+					};
+				};
 			};
 		};
 	};
@@ -716,6 +837,64 @@ class CfgGroups
 					class Unit3
 					{
 						vehicle = "keko_opfor_uav";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_opfor_ft_7
+				{
+					name = "Fire Team (Logistics)";
+					
+					class Unit0
+					{
+						vehicle = "keko_opfor_engineer";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_opfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_opfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_opfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_opfor_ft_8
+				{
+					name = "Fire Team (EOD)";
+					
+					class Unit0
+					{
+						vehicle = "keko_opfor_eod";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_opfor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_opfor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_opfor_eod";
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
@@ -1071,6 +1250,69 @@ class CfgGroups
 						position[] = {6,0,0};
 					};
 				};
+				class keko_faction_generic_opfor_heli_crew_doorgunner
+				{
+					name = "Helicopter Crew (with Gunners)";
+					
+					class Unit0
+					{
+						vehicle = "keko_opfor_heli_pilot";
+						rank = "SERGEANT";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_opfor_heli_pilot";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_opfor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {0,3,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_opfor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {3,3,0};
+					};
+				};
+				class keko_faction_generic_opfor_sniper
+				{
+					name = "Sniper Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_opfor_sniper";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_opfor_spotter";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+				};
+				class keko_faction_generic_opfor_uav
+				{
+					name = "UAV Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_opfor_uav";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_opfor_engineer";
+						rank = "PRIVATE";
+						position[] = {3,0,0};
+					};
+				};
 			};
 		};
 	};
@@ -1253,6 +1495,64 @@ class CfgGroups
 					class Unit3
 					{
 						vehicle = "keko_indfor_uav";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_indfor_ft_7
+				{
+					name = "Fire Team (Logistics)";
+					
+					class Unit0
+					{
+						vehicle = "keko_indfor_engineer";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_indfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_indfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_indfor_engineer";
+						rank = "PRIVATE";
+						position[] = {0,-9,0};
+					};
+				};
+				class keko_faction_generic_indfor_ft_8
+				{
+					name = "Fire Team (EOD)";
+					
+					class Unit0
+					{
+						vehicle = "keko_indfor_eod";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_indfor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-3,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_indfor_eod";
+						rank = "PRIVATE";
+						position[] = {0,-6,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_indfor_eod";
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
@@ -1606,6 +1906,69 @@ class CfgGroups
 						vehicle = "keko_indfor_command";
 						rank = "COLONEL";
 						position[] = {6,0,0};
+					};
+				};
+				class keko_faction_generic_indfor_heli_crew_doorgunner
+				{
+					name = "Helicopter Crew (with Gunners)";
+					
+					class Unit0
+					{
+						vehicle = "keko_indfor_heli_pilot";
+						rank = "SERGEANT";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_indfor_heli_pilot";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+					class Unit2
+					{
+						vehicle = "keko_indfor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {0,3,0};
+					};
+					class Unit3
+					{
+						vehicle = "keko_indfor_heli_crew";
+						rank = "PRIVATE";
+						position[] = {3,3,0};
+					};
+				};
+				class keko_faction_generic_indfor_sniper
+				{
+					name = "Sniper Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_indfor_sniper";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_indfor_spotter";
+						rank = "CORPORAL";
+						position[] = {3,0,0};
+					};
+				};
+				class keko_faction_generic_indfor_uav
+				{
+					name = "UAV Team";
+					
+					class Unit0
+					{
+						vehicle = "keko_indfor_uav";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						vehicle = "keko_indfor_engineer";
+						rank = "PRIVATE";
+						position[] = {3,0,0};
 					};
 				};
 			};

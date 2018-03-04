@@ -11,12 +11,8 @@ class CfgPatches
         requiredVersion = 1.80;
         requiredAddons[] = {
             "keko_common",
-            "A3_UI_F",
-            "A3_UI_F_Curator",
-            "A3_Functions_F",
-            "A3_Functions_F_Curator",
-            "A3_Modules_F",
-            "A3_Modules_F_Curator"};
+            "ace_main",
+            "ace_modules"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;       
@@ -35,10 +31,9 @@ class CfgFactionClasses
 class CfgVehicles
 {
     class Logic;
-    class Module_F: Logic
-    {
-        class ArgumentsBaseUnits;
-        class ModuleDescription;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {
+        };
     };
     class keko_ModuleAddTeleportDestination3den: Module_F
     {
@@ -52,8 +47,6 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_teleport\icons\teleport_dest_icon.paa";
-        picture = "\keko_teleport\icons\teleport_dest_icon.paa";
-        portrait = "\keko_teleport\icons\teleport_dest_icon.paa";
 
         class Arguments: ArgumentsBaseUnits {
             class teleportDestination {
@@ -75,38 +68,31 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_teleport\icons\teleport_menu_icon.paa";
-        picture = "\keko_teleport\icons\teleport_menu_icon.paa";
-        portrait = "\keko_teleport\icons\teleport_menu_icon.paa";
     };
     class keko_ModuleAddTeleportDestination: Module_F
     {
-        scope              = 1; 
-        scopeCurator       = 2;
-        displayName        = "Add Fast-Travel Destination"; 
+        displayName        = "Add Fast-Travel Destination";
+        icon               = "\keko_teleport\icons\teleport_dest_icon.paa"; 
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportDestination";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
-        isDisposable       = 0;
-        icon = "\keko_teleport\icons\teleport_dest_icon.paa";
-        picture = "\keko_teleport\icons\teleport_dest_icon.paa";
-        portrait = "\keko_teleport\icons\teleport_dest_icon.paa";
+        isTriggerActivated = 0;        
+        scope              = 1; 
+        scopeCurator       = 2;
     };
     class keko_ModuleAddTeleportMenu: Module_F
     {
-        scope              = 1; 
-        scopeCurator       = 2;
         displayName        = "Add Fast-Travel Menu"; 
+        icon               = "\keko_teleport\icons\teleport_menu_icon.paa";
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportMenu";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
-        isDisposable       = 0;
-        icon = "\keko_teleport\icons\teleport_menu_icon.paa";
-        picture = "\keko_teleport\icons\teleport_menu_icon.paa";
-        portrait = "\keko_teleport\icons\teleport_menu_icon.paa";
+        isTriggerActivated = 0;        
+        scope              = 1; 
+        scopeCurator       = 2;
+        curatorCanAttach   = 1;       
     };
 };
 
