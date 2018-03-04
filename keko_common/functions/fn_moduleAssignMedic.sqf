@@ -1,21 +1,24 @@
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic"];
+if (!local _logic) exitWith {};
 
-if !(_activated && local _logic) exitWith {};
+private _unit = attachedTo _logic;
+diag_log text format["[KEKO] (common) assignMedic: %1 %2 %3",_logic,_unit,typeOf _unit];
 
-_unit = objnull;
-_mouseOver = missionnamespace getvariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
-if ((_mouseOver select 0) == typename objnull) then {
-    _unit = _mouseOver select 1;
+switch (true) do {
+    case (isNull _unit): {
+    	diag_log text "[KEKO] (common) ERROR: _unit is null";
+        [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
+    };
+    case (isPlayer _unit): {
+    	_unit setVariable ["ace_medical_medicClass",1,true];
+    };
+    case (!alive _unit): {
+    	diag_log text "[KEKO] (common) ERROR: _unit is not alive";
+        [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
+    };
+    default {
+        [objNull, "place on player"] call bis_fnc_showCuratorFeedbackMessage;
+    };
 };
-if(isnull _unit) then {
-    [objnull, "Error - Module was not placed on any unit"] call bis_fnc_showCuratorFeedbackMessage;
-    deletevehicle _logic;
-};
 
-if(isNull _unit) exitWith{};
-
-_unit setVariable ["ace_medical_medicClass",1,true];
-
-deletevehicle _logic;
+deleteVehicle _logic;

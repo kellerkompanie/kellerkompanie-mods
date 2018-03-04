@@ -1,6 +1,6 @@
 _logic = _this select 0;
 
-diag_log "[KEKO] (common) running moduleInitMission3den";
+diag_log text "[KEKO] (common) running moduleInitMission3den";
 
 if(isServer) then {
 	keko_var_loadoutOnSpawn = _logic getVariable "loadoutOnSpawn";

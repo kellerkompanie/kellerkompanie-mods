@@ -1,8 +1,8 @@
 // TODO initalize default variables
-diag_log "keko_common_fnc_preInit";
+diag_log text "[KEKO] (common) running preInit";
 
 if(isServer) then {
-	diag_log "keko_common_fnc_preInit initalizing default values for mission parameters";
+	diag_log text "[KEKO] (common) initializing default values for mission parameters";
 
 	keko_var_loadoutOnSpawn = true;
 	keko_var_faction = "kekoFactionNATO";

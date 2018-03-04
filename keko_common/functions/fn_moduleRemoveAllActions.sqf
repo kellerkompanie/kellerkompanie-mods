@@ -2,23 +2,24 @@ params ["_logic"];
 if (!local _logic) exitWith {};
 
 private _object = attachedTo _logic;
-diag_log text format["[KEKO] (loadout) addLoadoutMenu: %1 %2 %3",_logic,_object,typeOf _object];
+diag_log text format["[KEKO] (teleport) addTeleportMenu: %1 %2 %3",_logic,_object,typeOf _object];
 
 switch (true) do {
     case (isNull _object): {
-    	diag_log text "[KEKO] (loadout) ERROR: _object is null";
+    	diag_log text "[KEKO] (teleport) ERROR: _object is null";
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (isPlayer _object): {
-    	diag_log text "[KEKO] (loadout) ERROR: _object is player";
+    	diag_log text "[KEKO] (teleport) ERROR: _object is player";
         [objNull, "place on object"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (!alive _object): {
-    	diag_log text "[KEKO] (loadout) ERROR: _object is not alive";
+    	diag_log text "[KEKO] (teleport) ERROR: _object is not alive";
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-        [_object] call keko_loadout_fnc_addLoadoutMenu;
+        removeAllActions _object;
+        _object remoteExec ["removeAllActions", 0, true];
     };
 };
 

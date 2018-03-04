@@ -8,12 +8,8 @@ class CfgPatches
         };
 		requiredVersion = 1.80;
         requiredAddons[] = {
-            "A3_UI_F",
-            "A3_UI_F_Curator",
-            "A3_Functions_F",
-            "A3_Functions_F_Curator",
-            "A3_Modules_F",
-            "A3_Modules_F_Curator"};
+            "ace_main",
+            "ace_modules"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0; 
@@ -49,23 +45,19 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_loadout\icons\loadout_menu_icon.paa";
-        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
-        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
     };    
     class keko_ModuleAddLoadoutMenu: Module_F
     {
-        scope              = 1; 
-        scopeCurator       = 2;
         displayName        = "Add Loadout Menu"; 
+        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
         category           = "keko_category_loadout";
         function           = "keko_loadout_fnc_moduleAddLoadoutMenu";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
-        isDisposable       = 0;
-        icon = "\keko_loadout\icons\loadout_menu_icon.paa";
-        picture = "\keko_loadout\icons\loadout_menu_icon.paa";
-        portrait = "\keko_loadout\icons\loadout_menu_icon.paa";
+        isTriggerActivated = 0;
+        scope              = 1; 
+        scopeCurator       = 2;
+        curatorCanAttach   = 1;
     };    
 };
 
@@ -82,7 +74,10 @@ class CfgFunctions
             class moduleAddLoadoutMenu {};  
             class dialogLoadoutMenuInit{};
             class dialogLoadoutMenuCallback{};
-            class giveLoadout{};            
+            class giveLoadout{};  
+            class applyCustomLoadout{};   
+            class addPresetItems{};       
+            class replaceString{};
         };
         class tfar {
             file = "keko_loadout\functions\tfar";

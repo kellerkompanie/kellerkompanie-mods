@@ -8,18 +8,18 @@ class CfgPatches
             "keko_ModuleAssignRepairSpecialist",
             "keko_ModuleAssignMedic",
             "keko_ModuleAssignDoctor",
-            "keko_ModuleInitMission"
+            "keko_ModuleRespawnPosition",
+            "keko_ModuleRespawnPosition3den",
+            "keko_ModuleInitMission",
+            "keko_ModuleInitMission3den",
+            "keko_ModuleRemoveAllActions"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
         	"3den",
             "keko_loadout",
-            "A3_UI_F",
-            "A3_UI_F_Curator",
-            "A3_Functions_F",
-            "A3_Functions_F_Curator",
-            "A3_Modules_F",
-            "A3_Modules_F_Curator"};
+            "ace_main",
+            "cba_settings" };
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;
@@ -68,8 +68,6 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_init.paa";
-        picture = "\keko_common\icons\icon_init.paa";
-        portrait = "\keko_common\icons\icon_init.paa";
 
         class EventHandlers: EventHandlers {
             AttributesChanged3DEN = "_this call keko_common_fnc_3denAttributesChanged;";
@@ -118,7 +116,9 @@ class CfgVehicles
                 {
                     class nato  {name = "[Minimal] NATO - North Atlantic Treaty Organization";  value = "kekoFactionNATO";};
                     class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
-                    class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};                    
+                    class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
+                    class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
+                    class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };
             };
             class GiveMap: Checkbox {
@@ -161,6 +161,10 @@ class CfgVehicles
                     class nvg4 {name = "NVG 4.Gen"; value = 6;};
                     class nvgW {name = "NVG Wide"; value = 7;};
                     class tws {name = "Wärmesicht"; value = 8;};
+                    class gpnvg18tan {name = "GPNVG-18 (tan)"; value = 13};
+                    class gpnvg18black {name = "GPNVG-18 (black)"; value = 14};
+                    class gpnvg18rectan {name = "GPNVG-18 Recon (tan)"; value = 15};
+                    class gpnvg18recblack {name = "GPNVG-18 Recon (black)"; value = 16};
                     class usMono {name = "(main) Ami Mono"; value = 9;};
                     class usDual {name = "(main) Ami Dual"; value = 10;};
                     class bafMono {name = "(main) BAF Mono"; value = 11;};
@@ -195,6 +199,33 @@ class CfgVehicles
 			class ModuleDescription: ModuleDescription{};
 		};
     };
+    class keko_ModuleRespawnPosition3den: Module_F
+    {
+        scope              = 2; 
+        scopeCurator       = 1;
+        displayName        = "Respawn Position"; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleRespawnPosition3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_common\icons\icon_destination.paa";
+    };
+    class keko_ModuleRespawnPosition: Module_F
+    {
+        scope              = 1; 
+        scopeCurator       = 2;
+        displayName        = "Respawn Position"; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleRespawnPosition";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_common\icons\icon_destination.paa";
+        curatorCanAttach   = 1;
+    };
     class keko_ModuleFullHeal: Module_F
     {
         scope              = 1; 
@@ -204,11 +235,10 @@ class CfgVehicles
         function           = "keko_common_fnc_moduleFullHeal";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_full_heal.paa";
-        picture = "\keko_common\icons\icon_full_heal.paa";
-        portrait = "\keko_common\icons\icon_full_heal.paa";
+        curatorCanAttach   = 1;
     };
     class keko_ModuleAssignMedic: Module_F
     {
@@ -219,11 +249,12 @@ class CfgVehicles
         function           = "keko_common_fnc_moduleAssignMedic";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_medic.paa";
         picture = "\keko_common\icons\icon_medic.paa";
         portrait = "\keko_common\icons\icon_medic.paa";
+        curatorCanAttach   = 1; 
     };
     class keko_ModuleAssignDoctor: Module_F
     {
@@ -234,11 +265,10 @@ class CfgVehicles
         function           = "keko_common_fnc_moduleAssignDoctor";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_doctor.paa";
-        picture = "\keko_common\icons\icon_doctor.paa";
-        portrait = "\keko_common\icons\icon_doctor.paa";
+        curatorCanAttach   = 1; 
     };
     class keko_ModuleAssignEngineer: Module_F
     {
@@ -249,11 +279,10 @@ class CfgVehicles
         function           = "keko_common_fnc_moduleAssignEngineer";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_engineer.paa";
-        picture = "\keko_common\icons\icon_engineer.paa";
-        portrait = "\keko_common\icons\icon_engineer.paa";
+        curatorCanAttach   = 1; 
     };
     class keko_ModuleAssignRepairSpecialist: Module_F
     {
@@ -264,11 +293,24 @@ class CfgVehicles
         function           = "keko_common_fnc_moduleAssignRepairSpecialist";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 1;
+        isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_repair_specialist.paa";
-        picture = "\keko_common\icons\icon_repair_specialist.paa";
-        portrait = "\keko_common\icons\icon_repair_specialist.paa";
+        curatorCanAttach   = 1; 
+    };
+    class keko_ModuleRemoveAllActions: Module_F
+    {
+        scope              = 1; 
+        scopeCurator       = 2;
+        displayName        = "Remove all menus"; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleRemoveAllActions";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 0;
+        isDisposable       = 0;
+        curatorCanAttach   = 1; 
+        icon = "\keko_common\icons\icon_delete.paa";
     };
 };
 
@@ -286,26 +328,32 @@ class CfgFunctions
             class moduleAssignDoctor {};
             class moduleAssignEngineer {};    
             class moduleAssignRepairSpecialist{};
+            class moduleRemoveAllActions{};
+            class moduleRespawnPosition{};
+            class moduleRespawnPosition3den{};
             class fullHeal{};
             class initMission{};
             class 3denAttributesChanged{};
             class addRoleDescriptionPrefix{};
+            class addRoleDescriptionSuffix{};
             class replaceRoleDescription{};
             class resetRoleDescription{};
+            class setRespawnPosition{};
         };
         class init
         {
             file = "keko_common\functions\init";
-            class init {};
             class initPlayerLocal {};
             class initServer {};
             class preInit {preInit = 1;};
+            class postInit {postInit = 1;};
         };
     };
 };
 
 #include "\keko_common\gui\keko_baseDefines.hpp"
 #include "\keko_common\gui\keko_addRoleDescriptionPrefixDisplay.hpp"
+#include "\keko_common\gui\keko_addRoleDescriptionSuffixDisplay.hpp"
 #include "\keko_common\gui\keko_replaceRoleDescriptionDisplay.hpp"
 
 class Display3DEN {
@@ -314,6 +362,7 @@ class Display3DEN {
 			class Edit {
 				items[] += {
 					"keko_addRoleDescriptionPrefix",
+                    "keko_addRoleDescriptionSuffix",
 					"keko_removeRoleDescriptionPrefix",
 					"keko_resetRoleDescription"};
 			};
@@ -321,7 +370,12 @@ class Display3DEN {
 				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionPrefixDisplay'";
 				Text = "Add role description prefix";
 				conditionShow = "selectedObject";
-			};	
+			};
+            class keko_addRoleDescriptionSuffix {
+                action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
+                Text = "Add role description suffix";
+                conditionShow = "selectedObject";
+            };  	
 			class keko_removeRoleDescriptionPrefix {
 				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
 				Text = "Replace in role description";

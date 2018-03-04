@@ -1,6 +1,6 @@
 ﻿if (!isServer) exitWith {};
 
-diag_log "running keko_common_fnc_initServer";
+diag_log text "[KEKO] (common) running initServer";
 
 _param_loadoutOnSpawn = ["param_loadoutOnSpawn", -1] call BIS_fnc_getParamValue;
 _param_faction = ["param_faction", -1] call BIS_fnc_getParamValue;
@@ -45,13 +45,17 @@ if(_param_sideRelations != -1) then {
 	publicVariable "keko_var_sideRelations";
 };
 
+
+
+
+
 keko_var_initFinished = true;
 publicVariable "keko_var_initFinished";
 
 //date:
-if(missionNamespace getVariable ["keko_par_custom_time",0] == 0) then {
+/*if(missionNamespace getVariable ["keko_par_custom_time",0] == 0) then {
 	setDate [2016, 8, missionNamespace getVariable ["keko_par_day",23], missionNamespace getVariable ["keko_par_hour",6] , missionNamespace getVariable ["keko_par_minute",0]];
-};
+};*/
 
 //stops the blabbering of AI units and players
 if ( isMultiplayer ) then {

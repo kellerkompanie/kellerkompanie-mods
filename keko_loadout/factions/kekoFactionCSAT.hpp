@@ -28,10 +28,13 @@ class kekoFactionCSAT: kekoFactionBase {
 			kekoSpotter,
 			kekoEOD,
 			kekoEngineer,
+			kekoDriver,
 			kekoHeliPilot,
+			kekoHeliCrew,
 			kekoJetPilot,
 			kekoJTAC,
-			kekoUAVOperator}}
+			kekoUAVOperator,
+			kekoSurvivor}}
 	};
 	weaponCfg = kekoWeaponsCSAT;
 
@@ -66,14 +69,19 @@ class kekoFactionCSAT: kekoFactionBase {
 			keko_W_A3_KATIBA_SHORT};
 	};
 
-	class kekoLead: kekoSoldierLight {
+	class kekoLead: kekoSoldierCSAT {
 		name = "Lead";
 		rank = "LIEUTENANT";		
 		uniform[] = {"U_O_OfficerUniform_ocamo"};
 		vest[] = {"V_BandollierB_cbr"};
 		helmet[] = {"H_MilCap_ocamo"};
 		backpack[] = {"TFAR_mr3000"};
+		backpackInventory[] = {
+			{1,"ACE_HuntIR_monitor"},
+			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
+		primary[] = {
+			keko_W_A3_KATIBA_GL};
 	};
 
 	class kekoCommand: kekoLead	{
@@ -88,7 +96,12 @@ class kekoFactionCSAT: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		backpack[] = {"TFAR_mr3000"};
+		backpackInventory[] = {
+			{1,"ACE_HuntIR_monitor"},
+			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
+		primary[] = {
+			keko_W_A3_KATIBA_GL};
 	};
 
 	class kekoFTL: kekoSoldierCSAT	{
@@ -278,6 +291,18 @@ class kekoFactionCSAT: kekoFactionBase {
 		engineerClass = 2;
 	};
 
+	class kekoDriver: kekoSoldierLight {
+		name = "Driver/Crewman";
+		vest[] = {"V_BandollierB_khk"};
+		vestInventory[] = {
+			{2, SECONDARY_MAG},
+			{2, PRIMARY_MAG},
+			{1, "ACE_microDAGR"},
+			{10, "ACE_quikclot"}};
+		helmet[] = {"H_HelmetCrew_O"};
+		optics[] = {"Binocular"};
+	};
+
 	class kekoHeliPilot: kekoSoldierLight {
 		name = "Heli Pilot";
 		uniform[] = {"U_O_PilotCoveralls"};
@@ -288,8 +313,12 @@ class kekoFactionCSAT: kekoFactionBase {
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_PilotHelmetHeli_O"};
-		backpack[] = {"ACE_NonSteerableParachute"};
 		optics[] = {"Binocular"};
+	};
+
+	class kekoHeliCrew: kekoHeliPilot {
+		name = "Helicopter Crew";
+		helmet[] = {"H_CrewHelmetHeli_O"};
 	};
 
 	class kekoJetPilot: kekoHeliPilot {
@@ -333,5 +362,16 @@ class kekoFactionCSAT: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"O_UAV_01_backpack_F"};
 		items[] = {"O_UavTerminal"};
+	};
+
+	class kekoSurvivor: kekoSoldierLight	{
+		name = "Survivor";
+		vestInventory[] = {
+			{1,PRIMARY_MAG},
+			{1,SECONDARY_MAG}};
+		helmet[] = {
+			"H_HeadBandage_clean_F",
+			"H_HeadBandage_stained_F",
+			"H_HeadBandage_bloody_F"};
 	};
 };
