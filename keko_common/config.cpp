@@ -12,7 +12,8 @@ class CfgPatches
             "keko_ModuleRespawnPosition3den",
             "keko_ModuleInitMission",
             "keko_ModuleInitMission3den",
-            "keko_ModuleRemoveAllActions"
+            "keko_ModuleRemoveAllActions",
+            "keko_ModuleLockDoors"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
@@ -312,6 +313,19 @@ class CfgVehicles
         curatorCanAttach   = 1; 
         icon = "\keko_common\icons\icon_delete.paa";
     };
+    class keko_ModuleLockDoors: Module_F
+    {
+        scope              = 1; 
+        scopeCurator       = 2;
+        displayName        = "(Un-)Lock Doors "; 
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleLockDoors";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 0;
+        isDisposable       = 0;
+        icon = "\keko_common\icons\icon_lock.paa";
+    };
 };
 
 class CfgFunctions 
@@ -331,6 +345,7 @@ class CfgFunctions
             class moduleRemoveAllActions{};
             class moduleRespawnPosition{};
             class moduleRespawnPosition3den{};
+            class moduleLockDoors{};
             class fullHeal{};
             class initMission{};
             class 3denAttributesChanged{};
@@ -339,6 +354,9 @@ class CfgFunctions
             class replaceRoleDescription{};
             class resetRoleDescription{};
             class setRespawnPosition{};
+            class lockDoors{};
+            class lockDoorsDialogInit{};
+            class lockDoorsDialogCallback{};
         };
         class init
         {
@@ -351,10 +369,14 @@ class CfgFunctions
     };
 };
 
+#include "\keko_common\gui\dialog_baseClasses.hpp"
 #include "\keko_common\gui\keko_baseDefines.hpp"
+
 #include "\keko_common\gui\keko_addRoleDescriptionPrefixDisplay.hpp"
 #include "\keko_common\gui\keko_addRoleDescriptionSuffixDisplay.hpp"
 #include "\keko_common\gui\keko_replaceRoleDescriptionDisplay.hpp"
+
+#include "\keko_common\gui\dialog_lockDoors.hpp"
 
 class Display3DEN {
 	class ContextMenu: ctrlMenu {

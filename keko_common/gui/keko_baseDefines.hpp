@@ -106,7 +106,7 @@
 				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",\
 				1}
 
-class RscTreeSearch;
+//class RscTreeSearch;
 class ctrlActivePicture;
 class ctrlActivePictureKeepAspect;
 class ctrlActiveText;
@@ -123,18 +123,18 @@ class ctrlCheckbox;
 class ctrlCheckboxBaseline;
 class ctrlCheckboxes;
 class ctrlCheckboxToolbar;
-class ctrlCombo;
+//class ctrlCombo;
 class ctrlComboToolbar;
-class ctrlControlsGroup;
+//class ctrlControlsGroup;
 class ctrlControlsGroupHighlight;
 class ctrlControlsGroupNoHScrollbars;
-class ctrlControlsGroupNoScrollbars;
+//class ctrlControlsGroupNoScrollbars;
 class ctrlControlsGroupNoVScrollbars;
 class ctrlControlsGroupTutorial;
-class ctrlDefault;
+//class ctrlDefault;
 class ctrlDefaultButton;
-class ctrlDefaultText;
-class ctrlEdit;
+//class ctrlDefaultText;
+//class ctrlEdit;
 class ctrlEditMulti;
 class ctrlHTML;
 class ctrlListbox;
@@ -151,16 +151,16 @@ class ctrlProgress;
 class ctrlShortcutButton;
 class ctrlSliderH;
 class ctrlSliderV;
-class ctrlStatic;
+//class ctrlStatic;
 class ctrlStaticBackground;
 class ctrlStaticBackgroundDisable;
 class ctrlStaticBackgroundDisableTiles;
 class ctrlStaticFooter;
-class ctrlStaticFrame;
+//class ctrlStaticFrame;
 class ctrlStaticLine;
 class ctrlStaticMulti;
 class ctrlStaticOverlay;
-class ctrlStaticPicture;
+//class ctrlStaticPicture;
 class ctrlStaticPictureKeepAspect;
 class ctrlStaticPictureTile;
 class ctrlStaticTitle;
@@ -170,8 +170,8 @@ class ctrlToolboxPicture;
 class ctrlToolboxPictureKeepAspect;
 class ctrlTree;
 class ctrlXListbox;
-class ctrlXSliderH;
-class ctrlXSliderV;
+//class ctrlXSliderH;
+//class ctrlXSliderV;
 
 class keko_ScrollBar
 {
@@ -599,7 +599,7 @@ class keko_RscCombo
 	wholeHeight = 0.45;
 	colorActive[] = {1,0,0,1};
 };
-class RscCheckBox
+class keko_RscCheckBox
 {
 	idc = -1;
 	type = CT_CHECKBOX;
