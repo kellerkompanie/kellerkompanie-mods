@@ -8,7 +8,7 @@
 diag_log text "[KEKO] (common) running initPlayerLocal";
 
 waitUntil {player == player};
-waitUntil {keko_var_initFinished};
+waitUntil {keko_var_initFinished}; // FIXME variable can be undefined
 
 //prevents the player units from blabbering on their radios
 if (isMultiplayer) then {

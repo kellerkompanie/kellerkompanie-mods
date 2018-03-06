@@ -6,6 +6,8 @@ _activated = _this select 2;
 if (hasInterface && !isServer) exitWith {};
 //diag_log "running teleport menu module init";
 
+// FIXME don't run on headless clients
+
 _objects = synchronizedObjects _logic;
 {
 	//diag_log format ["adding menu to: %1", str _x];
