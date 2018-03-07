@@ -10,10 +10,10 @@ if(_state) then {
 	// switch unit to civilian
 	diag_log text format ["[KEKO] (unconcious) switching %1 to civilian", name _unit];
 
-	_isGroupLeader = (leader (group player)) == player;
-	_unit setVariable["keko_unconscious_side", playerSide, true];
-	_unit setVariable["keko_unconscious_group", group player, true];
-	_unit setVariable["keko_unconscious_color", assignedTeam player, true];
+	_isGroupLeader = (leader (group _unit)) == _unit;
+	_unit setVariable["keko_unconscious_side", side _unit, true];
+	_unit setVariable["keko_unconscious_group", group _unit, true];
+	_unit setVariable["keko_unconscious_color", assignedTeam _unit, true];
 	_unit setVariable["keko_unconscious_leader", _isGroupLeader, true];
 	_civGroup = createGroup civilian;
 	[_unit] joinSilent _civGroup;
