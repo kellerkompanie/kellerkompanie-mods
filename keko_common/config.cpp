@@ -162,10 +162,10 @@ class CfgVehicles
                     class nvg4 {name = "NVG 4.Gen"; value = 6;};
                     class nvgW {name = "NVG Wide"; value = 7;};
                     class tws {name = "Wärmesicht"; value = 8;};
-                    class gpnvg18tan {name = "GPNVG-18 (tan)"; value = 13};
-                    class gpnvg18black {name = "GPNVG-18 (black)"; value = 14};
-                    class gpnvg18rectan {name = "GPNVG-18 Recon (tan)"; value = 15};
-                    class gpnvg18recblack {name = "GPNVG-18 Recon (black)"; value = 16};
+                    class gpnvg18tan {name = "GPNVG-18 (tan)"; value = 13;};
+                    class gpnvg18black {name = "GPNVG-18 (black)"; value = 14;};
+                    class gpnvg18rectan {name = "GPNVG-18 Recon (tan)"; value = 15;};
+                    class gpnvg18recblack {name = "GPNVG-18 Recon (black)"; value = 16;};
                     class usMono {name = "(main) Ami Mono"; value = 9;};
                     class usDual {name = "(main) Ami Dual"; value = 10;};
                     class bafMono {name = "(main) BAF Mono"; value = 11;};
@@ -357,6 +357,7 @@ class CfgFunctions
             class lockDoors{};
             class lockDoorsDialogInit{};
             class lockDoorsDialogCallback{};
+            class createZeus{};
         };
         class init
         {
