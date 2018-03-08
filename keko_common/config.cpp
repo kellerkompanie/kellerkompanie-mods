@@ -118,6 +118,8 @@ class CfgVehicles
                     class nato  {name = "[Minimal] NATO - North Atlantic Treaty Organization";  value = "kekoFactionNATO";};
                     class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
                     class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
+                    class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
+                    class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
                     class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
                     class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };

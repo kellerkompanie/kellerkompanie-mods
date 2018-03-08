@@ -12,5 +12,7 @@ class kekoFaction
 	#include "kekoFactionNATO.hpp"
 	#include "kekoFactionAAF.hpp"
 	#include "kekoFactionCSAT.hpp"
+	#include "kekoFactionCTRG.hpp"
+	#include "kekoFactionNATOtropic.hpp"
 };
 
