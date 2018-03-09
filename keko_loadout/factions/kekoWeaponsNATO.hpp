@@ -35,6 +35,7 @@ class kekoWeaponsNato {
 	class keko_W_A3_MXC: keko_W_A3_MX
 	{
 		cfgName = "arifle_MXC_F";
+		items[] = {"acc_pointer_IR","optic_Aco"};
 	};
 	class keko_W_A3_MXC_BLACK: keko_W_A3_MXC
 	{
@@ -53,9 +54,10 @@ class kekoWeaponsNato {
 	};
 
 	// Marksman
-	class keko_W_A3_MXM: keko_W_A3_MX
+	class keko_W_A3_MXM: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_MXM_F";
+		items[] = {"optic_SOS","acc_pointer_IR"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
@@ -75,9 +77,10 @@ class kekoWeaponsNato {
 	};
 
 	// MMG
-	class keko_W_A3_MMG: keko_W_A3_MX
+	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_sand_F";
+		items[] = {"acc_pointer_IR","bipod_01_F_blk"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
