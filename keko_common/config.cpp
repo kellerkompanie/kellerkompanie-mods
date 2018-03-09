@@ -121,6 +121,8 @@ class CfgVehicles
                     class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
                     class usmarines  {name = "[Minimal] U.S. Marines - U.S. Force Recon Marines";  value = "kekoFactionUSMarines";};
                     class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
+                    class marines_desert {name = "[Main] U.S. Marine Corps - Marine Pattern Desert"; value ="kekoFactionMarines_Desert";};
+                    class marines_woodland {name = "[Main] U.S. Marine Corps - Marine Pattern Woodland"; value ="kekoFactionMarines_Woodland";};
                     class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
                     class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };

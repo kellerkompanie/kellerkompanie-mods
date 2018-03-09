@@ -1,6 +1,6 @@
-class kekoFactionMarines_Desert: kekoFactionBase {
+class kekoFactionMarines_Woodland: kekoFactionBase {
 
-	name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
+	name = "[Main] U.S. Marine Corps - Marine Pattern Woodland";
 	roles[] = {
 		{"Führung", {
 			kekoCommand,
@@ -46,9 +46,9 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 
 	crates[] = KEKO_LOGISTICS_DEFAULT_CRATE_LIST;
 
-	class kekoSoldierMarine_Desert: kekoSoldier {
+	class kekoSoldierMarine_Woodland: kekoSoldier {
 		uniform[] = {
-			"rhs_uniform_FROG01_d"};
+			"rhs_uniform_FROG01_wd"};
 
 		vest[] = {
 			"rhsusf_spc_marksman",
@@ -58,17 +58,17 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			"rhsusf_spc_teamleader"};
 
 		helmet[] = {
-			"rhsusf_mich_helmet_marpatd",
-			"rhsusf_mich_helmet_marpatd_alt",
-			"rhsusf_mich_helmet_marpatd_alt_headset",
-			"rhsusf_mich_helmet_marpatd_headset",
-			"rhsusf_mich_helmet_marpatd_norotos",
-			"rhsusf_mich_helmet_marpatd_norotos_arc",
-			"rhsusf_mich_helmet_marpatd_norotos_arc_headset",
-			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"rhsusf_lwh_helmet_marpatd",
-			"rhsusf_lwh_helmet_marpatd_ess",
-			"rhsusf_lwh_helmet_marpatd_headset"};	
+			"rhsusf_mich_helmet_marpatwd",
+			"rhsusf_mich_helmet_marpatwd_alt",
+			"rhsusf_mich_helmet_marpatwd_alt_headset",
+			"rhsusf_mich_helmet_marpatwd_headset",
+			"rhsusf_mich_helmet_marpatwd_norotos",
+			"rhsusf_mich_helmet_marpatwd_norotos_arc",
+			"rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"rhsusf_lwh_helmet_marpatwd",
+			"rhsusf_lwh_helmet_marpatwd_ess",
+			"rhsusf_lwh_helmet_marpatwd_headset"};	
 
 		primary[] = {
 			keko_W_RHS_M16A4};
@@ -77,15 +77,15 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			keko_W_RHS_M9};
 	};
 
-	class kekoSoldierLight: kekoSoldierMarine_Desert {
+	class kekoSoldierLight: kekoSoldierMarine_Woodland {
 		vest[] = {"rhsusf_spc_light"};
 	};
 
-	class kekoLead: kekoSoldierMarine_Desert	{
+	class kekoLead: kekoSoldierMarine_Woodland	{
 		name = "Lead";
 		rank = "LIEUTENANT";		
 		vest[] = {"rhsusf_spc_light"};
-		helmet[] = {"rhs_8point_marpatd"};
+		helmet[] = {"rhs_8point_marpatwd"};
 		backpack[] = {"TFAR_rt1523g_sage"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
@@ -95,16 +95,15 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			keko_W_RHS_M16A4_GL};
 	}; 
 
-	// TODO replace headgear with boonie e.g.
 	class kekoCommand: kekoLead	{
 		name = "Command";
 		rank = "COLONEL";		
 		medicClass = 2;
 		engineerClass = 2;
-		helmet[] = {"rhs_booniehat2_marpatd"};
+		helmet[] = {"rhs_booniehat2_marpatwd"};
 	};
 
-	class kekoSQL: kekoSoldierMarine_Desert	{
+	class kekoSQL: kekoSoldierMarine_Woodland	{
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
@@ -117,7 +116,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		optics[] = {"Rangefinder"};
 	};
 
-	class kekoFTL: kekoSoldierMarine_Desert	{
+	class kekoFTL: kekoSoldierMarine_Woodland	{
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};	
@@ -145,16 +144,16 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
 
-	class kekoRifleman: kekoSoldierMarine_Desert	{
+	class kekoRifleman: kekoSoldierMarine_Woodland	{
 		name = "Rifleman";		
 	};
 
-	class kekoRiflemanAT: kekoSoldierMarine_Desert	{
+	class kekoRiflemanAT: kekoSoldierMarine_Woodland	{
 		name = "Rifleman Anti-Tank";
 		launcher[] = {keko_W_RHS_M136_HEDP};
 	};
 
-	class kekoGrenadier: kekoSoldierMarine_Desert {
+	class kekoGrenadier: kekoSoldierMarine_Woodland {
 		name = "Grenadier";
 		vest[] = {"rhsusf_spc_iar"};
 		vestInventory[] = {
@@ -166,7 +165,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			keko_W_RHS_M16A4_GL};		
 	};
 
-	class kekoLMG: kekoSoldierMarine_Desert {
+	class kekoLMG: kekoSoldierMarine_Woodland {
 		name = "Light Machine Gunner";
 		vest[] = {"rhsusf_spc_iar"};
 		vestInventory[] = {
@@ -179,14 +178,14 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
-	class kekoLMGAsst: kekoSoldierMarine_Desert {
+	class kekoLMGAsst: kekoSoldierMarine_Woodland {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};	
 	};
 
-	class kekoMMG: kekoSoldierMarine_Desert {
+	class kekoMMG: kekoSoldierMarine_Woodland {
 		name = "Medium Machine Gunner";
 		vest[] = {"rhsusf_spc_mg"};
 		vestInventory[] = {
@@ -197,7 +196,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
 	};
 
-	class kekoMMGAsst: kekoSoldierMarine_Desert {
+	class kekoMMGAsst: kekoSoldierMarine_Woodland {
 		name = "Medium Machine Gunner Asst.";
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
@@ -205,7 +204,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		optics[] = {"Binocular"};	
 	};
 
-	class kekoATSpecialist: kekoSoldierMarine_Desert {
+	class kekoATSpecialist: kekoSoldierMarine_Woodland {
 		name = "Anti-Tank Specialist";
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
@@ -213,7 +212,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		launcher[] = {keko_W_RHS_SMAW};
 	};
 
-	class kekoATSpecialistAsst: kekoSoldierMarine_Desert {
+	class kekoATSpecialistAsst: kekoSoldierMarine_Woodland {
 		name = "Anti-Tank Specialist Assistant";
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
@@ -228,14 +227,14 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		launcher[] = {keko_W_RHS_STINGER};
 	};
 
-	class kekoAASpecialistAsst: kekoSoldierMarine_Desert {
+	class kekoAASpecialistAsst: kekoSoldierMarine_Woodland {
 		name = "Anti-Air Specialist Assistant";
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
 		backpackInventory[] = {{2, AA_MAG}};
 		optics[] = {"Rangefinder"};
 	};
 
-	class kekoMarksman: kekoSoldierMarine_Desert {
+	class kekoMarksman: kekoSoldierMarine_Woodland {
 		name = "Marksman";
 		vest[] = {"rhsusf_spc_marksman"};
 		vestInventory[] = {
@@ -248,7 +247,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			keko_W_RHS_M14EBR};
 	};
 
-	class kekoSniper: kekoSoldierMarine_Desert {
+	class kekoSniper: kekoSoldierMarine_Woodland {
 		name = "Sniper";
 		uniform[] = {"U_B_FullGhillie_sard"};
 		uniformInventory[] = {
@@ -319,22 +318,23 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		optics[] = {"Binocular"};
 	};
 
+	// TODO adjust converalls
 	class kekoHeliPilot: kekoSoldierLight {
 		name = "Helicopter Pilot";
 		uniform[] = {"U_B_HeliPilotCoveralls"};
-		vest[] = {"rhsusf_hgu56p_visor_black"};
+		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
 			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
-		helmet[] = {"H_PilotHelmetHeli_B"};
+		helmet[] = {"rhsusf_hgu56p_black"};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoHeliCrew: kekoHeliPilot {
 		name = "Helicopter Crew";
-		helmet[] = {"rhsusf_hgu56p_visor_mask_black"};
+		helmet[] = {"rhsusf_hgu56p_visor_black"};
 	};
 
 	class kekoJetPilot: kekoHeliPilot {

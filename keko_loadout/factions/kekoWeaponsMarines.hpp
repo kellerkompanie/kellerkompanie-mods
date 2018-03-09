@@ -1,7 +1,8 @@
-#define SMOKE_WHITE "SmokeShell" // TODO switch to faction specific
-#define SMOKE_GREEN "SmokeShellGreen" // TODO switch to faction specific
-#define SMOKE_RED "SmokeShellRed" // TODO switch to faction specific
-#define GRENADE "HandGrenade" // TODO switch to faction specific
+// TODO switch to faction specific
+#define SMOKE_WHITE "SmokeShell"
+#define SMOKE_GREEN "SmokeShellGreen"
+#define SMOKE_RED "SmokeShellRed"
+#define GRENADE "HandGrenade"
 
 #define PRIMARY_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"
 #define PRIMARY_MAG_TRACER "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
@@ -39,7 +40,7 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M14EBR: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m14ebrri";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"}
+		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_MARKSMAN_TRACER};
 	};
 
