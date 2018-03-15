@@ -35,7 +35,7 @@ _TER_fnc_editString =
 
 	_idx = _description find _find;
 	if(_idx >= 0) then {
-		_description = [_description, _find, _replace] call TER_fnc_editString;
+		_description = [_description, _find, _replace] call _TER_fnc_editString;
 		_x set3DENAttribute ["description", _description];
 	};
 	
