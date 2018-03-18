@@ -217,6 +217,25 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_destination.paa";
+
+        class Attributes: AttributesBase
+		{
+	        class RespawnSide: Combo {
+	        	property = "keko_common_ModuleRespawn_Side";
+	            displayName = "Respawn Side";
+	            description = "Choose one";
+	            typeName = "NUMBER";
+	            defaultValue = 0;
+	            class Values
+	            {
+	                class all    	{name = "ALL";  	value = 0;};
+	                class blufor 	{name = "BLUFOR";	value = 1;};
+	                class indfor 	{name = "INDFOR";	value = 2;};
+	                class opfor  	{name = "OPFOR";	value = 3;};
+	                class civilian	{name = "CIVILIAN";	value = 4;};
+	            };
+	        };
+	    };
     };
     class keko_ModuleRespawnPosition: Module_F
     {

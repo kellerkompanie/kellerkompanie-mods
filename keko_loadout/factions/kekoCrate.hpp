@@ -1,109 +1,109 @@
 #define KEKO_LOGISTICS_FT_CRATE_DEFAULT {\
-		{10, PRIMARY_MAG, "AMMO"},\
-		{10, PRIMARY_MAG_TRACER, "AMMO"},\
-		{6, PRIMARY_MAG_LMG, "AMMO"},\
-		{2, SECONDARY_MAG, "AMMO"},\
-		{2, RAT_LAUNCHER, "WEAPON"},\
-		{6, UGL_MAG, "AMMO"},\
-		{6, GRENADE, "AMMO"},\
-		{4, SMOKE_WHITE, "AMMO"},\
-		{4, SMOKE_GREEN, "AMMO"},\
-		{20, "ACE_fieldDressing", "ITEM"},\
-		{4, "ACE_morphine", "ITEM"},\
-		{4, "ACE_epinephrine", "ITEM"},\
-		{8, "ACE_tourniquet", "ITEM"},\
-		{6, "adv_aceSplint_splint", "ITEM"},\
-		{2, "ACE_CableTie", "ITEM"}}
+		{10, PRIMARY_MAG},\
+		{10, PRIMARY_MAG_TRACER},\
+		{6, PRIMARY_MAG_LMG},\
+		{2, SECONDARY_MAG},\
+		{2, RAT_LAUNCHER},\
+		{6, UGL_MAG},\
+		{6, GRENADE},\
+		{4, SMOKE_WHITE},\
+		{4, SMOKE_GREEN},\
+		{20, "ACE_fieldDressing"},\
+		{4, "ACE_morphine"},\
+		{4, "ACE_epinephrine"},\
+		{8, "ACE_tourniquet"},\
+		{6, "adv_aceSplint_splint"},\
+		{2, "ACE_CableTie"}}
 
 #define KEKO_LOGISTICS_INF_CRATE_DEFAULT {\
-		{30, PRIMARY_MAG, "AMMO"},\
-		{30, PRIMARY_MAG_TRACER, "AMMO"},\
-		{10, PRIMARY_MAG_LMG, "AMMO"},\
-		{10, PRIMARY_MAG_MARKSMAN, "AMMO"},\
-		{6, SECONDARY_MAG, "AMMO"},\
-		{10, UGL_MAG, "AMMO"}}
+		{30, PRIMARY_MAG},\
+		{30, PRIMARY_MAG_TRACER},\
+		{10, PRIMARY_MAG_LMG},\
+		{10, PRIMARY_MAG_MARKSMAN},\
+		{6, SECONDARY_MAG},\
+		{10, UGL_MAG}}
 
 #define KEKO_LOGISTICS_GRE_CRATE_DEFAULT {\
-		{20, UGL_MAG, "AMMO"},\
-		{10, GRENADE, "AMMO"},\
-		{10, SMOKE_WHITE, "AMMO"},\
-		{10, SMOKE_GREEN, "AMMO"},\
-		{10, SMOKE_RED, "AMMO"}}
+		{20, UGL_MAG},\
+		{10, GRENADE},\
+		{10, SMOKE_WHITE},\
+		{10, SMOKE_GREEN},\
+		{10, SMOKE_RED}}
 
 #define KEKO_LOGISTICS_MG_CRATE_DEFAULT {\
-		{10, PRIMARY_MAG_LMG, "AMMO"},\
-		{10, PRIMARY_MAG_MMG, "AMMO"},\
-		{1, "B_Carryall_cbr", "ITEM"},\
-		{2, "ACE_SpareBarrel", "AMMO"}}
+		{10, PRIMARY_MAG_LMG},\
+		{10, PRIMARY_MAG_MMG},\
+		{1, "B_Carryall_cbr"},\
+		{2, "ACE_SpareBarrel"}}
 
 #define KEKO_LOGISTICS_AT_CRATE_DEFAULT {\
-		{1, AT_LAUNCHER, "WEAPON"},\
-		{3, AT_MAG, "AMMO"},\
-		{1, "B_FieldPack_cbr", "BACKPACK"},\
-		{2, RAT_LAUNCHER, "WEAPON"}}
+		{1, AT_LAUNCHER},\
+		{3, AT_MAG},\
+		{1, "B_FieldPack_cbr"},\
+		{2, RAT_LAUNCHER}}
 
 #define KEKO_LOGISTICS_AA_CRATE_DEFAULT {\
-		{1, AA_LAUNCHER, "WEAPON"},\
-		{3, AA_MAG, "AMMO"},\
-		{1, "B_FieldPack_cbr", "BACKPACK"}}
+		{1, AA_LAUNCHER},\
+		{3, AA_MAG},\
+		{1, "B_FieldPack_cbr"}}
 
 #define KEKO_LOGISTICS_MED_CRATE_DEFAULT {\
-		{50, "ACE_fieldDressing", "ITEM"},\
-		{50, "ACE_elasticBandage", "ITEM"},\
-		{20, "ACE_quikclot", "ITEM"},\
-		{4, "ACE_bodyBag", "ITEM"},\
-		{10, "ACE_epinephrine", "ITEM"},\
-		{10, "ACE_morphine", "ITEM"},\
-		{10, "ACE_salineIV", "ITEM"},\
-		{10, "ACE_salineIV_500", "ITEM"},\
-		{2, "ACE_surgicalKit", "ITEM"},\
-		{10, "ACE_tourniquet", "ITEM"},\
-		{10, "SmokeShell", "AMMO"},\
-		{10, "adv_aceSplint_splint", "ITEM"},\
-		{1, "adv_aceCPR_AED", "ITEM"}}
+		{50, "ACE_fieldDressing"},\
+		{50, "ACE_elasticBandage"},\
+		{20, "ACE_quikclot"},\
+		{4, "ACE_bodyBag"},\
+		{10, "ACE_epinephrine"},\
+		{10, "ACE_morphine"},\
+		{10, "ACE_salineIV"},\
+		{10, "ACE_salineIV_500"},\
+		{2, "ACE_surgicalKit"},\
+		{10, "ACE_tourniquet"},\
+		{10, "SmokeShell"},\
+		{10, "adv_aceSplint_splint"},\
+		{1, "adv_aceCPR_AED"}}
 
 #define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
-		{2, "SmokeShell", "AMMO"},\
-		{2, "ToolKit", "ITEM"},\
-		{2, "ACE_EntrenchingTool", "ITEM"},\
-		{2, "ACE_SpraypaintRed", "ITEM"},\
-		{1, "ACE_wirecutter", "ITEM"},\
-		{2, "ACE_SpraypaintGreen", "ITEM"},\
-		{1, "ACE_rangecard", "ITEM"},\
-		{10, "ACE_sandbag", "ITEM"},\
-		{2, "ACE_MapTools", "ITEM"},\
-		{10, "ACE_CableTie", "ITEM"},\
-		{2, "ACE_UAVBattery", "ITEM"},\
-		{1, "ACE_DefusalKit", "ITEM"},\
-		{1, "ACE_minedetector", "ITEM"},\
-		{1, "ACE_RangeTable_82mm", "ITEM"},\
-		{4, "ACE_IR_Strobe", "ITEM"},\
-		{8, "ACE_HandFlare_Red", "ITEM"},\
-		{1, "adv_aceCPR_AED", "ITEM"},\
-		{1, "ACE_personalAidKit", "ITEM"},\
-		{4, "ACE_bodyBag", "ITEM"}}
+		{2, "SmokeShell"},\
+		{2, "ToolKit"},\
+		{2, "ACE_EntrenchingTool"},\
+		{2, "ACE_SpraypaintRed"},\
+		{1, "ACE_wirecutter"},\
+		{2, "ACE_SpraypaintGreen"},\
+		{1, "ACE_rangecard"},\
+		{10, "ACE_sandbag"},\
+		{2, "ACE_MapTools"},\
+		{10, "ACE_CableTie"},\
+		{2, "ACE_UAVBattery"},\
+		{1, "ACE_DefusalKit"},\
+		{1, "ACE_minedetector"},\
+		{1, "ACE_RangeTable_82mm"},\
+		{4, "ACE_IR_Strobe"},\
+		{8, "ACE_HandFlare_Red"},\
+		{1, "adv_aceCPR_AED"},\
+		{1, "ACE_personalAidKit"},\
+		{4, "ACE_bodyBag"}}
 
 #define KEKO_LOGISTICS_EOD_CRATE_DEFAULT {\
-		{4, "ACE_Cellphone", "ITEM"},\
-		{2, "ACE_Clacker", "ITEM"},\
-		{2, "ACE_M26_Clacker", "ITEM"},\
-		{4, "ACE_DefusalKit", "ITEM"}, \
-		{2, "ACE_DeadManSwitch", "ITEM"},\
-		{1, "MineDetector", "ITEM"},\
-		{1, "ToolKit", "ITEM"},\
-		{1, "ACE_VMH3", "WEAPON"},\
-		{1, "ACE_VMM3", "WEAPON"},\
-		{3, "ATMine_Range_Mag", "ITEM"},\
-		{4, "APERSTripMine_Wire_Mag", "ITEM"},\
-		{4, "ClaymoreDirectionalMine_Remote_Mag", "ITEM"},\
-		{4, "SatchelCharge_Remote_Mag", "ITEM"},\
-		{10, "DemoCharge_Remote_Mag", "ITEM"}}
+		{4, "ACE_Cellphone"},\
+		{2, "ACE_Clacker"},\
+		{2, "ACE_M26_Clacker"},\
+		{4, "ACE_DefusalKit"}, \
+		{2, "ACE_DeadManSwitch"},\
+		{1, "MineDetector"},\
+		{1, "ToolKit"},\
+		{1, "ACE_VMH3"},\
+		{1, "ACE_VMM3"},\
+		{3, "ATMine_Range_Mag"},\
+		{4, "APERSTripMine_Wire_Mag"},\
+		{4, "ClaymoreDirectionalMine_Remote_Mag"},\
+		{4, "SatchelCharge_Remote_Mag"},\
+		{10, "DemoCharge_Remote_Mag"}}
 
 #define KEKO_LOGISTICS_RAT_CRATE_DEFAULT {\
-		{20, "murshun_cigs_matches", "ITEM"},\
-		{20, "murshun_cigs_cigpack", "ITEM"},\
-		{10, "immersion_pops_poppack", "ITEM"},\
-		{10, "ACE_banana", "ITEM"}}
+		{20, "murshun_cigs_matches"},\
+		{20, "murshun_cigs_cigpack"},\
+		{10, "immersion_pops_poppack"},\
+		{10, "ACE_banana"}}
 
 class kekoCrateBase {
 	name = "Empty Crate";
