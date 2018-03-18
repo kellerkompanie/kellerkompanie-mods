@@ -6,10 +6,12 @@ class CfgPatches
             "keko_ModuleAddLogisticsMenu",
             "keko_ModuleAddLogisticsMenu3den",
             "keko_ModuleSpawnCrate",
-            "keko_ModuleSupplyDrop"
+            "keko_ModuleSupplyDrop",
+            "keko_ModuleFuelConsumption3den"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
+        	"3den",
             "keko_loadout",
             "ace_main",
             "ace_modules"};
@@ -33,8 +35,21 @@ class CfgVehicles
     class Logic;
     class Module_F: Logic
     {
-        class ArgumentsBaseUnits;
+        class EventHandlers;
         class ModuleDescription;
+
+        class AttributesBase
+		{
+			class Default;
+			class Edit; 
+			class Combo;
+			class Checkbox; 
+			class CheckboxNumber; 
+			class ModuleDescription;
+			class Units; 
+
+			expression = "_this setVariable ['%s',_value];";
+		};
     };
     class keko_ModuleAddLogisticsMenu: Module_F {
         scope              = 1; 
@@ -84,6 +99,60 @@ class CfgVehicles
         isDisposable       = 0;
         icon               = "\keko_logistics\icons\icon_paradrop.paa";
     };
+    class keko_ModuleFuelConsumption3den: Module_F {
+        scope              = 2; 
+        scopeCurator       = 1;
+        displayName        = "Fuel Consumption"; 
+        category           = "keko_category_logistics";
+        function           = "keko_logistics_fnc_moduleFuelConsumption3den";
+        functionPriority   = 2;
+        isGlobal           = 1;
+        isTriggerActivated = 0;
+        isDisposable       = 0;
+        icon               = "\keko_logistics\icons\icon_fuel.paa";
+
+        class Attributes: AttributesBase
+		{
+			class EnableFuelConsumption: Checkbox {
+            	property = "keko_logistics_ModuleFuel_Enable";
+                displayName = "Give map";
+                typeName = "BOOL";
+                defaultValue = true;                
+            };
+			class ConsumptionCar: Edit {
+				property = "keko_logistics_ModuleFuel_Car";
+				displayName = "Consumption Car";
+				typeName = "STRING"; 
+				defaultValue = "'[0.0003, 0.0005, 0.0007]'";			
+			};
+			class ConsumptionTruck: Edit {
+				property = "keko_logistics_ModuleFuel_Truck";
+                displayName = "Consumption Truck";
+                typeName = "STRING";
+                defaultValue = "'[0.0003, 0.0005, 0.0007]'";
+            };
+            class ConsumptionTank: Edit {
+            	property = "keko_logistics_ModuleFuel_Tank";
+            	displayName = "Consumption Tank";
+                typeName = "STRING";
+                defaultValue = "'[0.0003, 0.0005, 0.0007]'";
+            };
+            class ConsumptionHelo: Edit {
+            	property = "keko_logistics_ModuleFuel_Helo";
+            	displayName = "Consumption Helo";
+                typeName = "STRING";
+                defaultValue = "'[0.0007, 0.0007, 0.0007]'";
+            };
+            class ConsumptionPlane: Edit {
+            	property = "keko_logistics_ModuleFuel_Plane";
+            	displayName = "Consumption Plane";
+                typeName = "STRING";
+                defaultValue = "'[0.0002, 0.0006, 0.001]'";
+            };
+
+			class ModuleDescription: ModuleDescription{};
+		};
+    };
 };
 
 class CfgFunctions 
@@ -99,6 +168,7 @@ class CfgFunctions
             class moduleAddLogisticsMenu3den {};
             class moduleSpawnCrate {};
             class moduleSupplyDrop {};
+            class moduleFuelConsumption3den {};
 
             class dialogLogisticsMenuInit {};
             class dialogLogisticsMenuCallback {};
@@ -112,6 +182,14 @@ class CfgFunctions
             class supplyDrop {};
             class fillCrate {}; 
             class clearCargo {};         
+
+            class addFuelConsumptionHandler {};
+        };
+
+        class init
+        {
+        	file = "keko_logistics\functions\init";
+        	class postInit {postInit = 1;};
         };
     };
 };
