@@ -13,23 +13,23 @@ if (isNil "keko_logistics_handler_fuelUptake") then {
 
       // initialize variables if not set already
       if (isNil "keko_var_logistics_fuelConsumption_car") then {
-         keko_var_logistics_fuelConsumption_car = [0.0003, 0.0005, 0.0007];
+         keko_var_logistics_fuelConsumption_car = [0.0002, 0.0004, 0.0006];
       };
 
       if (isNil "keko_var_logistics_fuelConsumption_truck") then {
-         keko_var_logistics_fuelConsumption_truck = [0.0003, 0.0005, 0.0007];
+         keko_var_logistics_fuelConsumption_truck = [0.0002, 0.0004, 0.0006];
       };
 
       if (isNil "keko_var_logistics_fuelConsumption_tank") then {
-         keko_var_logistics_fuelConsumption_tank = [0.0003, 0.0005, 0.0007];
+         keko_var_logistics_fuelConsumption_tank = [0.0002, 0.0004, 0.0006];
       };
 
       if (isNil "keko_var_logistics_fuelConsumption_helo") then {
-         keko_var_logistics_fuelConsumption_helo = [0.0007, 0.0007, 0.0007];
+         keko_var_logistics_fuelConsumption_helo = [0.0005, 0.0005, 0.0005];
       };
 
       if (isNil "keko_var_logistics_fuelConsumption_plane") then {
-         keko_var_logistics_fuelConsumption_plane = [0.0002, 0.0006, 0.001];
+         keko_var_logistics_fuelConsumption_plane = [0.0002, 0.0005, 0.0009];
       };
 
       while {alive player} do   {

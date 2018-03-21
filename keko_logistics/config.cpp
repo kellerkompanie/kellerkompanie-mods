@@ -123,31 +123,31 @@ class CfgVehicles
 				property = "keko_logistics_ModuleFuel_Car";
 				displayName = "Consumption Car";
 				typeName = "STRING"; 
-				defaultValue = "'[0.0003, 0.0005, 0.0007]'";			
+				defaultValue = "'[0.0002, 0.0004, 0.0006]'";			
 			};
 			class ConsumptionTruck: Edit {
 				property = "keko_logistics_ModuleFuel_Truck";
                 displayName = "Consumption Truck";
                 typeName = "STRING";
-                defaultValue = "'[0.0003, 0.0005, 0.0007]'";
+                defaultValue = "'[0.0002, 0.0004, 0.0006]'";
             };
             class ConsumptionTank: Edit {
             	property = "keko_logistics_ModuleFuel_Tank";
             	displayName = "Consumption Tank";
                 typeName = "STRING";
-                defaultValue = "'[0.0003, 0.0005, 0.0007]'";
+                defaultValue = "'[0.0002, 0.0004, 0.0006]'";
             };
             class ConsumptionHelo: Edit {
             	property = "keko_logistics_ModuleFuel_Helo";
             	displayName = "Consumption Helo";
                 typeName = "STRING";
-                defaultValue = "'[0.0007, 0.0007, 0.0007]'";
+                defaultValue = "'[0.0005, 0.0005, 0.0005]'";
             };
             class ConsumptionPlane: Edit {
             	property = "keko_logistics_ModuleFuel_Plane";
             	displayName = "Consumption Plane";
                 typeName = "STRING";
-                defaultValue = "'[0.0002, 0.0006, 0.001]'";
+                defaultValue = "'[0.0002, 0.0005, 0.0009]'";
             };
 
 			class ModuleDescription: ModuleDescription{};
