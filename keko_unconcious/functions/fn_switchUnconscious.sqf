@@ -18,6 +18,8 @@ if(_state) then {
 	_civGroup = createGroup civilian;
 	[_unit] joinSilent _civGroup;
 
+	diag_log text format ["[KEKO] (unconcious) switched %1 from group %2 to civilian", name _unit, group _unit];
+
 } else {
 	// switch unit back from civilian
 	diag_log text format ["[KEKO] (unconcious) switching %1 back from civilian", name _unit];
@@ -25,9 +27,11 @@ if(_state) then {
 	_isGroupLeader = _unit getVariable ["keko_unconscious_leader", false];
 	
 	_side_before_unconscious = _unit getVariable ["keko_unconscious_side", west];
-	[_unit] joinSilent createGroup _side_before_unconscious;
+	//[_unit] joinSilent createGroup _side_before_unconscious;
 	_group_before_unconscious = _unit getVariable ["keko_unconscious_group", createGroup _side_before_unconscious];
 	[_unit] joinSilent _group_before_unconscious;
+
+	diag_log text format ["[KEKO] (unconcious) switched %1 to group %2", name _unit, _group_before_unconscious];
 
 	_assignedTeam = _unit getVariable ["keko_unconscious_color", "MAIN"];
 	_unit assignTeam _assignedTeam;
