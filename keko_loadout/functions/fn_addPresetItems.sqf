@@ -102,8 +102,12 @@ if(keko_var_giveGps > 0) then {
 // add watch
 player linkItem "ItemWatch";
 
+sleep 2;
 
 [player] call keko_loadout_fnc_tfarSettings;
+
+// let TFAR initialize
+sleep 5;
 
 // give radio
 if (keko_var_giveRadio > 0) then {
