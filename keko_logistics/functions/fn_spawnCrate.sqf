@@ -8,6 +8,10 @@ if(keko_var_customLogistics == 2) then {
 	diag_log text format["[KEKO] (logistics) spawnCrate customCrates = %1", keko_var_logistics_customCrates];
 	diag_log text format["[KEKO] (logistics) spawnCrate _crate_name = '%1'", _crate_name];
 
+	_descapedString = [_crate_name, "%20", " "] call keko_loadout_fnc_replaceString;
+
+	diag_log text format["[KEKO] (logistics) spawnCrate _descapedString = '%1'", _descapedString];
+
 	{
 		_entryName = _x select 0;
 		_entryClass = _x select 1;
@@ -15,8 +19,8 @@ if(keko_var_customLogistics == 2) then {
 
 		diag_log text format["[KEKO] (logistics) spawnCrate iterating = %1 %2", _entryName, _entryClass];
 
-		if(_entryName isEqualTo _crate_name) then {
-			diag_log text format["[KEKO] (logistics) '%1' isEqualTo '%2'", _entryName, _crate_name];
+		if(_entryName isEqualTo _descapedString) then {
+			diag_log text format["[KEKO] (logistics) '%1' isEqualTo '%2'", _entryName, _descapedString];
 
 			_crate = createVehicle [_entryClass, _position, [], 0, "CAN_COLLIDE"];
 			_crate allowDamage false;

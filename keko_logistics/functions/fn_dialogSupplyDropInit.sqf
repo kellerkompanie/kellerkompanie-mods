@@ -32,7 +32,8 @@ _i = 0;
 		if(keko_var_customLogistics == 2) then {
 			_crate_name = _x select 0;
 			lbAdd [1500, _crate_name];
-			lbSetData [1500, _i, format ["%1 %2 %3", _crate_name, _xPos, _yPos]];
+			_escapedString = [_crate_name, " ", "%20"] call keko_loadout_fnc_replaceString;
+			lbSetData [1500, _i, format ["%1 %2 %3", _escapedString, _xPos, _yPos]];
 		}
 		else {
 			_crate_name = getText (configFile >> "kekoFaction" >> keko_var_faction >> _x >> "name");
