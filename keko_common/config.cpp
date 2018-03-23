@@ -127,6 +127,19 @@ class CfgVehicles
                     class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };
             };
+            class CustomLogistics: Combo {
+            	property = "keko_common_ModuleInit_CustomLogistics";
+                displayName = "Logistics";
+                typeName = "NUMBER";
+                defaultValue = 1;   
+	            class Values
+	            {
+	                class disabled  {name = "DISABLED"; value = 0;};
+	                class standard 	{name = "DEFAULT";	value = 1;};
+	                class custom 	{name = "CUSTOM";	value = 2;};
+	                class inferred 	{name = "INFERRED";	value = 3;};
+	            };          
+            };
             class GiveMap: Checkbox {
             	property = "keko_common_ModuleInit_GiveMap";
                 displayName = "Give map";
@@ -382,6 +395,7 @@ class CfgFunctions
             class lockDoorsDialogInit{};
             class lockDoorsDialogCallback{};
             class createZeus{};
+            class exportCrate {};
         };
         class init
         {
@@ -411,7 +425,8 @@ class Display3DEN {
 					"keko_addRoleDescriptionPrefix",
                     "keko_addRoleDescriptionSuffix",
 					"keko_removeRoleDescriptionPrefix",
-					"keko_resetRoleDescription"};
+					"keko_resetRoleDescription",
+					"keko_exportCrate"};
 			};
 			class keko_addRoleDescriptionPrefix	{
 				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionPrefixDisplay'";
@@ -432,7 +447,12 @@ class Display3DEN {
 				action = "call keko_common_fnc_resetRoleDescription";
 				Text = "Reset role description";
 				conditionShow = "selectedObject";
-			};							
+			};	
+			class keko_exportCrate	{
+				action = "call keko_common_fnc_exportCrate";
+				Text = "Export custom crate";
+				conditionShow = "selectedObject";
+			};						
 		};
 	};
 };

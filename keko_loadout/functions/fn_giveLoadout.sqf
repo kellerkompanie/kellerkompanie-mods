@@ -253,4 +253,3 @@ if !(weaponLowered player) then {
 	player action ["WeaponOnBack", player];
 };
 
-[player] spawn keko_loadout_fnc_setChannels;

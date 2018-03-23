@@ -5,6 +5,7 @@ diag_log text "[KEKO] (common) running moduleInitMission3den";
 if(isServer) then {
 	keko_var_loadoutOnSpawn = _logic getVariable "loadoutOnSpawn";
 	keko_var_faction = _logic getVariable "faction";
+	keko_var_customLogistics = _logic getVariable "customLogistics";
 	keko_var_giveMap = _logic getVariable "giveMap";
 	keko_var_giveCompass = _logic getVariable "giveCompass";
 	keko_var_giveGps = _logic getVariable "giveGps";
@@ -14,12 +15,17 @@ if(isServer) then {
 
 	publicVariable "keko_var_loadoutOnSpawn";
 	publicVariable "keko_var_faction";
+	publicVariable "keko_var_customLogistics";
 	publicVariable "keko_var_giveMap";
 	publicVariable "keko_var_giveCompass";
 	publicVariable "keko_var_giveGps";
 	publicVariable "keko_var_giveNvg";
 	publicVariable "keko_var_giveRadio";
 	publicVariable "keko_var_sideRelations";
+
+	if(keko_var_customLogistics == 2) then {
+		[] call keko_logistics_fnc_parseCustomLogistics;
+	};
 };
 
 [] call keko_common_fnc_initMission;

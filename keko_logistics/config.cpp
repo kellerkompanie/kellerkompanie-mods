@@ -184,6 +184,8 @@ class CfgFunctions
             class clearCargo {};         
 
             class addFuelConsumptionHandler {};
+
+            class parseCustomLogistics {};
         };
 
         class init
