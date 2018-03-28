@@ -61,9 +61,6 @@ if(_faction isEqualTo "kekoCustom") then {
 	};
 };
 
-
-
-
 call keko_loadout_fnc_addPresetItems;
 
 player enableSimulation true;

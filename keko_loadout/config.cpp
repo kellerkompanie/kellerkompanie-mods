@@ -78,11 +78,7 @@ class CfgFunctions
             class applyCustomLoadout{};   
             class addPresetItems{};       
             class replaceString{};
-        };
-        class tfar {
-            file = "keko_loadout\functions\tfar";
             class setChannels{};
-            class tfarSettings{}; 
         };
     };
 };

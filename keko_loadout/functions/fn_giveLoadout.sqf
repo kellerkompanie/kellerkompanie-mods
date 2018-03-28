@@ -253,14 +253,8 @@ if !(weaponLowered player) then {
 	player action ["WeaponOnBack", player];
 };
 
-
-
-sleep 2;
-
-[player] call keko_loadout_fnc_tfarSettings;
-
 // let TFAR initialize
-sleep 5;
+sleep 3;
 
 // give radio
 if (keko_var_giveRadio > 0) then {
