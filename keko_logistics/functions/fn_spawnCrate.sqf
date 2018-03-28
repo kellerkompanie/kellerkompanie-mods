@@ -22,6 +22,7 @@ if(keko_var_customLogistics == 2) then {
 		if(_entryName isEqualTo _descapedString) then {
 			diag_log text format["[KEKO] (logistics) '%1' isEqualTo '%2'", _entryName, _descapedString];
 
+			_position = [_position select 0, _position select 1, (_position select 2) + 0.5];
 			_crate = createVehicle [_entryClass, _position, [], 0, "CAN_COLLIDE"];
 			_crate allowDamage false;
 			[_crate] call keko_logistics_fnc_clearCargo;
@@ -48,6 +49,7 @@ else {
 
 	_inventory = getArray (_crateConfig >> "inventory");
 
+	_position = [_position select 0, _position select 1, (_position select 2) + 0.5];
 	_crate = createVehicle [_cfgName,_position, [], 0, "CAN_COLLIDE"];
 	_crate allowDamage false;
 	[_crate] call keko_logistics_fnc_clearCargo;
