@@ -185,6 +185,3 @@ A collection of several funcitonalities that are supposed to make police mission
 
 ## keko_teleport
 A simple and intuitive fast travel system with modules for adding destinations and menus to objects. Not only teleport but also parajump above the target is available.
-
-## keko_unconcious
-ACE removed the functionality that marks unconcious units as civilian to prevent AI shooting at them after they are down. This mod adds an event listener to work around this issue.
