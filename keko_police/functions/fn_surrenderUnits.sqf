@@ -47,7 +47,7 @@ if(_playSounds) then {
 					_surrenderChance = _surrenderChance + 0.2;
 				};
 
-				_random = random 1.0;
+				_random = (random 1.0) * 100;
 				if(_random <= _surrenderChance) then {
 					// do surrender
 					["ACE_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
