@@ -168,6 +168,9 @@ Adds the debug console to missions that have not declared `enableDebugConsole` i
 ## keko_faction_generic
 Adds placeable factions for playable units for BLUFOR, OPFOR and INDFOR. Once placed the unit becomes playable automatically and the role description is directly assigned. Also this units get the default loadout assigned based on their role.
 
+## keko_hearing
+Removes ace hearing reduction when wearing certain helmets, like, e.g., the crew helmet.
+
 ## keko_intel
 Adds the ability to attach intel similar to the Ares Mod Achilles Expansion, but in 3den Editor instead of Zeus.
 
