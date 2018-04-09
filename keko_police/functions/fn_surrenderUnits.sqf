@@ -7,7 +7,19 @@ _playSounds = true;
 _playerSide = side player;
 
 if(_playSounds) then {
-	player say3D "keko_police_shout1";
+	player say3D selectRandom [
+		"keko_police_shout1",
+		"keko_police_02_gangster_gesichtet",
+		"keko_police_02_ganz_ruhig",
+		"keko_police_02_halt_oder_ich_schiesse",
+		"keko_police_02_keine_bewegung",
+		"keko_police_02_polizei01",
+		"keko_police_02_polizei02",
+		"keko_police_02_polizei03",
+		"keko_police_02_polizei04",
+		"keko_police_02_polizei05",
+		"keko_police_02_sofort_stehenbleiben",
+		"keko_police_02_waffe_weg"];
 };
 
 [_distance, _playerSide, _playSounds] spawn {

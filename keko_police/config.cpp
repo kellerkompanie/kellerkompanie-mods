@@ -169,24 +169,95 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
+	/* Schwaggot's recordings */
 	class keko_police_shout1 
 	{		
 		name = "keko_police_shout1"; // how the sound is referred to in the editor (e.g. trigger effects)		
-		sound[] = {"\keko_police\sounds\halt_polizei.ogg", 1, 1, 100}; // filename, volume, pitch, distance		
-		titles[] = { 1, "*Hände hoch Polizei!*" }; // subtitle delay in seconds, subtitle text
+		sound[] = {"\keko_police\sounds\01_halt_polizei.ogg", 1, 1, 100}; // filename, volume, pitch, distance		
+		titles[] = { 1, "Hände hoch Polizei!" }; // subtitle delay in seconds, subtitle text
 	};
 	class keko_police_surrender1 
 	{
 		name = "keko_police_surrender1";
-		sound[] = {"\keko_police\sounds\geben_auf.ogg", 1, 1, 100};
-		titles[] = { 1, "*Michse geben auf!*" };
+		sound[] = {"\keko_police\sounds\01_geben_auf.ogg", 1, 1, 100};
+		titles[] = { 1, "Michse geben auf!" };
 	};
 	class keko_police_fuckyou1 
 	{
 		name = "keko_police_fuckyou1";
-		sound[] = {"\keko_police\sounds\fuck_you.ogg", 1, 1, 100};
-		titles[] = { 1, "*Fuck you m8!*" };
+		sound[] = {"\keko_police\sounds\01_fuck_you.ogg", 1, 1, 100};
+		titles[] = { 1, "Fuck you m8!" };
 	};
+
+	/* Gunk's extracted soundfiles */
+	class keko_police_02_gangster_gesichtet
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_gangster_gesichtet.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Gangster gesichtet!" };
+	};
+	class keko_police_02_ganz_ruhig
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_ganz_ruhig.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Ganz ruhig!" };
+	};
+	class keko_police_02_halt_oder_ich_schiesse
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_halt_oder_ich_schiesse.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Halt, oder ich schieße!" };
+	};
+	class keko_police_02_keine_bewegung
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_keine_bewegung.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Keine Bewegung, dann passiert dir nichts!" };
+	};
+	class keko_police_02_polizei01
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_polizei01.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Polizei!" };
+	};
+	class keko_police_02_polizei02
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_polizei02.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Polizei!" };
+	};
+	class keko_police_02_polizei03
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_polizei03.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Polizei!" };
+	};
+	class keko_police_02_polizei04
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_polizei04.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Polizei!" };
+	};
+	class keko_police_02_polizei05
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_polizei05.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Polizei!" };
+	};
+	class keko_police_02_sofort_stehenbleiben
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_sofort_stehenbleiben.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Sofort stehenbleiben!" };
+	};
+	class keko_police_02_waffe_weg
+	{
+		name = "keko_police_fuckyou1";
+		sound[] = {"\keko_police\sounds\02_waffe_weg.ogg", 1.5, 1, 100};
+		titles[] = { 1, "Waffe weg!" };
+	};
+
+
 };
 
 #include "\keko_police\gui\dialog_baseClasses.hpp"
