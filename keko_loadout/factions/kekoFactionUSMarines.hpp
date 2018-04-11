@@ -303,7 +303,7 @@ class kekoFactionUSMarines: kekoFactionBase {
 			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
-		helmet[] = {"H_HelmetCrew_B"};
+		helmet[] = {"H_HelmetCrew_I"};
 		optics[] = {"Binocular"};
 	};
 
