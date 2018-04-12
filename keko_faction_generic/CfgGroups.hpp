@@ -557,7 +557,7 @@ class CfgGroups
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = "keko_blufor_sergeant";
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
@@ -1216,7 +1216,7 @@ class CfgGroups
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = "keko_opfor_sergeant";
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
@@ -1874,7 +1874,7 @@ class CfgGroups
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = "keko_indfor_sergeant";
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};

@@ -7,6 +7,7 @@ class CfgPatches
 			"keko_blufor_soldier",
 			"keko_blufor_command",
 			"keko_blufor_lead",
+			"keko_blufor_sergeant",
 			"keko_blufor_sql",
 			"keko_blufor_ftl",
 			"keko_blufor_doctor",
@@ -38,11 +39,22 @@ class CfgPatches
 			"keko_blufor_uav",
 			"keko_blufor_survivor",
 
+			"keko_blufor_custom1",
+			"keko_blufor_custom2",
+			"keko_blufor_custom3",
+			"keko_blufor_custom4",
+			"keko_blufor_custom5",
+			"keko_blufor_custom6",
+			"keko_blufor_custom7",
+			"keko_blufor_custom8",
+			"keko_blufor_custom9",
+
 
 			/* Indpendent units */ 
 			"keko_indfor_soldier",
 			"keko_indfor_command",
 			"keko_indfor_lead",
+			"keko_indfor_sergeant",
 			"keko_indfor_sql",
 			"keko_indfor_ftl",
 			"keko_indfor_doctor",
@@ -74,11 +86,22 @@ class CfgPatches
 			"keko_indfor_uav",
 			"keko_indfor_survivor",
 
+			"keko_indfor_custom1",
+			"keko_indfor_custom2",
+			"keko_indfor_custom3",
+			"keko_indfor_custom4",
+			"keko_indfor_custom5",
+			"keko_indfor_custom6",
+			"keko_indfor_custom7",
+			"keko_indfor_custom8",
+			"keko_indfor_custom9",
+
 
 			/* OPFOR units */ 
 			"keko_opfor_soldier",
 			"keko_opfor_command",
 			"keko_opfor_lead",
+			"keko_opfor_sergeant",
 			"keko_opfor_sql",
 			"keko_opfor_ftl",
 			"keko_opfor_doctor",
@@ -108,7 +131,17 @@ class CfgPatches
 			"keko_opfor_jet_pilot",
 			"keko_opfor_jtac",
 			"keko_opfor_uav",
-			"keko_opfor_survivor"
+			"keko_opfor_survivor",
+
+			"keko_opfor_custom1",
+			"keko_opfor_custom2",
+			"keko_opfor_custom3",
+			"keko_opfor_custom4",
+			"keko_opfor_custom5",
+			"keko_opfor_custom6",
+			"keko_opfor_custom7",
+			"keko_opfor_custom8",
+			"keko_opfor_custom9"
 		};
         weapons[] = {};
         requiredVersion = 1.80;

@@ -36,19 +36,25 @@ class CfgVehicles {
 	};
 	
 	class keko_blufor_lead : keko_blufor_soldier {
-		displayName = "Lead";
+		displayName = "Platoon Lead";
 		icon = "iconManOfficer";
 		loadoutDummy = "kekoLead";
 	};
 
+	class keko_blufor_sergeant : keko_blufor_soldier {
+		displayName = "Platoon Sergeant";
+		icon = "iconManLeader";
+		loadoutDummy = "kekoSergeant";
+	};
+
 	class keko_blufor_sql : keko_blufor_soldier {
-		displayName = "SQL";
+		displayName = "Squad Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoSQL";
 	};
 
 	class keko_blufor_ftl : keko_blufor_soldier {
-		displayName = "FTL";
+		displayName = "Fire-Team Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoFTL";
 	};
@@ -193,6 +199,51 @@ class CfgVehicles {
 		loadoutDummy = "kekoSurvivor";
 	};
 
+	class keko_blufor_custom1 : keko_blufor_soldier {
+		displayName = "Custom 1";
+		loadoutDummy = "kekoCustom1";
+	};
+
+	class keko_blufor_custom2 : keko_blufor_soldier {
+		displayName = "Custom 2";
+		loadoutDummy = "kekoCustom2";
+	};
+
+	class keko_blufor_custom3 : keko_blufor_soldier {
+		displayName = "Custom 3";
+		loadoutDummy = "kekoCustom3";
+	};
+
+	class keko_blufor_custom4 : keko_blufor_soldier {
+		displayName = "Custom 4";
+		loadoutDummy = "kekoCustom4";
+	};
+
+	class keko_blufor_custom5 : keko_blufor_soldier {
+		displayName = "Custom 5";
+		loadoutDummy = "kekoCustom5";
+	};
+
+	class keko_blufor_custom6 : keko_blufor_soldier {
+		displayName = "Custom 6";
+		loadoutDummy = "kekoCustom6";
+	};
+
+	class keko_blufor_custom7 : keko_blufor_soldier {
+		displayName = "Custom 7";
+		loadoutDummy = "kekoCustom7";
+	};
+
+	class keko_blufor_custom8 : keko_blufor_soldier {
+		displayName = "Custom 8";
+		loadoutDummy = "kekoCustom8";
+	};
+
+	class keko_blufor_custom9 : keko_blufor_soldier {
+		displayName = "Custom 9";
+		loadoutDummy = "kekoCustom9";
+	};
+
 
 
 
@@ -234,19 +285,25 @@ class CfgVehicles {
 	};
 	
 	class keko_indfor_lead : keko_indfor_soldier {
-		displayName = "Lead";
+		displayName = "Platoon Lead";
 		icon = "iconManOfficer";
 		loadoutDummy = "kekoLead";
 	};
 
+	class keko_indfor_sergeant : keko_indfor_soldier {
+		displayName = "Platoon Sergeant";
+		icon = "iconManLeader";
+		loadoutDummy = "kekoSergeant";
+	};
+
 	class keko_indfor_sql : keko_indfor_soldier {
-		displayName = "SQL";
+		displayName = "Squad Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoSQL";
 	};
 
 	class keko_indfor_ftl : keko_indfor_soldier {
-		displayName = "FTL";
+		displayName = "Fire-Team Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoFTL";
 	};
@@ -391,8 +448,50 @@ class CfgVehicles {
 		loadoutDummy = "kekoSurvivor";
 	};
 
+	class keko_indfor_custom1 : keko_indfor_soldier {
+		displayName = "Custom 1";
+		loadoutDummy = "kekoCustom1";
+	};
 
+	class keko_indfor_custom2 : keko_indfor_soldier {
+		displayName = "Custom 2";
+		loadoutDummy = "kekoCustom2";
+	};
 
+	class keko_indfor_custom3 : keko_indfor_soldier {
+		displayName = "Custom 3";
+		loadoutDummy = "kekoCustom3";
+	};
+
+	class keko_indfor_custom4 : keko_indfor_soldier {
+		displayName = "Custom 4";
+		loadoutDummy = "kekoCustom4";
+	};
+
+	class keko_indfor_custom5 : keko_indfor_soldier {
+		displayName = "Custom 5";
+		loadoutDummy = "kekoCustom5";
+	};
+
+	class keko_indfor_custom6 : keko_indfor_soldier {
+		displayName = "Custom 6";
+		loadoutDummy = "kekoCustom6";
+	};
+
+	class keko_indfor_custom7 : keko_indfor_soldier {
+		displayName = "Custom 7";
+		loadoutDummy = "kekoCustom7";
+	};
+
+	class keko_indfor_custom8 : keko_indfor_soldier {
+		displayName = "Custom 8";
+		loadoutDummy = "kekoCustom8";
+	};
+
+	class keko_indfor_custom9 : keko_indfor_soldier {
+		displayName = "Custom 9";
+		loadoutDummy = "kekoCustom9";
+	};
 
 
 
@@ -437,19 +536,25 @@ class CfgVehicles {
 	};
 	
 	class keko_opfor_lead : keko_opfor_soldier {
-		displayName = "Lead";
+		displayName = "Platoon Lead";
 		icon = "iconManOfficer";
 		loadoutDummy = "kekoLead";
 	};
 
+	class keko_opfor_sergeant : keko_opfor_soldier {
+		displayName = "Platoon Sergeant";
+		icon = "iconManLeader";
+		loadoutDummy = "kekoSergeant";
+	};
+
 	class keko_opfor_sql : keko_opfor_soldier {
-		displayName = "SQL";
+		displayName = "Squad Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoSQL";
 	};
 
 	class keko_opfor_ftl : keko_opfor_soldier {
-		displayName = "FTL";
+		displayName = "Fire-Team Leader";
 		icon = "iconManLeader";
 		loadoutDummy = "kekoFTL";
 	};
@@ -594,6 +699,49 @@ class CfgVehicles {
 		loadoutDummy = "kekoSurvivor";
 	};
 
+	class keko_opfor_custom1 : keko_opfor_soldier {
+		displayName = "Custom 1";
+		loadoutDummy = "kekoCustom1";
+	};
 
+	class keko_opfor_custom2 : keko_opfor_soldier {
+		displayName = "Custom 2";
+		loadoutDummy = "kekoCustom2";
+	};
+
+	class keko_opfor_custom3 : keko_opfor_soldier {
+		displayName = "Custom 3";
+		loadoutDummy = "kekoCustom3";
+	};
+
+	class keko_opfor_custom4 : keko_opfor_soldier {
+		displayName = "Custom 4";
+		loadoutDummy = "kekoCustom4";
+	};
+
+	class keko_opfor_custom5 : keko_opfor_soldier {
+		displayName = "Custom 5";
+		loadoutDummy = "kekoCustom5";
+	};
+
+	class keko_opfor_custom6 : keko_opfor_soldier {
+		displayName = "Custom 6";
+		loadoutDummy = "kekoCustom6";
+	};
+
+	class keko_opfor_custom7 : keko_opfor_soldier {
+		displayName = "Custom 7";
+		loadoutDummy = "kekoCustom7";
+	};
+
+	class keko_opfor_custom8 : keko_opfor_soldier {
+		displayName = "Custom 8";
+		loadoutDummy = "kekoCustom8";
+	};
+
+	class keko_opfor_custom9 : keko_opfor_soldier {
+		displayName = "Custom 9";
+		loadoutDummy = "kekoCustom9";
+	};
 
 };
