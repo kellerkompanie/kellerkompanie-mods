@@ -407,6 +407,7 @@ class CfgFunctions
             class initPlayerLocal {};
             class initServer {};
             class preInit {preInit = 1;};
+            class preInitPlayerLocal {};
             class postInit {postInit = 1;};
         };
     };

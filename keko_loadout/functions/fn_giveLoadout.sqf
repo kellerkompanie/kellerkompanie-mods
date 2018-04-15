@@ -238,7 +238,7 @@ if(count _optics != 0) then {
 	player addWeapon _random_optics;
 };
 
-// add compass/map, radio, nvg etc. based on mission's preset
+// add compass/map, nvg etc. based on mission's preset
 call keko_loadout_fnc_addPresetItems;
 
 if(count _items != 0) then {
@@ -325,4 +325,5 @@ if (keko_var_giveRadio > 0) then {
 	};
 };
 
-[player] call keko_loadout_fnc_setChannels;
+
+[player] spawn keko_loadout_fnc_setChannels;

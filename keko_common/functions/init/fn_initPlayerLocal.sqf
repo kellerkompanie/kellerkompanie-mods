@@ -11,8 +11,6 @@ waitUntil {player == player};
 waitUntil {!isNil "keko_var_initFinished"};
 waitUntil {keko_var_initFinished};
 
-[player] call keko_common_fnc_tfarSettings;
-
 //prevents the player units from blabbering on their radios
 if (isMultiplayer) then {
 	player setVariable ["BIS_noCoreConversations", true];

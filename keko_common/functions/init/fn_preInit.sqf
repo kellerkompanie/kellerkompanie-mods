@@ -24,3 +24,5 @@ if(isServer) then {
 	publicVariable "keko_var_giveRadio";
 	publicVariable "keko_var_sideRelations";
 };
+
+call keko_common_fnc_preInitPlayerLocal;
