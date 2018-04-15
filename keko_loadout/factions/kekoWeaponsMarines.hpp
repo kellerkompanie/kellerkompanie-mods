@@ -29,10 +29,23 @@ class kekoWeaponsMarines {
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 	};
 
+	class keko_W_RHS_M4A1: kekoPrimaryWeapon
+	{
+		cfgName = "rhs_weap_m4a1_carryhandle";
+		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+	};
+
 	// Grenadier
 	class keko_W_RHS_M16A4_GL: keko_W_RHS_M16A4
 	{
 		cfgName = "rhs_weap_m16a4_carryhandle_M203";
+		uglMagazines[] = {UGL_MAG};
+	};
+
+	class keko_W_RHS_M4A1_GL: keko_W_RHS_M4A1
+	{
+		cfgName = "rhs_weap_m4a1_carryhandle_m203";
 		uglMagazines[] = {UGL_MAG};
 	};
 
@@ -47,7 +60,8 @@ class kekoWeaponsMarines {
 	// LMG
 	class keko_W_RHS_M249: kekoPrimaryWeapon
 	{
-		cfgName = "rhs_weap_m249";
+		cfgName = "rhs_weap_m249_pip_L_para";
+		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
 
@@ -55,6 +69,7 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M240B: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m240B";
+		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 

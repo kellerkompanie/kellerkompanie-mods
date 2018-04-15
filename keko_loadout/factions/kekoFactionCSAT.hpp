@@ -5,6 +5,7 @@ class kekoFactionCSAT: kekoFactionBase {
 		{"Führung", {
 			kekoCommand,
 			kekoLead,
+			kekoSergeant,
 			kekoSQL,
 			kekoFTL,
 			kekoDoctor,
@@ -102,6 +103,10 @@ class kekoFactionCSAT: kekoFactionBase {
 		optics[] = {"Rangefinder"};
 		primary[] = {
 			keko_W_A3_KATIBA_GL};
+	};
+
+	class kekoSergeant: kekoSQL	{
+		name = "Sergeant";
 	};
 
 	class kekoFTL: kekoSoldierCSAT	{

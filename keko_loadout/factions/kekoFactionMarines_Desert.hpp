@@ -5,6 +5,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		{"Führung", {
 			kekoCommand,
 			kekoLead,
+			kekoSergeant,
 			kekoSQL,
 			kekoFTL,
 			kekoDoctor,
@@ -86,13 +87,13 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		rank = "LIEUTENANT";		
 		vest[] = {"rhsusf_spc_light"};
 		helmet[] = {"rhs_8point_marpatd"};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_d"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M4A1_GL};
 	}; 
 
 	// TODO replace headgear with boonie e.g.
@@ -108,13 +109,17 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M4A1_GL};
 		vest[] = {"rhsusf_spc_squadleader"};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_d"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
+	};
+
+	class kekoSergeant: kekoSQL	{
+		name = "Sergeant";
 	};
 
 	class kekoFTL: kekoSoldierMarine_Desert	{
@@ -127,6 +132,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		name = "Doctor";
 		medicClass = 2;
 		rank = "SERGEANT";
+		primary[] = {keko_W_RHS_M4A1};
 		vest[] = {"rhsusf_spc_corpsman"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
@@ -138,6 +144,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
+		primary[] = {keko_W_RHS_M4A1};
 		vest[] = {"rhsusf_spc_corpsman"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
@@ -361,7 +368,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			{2,"SmokeShellPurple"},
 			{2,"SmokeShellYellow"}
 		};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_a_d"};
 		backpackInventory[] = {{4,"Laserbatteries"}};
 		optics[] = {"Laserdesignator"};
 	};

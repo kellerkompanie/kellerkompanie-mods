@@ -5,6 +5,7 @@ class kekoFactionAAF: kekoFactionBase {
 		{"Führung", {
 			kekoCommand,
 			kekoLead,
+			kekoSergeant,
 			kekoSQL,
 			kekoFTL,
 			kekoDoctor,
@@ -103,6 +104,10 @@ class kekoFactionAAF: kekoFactionBase {
 		optics[] = {"Rangefinder"};
 		primary[] = {
 			keko_W_A3_F2000_UGL};
+	};
+
+	class kekoSergeant: kekoSQL	{
+		name = "Sergeant";
 	};
 
 	class kekoFTL: kekoSoldierAAF	{

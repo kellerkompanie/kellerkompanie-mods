@@ -17,5 +17,6 @@ class kekoFaction
 	#include "kekoFactionNATOtropic.hpp"
 	#include "kekoFactionMarines_Desert.hpp"
 	#include "kekoFactionMarines_Woodland.hpp"
+	#include "kekoFactionWehrmacht.hpp"
 };
 

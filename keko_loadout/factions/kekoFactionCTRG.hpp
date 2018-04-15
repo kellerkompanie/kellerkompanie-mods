@@ -5,6 +5,7 @@ class kekoFactionCTRG: kekoFactionBase {
 		{"Führung", {
 			kekoCommand,
 			kekoLead,
+			kekoSergeant,
 			kekoSQL,
 			kekoFTL,
 			kekoDoctor,
@@ -113,6 +114,10 @@ class kekoFactionCTRG: kekoFactionBase {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
+	};
+
+	class kekoSergeant: kekoSQL	{
+		name = "Sergeant";
 	};
 
 	class kekoFTL: kekoSoldierCTRG	{

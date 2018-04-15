@@ -5,6 +5,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		{"Führung", {
 			kekoCommand,
 			kekoLead,
+			kekoSergeant,
 			kekoSQL,
 			kekoFTL,
 			kekoDoctor,
@@ -86,13 +87,13 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		rank = "LIEUTENANT";		
 		vest[] = {"rhsusf_spc_light"};
 		helmet[] = {"rhs_8point_marpatwd"};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_wd"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M4A1_GL};
 	}; 
 
 	class kekoCommand: kekoLead	{
@@ -107,13 +108,17 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M4A1_GL};
 		vest[] = {"rhsusf_spc_squadleader"};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_wd"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
+	};
+
+	class kekoSergeant: kekoSQL	{
+		name = "Sergeant";
 	};
 
 	class kekoFTL: kekoSoldierMarine_Woodland	{
@@ -126,6 +131,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Doctor";
 		medicClass = 2;
 		rank = "SERGEANT";
+		primary[] = {keko_W_RHS_M4A1};
 		vest[] = {"rhsusf_spc_corpsman"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
@@ -137,6 +143,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
+		primary[] = {keko_W_RHS_M4A1};
 		vest[] = {"rhsusf_spc_corpsman"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
@@ -361,7 +368,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 			{2,"SmokeShellPurple"},
 			{2,"SmokeShellYellow"}
 		};
-		backpack[] = {"TFAR_rt1523g_sage"};
+		backpack[] = {"tfw_ilbe_a_wd"};
 		backpackInventory[] = {{4,"Laserbatteries"}};
 		optics[] = {"Laserdesignator"};
 	};
