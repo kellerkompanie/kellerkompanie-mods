@@ -125,6 +125,8 @@ class CfgVehicles
                     class bundeswehr_tropen {name = "[Main] Bundeswehr (Tropentarn)"; value ="kekoFactionBundeswehrTropen";};
                     class marines_desert {name = "[Main] U.S. Marine Corps - Marine Pattern Desert"; value ="kekoFactionMarines_Desert";};
                     class marines_woodland {name = "[Main] U.S. Marine Corps - Marine Pattern Woodland"; value ="kekoFactionMarines_Woodland";};
+                    class russia_emr_summer {name = "[Main] Russia EMR (Summer)"; value ="kekoFactionRussiaEMRSummer";};
+                    class russia_emr_desert {name = "[Main] Russia EMR (Desert)"; value ="kekoFactionRussiaEMRDesert";};
                     class wehrmacht {name = "[Ironfront] Wehrmacht"; value ="kekoFactionWehrmacht";};
                     class armia_krajowa_partyzanci {name = "[Ironfront] Polska Armia Krajowa (Partyzanci)"; value ="kekoFactionArmiaKrajowaPartyzanci";};
                     class armia_krajowa_camo {name = "[Ironfront] Polska Armia Krajowa (Camo)"; value ="kekoFactionArmiaKrajowaCamo";};
