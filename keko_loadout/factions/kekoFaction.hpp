@@ -23,5 +23,6 @@ class kekoFaction
 	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"
 	#include "kekoFactionArmiaKrajowaCamo.hpp"
 	#include "kekoFactionArmiaKrajowaGrade.hpp"
+	#include "kekoFactionCommandos.hpp"
 };
 

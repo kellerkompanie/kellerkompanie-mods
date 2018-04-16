@@ -129,6 +129,7 @@ class CfgVehicles
                     class armia_krajowa_partyzanci {name = "[Ironfront] Polska Armia Krajowa (Partyzanci)"; value ="kekoFactionArmiaKrajowaPartyzanci";};
                     class armia_krajowa_camo {name = "[Ironfront] Polska Armia Krajowa (Camo)"; value ="kekoFactionArmiaKrajowaCamo";};
                     class armia_krajowa_grade {name = "[Ironfront] Polska Armia Krajowa (Grade)"; value ="kekoFactionArmiaKrajowaGrade";};
+                    class commandos {name = "[Ironfront] Commandos"; value ="kekoFactionCommandos";};
                     class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
                     class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };
