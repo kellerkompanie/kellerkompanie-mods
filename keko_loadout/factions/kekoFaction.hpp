@@ -20,5 +20,8 @@ class kekoFaction
 	#include "kekoFactionBundeswehrFleck.hpp"
 	#include "kekoFactionBundeswehrTropen.hpp"
 	#include "kekoFactionWehrmacht.hpp"
+	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"
+	#include "kekoFactionArmiaKrajowaCamo.hpp"
+	#include "kekoFactionArmiaKrajowaGrade.hpp"
 };
 

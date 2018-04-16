@@ -126,6 +126,9 @@ class CfgVehicles
                     class marines_desert {name = "[Main] U.S. Marine Corps - Marine Pattern Desert"; value ="kekoFactionMarines_Desert";};
                     class marines_woodland {name = "[Main] U.S. Marine Corps - Marine Pattern Woodland"; value ="kekoFactionMarines_Woodland";};
                     class wehrmacht {name = "[Ironfront] Wehrmacht"; value ="kekoFactionWehrmacht";};
+                    class armia_krajowa_partyzanci {name = "[Ironfront] Polska Armia Krajowa (Partyzanci)"; value ="kekoFactionArmiaKrajowaPartyzanci";};
+                    class armia_krajowa_camo {name = "[Ironfront] Polska Armia Krajowa (Camo)"; value ="kekoFactionArmiaKrajowaCamo";};
+                    class armia_krajowa_grade {name = "[Ironfront] Polska Armia Krajowa (Grade)"; value ="kekoFactionArmiaKrajowaGrade";};
                     class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
                     class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
                 };
