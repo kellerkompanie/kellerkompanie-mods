@@ -121,6 +121,7 @@ class CfgVehicles
                     class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
                     class usmarines  {name = "[Minimal] U.S. Marine Corps (Woodland)";  value = "kekoFactionUSMarines";};
                     class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
+                    class idap {name = "[Minimal] IDAP - International Development and Aid Project"; value = "kekoFactionNATOtropic";};
                     class bundeswehr_fleck {name = "[Main] Bundeswehr (Flecktarn)"; value ="kekoFactionBundeswehrFleck";};
                     class bundeswehr_tropen {name = "[Main] Bundeswehr (Tropentarn)"; value ="kekoFactionBundeswehrTropen";};
                     class usarmy_ocp {name = "[Main] U.S. Army (OCP)"; value ="kekoFactionUSArmyOCP";};

@@ -15,6 +15,7 @@ class kekoFaction
 	#include "kekoFactionCTRG.hpp"
 	#include "kekoFactionUSMarines.hpp"
 	#include "kekoFactionNATOtropic.hpp"
+	#include "kekoFactionIDAP.hpp"
 	#include "kekoFactionUSArmyOCP.hpp"
 	#include "kekoFactionUSArmyUCP.hpp"
 	#include "kekoFactionMarines_Desert.hpp"
