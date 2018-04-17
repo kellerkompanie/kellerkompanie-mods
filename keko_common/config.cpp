@@ -115,31 +115,110 @@ class CfgVehicles
                 defaultValue = "'kekoFactionNATO'";
                 class Values
                 {
-                    class nato  {name = "[Minimal] NATO - North Atlantic Treaty Organization";  value = "kekoFactionNATO";};
-                    class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
-                    class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
-                    class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
-                    class fia  {name = "[Minimal] FIA - Freedom and Independence Alliance";  value = "kekoFactionFIA";};
-                    class usmarines  {name = "[Minimal] U.S. Marine Corps (Woodland)";  value = "kekoFactionUSMarines";};
-                    class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
-                    class idap {name = "[Minimal] IDAP - International Development and Aid Project"; value = "kekoFactionNATOtropic";};
-                    class bundeswehr_fleck {name = "[Main] Bundeswehr (Flecktarn)"; value ="kekoFactionBundeswehrFleck";};
-                    class bundeswehr_tropen {name = "[Main] Bundeswehr (Tropentarn)"; value ="kekoFactionBundeswehrTropen";};
-                    class usarmy_ocp {name = "[Main] U.S. Army (OCP)"; value ="kekoFactionUSArmyOCP";};
-                    class usarmy_ucp {name = "[Main] U.S. Army (UCP)"; value ="kekoFactionUSArmyUCP";};
-                    class marines_desert {name = "[Main] U.S. Marine Corps - Marine Pattern Desert"; value ="kekoFactionMarines_Desert";};
-                    class marines_woodland {name = "[Main] U.S. Marine Corps - Marine Pattern Woodland"; value ="kekoFactionMarines_Woodland";};
-                    class russia_emr_summer {name = "[Main] Russia EMR (Summer)"; value ="kekoFactionRussiaEMRSummer";};
-                    class russia_emr_desert {name = "[Main] Russia EMR (Desert)"; value ="kekoFactionRussiaEMRDesert";};
-                    class chinese_pla_woodland {name = "[Main] Chinese PLA (Woodland)"; value ="kekoFactionChinesePLAWoodland";};
-                    class chinese_pla_desert {name = "[Main] Chinese PLA (Desert)"; value ="kekoFactionChinesePLADesert";};
-                    class wehrmacht {name = "[Ironfront] Wehrmacht"; value ="kekoFactionWehrmacht";};
-                    class armia_krajowa_partyzanci {name = "[Ironfront] Polska Armia Krajowa (Partyzanci)"; value ="kekoFactionArmiaKrajowaPartyzanci";};
-                    class armia_krajowa_camo {name = "[Ironfront] Polska Armia Krajowa (Camo)"; value ="kekoFactionArmiaKrajowaCamo";};
-                    class armia_krajowa_grade {name = "[Ironfront] Polska Armia Krajowa (Grade)"; value ="kekoFactionArmiaKrajowaGrade";};
-                    class commandos {name = "[Ironfront] Commandos"; value ="kekoFactionCommandos";};
-                    class custom {name = "Custom - BI Arsenal"; value = "kekoCustom";};
-                    class custom_ace {name = "Custom - ACE Arsenal"; value = "kekoCustomACE";};
+                    class nato  {
+                        name = "[Minimal] NATO - North Atlantic Treaty Organization";
+                        value = "kekoFactionNATO";
+                    };
+                    class aaf {
+                        name = "[Minimal] AAF - Altis Armed Forces";
+                        value = "kekoFactionAAF";
+                    };
+                    class csat {
+                        name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
+                        value = "kekoFactionCSAT";
+                    };
+                    class ctrg  {
+                        name = "[Minimal] CTRG - Combat and Technology Research Group";
+                        value = "kekoFactionCTRG";
+                    };
+                    class fia  {
+                        name = "[Minimal] FIA - Freedom and Independence Alliance";
+                        value = "kekoFactionFIA";
+                    };
+                    class guerilla  {
+                        name = "[Minimal] Guerilla";
+                        value = "kekoFactionGuerilla";
+                    };
+                    class usmarines  {
+                        name = "[Minimal] U.S. Marine Corps (Woodland)";
+                        value = "kekoFactionUSMarines";
+                    };
+                    class nato_tropic {
+                        name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
+                        value = "kekoFactionNATOtropic";
+                    };
+                    class idap {
+                        name = "[Minimal] IDAP - International Development and Aid Project";
+                        value = "kekoFactionNATOtropic";
+                    };
+                    class bundeswehr_fleck {
+                        name = "[Main] Bundeswehr (Flecktarn)";
+                        value ="kekoFactionBundeswehrFleck";
+                    };
+                    class bundeswehr_tropen {
+                        name = "[Main] Bundeswehr (Tropentarn)";
+                        value ="kekoFactionBundeswehrTropen";
+                    };
+                    class usarmy_ocp {
+                        name = "[Main] U.S. Army (OCP)";
+                        value ="kekoFactionUSArmyOCP";
+                    };
+                    class usarmy_ucp {
+                        name = "[Main] U.S. Army (UCP)";
+                        value ="kekoFactionUSArmyUCP";
+                    };
+                    class marines_desert {
+                        name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
+                        value ="kekoFactionMarines_Desert";
+                    };
+                    class marines_woodland {
+                        name = "[Main] U.S. Marine Corps - Marine Pattern Woodland";
+                        value ="kekoFactionMarines_Woodland";
+                    };
+                    class russia_emr_summer {
+                        name = "[Main] Russia EMR (Summer)";
+                        value ="kekoFactionRussiaEMRSummer";
+                    };
+                    class russia_emr_desert {
+                        name = "[Main] Russia EMR (Desert)";
+                        value ="kekoFactionRussiaEMRDesert";
+                    };
+                    class chinese_pla_woodland {
+                        name = "[Main] Chinese PLA (Woodland)";
+                        value ="kekoFactionChinesePLAWoodland";
+                    };
+                    class chinese_pla_desert {
+                        name = "[Main] Chinese PLA (Desert)";
+                        value ="kekoFactionChinesePLADesert";
+                    };
+                    class wehrmacht {
+                        name = "[Ironfront] Wehrmacht";
+                        value ="kekoFactionWehrmacht";
+                    };
+                    class armia_krajowa_partyzanci {
+                        name = "[Ironfront] Polska Armia Krajowa (Partyzanci)";
+                        value ="kekoFactionArmiaKrajowaPartyzanci";
+                    };
+                    class armia_krajowa_camo {
+                        name = "[Ironfront] Polska Armia Krajowa (Camo)";
+                        value ="kekoFactionArmiaKrajowaCamo";
+                    };
+                    class armia_krajowa_grade {
+                        name = "[Ironfront] Polska Armia Krajowa (Grade)";
+                        value ="kekoFactionArmiaKrajowaGrade";
+                    };
+                    class commandos {
+                        name = "[Ironfront] Commandos";
+                        value ="kekoFactionCommandos";
+                    };
+                    class custom {
+                        name = "Custom - BI Arsenal";
+                        value = "kekoCustom";
+                    };
+                    class custom_ace {
+                        name = "Custom - ACE Arsenal";
+                        value = "kekoCustomACE";
+                    };
                 };
             };
             class CustomLogistics: Combo {

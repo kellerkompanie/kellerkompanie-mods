@@ -14,6 +14,7 @@ class kekoFaction
 	#include "kekoFactionCSAT.hpp"
 	#include "kekoFactionCTRG.hpp"
 	#include "kekoFactionFIA.hpp"
+	#include "kekoFactionGuerilla.hpp"	
 	#include "kekoFactionUSMarines.hpp"
 	#include "kekoFactionNATOtropic.hpp"
 	#include "kekoFactionIDAP.hpp"
