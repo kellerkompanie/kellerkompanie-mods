@@ -119,6 +119,7 @@ class CfgVehicles
                     class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
                     class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
                     class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
+                    class fia  {name = "[Minimal] FIA - Freedom and Independence Alliance";  value = "kekoFactionFIA";};
                     class usmarines  {name = "[Minimal] U.S. Marine Corps (Woodland)";  value = "kekoFactionUSMarines";};
                     class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
                     class idap {name = "[Minimal] IDAP - International Development and Aid Project"; value = "kekoFactionNATOtropic";};
