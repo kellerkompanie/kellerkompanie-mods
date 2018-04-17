@@ -38,10 +38,11 @@ class kekoWeaponsFIA {
 	class keko_W_A3_Mk20_GL: keko_W_A3_Mk20
 	{
 		cfgName = "arifle_Mk20_GL_F";
+		uglMagazines[] = {UGL_MAG};
 	};
 	class keko_W_A3_TRG21_GL: keko_W_A3_Mk20_GL
 	{
-		cfgName = "arifle_TRG21_GL_F";
+		cfgName = "arifle_TRG21_GL_F";		
 	};
 
 	// Marksman
