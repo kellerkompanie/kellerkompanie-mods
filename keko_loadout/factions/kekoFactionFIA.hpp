@@ -257,6 +257,7 @@ class kekoFactionFIA: kekoFactionBase {
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		optics[] = {"Binocular"};
+		helmet[] = {"H_Cap_marshal"};
 	};
 
 	class kekoSurvivor: kekoSoldierLight	{
