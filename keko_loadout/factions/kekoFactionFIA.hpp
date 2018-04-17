@@ -249,8 +249,7 @@ class kekoFactionFIA: kekoFactionBase {
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {
-		name = "Helicopter Pilot";
-		uniform[] = {"U_B_HeliPilotCoveralls"};
+		name = "Helicopter Pilot";		
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
