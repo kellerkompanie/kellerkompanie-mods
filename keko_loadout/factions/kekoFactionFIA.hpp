@@ -100,7 +100,8 @@ class kekoFactionFIA: kekoFactionBase {
 		backpackInventory[] = {{6,"UGL_FlareWhite_F"},{3,"UGL_FlareGreen_F"},{3,"UGL_FlareRed_F"}};
 		optics[] = {"Binocular"};
 		primary[] = {
-			keko_W_A3_Mk20C};
+			keko_W_A3_Mk20_GL, 
+			keko_W_A3_TRG21_GL};
 	}; 
 
 	class kekoCommand: kekoLead	{

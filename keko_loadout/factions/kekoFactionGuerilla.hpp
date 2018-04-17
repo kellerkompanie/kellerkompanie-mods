@@ -106,19 +106,17 @@ class kekoFactionGuerilla: kekoFactionBase {
 			"H_ShemagOpen_tan",
 			"H_ShemagOpen_khk"};	
 
-		primary[] = {
-			keko_W_A3_Mk20, 
+		primary[] = {			 
 			keko_W_A3_TRG21};
 
 		secondary[] = {
-			keko_W_M1911};
+			keko_W_Rook};
 
 		goggles[] = {" ", " ", " ", "G_Shades_Black","G_Shades_Blue","G_Sport_Checkered"};
 	};
 
 	class kekoSoldierLight: kekoSoldierGuerilla {
-		primary[] = {
-			keko_W_A3_Mk20C};
+
 	};
 
 	class kekoLead: kekoSoldierGuerilla	{
@@ -129,7 +127,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 		backpackInventory[] = {{6,"UGL_FlareWhite_F"},{3,"UGL_FlareGreen_F"},{3,"UGL_FlareRed_F"}};
 		optics[] = {"Binocular"};
 		primary[] = {
-			keko_W_A3_Mk20C};
+			keko_W_A3_TRG21_GL};
 		helmet[] = {"H_Bandanna_khk_hs"};
 	}; 
 
@@ -144,7 +142,6 @@ class kekoFactionGuerilla: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_A3_Mk20_GL, 
 			keko_W_A3_TRG21_GL};
 		backpack[] = {"TFAR_rt1523g"};
 		backpackInventory[] = {{6,"UGL_FlareWhite_F"},{3,"UGL_FlareGreen_F"},{3,"UGL_FlareRed_F"}};
@@ -190,9 +187,8 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 	class kekoRiflemanAT: kekoSoldierGuerilla	{
 		name = "Rifleman Anti-Tank";
-		launcher[] = {keko_W_RPG32};
+		launcher[] = {keko_W_NLAW};
 		backpack[] = {"B_TacticalPack_blk"};
-		backpackInventory[] = {{2, RAT_MAG}};
 	};
 
 	class kekoGrenadier: kekoSoldierGuerilla {
@@ -204,7 +200,6 @@ class kekoFactionGuerilla: kekoFactionBase {
 			{5, "UGL_FlareWhite_F"},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_A3_Mk20_GL, 
 			keko_W_A3_TRG21_GL};		
 	};
 
@@ -250,7 +245,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
 		backpackInventory[] = {{1, AT_MAG}};
-		launcher[] = {keko_W_TITAN_AT};
+		launcher[] = {keko_W_RPG7};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierGuerilla {
