@@ -119,7 +119,7 @@ class CfgVehicles
                     class aaf {name = "[Minimal] AAF - Altis Armed Forces"; value = "kekoFactionAAF";};
                     class csat {name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty"; value = "kekoFactionCSAT";};
                     class ctrg  {name = "[Minimal] CTRG - Combat and Technology Research Group";  value = "kekoFactionCTRG";};
-                    class usmarines  {name = "[Minimal] U.S. Marines - U.S. Force Recon Marines";  value = "kekoFactionUSMarines";};
+                    class usmarines  {name = "[Minimal] USMC - U.S. Marine Corps";  value = "kekoFactionUSMarines";};
                     class nato_tropic {name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)"; value = "kekoFactionNATOtropic";};
                     class bundeswehr_fleck {name = "[Main] Bundeswehr (Flecktarn)"; value ="kekoFactionBundeswehrFleck";};
                     class bundeswehr_tropen {name = "[Main] Bundeswehr (Tropentarn)"; value ="kekoFactionBundeswehrTropen";};
@@ -127,6 +127,8 @@ class CfgVehicles
                     class marines_woodland {name = "[Main] U.S. Marine Corps - Marine Pattern Woodland"; value ="kekoFactionMarines_Woodland";};
                     class russia_emr_summer {name = "[Main] Russia EMR (Summer)"; value ="kekoFactionRussiaEMRSummer";};
                     class russia_emr_desert {name = "[Main] Russia EMR (Desert)"; value ="kekoFactionRussiaEMRDesert";};
+                    class chinese_pla_woodland {name = "[Main] Chinese PLA (Woodland)"; value ="kekoFactionChinesePLAWoodland";};
+                    class chinese_pla_desert {name = "[Main] Chinese PLA (Desert)"; value ="kekoFactionChinesePLADesert";};
                     class wehrmacht {name = "[Ironfront] Wehrmacht"; value ="kekoFactionWehrmacht";};
                     class armia_krajowa_partyzanci {name = "[Ironfront] Polska Armia Krajowa (Partyzanci)"; value ="kekoFactionArmiaKrajowaPartyzanci";};
                     class armia_krajowa_camo {name = "[Ironfront] Polska Armia Krajowa (Camo)"; value ="kekoFactionArmiaKrajowaCamo";};
