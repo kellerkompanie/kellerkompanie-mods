@@ -7,6 +7,6 @@ if (isServer) then {
 		//workaround for local testing of missions
 		[] spawn keko_common_fnc_initPlayerLocal;
 	} else {
-		remoteExec ["keko_common_fnc_initPlayerLocal", -2, true];
+		[] remoteExec ["keko_common_fnc_initPlayerLocal", -2, true];
 	};
 };
