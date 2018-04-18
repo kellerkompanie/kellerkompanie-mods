@@ -7,6 +7,8 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+
+
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
@@ -49,3 +51,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# All
+.idea
+*.iml
