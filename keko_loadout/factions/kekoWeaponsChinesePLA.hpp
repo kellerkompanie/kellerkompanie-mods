@@ -57,7 +57,7 @@ class kekoWeaponsChinesePLA {
 	};
 
 	// Sniper
-	class keko_W_A3_LRR: keko_W_A3_MX
+	class keko_W_A3_LRR: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_LRR_F";
 		magazines[] = {"ACE_7Rnd_408_305gr_Mag"};

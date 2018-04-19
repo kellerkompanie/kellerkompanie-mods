@@ -214,7 +214,7 @@ class kekoFactionIDAP: kekoFactionBase {
 		uniform[] = {"U_C_IDAP_Man_casual_F"};
 		vest[] = {"V_EOD_IDAP_blue_F"};
 		backpack[] = {"B_LegStrapBag_coyote_F"};
-		secondary[] = {keko_W_VMH3, keko_W_VMH3};
+		secondary[] = {keko_W_VMH3, keko_W_VMM3};
 		engineerClass = 2;
 		goggles[] = {" ","G_EyeProtectors_F"};
 	};
