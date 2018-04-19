@@ -132,6 +132,8 @@ class CfgFunctions
             class surrenderUnits {};
             class settingsDialogInit{};
             class settingsDialogCallback{};
+            class captiveStatusChanged {};
+            class handcuffUnit {};
         };
         class init
         {

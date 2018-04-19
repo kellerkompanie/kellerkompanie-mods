@@ -52,22 +52,7 @@ civilian_fleeing_shouts = [
 		"keko_police_03_verdammt_lauft"
 	];
 
-civilian_handcuffed = [
-		"keko_police_15_ich_will_meinen_anwalt",
-		"keko_police_12_loslassen_oder_es_knallt",
-		"keko_police_10_lasst_mich_in_ruhe",
-		"keko_police_10_ich_mach_keine_bewegung",
-		"keko_police_09_verdammte_polizei_schiessen_auf_alles",
-		"keko_police_09_mehr_aufregung_als_ich_wollte",
-		"keko_police_09_jetzt_zufrieden",
-		"keko_police_08_ich_mach_keine_bewegung",
-		"keko_police_03_ich_will_meinen_anwalt",
-		"keko_police_07_lasst_mich_in_ruhe",
-		"keko_police_05_was_immer_sie_sagen",
-		"keko_police_04_werd_bloss_nicht_frech",
-		"keko_police_04_mistkerl",
-		"keko_police_03_verdammte_cops"
-	];
+
 
 
 gangster_surrender_shouts = [
@@ -157,26 +142,7 @@ gangster_fleeing_shouts = [
 		"keko_police_03_verdammt_die_bullen"
 	];
 
-gangster_handcuffed = [
-		"keko_police_15_ich_will_meinen_anwalt",
-		"keko_police_14_ah_verdammt",
-		"keko_police_12_loslassen_oder_es_knallt",
-		"keko_police_12_gottverdammte_cops",
-		"keko_police_12_fluchen",
-		"keko_police_10_oh_scheisse",
-		"keko_police_10_lasst_mich_in_ruhe",
-		"keko_police_09_verdammte_polizei_schiessen_auf_alles",
-		"keko_police_09_mehr_aufregung_als_ich_wollte",
-		"keko_police_09_jetzt_zufrieden",
-		"keko_police_03_ich_will_meinen_anwalt",
-		"keko_police_06_wir_koennen_uns_wohl_nicht_einigen",
-		"keko_police_06_erwischt_verdammt",
-		"keko_police_04_mistkerl",
-		"keko_police_04_ham_sie_n_haftbefehl",
-		"keko_police_04_habt_ihr_jungs_nichts_besseres_zu_tun",
-		"keko_police_03_schweine",
-		"keko_police_03_verdammte_cops"
-	];
+
 
 
 keko_police_fnc_flee = {
@@ -203,7 +169,7 @@ player say3D (selectRandom police_shouts);
 	
 	_list = player nearEntities ["Man", _distance];
 	{
-		if!(isPlayer _x) then {
+		if!(isPlayer _x || side player == side _x) then {
 			_unit = _x;
 			_sideEntity = side _unit;
 			_isFriendly = [_sideEntity, _playerSide] call BIS_fnc_sideIsFriendly;
@@ -246,12 +212,14 @@ player say3D (selectRandom police_shouts);
 								params ["_unit"];
 								RAND_SLEEP
 								_unit say3D (selectRandom gangster_fleeing_shouts);
-								[_unit] call keko_police_fnc_flee;
+								// [_unit] call keko_police_fnc_flee;
+								[_unit] remoteExec ["keko_police_fnc_flee", _unit, false];
 							};
 						};					
 					};
 				} else {
 					// shout based on state
+					
 				};	
 			} else {
 				/* Civilians and Friendlies */
@@ -270,14 +238,14 @@ player say3D (selectRandom police_shouts);
 					} else {
 						_random = (random 1.0) * 100;
 						if(_random <= _fleeingChance) then {
-							// unit does not flee and does not surrender -> do nothing?
-							// TODO implement behaviour
+							
 						} else {
 							[_unit] spawn {
 								params ["_unit"];
 								RAND_SLEEP
 								_unit say3D (selectRandom civilian_fleeing_shouts);
-								[_unit] call keko_police_fnc_flee;
+								// [_unit] call keko_police_fnc_flee;
+								[_unit] remoteExec ["keko_police_fnc_flee", _unit, false];
 							};
 						};
 						
