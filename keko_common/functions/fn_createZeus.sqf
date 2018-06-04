@@ -7,6 +7,8 @@ params [
 
 {
 	_unit = _x;
+	diag_log text format["[KEKO] (common) trying to assign zeus to player %1", str _unit];
+
 	if ( isNull (getAssignedCuratorLogic _unit) && str _unit == _unitName ) exitWith {
 		_grp = createGroup sideLogic;
 		_curator = _grp createUnit ["ModuleCurator_F",[0,0,0],[],0,"NONE"];
