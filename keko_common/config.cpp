@@ -191,6 +191,10 @@ class CfgVehicles
                         name = "[Main] Chinese PLA (Desert)";
                         value ="kekoFactionChinesePLADesert";
                     };
+                    class russia_speznas {
+                        name = "[Main] Russia Speznas";
+                        value ="kekoFactionRussiaSpeznas";
+                    };
                     class wehrmacht {
                         name = "[Ironfront] Wehrmacht";
                         value ="kekoFactionWehrmacht";

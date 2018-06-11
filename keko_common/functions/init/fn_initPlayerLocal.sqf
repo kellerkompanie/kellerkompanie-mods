@@ -32,3 +32,18 @@ if (keko_var_loadoutOnSpawn) then {
 		[player, keko_var_faction, _loadoutDummyClass] call keko_loadout_fnc_giveLoadout;
 	};	
 };
+
+//failsafe for missing curator interface:
+if ( player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_command" || player isKindOf "keko_indfor_command" ) then {
+	diag_log text format["[KEKO] (loadout) enabling Zeus on this player"];
+	if ( isNull (getAssignedCuratorLogic player) ) then { 
+		[str player, 3] remoteExecCall ["keko_common_fnc_createZeus",2]; 
+	};
+	if ( isNil "keko_evh_createZeusRespawn" ) then {
+		keko_evh_createZeusRespawn = player addEventhandler ["RESPAWN",{
+			if ( isNull (getAssignedCuratorLogic player) ) then { 
+				[str player, 3] remoteExecCall ["keko_common_fnc_createZeus",2]; 
+			};
+		}];
+	};
+};
