@@ -6,7 +6,7 @@ params ["_unit", "_faction", "_role"];
 //diag_log format ["_faction: %1", _faction];
 //diag_log format ["_role: %1", _role];
 
-_customLoadout = _faction isEqualTo "kekoCustom" || _faction isEqualTo "kekoCustomACE";
+_customLoadout = _faction isEqualTo "kekoCustom";
 
 if(_customLoadout) then {
 	[_role, _faction] call keko_loadout_fnc_applyCustomLoadout;
@@ -71,7 +71,9 @@ removeGoggles player;
 player setVariable ["ace_medical_medicClass", _medicClass, true];
 player setVariable ["ACE_isEngineer", _engineerClass, true];
 
-player setUnitRank _rank;
+if(rank player isEqualTo "PRIVATE") then {
+	player setUnitRank _rank;
+};
 
 if(count _uniform != 0) then {
 	_random_uniform = selectRandom _uniform;

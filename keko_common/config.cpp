@@ -211,13 +211,13 @@ class CfgVehicles
                         name = "[Ironfront] Commandos";
                         value ="kekoFactionCommandos";
                     };
-                    class custom {
-                        name = "Custom - BI Arsenal";
-                        value = "kekoCustom";
+                    class cbrn_spacial {
+                        name = "[Special] CBRN U.S. Marines (Stepping Stone)";
+                        value ="kekoFactionCBRNMarines";
                     };
-                    class custom_ace {
-                        name = "Custom - ACE Arsenal";
-                        value = "kekoCustomACE";
+                    class custom {
+                        name = "Custom";
+                        value = "kekoCustom";
                     };
                 };
             };
@@ -231,7 +231,6 @@ class CfgVehicles
 	                class disabled  {name = "DISABLED"; value = 0;};
 	                class standard 	{name = "DEFAULT";	value = 1;};
 	                class custom 	{name = "CUSTOM";	value = 2;};
-	                class inferred 	{name = "INFERRED";	value = 3;};
 	            };          
             };
             class GiveMap: Checkbox {
@@ -456,7 +455,7 @@ class CfgVehicles
         isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_lock.paa";
-    };
+    };    
 };
 
 class CfgFunctions 
@@ -490,7 +489,7 @@ class CfgFunctions
             class lockDoorsDialogCallback{};
             class createZeus{};
             class exportCrate {};
-            class tfarSettings {};
+            class tfarSettings {};            
         };
         class init
         {

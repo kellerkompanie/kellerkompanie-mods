@@ -150,6 +150,7 @@ class kekoFactionIDAP: kekoFactionBase {
 
 	class kekoDriver: kekoSoldierIDAP {
 		name = "Driver";
+		engineerClass = 1;
 	};
 
 	class kekoRefugee: kekoSoldierIDAP {

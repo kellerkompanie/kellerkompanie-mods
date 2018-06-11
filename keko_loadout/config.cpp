@@ -4,7 +4,8 @@ class CfgPatches
 	{
 		units[] = {
             "keko_ModuleAddLoadoutMenu",
-            "keko_ModuleAddLoadoutMenu3den"
+            "keko_ModuleAddLoadoutMenu3den",
+            "keko_ModuleCustomLoadouts3den"
         };
 		requiredVersion = 1.80;
         requiredAddons[] = {
@@ -58,7 +59,20 @@ class CfgVehicles
         scope              = 1; 
         scopeCurator       = 2;
         curatorCanAttach   = 1;
-    };    
+    };   
+    class keko_ModuleCustomLoadouts3den: Module_F
+    {
+        scope              = 2; 
+        scopeCurator       = 1;
+        displayName        = "Custom Loadouts"; 
+        category           = "keko_category_loadout";
+        function           = "keko_loadout_fnc_moduleCustomLoadouts3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_loadout\icons\icon_loadouts.paa";       
+    }; 
 };
 
 class CfgFunctions 
@@ -79,6 +93,7 @@ class CfgFunctions
             class addPresetItems{};       
             class replaceString{};
             class setChannels{};
+            class moduleCustomLoadouts3den{};
         };
     };
 };

@@ -21,11 +21,7 @@ if(isServer) then {
 	publicVariable "keko_var_giveGps";
 	publicVariable "keko_var_giveNvg";
 	publicVariable "keko_var_giveRadio";
-	publicVariable "keko_var_sideRelations";
-
-	if(keko_var_customLogistics == 2) then {
-		[] call keko_logistics_fnc_parseCustomLogistics;
-	};
+	publicVariable "keko_var_sideRelations";	
 };
 
 [] call keko_common_fnc_initMission;

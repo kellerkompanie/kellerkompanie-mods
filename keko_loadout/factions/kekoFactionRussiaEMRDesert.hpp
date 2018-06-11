@@ -303,6 +303,7 @@ class kekoFactionRussiaEMRDesert: kekoFactionBase {
 		helmet[] = {"rhs_tsh4"};
 		optics[] = {"Binocular"};
 		primary[] = {keko_W_AKS74U};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {

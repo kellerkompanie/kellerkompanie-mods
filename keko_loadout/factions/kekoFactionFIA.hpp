@@ -247,6 +247,7 @@ class kekoFactionFIA: kekoFactionBase {
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {

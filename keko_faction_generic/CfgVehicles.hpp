@@ -25,7 +25,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers { 		
-			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_blufor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_blufor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 	
@@ -82,6 +82,12 @@ class CfgVehicles {
 		displayName = "Rifleman AT";
 		icon = "iconManAT";
 		loadoutDummy = "kekoRiflemanAT";
+	};
+
+	class keko_blufor_rifleman_at_tanks : keko_blufor_soldier {
+		displayName = "Rifleman AT (Tanks DLC)";
+		icon = "iconManAT";
+		loadoutDummy = "kekoRiflemanATTanks";
 	};
 	
 	class keko_blufor_grenadier : keko_blufor_soldier {
@@ -274,7 +280,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers { 			
-			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_indfor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_indfor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 
@@ -331,6 +337,12 @@ class CfgVehicles {
 		displayName = "Rifleman AT";
 		icon = "iconManAT";
 		loadoutDummy = "kekoRiflemanAT";
+	};
+
+	class keko_indfor_rifleman_at_tanks : keko_indfor_soldier {
+		displayName = "Rifleman AT (Tanks DLC)";
+		icon = "iconManAT";
+		loadoutDummy = "kekoRiflemanATTanks";
 	};
 	
 	class keko_indfor_grenadier : keko_indfor_soldier {
@@ -525,7 +537,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers { 			
-			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_opfor_soldier') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_opfor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 
@@ -582,6 +594,12 @@ class CfgVehicles {
 		displayName = "Rifleman AT";
 		icon = "iconManAT";
 		loadoutDummy = "kekoRiflemanAT";
+	};
+
+	class keko_opfor_rifleman_at_tanks : keko_opfor_soldier {
+		displayName = "Rifleman AT (Tanks DLC)";
+		icon = "iconManAT";
+		loadoutDummy = "kekoRiflemanATTanks";
 	};
 	
 	class keko_opfor_grenadier : keko_opfor_soldier {

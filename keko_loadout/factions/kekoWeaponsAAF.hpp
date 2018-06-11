@@ -12,9 +12,11 @@
 
 #define RAT_LAUNCHER "launch_NLAW_F"
 #define AT_LAUNCHER "launch_I_Titan_short_F"
+#define AT_LAUNCHER_TANKS "launch_MRAWS_olive_rail_F"
 #define AA_LAUNCHER "launch_I_Titan_F"
 
 #define AT_MAG "Titan_AT"
+#define AT_MAG_TANKS "MRAWS_HEAT_F"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
 
@@ -77,6 +79,10 @@ class kekoWeaponsAAF {
 	class keko_W_TITAN_AA_AAF: kekoLauncherWeapon {
 		cfgName = AA_LAUNCHER;
 		magazines[] = {AA_MAG};
+	};
+	class keko_W_MAAWS: kekoLauncherWeapon {
+		cfgName = AT_LAUNCHER_TANKS;
+		magazines[] = {AT_MAG_TANKS};
 	};
 
 

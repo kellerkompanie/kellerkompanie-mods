@@ -323,6 +323,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_HelmetCrew_B"};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	// TODO adjust converalls

@@ -15,6 +15,7 @@ class CfgPatches
 
 			"keko_blufor_rifleman",
 			"keko_blufor_rifleman_at",
+			"keko_blufor_rifleman_at_tanks",
 			"keko_blufor_grenadier",
 			"keko_blufor_lmg",
 			"keko_blufor_lmg_asst",
@@ -62,6 +63,7 @@ class CfgPatches
 
 			"keko_indfor_rifleman",
 			"keko_indfor_rifleman_at",
+			"keko_indfor_rifleman_at_tanks",
 			"keko_indfor_grenadier",
 			"keko_indfor_lmg",
 			"keko_indfor_lmg_asst",
@@ -109,6 +111,7 @@ class CfgPatches
 
 			"keko_opfor_rifleman",
 			"keko_opfor_rifleman_at",
+			"keko_opfor_rifleman_at_tanks",
 			"keko_opfor_grenadier",
 			"keko_opfor_lmg",
 			"keko_opfor_lmg_asst",

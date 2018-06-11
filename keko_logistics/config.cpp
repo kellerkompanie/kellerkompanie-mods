@@ -7,7 +7,8 @@ class CfgPatches
             "keko_ModuleAddLogisticsMenu3den",
             "keko_ModuleSpawnCrate",
             "keko_ModuleSupplyDrop",
-            "keko_ModuleFuelConsumption3den"
+            "keko_ModuleFuelConsumption3den",
+            "keko_ModuleCustomLogistics3den"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
@@ -153,6 +154,19 @@ class CfgVehicles
 			class ModuleDescription: ModuleDescription{};
 		};
     };
+    class keko_ModuleCustomLogistics3den: Module_F
+    {
+        scope              = 2; 
+        scopeCurator       = 1;
+        displayName        = "Custom Crates"; 
+        category           = "keko_category_logistics";
+        function           = "keko_logistics_fnc_moduleCustomLogistics3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\keko_logistics\icons\icon_crate.paa";       
+    };
 };
 
 class CfgFunctions 
@@ -185,7 +199,7 @@ class CfgFunctions
 
             class addFuelConsumptionHandler {};
 
-            class parseCustomLogistics {};
+            class moduleCustomLogistics3den {};
         };
 
         class init

@@ -306,6 +306,7 @@ class kekoFactionCSAT: kekoFactionBase {
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_HelmetCrew_O"};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {

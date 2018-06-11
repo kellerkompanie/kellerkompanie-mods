@@ -15,25 +15,25 @@ TFAR_DefaultRadio_Rifleman_East = "tfar_pnr1000a";
 TFAR_DefaultRadio_Rifleman_Independent = "tfar_anprc154";
 
 //tfar serious mode channel name and password:
-tf_radio_channel_name = "TFAR";
-tf_radio_channel_password = "fdc190k";
+TFAR_Teamspeak_Channel_Name = "TFAR";
+TFAR_Teamspeak_Channel_Password = "fdc190k";
 
 //update the plugin settings:
 call TFAR_fnc_sendPluginConfig;
 
 //side settings:
 //blufor:
-private _defaultFrequencies_sr_west = ["30","31","32","33","34","35","36","37"];
+private _defaultFrequencies_sr_west = ["30.1","31","32","33","34","35","36","37"];
 private _defaultFrequencies_lr_west = ["30","40","50","60","70"];
 private _west_code = "free4all";
 
 //opfor:
-private _defaultFrequencies_sr_east = ["30","31","32","33","34","35","36","37"];
+private _defaultFrequencies_sr_east = ["30.1","31","32","33","34","35","36","37"];
 private _defaultFrequencies_lr_east = ["30","40","50","60","70"];
 private _east_code = "free4all";
 
 //indfor:
-private _defaultFrequencies_sr_independent = ["30","31","32","33","34","35","36","37"];
+private _defaultFrequencies_sr_independent = ["30.1","31","32","33","34","35","36","37"];
 private _defaultFrequencies_lr_independent = ["30","40","50","60","70"];
 private _ind_code = "free4all";
 

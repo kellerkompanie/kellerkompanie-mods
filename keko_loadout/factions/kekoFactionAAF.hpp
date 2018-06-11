@@ -13,6 +13,7 @@ class kekoFactionAAF: kekoFactionBase {
 		{"Plebs", {
 			kekoRifleman,
 			kekoRiflemanAT,
+			kekoRiflemanATTanks,
 			kekoGrenadier,
 			kekoLMG,
 			kekoLMGAsst}},
@@ -144,7 +145,14 @@ class kekoFactionAAF: kekoFactionBase {
 
 	class kekoRiflemanAT: kekoSoldierAAF	{
 		name = "Rifleman Anti-Tank";
-		launcher[] = {keko_W_NLAW};
+		launcher[] = {keko_W_NLAW};		
+	};
+
+	class kekoRiflemanATTanks: kekoRiflemanAT	{
+		name = "Rifleman Anti-Tank (Tanks DLC)";
+		launcher[] = {keko_W_MAAWS};
+		backpack[] = {"B_AssaultPack_dgtl"};
+		backpackInventory[] = {{2, AT_MAG_TANKS}};
 	};
 
 	class kekoGrenadier: kekoSoldierAAF {
@@ -303,6 +311,7 @@ class kekoFactionAAF: kekoFactionBase {
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_HelmetCrew_I"};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {

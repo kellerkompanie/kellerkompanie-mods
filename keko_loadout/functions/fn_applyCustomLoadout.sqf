@@ -4,16 +4,6 @@ diag_log text format["[KEKO] (loadout) applyCustomLoadout: %1", _role];
 
 player enableSimulation false;
 
-KK_fnc_fileExists = {
-    private ["_ctrl", "_fileExists"];
-    disableSerialization;
-    _ctrl = findDisplay 0 ctrlCreate ["RscHTML", -1];
-    _ctrl htmlLoad _this;
-    _fileExists = ctrlHTMLLoaded _ctrl;
-    ctrlDelete _ctrl;
-    _fileExists
-};
-
 player setVariable ["ace_medical_medicClass", 0, true];
 player setVariable ["ACE_isEngineer", 0, true];
 
@@ -33,33 +23,19 @@ if( _role isEqualTo "kekoEOD" ) then {
 	player setVariable ["ACE_isEngineer", 2, true];
 };
 
-// TODO optimize load once at startup
-_sqfFile = format ["custom_loadouts\%1.sqf", _role];
-
-if(_faction isEqualTo "kekoCustom") then {
-	//if(_sqfFile call KK_fnc_fileExists) then {
-		_sqfString = preprocessFileLineNumbers _sqfFile;
-		_sqfString = [_sqfString, "this;", "player;", 100] call keko_loadout_fnc_replaceString;
-		_sqfString = [_sqfString, "this ", "player ", 100] call keko_loadout_fnc_replaceString;
-
-		_code = compile _sqfString; 
-		call _code;
-	//} else {
-	//	systemChat format["ERROR: loadout file %1 does not exist!", _sqfFile];
-	//};
-} else {
-	if(_faction isEqualTo "kekoCustomACE") then {
-		//if(_sqfFile call KK_fnc_fileExists) then {
-			_sqfString = preprocessFileLineNumbers _sqfFile;
-			_code = compile _sqfString; 
-			_data = call _code;
-
-			player setUnitLoadout _data;
-		//} else {
-		//	systemChat format["ERROR: loadout file %1 does not exist!", _sqfFile];
-		//};
-	};
+if (isNil "keko_var_customLoadouts") then {
+	keko_var_customLoadouts = [];
 };
+
+{
+	_type = _x select 0;
+	_name = _x select 1;	
+	_loadout = _x select 2;
+	
+	if(_type isEqualTo _role) then {
+		player setUnitLoadout _loadout;
+	};
+} forEach keko_var_customLoadouts;
 
 call keko_loadout_fnc_addPresetItems;
 

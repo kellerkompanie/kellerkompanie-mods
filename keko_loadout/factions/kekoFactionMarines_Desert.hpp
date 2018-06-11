@@ -324,6 +324,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_HelmetCrew_B"};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {

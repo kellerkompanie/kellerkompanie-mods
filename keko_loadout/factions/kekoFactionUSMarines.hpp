@@ -310,6 +310,7 @@ class kekoFactionUSMarines: kekoFactionBase {
 			{10, "ACE_quikclot"}};
 		helmet[] = {"H_HelmetCrew_I"};
 		optics[] = {"Binocular"};
+		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {
