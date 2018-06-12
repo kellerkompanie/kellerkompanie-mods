@@ -14,11 +14,20 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_UI_F"};
+		requiredAddons[] = {
+			"A3_UI_F",
+			"cba_main",
+			"cba_keybinding",
+			"cba_settings"
+		};
 	};
 };
 class RscStandardDisplay;
 class RscDisplayModLauncher: RscStandardDisplay
 {
 	onMouseMoving = "if (isNull ((findDisplay 157) displayCtrl 212513)) then {call (uiNamespace getVariable 'babe_core_fnc_modmenu_init'); uiNamespace setVariable ['babe_core_modmenu_init', true]};";
+};
+
+class Extended_PreInit_EventHandlers {
+	babe_core_xeh = call compile preprocessFileLineNumbers "\babe_core\XEH_preInit.sqf";
 };

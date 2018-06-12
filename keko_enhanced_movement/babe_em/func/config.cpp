@@ -25,18 +25,18 @@ class CfgFunctions
 		tag = "BABE_EM";
 		class core
 		{
-			file = "\babe\babe_em\func\core";
+			file = "\babe_em\func\core";
 			class init{};
 		};
 		class EH
 		{
-			file = "\babe\babe_em\func\EH";
+			file = "\babe_em\func\EH";
 			class handledamage_nofd{};
 			class animdone{};
 		};
 		class move
 		{
-			file = "\babe\babe_em\func\mov";
+			file = "\babe_em\func\mov";
 			class em{};
 			class exec_em{};
 			class finish_em{};

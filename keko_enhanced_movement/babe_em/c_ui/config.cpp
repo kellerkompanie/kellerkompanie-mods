@@ -24,7 +24,7 @@ class BABE_EM_FAT
 	w = "0.15 * safezoneW";
 	h = "0.0025 * safezoneH";
 	idd = -1;
-	text = "babe\babe_em\textures\ui\fatigue_ca.paa";
+	text = "babe_em\textures\ui\fatigue_ca.paa";
 	sizeEx = 5;
 	type = 0;
 	idc = 14;

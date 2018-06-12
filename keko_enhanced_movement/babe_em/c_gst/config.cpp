@@ -43,7 +43,7 @@ class CfgGesturesMale
 	{
 		class babe_em_jump_rfl: Default
 		{
-			file = "\babe\babe_em\animations\jump_rfl.rtm";
+			file = "\babe_em\animations\jump_rfl.rtm";
 			looped = 0;
 			speed = 1.7;
 			mask = "babe_em_mask_fullbody";
@@ -52,7 +52,7 @@ class CfgGesturesMale
 		};
 		class babe_em_jump_pst: Default
 		{
-			file = "\babe\babe_em\animations\jump_pst.rtm";
+			file = "\babe_em\animations\jump_pst.rtm";
 			looped = 0;
 			speed = 1.7;
 			mask = "babe_em_mask_fullbody";
@@ -61,7 +61,7 @@ class CfgGesturesMale
 		};
 		class babe_em_jump_ua: Default
 		{
-			file = "\babe\babe_em\animations\jump_ua.rtm";
+			file = "\babe_em\animations\jump_ua.rtm";
 			looped = 0;
 			speed = 1.7;
 			mask = "babe_em_mask_fullbody";

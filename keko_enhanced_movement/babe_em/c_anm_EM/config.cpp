@@ -145,137 +145,137 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class Babe_climbOverHer_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOverHer_rfl.rtm";
+			file = "\babe_em\animations\climbOverHer_rfl.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOverHer_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOverHer_pst.rtm";
+			file = "\babe_em\animations\climbOverHer_pst.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOverHer_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOverHer_ua.rtm";
+			file = "\babe_em\animations\climbOverHer_ua.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOverH_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOverH_rfl.rtm";
+			file = "\babe_em\animations\climbOverH_rfl.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOverH_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOverH_pst.rtm";
+			file = "\babe_em\animations\climbOverH_pst.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOverH_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOverH_ua.rtm";
+			file = "\babe_em\animations\climbOverH_ua.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOver_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOver_rfl.rtm";
+			file = "\babe_em\animations\climbOver_rfl.rtm";
 			speed = 0.85;
 		};
 		class Babe_climbOver_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOver_pst.rtm";
+			file = "\babe_em\animations\climbOver_pst.rtm";
 			speed = 0.85;
 		};
 		class Babe_climbOver_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOver_ua.rtm";
+			file = "\babe_em\animations\climbOver_ua.rtm";
 			speed = 0.85;
 		};
 		class Babe_climbOnHer_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOnHer_rfl.rtm";
+			file = "\babe_em\animations\climbOnHer_rfl.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOnHer_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOnHer_pst.rtm";
+			file = "\babe_em\animations\climbOnHer_pst.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOnHer_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOnHer_ua.rtm";
+			file = "\babe_em\animations\climbOnHer_ua.rtm";
 			speed = 0.35;
 		};
 		class Babe_climbOnH_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOnH_rfl.rtm";
+			file = "\babe_em\animations\climbOnH_rfl.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOnH_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOnH_pst.rtm";
+			file = "\babe_em\animations\climbOnH_pst.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOnH_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOnH_ua.rtm";
+			file = "\babe_em\animations\climbOnH_ua.rtm";
 			speed = 0.55;
 		};
 		class Babe_climbOn_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\climbOn_pst.rtm";
+			file = "\babe_em\animations\climbOn_pst.rtm";
 			speed = 1.05;
 		};
 		class Babe_climbOn_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\climbOn_ua.rtm";
+			file = "\babe_em\animations\climbOn_ua.rtm";
 			speed = 1.05;
 		};
 		class Babe_climbOn_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\climbOn_rfl.rtm";
+			file = "\babe_em\animations\climbOn_rfl.rtm";
 			speed = 1.05;
 		};
 		class Babe_stepOn_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\stepOn_ua.rtm";
+			file = "\babe_em\animations\stepOn_ua.rtm";
 			speed = 1.3;
 		};
 		class Babe_stepOn_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\stepOn_pst.rtm";
+			file = "\babe_em\animations\stepOn_pst.rtm";
 			speed = 1.3;
 		};
 		class Babe_stepOn_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\stepOn_rfl.rtm";
+			file = "\babe_em\animations\stepOn_rfl.rtm";
 			speed = 1.3;
 		};
 		class Babe_vaultover_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\vaultover_ua.rtm";
+			file = "\babe_em\animations\vaultover_ua.rtm";
 			speed = 1.2;
 		};
 		class Babe_vaultover_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\vaultover_pst.rtm";
+			file = "\babe_em\animations\vaultover_pst.rtm";
 			speed = 1.2;
 		};
 		class Babe_vaultover_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\vaultover_rfl.rtm";
+			file = "\babe_em\animations\vaultover_rfl.rtm";
 			speed = 1.2;
 		};
 		class Babe_drop_ua: Babe_anim_base_ua
 		{
-			file = "\babe\babe_em\animations\drop_ua.rtm";
+			file = "\babe_em\animations\drop_ua.rtm";
 			speed = 0.85;
 		};
 		class Babe_drop_pst: Babe_anim_base_pst
 		{
-			file = "\babe\babe_em\animations\drop_pst.rtm";
+			file = "\babe_em\animations\drop_pst.rtm";
 			speed = 0.85;
 		};
 		class Babe_drop_rfl: Babe_anim_base_rfl
 		{
-			file = "\babe\babe_em\animations\drop_rfl.rtm";
+			file = "\babe_em\animations\drop_rfl.rtm";
 			speed = 0.85;
 		};
 	};

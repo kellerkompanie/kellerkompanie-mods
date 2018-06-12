@@ -663,7 +663,7 @@ class CfgVehicles
 	class TargetGrenade: TargetTraining{};
 	class babe_helper: TargetGrenade
 	{
-		model = "\babe\babe_em\models\helper.p3d";
+		model = "\babe_em\models\helper.p3d";
 		armor = 20000;
 		scope = 2;
 		displayName = "helper";

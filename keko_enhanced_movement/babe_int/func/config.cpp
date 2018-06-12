@@ -25,12 +25,12 @@ class CfgFunctions
 		tag = "BABE_INT";
 		class core
 		{
-			file = "\babe\babe_int\func\core";
+			file = "\babe_int\func\core";
 			class init{};
 		};
 		class int
 		{
-			file = "\babe\babe_int\func\int";
+			file = "\babe_int\func\int";
 			class replace_this{};
 			class use{};
 			class self{};
@@ -42,7 +42,7 @@ class CfgFunctions
 		};
 		class ui
 		{
-			file = "\babe\babe_int\func\ui";
+			file = "\babe_int\func\ui";
 			class menuAd{};
 		};
 	};
