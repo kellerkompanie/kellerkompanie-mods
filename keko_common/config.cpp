@@ -183,6 +183,10 @@ class CfgVehicles
                         name = "[Main] Russia EMR (Desert)";
                         value ="kekoFactionRussiaEMRDesert";
                     };
+                    class russia_emr_desert {
+                        name = "[Main] Russia Speznas";
+                        value ="kekoFactionRussiaSpeznas";
+                    };
                     class chinese_pla_woodland {
                         name = "[Main] Chinese PLA (Woodland)";
                         value ="kekoFactionChinesePLAWoodland";
