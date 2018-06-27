@@ -12,7 +12,7 @@
 		{4, "ACE_morphine"},\
 		{4, "ACE_epinephrine"},\
 		{8, "ACE_tourniquet"},\
-		{6, "adv_aceSplint_splint"},\
+		{10, "adv_aceSplint_splint"},\
 		{2, "ACE_CableTie"}}
 
 #define KEKO_LOGISTICS_INF_CRATE_DEFAULT {\
@@ -42,6 +42,12 @@
 		{1, "B_FieldPack_cbr"},\
 		{2, RAT_LAUNCHER}}
 
+#define KEKO_LOGISTICS_AT_GUSTAV_CRATE_DEFAULT {\
+		{2, "launch_MRAWS_green_rail_F"},\
+		{1, "launch_MRAWS_green_F"},\
+		{6, "MRAWS_HEAT_F"},\
+		{1, "B_FieldPack_cbr"}}
+
 #define KEKO_LOGISTICS_AA_CRATE_DEFAULT {\
 		{1, AA_LAUNCHER},\
 		{3, AA_MAG},\
@@ -59,8 +65,7 @@
 		{2, "ACE_surgicalKit"},\
 		{10, "ACE_tourniquet"},\
 		{10, "SmokeShell"},\
-		{10, "adv_aceSplint_splint"},\
-		{1, "adv_aceCPR_AED"}}
+		{30, "adv_aceSplint_splint"}}
 
 #define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
 		{2, "SmokeShell"},\
@@ -81,7 +86,8 @@
 		{8, "ACE_HandFlare_Red"},\
 		{1, "adv_aceCPR_AED"},\
 		{1, "ACE_personalAidKit"},\
-		{4, "ACE_bodyBag"}}
+		{4, "ACE_bodyBag"},\
+		{1, "adv_aceCPR_AED"}}
 
 #define KEKO_LOGISTICS_EOD_CRATE_DEFAULT {\
 		{4, "ACE_Cellphone"},\
@@ -135,6 +141,11 @@ class kekoATCrate: kekoCrateBase {
 	cfgName[] = {"Box_NATO_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_East_WpsLaunch_F"};
 	inventory[] = KEKO_LOGISTICS_AT_CRATE_DEFAULT;
 };
+class kekoATGustavCrate: kekoCrateBase {
+	name = "Anti-Tank Kiste (Gustav)";
+	cfgName[] = {"Box_NATO_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_East_WpsLaunch_F"};
+	inventory[] = KEKO_LOGISTICS_AT_GUSTAV_CRATE_DEFAULT;
+};
 class kekoAACrate: kekoATCrate {
 	name = "Anti-Air Kiste";
 	inventory[] = KEKO_LOGISTICS_AA_CRATE_DEFAULT;
@@ -172,6 +183,6 @@ class kekoSpareTrack: kekoCrateBase {
 };
 
 #define KEKO_LOGISTICS_DEFAULT_CRATE_LIST {\
-	{"Munition", {kekoFireTeamCrate,kekoInfantryCrate,kekoGrenadesCrate,kekoMGCrate,kekoATCrate,kekoAACrate}},\
+	{"Munition", {kekoFireTeamCrate,kekoInfantryCrate,kekoGrenadesCrate,kekoMGCrate,kekoATCrate,kekoATGustavCrate,kekoAACrate}},\
 	{"Support", {kekoMedicCrate,kekoSupportCrate,kekoEODCrate,kekoRationsCrate,kekoEmptyCrate}},\
 	{"Andere", {kekoSpareWheel,kekoSpareTrack}}}

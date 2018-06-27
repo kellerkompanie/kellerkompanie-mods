@@ -111,10 +111,9 @@ class kekoFactionChinesePLAWoodland: kekoFactionBase {
 		name = "Doctor";
 		medicClass = 2;
 		rank = "SERGEANT";
-		vest[] = {"TRYK_B_Kitbag_blk"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"TRYK_B_Kitbag_blk"};
 		backpackInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -122,10 +121,9 @@ class kekoFactionChinesePLAWoodland: kekoFactionBase {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
-		vest[] = {"TRYK_B_Kitbag_blk"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"TRYK_B_Kitbag_blk"};
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
 
