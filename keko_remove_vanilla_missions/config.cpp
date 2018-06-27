@@ -1,6 +1,6 @@
 class CfgPatches {
     class keko_remove_vanilla_missions {
-        units[] = {"keko_common"};
+        units[] = {};
         requiredVersion = 1.80;
         requiredAddons[] = {"ace_common"};
         author = "Schwaggot";
