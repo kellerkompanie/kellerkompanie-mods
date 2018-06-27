@@ -172,27 +172,28 @@ class kekoFactionCTRG: kekoFactionBase {
 	class kekoLMG: kekoSoldierCTRG {
 		name = "Light Machine Gunner";
 		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
+			{4, PRIMARY_MAG_LMG_TRACER},
+			{2, PRIMARY_MAG_LMG},
 			{1, SMOKE_WHITE},
 			{2, GRENADE}};
 		primary[] = {
 			keko_W_A3_HK416_DRUM, 
 			keko_W_A3_HK416_DRUM_SAND};
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {{2, PRIMARY_MAG_LMG_TRACER}};
 	};
 
 	class kekoLMGAsst: kekoSoldierCTRG {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {{2, PRIMARY_MAG_LMG_TRACER},{2, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};	
 	};
 
 	class kekoMMG: kekoSoldierCTRG {
 		name = "Medium Machine Gunner";
 		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
+			{2, PRIMARY_MAG_MMG_TRACER},
 			{2, GRENADE}};
 		primary[] = {
 			keko_W_A3_MINIMI};
@@ -203,7 +204,7 @@ class kekoFactionCTRG: kekoFactionBase {
 		name = "Medium Machine Gunner Asst.";
 
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
+		backpackInventory[] = {{3, PRIMARY_MAG_MMG_TRACER}};
 		optics[] = {"Binocular"};	
 	};
 

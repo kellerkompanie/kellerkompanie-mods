@@ -90,7 +90,7 @@ class kekoWeaponsCTRG {
 	class keko_W_A3_MINIMI: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_03_F";
-		magazines[] = {PRIMARY_MAG_MMG,PRIMARY_MAG_MMG_TRACER};
+		magazines[] = {PRIMARY_MAG_MMG_TRACER};
 	};
 
 	// Sniper
