@@ -5,6 +5,8 @@ class CfgPatches
         units[] = {};
         requiredVersion = 1.80;
         requiredAddons[] = {
+            "cba_main",
+            "cba_settings",
             "cba_xeh",
             "extDB3"};
         author = "Schwaggot";
@@ -27,4 +29,8 @@ class CfgFunctions
             class loadPlayerLoadout{};
         };
     };
+};
+
+class Extended_PreInit_EventHandlers {
+    keko_persistency_xeh = call compile preprocessFileLineNumbers "\keko_persistency\XEH_preInit.sqf";
 };
