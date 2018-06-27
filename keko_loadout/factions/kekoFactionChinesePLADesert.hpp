@@ -110,7 +110,6 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 		name = "Doctor";
 		medicClass = 2;
 		rank = "SERGEANT";
-		vest[] = {"TRYK_B_Kitbag_blk"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
 		backpack[] = {"BWA3_Kitbag_Tropen_Medic"};
@@ -121,7 +120,6 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
-		vest[] = {"TRYK_B_Kitbag_blk"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
 		backpack[] = {"BWA3_Kitbag_Tropen_Medic"};
