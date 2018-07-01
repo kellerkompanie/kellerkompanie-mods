@@ -3,7 +3,9 @@ disableSerialization;
 _action = ctrlText ((uiNamespace getVariable "keko_intel_mainDialog") displayCtrl 1401);
 _title = ctrlText ((uiNamespace getVariable "keko_intel_mainDialog") displayCtrl 1400);
 _content = ctrlText ((uiNamespace getVariable "keko_intel_mainDialog") displayCtrl 1402);
-_remove = ctrlChecked ((uiNamespace getVariable "keko_intel_mainDialog") displayCtrl 2800);
+_remove = cbChecked ((uiNamespace getVariable "keko_intel_mainDialog") displayCtrl 2800);
+
+systemChat format ["_remove %1", _remove];
 
 profileNamespace setVariable ["keko_intel_lastAction", _action];
 profileNamespace setVariable ["keko_intel_lastTitel", _title];

@@ -16,6 +16,6 @@ _lastRemove = profileNamespace getVariable ["keko_intel_lastRemove", false];
 _ctrlAction ctrlSetText _lastAction;
 _ctrlTitle ctrlSetText _lastTitle;
 _ctrlContent ctrlSetText _lastContent;
-_ctrlRemove ctrlSetChecked _lastRemove;
+_ctrlRemove cbSetChecked _lastRemove;
 
 true;
