@@ -1,3 +1,5 @@
+diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", keko_unknown_weapon_whitelist];
+
 _weaponCfg = getText (configFile >> "kekoFaction" >> keko_var_faction >> "weaponCfg");
 _weapon_config = configFile >> "kekoFaction" >> keko_var_faction >> _weaponCfg;
 
@@ -21,10 +23,19 @@ if !(isNil "keko_var_customLoadouts") then {
 _crates = [];
 
 if(keko_var_customLogistics == 2) then {
-	_crates = [["Kisten", keko_var_logistics_customCrates]];
+	if !(isNil "keko_var_logistics_customCrates") then {
+		_crates = [["Kisten", keko_var_logistics_customCrates]];
+		diag_log format ["[KEKO] (unkown_weapon) _crates loaded from customCrates: %1", _crates];
+	};
 }
 else {
 	_crates = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "crates");
+	diag_log format ["[KEKO] (unkown_weapon) _crates loaded from config: %1", _crates];
+};
+
+if(isNil "_crates") then {
+	diag_log "[KEKO] (unkown_weapon) _crates isNil";
+	_crates = [];
 };
 
 {
@@ -72,3 +83,5 @@ else {
 		
 	} forEach _section_crates;
 } forEach _crates;
+
+diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist after: %1", keko_unknown_weapon_whitelist];

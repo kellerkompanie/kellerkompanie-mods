@@ -30,7 +30,7 @@ Parameters:
     ["Wait after mission begin","How long should the server wait in seconds to populate known weapons? Do not worry about JIPs, their weapons will be added as well once they connect!"],
     CBA_SETTINGS_CAT,
     [1, 600, 60, 0],
-      true
+    true
 ] call CBA_Settings_fnc_init;
 
 [
@@ -47,7 +47,7 @@ Parameters:
     "SLIDER",
     ["Add jam chance","This will add the selected percentage to the weapon"],
     CBA_SETTINGS_CAT,
-    [0, 100, 10, 2],
+    [0, 100, 1.5, 2],
     true
 ] call CBA_Settings_fnc_init;
 
@@ -65,7 +65,7 @@ Parameters:
     "SLIDER",
     ["Chance to destroy weapon on jam","Chance that the unkown weapon will be destroyed and inflict small damage to player when it jams"],
     CBA_SETTINGS_CAT,
-    [0, 100, 4, 2],
+    [0, 100, 2, 2],
     true
 ] call CBA_Settings_fnc_init;
 

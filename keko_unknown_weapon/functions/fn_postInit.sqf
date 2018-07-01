@@ -1,20 +1,24 @@
-if ! (keko_settings_unknown_weapon_enable) exitWith {};
+if ! (keko_settings_unknown_weapon_enable) exitWith {diag_log text "[KEKO] (unknown_weapon) keko_settings_unknown_weapon_enable = false"};
 
-if ! (isClass(configFile >> "CfgPatches" >> "ace_overheating")) exitWith {hintC "ACE Overheating not found! Punishing unknown weapons cannot be used!"};
-if ! (ace_overheating_enabled) exitWith {hintC "ACE Overheating not enabled! Punishing unknown weapons cannot be used!"};
+if ! (isClass(configFile >> "CfgPatches" >> "ace_overheating")) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not found! Punishing unknown weapons cannot be used!"};
+if ! (ace_overheating_enabled) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not enabled! Punishing unknown weapons cannot be used!"};
 
 if(missionNamespace getVariable ["keko_unknown_weapon_init",false]) exitWith {};
 missionNamespace setVariable ["keko_unknown_weapon_init",true];
 
-if ! (ace_overheating_overheatingDispersion) then {systemChat "===Punishable weapons: Warning, ACE dispersion not enabled!==="};
+if ! (ace_overheating_overheatingDispersion) then {diag_log text "[KEKO] (unknown_weapon) Warning, ACE dispersion not enabled!"};
 
 if(isNil "keko_unknown_weapon_local_weapons") then {
 	keko_unknown_weapon_local_weapons = [];
 };
 
+diag_log text "[KEKO] (unknown_weapon) running postInit";
+
 if(keko_settings_unknown_weapon_propagation) then {
+	diag_log text "[KEKO] (unknown_weapon) propagation enabled";
 	[] spawn {
 		if(isServer) then {
+			diag_log text "[KEKO] (unknown_weapon) running in propagation mode on server";
 			waitUntil { sleep 0.1; cba_missiontime > keko_settings_unknown_weapon_cooldown };
 			
 			keko_unknown_weapon_whitelist = [];
@@ -43,10 +47,13 @@ if(keko_settings_unknown_weapon_propagation) then {
 				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
 			};
 			
+			diag_log text format ["[KEKO] (unknown_weapon) propagation enabled, whitelist now: %1", keko_unknown_weapon_whitelist];
 			publicVariable "keko_unknown_weapon_whitelist";
 		} else {
 			waitUntil { sleep 1; time > 30 };
 			waitUntil { sleep 1; !isNil "keko_unknown_weapon_whitelist" };
+
+			diag_log text "[KEKO] (unknown_weapon) running in propagation mode on client";
 
 			private _weaponUpper = toUpper(primaryWeapon player);
 			if(!(_weaponUpper in keko_unknown_weapon_whitelist || {_weaponUpper in keko_unknown_weapon_local_weapons}) && (primaryWeapon player) != "") then {
@@ -57,6 +64,8 @@ if(keko_settings_unknown_weapon_propagation) then {
 		};
 	};
 } else {
+	diag_log text "[KEKO] (unknown_weapon) running without propagation";
+	
 	keko_unknown_weapon_whitelist = [];
 
 	[] spawn {
@@ -73,12 +82,15 @@ if(keko_settings_unknown_weapon_propagation) then {
 				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
 			};
 
+			diag_log text format ["[KEKO] (unknown_weapon) propagation disabled, whitelist now: %1", keko_unknown_weapon_whitelist];
 			publicVariable "keko_unknown_weapon_whitelist";
 		};	
 	};
 };
 
 if(hasInterface) then {
+	diag_log text "[KEKO] (unknown_weapon) running client side functions";
+
 	if(keko_settings_unknown_weapon_briefing) then {
 		player createDiaryRecord ["Diary", ["Aufnahme von Fremdwaffen", "<font size='25'>Warnung: Bestrafung von unbekannten Waffen ist aktiviert!</font><br/><font size='15'>Aufnahme von unbekannten Waffen, z.B. Feindwaffen, hat eine katastrophale Waffeneffizienz zur Folge!<br/>Symptome können verschlechterte Genauigkeit, höhere Jamming Wahrscheinlichkeit und Nachladefehler sein, da das Handling sowie der Zustand der Waffen beeinträchtigt sind.<br/><br/>In extremen Fällen kann Munition eine Fehlzündung haben, was eine Zerstörung der Waffe und Verletzungen zur Folge haben kann!"]];
 	};
