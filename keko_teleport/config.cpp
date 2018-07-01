@@ -54,6 +54,30 @@ class CfgVehicles
                 description = "The name of the Fast-Travel destination";
                 typeName = "STRING";
             };
+            class allowBLUFOR {
+                displayName = "BLUFOR";
+                description = "Allow BLUFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowINDFOR {
+                displayName = "INDFOR";
+                description = "Allow INDFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowOPFOR {
+                displayName = "OPFOR";
+                description = "Allow OPFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowCIV {
+                displayName = "Civilian";
+                description = "Allow Civilian to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
         };
     };
     class keko_ModuleAddTeleportMenu3den: Module_F
@@ -68,6 +92,33 @@ class CfgVehicles
         isTriggerActivated = 1;
         isDisposable       = 0;
         icon = "\keko_teleport\icons\teleport_menu_icon.paa";
+
+        class Arguments: ArgumentsBaseUnits {
+            class allowBLUFOR {
+                displayName = "BLUFOR";
+                description = "Allow BLUFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowINDFOR {
+                displayName = "INDFOR";
+                description = "Allow INDFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowOPFOR {
+                displayName = "OPFOR";
+                description = "Allow OPFOR to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class allowCIV {
+                displayName = "Civilian";
+                description = "Allow Civilian to travel here.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+        };
     };
     class keko_ModuleAddTeleportDestination: Module_F
     {
@@ -110,10 +161,14 @@ class CfgFunctions
             class dialogTeleport {};
             class dialogJump {};
             class dialogTeleportDestination {};
+            class dialogTeleportMenu {};
             class moduleAddTeleportDestination3den {};
             class moduleAddTeleportMenu3den {}; 
             class moduleAddTeleportDestination {};
-            class moduleAddTeleportMenu {};            
+            class moduleAddTeleportMenu {};  
+            class createMarker{}; 
+            class dialogMenuInit{};
+            class dialogDestinationInit{};
         };
     };
 };
@@ -121,3 +176,4 @@ class CfgFunctions
 #include "\keko_teleport\functions\dialog_baseClasses.hpp"
 #include "\keko_teleport\functions\dialog_teleport.hpp"
 #include "\keko_teleport\functions\dialog_teleportDestination.hpp"
+#include "\keko_teleport\functions\dialog_teleportMenu.hpp"
