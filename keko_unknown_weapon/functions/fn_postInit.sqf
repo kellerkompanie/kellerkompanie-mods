@@ -38,6 +38,11 @@ if(keko_settings_unknown_weapon_propagation) then {
 					false
 				} count keko_settings_unknown_weapon_add_weapons;
 			};
+
+			if(keko_settings_unknown_weapon_keko_loadout) then {
+				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
+			};
+			
 			publicVariable "keko_unknown_weapon_whitelist";
 		} else {
 			waitUntil { sleep 1; time > 30 };
@@ -53,11 +58,29 @@ if(keko_settings_unknown_weapon_propagation) then {
 	};
 } else {
 	keko_unknown_weapon_whitelist = [];
+
+	[] spawn {
+		if(isServer) then {
+			if(typeName keko_settings_unknown_weapon_add_weapons == typeName "") then {
+				keko_settings_unknown_weapon_add_weapons = keko_settings_unknown_weapon_add_weapons splitString ",";
+				{
+					keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
+					false
+				} count keko_settings_unknown_weapon_add_weapons;
+			};
+
+			if(keko_settings_unknown_weapon_keko_loadout) then {
+				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
+			};
+
+			publicVariable "keko_unknown_weapon_whitelist";
+		};	
+	};
 };
 
 if(hasInterface) then {
 	if(keko_settings_unknown_weapon_briefing) then {
-		player createDiaryRecord ["Regeln", ["Aufnahme von Fremdwaffen", "<font size='25'>Warnung: Bestrafung von unbekannten Waffen ist aktiviert!</font><br/><font size='15'>Aufnahme von unbekannten Waffen, z.B. Feindwaffen, hat eine katastrophale Waffeneffizienz zur Folge!<br/>Symptome können verschlechterte Genauigkeit, höhere Jamming Wahrscheinlichkeit und Nachladefehler sein, da das Handling sowie der Zustand der Waffen beeinträchtigt sind.<br/><br/>In extremen Fällen kann Munition eine Fehlzündung haben, was eine Zerstörung der Waffe und Verletzungen zur Folge haben kann!"]];
+		player createDiaryRecord ["Diary", ["Aufnahme von Fremdwaffen", "<font size='25'>Warnung: Bestrafung von unbekannten Waffen ist aktiviert!</font><br/><font size='15'>Aufnahme von unbekannten Waffen, z.B. Feindwaffen, hat eine katastrophale Waffeneffizienz zur Folge!<br/>Symptome können verschlechterte Genauigkeit, höhere Jamming Wahrscheinlichkeit und Nachladefehler sein, da das Handling sowie der Zustand der Waffen beeinträchtigt sind.<br/><br/>In extremen Fällen kann Munition eine Fehlzündung haben, was eine Zerstörung der Waffe und Verletzungen zur Folge haben kann!"]];
 	};
 
   	player addEventHandler["Fired",{

@@ -6,7 +6,8 @@ class CfgPatches
         requiredVersion = 1.80;
         requiredAddons[] = {
             "keko_common",
-            "keko_loadout"};
+            "keko_loadout",
+            "keko_logistics"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;       
@@ -66,7 +67,8 @@ class CfgFunctions
             file = "keko_unknown_weapon\functions";
             class moduleWhitelistWeapons3den {};
             class moduleWhitelistWeapons {};  
-            class postInit{postInit = 1;};    
+            class postInit{postInit = 1;};   
+            class addKekoFactionWeapons{}; 
         };
     };
 };
