@@ -47,21 +47,21 @@ class CfgVehicles
         class AttributesBase
 		{
 			class Default;
-			class Edit; 
+			class Edit;
 			class Combo;
-			class Checkbox; 
-			class CheckboxNumber; 
+			class Checkbox;
+			class CheckboxNumber;
 			class ModuleDescription;
-			class Units; 
+			class Units;
 
 			expression = "_this setVariable ['%s',_value];";
 		};
     };
     class keko_ModuleInitMission3den: Module_F
     {
-        scope              = 2; 
+        scope              = 2;
         scopeCurator       = 1;
-        displayName        = "Initialize Mission"; 
+        displayName        = "Initialize Mission";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleInitMission3den";
         functionPriority   = 1;
@@ -80,8 +80,8 @@ class CfgVehicles
 			class MissionTitle: Edit {
 				property = "keko_common_ModuleInit_MissionTitle";
 				displayName = "Title";
-				typeName = "STRING"; 
-				defaultValue = "'Kellerkompanie Mission'";				
+				typeName = "STRING";
+				defaultValue = "'Kellerkompanie Mission'";
 			};
 			class MissionAuthor: Edit {
 				property = "keko_common_ModuleInit_MissionAuthor";
@@ -105,7 +105,7 @@ class CfgVehicles
             	property = "keko_common_ModuleInit_LoadoutOnSpawn";
                 displayName = "Give Player Loadout on Spawn";
                 typeName = "BOOL";
-                defaultValue = true;                
+                defaultValue = true;
             };
             class Faction: Combo {
             	property = "keko_common_ModuleInit_Faction";
@@ -142,6 +142,10 @@ class CfgVehicles
                     class usmarines  {
                         name = "[Minimal] U.S. Marine Corps (Woodland)";
                         value = "kekoFactionUSMarines";
+                    };
+                    class usblackopstropic  {
+                        name = "[Minimal] U.S. BlackOps (Tropic)";
+                        value = "kekoFactionUSBlackOpsTropic";
                     };
                     class nato_tropic {
                         name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
@@ -182,10 +186,6 @@ class CfgVehicles
                     class russia_emr_desert {
                         name = "[Main] Russia EMR (Desert)";
                         value ="kekoFactionRussiaEMRDesert";
-                    };
-                    class russia_emr_desert {
-                        name = "[Main] Russia Speznas";
-                        value ="kekoFactionRussiaSpeznas";
                     };
                     class chinese_pla_woodland {
                         name = "[Main] Chinese PLA (Woodland)";
@@ -233,31 +233,31 @@ class CfgVehicles
             	property = "keko_common_ModuleInit_CustomLogistics";
                 displayName = "Logistics";
                 typeName = "NUMBER";
-                defaultValue = 1;   
+                defaultValue = 1;
 	            class Values
 	            {
 	                class disabled  {name = "DISABLED"; value = 0;};
 	                class standard 	{name = "DEFAULT";	value = 1;};
 	                class custom 	{name = "CUSTOM";	value = 2;};
-	            };          
+	            };
             };
             class GiveMap: Checkbox {
             	property = "keko_common_ModuleInit_GiveMap";
                 displayName = "Give map";
                 typeName = "BOOL";
-                defaultValue = true;                
+                defaultValue = true;
             };
             class GiveCompass: Checkbox {
             	property = "keko_common_ModuleInit_GiveCompass";
                 displayName = "Give compass";
                 typeName = "BOOL";
-                defaultValue = true;                
-            };            
+                defaultValue = true;
+            };
             class GiveGps: Combo {
             	property = "keko_common_ModuleInit_GiveGps";
                 displayName = "Give GPS";
                 typeName = "NUMBER";
-                defaultValue = 4; 
+                defaultValue = 4;
                 class Values {
                     class none {name = "None"; value = 0;};
                     class gps {name = "GPS"; value = 1;};
@@ -289,7 +289,7 @@ class CfgVehicles
                     class usDual {name = "(main) Ami Dual"; value = 10;};
                     class bafMono {name = "(main) BAF Mono"; value = 11;};
                     class sovMono {name = "(main) Sovjet Mono"; value = 12;};
-                };    
+                };
             };
             class GiveRadio: Combo {
             	property = "keko_common_ModuleInit_GiveRadio";
@@ -314,16 +314,16 @@ class CfgVehicles
                     class blu {name = "BLUFOR"; value = 1;};
                     class none {name = "keiner"; value = 0;};
                 };
-            }; 
+            };
 
 			class ModuleDescription: ModuleDescription{};
 		};
     };
     class keko_ModuleRespawnPosition3den: Module_F
     {
-        scope              = 2; 
+        scope              = 2;
         scopeCurator       = 1;
-        displayName        = "Respawn Position"; 
+        displayName        = "Respawn Position";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleRespawnPosition3den";
         functionPriority   = 1;
@@ -353,9 +353,9 @@ class CfgVehicles
     };
     class keko_ModuleRespawnPosition: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Respawn Position"; 
+        displayName        = "Respawn Position";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleRespawnPosition";
         functionPriority   = 1;
@@ -367,9 +367,9 @@ class CfgVehicles
     };
     class keko_ModuleFullHeal: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Full Heal"; 
+        displayName        = "Full Heal";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleFullHeal";
         functionPriority   = 1;
@@ -381,9 +381,9 @@ class CfgVehicles
     };
     class keko_ModuleAssignMedic: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Assign Medic"; 
+        displayName        = "Assign Medic";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleAssignMedic";
         functionPriority   = 1;
@@ -393,13 +393,13 @@ class CfgVehicles
         icon = "\keko_common\icons\icon_medic.paa";
         picture = "\keko_common\icons\icon_medic.paa";
         portrait = "\keko_common\icons\icon_medic.paa";
-        curatorCanAttach   = 1; 
+        curatorCanAttach   = 1;
     };
     class keko_ModuleAssignDoctor: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Assign Doctor"; 
+        displayName        = "Assign Doctor";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleAssignDoctor";
         functionPriority   = 1;
@@ -407,13 +407,13 @@ class CfgVehicles
         isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_doctor.paa";
-        curatorCanAttach   = 1; 
+        curatorCanAttach   = 1;
     };
     class keko_ModuleAssignEngineer: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Assign Engineer"; 
+        displayName        = "Assign Engineer";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleAssignEngineer";
         functionPriority   = 1;
@@ -421,13 +421,13 @@ class CfgVehicles
         isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_engineer.paa";
-        curatorCanAttach   = 1; 
+        curatorCanAttach   = 1;
     };
     class keko_ModuleAssignRepairSpecialist: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Assign Repair Specialist"; 
+        displayName        = "Assign Repair Specialist";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleAssignRepairSpecialist";
         functionPriority   = 1;
@@ -435,27 +435,27 @@ class CfgVehicles
         isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_repair_specialist.paa";
-        curatorCanAttach   = 1; 
+        curatorCanAttach   = 1;
     };
     class keko_ModuleRemoveAllActions: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "Remove all menus"; 
+        displayName        = "Remove all menus";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleRemoveAllActions";
         functionPriority   = 1;
         isGlobal           = 1;
         isTriggerActivated = 0;
         isDisposable       = 0;
-        curatorCanAttach   = 1; 
+        curatorCanAttach   = 1;
         icon = "\keko_common\icons\icon_delete.paa";
     };
     class keko_ModuleLockDoors: Module_F
     {
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
-        displayName        = "(Un-)Lock Doors "; 
+        displayName        = "(Un-)Lock Doors ";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleLockDoors";
         functionPriority   = 1;
@@ -463,22 +463,22 @@ class CfgVehicles
         isTriggerActivated = 0;
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_lock.paa";
-    };    
+    };
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
-    class keko_common 
+    class keko_common
     {
         tag = "keko_common";
-        class common 
+        class common
         {
             file = "keko_common\functions";
             class moduleInitMission3den {};
             class moduleFullHeal {};
             class moduleAssignMedic {};
             class moduleAssignDoctor {};
-            class moduleAssignEngineer {};    
+            class moduleAssignEngineer {};
             class moduleAssignRepairSpecialist{};
             class moduleRemoveAllActions{};
             class moduleRespawnPosition{};
@@ -497,7 +497,7 @@ class CfgFunctions
             class lockDoorsDialogCallback{};
             class createZeus{};
             class exportCrate {};
-            class tfarSettings {};            
+            class tfarSettings {};
         };
         class init
         {
@@ -540,23 +540,22 @@ class Display3DEN {
                 action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
                 Text = "Add role description suffix";
                 conditionShow = "selectedObject";
-            };  	
+            };
 			class keko_removeRoleDescriptionPrefix {
 				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
 				Text = "Replace in role description";
 				conditionShow = "selectedObject";
-			};	
+			};
 			class keko_resetRoleDescription	{
 				action = "call keko_common_fnc_resetRoleDescription";
 				Text = "Reset role description";
 				conditionShow = "selectedObject";
-			};	
+			};
 			class keko_exportCrate	{
 				action = "call keko_common_fnc_exportCrate";
 				Text = "Export custom crate";
 				conditionShow = "selectedObject";
-			};						
+			};
 		};
 	};
 };
-
