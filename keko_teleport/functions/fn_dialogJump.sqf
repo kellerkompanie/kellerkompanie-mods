@@ -1,8 +1,8 @@
 params ["_teleporterName"];
 
-_chuteheight = 300;
+_chuteheight = 200;
 
-_markerName = "teleportMarker_" + _teleporterName;
+_markerName = "keko_teleport_" + _teleporterName;
 _markerPos = getMarkerPos _markerName;
 _destination = [_markerPos select 0, _markerPos select 1, _chuteheight];
 
@@ -13,8 +13,8 @@ sleep 1;
 
 player setPos _destination;
 
-paraLandSafe = 
-{	
+paraLandSafe =
+{
 	private ["_unit"];
 	_unit = _this select 0;
 	_chuteheight = _this select 1;

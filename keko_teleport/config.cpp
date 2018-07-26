@@ -15,7 +15,7 @@ class CfgPatches
             "ace_modules"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
-		version = 1.0;       
+		version = 1.0;
     };
 };
 
@@ -37,9 +37,9 @@ class CfgVehicles
     };
     class keko_ModuleAddTeleportDestination3den: Module_F
     {
-        scope              = 2; 
+        scope              = 2;
         scopeCurator       = 1;
-        displayName        = "Add Fast-Travel Destination"; 
+        displayName        = "Add Fast-Travel Destination";
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportDestination3den";
         functionPriority   = 2;
@@ -82,9 +82,9 @@ class CfgVehicles
     };
     class keko_ModuleAddTeleportMenu3den: Module_F
     {
-        scope              = 2; 
+        scope              = 2;
         scopeCurator       = 1;
-        displayName        = "Add Fast-Travel Menu"; 
+        displayName        = "Add Fast-Travel Menu";
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportMenu3den";
         functionPriority   = 2;
@@ -123,50 +123,53 @@ class CfgVehicles
     class keko_ModuleAddTeleportDestination: Module_F
     {
         displayName        = "Add Fast-Travel Destination";
-        icon               = "\keko_teleport\icons\teleport_dest_icon.paa"; 
+        icon               = "\keko_teleport\icons\teleport_dest_icon.paa";
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportDestination";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 0;        
-        scope              = 1; 
+        isTriggerActivated = 0;
+        scope              = 1;
         scopeCurator       = 2;
     };
     class keko_ModuleAddTeleportMenu: Module_F
     {
-        displayName        = "Add Fast-Travel Menu"; 
+        displayName        = "Add Fast-Travel Menu";
         icon               = "\keko_teleport\icons\teleport_menu_icon.paa";
         category           = "keko_category_teleport";
         function           = "keko_teleport_fnc_moduleAddTeleportMenu";
         functionPriority   = 1;
         isGlobal           = 1;
-        isTriggerActivated = 0;        
-        scope              = 1; 
+        isTriggerActivated = 0;
+        scope              = 1;
         scopeCurator       = 2;
-        curatorCanAttach   = 1;       
+        curatorCanAttach   = 1;
     };
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
-    class keko_teleport 
+    class keko_teleport
     {
         tag = "keko_teleport";
-        class teleport 
+        class teleport
         {
             file = "keko_teleport\functions";
             class addTeleportDestination {};
             class addTeleportMenu {};
             class dialogTeleportInit {};
             class dialogTeleport {};
+            class dialogTeleportGroup {};
+            class dialogTeleportToLeader {};
             class dialogJump {};
+            class dialogJumpGroup {};
             class dialogTeleportDestination {};
             class dialogTeleportMenu {};
             class moduleAddTeleportDestination3den {};
-            class moduleAddTeleportMenu3den {}; 
+            class moduleAddTeleportMenu3den {};
             class moduleAddTeleportDestination {};
-            class moduleAddTeleportMenu {};  
-            class createMarker{}; 
+            class moduleAddTeleportMenu {};
+            class createMarker{};
             class dialogMenuInit{};
             class dialogDestinationInit{};
         };

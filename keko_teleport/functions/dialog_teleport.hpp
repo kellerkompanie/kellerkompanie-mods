@@ -6,13 +6,16 @@ class keko_teleport_mainDialog {
 
 	onLoad = "(_this) spawn keko_teleport_fnc_dialogTeleportInit;";
 
-	controls[] = { 
-		KEKO_TELEPORT_UI_BACK,	
+	controls[] = {
+		KEKO_TELEPORT_UI_BACK,
 		KEKO_TELEPORT_UI_FRAME,
 		KEKO_TELEPORT_UI_LIST,
 		KEKO_TELEPORT_UI_TEXT,
 		KEKO_TELEPORT_UI_BUTTON_JUMP,
+		KEKO_TELEPORT_UI_BUTTON_JUMP_GROUP,
 		KEKO_TELEPORT_UI_BUTTON_TELEPORT,
+		KEKO_TELEPORT_UI_BUTTON_TELEPORT_GROUP,
+		KEKO_TELEPORT_UI_BUTTON_NACHPORTEN,
 		KEKO_TELEPORT_UI_BUTTON_CANCEL
 	};
 
@@ -45,8 +48,8 @@ class keko_teleport_mainDialog {
 		y = 3 * GUI_GRID_H + GUI_GRID_Y;
 		w = 16 * GUI_GRID_W;
 		h = 21 * GUI_GRID_H;
-		
-		colorSelectBackground[] = 
+
+		colorSelectBackground[] =
 		{
 			0.03,
 			0.42,
@@ -73,26 +76,57 @@ class keko_teleport_mainDialog {
 		y = 11 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogJump;";	
+		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogJump;";
 	};
-	
+	class KEKO_TELEPORT_UI_BUTTON_JUMP_GROUP: RscButton
+	{
+		idc = 1601;
+		text = "Parajump Group";
+		x = 28.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 11 * GUI_GRID_H + GUI_GRID_Y;
+		w = 9 * GUI_GRID_W;
+		h = 1.5 * GUI_GRID_H;
+		action = "closeDialog 1; [player, lbData [1500, lbCurSel 1500]] remoteExec ['keko_teleport_fnc_dialogJumpGroup', 2, false];";
+	};
+
 	class KEKO_TELEPORT_UI_BUTTON_TELEPORT: RscButton
 	{
-		idc = 1600;
+		idc = 1602;
 		text = "Teleport";
 		x = 18 * GUI_GRID_W + GUI_GRID_X;
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogTeleport;";	
+		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogTeleport;";
+	};
+	class KEKO_TELEPORT_UI_BUTTON_TELEPORT_GROUP: RscButton
+	{
+		idc = 1603;
+		text = "Teleport Group";
+		x = 28.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+		w = 9 * GUI_GRID_W;
+		h = 1.5 * GUI_GRID_H;
+		action = "closeDialog 1; [player, lbData [1500, lbCurSel 1500]] remoteExec ['keko_teleport_fnc_dialogTeleportGroup', 2, false];";
+	};
+
+	class KEKO_TELEPORT_UI_BUTTON_NACHPORTEN: RscButton
+	{
+		idc = 1604;
+		text = "Teleport to Leader";
+		x = 28.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 6.0 * GUI_GRID_H + GUI_GRID_Y;
+		w = 9 * GUI_GRID_W;
+		h = 1.5 * GUI_GRID_H;
+		action = "closeDialog 1; [player] spawn keko_teleport_fnc_dialogTeleportToLeader;";
 	};
 
 	class KEKO_TELEPORT_UI_BUTTON_CANCEL: RscButton
 	{
-		idc = 1601;
+		idc = 1605;
 		text = "Abbrechen";
 		x = 28.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+		y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
 		action = "closeDialog 2";
