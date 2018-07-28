@@ -496,8 +496,7 @@ class CfgFunctions
             class lockDoorsDialogInit{};
             class lockDoorsDialogCallback{};
             class createZeus{};
-            class exportCrate {};
-            class tfarSettings {};
+            class exportCrate {};            
         };
         class init
         {
