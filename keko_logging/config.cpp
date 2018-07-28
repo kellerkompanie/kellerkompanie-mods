@@ -13,12 +13,12 @@ class CfgPatches
     };
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
-    class keko_logging
+    class keko
     {
         tag = "keko_logging";
-        class logging 
+        class logging
         {
             file = "keko_logging\functions";
             class preStart {preStart = 1;};
