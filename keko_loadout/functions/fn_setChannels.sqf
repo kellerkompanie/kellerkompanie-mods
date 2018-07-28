@@ -1,19 +1,4 @@
-/*
- * Original Author: Belbo [SeL] http://spezialeinheit-luchs.de/
- *
- * Sets the player's radio (with acre and tfar) to a certain channel depending on his group. Frequencies will be reset to the standard from adv_fnc_tfarSettings.
- *
- * Arguments:
- * 0: target - <OBJECT>
- *
- * Return Value:
- * tfar/acre present and set? - <BOOL>
- *
- * Example:
- * [player] call adv_fnc_setChannels;
- *
- * Public: No
- */
+// Original Author: Belbo [SeL] http://spezialeinheit-luchs.de/
 
 params [
 	["_unit", player, [objNull]]
@@ -43,46 +28,76 @@ sleep 5;
 //set frequencies depending on group for tfar
 if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitWith {
 	waitUntil { time > 1 && call TFAR_fnc_haveSWRadio };
-	call {
-		private _activeSWRadio = call TFAR_fnc_activeSwRadio;
-		private _hasLRRadio = call TFAR_fnc_haveLRRadio;
-		private _activeLRRadio = if (_hasLRRadio) then {call TFAR_fnc_activeLRRadio} else {[""]};
-		//[_unit] call keko_fnc_setFrequencies;
-		
-		if ( toUpper (groupID group _unit) in ["COMMAND"] ) exitWith {
-			[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
+	
+	_activeSWRadio = call TFAR_fnc_activeSwRadio;
+	_hasLRRadio = call TFAR_fnc_haveLRRadio;
+	_activeLRRadio = if (_hasLRRadio) then {call TFAR_fnc_activeLRRadio} else {[""]};
+	
+	if ( toUpper (groupID group _unit) in ["COMMAND"] ) exitWith {
+		[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+			[_activeLRRadio, 5] call TFAR_fnc_setAdditionalLrChannel;
 		};
-		if ( toUpper (groupID group _unit) in ["LEAD"] ) exitWith {
-			[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["ALPHA"] ) exitWith {
-			[_activeSWRadio, 1] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["BRAVO"] ) exitWith {
-			[_activeSWRadio, 2] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["CHARLIE"] ) exitWith {
-			[_activeSWRadio, 3] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["DELTA"] ) exitWith {
-			[_activeSWRadio, 4] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 1] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["ECHO"] ) exitWith {
-			[_activeSWRadio, 5] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 2] call TFAR_fnc_setLRChannel; };
-		};
-		if ( toUpper (groupID group _unit) in ["FOX"] ) exitWith {
-			[_activeSWRadio, 6] call TFAR_fnc_setSwChannel;
-			if (_hasLRRadio) then { [_activeLRRadio, 0] call TFAR_fnc_setLRChannel; };
-		};		
 	};
-	true;
+	if ( toUpper (groupID group _unit) in ["LEAD"] ) exitWith {
+		[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+			[_activeLRRadio, 5] call TFAR_fnc_setAdditionalLrChannel;
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["ALPHA"] ) exitWith {
+		[_activeSWRadio, 1] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["BRAVO"] ) exitWith {
+		[_activeSWRadio, 2] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["CHARLIE"] ) exitWith {
+		[_activeSWRadio, 3] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["DELTA"] ) exitWith {
+		[_activeSWRadio, 4] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["ECHO"] ) exitWith {
+		[_activeSWRadio, 5] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 2] call TFAR_fnc_setLRChannel; 
+		};
+	};
+	if ( toUpper (groupID group _unit) in ["FOX"] ) exitWith {
+		[_activeSWRadio, 6] call TFAR_fnc_setSwChannel;
+		if (_hasLRRadio) then { 
+			[_activeLRRadio, 0] call TFAR_fnc_setLRChannel; 
+		};
+	};		
+
+	// TFAR_fnc_setLRChannel
+	// TFAR_fnc_setLrStereo
+	// TFAR_fnc_setSwChannel
+	// TFAR_fnc_setSwStereo
+
+	// TFAR_fnc_setSwVolume
+	// TFAR_fnc_setLrVolume
+
+	// TFAR_fnc_setAdditionalLrChannel
+	// TFAR_fnc_setAdditionalLrStereo
+	// TFAR_fnc_setAdditionalSwChannel
+	// TFAR_fnc_setAdditionalSwStereo
+	
+	true
 };
 
-false;
+false
