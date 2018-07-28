@@ -1,0 +1,1 @@
+_dialog = createDialog "snow_menu";
