@@ -25,11 +25,20 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_cooldown",
-    "SLIDER",
-    ["Wait after mission begin","How long should the server wait in seconds to populate known weapons? Do not worry about JIPs, their weapons will be added as well once they connect!"],
+    "keko_settings_unknown_weapon_keko_loadout",
+    "CHECKBOX",
+    ["Add Keko faction weapons","Set if the server should sync weapons from the selected Kellerkompanie Loadout Faction."],
     CBA_SETTINGS_CAT,
-    [1, 600, 60, 0],
+    true,
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    "keko_settings_unknown_weapon_add_weapons",
+    "EDITBOX",
+    ["Add to whitelist","Use this to add primary weapons players will not have on mission start. Write in classnames with commas separating them, NO WHITESPACES!"],
+    CBA_SETTINGS_CAT,
+    "arifle_Mk20_plain_F1,arifle_CTAR_blk_F1",
     true
 ] call CBA_Settings_fnc_init;
 
@@ -70,36 +79,9 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_add_weapons",
-    "EDITBOX",
-    ["Add to whitelist","Use this to add primary weapons players will not have on mission start. Write in classnames with commas separating them, NO WHITESPACES!"],
-    CBA_SETTINGS_CAT,
-    "arifle_Mk20_plain_F1,arifle_CTAR_blk_F1",
-    true
-] call CBA_Settings_fnc_init;
-
-[
     "keko_settings_unknown_weapon_briefing",
     "CHECKBOX",
     ["Add briefing entry","Add a diary entry that this script is active"],
-    CBA_SETTINGS_CAT,
-    true,
-    true
-] call CBA_Settings_fnc_init;
-
-[
-    "keko_settings_unknown_weapon_propagation",
-    "CHECKBOX",
-    ["Enable propagation after spawn","Set if the server should sync trained weapons or not."],
-    CBA_SETTINGS_CAT,
-    false,
-    true
-] call CBA_Settings_fnc_init;
-
-[
-    "keko_settings_unknown_weapon_keko_loadout",
-    "CHECKBOX",
-    ["Add Keko faction weapons","Set if the server should sync weapons from the selected Kellerkompanie Loadout Faction."],
     CBA_SETTINGS_CAT,
     true,
     true

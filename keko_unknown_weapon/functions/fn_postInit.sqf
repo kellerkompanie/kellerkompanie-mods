@@ -14,79 +14,28 @@ if(isNil "keko_unknown_weapon_local_weapons") then {
 
 diag_log text "[KEKO] (unknown_weapon) running postInit";
 
-if(keko_settings_unknown_weapon_propagation) then {
-	diag_log text "[KEKO] (unknown_weapon) propagation enabled";
-	[] spawn {
-		if(isServer) then {
-			diag_log text "[KEKO] (unknown_weapon) running in propagation mode on server";
-			waitUntil { sleep 0.1; cba_missiontime > keko_settings_unknown_weapon_cooldown };
-			
-			keko_unknown_weapon_whitelist = [];
-			
-			"KEKO_UNKNOWN_WEAPON_ADD_WEAPON" addPublicVariableEventHandler {
-				params ["_varname","_weapon"];
-				keko_unknown_weapon_whitelist pushBackUnique toUpper(_weapon);
-				[_weapon,{ace_overheating_cacheWeaponData setVariable [_this,nil]}] remoteExec ["call"];
-				publicVariable "keko_unknown_weapon_whitelist";
-			};
-			
-			{
-				keko_unknown_weapon_whitelist pushBackUnique toUpper(primaryWeapon _x);
-				false
-			} count ([] call CBA_fnc_players);
-			
-			if(typeName keko_settings_unknown_weapon_add_weapons == typeName "") then {
-				keko_settings_unknown_weapon_add_weapons = keko_settings_unknown_weapon_add_weapons splitString ",";
-				{
-					keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
-					false
-				} count keko_settings_unknown_weapon_add_weapons;
-			};
-
-			if(keko_settings_unknown_weapon_keko_loadout) then {
-				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
-			};
-			
-			diag_log text format ["[KEKO] (unknown_weapon) propagation enabled, whitelist now: %1", keko_unknown_weapon_whitelist];
-			publicVariable "keko_unknown_weapon_whitelist";
-		} else {
-			waitUntil { sleep 1; time > 30 };
-			waitUntil { sleep 1; !isNil "keko_unknown_weapon_whitelist" };
-
-			diag_log text "[KEKO] (unknown_weapon) running in propagation mode on client";
-
-			private _weaponUpper = toUpper(primaryWeapon player);
-			if(!(_weaponUpper in keko_unknown_weapon_whitelist || {_weaponUpper in keko_unknown_weapon_local_weapons}) && (primaryWeapon player) != "") then {
-				// add weapon to whitelist
-				KEKO_UNKNOWN_WEAPON_ADD_WEAPON = primaryWeapon player;
-				publicVariableServer "KEKO_UNKNOWN_WEAPON_ADD_WEAPON";
-			};
-		};
-	};
-} else {
-	diag_log text "[KEKO] (unknown_weapon) running without propagation";
-	
+if(isServer) then {
 	keko_unknown_weapon_whitelist = [];
 
-	[] spawn {
-		if(isServer) then {
-			if(typeName keko_settings_unknown_weapon_add_weapons == typeName "") then {
-				keko_settings_unknown_weapon_add_weapons = keko_settings_unknown_weapon_add_weapons splitString ",";
-				{
-					keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
-					false
-				} count keko_settings_unknown_weapon_add_weapons;
-			};
-
-			if(keko_settings_unknown_weapon_keko_loadout) then {
-				[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
-			};
-
-			diag_log text format ["[KEKO] (unknown_weapon) propagation disabled, whitelist now: %1", keko_unknown_weapon_whitelist];
-			publicVariable "keko_unknown_weapon_whitelist";
-		};	
+	if(keko_settings_unknown_weapon_keko_loadout) then {
+		[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
 	};
+
+	if(typeName keko_settings_unknown_weapon_add_weapons == typeName "") then {
+		keko_settings_unknown_weapon_add_weapons = keko_settings_unknown_weapon_add_weapons splitString ",";
+		{
+			keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
+			false
+		} count keko_settings_unknown_weapon_add_weapons;
+	};
+
+	diag_log text format ["[KEKO] (unknown_weapon) propagation disabled, whitelist now: %1", keko_unknown_weapon_whitelist];
+	publicVariable "keko_unknown_weapon_whitelist";
 };
+
+waitUntil{sleep 1; !isNil "keko_unknown_weapon_whitelist"};
+
+diag_log text format["[KEKO] (unknown_weapon) whitelist after init: %1", keko_unknown_weapon_whitelist];
 
 if(hasInterface) then {
 	diag_log text "[KEKO] (unknown_weapon) running client side functions";
@@ -159,7 +108,7 @@ if(hasInterface) then {
 					private _groundHolder = createVehicle ["WeaponHolderSimulated", position ace_player, [], 0.5, "CAN_COLLIDE"];
 					private _ammo = 1;
 					// private _ammo = (ace_player ammo (primaryWeapon ace_player)) max 1;
-					
+
 					{
 						_groundHolder addMagazineAmmoCargo [_x, 1, _ammo];
 					} forEach (primaryWeaponMagazine ace_player);
