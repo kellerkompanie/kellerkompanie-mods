@@ -46,6 +46,9 @@ class CfgPatches
           "keko_redneck_indfor_mortar",
           "keko_redneck_indfor_antiair",
 
+
+
+          /* OPFOR units */
     			"keko_redneck_opfor_soldier1",
           "keko_redneck_opfor_soldier2",
           "keko_redneck_opfor_soldier3",
