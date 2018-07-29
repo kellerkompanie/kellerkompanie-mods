@@ -3,7 +3,51 @@ class CfgPatches
     class keko_faction_redneck
     {
         units[] = {
-        	/* BLUFOR units */
+          /* BLUFOR units */
+          "keko_redneck_blufor_soldier1",
+          "keko_redneck_blufor_soldier2",
+          "keko_redneck_blufor_soldier3",
+          "keko_redneck_blufor_soldier4",
+          "keko_redneck_blufor_soldier5",
+          "keko_redneck_blufor_soldier6",
+          "keko_redneck_blufor_soldier7",
+          "keko_redneck_blufor_grenadier1",
+          "keko_redneck_blufor_grenadier2",
+          "keko_redneck_blufor_rifleman_at",
+          "keko_redneck_blufor_minimi",
+          "keko_redneck_blufor_m60",
+          "keko_redneck_blufor_medic",
+          "keko_redneck_blufor_sniper",
+          "keko_redneck_blufor_sniper_sws",
+          "keko_redneck_blufor_marksman",
+          "keko_redneck_blufor_ftl",
+
+          "keko_redneck_blufor_offroad",
+          "keko_redneck_blufor_offroad_mg",
+          "keko_redneck_blufor_jeep",
+          "keko_redneck_blufor_jeep_mg",
+          "keko_redneck_blufor_truck_cargo",
+          "keko_redneck_blufor_quadbike",
+          "keko_redneck_blufor_van_cargo",
+          "keko_redneck_blufor_van_transport",
+          "keko_redneck_blufor_humvee",
+          "keko_redneck_blufor_suv",
+          "keko_redneck_blufor_kamaz",
+          "keko_redneck_blufor_yamaha",
+
+          "keko_redneck_blufor_md500",
+          "keko_redneck_blufor_orca",
+
+          "keko_redneck_blufor_cessna",
+          "keko_redneck_blufor_doppeldecker",
+
+          "keko_redneck_blufor_mg_high",
+          "keko_redneck_blufor_mg_low",
+          "keko_redneck_blufor_mortar",
+          "keko_redneck_blufor_antiair",
+
+
+        	/* INDFOR units */
     			"keko_redneck_indfor_soldier1",
           "keko_redneck_indfor_soldier2",
           "keko_redneck_indfor_soldier3",
@@ -105,7 +149,12 @@ class CfgPatches
           "A3_Soft_F",
           "A3_Soft_F_Offroad_01",
           "A3_Static_F",
-          "A3_boat_F"
+          "A3_boat_F",
+          "sab_paraglider",
+          "sab_gladiator",
+          "sab_mustang",
+          "sab_texan",
+          "sab_ultralight"
         };
     		version = "1.0";
     		versionStr = "1.0";
@@ -115,6 +164,13 @@ class CfgPatches
 };
 
 class cfgFactionClasses {
+  class keko_faction_redneck_blufor {
+		displayName = "Kellerkompanie Redneck";
+		priority = 1;
+		side = 1;
+		icon = "\A3\data_f\cfgfactionclasses_blu_ca.paa";
+		scopeCurator = 1;
+	};
 	class keko_faction_redneck_indfor {
 		displayName = "Kellerkompanie Redneck";
 		priority = 1;
@@ -132,6 +188,11 @@ class cfgFactionClasses {
 };
 
 class CfgVehicleClasses {
+  class keko_vehicleclass_redneck_blufor {
+		displayName = "Men";
+		priority = 2;
+		scopeCurator = 1;
+	};
 	class keko_vehicleclass_redneck_indfor {
 		displayName = "Men";
 		priority = 2;
@@ -146,3 +207,12 @@ class CfgVehicleClasses {
 
 #include "CfgVehicles.hpp"
 #include "CfgGroups.hpp"
+
+class CfgMarkers {
+	/*extern*/ class flag_NATO;
+	class keko_redneck_faction_flag: flag_NATO {
+		name = "Redneck";
+		icon = "\keko_faction_redneck\images\redneck_marker.paa";
+		texture = "\keko_faction_redneck\images\redneck_marker.paa";
+	};
+};
