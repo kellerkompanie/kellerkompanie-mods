@@ -46,6 +46,13 @@ class CfgPatches
           "keko_redneck_blufor_mortar",
           "keko_redneck_blufor_antiair",
 
+          "keko_redneck_blufor_paratrike",
+          "keko_redneck_blufor_paraglider",
+          "keko_redneck_blufor_gladiator",
+          "keko_redneck_blufor_mustang",
+          "keko_redneck_blufor_texan",
+          "keko_redneck_blufor_ultralight",
+
 
         	/* INDFOR units */
     			"keko_redneck_indfor_soldier1",
@@ -90,6 +97,13 @@ class CfgPatches
           "keko_redneck_indfor_mortar",
           "keko_redneck_indfor_antiair",
 
+          "keko_redneck_indfor_paratrike",
+          "keko_redneck_indfor_paraglider",
+          "keko_redneck_indfor_gladiator",
+          "keko_redneck_indfor_mustang",
+          "keko_redneck_indfor_texan",
+          "keko_redneck_indfor_ultralight",
+
 
 
           /* OPFOR units */
@@ -133,7 +147,14 @@ class CfgPatches
           "keko_redneck_opfor_mg_high",
           "keko_redneck_opfor_mg_low",
           "keko_redneck_opfor_mortar",
-          "keko_redneck_opfor_antiair"
+          "keko_redneck_opfor_antiair",
+
+          "keko_redneck_opfor_paratrike",
+          "keko_redneck_opfor_paraglider",
+          "keko_redneck_opfor_gladiator",
+          "keko_redneck_opfor_mustang",
+          "keko_redneck_opfor_texan",
+          "keko_redneck_opfor_ultralight"
 		    };
         weapons[] = {};
         requiredVersion = 1.80;
