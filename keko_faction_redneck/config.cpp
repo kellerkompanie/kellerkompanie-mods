@@ -46,7 +46,47 @@ class CfgPatches
           "keko_redneck_indfor_mortar",
           "keko_redneck_indfor_antiair",
 
-    			"keko_redneck_opfor_soldier1"
+    			"keko_redneck_opfor_soldier1",
+          "keko_redneck_opfor_soldier2",
+          "keko_redneck_opfor_soldier3",
+          "keko_redneck_opfor_soldier4",
+          "keko_redneck_opfor_soldier5",
+          "keko_redneck_opfor_soldier6",
+          "keko_redneck_opfor_soldier7",
+          "keko_redneck_opfor_grenadier1",
+          "keko_redneck_opfor_grenadier2",
+          "keko_redneck_opfor_rifleman_at",
+          "keko_redneck_opfor_minimi",
+          "keko_redneck_opfor_m60",
+          "keko_redneck_opfor_medic",
+          "keko_redneck_opfor_sniper",
+          "keko_redneck_opfor_sniper_sws",
+          "keko_redneck_opfor_marksman",
+          "keko_redneck_opfor_ftl",
+
+          "keko_redneck_opfor_offroad",
+          "keko_redneck_opfor_offroad_mg",
+          "keko_redneck_opfor_jeep",
+          "keko_redneck_opfor_jeep_mg",
+          "keko_redneck_opfor_truck_cargo",
+          "keko_redneck_opfor_quadbike",
+          "keko_redneck_opfor_van_cargo",
+          "keko_redneck_opfor_van_transport",
+          "keko_redneck_opfor_humvee",
+          "keko_redneck_opfor_suv",
+          "keko_redneck_opfor_kamaz",
+          "keko_redneck_opfor_yamaha",
+
+          "keko_redneck_opfor_md500",
+          "keko_redneck_opfor_orca",
+
+          "keko_redneck_opfor_cessna",
+          "keko_redneck_opfor_doppeldecker",
+
+          "keko_redneck_opfor_mg_high",
+          "keko_redneck_opfor_mg_low",
+          "keko_redneck_opfor_mortar",
+          "keko_redneck_opfor_antiair"
 		    };
         weapons[] = {};
         requiredVersion = 1.80;
@@ -103,14 +143,3 @@ class CfgVehicleClasses {
 
 #include "CfgVehicles.hpp"
 #include "CfgGroups.hpp"
-
-class CfgFunctions {
-	class keko_faction_redneck {
-		tag = "keko_faction_redneck";
-		class functions {
-			file = "keko_faction_redneck\functions";
-			class addRoleDescription;
-		};
-	};
-
-};
