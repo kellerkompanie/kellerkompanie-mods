@@ -8,7 +8,7 @@
 	[
 		[1,0], // values
 		["Enabled","Disabled"], // names
-		1 // default index
+		0 // default index
 	],
 	1
 ] call cba_settings_fnc_init;

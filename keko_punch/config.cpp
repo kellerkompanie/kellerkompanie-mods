@@ -7,7 +7,7 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 1.80;
 		requiredAddons[] = {
-			"ace_interaction", 
+			"ace_interaction",
 			"ace_common"};
 		author = "Schwaggot";
 		authorUrl = "http://www.kellerkompanie.com";
@@ -50,16 +50,16 @@ class CfgSounds {
 	};
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
-	class keko 
+	class keko_punch
 	{
-		tag = "keko_police";
-		class punch 
+		tag = "keko_punch";
+		class punch
 		{
 			file = "keko_punch\functions";
 			class punchHead {};
-            class punchTarget {};
+      class punchTarget {};
 		};
 	};
 }
