@@ -2,8 +2,8 @@
 	// workaround for testing locally hosted missions where player is server
 	_quickMaths = 2 + 2;
 } else {
-	if (!hasInterface || isServer) exitWith {};	
-}; 
+	if (!hasInterface || isServer) exitWith {};
+};
 
 diag_log text "[KEKO] (common) running initPlayerLocal";
 
@@ -30,19 +30,24 @@ if (keko_var_loadoutOnSpawn) then {
 		_playerObjectClass = typeOf player;
 		_loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
 		[player, keko_var_faction, _loadoutDummyClass] call keko_loadout_fnc_giveLoadout;
-	};	
+	};
 };
 
 //failsafe for missing curator interface:
 if ( player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_command" || player isKindOf "keko_indfor_command" ) then {
-	diag_log text format["[KEKO] (loadout) enabling Zeus on this player"];
-	if ( isNull (getAssignedCuratorLogic player) ) then { 
-		[str player, 3] remoteExecCall ["keko_common_fnc_createZeus",2]; 
+	diag_log text format["[KEKO] (common) enabling Zeus on player %1", name player];
+	if ( isNull (getAssignedCuratorLogic player) ) then {
+		diag_log text format["[KEKO] (common) no assigned curator module found, creating zeus for %1", name player];
+		//[name player, 3] remoteExec ["keko_common_fnc_createZeus",2];
+		[player] remoteExec ["keko_common_fnc_createZeus",2];
 	};
 	if ( isNil "keko_evh_createZeusRespawn" ) then {
+		diag_log text format["[KEKO] (common) no zeus respawn event handler assigned, adding one for %1", name player];
 		keko_evh_createZeusRespawn = player addEventhandler ["RESPAWN",{
-			if ( isNull (getAssignedCuratorLogic player) ) then { 
-				[str player, 3] remoteExecCall ["keko_common_fnc_createZeus",2]; 
+			if ( isNull (getAssignedCuratorLogic player) ) then {
+				diag_log text format["[KEKO] (common) no assigned curator module found after respawn, creating zeus for %1", name player];
+				//[name player, 3] remoteExec ["keko_common_fnc_createZeus",2];
+				[player] remoteExec ["keko_common_fnc_createZeus",2];
 			};
 		}];
 	};
