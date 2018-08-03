@@ -98,7 +98,7 @@ class CfgVehicles
 
 class CfgFunctions
 {
-	class keko
+	class keko_weather
 	{
 		tag = "keko_weather";
 		class weather
