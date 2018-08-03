@@ -78,8 +78,10 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 	#include "kekoWeaponsUSBlackOpsTropic.hpp"
 
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
+	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{4, PRIMARY_MAG_P90}}
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"}}
 	#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
+	#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{4, PRIMARY_MAG_P90}}
 	#define KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"adv_aceCPR_AED"},{20,"adv_aceSplint_splint"}}
 
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{6, PRIMARY_MAG_P90}}
@@ -510,7 +512,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		name = "Doctor (P90)";
 		medicClass = 2;
 		rank = "SERGEANT";
-		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
+		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY_P90;
 		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
 	};
@@ -530,7 +532,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		name = "Medic (P90)";
 		medicClass = 1;
 		rank = "CORPORAL";
-		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
+		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY_P90;
 		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
