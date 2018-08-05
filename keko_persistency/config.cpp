@@ -8,25 +8,32 @@ class CfgPatches
             "cba_main",
             "cba_settings",
             "cba_xeh",
-            "extDB3"};
+            "extDB3",
+            "keko_persistency_settings"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;
     };
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
     class keko_persistency
     {
         tag = "keko_persistency";
-        class persistency 
+        class persistency
         {
             file = "keko_persistency\functions";
             class preStart {preStart = 1;};
             class preInit  {preInit  = 1;};
             class savePlayerLoadout{};
             class loadPlayerLoadout{};
+            class saveCrate{};
+            class loadCrate{};
+            class getContainerContent{};
+            class setContainerContent{};
+            class saveAllCrates {};
+            class loadAllCrates {};
         };
     };
 };
