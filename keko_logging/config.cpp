@@ -15,7 +15,7 @@ class CfgPatches
 
 class CfgFunctions
 {
-    class keko
+    class keko_logging
     {
         tag = "keko_logging";
         class logging
@@ -23,6 +23,7 @@ class CfgFunctions
             file = "keko_logging\functions";
             class preStart {preStart = 1;};
             class preInit  {preInit  = 1;};
+            class endMission {};
         };
     };
 };

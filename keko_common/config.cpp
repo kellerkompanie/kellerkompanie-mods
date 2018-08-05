@@ -13,14 +13,18 @@ class CfgPatches
             "keko_ModuleInitMission",
             "keko_ModuleInitMission3den",
             "keko_ModuleRemoveAllActions",
-            "keko_ModuleLockDoors"
+            "keko_ModuleLockDoors",
+            "keko_ModuleMissionSuccess",
+            "keko_ModuleMissionFail"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
-        	"3den",
+        	  "3den",
             "keko_loadout",
             "ace_main",
-            "cba_settings" };
+            "cba_settings",
+            "A3_Modules_F",
+  			    "A3_Modules_F_Curator" };
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
 		version = 1.0;
@@ -45,18 +49,21 @@ class CfgVehicles
         class ModuleDescription;
 
         class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
+    		{
+    			class Default;
+    			class Edit;
+    			class Combo;
+    			class Checkbox;
+    			class CheckboxNumber;
+    			class ModuleDescription;
+    			class Units;
 
-			expression = "_this setVariable ['%s',_value];";
-		};
+    			expression = "_this setVariable ['%s',_value];";
+    		};
     };
+
+    class ModuleEndMission_F : Module_F {scopeCurator = 1; scope = 1;};
+
     class keko_ModuleInitMission3den: Module_F
     {
         scope              = 2;
@@ -464,6 +471,32 @@ class CfgVehicles
         isDisposable       = 0;
         icon = "\keko_common\icons\icon_lock.paa";
     };
+    class keko_ModuleMissionSuccess: Module_F
+    {
+        scope              = 1;
+        scopeCurator       = 2;
+        displayName        = "End Mission (Success)";
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleMissionEndSuccess";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 0;
+        isDisposable       = 0;
+        icon = "\keko_common\icons\icon_success.paa";
+    };
+    class keko_ModuleMissionFail: Module_F
+    {
+        scope              = 1;
+        scopeCurator       = 2;
+        displayName        = "End Mission (Fail)";
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleMissionEndFail";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 0;
+        isDisposable       = 0;
+        icon = "\keko_common\icons\icon_fail.paa";
+    };
 };
 
 class CfgFunctions
@@ -484,6 +517,8 @@ class CfgFunctions
             class moduleRespawnPosition{};
             class moduleRespawnPosition3den{};
             class moduleLockDoors{};
+            class moduleMissionEndSuccess {};
+            class moduleMissionEndFail {};
             class fullHeal{};
             class initMission{};
             class 3denAttributesChanged{};
@@ -496,7 +531,7 @@ class CfgFunctions
             class lockDoorsDialogInit{};
             class lockDoorsDialogCallback{};
             class createZeus{};
-            class exportCrate {};            
+            class exportCrate {};
         };
         class init
         {
