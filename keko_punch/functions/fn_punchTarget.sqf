@@ -7,7 +7,7 @@ if (keko_settings_punch_enabled == 0) exitWith {diag_log text "[KEKO] (punch) pu
 
 	if (_dist <= 3) then {
 		if (_target isKindOf "Man") then {
-			if (alive _target) then {
+			if (alive _target && !(_target getVariable ['ACE_isUnconscious', false])) then {
 
 				_player playActionNow "PutDown";
 
@@ -19,9 +19,11 @@ if (keko_settings_punch_enabled == 0) exitWith {diag_log text "[KEKO] (punch) pu
 
 				[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 
-				_msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
-				_msg remoteExec ["systemChat", 0, false];
-				_msg remoteExec ["diag_log", 2, false];
+				if (isPlayer _target) then {
+					_msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
+					_msg remoteExec ["systemChat", 0, false];
+					_msg remoteExec ["diag_log", 2, false];
+				};
 			};
 		};
 	};

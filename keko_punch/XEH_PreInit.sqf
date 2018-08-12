@@ -15,4 +15,4 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h";
 
-["Knock People Unconscious", "keko_punch", "Punch", {[player] call keko_punch_fnc_punchTarget}, {}, [DIK_HOME, [false,false,false]]] call cba_fnc_addKeybind;
+["Kellerkompanie", "keko_punch", "Punch", {[player] call keko_punch_fnc_punchTarget}, {}, [DIK_HOME, [false,false,false]]] call cba_fnc_addKeybind;
