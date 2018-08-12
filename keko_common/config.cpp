@@ -40,8 +40,38 @@ class CfgFactionClasses
     };
 };
 
+class CfgMarkers {
+	/*extern*/ class flag_NATO;
+	class keko_faction_flag: flag_NATO {
+		name = "Kellerkompanie";
+		icon = "\keko_common\pictures\keko_marker.paa";
+		texture = "\keko_common\pictures\keko_marker.paa";
+	};
+};
+
 class CfgVehicles
 {
+	class FlagCarrier;
+	class keko_flag: FlagCarrier {
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Flag (Kellerkompanie)";
+
+		class EventHandlers {
+			init = "(_this select 0) setFlagTexture '\keko_common\pictures\keko_flag.paa'";
+		};
+	};
+
+	class Banner_01_base_F;
+	class keko_banner: Banner_01_base_F {
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Banner (Kellerkompanie)";
+		hiddenSelectionsTextures[] = {"\keko_common\pictures\keko_flag.paa"};
+	};
+
+
+
     class Logic;
     class Module_F: Logic
     {
