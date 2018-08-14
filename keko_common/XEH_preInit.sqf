@@ -31,7 +31,7 @@ enableSaving [false, false];
       "kekoFactionUSMarines",
       "kekoFactionUSBlackOpsTropic",
       "kekoFactionNATOtropic",
-      "kekoFactionNATOtropic",
+      "kekoFactionIDAP",
       "kekoFactionBundeswehrFleck",
       "kekoFactionBundeswehrTropen",
       "kekoFactionUSArmyOCP",
