@@ -30,15 +30,10 @@ keko_Find_Surface_ASL_Under_Position(_object, (_object modelToWorldVisual _model
 keko_Find_Surface_ASL_Under_Model(_object,_modelOffset,_returnSurfaceAGL,_canFloat); \
 _returnSurfaceAGL = ASLtoAGL _returnSurfaceAGL;
 
-#define KEKO_ADVANCEDTOWING_GET_CARGO(_vehicle,_cargo) \
-if( count (ropeAttachedObjects _vehicle) == 0 ) then { \
-	_cargo = objNull; \
-} else { \
-	_cargo = ((ropeAttachedObjects _vehicle) select 0) getVariable ["keko_advancedtowing_cargo",objNull]; \
-};
-
 
 params ["_vehicle","_vehicleHitchModelPos","_cargo","_cargoHitchModelPos","_ropeLength"];
+
+diag_log text format ["[KEKO] (advancedtowing) simulateTowing _vehicle=%1 _vehicleHitchModelPos=%2 _cargo=%3 _cargoHitchModelPos=%4 _ropeLength=%5", _vehicle, _vehicleHitchModelPos, _cargo, _cargoHitchModelPos, _ropeLength];
 
 private ["_lastCargoHitchPosition","_lastCargoVectorDir","_cargoLength","_maxDistanceToCargo","_lastMovedCargoPosition","_cargoHitchPoints"];
 private ["_vehicleHitchPosition","_cargoHitchPosition","_newCargoHitchPosition","_cargoVector","_movedCargoVector","_attachedObjects","_currentCargo"];
@@ -67,7 +62,7 @@ _corner4 = _cargoCornerPoints select 3;
 
 // Try to set cargo owner if the towing client doesn't own the cargo
 if(local _vehicle && !local _cargo) then {
-	[_cargo, clientOwner] remoteExec ["setOwner", 2];
+	[_cargo, clientOwner] remoteExec ["setOwner", [0, 2] select isDedicated];
 };
 
 _vehicleHitchModelPos set [2,0];
@@ -183,7 +178,12 @@ while {!_doExit} do {
 	};
 
 	// If the vehicle isn't towing anything, stop the towing simulation
-	KEKO_ADVANCEDTOWING_GET_CARGO(_vehicle,_currentCargo);
+	if( count (ropeAttachedObjects _vehicle) == 0 ) then {
+		_currentCargo = objNull;
+	} else {
+		_currentCargo = ((ropeAttachedObjects _vehicle) select 0) getVariable ["keko_advancedtowing_cargo", objNull];
+	};
+
 	if(isNull _currentCargo) then {
 		_doExit = true;
 	};

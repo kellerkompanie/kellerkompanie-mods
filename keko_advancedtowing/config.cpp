@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class keko_advancedtowing
 	{
-		name = "Kellerkompanie Punch";
+		name = "Kellerkompanie Advanced Towing";
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.80;
@@ -22,20 +22,6 @@ class CfgPatches
 	};
 };
 
-class CfgNetworkMessages
-{
-	class AdvancedTowingRemoteExecClient
-	{
-		module = "AdvancedTowing";
-		parameters[] = {"ARRAY","STRING","OBJECT","BOOL"};
-	};
-	class AdvancedTowingRemoteExecServer
-	{
-		module = "AdvancedTowing";
-		parameters[] = {"ARRAY","STRING","BOOL"};
-	};
-};
-
 class CfgFunctions
 {
 	class keko_advancedtowing
@@ -43,28 +29,27 @@ class CfgFunctions
 		class advancedtowing
 		{
 			file = "keko_advancedtowing\functions";
-			class advancedTowingInit {postInit = 1;};
+			class canAttachTowRopes{};
+			class canDropTowRopes{};
+			class canPickupTowRopes{};
+			class canPutAwayTowRopes{};
+			class canTakeTowRopes{};
+
+			class attachTowRopes{};
+			class dropTowRopes{};
+			class pickupTowRopes{};
+			class putAwayTowRopes{};
+			class takeTowRopes{};
+
 			class getCornerPoints{};
 			class getHitchPoints{};
 			class simulateTowingSpeed{};
 			class simulateTowing{};
 			class isSupportedCargo{};
-			class attachTowRopes{};
-			class takeTowRopes{};
-			class pickupTowRopes{};
-			class dropTowRopes{};
-			class putAwayTowRopes{};
-			class findNearbyTowVehicles{};
-			class hideObjectGlobal{};
 			class isSupportedVehicle{};
-			class canAttachTowRopes{};
-			class canTakeTowRopes{};
-			class canPutAwayTowRopes{};
-			class dropTowRopesAction{};
-			class canDropTowRopes{};
-			class pickupTowRopesAction{};
-			class addPlayerTowActions{};
+			class hideObjectGlobal{};
 
+			class isAllowedToTow{};
 		};
 	};
 };
@@ -76,6 +61,7 @@ class CfgFunctions
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
+		icon = "\keko_advancedtowing\ui\rope.paa";\
 	};
 
 #define KEKO_ADVANCEDTOWING_PUTAWAY_ACTION class keko_advancedtowing_putAwayTowRopes {\
@@ -85,6 +71,7 @@ class CfgFunctions
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
+		icon = "\keko_advancedtowing\ui\rope.paa";\
 	};
 
 #define KEKO_ADVANCEDTOWING_ATTACH_ACTION class keko_advancedtowing_attachToTowRopes {\
@@ -94,42 +81,41 @@ class CfgFunctions
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
+		icon = "\keko_advancedtowing\ui\rope.paa";\
 	};
 
+#define	KEKO_ADVANCEDTOWING_PICKUP_ACTION class keko_advancedtowing_pickupTowRopes {\
+		displayName = "Pickup Tow Ropes";\
+		condition = "(keko_settings_advancedtowing_enabled == 1) && ([_player, _target] call keko_advancedtowing_fnc_canPickupTowRopes)";\
+		statement = "[_player, _target] call keko_advancedtowing_fnc_pickupTowRopes";\
+		showDisabled = 0;\
+		priority = 1;\
+		distance = 5;\
+		icon = "\keko_advancedtowing\ui\rope.paa";\
+	};
 
 class CfgVehicles {
 
-	/*extern*/ class Man;
+	class Man;
 	class CAManBase: Man {
-		class ACE_Actions {
-			class ACE_MainActions {
-				class keko_advancedtowing_dropTowRopes {
-					displayName = "Drop Tow Ropes";
-					condition = "(keko_settings_advancedtowing_enabled == 1) && (_player call keko_advancedtowing_fnc_canDropTowRopes)";
-					statement = "_player call keko_advancedtowing_fnc_dropTowRopesAction";
-					showDisabled = 0;
-					priority = 1;
-					distance = 5;
-				};
-				class keko_advancedtowing_pickupTowRopes {
-					displayName = "Pickup Tow Ropes";
-					condition = "(keko_settings_advancedtowing_enabled == 1) && (_player call keko_advancedtowing_fnc_canPickupTowRopes)";
-					statement = "_player call keko_advancedtowing_fnc_pickupTowRopesAction";
-					showDisabled = 0;
-					priority = 1;
-					distance = 5;
-				};
+		class ACE_SelfActions {
+			class keko_advancedtowing_dropTowRopes {
+				displayName = "Drop Tow Ropes";
+				condition = "(keko_settings_advancedtowing_enabled == 1) && (_player call keko_advancedtowing_fnc_canDropTowRopes)";
+				statement = "[_player, _player getVariable ['keko_advancedtowing_towRopesVehicle', objNull]] call keko_advancedtowing_fnc_dropTowRopes";
+				icon = "\keko_advancedtowing\ui\rope.paa";
 			};
 		};
 	};
 
-	/*extern*/ class LandVehicle;
+	class LandVehicle;
 	class Car: LandVehicle {
 		class ACE_Actions {
 			class ACE_MainActions {
 				KEKO_ADVANCEDTOWING_DEPLOY_ACTION
 				KEKO_ADVANCEDTOWING_PUTAWAY_ACTION
 				KEKO_ADVANCEDTOWING_ATTACH_ACTION
+				KEKO_ADVANCEDTOWING_PICKUP_ACTION
 			};
 		};
 	};
@@ -140,17 +126,19 @@ class CfgVehicles {
 				KEKO_ADVANCEDTOWING_DEPLOY_ACTION
 				KEKO_ADVANCEDTOWING_PUTAWAY_ACTION
 				KEKO_ADVANCEDTOWING_ATTACH_ACTION
+				KEKO_ADVANCEDTOWING_PICKUP_ACTION
 			};
 		};
 	};
 
-	/*extern*/ class Ship;
+	class Ship;
 	class Ship_F : Ship {
 		class ACE_Actions {
 			class ACE_MainActions {
 				KEKO_ADVANCEDTOWING_DEPLOY_ACTION
 				KEKO_ADVANCEDTOWING_PUTAWAY_ACTION
 				KEKO_ADVANCEDTOWING_ATTACH_ACTION
+				KEKO_ADVANCEDTOWING_PICKUP_ACTION
 			};
 		};
 	};

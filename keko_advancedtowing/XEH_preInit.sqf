@@ -22,9 +22,36 @@ Parameters:
 	[
 		[1,0], // values
 		["Enabled","Disabled"], // names
-		1 // default index
+		0 // default index
 	],
-	0
+	1
+] call cba_settings_fnc_init;
+
+[
+	"keko_settings_advancedtowing_maxRopeLength", // key/reference variable
+	"SLIDER", // type of setting
+	["Max Rope Length", "Set the maximum length of the towing rope"], // name and tooltip
+	"Kellerkompanie Advanced Towing", // category
+	[
+		5,  // min value
+		30, // max value
+		10, // default value
+		0   // number of trailing decimals
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	"keko_settings_advancedtowing_classRestriction", // key/reference variable
+	"LIST", // type of setting
+	["Limit to class", "Limit towing ability to specific class"], // name and tooltip
+	"Kellerkompanie Advanced Towing", // category
+	[
+		[0,1,2,3], // values
+		["All", "Engineer", "Repair Specialist", "Engineer & Repair Specialist"], // names
+		0 // default index
+	],
+	1
 ] call cba_settings_fnc_init;
 
 /*[

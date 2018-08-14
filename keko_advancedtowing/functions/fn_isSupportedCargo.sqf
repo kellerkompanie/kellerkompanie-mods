@@ -1,18 +1,8 @@
-keko_advancedtowing_TOW_RULES = [
-	["Tank","CAN_TOW","Tank"],
-	["Tank","CAN_TOW","Car"],
-	["Tank","CAN_TOW","Ship"],
-	["Tank","CAN_TOW","Air"],
-	["Car","CAN_TOW","Tank"],
-	["Car","CAN_TOW","Car"],
-	["Car","CAN_TOW","Ship"],
-	["Car","CAN_TOW","Air"],
-	["Ship","CAN_TOW","Ship"]
-];
-
 params ["_vehicle","_cargo"];
+
 private ["_canTow"];
 _canTow = false;
+
 if(not isNull _vehicle && not isNull _cargo) then {
 	{
 		if(_vehicle isKindOf (_x select 0)) then {
@@ -24,6 +14,16 @@ if(not isNull _vehicle && not isNull _cargo) then {
 				};
 			};
 		};
-	} forEach (missionNamespace getVariable ["keko_advancedtowing_TOW_RULES_OVERRIDE", keko_advancedtowing_TOW_RULES]);
+	} forEach [
+		["Tank","CAN_TOW","Tank"],
+		["Tank","CAN_TOW","Car"],
+		["Tank","CAN_TOW","Ship"],
+		["Tank","CAN_TOW","Air"],
+		["Car","CAN_TOW","Tank"],
+		["Car","CAN_TOW","Car"],
+		["Car","CAN_TOW","Ship"],
+		["Car","CAN_TOW","Air"],
+		["Ship","CAN_TOW","Ship"]
+	];
 };
 _canTow;

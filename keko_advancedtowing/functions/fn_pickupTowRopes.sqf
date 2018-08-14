@@ -1,4 +1,5 @@
-params ["_vehicle","_player"];
+params ["_player", "_vehicle"];
+
 if(local _vehicle) then {
 	private ["_attachedObj","_helper"];
 	{
@@ -14,7 +15,7 @@ if(local _vehicle) then {
 		_helper attachTo [_player, [-0.1, 0.1, 0.15], "Pelvis"];
 	} forEach (_vehicle getVariable ["keko_advancedtowing_towRopes",[]]);
 	hideObject _helper;
-	[_helper] remoteExec ["keko_advancedtowing_fnc_hideObjectGlobal", 2];
+	[_helper] remoteExec ["keko_advancedtowing_fnc_hideObjectGlobal", [0, 2] select isDedicated];
 	_player setVariable ["keko_advancedtowing_towRopesVehicle", _vehicle,true];
 	_player setVariable ["keko_advancedtowing_towRopesPickUpHelper", _helper,true];
 } else {

@@ -1,6 +1,8 @@
 params ["_player", "_vehicle"];
+
 if(local _vehicle) then {
   private ["_existingTowRopes","_hitchPoint","_rope"];
+  
   _existingTowRopes = _vehicle getVariable ["keko_advancedtowing_towRopes",[]];
   if(count _existingTowRopes > 0) then {
     _this call keko_advancedtowing_fnc_pickupTowRopes;

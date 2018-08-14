@@ -1,4 +1,5 @@
-params ["_vehicle","_player"];
+params ["_player", "_vehicle"];
+
 if(local _vehicle) then {
 	private ["_helper"];
 	_helper = (_player getVariable ["keko_advancedtowing_towRopesPickUpHelper", objNull]);
@@ -9,8 +10,8 @@ if(local _vehicle) then {
 		detach _helper;
 		deleteVehicle _helper;
 	};
-	_player setVariable ["keko_advancedtowing_towRopesVehicle", nil,true];
-	_player setVariable ["keko_advancedtowing_towRopesPickUpHelper", nil,true];
+	_player setVariable ["keko_advancedtowing_towRopesVehicle", nil, true];
+	_player setVariable ["keko_advancedtowing_towRopesPickUpHelper", nil, true];
 } else {
 	_this remoteExecCall ["keko_advancedtowing_fnc_dropTowRopes", _vehicle];
 };

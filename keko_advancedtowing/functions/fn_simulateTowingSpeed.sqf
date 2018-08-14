@@ -1,18 +1,10 @@
-#define KEKO_ADVANCEDTOWING_GET_CARGO(_vehicle,_cargo) \
-if( count (ropeAttachedObjects _vehicle) == 0 ) then { \
-	_cargo = objNull; \
-} else { \
-	_cargo = ((ropeAttachedObjects _vehicle) select 0) getVariable ["keko_advancedtowing_cargo",objNull]; \
-};
-
-
 params ["_vehicle"];
 
 private ["_runSimulation","_currentCargo","_maxVehicleSpeed","_maxTowedVehicles","_vehicleMass"];
 
 _maxVehicleSpeed = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "maxSpeed");
 _vehicleMass = 1000 max (getMass _vehicle);
-_maxTowedCargo = missionNamespace getVariable ["keko_advancedtowing_maxTowedCargo",2];
+_maxTowedCargo = missionNamespace getVariable ["keko_advancedtowing_maxTowedCargo", 2];
 _runSimulation = true;
 
 private ["_currentVehicle","_totalCargoMass","_totalCargoCount","_findNextCargo","_towRopes","_ropeLength"];
@@ -22,14 +14,19 @@ while {_runSimulation} do {
 
 	// Calculate total mass and count of cargo being towed (only takes into account
 	// cargo that's actively being towed (e.g. there's no slack in the rope)
-
 	_currentVehicle = _vehicle;
 	_totalCargoMass = 0;
 	_totalCargoCount = 0;
 	_findNextCargo = true;
 	while {_findNextCargo} do {
 		_findNextCargo = false;
-		KEKO_ADVANCEDTOWING_GET_CARGO(_currentVehicle,_currentCargo);
+
+		if( count (ropeAttachedObjects _currentVehicle) == 0 ) then {
+			_currentCargo = objNull;
+		} else {
+			_currentCargo = ((ropeAttachedObjects _currentVehicle) select 0) getVariable ["keko_advancedtowing_cargo",objNull];
+		};
+
 		if(!isNull _currentCargo) then {
 			_towRopes = _currentVehicle getVariable ["keko_advancedtowing_towRopes",[]];
 			if(count _towRopes > 0) then {
