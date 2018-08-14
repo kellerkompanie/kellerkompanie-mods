@@ -20,6 +20,7 @@ if(!isNull _vehicle) then {
 			} else {
 				[_player, _vehicle] call keko_advancedtowing_fnc_dropTowRopes;
 				_helper = "Land_Can_V2_F" createVehicle position _cargo;
+				// TODO add ACE interaction to rope end aka. helper object
 				_helper attachTo [_cargo, _cargoHitch];
 				_helper setVariable ["keko_Cargo",_cargo,true];
 				hideObject _helper;
