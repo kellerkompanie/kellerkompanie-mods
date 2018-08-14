@@ -25,3 +25,17 @@ Parameters:
 		0 // default index
 	]
 ] call cba_settings_fnc_init;
+
+[
+	"keko_settings_zeusfpsmonitor_updateInterval", // key/reference variable
+	"SLIDER", // type of setting
+	["Update interval", "Set the FPS update interval in seconds"], // name and tooltip
+	"Kellerkompanie Zeus FPS Monitor", // category
+	[
+		1,  // min value
+		10, // max value
+		3, // default value
+		0   // number of trailing decimals
+	],
+	1
+] call cba_settings_fnc_init;
