@@ -124,23 +124,6 @@ while {!_doExit} do {
 		_surfaceNormal2 = (_cargoCorner4ASL vectorFromTo _cargoCorner2ASL) vectorCrossProduct (_cargoCorner4ASL vectorFromTo _cargoCorner3ASL);
 		_surfaceNormal = _surfaceNormal1 vectorAdd _surfaceNormal2;
 
-		if(missionNamespace getVariable ["keko_advancedtowing_towDebugEnabled", false]) then {
-			if(isNil "keko_advancedtowing_tow_debug_arrow_1") then {
-				keko_advancedtowing_tow_debug_arrow_1 = "Sign_Arrow_F" createVehicleLocal [0,0,0];
-				keko_advancedtowing_tow_debug_arrow_2 = "Sign_Arrow_F" createVehicleLocal [0,0,0];
-				keko_advancedtowing_tow_debug_arrow_3 = "Sign_Arrow_F" createVehicleLocal [0,0,0];
-				keko_advancedtowing_tow_debug_arrow_4 = "Sign_Arrow_F" createVehicleLocal [0,0,0];
-			};
-			keko_advancedtowing_tow_debug_arrow_1 setPosASL _cargoCorner1ASL;
-			keko_advancedtowing_tow_debug_arrow_1 setVectorUp _surfaceNormal;
-			keko_advancedtowing_tow_debug_arrow_2 setPosASL _cargoCorner2ASL;
-			keko_advancedtowing_tow_debug_arrow_2 setVectorUp _surfaceNormal;
-			keko_advancedtowing_tow_debug_arrow_3 setPosASL _cargoCorner3ASL;
-			keko_advancedtowing_tow_debug_arrow_3 setVectorUp _surfaceNormal;
-			keko_advancedtowing_tow_debug_arrow_4 setPosASL _cargoCorner4ASL;
-			keko_advancedtowing_tow_debug_arrow_4 setVectorUp _surfaceNormal;
-		};
-
 		// Calculate adjusted surface height based on surface normal (prevents vehicle from clipping into ground)
 		_cargoCenterASL = AGLtoASL (_cargo modelToWorldVisual [0,0,0]);
 		_cargoCenterASL set [2,0];
