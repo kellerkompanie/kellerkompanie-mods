@@ -22,7 +22,7 @@ if(hasinterface) then {
 // Only continue with admins and curators
 _isAdmin = (call BIS_fnc_admin) == 2;
 _isCurator = player in allCurators;
-if (!_isCurator && !_isAdmin) exitWith {diag_log text "[KEKO] (zeusfpsmonitor) player is neither admin nor curator, exiting";};
+if !(_isCurator || _isAdmin) exitWith {diag_log text "[KEKO] (zeusfpsmonitor) player is neither admin nor curator, exiting";};
 
 // For curators and admins show FPS counter underneath players
 keko_showFrames = true;
