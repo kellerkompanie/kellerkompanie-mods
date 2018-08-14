@@ -1,4 +1,7 @@
+// original version by Duda https://github.com/sethduda/AdvancedTowing
+
 params ["_vehicle"];
+
 private ["_centerOfMass","_bbr","_p1","_p2","_rearCorner","_rearCorner2","_frontCorner","_frontCorner2"];
 private ["_maxWidth","_widthOffset","_maxLength","_lengthOffset","_widthFactor","_lengthFactor"];
 

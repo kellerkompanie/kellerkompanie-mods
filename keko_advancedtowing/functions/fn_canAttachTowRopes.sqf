@@ -1,3 +1,5 @@
+// original version by Duda https://github.com/sethduda/AdvancedTowing
+
 params ["_player", "_cargo"];
 
 _vehicle = _player getVariable ['keko_advancedtowing_towRopesVehicle', objNull];

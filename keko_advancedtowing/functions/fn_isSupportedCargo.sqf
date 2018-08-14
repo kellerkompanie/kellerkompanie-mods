@@ -1,3 +1,5 @@
+// original version by Duda https://github.com/sethduda/AdvancedTowing
+
 params ["_vehicle","_cargo"];
 
 private ["_canTow"];

@@ -1,6 +1,10 @@
+// original version by Duda https://github.com/sethduda/AdvancedTowing
+
 params ["_vehicle"];
+
 private ["_cornerPoints","_rearCorner","_rearCorner2","_frontCorner","_frontCorner2","_rearHitchPoint"];
 private ["_frontHitchPoint","_sideLeftPoint","_sideRightPoint"];
+
 _cornerPoints = [_vehicle] call keko_advancedtowing_fnc_getCornerPoints;
 _rearCorner = _cornerPoints select 0;
 _rearCorner2 = _cornerPoints select 1;

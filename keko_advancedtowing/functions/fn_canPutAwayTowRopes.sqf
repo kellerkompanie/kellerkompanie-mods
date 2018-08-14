@@ -1,3 +1,5 @@
+// original version by Duda https://github.com/sethduda/AdvancedTowing
+
 params ["_player", "_vehicle"];
 
 private ["_existingTowRopes"];
