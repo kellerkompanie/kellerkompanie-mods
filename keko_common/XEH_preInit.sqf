@@ -144,25 +144,25 @@ enableSaving [false, false];
 	["Give NVG", "Enable/Disable giving NVG to player"], // name and tooltip
 	"Kellerkompanie", // category
 	[
-		[0,1,2,3,4,5,6,7,8,9,10,11,12], // values
+		[0,1,2,3,4,5,6,7,8,13,14,15,16,9,10,11,12], // values
 		[
-      "None",
-      "Headlamp white",
-      "Headlamp Color",
-      "NVG 1.Gen",
-      "NVG 2.Gen",
-      "NVG 3.Gen",
-      "NVG 4.Gen",
-      "NVG Wide",
-      "Wärmesicht",
-      "GPNVG-18 (tan)",
-      "GPNVG-18 (black)",
-      "GPNVG-18 Recon (tan)",
-      "GPNVG-18 Recon (black)",
-      "[Main] Ami Mono",
-      "[Main] Ami Dual",
-      "[Main] BAF Mono",
-      "[Main] Sovjet Mono"
+      "None", //0
+      "Headlamp white", //1
+      "Headlamp Color", //2
+      "NVG 1.Gen", //3
+      "NVG 2.Gen", //4
+      "NVG 3.Gen", //5
+      "NVG 4.Gen", //6
+      "NVG Wide", //7
+      "Wärmesicht", //8
+      "GPNVG-18 (tan)", //13
+      "GPNVG-18 (black)", //14
+      "GPNVG-18 Recon (tan)", //15
+      "GPNVG-18 Recon (black)", //16
+      "[Main] Ami Mono", //9
+      "[Main] Ami Dual", //10
+      "[Main] BAF Mono", //11
+      "[Main] Sovjet Mono" //12
     ], // names
 		0 // default index
 	],
