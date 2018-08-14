@@ -56,7 +56,7 @@ while {_runSimulation} do {
 	_currentMaxSpeed = _vehicle getVariable ["keko_advancedtowing_maxTowSpeed",_maxVehicleSpeed];
 
 	if(_currentMaxSpeed != _newMaxSpeed) then {
-		_vehicle setVariable ["keko_advancedtowing_maxTowSpeed",_newMaxSpeed];
+		_vehicle setVariable ["keko_advancedtowing_maxTowSpeed",_newMaxSpeed, true];
 	};
 
 	sleep 0.1;

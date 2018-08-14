@@ -88,7 +88,7 @@ _maxDistanceToCargo = _ropeLength;
 _doExit = false;
 
 // Start vehicle speed simulation
-[_vehicle] spawn keko_advancedtowing_fnc_simulateTowingSpeed;
+_towingSpeedSimulationHandle = [_vehicle] spawn keko_advancedtowing_fnc_simulateTowingSpeed;
 
 while {!_doExit} do {
 
@@ -142,7 +142,7 @@ while {!_doExit} do {
 		_maxDistanceToCargo = _vehicleHitchPosition distance _newCargoHitchPosition;
 		_lastMovedCargoPosition = _cargoPosition;
 
-		_massAdjustedMaxSpeed = _vehicle getVariable ["keko_advancedtowing_maxTowSpeed",_maxVehicleSpeed];
+		_massAdjustedMaxSpeed = _vehicle getVariable ["keko_advancedtowing_maxTowSpeed", _maxVehicleSpeed];
 		if(speed _vehicle > (_massAdjustedMaxSpeed)+0.1) then {
 			_vehicle setVelocity ((vectorNormalized (velocity _vehicle)) vectorMultiply (_massAdjustedMaxSpeed/3.6));
 		};
@@ -176,3 +176,5 @@ while {!_doExit} do {
 	sleep 0.01;
 
 };
+
+terminate _towingSpeedSimulationHandle;
