@@ -1,27 +1,27 @@
 // Original version by DriftingNitro with help from Commy2, Dedmen, and Dscha
 
 if (keko_settings_zeusfpsmonitor_enabled == 0) exitWith{diag_log text "[KEKO] (zeusfpsmonitor) disabled";};
+if (!hasInterface) exitWith{diag_log text "[KEKO] (zeusfpsmonitor) no need to execute on server, exiting";};
 
 diag_log text "[KEKO] (zeusfpsmonitor) running postInit";
 
 //	Let each client update their FPS into a public variable based on a fixed update interval
-if(hasinterface) then {
-	[] spawn {
-		if(isNil "keko_FPSDiagActive") then
+
+_fpsUpdateHandle = [] spawn {
+	if(isNil "keko_FPSDiagActive") then
+	{
+		keko_FPSDiagActive = true;
+		while {true} do
 		{
-			keko_FPSDiagActive = true;
-			while {true} do
-			{
-				player setVariable ["keko_PlayerFPS", floor diag_fps, true];
-				sleep keko_settings_zeusfpsmonitor_updateInterval;
-			};
+			player setVariable ["keko_PlayerFPS", floor diag_fps, true];
+			sleep keko_settings_zeusfpsmonitor_updateInterval;
 		};
 	};
 };
 
 // Only continue with admins and curators
 _isAdmin = (call BIS_fnc_admin) == 2;
-_isCurator = player in allCurators;
+_isCurator = !isNull (getAssignedCuratorLogic player);
 if !(_isCurator || _isAdmin) exitWith {diag_log text "[KEKO] (zeusfpsmonitor) player is neither admin nor curator, exiting";};
 
 // For curators and admins show FPS counter underneath players
