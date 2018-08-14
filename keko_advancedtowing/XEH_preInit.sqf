@@ -54,6 +54,20 @@ Parameters:
 	1
 ] call cba_settings_fnc_init;
 
+[
+	"keko_settings_advancedtowing_maxTowedVehicles", // key/reference variable
+	"SLIDER", // type of setting
+	["Max towed vehicles", "Set the maximum number of vehicles that can be towed"], // name and tooltip
+	"Kellerkompanie Advanced Towing", // category
+	[
+		1,  // min value
+		3, // max value
+		1, // default value
+		0   // number of trailing decimals
+	],
+	1
+] call cba_settings_fnc_init;
+
 /*[
 	"keko_settings_advancedtowing_locked", // key/reference variable
 	"LIST", // type of setting

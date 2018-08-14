@@ -2,11 +2,11 @@
 
 params ["_vehicle"];
 
-private ["_runSimulation","_currentCargo","_maxVehicleSpeed","_maxTowedVehicles","_vehicleMass"];
+private ["_runSimulation","_currentCargo","_maxVehicleSpeed","_maxTowedCargo","_vehicleMass"];
 
 _maxVehicleSpeed = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "maxSpeed");
 _vehicleMass = 1000 max (getMass _vehicle);
-_maxTowedCargo = missionNamespace getVariable ["keko_advancedtowing_maxTowedCargo", 2];
+_maxTowedCargo = keko_settings_advancedtowing_maxTowedVehicles;
 _runSimulation = true;
 
 private ["_currentVehicle","_totalCargoMass","_totalCargoCount","_findNextCargo","_towRopes","_ropeLength"];
