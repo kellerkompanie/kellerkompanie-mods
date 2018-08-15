@@ -11,380 +11,456 @@ class CfgGroups
 								 class keko_faction_redneck_blufor_ft_1
 								 {
 											name = "Team (Grenadier/LMG/AT)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_grenadier1";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_ft_2
 								 {
 											name = "Team (LMG/Grenadier/Marksman)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_grenadier2";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_marksman";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_ft_3
 								 {
 											name = "Team (Rifleman/Grenadier/Medic)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_soldier7";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_medic";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_blufor_at_asst";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_ft_4
 								 {
 											name = "Team (Riflemen)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_soldier3";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_soldier4";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_soldier5";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_ft_5
 								 {
 											name = "Team (MMG/AT)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_m60";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_ft_6
 								 {
 											name = "Team (AT/Rifleman/Medic)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_soldier7";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_medic";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_squad_1
 								 {
 											name = "Group 1 (10)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "SERGEANT";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_medic";
 													 rank = "CORPORAL";
 													 position[] = {3,0,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_grenadier1";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit4
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 											class Unit5
 											{
 													 vehicle = "keko_redneck_blufor_soldier3";
 													 rank = "PRIVATE";
 													 position[] = {0,-12,0};
+		 											 side = 1;
 											};
 											class Unit6
 											{
 													 vehicle = "keko_redneck_blufor_soldier7";
 													 rank = "PRIVATE";
 													 position[] = {3,-3,0};
+		 											 side = 1;
 											};
 											class Unit7
 											{
 													 vehicle = "keko_redneck_blufor_soldier6";
 													 rank = "PRIVATE";
 													 position[] = {3,-6,0};
+		 											 side = 1;
 											};
 											class Unit8
 											{
 													 vehicle = "keko_redneck_blufor_soldier1";
 													 rank = "PRIVATE";
 													 position[] = {3,-9,0};
+		 											 side = 1;
 											};
 											class Unit9
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {3,-12,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_squad_2
 								 {
 											name = "Group 2 (10)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "SERGEANT";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_medic";
 													 rank = "CORPORAL";
 													 position[] = {3,0,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_marksman";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit4
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 											class Unit5
 											{
 													 vehicle = "keko_redneck_blufor_grenadier1";
 													 rank = "PRIVATE";
 													 position[] = {3,-3,0};
+		 											 side = 1;
 											};
 											class Unit6
 											{
 													 vehicle = "keko_redneck_blufor_soldier5";
 													 rank = "PRIVATE";
 													 position[] = {3,-6,0};
+		 											 side = 1;
 											};
 											class Unit7
 											{
 													 vehicle = "keko_redneck_blufor_soldier4";
 													 rank = "PRIVATE";
 													 position[] = {3,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_squad_3
 								 {
 											name = "Group 3 (8)";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_ftl";
 													 rank = "SERGEANT";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_medic";
 													 rank = "CORPORAL";
 													 position[] = {3,0,0};
+		 											 side = 1;
 											};
 											class Unit2
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {0,-3,0};
+		 											 side = 1;
 											};
 											class Unit3
 											{
 													 vehicle = "keko_redneck_blufor_rifleman_at";
 													 rank = "PRIVATE";
 													 position[] = {0,-6,0};
+		 											 side = 1;
 											};
 											class Unit4
 											{
 													 vehicle = "keko_redneck_blufor_grenadier1";
 													 rank = "PRIVATE";
 													 position[] = {0,-9,0};
+		 											 side = 1;
 											};
 											class Unit5
 											{
 													 vehicle = "keko_redneck_blufor_soldier3";
 													 rank = "PRIVATE";
 													 position[] = {3,-3,0};
+		 											 side = 1;
 											};
 											class Unit6
 											{
 													 vehicle = "keko_redneck_blufor_soldier1";
 													 rank = "CORPORAL";
 													 position[] = {3,-6,0};
+		 											 side = 1;
 											};
 											class Unit7
 											{
 													 vehicle = "keko_redneck_blufor_marksman";
 													 rank = "PRIVATE";
 													 position[] = {3,-9,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_sniper
 								 {
 											name = "Sniper Team";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_sniper";
 													 rank = "CORPORAL";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_sniper_sws";
 													 rank = "CORPORAL";
 													 position[] = {3,0,0};
+		 											 side = 1;
 											};
 								 };
 								 class keko_faction_redneck_blufor_sentry
 								 {
 											name = "Sentry";
+											faction = "keko_faction_redneck_blufor";
+											side = 1;
 
 											class Unit0
 											{
 													 vehicle = "keko_redneck_blufor_grenadier1";
 													 rank = "PRIVATE";
 													 position[] = {0,0,0};
+		 											 side = 1;
 											};
 											class Unit1
 											{
 													 vehicle = "keko_redneck_blufor_minimi";
 													 rank = "PRIVATE";
 													 position[] = {3,0,0};
+		 											 side = 1;
 											};
 								 };
 						};

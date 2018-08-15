@@ -322,6 +322,22 @@ class CfgVehicles {
 	    icon = "iconManLeader";
 	};
 
+	class keko_redneck_blufor_pilot : keko_redneck_blufor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
+	};
+
 
 	// vehicles
 	class C_Offroad_01_F;
@@ -677,6 +693,126 @@ class CfgVehicles {
 	};
 
 
+	class rhs_uh1h_hidf;
+	class keko_redneck_blufor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class rhs_uh1h_hidf_gunship;
+	class keko_redneck_blufor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class rhs_uh1h_hidf_unarmed;
+	class keko_redneck_blufor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	/*class rhs_uh1h_base;
+	class keko_redneck_uh1h_base: rhs_uh1h_base {
+		class Turrets;
+		class AnimationSources;
+	};
+	class keko_redneck_blufor_uh1h: keko_redneck_uh1h_base {
+		editorPreview = "rhsgref\addons\rhsgref_editorPreviews\data\rhs_uh1h_hidf.paa";
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		cargoAction[] = {"passenger_apc_narrow_generic02", "passenger_apc_narrow_generic02", "passenger_generic02_foldhands", "passenger_generic01_leanleft", "passenger_flatground_generic02", "passenger_flatground_leanleft", "Heli_Light_02_cargo", "Heli_Light_02_cargo"};
+		transportSoldier = 8;
+		cargoProxyIndexes[] = {1, 2, 3, 4, 5, 6, 9, 10};
+		getInProxyOrder[] = {2, 3, 1, 4, 5, 6, 9, 10};
+
+		class TransportMagazines {
+		};
+
+		class TransportItems {
+		};
+
+		class TransportWeapons {
+		};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+
+
+		class AnimationSources: AnimationSources {
+
+			class Hide_mid_doors {
+				source = "user";
+				animPeriod = 0.000001;
+				initPhase = 0;
+			};
+
+			class Hide_guns {
+				source = "user";
+				animPeriod = 0.000001;
+				initPhase = 1;
+			};
+		};
+
+		class UserActions {
+
+			class Open_Side_Doors {
+				displayName = "Open Side Doors";
+				onlyforplayer = 1;
+				position = "aimpoint";
+				radius = 2;
+				priority = 1;
+				condition = "this doorPhase 'close_cargo_doors' > 0 and (alive this) and player in this;";
+				statement = "this animateDoor ['close_cargo_doors',0]";
+				showWindow = 0;
+			};
+
+			class Close_Side_Doors: Open_Side_Doors {
+				displayName = "Close Side Doors";
+				condition = "this doorPhase 'close_cargo_doors' == 0 and (alive this) and player in this;";
+				statement = "this animateDoor ['close_cargo_doors',1]";
+			};
+		};
+
+		class Attributes {
+
+			class close_cargo_doors {
+				displayName = "Close Cargo Doors";
+				property = "close_cargo_doors";
+				control = "CheckboxNumber";
+				defaultValue = "0";
+				expression = "_this animateDoor ['%s',_value,true]";
+			};
+		};
+	};*/
 
 
 
@@ -951,6 +1087,21 @@ class CfgVehicles {
 		items[] = {"FirstAidKit"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
+	};
+	class keko_redneck_indfor_pilot : keko_redneck_indfor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
 	};
 
 
@@ -1263,7 +1414,44 @@ class CfgVehicles {
 			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
 	};
 
+	class keko_redneck_indfor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
 
+	class keko_redneck_indfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_indfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
 
 
 
@@ -1545,6 +1733,21 @@ class CfgVehicles {
 		items[] = {"FirstAidKit"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
+	};
+	class keko_redneck_opfor_pilot : keko_redneck_opfor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
 	};
 
 
@@ -1863,6 +2066,45 @@ class CfgVehicles {
 			displayName = "Ultralight";
 			vehicleClass = "Air";
 			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+	};
+
+	class keko_redneck_opfor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 };

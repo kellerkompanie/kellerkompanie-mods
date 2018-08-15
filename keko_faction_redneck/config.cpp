@@ -21,6 +21,7 @@ class CfgPatches
           "keko_redneck_blufor_sniper_sws",
           "keko_redneck_blufor_marksman",
           "keko_redneck_blufor_ftl",
+          "keko_redneck_blufor_pilot",
 
           "keko_redneck_blufor_offroad",
           "keko_redneck_blufor_offroad_mg",
@@ -37,6 +38,9 @@ class CfgPatches
 
           "keko_redneck_blufor_md500",
           "keko_redneck_blufor_orca",
+          "keko_redneck_blufor_uh1h",
+          "keko_redneck_blufor_uh1h_gunship",
+          "keko_redneck_blufor_uh1h_unarmed",
 
           "keko_redneck_blufor_cessna",
           "keko_redneck_blufor_doppeldecker",
@@ -52,6 +56,7 @@ class CfgPatches
           "keko_redneck_blufor_mustang",
           "keko_redneck_blufor_texan",
           "keko_redneck_blufor_ultralight",
+
 
 
         	/* INDFOR units */
@@ -72,6 +77,7 @@ class CfgPatches
           "keko_redneck_indfor_sniper_sws",
           "keko_redneck_indfor_marksman",
           "keko_redneck_indfor_ftl",
+          "keko_redneck_indfor_pilot",
 
           "keko_redneck_indfor_offroad",
           "keko_redneck_indfor_offroad_mg",
@@ -88,6 +94,9 @@ class CfgPatches
 
           "keko_redneck_indfor_md500",
           "keko_redneck_indfor_orca",
+          "keko_redneck_indfor_uh1h",
+          "keko_redneck_indfor_uh1h_gunship",
+          "keko_redneck_indfor_uh1h_unarmed",
 
           "keko_redneck_indfor_cessna",
           "keko_redneck_indfor_doppeldecker",
@@ -124,6 +133,7 @@ class CfgPatches
           "keko_redneck_opfor_sniper_sws",
           "keko_redneck_opfor_marksman",
           "keko_redneck_opfor_ftl",
+          "keko_redneck_opfor_pilot",
 
           "keko_redneck_opfor_offroad",
           "keko_redneck_opfor_offroad_mg",
@@ -140,6 +150,9 @@ class CfgPatches
 
           "keko_redneck_opfor_md500",
           "keko_redneck_opfor_orca",
+          "keko_redneck_opfor_uh1h",
+          "keko_redneck_opfor_uh1h_gunship",
+          "keko_redneck_opfor_uh1h_unarmed",
 
           "keko_redneck_opfor_cessna",
           "keko_redneck_opfor_doppeldecker",
@@ -175,7 +188,9 @@ class CfgPatches
           "sab_gladiator",
           "sab_mustang",
           "sab_texan",
-          "sab_ultralight"
+          "sab_ultralight",
+          "rhsgref_air",
+          "rhsgref_c_air"
         };
     		version = "1.0";
     		versionStr = "1.0";
