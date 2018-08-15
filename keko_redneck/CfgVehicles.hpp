@@ -35,6 +35,187 @@
 
 class CfgVehicles {
 
+	class Logic;
+	class Module_F: Logic
+	{
+			class EventHandlers;
+			class ModuleDescription;
+
+			class AttributesBase
+	{
+		class Default;
+		class Edit;
+		class Combo;
+		class Checkbox;
+		class CheckboxNumber;
+		class ModuleDescription;
+		class Units;
+
+		expression = "_this setVariable ['%s',_value];";
+	};
+	};
+
+	class keko_redneck_ModuleBase3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "Base";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleBase3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_base.pac";
+
+			class Attributes: AttributesBase
+			{
+
+			};
+	};
+
+	class keko_redneck_ModuleAirport3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Airport";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleAirport3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_airport.pac";
+
+			class Attributes: AttributesBase
+	{
+					class id: Edit {
+							property = "keko_redneck_ModuleAirport3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+		};
+	};
+	class keko_redneck_ModuleDollar3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Dollar";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleDollar3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_dollar.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleDollar3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleFlag3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Flag";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleFlag3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_flag.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleFlag3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleFuel3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Fuel";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleFuel3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_fuel.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleFuel3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleRadiotower3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Radiotower";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleRadiotower3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_radiotower.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleRadiotower3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleResearch3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Research";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleResearch3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_research.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleResearch3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+
+
+
+
 	class FlagCarrier;
 	class keko_redneck_flag: FlagCarrier {
 		scope = 2;
@@ -42,7 +223,7 @@ class CfgVehicles {
 		displayName = "Flag (Redneck)";
 
 		class EventHandlers {
-			init = "(_this select 0) setFlagTexture '\keko_faction_redneck\images\redneck_flag.paa'";
+			init = "(_this select 0) setFlagTexture '\keko_redneck\images\redneck_flag.paa'";
 		};
 	};
 
@@ -51,7 +232,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Banner (Redneck)";
-		hiddenSelectionsTextures[] = {"\keko_faction_redneck\images\redneck_flag.paa"};
+		hiddenSelectionsTextures[] = {"\keko_redneck\images\redneck_flag.paa"};
 	};
 
 
@@ -735,85 +916,27 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	/*class rhs_uh1h_base;
-	class keko_redneck_uh1h_base: rhs_uh1h_base {
-		class Turrets;
-		class AnimationSources;
-	};
-	class keko_redneck_blufor_uh1h: keko_redneck_uh1h_base {
-		editorPreview = "rhsgref\addons\rhsgref_editorPreviews\data\rhs_uh1h_hidf.paa";
+	class RwG_Mozzie_Carl_Black;
+	class keko_redneck_blufor_mozzie_black: RwG_Mozzie_Carl_Black {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		displayName = "UH-1H";
+		displayName = "Mosquito Black";
 		faction = "keko_faction_redneck_blufor";
 		crew = "keko_redneck_blufor_pilot";
-		typicalCargo[] = {"keko_redneck_blufor_pilot"};
-		cargoAction[] = {"passenger_apc_narrow_generic02", "passenger_apc_narrow_generic02", "passenger_generic02_foldhands", "passenger_generic01_leanleft", "passenger_flatground_generic02", "passenger_flatground_leanleft", "Heli_Light_02_cargo", "Heli_Light_02_cargo"};
-		transportSoldier = 8;
-		cargoProxyIndexes[] = {1, 2, 3, 4, 5, 6, 9, 10};
-		getInProxyOrder[] = {2, 3, 1, 4, 5, 6, 9, 10};
+	};
 
-		class TransportMagazines {
-		};
-
-		class TransportItems {
-		};
-
-		class TransportWeapons {
-		};
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
-
-
-		class AnimationSources: AnimationSources {
-
-			class Hide_mid_doors {
-				source = "user";
-				animPeriod = 0.000001;
-				initPhase = 0;
-			};
-
-			class Hide_guns {
-				source = "user";
-				animPeriod = 0.000001;
-				initPhase = 1;
-			};
-		};
-
-		class UserActions {
-
-			class Open_Side_Doors {
-				displayName = "Open Side Doors";
-				onlyforplayer = 1;
-				position = "aimpoint";
-				radius = 2;
-				priority = 1;
-				condition = "this doorPhase 'close_cargo_doors' > 0 and (alive this) and player in this;";
-				statement = "this animateDoor ['close_cargo_doors',0]";
-				showWindow = 0;
-			};
-
-			class Close_Side_Doors: Open_Side_Doors {
-				displayName = "Close Side Doors";
-				condition = "this doorPhase 'close_cargo_doors' == 0 and (alive this) and player in this;";
-				statement = "this animateDoor ['close_cargo_doors',1]";
-			};
-		};
-
-		class Attributes {
-
-			class close_cargo_doors {
-				displayName = "Close Cargo Doors";
-				property = "close_cargo_doors";
-				control = "CheckboxNumber";
-				defaultValue = "0";
-				expression = "_this animateDoor ['%s',_value,true]";
-			};
-		};
-	};*/
-
+	class RwG_Mozzie_Carl_Red;
+	class keko_redneck_blufor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+	};
 
 
 
@@ -1453,6 +1576,25 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
+	class keko_redneck_indfor_mozzie_black: RwG_Mozzie_Carl_Black {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "Mosquito Black";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+	};
+
+	class keko_redneck_indfor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+	};
 
 
 
@@ -2105,6 +2247,26 @@ class CfgVehicles {
 		typicalCargo[] = {"keko_redneck_opfor_pilot"};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_mozzie_black: RwG_Mozzie_Carl_Black {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "Mosquito Black";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+	};
+
+	class keko_redneck_opfor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
 	};
 
 };
