@@ -21,7 +21,7 @@ _fpsUpdateHandle = [] spawn {
 
 // Only continue with admins and curators
 _isAdmin = (call BIS_fnc_admin) == 2;
-_isCurator = !isNull (getAssignedCuratorLogic player);
+_isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_command" || player isKindOf "keko_indfor_command");
 if !(_isCurator || _isAdmin) exitWith {diag_log text "[KEKO] (zeusfpsmonitor) player is neither admin nor curator, exiting";};
 
 // For curators and admins show FPS counter underneath players
