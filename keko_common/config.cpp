@@ -15,13 +15,15 @@ class CfgPatches
             "keko_ModuleRemoveAllActions",
             "keko_ModuleLockDoors",
             "keko_ModuleMissionSuccess",
-            "keko_ModuleMissionFail"
+            "keko_ModuleMissionFail",
+            "keko_ModuleACEGarrison3den"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
         	  "3den",
             "keko_loadout",
             "ace_main",
+            "ace_ai",
             "cba_settings",
             "A3_Modules_F",
   			    "A3_Modules_F_Curator" };
@@ -186,6 +188,53 @@ class CfgVehicles
 	        };
 	      };
     };
+    class keko_ModuleACEGarrison3den: Module_F
+    {
+        scope              = 2;
+        scopeCurator       = 1;
+        displayName        = "ACE Garrison";
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleACEGarrison3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Garrison_ca.paa";
+
+        class Attributes: AttributesBase
+		    {
+          class Radius: Edit {
+        	  property = "keko_common_ModuleACEGarrison_Radius";
+        	  displayName = "Radius";
+            typeName = "STRING";
+            defaultValue = "'100'";
+          };
+          class Teleport: Checkbox {
+    				property = "keko_common_ModuleACEGarrison_Teleport";
+    				displayName = "Teleport";
+    				typeName = "BOOL";
+    				defaultValue = true;
+    			};
+          class TopDown: Checkbox {
+    				property = "keko_common_ModuleACEGarrison_TopDown";
+    				displayName = "Fill from top to bottom";
+    				typeName = "BOOL";
+    				defaultValue = false;
+    			};
+	        class Mode: Combo {
+	        	  property = "keko_common_ModuleACEGarrison_Mode";
+	            displayName = "Mode";
+	            typeName = "NUMBER";
+	            defaultValue = 1;
+	            class Values
+	            {
+	                class even    	{name = "Even filling";  	value = 0;};
+	                class building 	{name = "Building by building";	value = 1;};
+	                class random 	{name = "Random filling";	value = 2;};
+	            };
+	        };
+	      };
+    };
     class keko_ModuleRespawnPosition: Module_F
     {
         scope              = 1;
@@ -344,6 +393,7 @@ class CfgFunctions
             class moduleRemoveAllActions{};
             class moduleRespawnPosition{};
             class moduleRespawnPosition3den{};
+            class moduleACEGarrison3den{};
             class moduleLockDoors{};
             class moduleMissionEndSuccess {};
             class moduleMissionEndFail {};
