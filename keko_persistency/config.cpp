@@ -34,6 +34,11 @@ class CfgFunctions
             class setContainerContent{};
             class saveAllCrates {};
             class loadAllCrates {};
+
+            class saveVehicle{};
+            class loadVehicle{};
+            class saveAllVehicles {};
+            class loadAllVehicles {};
         };
     };
 };
