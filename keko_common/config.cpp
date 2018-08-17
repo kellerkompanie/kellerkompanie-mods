@@ -192,7 +192,7 @@ class CfgVehicles
     {
         scope              = 2;
         scopeCurator       = 1;
-        displayName        = "ACE Garrison";
+        displayName        = "ACE AI Garrison";
         category           = "keko_kellerkompanie";
         function           = "keko_common_fnc_moduleACEGarrison3den";
         functionPriority   = 1;
