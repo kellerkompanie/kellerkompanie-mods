@@ -50,6 +50,12 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
+class Extended_PostInit_EventHandlers {
+    class keko_persistency_xeh {
+        init = "call compile preprocessFileLineNumbers '\keko_persistency\XEH_postInit.sqf'";
+    };
+};
+
 class Extended_PreStart_EventHandlers {
     class keko_persistency_xeh {
         init = "call compile preprocessFileLineNumbers '\keko_persistency\XEH_preStart.sqf'";
