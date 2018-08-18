@@ -1,5 +1,6 @@
-if(keko_settings_persistency_enabled == 0) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
+if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency key not set, exiting!"; false};
+if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency for players is disabled, exiting!"; false};
 
 params ["_playerUnit"];
 
@@ -18,7 +19,7 @@ _position = getPos _playerUnit;
 
 diag_log text format["[KEKO] (persistency) savePlayerLoadout _playerUID=%1 _playerName=%2", _playerUID, _playerName];
 
-_ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8", 
+_ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
 	keko_settings_persistency_key,
 	_playerUID,
 	_playerName,

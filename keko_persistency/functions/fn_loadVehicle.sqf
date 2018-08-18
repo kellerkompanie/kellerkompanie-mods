@@ -1,5 +1,6 @@
-if(keko_settings_persistency_enabled == 0) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
+if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency key not set, exiting!"; false};
+if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency for vehicles is disabled, exiting!"; false};
 
 params [
 	["_input", objNull, [objNull, -1]]

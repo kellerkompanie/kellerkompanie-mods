@@ -1,5 +1,6 @@
-if(keko_settings_persistency_enabled == 0) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency disabled, exiting!"; false};
+if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency key not set, exiting!"; false};
+if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency for players is disabled, exiting!"; false};
 
 params ["_playerUnit"];
 
@@ -19,10 +20,10 @@ if ((_ret select 0) == 1) then {
 
 	// assume loading was sucess
 	((_ret select 1) select 0) params [
-		"_loadout", 
-		"_medicClass", 
-		"_engineerClass", 
-		"_rank", 
+		"_loadout",
+		"_medicClass",
+		"_engineerClass",
+		"_rank",
 		"_position"];
 
 	diag_log text format ["[KEKO] (persistency) loadPlayerLoadout: _loadout=%1 _medicClass=%2 _engineerClass=%3 _rank=%4 _position=%5", _loadout, _medicClass, _engineerClass, _rank, _position];
@@ -34,6 +35,5 @@ if ((_ret select 0) == 1) then {
 	true
 } else {
 	diag_log text format ["[KEKO] (persistency) loadPlayerLoadout: loading unsucessful %1", _ret];
-	false	
+	false
 };
-

@@ -1,3 +1,5 @@
+if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) saveAllVehicles: persistency for vehicles is disabled, exiting!"; false};
+
 _allPlaneObjects = allMissionObjects "Plane";
 _allHelicopterObjects = allMissionObjects "Helicopter";
 _allShipObjects = allMissionObjects "Ship";
