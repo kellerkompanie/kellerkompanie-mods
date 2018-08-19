@@ -7,14 +7,14 @@ class kekoFaction
 		roles[] = {};
 		weaponCfg = objNull;
 		crates[] = {};
-	};	
+	};
 
 	#include "kekoFactionNATO.hpp"
 	#include "kekoFactionAAF.hpp"
 	#include "kekoFactionCSAT.hpp"
 	#include "kekoFactionCTRG.hpp"
 	#include "kekoFactionFIA.hpp"
-	#include "kekoFactionGuerilla.hpp"	
+	#include "kekoFactionGuerilla.hpp"
 	#include "kekoFactionUSMarines.hpp"
 	#include "kekoFactionUSBlackOpsTropic.hpp"
 	#include "kekoFactionNATOtropic.hpp"
@@ -29,7 +29,9 @@ class kekoFaction
 	#include "kekoFactionBundeswehrFleck.hpp"
 	#include "kekoFactionBundeswehrTropen.hpp"
 	#include "kekoFactionChinesePLAWoodland.hpp"
-	#include "kekoFactionChinesePLADesert.hpp"	
+	#include "kekoFactionChinesePLADesert.hpp"
+	#include "kekoFactionBlackorder.hpp"
+	#include "kekoFactionBlackorderRedBerets.hpp"
 	#include "kekoFactionWehrmacht.hpp"
 	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"
 	#include "kekoFactionArmiaKrajowaCamo.hpp"
@@ -37,4 +39,3 @@ class kekoFaction
 	#include "kekoFactionCommandos.hpp"
 	#include "kekoFactionCBRNMarines.hpp"
 };
-
