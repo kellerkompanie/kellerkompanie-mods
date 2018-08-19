@@ -11,7 +11,17 @@ _objects = synchronizedObjects _logic;
 if ((count _objects) == 1) then {
   _object = _objects select 0;
   diag_log text format ["[KEKO] (persistency_settings) overwriting ID of object %1 to %2", _object, _overwriteID];
-  _object setVariable ["keko_persistency_overwriteID", _overwriteID, true];
+
+  if(_object isKindOf "ReammoBox_F") then {
+    _object setVariable ["keko_persistency_crateID", _overwriteID, true];
+    true
+  };
+
+  if(_object isKindOf "Plane" || _object isKindOf "Helicopter" || _object isKindOf "Ship" || _object isKindOf "Car" || _object isKindOf "Tank") then {
+    _object setVariable ["keko_persistency_vehicleID", _overwriteID, true];
+    true
+  };
+
   true
 } else {
   "ERROR: synchronize Persistency overwrite module to exactly 1 object" remoteExec ["systemChat", 0];
