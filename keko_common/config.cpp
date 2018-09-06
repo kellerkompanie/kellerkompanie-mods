@@ -15,13 +15,15 @@ class CfgPatches
             "keko_ModuleRemoveAllActions",
             "keko_ModuleLockDoors",
             "keko_ModuleMissionSuccess",
-            "keko_ModuleMissionFail"
+            "keko_ModuleMissionFail",
+            "keko_ModuleACEGarrison3den"
         };
         requiredVersion = 1.80;
         requiredAddons[] = {
         	  "3den",
             "keko_loadout",
             "ace_main",
+            "ace_ai",
             "cba_settings",
             "A3_Modules_F",
   			    "A3_Modules_F_Curator" };
@@ -112,249 +114,47 @@ class CfgVehicles
             //Init = "diag_log 'XXX EventHandler Init';";
         };
 
-		class Attributes: AttributesBase
-		{
-			class MissionTitle: Edit {
-				property = "keko_common_ModuleInit_MissionTitle";
-				displayName = "Title";
-				typeName = "STRING";
-				defaultValue = "'Kellerkompanie Mission'";
-			};
-			class MissionAuthor: Edit {
-				property = "keko_common_ModuleInit_MissionAuthor";
-                displayName = "Author";
-                typeName = "STRING";
-                defaultValue = profileName;
+    		class Attributes: AttributesBase
+    		{
+    			class MissionTitle: Edit {
+    				property = "keko_common_ModuleInit_MissionTitle";
+    				displayName = "Title";
+    				typeName = "STRING";
+    				defaultValue = "'Kellerkompanie Mission'";
+    			};
+    			class MissionAuthor: Edit {
+    				property = "keko_common_ModuleInit_MissionAuthor";
+            displayName = "Author";
+            typeName = "STRING";
+            defaultValue = profileName;
+          };
+          class MissionPicture: Edit {
+        	  property = "keko_common_ModuleInit_MissionPicture";
+        	  displayName = "Picture";
+            typeName = "STRING";
+            defaultValue = "'\keko_common\pictures\intro.paa'";
+          };
+          class MissionPictureSubtitle: Edit {
+        	  property = "keko_common_ModuleInit_MissionPictureSubtitle";
+        	  displayName = "Picture Subtitle";
+            typeName = "STRING";
+            defaultValue = "'www.kellerkompanie.com'";
+          };
+          class SideRelations: Combo {
+        	  property = "keko_common_ModuleInit_SideRelations";
+            displayName="Independent verbündet mit";
+            typeName = "NUMBER";
+            defaultValue = 0;
+            class Values {
+                class opfBlu {name = "OPFOR + BLUFOR"; value = 3;};
+                class opf {name = "OPFOR"; value = 2;};
+                class blu {name = "BLUFOR"; value = 1;};
+                class none {name = "keiner"; value = 0;};
             };
-            class MissionPicture: Edit {
-            	property = "keko_common_ModuleInit_MissionPicture";
-            	displayName = "Picture";
-                typeName = "STRING";
-                defaultValue = "'\keko_common\pictures\intro.paa'";
-            };
-            class MissionPictureSubtitle: Edit {
-            	property = "keko_common_ModuleInit_MissionPictureSubtitle";
-            	displayName = "Picture Subtitle";
-                typeName = "STRING";
-                defaultValue = "'www.kellerkompanie.com'";
-            };
-            class LoadoutOnSpawn: Checkbox {
-            	property = "keko_common_ModuleInit_LoadoutOnSpawn";
-                displayName = "Give Player Loadout on Spawn";
-                typeName = "BOOL";
-                defaultValue = true;
-            };
-            class Faction: Combo {
-            	property = "keko_common_ModuleInit_Faction";
-                displayName = "Default faction";
-                description = "Choose one";
-                typeName = "STRING";
-                defaultValue = "'kekoFactionNATO'";
-                class Values
-                {
-                    class nato  {
-                        name = "[Minimal] NATO - North Atlantic Treaty Organization";
-                        value = "kekoFactionNATO";
-                    };
-                    class aaf {
-                        name = "[Minimal] AAF - Altis Armed Forces";
-                        value = "kekoFactionAAF";
-                    };
-                    class csat {
-                        name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
-                        value = "kekoFactionCSAT";
-                    };
-                    class ctrg  {
-                        name = "[Minimal] CTRG - Combat and Technology Research Group";
-                        value = "kekoFactionCTRG";
-                    };
-                    class fia  {
-                        name = "[Minimal] FIA - Freedom and Independence Alliance";
-                        value = "kekoFactionFIA";
-                    };
-                    class guerilla  {
-                        name = "[Minimal] Guerilla";
-                        value = "kekoFactionGuerilla";
-                    };
-                    class usmarines  {
-                        name = "[Minimal] U.S. Marine Corps (Woodland)";
-                        value = "kekoFactionUSMarines";
-                    };
-                    class usblackopstropic  {
-                        name = "[Minimal] U.S. BlackOps (Tropic)";
-                        value = "kekoFactionUSBlackOpsTropic";
-                    };
-                    class nato_tropic {
-                        name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
-                        value = "kekoFactionNATOtropic";
-                    };
-                    class idap {
-                        name = "[Minimal] IDAP - International Development and Aid Project";
-                        value = "kekoFactionNATOtropic";
-                    };
-                    class bundeswehr_fleck {
-                        name = "[Main] Bundeswehr (Flecktarn)";
-                        value ="kekoFactionBundeswehrFleck";
-                    };
-                    class bundeswehr_tropen {
-                        name = "[Main] Bundeswehr (Tropentarn)";
-                        value ="kekoFactionBundeswehrTropen";
-                    };
-                    class usarmy_ocp {
-                        name = "[Main] U.S. Army (OCP)";
-                        value ="kekoFactionUSArmyOCP";
-                    };
-                    class usarmy_ucp {
-                        name = "[Main] U.S. Army (UCP)";
-                        value ="kekoFactionUSArmyUCP";
-                    };
-                    class marines_desert {
-                        name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
-                        value ="kekoFactionMarines_Desert";
-                    };
-                    class marines_woodland {
-                        name = "[Main] U.S. Marine Corps - Marine Pattern Woodland";
-                        value ="kekoFactionMarines_Woodland";
-                    };
-                    class russia_emr_summer {
-                        name = "[Main] Russia EMR (Summer)";
-                        value ="kekoFactionRussiaEMRSummer";
-                    };
-                    class russia_emr_desert {
-                        name = "[Main] Russia EMR (Desert)";
-                        value ="kekoFactionRussiaEMRDesert";
-                    };
-                    class chinese_pla_woodland {
-                        name = "[Main] Chinese PLA (Woodland)";
-                        value ="kekoFactionChinesePLAWoodland";
-                    };
-                    class chinese_pla_desert {
-                        name = "[Main] Chinese PLA (Desert)";
-                        value ="kekoFactionChinesePLADesert";
-                    };
-                    class russia_speznas {
-                        name = "[Main] Russia Speznas";
-                        value ="kekoFactionRussiaSpeznas";
-                    };
-                    class wehrmacht {
-                        name = "[Ironfront] Wehrmacht";
-                        value ="kekoFactionWehrmacht";
-                    };
-                    class armia_krajowa_partyzanci {
-                        name = "[Ironfront] Polska Armia Krajowa (Partyzanci)";
-                        value ="kekoFactionArmiaKrajowaPartyzanci";
-                    };
-                    class armia_krajowa_camo {
-                        name = "[Ironfront] Polska Armia Krajowa (Camo)";
-                        value ="kekoFactionArmiaKrajowaCamo";
-                    };
-                    class armia_krajowa_grade {
-                        name = "[Ironfront] Polska Armia Krajowa (Grade)";
-                        value ="kekoFactionArmiaKrajowaGrade";
-                    };
-                    class commandos {
-                        name = "[Ironfront] Commandos";
-                        value ="kekoFactionCommandos";
-                    };
-                    class cbrn_spacial {
-                        name = "[Special] CBRN U.S. Marines (Stepping Stone)";
-                        value ="kekoFactionCBRNMarines";
-                    };
-                    class custom {
-                        name = "Custom";
-                        value = "kekoCustom";
-                    };
-                };
-            };
-            class CustomLogistics: Combo {
-            	property = "keko_common_ModuleInit_CustomLogistics";
-                displayName = "Logistics";
-                typeName = "NUMBER";
-                defaultValue = 1;
-	            class Values
-	            {
-	                class disabled  {name = "DISABLED"; value = 0;};
-	                class standard 	{name = "DEFAULT";	value = 1;};
-	                class custom 	{name = "CUSTOM";	value = 2;};
-	            };
-            };
-            class GiveMap: Checkbox {
-            	property = "keko_common_ModuleInit_GiveMap";
-                displayName = "Give map";
-                typeName = "BOOL";
-                defaultValue = true;
-            };
-            class GiveCompass: Checkbox {
-            	property = "keko_common_ModuleInit_GiveCompass";
-                displayName = "Give compass";
-                typeName = "BOOL";
-                defaultValue = true;
-            };
-            class GiveGps: Combo {
-            	property = "keko_common_ModuleInit_GiveGps";
-                displayName = "Give GPS";
-                typeName = "NUMBER";
-                defaultValue = 4;
-                class Values {
-                    class none {name = "None"; value = 0;};
-                    class gps {name = "GPS"; value = 1;};
-                    class gpsAndMicro {name = "GPS and MicroDAGR"; value = 2;};
-                    class micro {name = "MicroDAGR"; value = 3;};
-                    class cTab {name = "cTab"; value = 4;};
-                };
-            };
-            class GiveNvg: Combo {
-            	property = "keko_common_ModuleInit_GiveNvg";
-                displayName="Give Nightvision Equipment";
-                typeName = "NUMBER";
-                defaultValue = 0;
-                class Values {
-                    class none {name = "None"; value = 0;};
-                    class headlampWhite {name = "Headlamp white"; value = 1;};
-                    class headlampColor {name = "Headlamp color"; value = 2;};
-                    class nvg1 {name = "NVG 1.Gen"; value = 3;};
-                    class nvg2 {name = "NVG 2.Gen"; value = 4;};
-                    class nvg3 {name = "NVG 3.Gen"; value = 5;};
-                    class nvg4 {name = "NVG 4.Gen"; value = 6;};
-                    class nvgW {name = "NVG Wide"; value = 7;};
-                    class tws {name = "Wärmesicht"; value = 8;};
-                    class gpnvg18tan {name = "GPNVG-18 (tan)"; value = 13;};
-                    class gpnvg18black {name = "GPNVG-18 (black)"; value = 14;};
-                    class gpnvg18rectan {name = "GPNVG-18 Recon (tan)"; value = 15;};
-                    class gpnvg18recblack {name = "GPNVG-18 Recon (black)"; value = 16;};
-                    class usMono {name = "(main) Ami Mono"; value = 9;};
-                    class usDual {name = "(main) Ami Dual"; value = 10;};
-                    class bafMono {name = "(main) BAF Mono"; value = 11;};
-                    class sovMono {name = "(main) Sovjet Mono"; value = 12;};
-                };
-            };
-            class GiveRadio: Combo {
-            	property = "keko_common_ModuleInit_GiveRadio";
-                displayName="Give radio";
-                typeName = "NUMBER";
-                defaultValue = 1;
-                class Values {
-                    class none {name = "None"; value = 0;};
-                    class personal {name = "Personal for all"; value = 1;};
-                    class mixed {name = "Only personal for lead positions, rifleman for the rest"; value = 2;};
-                    class leadOnly {name = "Just for lead positions (rank > Corporal)"; value = 3;};
-                };
-            };
-            class SideRelations: Combo {
-            	property = "keko_common_ModuleInit_SideRelations";
-                displayName="Independent verbündet mit";
-                typeName = "NUMBER";
-                defaultValue = 0;
-                class Values {
-                    class opfBlu {name = "OPFOR + BLUFOR"; value = 3;};
-                    class opf {name = "OPFOR"; value = 2;};
-                    class blu {name = "BLUFOR"; value = 1;};
-                    class none {name = "keiner"; value = 0;};
-                };
-            };
+        };
 
-			class ModuleDescription: ModuleDescription{};
-		};
+    		class ModuleDescription: ModuleDescription{};
+    		};
     };
     class keko_ModuleRespawnPosition3den: Module_F
     {
@@ -370,7 +170,7 @@ class CfgVehicles
         icon = "\keko_common\icons\icon_destination.paa";
 
         class Attributes: AttributesBase
-		{
+		    {
 	        class RespawnSide: Combo {
 	        	property = "keko_common_ModuleRespawn_Side";
 	            displayName = "Respawn Side";
@@ -386,7 +186,54 @@ class CfgVehicles
 	                class civilian	{name = "CIVILIAN";	value = 4;};
 	            };
 	        };
-	    };
+	      };
+    };
+    class keko_ModuleACEGarrison3den: Module_F
+    {
+        scope              = 2;
+        scopeCurator       = 1;
+        displayName        = "ACE AI Garrison";
+        category           = "keko_kellerkompanie";
+        function           = "keko_common_fnc_moduleACEGarrison3den";
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Garrison_ca.paa";
+
+        class Attributes: AttributesBase
+		    {
+          class Radius: Edit {
+        	  property = "keko_common_ModuleACEGarrison_Radius";
+        	  displayName = "Radius";
+            typeName = "STRING";
+            defaultValue = "'100'";
+          };
+          class Teleport: Checkbox {
+    				property = "keko_common_ModuleACEGarrison_Teleport";
+    				displayName = "Teleport";
+    				typeName = "BOOL";
+    				defaultValue = true;
+    			};
+          class TopDown: Checkbox {
+    				property = "keko_common_ModuleACEGarrison_TopDown";
+    				displayName = "Fill from top to bottom";
+    				typeName = "BOOL";
+    				defaultValue = false;
+    			};
+	        class Mode: Combo {
+	        	  property = "keko_common_ModuleACEGarrison_Mode";
+	            displayName = "Mode";
+	            typeName = "NUMBER";
+	            defaultValue = 1;
+	            class Values
+	            {
+	                class even    	{name = "Even filling";  	value = 0;};
+	                class building 	{name = "Building by building";	value = 1;};
+	                class random 	{name = "Random filling";	value = 2;};
+	            };
+	        };
+	      };
     };
     class keko_ModuleRespawnPosition: Module_F
     {
@@ -546,11 +393,11 @@ class CfgFunctions
             class moduleRemoveAllActions{};
             class moduleRespawnPosition{};
             class moduleRespawnPosition3den{};
+            class moduleACEGarrison3den{};
             class moduleLockDoors{};
             class moduleMissionEndSuccess {};
             class moduleMissionEndFail {};
             class fullHeal{};
-            class initMission{};
             class 3denAttributesChanged{};
             class addRoleDescriptionPrefix{};
             class addRoleDescriptionSuffix{};
@@ -562,15 +409,6 @@ class CfgFunctions
             class lockDoorsDialogCallback{};
             class createZeus{};
             class exportCrate {};
-        };
-        class init
-        {
-            file = "keko_common\functions\init";
-            class initPlayerLocal {};
-            class initServer {};
-            class preInit {preInit = 1;};
-            class preInitPlayerLocal {};
-            class postInit {postInit = 1;};
         };
     };
 };
@@ -590,7 +428,7 @@ class Display3DEN {
 			class Edit {
 				items[] += {
 					"keko_addRoleDescriptionPrefix",
-                    "keko_addRoleDescriptionSuffix",
+          "keko_addRoleDescriptionSuffix",
 					"keko_removeRoleDescriptionPrefix",
 					"keko_resetRoleDescription",
 					"keko_exportCrate"};
@@ -600,11 +438,11 @@ class Display3DEN {
 				Text = "Add role description prefix";
 				conditionShow = "selectedObject";
 			};
-            class keko_addRoleDescriptionSuffix {
-                action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
-                Text = "Add role description suffix";
-                conditionShow = "selectedObject";
-            };
+      class keko_addRoleDescriptionSuffix {
+          action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
+          Text = "Add role description suffix";
+          conditionShow = "selectedObject";
+      };
 			class keko_removeRoleDescriptionPrefix {
 				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
 				Text = "Replace in role description";
@@ -621,5 +459,18 @@ class Display3DEN {
 				conditionShow = "selectedObject";
 			};
 		};
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class keko_common {
+		init = "call compile preprocessfilelinenumbers '\keko_common\XEH_preInit.sqf'";
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class keko_common {
+		clientInit = "call compile preprocessfilelinenumbers '\keko_common\XEH_postInitClient.sqf'";
+    serverInit = "call compile preprocessfilelinenumbers '\keko_common\XEH_postInitServer.sqf'";
 	};
 };

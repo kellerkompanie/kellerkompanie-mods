@@ -12,7 +12,7 @@ class CfgPatches
             "keko_persistency_settings"};
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
-		version = 1.0;
+		    version = 1.0;
     };
 };
 
@@ -24,8 +24,6 @@ class CfgFunctions
         class persistency
         {
             file = "keko_persistency\functions";
-            class preStart {preStart = 1;};
-            class preInit  {preInit  = 1;};
             class savePlayerLoadout{};
             class loadPlayerLoadout{};
             class saveCrate{};
@@ -34,10 +32,32 @@ class CfgFunctions
             class setContainerContent{};
             class saveAllCrates {};
             class loadAllCrates {};
+
+            class saveVehicle{};
+            class loadVehicle{};
+            class saveAllVehicles {};
+            class loadAllVehicles {};
+
+            class saveAllPlayers {};
+            class loadAllPlayers {};
         };
     };
 };
 
 class Extended_PreInit_EventHandlers {
-    keko_persistency_xeh = call compile preprocessFileLineNumbers "\keko_persistency\XEH_preInit.sqf";
+    class keko_persistency_xeh {
+        init = "call compile preprocessFileLineNumbers '\keko_persistency\XEH_preInit.sqf'";
+    };
+};
+
+class Extended_PostInit_EventHandlers {
+    class keko_persistency_xeh {
+        init = "call compile preprocessFileLineNumbers '\keko_persistency\XEH_postInit.sqf'";
+    };
+};
+
+class Extended_PreStart_EventHandlers {
+    class keko_persistency_xeh {
+        init = "call compile preprocessFileLineNumbers '\keko_persistency\XEH_preStart.sqf'";
+    };
 };

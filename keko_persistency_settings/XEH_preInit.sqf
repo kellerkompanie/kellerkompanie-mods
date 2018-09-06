@@ -20,7 +20,7 @@ Parameters:
 	["Persistency", "Enable/Disable Persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
 	[
-		[1,0], // values
+		[true,false], // values
 		["Enabled","Disabled"], // names
 		1 // default index
 	],
@@ -30,7 +30,7 @@ Parameters:
 
 [
 	"keko_settings_persistency_key",
-	"EDITBOX", 
+	"EDITBOX",
 	["Key", "Database storage key"],
 	"Kellerkompanie Persistency",
 	"",
@@ -47,6 +47,45 @@ Parameters:
 		[0,60,300,600],
 		["Disabled","1 Minute","5 Minutes","10 Minutes"],
 		0
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	"keko_settings_persistency_vehiclesEnabled", // key/reference variable
+	"LIST", // type of setting
+	["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
+	"Kellerkompanie Persistency", // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	"keko_settings_persistency_cratesEnabled", // key/reference variable
+	"LIST", // type of setting
+	["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
+	"Kellerkompanie Persistency", // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	"keko_settings_persistency_playersEnabled", // key/reference variable
+	"LIST", // type of setting
+	["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
+	"Kellerkompanie Persistency", // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
 	],
 	1
 ] call cba_settings_fnc_init;

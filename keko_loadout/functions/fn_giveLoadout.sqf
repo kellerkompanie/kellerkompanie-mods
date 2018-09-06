@@ -241,7 +241,7 @@ if !(weaponLowered player) then {
 };
 
 // let TFAR initialize
-sleep 3;
+// sleep 3;
 
 // give radio
 if (keko_var_giveRadio > 0) then {

@@ -1,5 +1,6 @@
-if(keko_settings_persistency_enabled == 0) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
+if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency key not set, exiting!"; false};
+if !(keko_settings_persistency_cratesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency for crates is disabled, exiting!"; false};
 
 params [
 	["_input", objNull, [objNull, -1]]

@@ -1,3 +1,5 @@
+if !(keko_settings_persistency_cratesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadAllCrates: persistency for crates is disabled, exiting!"; false};
+
 _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getAllCrates:%1", keko_settings_persistency_key]);
 
 if ((_ret select 0) == 1) then {

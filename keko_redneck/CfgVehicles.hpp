@@ -35,6 +35,187 @@
 
 class CfgVehicles {
 
+	class Logic;
+	class Module_F: Logic
+	{
+			class EventHandlers;
+			class ModuleDescription;
+
+			class AttributesBase
+	{
+		class Default;
+		class Edit;
+		class Combo;
+		class Checkbox;
+		class CheckboxNumber;
+		class ModuleDescription;
+		class Units;
+
+		expression = "_this setVariable ['%s',_value];";
+	};
+	};
+
+	class keko_redneck_ModuleBase3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "Base";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleBase3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_base.pac";
+
+			class Attributes: AttributesBase
+			{
+
+			};
+	};
+
+	class keko_redneck_ModuleAirport3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Airport";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleAirport3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_airport.pac";
+
+			class Attributes: AttributesBase
+	{
+					class id: Edit {
+							property = "keko_redneck_ModuleAirport3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+		};
+	};
+	class keko_redneck_ModuleDollar3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Dollar";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleDollar3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_dollar.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleDollar3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleFlag3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Flag";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleFlag3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_flag.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleFlag3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleFuel3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Fuel";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleFuel3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_fuel.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleFuel3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleRadiotower3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Radiotower";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleRadiotower3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_radiotower.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleRadiotower3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+	class keko_redneck_ModuleResearch3den: Module_F
+	{
+			scope              = 2;
+			scopeCurator       = 1;
+			displayName        = "POI - Research";
+			category           = "keko_redneck";
+			function           = "keko_redneck_fnc_moduleResearch3den";
+			functionPriority   = 1;
+			isGlobal           = 1;
+			isTriggerActivated = 1;
+			isDisposable       = 0;
+			icon = "\keko_redneck\icons\icon_research.pac";
+
+			class Attributes: AttributesBase
+			{
+					class id: Edit {
+							property = "keko_redneck_ModuleResearch3den_id";
+							displayName = "ID";
+							typeName = "STRING";
+							defaultValue = "''";
+					};
+			};
+	};
+
+
+
+
 	class FlagCarrier;
 	class keko_redneck_flag: FlagCarrier {
 		scope = 2;
@@ -42,7 +223,7 @@ class CfgVehicles {
 		displayName = "Flag (Redneck)";
 
 		class EventHandlers {
-			init = "(_this select 0) setFlagTexture '\keko_faction_redneck\images\redneck_flag.paa'";
+			init = "(_this select 0) setFlagTexture '\keko_redneck\images\redneck_flag.paa'";
 		};
 	};
 
@@ -51,7 +232,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Banner (Redneck)";
-		hiddenSelectionsTextures[] = {"\keko_faction_redneck\images\redneck_flag.paa"};
+		hiddenSelectionsTextures[] = {"\keko_redneck\images\redneck_flag.paa"};
 	};
 
 
@@ -320,6 +501,22 @@ class CfgVehicles {
 	    items[] = {"FirstAidKit"};
 	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManLeader";
+	};
+
+	class keko_redneck_blufor_pilot : keko_redneck_blufor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
 	};
 
 
@@ -677,7 +874,69 @@ class CfgVehicles {
 	};
 
 
+	class rhs_uh1h_hidf;
+	class keko_redneck_blufor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
 
+	class rhs_uh1h_hidf_gunship;
+	class keko_redneck_blufor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class rhs_uh1h_hidf_unarmed;
+	class keko_redneck_blufor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class RwG_Mozzie_Carl_Black;
+	class keko_redneck_blufor_mozzie_black: RwG_Mozzie_Carl_Black {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "Mosquito Black";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+	};
+
+	class RwG_Mozzie_Carl_Red;
+	class keko_redneck_blufor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_blufor";
+		crew = "keko_redneck_blufor_pilot";
+	};
 
 
 
@@ -951,6 +1210,21 @@ class CfgVehicles {
 		items[] = {"FirstAidKit"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
+	};
+	class keko_redneck_indfor_pilot : keko_redneck_indfor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
 	};
 
 
@@ -1263,8 +1537,64 @@ class CfgVehicles {
 			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
 	};
 
+	class keko_redneck_indfor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
 
+	class keko_redneck_indfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
 
+	class keko_redneck_indfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_indfor_mozzie_black: RwG_Mozzie_Carl_Black {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "Mosquito Black";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+	};
+
+	class keko_redneck_indfor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_indfor";
+		crew = "keko_redneck_indfor_pilot";
+	};
 
 
 
@@ -1545,6 +1875,21 @@ class CfgVehicles {
 		items[] = {"FirstAidKit"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
+	};
+	class keko_redneck_opfor_pilot : keko_redneck_opfor_soldier_base {
+	    scope = 2;
+	    curatorScope = 2;
+	    displayName = "Pilot";
+	    uniform = "TRYK_shirts_DENIM_BL";
+	    backpack = "";
+	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
+	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+
+			class EventHandlers: EventHandlers {
+	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
+	    };
 	};
 
 
@@ -1863,6 +2208,65 @@ class CfgVehicles {
 			displayName = "Ultralight";
 			vehicleClass = "Air";
 			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+	};
+
+	class keko_redneck_opfor_uh1h: rhs_uh1h_hidf {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H Gunship";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "UH-1H Unarmed";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
+		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+	};
+
+	class keko_redneck_opfor_mozzie_black: RwG_Mozzie_Carl_Black {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "Mosquito Black";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
+	};
+
+	class keko_redneck_opfor_mozzie_red: RwG_Mozzie_Carl_Red {
+		author = "Schwaggot";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		displayName = "Mosquito Red";
+		faction = "keko_faction_redneck_opfor";
+		crew = "keko_redneck_opfor_pilot";
 	};
 
 };
