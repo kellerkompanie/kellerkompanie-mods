@@ -41,7 +41,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 
 	// define all weapons and mags
 	#include "kekoWeaponsBundeswehr.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
@@ -69,16 +69,17 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 			"PBW_Helm4_tropen_HBOD",
 			"PBW_Helm4_tropen_H",
 			"PBW_Helm6_tropen"};
-			
+
 		primary[] = {
-			keko_W_G36};
+			keko_W_G36,
+			keko_W_G36_D};
 
 		secondary[] = {
 			keko_W_P8};
 	};
 
 	class kekoSoldierLight: kekoSoldierBundeswehrTropen {
-		
+
 	};
 
 	class kekoLead: kekoSoldierBundeswehrTropen	{
@@ -91,12 +92,13 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_G36_GL};
-	}; 
+			keko_W_G36_GL_HuntIR,
+			keko_W_G36_GL_HuntIR_D};
+	};
 
 	class kekoCommand: kekoLead	{
 		name = "Oberkommando";
-		rank = "COLONEL";		
+		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
 		helmet[] = {"PBW_muetze1_tropen"};
@@ -106,7 +108,8 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 		name = "Gruppenführer";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_G36_GL};
+			keko_W_G36_GL_HuntIR,
+			keko_W_G36_GL_HuntIR_D};
 		backpack[] = {"TFAR_rt1523g_big_bwmod_tropen"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
@@ -121,7 +124,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 	class kekoFTL: kekoSoldierBundeswehrTropen	{
 		name = "Truppführer";
 		rank = "CORPORAL";
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -145,13 +148,14 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 	};
 
 	class kekoRifleman: kekoSoldierBundeswehrTropen	{
-		name = "Schütze";		
+		name = "Schütze";
 	};
 
 	class kekoRiflemanAT: kekoSoldierBundeswehrTropen	{
 		name = "Schütze AT (Panzerfaust)";
 		launcher[] = {keko_W_PZF3};
 		backpack[] = {"BWA3_AssaultPack_Tropen"};
+		backpackInventory[] = {{1,AT_MAG}};
 	};
 
 	class kekoGrenadier: kekoSoldierBundeswehrTropen {
@@ -163,7 +167,8 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 			{2, GRENADE},
 			{2, PRIMARY_MAG}};
 		primary[] = {
-			keko_W_G36_GL};	
+			keko_W_G36_GL,
+			keko_W_G36_GL_D};
 	};
 
 	class kekoLMG: kekoSoldierBundeswehrTropen {
@@ -182,7 +187,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 		name = "Leichtes MG Helfer";
 		backpack[] = {"BWA3_FieldPack_Tropen"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierBundeswehrTropen {
@@ -200,7 +205,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 
 		backpack[] = {"BWA3_FieldPack_Tropen"};
 		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierBundeswehrTropen {
@@ -220,7 +225,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 		name = "Fliegerfaust Schütze";
 		backpack[] = {"BWA3_FieldPack_Tropen"};
 		backpackInventory[] = {{1, AA_MAG}};
-		launcher[] = {keko_W_TITAN_AA};
+		launcher[] = {keko_W_Fliegerfaust};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierBundeswehrTropen {
@@ -239,7 +244,7 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 			{2, GRENADE},
 			{5, PRIMARY_MAG_MARKSMAN}};
 		primary[] = {
-			keko_W_G3A3};
+			keko_W_G28};
 	};
 
 	class kekoSniper: kekoSoldierBundeswehrTropen {
@@ -266,23 +271,21 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 			{8,"ACE_7Rnd_408_305gr_Mag"},
 			{2,SECONDARY_MAG}};
 		primary[] = {
-			keko_W_A3_LRR, 
-			keko_W_A3_LRR_CAMO};
+			keko_W_G29};
 		secondary[] = {keko_W_TACTICAL_SPECOPS};
 		optics[] = {"Laserdesignator"};
 	};
 
 	class kekoSpotter: kekoSniper {
-		name = "Spotter";	
+		name = "Spotter";
 		vestInventory[] = {
 			{1,"SmokeShell"},
 			{1,"SmokeShellGreen"},
 			{2,"11Rnd_45ACP_Mag"},
 			{10,"ACE_30Rnd_65x47_Scenar_mag"},
-			{1,GRENADE}};	
+			{1,GRENADE}};
 		primary[] = {
-			keko_W_A3_MXM, 
-			keko_W_A3_MXM_BLACK};
+			keko_W_G28};
 	};
 
 	class kekoEOD: kekoSoldierLight {
@@ -341,8 +344,8 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 	class kekoJTAC: kekoGrenadier {
 		name = "JTAC";
 		primary[] = {
-			keko_W_A3_MX_GL, 
-			keko_W_A3_MX_GL_BLACK};
+			keko_W_G36_GL_JTAC,
+			keko_W_G36_GL_JTAC_D};
 		vestInventory[] = {
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
@@ -363,8 +366,8 @@ class kekoFactionBundeswehrTropen: kekoFactionBase {
 	class kekoUAVOperator: kekoSoldierLight	{
 		name = "UAV Operator";
 		primary[] = {
-			keko_W_A3_MX_GL, 
-			keko_W_A3_MX_GL_BLACK};
+			keko_W_G36_GL_HuntIR,
+			keko_W_G36_GL_HuntIR_D};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
 			{2,PRIMARY_MAG},
