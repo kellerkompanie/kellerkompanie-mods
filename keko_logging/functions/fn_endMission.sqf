@@ -13,9 +13,3 @@ if(_endType == "WIN") then {
 } else {
   "EveryoneLost" call BIS_fnc_endMissionServer;
 };
-
-{
-	disableUserInput false;
-	disableUserInput true;
-	disableUserInput false;
-} remoteExec ["bis_fnc_call", 0]; 
