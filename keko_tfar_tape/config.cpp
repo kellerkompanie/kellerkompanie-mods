@@ -1,19 +1,19 @@
- class CfgPatches
- {
- 	class keko_tfar_tape
- 	{
- 		units[] = {};
- 		weapons[] = {};
- 		requiredVersion = 1.80;
- 		requiredAddons[] = {
- 			"CBA_Main", 
- 			"task_force_radio_items", 
- 			"task_force_radio"};
- 		author = "Schwaggot";
-        authorUrl = "http://kellerkompanie.com";
+class CfgPatches
+{
+	class keko_tfar_tape
+	{
+		units[] = {};
+		weapons[] = {};
+		requiredVersion = 1.80;
+		requiredAddons[] = {
+			"CBA_Main", 
+			"task_force_radio_items", 
+			"task_force_radio"};
+		author = "Schwaggot";
+		authorUrl = "http://kellerkompanie.com";
 		version = 1.0;
- 	};
- };
+	};
+};
  
 class RscBackPicture;
 class anprc148jem_radio_dialog
