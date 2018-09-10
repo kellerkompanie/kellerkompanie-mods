@@ -7,8 +7,8 @@ class CfgPatches
 		requiredVersion = 1.80;
 		requiredAddons[] = {
 			"CBA_Main", 
-			"task_force_radio_items", 
-			"task_force_radio"};
+			"tfar_core", 
+			"tfar_handhelds"};
 		author = "Schwaggot";
 		authorUrl = "http://kellerkompanie.com";
 		version = 1.0;
