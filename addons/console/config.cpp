@@ -1,12 +1,16 @@
-class CfgPatches
-{
-	class keko_console
-	{
+#include "script_component.hpp"
+
+class CfgPatches {
+	class ADDON {
+		name = COMPONENT_NAME;
 		units[]= {};
-		requiredVersion= 1.80;
+		weapons[] = {};
+		requiredVersion= REQUIRED_VERSION;
 		requiredAddons[]= {};
-		author = "Schwaggot";
-		version = 1.0;
+		author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG; 
 	};
 };
 

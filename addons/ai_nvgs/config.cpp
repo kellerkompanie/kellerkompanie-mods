@@ -1,44 +1,20 @@
 // Original version by ARK https://github.com/Cyruz143/ark_inhouse
+#include "script_component.hpp"
 
-class CfgPatches
-{
-    class keko_ai_nvgs
-    {
+class CfgPatches {
+    class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
-        requiredVersion = 1.80;
+        weapons[] = {"NVGoggles_AI"};
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
           "cba_main"};
-        author = "Schwaggot";
-        authorUrl = "http://kellerkompanie.com";
-		    version = 1.0;
-        weapons[] = {
-            "NVGoggles_AI"
-        };
+        author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG; 
     };
 };
 
-class Extended_PostInit_EventHandlers {
-    class keko_ai_nvgs {
-        serverInit = "[] call compile preProcessFileLineNumbers '\keko_ai_nvgs\XEH_serverInit.sqf';";
-    };
-};
-
-class CfgWeapons {
-    class NVGoggles;
-    class NVGoggles_AI : NVGoggles {
-        author = "Schwaggot";
-        descriptionShort = "Night Vision Goggles - AI Only";
-        displayName = "NV Goggles (AI Only)";
-        model = "\A3\Weapons_F\empty.p3d";
-        modelOptics = "\A3\weapons_f\reticle\optics_night";
-        picture = "\A3\Weapons_F\Data\UI\gear_nvg_CA.paa";
-        scope = 1;
-        class ItemInfo {
-            hmdType = 0;
-            mass = 20;
-            modelOff = "\A3\Weapons_F\empty.p3d";
-            type = 616;
-            uniformModel = "\A3\Weapons_F\empty.p3d";
-        };
-    };
-};
+#include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"

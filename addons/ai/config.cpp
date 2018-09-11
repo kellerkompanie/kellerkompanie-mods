@@ -1,16 +1,18 @@
-class CfgPatches
-{
-    class keko_ai
-    {
+#include "script_component.hpp"
+
+class CfgPatches {
+    class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
-        requiredVersion = 1.80;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "cba_main",
             "cba_settings",
             "cba_xeh"};
-        author = "Schwaggot";
-        authorUrl = "http://kellerkompanie.com";
-		version = 1.0;
+        author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG; 
     };
 };
 

@@ -1,14 +1,17 @@
 // Original version by ARK https://github.com/Cyruz143/ark_inhouse
+#include "script_component.hpp"
 
 class CfgPatches {
-    class keko_enhanced_flares {
+    class ADDON {
+      name = COMPONENT_NAME;
       units[] = {};
-      requiredVersion = 1.80;
-      author = "Schwaggot";
-      authorUrl = "http://kellerkompanie.com";
-      version = 1.0;
       weapons[] = {};
+      requiredVersion = REQUIRED_VERSION;
       requiredAddons[] = {"cba_main","ace_common","ace_grenades"};
+      author = ECSTRING(common,KEKOTeam);
+      authors[] = {"Schwaggot"};
+      url = ECSTRING(main,URL);
+      VERSION_CONFIG;       
     };
 };
 

@@ -1,32 +1,21 @@
-class CfgPatches
-{
-    class keko_zeusfpsmonitor
-    {
+#include "script_component.hpp"
+
+class CfgPatches {
+    class keko_zeusfpsmonitor {
+        name = COMPONENT_NAME;
         units[] = {};
-        requiredVersion = 1.80;
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_Modules_F",
             "cba_main",
             "cba_settings",
             "cba_xeh"};
-        author = "Schwaggot";
-        authorUrl = "http://kellerkompanie.com";
-        version = 1.0;
+        author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG; 
     };
 };
 
-class Extended_PreInit_EventHandlers {
-    keko_zeusfpsmonitor_settings_xeh = call compile preprocessFileLineNumbers "\keko_zeusfpsmonitor\XEH_preInit.sqf";
-};
-
-class CfgFunctions
-{
-	class keko
-	{
-		class zeusfpsmonitor
-		{
-			file = "\keko_zeusfpsmonitor\functions";
-			class postInit{postInit = 1;};
-		};
-	};
-};
+#include "CfgEventHandlers.hpp"
