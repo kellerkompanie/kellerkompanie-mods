@@ -55,3 +55,7 @@ fabric.properties
 # All
 .idea
 *.iml
+
+# ArmA 3
+*.pbo
+*.bisign

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="KEKO">
+    <Package name="Main">
+        <Key ID="STR_KEKO_Main_Category_Logistics">
+            <English>Kellerkompanie Logistics</English>
+            <German>Kellerkompanie Logistik</German>
+        </Key>
+        <Key ID="STR_KEKO_Main_URL">
+            <English>https://github.com/Schwaggot/kellerkompanie-mods</English>
+            <German>https://github.com/Schwaggot/kellerkompanie-mods</German>
+        </Key>
+    </Package>
+</Project>
