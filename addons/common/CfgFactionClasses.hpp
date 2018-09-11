@@ -1,8 +1,8 @@
 class CfgFactionClasses
 {
-    class GVAR(Utility)
+    class GVAR(Default)
     {
-        displayName = "Kellerkompanie Utility";
+        displayName = "Kellerkompanie";
         priority = 2;
         side = 7;
     };

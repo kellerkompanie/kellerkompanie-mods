@@ -1,34 +1,20 @@
+#include "script_component.hpp"
+
 class CfgPatches
 {
-	class keko_loot
+	class ADDON
 	{
-		units[] = {            
-        };
-		requiredVersion = 1.80;
+        name = COMPONENT_NAME;
+		units[] = {};
+        weapons[] = {};
+		requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_interact_menu"};
-        author = "Schwaggot";
-        authorUrl = "http://kellerkompanie.com";
-		version = 1.0; 
+        author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG; 
 	};
 };
 
-class CfgFunctions 
-{
-    class keko_loot 
-    {
-        tag = "keko_loot";
-        class loot 
-        {
-            file = "keko_loot\functions";
-            class transferToVehicle {};
-        };
-    };
-};
-
-class Extended_PostInit_EventHandlers {
-
-	class keko_looter {
-		init = "call compile preProcessFileLineNumbers '\keko_loot\XEH_postInit.sqf'";
-	};
-};
+#include "CfgEventHandlers.hpp"

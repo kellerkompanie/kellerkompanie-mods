@@ -6,7 +6,7 @@ class CfgVehicles {
 		displayName = "Flag (Kellerkompanie)";
 
 		class EventHandlers {
-			init = "(_this select 0) setFlagTexture '\x\keko\addons\common\pictures\keko_flag.paa'";
+			init = "(_this select 0) setFlagTexture '\x\keko\addons\common\ui\keko_flag.paa'";
 		};
 	};
 
@@ -15,7 +15,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Banner (Kellerkompanie)";
-		hiddenSelectionsTextures[] = {"\x\keko\addons\common\pictures\keko_flag.paa"};
+		hiddenSelectionsTextures[] = {QPATHTOF(ui\keko_flag.paa)};
 	};
 
 
@@ -67,7 +67,7 @@ class CfgVehicles {
 	};
 	class GVAR(moduleInitMission3den): GVAR(moduleBase3den)	{
 		displayName        = "Initialize Mission";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleInitMission3den);
 		icon = QPATHTOF(ui\icon_init.paa);
 
@@ -118,7 +118,7 @@ class CfgVehicles {
 	};
 	class GVAR(moduleRespawnPosition3den): GVAR(moduleBase3den)	{
 		displayName        = "Respawn Position";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleRespawnPosition3den);
 		icon = QPATHTOF(ui\icon_destination.paa);
 
@@ -142,7 +142,7 @@ class CfgVehicles {
 	};
 	class GVAR(moduleACEGarrison3den): GVAR(moduleBase3den)	{
 		displayName        = "ACE AI Garrison";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleACEGarrison3den);
 		icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Garrison_ca.paa";
 
@@ -180,56 +180,56 @@ class CfgVehicles {
 	};
 	class GVAR(moduleRespawnPosition): GVAR(moduleBase)	{
 		displayName        = "Respawn Position";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleRespawnPosition);
 		icon = QPATHTOF(ui\icon_destination.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleFullHeal): GVAR(moduleBase) {
 		displayName        = "Full Heal";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleFullHeal);
 		icon = QPATHTOF(ui\icon_full_heal.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleAssignMedic): GVAR(moduleBase)	{
 		displayName        = "Assign Medic";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleAssignMedic);
 		icon = QPATHTOF(ui\icon_medic.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleAssignDoctor): GVAR(moduleBase) {
 		displayName        = "Assign Doctor";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleAssignDoctor);
 		icon = QPATHTOF(ui\icon_doctor.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleAssignEngineer): GVAR(moduleBase) {
 		displayName        = "Assign Engineer";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleAssignEngineer);
 		icon = QPATHTOF(ui\icon_engineer.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleAssignRepairSpecialist): GVAR(moduleBase) {
 		displayName        = "Assign Repair Specialist";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleAssignRepairSpecialist);
 		icon = QPATHTOF(ui\icon_repair_specialist.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleRemoveAllActions): GVAR(moduleBase) {
 		displayName        = "Remove all menus";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleRemoveAllActions);        
 		icon = QPATHTOF(ui\icon_delete.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleLockDoors): GVAR(moduleBase) {
 		displayName        = "(Un-)Lock Doors ";
-		category           = QGVAR(Utility);
+		category           = QGVAR(Default);
 		function           = QFUNC(moduleLockDoors);
 		icon = QPATHTOF(ui\icon_lock.paa);
 	};

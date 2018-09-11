@@ -1,3 +1,7 @@
+#include "script_component.hpp"
+
+ADDON = false;
+
 /*
 CBA settings https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System#arguments-of-cba_settings_fnc_init
 
@@ -39,3 +43,5 @@ Parameters:
 	],
 	1
 ] call cba_settings_fnc_init;
+
+ADDON = true;

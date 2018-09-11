@@ -1,3 +1,13 @@
+#include "script_component.hpp"
+
+ADDON = false;
+
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
+
+
+
 /*
 CBA settings https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System#arguments-of-cba_settings_fnc_init
 
@@ -86,3 +96,6 @@ Parameters:
     true,
     true
 ] call CBA_Settings_fnc_init;
+
+
+ADDON = true;
