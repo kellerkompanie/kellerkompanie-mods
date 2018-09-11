@@ -28,6 +28,7 @@ class kekoFaction
 	#include "kekoFactionRussiaSpeznas.hpp"
 	#include "kekoFactionBundeswehrFleck.hpp"
 	#include "kekoFactionBundeswehrTropen.hpp"
+	#include "kekoFactionBundeswehrSchnee.hpp"
 	#include "kekoFactionChinesePLAWoodland.hpp"
 	#include "kekoFactionChinesePLADesert.hpp"
 	#include "kekoFactionBlackorder.hpp"

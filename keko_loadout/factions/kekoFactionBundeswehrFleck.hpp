@@ -203,7 +203,7 @@ class kekoFactionBundeswehrFleck: kekoFactionBase {
 	class kekoATSpecialist: kekoSoldierBundeswehrFleck {
 		name = "ATGM Milan Schütze (Rohr)";
 
-		backpack[] = {"Redd_Milan_Static_Bag"};
+		backpack[] = {"Redd_Milan_Static_Barrel"};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierBundeswehrFleck {
