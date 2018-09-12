@@ -8,14 +8,14 @@ STHud_MidDist = 30;
 STHud_MaxDist = 50;
 STHud_EdgeStep = 10;
 STHud_FadeEdge = STHud_MaxDist + STHud_EdgeStep;
-STUI_LastTick = time;
+GVAR(LastTick) = time;
 
 STHud_TextShadow = 1;
 STHud_Font = "PuristaSemiBold";
 
 if (isNil "STHud_ShowBearingInVehicle") then {STHud_ShowBearingInVehicle = true};
 if (isNil "STHud_NoSquadBarMode") then {STHud_NoSquadBarMode = false};
-if (isNil "STUI_DeltaT") then {STUI_DeltaT = 0.0};
+if (isNil QGVAR(STUI_DeltaT)) then {GVAR(DeltaT) = 0.0};
 
 // Orange warning colour
 STHud_CloseColour = [0.85, 0.4, 0, 1];
@@ -50,7 +50,7 @@ STHud_CompassData = [
     [270, 12 * 0.85, "W"]
 ];
 {
-    _x set [2, format ["\stui_grouphud\sthud_%1.paa", _x select 2]];
+    _x set [2, format ["x\keko\addons\shacktac\ui\sthud_%1.paa", _x select 2]];
 } forEach STHud_CompassData;
 
 
@@ -188,7 +188,7 @@ STHud_DrawHUD =
     };
 
 
-    STUI_DeltaT = time - STUI_LastTick;
+    GVAR(DeltaT) = time - GVAR(LastTick);
 
     {
         private _unit = _x;
@@ -215,16 +215,16 @@ STHud_DrawHUD =
             };
         };
 
-        if (STUI_Occlusion && (player distance _x < STHud_FadeEdge)) then
+        if (GVAR(Occlusion) && (player distance _x < STHud_FadeEdge)) then
         {
             private _vis = [(vehicle _x), "VIEW"] checkVisibility [eyePos player,  AGLToASL (_x modelToWorldVisual (_x selectionPosition "Spine3"))];
             private _alphaPre = _colour select 3;
 
             private _fadetime = 2.5;
-            private _fadeDegree = _x getVariable ["STUI_Occlude_Fade_HUD",0];
+            private _fadeDegree = _x getVariable [QGVAR(Occlude_Fade_HUD),0];
 
             _alphaDiff = STUI_DeltaT / _fadetime;
-            _fadeState = _x getVariable ["STUI_Occlude_Fade_HUD",0];
+            _fadeState = _x getVariable [QGVAR(Occlude_Fade_HUD),0];
 
             if (_fadeState > 1) then {_fadeState = 1};
             if (_fadeState < 0) then {_fadeState = 0};
@@ -233,14 +233,14 @@ STHud_DrawHUD =
             {
                 _curAlpha = _fadeState;
                 _newAlpha = (_curAlpha - _alphaDiff )min _alphaPre;
-                _x setVariable ["STUI_Occlude_Fade_HUD",_newAlpha];
+                _x setVariable [QGVAR(Occlude_Fade_HUD),_newAlpha];
                 _colour set [3,_newAlpha];
             }
             else
             {
                 _curAlpha = _fadeState;
                 _newAlpha = (_curAlpha + _alphaDiff) min _alphaPre;
-                _x setVariable ["STUI_Occlude_Fade_HUD",_newAlpha];
+                _x setVariable [QGVAR(Occlude_Fade_HUD),_newAlpha];
                 _colour set [3,_newAlpha];
             };
         };
@@ -263,7 +263,7 @@ STHud_DrawHUD =
     	showHud (_showHud select [0, 8]);
     };
 
-    STUI_LastTick = time;
+    GVAR(LastTick) = time;
 
     _playerDir = getDirVisual(vehicle(player));
     _playerIcon = player call STHud_Icon;
@@ -337,7 +337,7 @@ STHud_Icon =
             if (vehicle _unit isKindOf "Air") then
             {
                 //no suitable icons for this so we are using a resized one
-                "\stui_grouphud\imagepilot_ca.paa"
+                QPATHTOF("ui\imagepilot_ca.paa")
             } else
             {
                 "a3\ui_f\data\igui\cfg\commandbar\imagedriver_ca.paa"
@@ -438,7 +438,7 @@ STHud_Colour_Player =
 
 STHud_Colour_Teams_Player =
 {
-    private _index = player call STUI_assignedTeamIndex;
+    private _index = player call FUNC(assignedTeamIndex);
 
     STHud_PlayerColours select _index;
 };
@@ -453,7 +453,7 @@ STHud_Colour_Teams =
         [0.85, 0.4, 0, 1];
     };
 
-    private _index = _unit call STUI_assignedTeamIndex;
+    private _index = _unit call FUNC(assignedTeamIndex);
     private _colour = STHud_Colours select _index;
     private _alpha = linearConversion [STHud_MaxDist, STHud_FadeEdge, _distance, 0.8, 0, true];
     [_colour select 0, _colour select 1, _colour select 2, _alpha];
@@ -707,13 +707,13 @@ STHud_GetName_Short =
 {
     params ["_unit"];
     _name = name(_this);
-    [_name, STHud_MaxNameLen] call STUI_TruncateText;
+    [_name, STHud_MaxNameLen] call FUNC(truncateText);
 };
 
 STHud_Reset =
 {
-    "STHud_Draw" call STUI_Canvas_Remove;
-    "STHud_Draw_Init" call STUI_Canvas_Add;
+    "STHud_Draw" call FUNC(canvasRemove);
+    "STHud_Draw_Init" call FUNC(canvasAdd);
 };
 ["STUI_Reset", {call STHud_Reset}] call CBA_fnc_addEventHandler;
 
