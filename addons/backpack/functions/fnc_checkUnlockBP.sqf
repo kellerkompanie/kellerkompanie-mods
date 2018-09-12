@@ -10,15 +10,17 @@
  * nothing
  *
  * Example:
- * [bob] call diwako_lockbackpack_fnc_checkUnlockBP
+ * [bob] call keko_backpack_fnc_checkUnlockBP
  *
  * Public: No
  */
+#include "script_component.hpp"
+
 params ["_unit"];
 
-if ((_unit getVariable ["keko_backpack_locked",false]) && {isNull (unitBackpack _unit)} ) then {
+if ((_unit getVariable [QGVAR(backpackIsLocked),false]) && {isNull (unitBackpack _unit)} ) then {
 	
-	_unit setVariable ["keko_backpack_locked", false, true];
+	_unit setVariable [QGVAR(backpackIsLocked), false, true];
 
 	if !(isNil "ace_common_fnc_displayTextStructured") then {
 		[{["Backpack lock removed"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;

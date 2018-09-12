@@ -15,13 +15,15 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
+
 params ["_unit", "_backpack"];
 
 private _target = objectParent _backpack;
 
 if (isNull _target) exitWith {false};
 
-if (alive _target && {!(_target getVariable ["ACE_isUnconscious",false]) && {_target getVariable ["keko_backpack_locked",false]}}) exitWith {
+if (alive _target && {!(_target getVariable ["ACE_isUnconscious",false]) && {_target getVariable [QGVAR(backpackIsLocked),false]}}) exitWith {
 	[
 		{
 			!isNull (findDisplay 602)
