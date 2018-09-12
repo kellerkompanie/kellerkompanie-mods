@@ -1,21 +1,28 @@
+// Original version by ShackTac Development Team - dslyecxi.com
+#include "script_component.hpp"
 
 class CfgPatches {
-
-	class STUI_Core {
+	class ADDON {
+		name = COMPONENT_NAME;
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.000000;
 		requiredAddons[] = {
-			"CBA_Main", 
-			"Extended_EventHandlers", 
-			"A3_UI_F", 
-			"A3_Data_F", 
+			"CBA_Main",
+			"Extended_EventHandlers",
+			"A3_UI_F",
+			"A3_Data_F",
 			"A3_UIFonts_F"
 		};
-		author = "ShackTac Development Team";
-		authorUrl = "http://dslyecxi.com";
+		author = ECSTRING(common,KEKOTeam);
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG;
 	};
 };
+
+#include "CfgEventHandlers.hpp"
+#include "defines.hpp"
 
 class STUI_RscCanvasControl {
 	idc = 0;
@@ -388,30 +395,6 @@ class RscDisplayMission: RscDisplayEmpty {
 	};
 };
 
-class Extended_PreInit_EventHandlers {
-	STUI = "call compile preprocessFileLineNumbers '\stui_core\preinit.sqf'";
-};
-
-class Extended_PostInit_EventHandlers {
-	STUI = "call STUI_Run_PostInits";
-};
-
-class CfgRemoteExec {
-
-	class Functions {
-
-		class STUI_Resend {
-			allowedTargets = 1;
-			jip = 0;
-		};
-
-		class STUI_GetOwnerID {
-			allowedTargets = 2;
-			jip = 0;
-		};
-	};
-};
-
 class STUI_BlankDialog {
 	idd = 999;
 	movingEnable = 1;
@@ -419,24 +402,23 @@ class STUI_BlankDialog {
 	enableSimulation = 1;
 };
 
-class CfgMods {
-	/*extern*/ class Mod_Base;
+class CfgInGameUI {
 
-	class STUI: Mod_Base {
-		name = "ShackTac User Interface";
-		picture = "\stui_core\logos\st_logo_ca.paa";
-		logoSmall = "\stui_core\logos\st_logo_small_ca.paa";
-		logo = "\stui_core\core\logos\st_logo_small_ca.paa";
-		logoOver = "\stui_core\core\logos\st_logo_small_ca.paa";
-		action = "http://dslyecxi.com/shacktac_wp/";
-		actionName = "Website";
-		tooltip = "ShackTac UI";
-		tooltipOwned = "ShackTac User Interface";
-		dlcColor[] = {1, 0.760000, 0, 1};
-		overview = "ShackTac User Interface (STUI), contains enhancements to the UI for Arma 3.<br /><br />This modset includes the following elements:<br />* <a href='http://dslyecxi.com/shacktac-fireteam-hud-for-arma-3/'>ShackTac Fireteam HUD</a><br />* <a href='http://dslyecxi.com/shacktac-group-indicators/'>ShackTac Group Indicators</a><br />* <a href='http://dslyecxi.com/shacktac_wp/shacktac-mods/shacktac-name-tags/'>ShackTac Name Tags</a><br />* <a href='http://dslyecxi.com/shacktac_wp/shacktac-mods/shacktac-stamina-bar/'>ShackTac Stamina Bar</a><br />* <a href='http://dslyecxi.com/shacktac-map-autobrightness-mod/'>ShackTac Map Autobrightness</a><br />* <a href='http://dslyecxi.com/shacktac-interact-mod/'>ShackTac Interact</a>";
-		hideName = 0;
-		hidePicture = 0;
-		author = "ShackTac Development Team";
-		dir = "@stui";
+	class Cursor {
+		select = "#(argb,1,1,1)color(0,0,0,0)";
+		outArrow = "#(argb,1,1,1)color(0,0,0,0)";
+		leader = "#(argb,1,1,1)color(0,0,0,0)";
+		mission = "#(argb,1,1,1)color(0,0,0,0)";
+		unitBleeding = "#(argb,1,1,1)color(0,0,0,0)";
+		unitInjured = "#(argb,1,1,1)color(0,0,0,0)";
+		unitHealer = "#(argb,1,1,1)color(0,0,0,0)";
+		unitUnconscious = "#(argb,1,1,1)color(0,0,0,0)";
+	};
+};
+
+class RscInGameUI {
+
+	class RscStaminaBar {
+		controls[] = {};
 	};
 };
