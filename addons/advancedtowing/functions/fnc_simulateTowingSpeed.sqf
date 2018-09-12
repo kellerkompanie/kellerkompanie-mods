@@ -1,4 +1,5 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 params ["_vehicle"];
 
@@ -6,7 +7,7 @@ private ["_runSimulation","_currentCargo","_maxVehicleSpeed","_maxTowedCargo","_
 
 _maxVehicleSpeed = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "maxSpeed");
 _vehicleMass = 1000 max (getMass _vehicle);
-_maxTowedCargo = keko_settings_advancedtowing_maxTowedVehicles;
+_maxTowedCargo = GVAR(maxTowedVehicles);
 _runSimulation = true;
 
 private ["_currentVehicle","_totalCargoMass","_totalCargoCount","_findNextCargo","_towRopes","_ropeLength"];
@@ -26,11 +27,11 @@ while {_runSimulation} do {
 		if( count (ropeAttachedObjects _currentVehicle) == 0 ) then {
 			_currentCargo = objNull;
 		} else {
-			_currentCargo = ((ropeAttachedObjects _currentVehicle) select 0) getVariable ["keko_advancedtowing_cargo",objNull];
+			_currentCargo = ((ropeAttachedObjects _currentVehicle) select 0) getVariable [QGVAR(Cargo),objNull];
 		};
 
 		if(!isNull _currentCargo) then {
-			_towRopes = _currentVehicle getVariable ["keko_advancedtowing_towRopes",[]];
+			_towRopes = _currentVehicle getVariable [QGVAR(towRopes),[]];
 			if(count _towRopes > 0) then {
 				_ropeLength = ropeLength (_towRopes select 0);
 				_ends = ropeEndPosition (_towRopes select 0);
@@ -53,10 +54,10 @@ while {_runSimulation} do {
 		_newMaxSpeed = 0;
 	};
 
-	_currentMaxSpeed = _vehicle getVariable ["keko_advancedtowing_maxTowSpeed",_maxVehicleSpeed];
+	_currentMaxSpeed = _vehicle getVariable [QGVAR(maxTowSpeed),_maxVehicleSpeed];
 
 	if(_currentMaxSpeed != _newMaxSpeed) then {
-		_vehicle setVariable ["keko_advancedtowing_maxTowSpeed",_newMaxSpeed, true];
+		_vehicle setVariable [QGVAR(maxTowSpeed),_newMaxSpeed, true];
 	};
 
 	sleep 0.1;

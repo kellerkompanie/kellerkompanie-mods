@@ -1,4 +1,5 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 #define keko_Find_Surface_ASL_Under_Position(_object,_positionAGL,_returnSurfaceASL,_canFloat) \
 _objectASL = AGLToASL (_object modelToWorldVisual (getCenterOfMass _object)); \
@@ -55,7 +56,7 @@ _cargoModelCenterGroundPosition set [2, (_cargoModelCenterGroundPosition select 
 
 // Calculate cargo model corner points
 private ["_cargoCornerPoints"];
-_cargoCornerPoints = [_cargo] call keko_advancedtowing_fnc_getCornerPoints;
+_cargoCornerPoints = [_cargo] call FUNC(getCornerPoints);
 _corner1 = _cargoCornerPoints select 0;
 _corner2 = _cargoCornerPoints select 1;
 _corner3 = _cargoCornerPoints select 2;
@@ -74,7 +75,7 @@ _lastCargoHitchPosition = _cargo modelToWorld _cargoHitchModelPos;
 _lastCargoVectorDir = vectorDir _cargo;
 _lastMovedCargoPosition = getPos _cargo;
 
-_cargoHitchPoints = [_cargo] call keko_advancedtowing_fnc_getHitchPoints;
+_cargoHitchPoints = [_cargo] call FUNC(getHitchPoints);
 _cargoLength = (_cargoHitchPoints select 0) distance (_cargoHitchPoints select 1);
 
 _vehicleMass = 1 max (getMass _vehicle);
@@ -88,7 +89,7 @@ _maxDistanceToCargo = _ropeLength;
 _doExit = false;
 
 // Start vehicle speed simulation
-_towingSpeedSimulationHandle = [_vehicle] spawn keko_advancedtowing_fnc_simulateTowingSpeed;
+_towingSpeedSimulationHandle = [_vehicle] spawn FUNC(simulateTowingSpeed);
 
 while {!_doExit} do {
 
@@ -142,7 +143,7 @@ while {!_doExit} do {
 		_maxDistanceToCargo = _vehicleHitchPosition distance _newCargoHitchPosition;
 		_lastMovedCargoPosition = _cargoPosition;
 
-		_massAdjustedMaxSpeed = _vehicle getVariable ["keko_advancedtowing_maxTowSpeed", _maxVehicleSpeed];
+		_massAdjustedMaxSpeed = _vehicle getVariable [QGVAR(maxTowSpeed), _maxVehicleSpeed];
 		if(speed _vehicle > (_massAdjustedMaxSpeed)+0.1) then {
 			_vehicle setVelocity ((vectorNormalized (velocity _vehicle)) vectorMultiply (_massAdjustedMaxSpeed/3.6));
 		};
@@ -158,7 +159,7 @@ while {!_doExit} do {
 
 	// If vehicle isn't local to the client, switch client running towing simulation
 	if(!local _vehicle) then {
-		_this remoteExec ["keko_advancedtowing_fnc_simulateTowing", _vehicle];
+		_this remoteExec [QFUNC(simulateTowing), _vehicle];
 		_doExit = true;
 	};
 
@@ -166,7 +167,7 @@ while {!_doExit} do {
 	if( count (ropeAttachedObjects _vehicle) == 0 ) then {
 		_currentCargo = objNull;
 	} else {
-		_currentCargo = ((ropeAttachedObjects _vehicle) select 0) getVariable ["keko_advancedtowing_cargo", objNull];
+		_currentCargo = ((ropeAttachedObjects _vehicle) select 0) getVariable [QGVAR(cargo), objNull];
 	};
 
 	if(isNull _currentCargo) then {

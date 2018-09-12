@@ -1,6 +1,8 @@
+#include "script_component.hpp"
+
 params ["_player"];
 
-switch (keko_settings_advancedtowing_classRestriction) do {
+switch (GVAR(classRestriction)) do {
     case 0: {true};
     case 1: {_player getVariable ["ACE_IsEngineer", 0] == 1};
     case 2: {_player getVariable ["ACE_IsEngineer", 0] == 2};

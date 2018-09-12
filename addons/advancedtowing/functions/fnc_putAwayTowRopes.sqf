@@ -1,19 +1,20 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 params ["_player", "_vehicle"];
 
 if(local _vehicle) then {
   private ["_existingTowRopes","_hitchPoint","_rope"];
 
-  _existingTowRopes = _vehicle getVariable ["keko_advancedtowing_towRopes",[]];
+  _existingTowRopes = _vehicle getVariable [QGVAR(towRopes),[]];
   if(count _existingTowRopes > 0) then {
-    _this call keko_advancedtowing_fnc_pickupTowRopes;
-    _this call keko_advancedtowing_fnc_dropTowRopes;
+    _this call FUNC(pickupTowRopes);
+    _this call FUNC(dropTowRopes);
     {
       ropeDestroy _x;
     } forEach _existingTowRopes;
-    _vehicle setVariable ["keko_advancedtowing_towRopes",nil,true];
+    _vehicle setVariable [QGVAR(towRopes),nil,true];
   };
 } else {
-  _this remoteExecCall ["keko_advancedtowing_fnc_putAwayTowRopes", _vehicle];
+  _this remoteExecCall [QFUNC(putAwayTowRopes), _vehicle];
 };

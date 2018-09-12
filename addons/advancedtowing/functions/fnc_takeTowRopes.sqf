@@ -1,4 +1,5 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 params ["_player", "_vehicle"];
 
@@ -9,12 +10,12 @@ if(local _vehicle) then {
 
 	_existingTowRopes = _vehicle getVariable ["keko_advancedtowing_towRopes",[]];
 	if(count _existingTowRopes == 0) then {
-		_hitchPoint = [_vehicle] call keko_advancedtowing_fnc_getHitchPoints select 1;
-		_rope = ropeCreate [_vehicle, _hitchPoint, keko_settings_advancedtowing_maxRopeLength];
+		_hitchPoint = [_vehicle] call FUNC(getHitchPoints) select 1;
+		_rope = ropeCreate [_vehicle, _hitchPoint, GVAR(maxRopeLength)];
 		_vehicle setVariable ["keko_advancedtowing_towRopes",[_rope],true];
 		_player setVariable ["keko_advancedtowing_towRopesVehicle", _vehicle];
-		_this call keko_advancedtowing_fnc_pickupTowRopes;
+		_this call FUNC(pickupTowRopes);
 	};
 } else {
-	_this remoteExecCall ["keko_advancedtowing_fnc_takeTowRopes", _vehicle];
+	_this remoteExecCall [QFUNC(takeTowRopes), _vehicle];
 };
