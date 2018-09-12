@@ -25,12 +25,12 @@ Parameters:
 */
 
 [
-	"keko_settings_advancedtowing_enabled", // key/reference variable
+	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Advanced Towing", "Enable/Disable Advanced Towing"], // name and tooltip
 	"Kellerkompanie Advanced Towing", // category
 	[
-		[1,0], // values
+		[true,false], // values
 		["Enabled","Disabled"], // names
 		0 // default index
 	],
@@ -38,7 +38,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_advancedtowing_maxRopeLength", // key/reference variable
+	QGVAR(maxRopeLength), // key/reference variable
 	"SLIDER", // type of setting
 	["Max Rope Length", "Set the maximum length of the towing rope"], // name and tooltip
 	"Kellerkompanie Advanced Towing", // category
@@ -52,7 +52,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_advancedtowing_classRestriction", // key/reference variable
+	QGVAR(classRestriction), // key/reference variable
 	"LIST", // type of setting
 	["Limit to class", "Limit towing ability to specific class"], // name and tooltip
 	"Kellerkompanie Advanced Towing", // category
@@ -65,7 +65,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_advancedtowing_maxTowedVehicles", // key/reference variable
+	QGVAR(maxTowedVehicles), // key/reference variable
 	"SLIDER", // type of setting
 	["Max towed vehicles", "Set the maximum number of vehicles that can be towed"], // name and tooltip
 	"Kellerkompanie Advanced Towing", // category

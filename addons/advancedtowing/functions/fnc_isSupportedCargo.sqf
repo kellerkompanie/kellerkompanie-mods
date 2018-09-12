@@ -1,4 +1,5 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 params ["_vehicle","_cargo"];
 

@@ -1,19 +1,20 @@
 // original version by Duda https://github.com/sethduda/AdvancedTowing
+#include "script_component.hpp"
 
 params ["_player", "_vehicle"];
 
 if(local _vehicle) then {
 	private ["_helper"];
-	_helper = (_player getVariable ["keko_advancedtowing_towRopesPickUpHelper", objNull]);
+	_helper = (_player getVariable [QGVAR(towRopesPickUpHelper), objNull]);
 	if(!isNull _helper) then {
 		{
 			_helper ropeDetach _x;
-		} forEach (_vehicle getVariable ["keko_advancedtowing_towRopes",[]]);
+		} forEach (_vehicle getVariable [QGVAR(towRopes),[]]);
 		detach _helper;
 		deleteVehicle _helper;
 	};
-	_player setVariable ["keko_advancedtowing_towRopesVehicle", nil, true];
-	_player setVariable ["keko_advancedtowing_towRopesPickUpHelper", nil, true];
+	_player setVariable [QGVAR(towRopesVehicle), nil, true];
+	_player setVariable [QGVAR(towRopesPickUpHelper), nil, true];
 } else {
-	_this remoteExecCall ["keko_advancedtowing_fnc_dropTowRopes", _vehicle];
+	_this remoteExecCall [QFUNC(dropTowRopes), _vehicle];
 };
