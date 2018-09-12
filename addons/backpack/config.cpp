@@ -3,18 +3,19 @@
 class CfgPatches {
 	class ADDON	{
 		name = COMPONENT_NAME;
-		units[] = {};		
+		units[] = {};
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"cba_main",
 			"cba_settings",
 			"cba_xeh",
-			"ace_main"};
+			"ace_main",
+			"ace_interact_menu"};
 		author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 		
+        VERSION_CONFIG;
 	};
 };
 

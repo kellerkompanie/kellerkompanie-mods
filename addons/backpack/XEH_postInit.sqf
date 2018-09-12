@@ -14,31 +14,21 @@
  *
  * Public: Yes
  */
-if !(isNil "ace_interact_menu_fnc_createAction") then {
-	private _action = ["keko_backpack_lock","Lock backpack","",{
-		ace_player setVariable ["keko_backpack_locked", true, true];
-		[{["Backpack locked"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;
-	},{!isNull (unitBackpack ace_player) && {!(ace_player getVariable ["keko_backpack_locked",false])}}] call ace_interact_menu_fnc_createAction;
+#include "script_component.hpp"
 
-	[typeOf ace_player, 1, ["ACE_SelfActions","ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
+private _action = [QGVAR(backpackLockAction),"Lock backpack","",{
+	ace_player setVariable [QGVAR(backpackIsLocked), true, true];
+	[{["Backpack locked"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;
+},{!isNull (unitBackpack ace_player) && {!(ace_player getVariable [QGVAR(backpackIsLocked),false])}}] call ace_interact_menu_fnc_createAction;
 
-	_action = ["keko_backpack_unlock","Unlock backpack","",{
-		ace_player setVariable ["keko_backpack_locked", false, true];
-		[{["Backpack unlocked"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;
-	},{!isNull (unitBackpack ace_player) && {ace_player getVariable ["keko_backpack_locked",false]}}] call ace_interact_menu_fnc_createAction;
+[typeOf ace_player, 1, ["ACE_SelfActions","ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-	[typeOf ace_player, 1, ["ACE_SelfActions","ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
-} else {
-	[["Lock backpack", {
-		player setVariable ["keko_backpack_locked", true, true];
-		hint "Backpack locked";
-	},nil,0,false,true,"","!isNull (unitBackpack player) && {!(player getVariable ['keko_backpack_locked',false])}"]] call CBA_fnc_addPlayerAction;
+_action = [QGVAR(backpackUnlockAction),"Unlock backpack","",{
+	ace_player setVariable [QGVAR(backpackIsLocked), false, true];
+	[{["Backpack unlocked"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;
+},{!isNull (unitBackpack ace_player) && {ace_player getVariable [QGVAR(backpackIsLocked),false]}}] call ace_interact_menu_fnc_createAction;
 
-	[["Unlock backpack", {
-		player setVariable ["keko_backpack_locked", false, true];
-		hint "Backpack unlocked";
-	},nil,0,false,true,"","!isNull (unitBackpack player) && {player getVariable ['keko_backpack_locked',false]}"]] call CBA_fnc_addPlayerAction;
-};
+[typeOf ace_player, 1, ["ACE_SelfActions","ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-["unit", keko_backpack_fnc_checkUnlockBP] call CBA_fnc_addPlayerEventHandler;
-["loadout", keko_backpack_fnc_checkUnlockBP] call CBA_fnc_addPlayerEventHandler;
+["unit", FUNC(checkUnlockBP)] call CBA_fnc_addPlayerEventHandler;
+["loadout", FUNC(checkUnlockBP)] call CBA_fnc_addPlayerEventHandler;
