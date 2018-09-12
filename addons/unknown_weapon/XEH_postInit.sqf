@@ -33,7 +33,7 @@ if(isServer) then {
 	publicVariable "keko_unknown_weapon_whitelist";
 };
 
-waitUntil{sleep 1; !isNil "keko_unknown_weapon_whitelist"};
+waitUntil{!isNil "keko_unknown_weapon_whitelist"};
 
 diag_log text format["[KEKO] (unknown_weapon) whitelist after init: %1", keko_unknown_weapon_whitelist];
 
