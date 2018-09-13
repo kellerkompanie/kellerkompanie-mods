@@ -1,4 +1,5 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
+#include "script_component.hpp"
 
 private ["_al_grenade","_shooter","_poz_g","_zgud","_obj_emp"];
 
@@ -7,27 +8,27 @@ _delay_check = 0.01;
 ["earthquake_02"] remoteExec ["playSound", [0,-2] select isDedicated];
 
 {
-	[_x] remoteExec ["keko_emp_fnc_affectVehicle", _x];
-	[_x] remoteExec ["keko_emp_fnc_tgtSFX", [0,-2] select isDedicated];
+	[_x] remoteExec [QFUNC(affectVehicle), _x];
+	[_x] remoteExec [QFUNC(tgtSFX), [0,-2] select isDedicated];
 	sleep _delay_check;
 } forEach list_car_emp;
 
 {
-	[_x] remoteExec ["keko_emp_fnc_affectLight", _x];
-	[_x] remoteExec ["keko_emp_fnc_sparky", [0,-2] select isDedicated];
+	[_x] remoteExec [QFUNC(affectLight), _x];
+	[_x] remoteExec [QFUNC(sparky), [0,-2] select isDedicated];
 	sleep _delay_check;
 } forEach list_light_emp;
 
 {
-	[_x] remoteExec ["keko_emp_fnc_affectStaticTurret", _x];
-	[_x] remoteExec ["keko_emp_fnc_sparky", [0,-2] select isDedicated];
+	[_x] remoteExec [QFUNC(affectStaticTurret), _x];
+	[_x] remoteExec [QFUNC(sparky), [0,-2] select isDedicated];
 	sleep _delay_check;
 } forEach static_turrets_emp;
 
 ["geiger"] remoteExec ["playSound", [0,-2] select isDedicated];
 
 {
-	[_x] remoteExec ["keko_emp_fnc_tgtSFX", [0,-2] select isDedicated];
+	[_x] remoteExec [QFUNC(tgtSFX), [0,-2] select isDedicated];
 	removeGoggles _x;
 
 	_x removeWeaponGlobal "Rangefinder";
