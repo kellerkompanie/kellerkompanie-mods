@@ -1,8 +1,8 @@
 class CfgSounds {
-	sounds[] = {"keko_KillSound"};
+	sounds[] = {QGVAR(KillSound)};
 
-	class keko_KillSound {
-		name = "keko_KillSound";
+	class GVAR(KillSound) {
+		name = QGVAR(KillSound);
 		sound[] = {QPATHTOF(sounds\neckSound.ogg), 3, 1};
 		titles[] = {};
 	};
