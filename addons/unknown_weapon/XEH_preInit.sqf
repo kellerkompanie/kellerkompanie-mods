@@ -26,7 +26,7 @@ Parameters:
 #define CBA_SETTINGS_CAT "Kellerkompanie Unknown Weapon"
 
 [
-    "keko_settings_unknown_weapon_enable",
+    QGVAR(enabled),
     "CHECKBOX",
     ["Enable","Enable/Disable punishing unknown weapons"],
     CBA_SETTINGS_CAT,
@@ -35,7 +35,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_keko_loadout",
+    QGVAR(keko_loadout),
     "CHECKBOX",
     ["Add Keko faction weapons","Set if the server should sync weapons from the selected Kellerkompanie Loadout Faction."],
     CBA_SETTINGS_CAT,
@@ -44,7 +44,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_add_weapons",
+    QGVAR(add_weapons),
     "EDITBOX",
     ["Add to whitelist","Use this to add primary weapons players will not have on mission start. Write in classnames with commas separating them, NO WHITESPACES!"],
     CBA_SETTINGS_CAT,
@@ -53,7 +53,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_dispersion_add",
+    QGVAR(dispersion_add),
     "SLIDER",
     ["Add weapon dispersion","This will add a flat value to dispersion"],
     CBA_SETTINGS_CAT,
@@ -62,7 +62,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_jamchance_add",
+    QGVAR(jamchance_add),
     "SLIDER",
     ["Add jam chance","This will add the selected percentage to the weapon"],
     CBA_SETTINGS_CAT,
@@ -71,7 +71,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_reload_failure",
+    QGVAR(reload_failure),
     "SLIDER",
     ["Reload failure chance","Chance that the reload wil fail and leave an empty mag inside the gun"],
     CBA_SETTINGS_CAT,
@@ -80,7 +80,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_jam_explosion",
+    QGVAR(jam_explosion),
     "SLIDER",
     ["Chance to destroy weapon on jam","Chance that the unkown weapon will be destroyed and inflict small damage to player when it jams"],
     CBA_SETTINGS_CAT,
@@ -89,7 +89,7 @@ Parameters:
 ] call CBA_Settings_fnc_init;
 
 [
-    "keko_settings_unknown_weapon_briefing",
+    QGVAR(briefing),
     "CHECKBOX",
     ["Add briefing entry","Add a diary entry that this script is active"],
     CBA_SETTINGS_CAT,

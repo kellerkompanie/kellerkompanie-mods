@@ -1,59 +1,61 @@
-if ! (keko_settings_unknown_weapon_enable) exitWith {diag_log text "[KEKO] (unknown_weapon) keko_settings_unknown_weapon_enable = false"};
+#include "script_component.hpp"
+
+if ! (GVAR(enabled)) exitWith {diag_log text "[KEKO] (unknown_weapon) keko_settings_unknown_weapon_enable = false"};
 
 if ! (isClass(configFile >> "CfgPatches" >> "ace_overheating")) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not found! Punishing unknown weapons cannot be used!"};
 if ! (ace_overheating_enabled) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not enabled! Punishing unknown weapons cannot be used!"};
 
-if(missionNamespace getVariable ["keko_unknown_weapon_init",false]) exitWith {};
-missionNamespace setVariable ["keko_unknown_weapon_init",true];
+if(missionNamespace getVariable [QGVAR(init),false]) exitWith {};
+missionNamespace setVariable [QGVAR(init),true];
 
 if ! (ace_overheating_overheatingDispersion) then {diag_log text "[KEKO] (unknown_weapon) Warning, ACE dispersion not enabled!"};
 
-if(isNil "keko_unknown_weapon_local_weapons") then {
-	keko_unknown_weapon_local_weapons = [];
+if(isNil QGVAR(local_weapons)) then {
+	GVAR(local_weapons) = [];
 };
 
 diag_log text "[KEKO] (unknown_weapon) running postInit";
 
 if(isServer) then {
-	keko_unknown_weapon_whitelist = [];
+	GVAR(whitelist) = [];
 
-	if(keko_settings_unknown_weapon_keko_loadout) then {
-		[] call keko_unknown_weapon_fnc_addKekoFactionWeapons;
+	if(GVAR(keko_loadout)) then {
+		[] call FUNC(addKekoFactionWeapons);
 	};
 
-	if(typeName keko_settings_unknown_weapon_add_weapons == typeName "") then {
-		keko_settings_unknown_weapon_add_weapons = keko_settings_unknown_weapon_add_weapons splitString ",";
+	if(typeName GVAR(add_weapons) == typeName "") then {
+		GVAR(add_weapons) = GVAR(add_weapons) splitString ",";
 		{
-			keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
+			GVAR(whitelist) pushBackUnique toUpper(_x);
 			false
-		} count keko_settings_unknown_weapon_add_weapons;
+		} count GVAR(add_weapons);
 	};
 
-	diag_log text format ["[KEKO] (unknown_weapon) propagation disabled, whitelist now: %1", keko_unknown_weapon_whitelist];
-	publicVariable "keko_unknown_weapon_whitelist";
+	diag_log text format ["[KEKO] (unknown_weapon) propagation disabled, whitelist now: %1", GVAR(whitelist)];
+	publicVariable QGVAR(whitelist);
 };
 
-waitUntil{!isNil "keko_unknown_weapon_whitelist"};
+waitUntil{!isNil QGVAR(whitelist)};
 
-diag_log text format["[KEKO] (unknown_weapon) whitelist after init: %1", keko_unknown_weapon_whitelist];
+diag_log text format["[KEKO] (unknown_weapon) whitelist after init: %1", GVAR(whitelist)];
 
 if(hasInterface) then {
 	diag_log text "[KEKO] (unknown_weapon) running client side functions";
 
-	if(keko_settings_unknown_weapon_briefing) then {
+	if(GVAR(briefing)) then {
 		player createDiaryRecord ["Diary", ["Aufnahme von Fremdwaffen", "<font size='25'>Warnung: Bestrafung von unbekannten Waffen ist aktiviert!</font><br/><font size='15'>Aufnahme von unbekannten Waffen, z.B. Feindwaffen, hat eine katastrophale Waffeneffizienz zur Folge!<br/>Symptome können verschlechterte Genauigkeit, höhere Jamming Wahrscheinlichkeit und Nachladefehler sein, da das Handling sowie der Zustand der Waffen beeinträchtigt sind.<br/><br/>In extremen Fällen kann Munition eine Fehlzündung haben, was eine Zerstörung der Waffe und Verletzungen zur Folge haben kann!"]];
 	};
 
   	player addEventHandler["Fired",{
 		_weapon = _this select 1;
 		if(!(primaryWeapon ace_player == _weapon)) exitWith {};
-		if(isNil "keko_unknown_weapon_whitelist") exitWith {};
+		if(isNil QGVAR(whitelist)) exitWith {};
 
 		private _weaponData = ace_overheating_cacheWeaponData getVariable _weapon;
 		if(isNil "_weaponData") then {
 			private _weaponUpper = toUpper(_weapon);
 			// weapon class has not been initialized
-			if(!(_weaponUpper in keko_unknown_weapon_whitelist || {_weaponUpper in keko_unknown_weapon_local_weapons})) then {
+			if(!(_weaponUpper in GVAR(whitelist) || {_weaponUpper in GVAR(local_weapons)})) then {
 				// weapon not in whitelist
 				_weaponData = [_weapon] call ace_overheating_fnc_getWeaponData;
 				/*
@@ -61,8 +63,8 @@ if(hasInterface) then {
 				* 1: slowdownFactor <NUMBER>
 				* 2: jamChance <NUMBER>
 				*/
-				_weaponData set[0,(_weaponData#0 + keko_settings_unknown_weapon_dispersion_add)];
-				_weaponData set[2,(_weaponData#2 + (keko_settings_unknown_weapon_jamchance_add / 100))];
+				_weaponData set[0,(_weaponData#0 + GVAR(dispersion_add))];
+				_weaponData set[2,(_weaponData#2 + (GVAR(jamchance_add) / 100))];
 				ace_overheating_cacheWeaponData setVariable [_weapon, _weaponData];
 			};
 		};
@@ -72,12 +74,12 @@ if(hasInterface) then {
 		params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
 
 		if(!(primaryWeapon ace_player == _weapon)) exitWith {};
-		if(isNil "keko_unknown_weapon_whitelist") exitWith {};
+		if(isNil QGVAR(whitelist)) exitWith {};
 
 		private _weaponUpper = toUpper(_weapon);
-		if(!(_weaponUpper in keko_unknown_weapon_whitelist || {_weaponUpper in keko_unknown_weapon_local_weapons})) then {
+		if(!(_weaponUpper in GVAR(whitelist) || {_weaponUpper in GVAR(local_weapons)})) then {
 			// weapon not in whitelist
-			if( (random 100) <= keko_settings_unknown_weapon_reload_failure ) then {
+			if( (random 100) <= GVAR(reload_failure) ) then {
 				// reload failed
 				ace_player addMagazine [_newMagazine#0, _newMagazine#1];
 				ace_player setAmmo [_weapon, 0];
@@ -92,11 +94,11 @@ if(hasInterface) then {
 
 		if(_unit == ace_player) then {
 			if(!(primaryWeapon ace_player == _weapon)) exitWith {};
-			if(isNil "keko_unknown_weapon_whitelist") exitWith {};
+			if(isNil QGVAR(whitelist)) exitWith {};
 
 			private _weaponUpper = toUpper(_weapon);
-			if(!(_weaponUpper in keko_unknown_weapon_whitelist || {_weaponUpper in keko_unknown_weapon_local_weapons})) then {
-				if((random 100) < keko_settings_unknown_weapon_jam_explosion) then {
+			if(!(_weaponUpper in GVAR(whitelist) || {_weaponUpper in GVAR(local_weapons)})) then {
+				if((random 100) < GVAR(jam_explosion)) then {
 					private _model = getText(configfile >> "cfgweapons" >> _weapon >> "model");
 					if ((_model find ".") == -1) then {
 						_model = _model + ".p3d";
