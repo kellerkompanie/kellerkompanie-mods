@@ -1,15 +1,15 @@
 class CfgVehicleClasses {
-	class keko_vehicleclass_generic_blufor {
+	class GVAR(blufor) {
 		displayName = "Men";
 		priority = 2;
 		scopeCurator = 1;
 	};
-	class keko_vehicleclass_generic_indfor {
+	class GVAR(indfor) {
 		displayName = "Men";
 		priority = 2;
 		scopeCurator = 1;
 	};
-	class keko_vehicleclass_generic_opfor {
+	class GVAR(opfor) {
 		displayName = "Men";
 		priority = 2;
 		scopeCurator = 1;

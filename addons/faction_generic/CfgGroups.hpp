@@ -2,654 +2,654 @@ class CfgGroups
 {
 	class west
 	{
-		class keko_faction_generic_blufor
+		class GVAR(blufor)
 		{
 			name = "Kellerkompanie BLUFOR";
 			class Infantry
 			{
 				name = "Infantry";
-				class keko_faction_generic_blufor_ft_1
+				class GVAR(blufor_ft_1)
 				{
 					name = "Fire Team (Grenadier/LMG/AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_grenadier";
+						vehicle = QGVAR(blufor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_rifleman_at";
+						vehicle = QGVAR(blufor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_2
+				class GVAR(blufor_ft_2)
 				{
 					name = "Fire Team (LMG/LMG Asst./Marksman)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_lmg_asst";
+						vehicle = QGVAR(blufor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_marksman";
+						vehicle = QGVAR(blufor_marksman);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_3
+				class GVAR(blufor_ft_3)
 				{
 					name = "Fire Team (AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_at";
+						vehicle = QGVAR(blufor_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_at";
+						vehicle = QGVAR(blufor_at);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_at_asst";
+						vehicle = QGVAR(blufor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_4
+				class GVAR(blufor_ft_4)
 				{
 					name = "Fire Team (AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_aa";
+						vehicle = QGVAR(blufor_aa);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_aa";
+						vehicle = QGVAR(blufor_aa);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_aa_asst";
+						vehicle = QGVAR(blufor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_5
+				class GVAR(blufor_ft_5)
 				{
 					name = "Fire Team (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_mmg";
+						vehicle = QGVAR(blufor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_mmg";
+						vehicle = QGVAR(blufor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_mmg_asst";
+						vehicle = QGVAR(blufor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_6
+				class GVAR(blufor_ft_6)
 				{
 					name = "Fire Team (Support)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_eod";
+						vehicle = QGVAR(blufor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_uav";
+						vehicle = QGVAR(blufor_uav);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_7
+				class GVAR(blufor_ft_7)
 				{
 					name = "Fire Team (Logistics)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_ft_8
+				class GVAR(blufor_ft_8)
 				{
 					name = "Fire Team (EOD)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_eod";
+						vehicle = QGVAR(blufor_eod);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_eod";
+						vehicle = QGVAR(blufor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_eod";
+						vehicle = QGVAR(blufor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_eod";
+						vehicle = QGVAR(blufor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_blufor_medics
+				class GVAR(blufor_medics)
 				{
 					name = "Medical Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_doctor";
+						vehicle = QGVAR(blufor_doctor);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
-				};	
-				class keko_faction_generic_blufor_squad_1
+				};
+				class GVAR(blufor_squad_1)
 				{
 					name = "Squad";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = QGVAR(blufor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_grenadier";
+						vehicle = QGVAR(blufor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_blufor_rifleman_at";
+						vehicle = QGVAR(blufor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_blufor_grenadier";
+						vehicle = QGVAR(blufor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg)
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_blufor_rifleman_at";
+						vehicle = QGVAR(blufor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
 				};
-				class keko_faction_generic_blufor_squad_2
+				class GVAR(blufor_squad_2)
 				{
 					name = "Squad (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = QGVAR(blufor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_mmg";
+						vehicle = QGVAR(blufor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_mmg_asst";
+						vehicle = QGVAR(blufor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_blufor_mmg";
+						vehicle = QGVAR(blufor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_blufor_mmg_asst";
+						vehicle = QGVAR(blufor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_blufor_mmg";
+						vehicle = QGVAR(blufor_mmg);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_blufor_mmg_asst";
+						vehicle = QGVAR(blufor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_blufor_squad_3
+				};
+				class GVAR(blufor_squad_3)
 				{
 					name = "Squad (AT/AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = QGVAR(blufor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_at";
+						vehicle = QGVAR(blufor_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_at_asst";
+						vehicle = QGVAR(blufor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_blufor_at";
+						vehicle = QGVAR(blufor_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_blufor_at_asst";
+						vehicle = QGVAR(blufor_at_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_blufor_aa";
+						vehicle = QGVAR(blufor_aa);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_blufor_aa_asst";
+						vehicle = QGVAR(blufor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_blufor_squad_4
+				};
+				class GVAR(blufor_squad_4)
 				{
 					name = "Squad (no AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = QGVAR(blufor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_medic";
+						vehicle = QGVAR(blufor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_grenadier";
+						vehicle = QGVAR(blufor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_blufor_lmg_asst";
+						vehicle = QGVAR(blufor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_blufor_ftl";
+						vehicle = QGVAR(blufor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_blufor_grenadier";
+						vehicle = QGVAR(blufor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_blufor_lmg";
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_blufor_lmg_asst";
+						vehicle = QGVAR(blufor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
-				};	
-				class keko_faction_generic_blufor_vehicle_crew
+				};
+				class GVAR(blufor_vehicle_crew)
 				{
 					name = "Vehicle Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sql";
+						vehicle = QGVAR(blufor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "CORPORAL";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_blufor_heli_crew
+				};
+				class GVAR(blufor_heli_crew)
 				{
 					name = "Helicopter Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_heli_pilot";
+						vehicle = QGVAR(blufor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_heli_pilot";
+						vehicle = QGVAR(blufor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
-				};	
-				class keko_faction_generic_blufor_lead
+				};
+				class GVAR(blufor_lead)
 				{
 					name = "Lead Element";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_lead";
+						vehicle = QGVAR(blufor_lead);
 						rank = "LIEUTENANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_sergeant";
+						vehicle = QGVAR(blufor_sergeant);
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_doctor";
+						vehicle = QGVAR(blufor_doctor);
 						rank = "SERGEANT";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_blufor_zeus
+				};
+				class GVAR(blufor_zeus)
 				{
 					name = "Zeus";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_command";
+						vehicle = QGVAR(blufor_command);
 						rank = "COLONEL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_command";
+						vehicle = QGVAR(blufor_command);
 						rank = "COLONEL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_command";
+						vehicle = QGVAR(blufor_command);
 						rank = "COLONEL";
 						position[] = {6,0,0};
 					};
 				};
-				class keko_faction_generic_blufor_heli_crew_doorgunner
+				class GVAR(blufor_heli_crew_doorgunner)
 				{
 					name = "Helicopter Crew (with Gunners)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_heli_pilot";
+						vehicle = QGVAR(blufor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_heli_pilot";
+						vehicle = QGVAR(blufor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_blufor_heli_crew";
+						vehicle = QGVAR(blufor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {0,3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_blufor_heli_crew";
+						vehicle = QGVAR(blufor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {3,3,0};
 					};
 				};
-				class keko_faction_generic_blufor_sniper
+				class GVAR(blufor_sniper)
 				{
 					name = "Sniper Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_sniper";
+						vehicle = QGVAR(blufor_sniper);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_spotter";
+						vehicle = QGVAR(blufor_spotter);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 				};
-				class keko_faction_generic_blufor_uav
+				class GVAR(blufor_uav)
 				{
 					name = "UAV Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_blufor_uav";
+						vehicle = QGVAR(blufor_uav);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_blufor_engineer";
+						vehicle = QGVAR(blufor_engineer);
 						rank = "PRIVATE";
 						position[] = {3,0,0};
 					};
@@ -661,654 +661,654 @@ class CfgGroups
 
 	class east
 	{
-		class keko_faction_generic_opfor
+		class GVAR(opfor)
 		{
 			name = "Kellerkompanie OPFOR";
 			class Infantry
 			{
 				name = "Infantry";
-				class keko_faction_generic_opfor_ft_1
+				class GVAR(opfor_ft_1)
 				{
 					name = "Fire Team (Grenadier/LMG/AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_grenadier";
+						vehicle = QGVAR(opfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_rifleman_at";
+						vehicle = QGVAR(opfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_2
+				class GVAR(opfor_ft_2)
 				{
 					name = "Fire Team (LMG/LMG Asst./Marksman)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_lmg_asst";
+						vehicle = QGVAR(opfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_marksman";
+						vehicle = QGVAR(opfor_marksman);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_3
+				class GVAR(opfor_ft_3)
 				{
 					name = "Fire Team (AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_rifleman_at";
+						vehicle = QGVAR(opfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_at";
+						vehicle = QGVAR(opfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_at_asst";
+						vehicle = QGVAR(opfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_4
+				class GVAR(opfor_ft_4)
 				{
 					name = "Fire Team (AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_rifleman_at";
+						vehicle = QGVAR(opfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_aa";
+						vehicle = QGVAR(opfor_aa);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_aa_asst";
+						vehicle = QGVAR(opfor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_5
+				class GVAR(opfor_ft_5)
 				{
 					name = "Fire Team (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_mmg";
+						vehicle = QGVAR(opfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_mmg";
+						vehicle = QGVAR(opfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_mmg_asst";
+						vehicle = QGVAR(opfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_6
+				class GVAR(opfor_ft_6)
 				{
 					name = "Fire Team (Support)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_eod";
+						vehicle = QGVAR(opfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_uav";
+						vehicle = QGVAR(opfor_uav);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_7
+				class GVAR(opfor_ft_7)
 				{
 					name = "Fire Team (Logistics)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_ft_8
+				class GVAR(opfor_ft_8)
 				{
 					name = "Fire Team (EOD)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_eod";
+						vehicle = QGVAR(opfor_eod);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_eod";
+						vehicle = QGVAR(opfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_eod";
+						vehicle = QGVAR(opfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_eod";
+						vehicle = QGVAR(opfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_opfor_medics
+				class GVAR(opfor_medics)
 				{
 					name = "Medical Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_doctor";
+						vehicle = QGVAR(opfor_doctor);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
-				};	
-				class keko_faction_generic_opfor_squad_1
+				};
+				class GVAR(opfor_squad_1)
 				{
 					name = "Squad";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = QGVAR(opfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_grenadier";
+						vehicle = QGVAR(opfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_opfor_rifleman_at";
+						vehicle = QGVAR(opfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_opfor_grenadier";
+						vehicle = QGVAR(opfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_opfor_rifleman_at";
+						vehicle = QGVAR(opfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
 				};
-				class keko_faction_generic_opfor_squad_2
+				class GVAR(opfor_squad_2)
 				{
 					name = "Squad (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = QGVAR(opfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_mmg";
+						vehicle = QGVAR(opfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_mmg_asst";
+						vehicle = QGVAR(opfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_opfor_mmg";
+						vehicle = QGVAR(opfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_opfor_mmg_asst";
+						vehicle = QGVAR(opfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_opfor_mmg";
+						vehicle = QGVAR(opfor_mmg);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_opfor_mmg_asst";
+						vehicle = QGVAR(opfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_opfor_squad_3
+				};
+				class GVAR(opfor_squad_3)
 				{
 					name = "Squad (AT/AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = QGVAR(opfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_at";
+						vehicle = QGVAR(opfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_at_asst";
+						vehicle = QGVAR(opfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_opfor_at";
+						vehicle = QGVAR(opfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_opfor_at_asst";
+						vehicle = QGVAR(opfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_opfor_aa";
+						vehicle = QGVAR(opfor_aa);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_opfor_aa_asst";
+						vehicle = QGVAR(opfor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_opfor_squad_4
+				};
+				class GVAR(opfor_squad_4)
 				{
 					name = "Squad (no AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = QGVAR(opfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_medic";
+						vehicle = QGVAR(opfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_grenadier";
+						vehicle = QGVAR(opfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_opfor_lmg_asst";
+						vehicle = QGVAR(opfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_opfor_ftl";
+						vehicle = QGVAR(opfor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_opfor_grenadier";
+						vehicle = QGVAR(opfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_opfor_lmg";
+						vehicle = QGVAR(opfor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_opfor_lmg_asst";
+						vehicle = QGVAR(opfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
-				};	
-				class keko_faction_generic_opfor_vehicle_crew
+				};
+				class GVAR(opfor_vehicle_crew)
 				{
 					name = "Vehicle Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sql";
+						vehicle = QGVAR(opfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "CORPORAL";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_opfor_heli_crew
+				};
+				class GVAR(opfor_heli_crew)
 				{
 					name = "Helicopter Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_heli_pilot";
+						vehicle = QGVAR(opfor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_heli_pilot";
+						vehicle = QGVAR(opfor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
-				};	
-				class keko_faction_generic_opfor_lead
+				};
+				class GVAR(opfor_lead)
 				{
 					name = "Lead Element";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_lead";
+						vehicle = QGVAR(opfor_lead);
 						rank = "LIEUTENANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_sergeant";
+						vehicle = QGVAR(opfor_sergeant);
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_doctor";
+						vehicle = QGVAR(opfor_doctor);
 						rank = "SERGEANT";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_opfor_zeus
+				};
+				class GVAR(opfor_zeus)
 				{
 					name = "Zeus";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_command";
+						vehicle = QGVAR(opfor_command);
 						rank = "COLONEL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_command";
+						vehicle = QGVAR(opfor_command);
 						rank = "COLONEL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_command";
+						vehicle = QGVAR(opfor_command);
 						rank = "COLONEL";
 						position[] = {6,0,0};
 					};
 				};
-				class keko_faction_generic_opfor_heli_crew_doorgunner
+				class GVAR(opfor_heli_crew_doorgunner)
 				{
 					name = "Helicopter Crew (with Gunners)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_heli_pilot";
+						vehicle = QGVAR(opfor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_heli_pilot";
+						vehicle = QGVAR(opfor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_opfor_heli_crew";
+						vehicle = QGVAR(opfor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {0,3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_opfor_heli_crew";
+						vehicle = QGVAR(opfor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {3,3,0};
 					};
 				};
-				class keko_faction_generic_opfor_sniper
+				class GVAR(opfor_sniper)
 				{
 					name = "Sniper Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_sniper";
+						vehicle = QGVAR(opfor_sniper);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_spotter";
+						vehicle = QGVAR(opfor_spotter);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 				};
-				class keko_faction_generic_opfor_uav
+				class GVAR(opfor_uav)
 				{
 					name = "UAV Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_opfor_uav";
+						vehicle = QGVAR(opfor_uav);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_opfor_engineer";
+						vehicle = QGVAR(opfor_engineer);
 						rank = "PRIVATE";
 						position[] = {3,0,0};
 					};
@@ -1319,654 +1319,654 @@ class CfgGroups
 
 	class indep
 	{
-		class keko_faction_generic_indfor
+		class GVAR(indfor)
 		{
 			name = "Kellerkompanie INDFOR";
 			class Infantry
 			{
 				name = "Infantry";
-				class keko_faction_generic_indfor_ft_1
+				class GVAR(indfor_ft_1)
 				{
 					name = "Fire Team (Grenadier/LMG/AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_grenadier";
+						vehicle = QGVAR(indfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_rifleman_at";
+						vehicle = QGVAR(indfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_2
+				class GVAR(indfor_ft_2)
 				{
 					name = "Fire Team (LMG/LMG Asst./Marksman)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_lmg_asst";
+						vehicle = QGVAR(indfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_marksman";
+						vehicle = QGVAR(indfor_marksman);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_3
+				class GVAR(indfor_ft_3)
 				{
 					name = "Fire Team (AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_rifleman_at";
+						vehicle = QGVAR(indfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_at";
+						vehicle = QGVAR(indfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_at_asst";
+						vehicle = QGVAR(indfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_4
+				class GVAR(indfor_ft_4)
 				{
 					name = "Fire Team (AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_rifleman_at";
+						vehicle = QGVAR(indfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_aa";
+						vehicle = QGVAR(indfor_aa);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_aa_asst";
+						vehicle = QGVAR(indfor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_5
+				class GVAR(indfor_ft_5)
 				{
 					name = "Fire Team (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_mmg";
+						vehicle = QGVAR(indfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_mmg";
+						vehicle = QGVAR(indfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_mmg_asst";
+						vehicle = QGVAR(indfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_6
+				class GVAR(indfor_ft_6)
 				{
 					name = "Fire Team (Support)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_eod";
+						vehicle = QGVAR(indfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_uav";
+						vehicle = QGVAR(indfor_uav);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_7
+				class GVAR(indfor_ft_7)
 				{
 					name = "Fire Team (Logistics)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_ft_8
+				class GVAR(indfor_ft_8)
 				{
 					name = "Fire Team (EOD)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_eod";
+						vehicle = QGVAR(indfor_eod);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_eod";
+						vehicle = QGVAR(indfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_eod";
+						vehicle = QGVAR(indfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_eod";
+						vehicle = QGVAR(indfor_eod);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 				};
-				class keko_faction_generic_indfor_medics
+				class GVAR(indfor_medics)
 				{
 					name = "Medical Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_doctor";
+						vehicle = QGVAR(indfor_doctor);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
-				};	
-				class keko_faction_generic_indfor_squad_1
+				};
+				class GVAR(indfor_squad_1)
 				{
 					name = "Squad";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = QGVAR(indfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_grenadier";
+						vehicle = QGVAR(indfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_indfor_rifleman_at";
+						vehicle = QGVAR(indfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_indfor_grenadier";
+						vehicle = QGVAR(indfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_indfor_rifleman_at";
+						vehicle = QGVAR(indfor_rifleman_at);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
 				};
-				class keko_faction_generic_indfor_squad_2
+				class GVAR(indfor_squad_2)
 				{
 					name = "Squad (MMG)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = QGVAR(indfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_mmg";
+						vehicle = QGVAR(indfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_mmg_asst";
+						vehicle = QGVAR(indfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_indfor_mmg";
+						vehicle = QGVAR(indfor_mmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_indfor_mmg_asst";
+						vehicle = QGVAR(indfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_indfor_mmg";
+						vehicle = QGVAR(indfor_mmg);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_indfor_mmg_asst";
+						vehicle = QGVAR(indfor_mmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_indfor_squad_3
+				};
+				class GVAR(indfor_squad_3)
 				{
 					name = "Squad (AT/AA)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = QGVAR(indfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_at";
+						vehicle = QGVAR(indfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_at_asst";
+						vehicle = QGVAR(indfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_indfor_at";
+						vehicle = QGVAR(indfor_at);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_indfor_at_asst";
+						vehicle = QGVAR(indfor_at_asst);
 						rank = "PRIVATE";
 						position[] = {3,-3,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_indfor_aa";
+						vehicle = QGVAR(indfor_aa);
 						rank = "CORPORAL";
 						position[] = {3,-6,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_indfor_aa_asst";
+						vehicle = QGVAR(indfor_aa_asst);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
-				};	
-				class keko_faction_generic_indfor_squad_4
+				};
+				class GVAR(indfor_squad_4)
 				{
 					name = "Squad (no AT)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = QGVAR(indfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_medic";
+						vehicle = QGVAR(indfor_medic);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {0,-3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_grenadier";
+						vehicle = QGVAR(indfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {0,-6,0};
 					};
 					class Unit4
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {0,-9,0};
 					};
 					class Unit5
 					{
-						vehicle = "keko_indfor_lmg_asst";
+						vehicle = QGVAR(indfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {0,-12,0};
 					};
 					class Unit6
 					{
-						vehicle = "keko_indfor_ftl";
+						vehicle = QGVAR(indfor_ftl);
 						rank = "CORPORAL";
 						position[] = {3,-3,0};
 					};
 					class Unit7
 					{
-						vehicle = "keko_indfor_grenadier";
+						vehicle = QGVAR(indfor_grenadier);
 						rank = "PRIVATE";
 						position[] = {3,-6,0};
 					};
 					class Unit8
 					{
-						vehicle = "keko_indfor_lmg";
+						vehicle = QGVAR(indfor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
 					class Unit9
 					{
-						vehicle = "keko_indfor_lmg_asst";
+						vehicle = QGVAR(indfor_lmg_asst);
 						rank = "PRIVATE";
 						position[] = {3,-12,0};
 					};
-				};	
-				class keko_faction_generic_indfor_vehicle_crew
+				};
+				class GVAR(indfor_vehicle_crew)
 				{
 					name = "Vehicle Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sql";
+						vehicle = QGVAR(indfor_sql);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "CORPORAL";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_indfor_heli_crew
+				};
+				class GVAR(indfor_heli_crew)
 				{
 					name = "Helicopter Crew";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_heli_pilot";
+						vehicle = QGVAR(indfor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_heli_pilot";
+						vehicle = QGVAR(indfor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
-				};	
-				class keko_faction_generic_indfor_lead
+				};
+				class GVAR(indfor_lead)
 				{
 					name = "Lead Element";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_lead";
+						vehicle = QGVAR(indfor_lead);
 						rank = "LIEUTENANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_sergeant";
+						vehicle = QGVAR(indfor_sergeant);
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_doctor";
+						vehicle = QGVAR(indfor_doctor);
 						rank = "SERGEANT";
 						position[] = {6,0,0};
 					};
-				};	
-				class keko_faction_generic_indfor_zeus
+				};
+				class GVAR(indfor_zeus)
 				{
 					name = "Zeus";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_command";
+						vehicle = QGVAR(indfor_command);
 						rank = "COLONEL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_command";
+						vehicle = QGVAR(indfor_command);
 						rank = "COLONEL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_command";
+						vehicle = QGVAR(indfor_command);
 						rank = "COLONEL";
 						position[] = {6,0,0};
 					};
 				};
-				class keko_faction_generic_indfor_heli_crew_doorgunner
+				class GVAR(indfor_heli_crew_doorgunner)
 				{
 					name = "Helicopter Crew (with Gunners)";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_heli_pilot";
+						vehicle = QGVAR(indfor_heli_pilot);
 						rank = "SERGEANT";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_heli_pilot";
+						vehicle = QGVAR(indfor_heli_pilot);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
-						vehicle = "keko_indfor_heli_crew";
+						vehicle = QGVAR(indfor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {0,3,0};
 					};
 					class Unit3
 					{
-						vehicle = "keko_indfor_heli_crew";
+						vehicle = QGVAR(indfor_heli_crew);
 						rank = "PRIVATE";
 						position[] = {3,3,0};
 					};
 				};
-				class keko_faction_generic_indfor_sniper
+				class GVAR(indfor_sniper)
 				{
 					name = "Sniper Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_sniper";
+						vehicle = QGVAR(indfor_sniper);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_spotter";
+						vehicle = QGVAR(indfor_spotter);
 						rank = "CORPORAL";
 						position[] = {3,0,0};
 					};
 				};
-				class keko_faction_generic_indfor_uav
+				class GVAR(indfor_uav)
 				{
 					name = "UAV Team";
-					
+
 					class Unit0
 					{
-						vehicle = "keko_indfor_uav";
+						vehicle = QGVAR(indfor_uav);
 						rank = "CORPORAL";
 						position[] = {0,0,0};
 					};
 					class Unit1
 					{
-						vehicle = "keko_indfor_engineer";
+						vehicle = QGVAR(indfor_engineer);
 						rank = "PRIVATE";
 						position[] = {3,0,0};
 					};

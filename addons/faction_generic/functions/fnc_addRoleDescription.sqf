@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params["_entity"];
 
 _description = (_entity get3DENAttribute "description") select 0;
