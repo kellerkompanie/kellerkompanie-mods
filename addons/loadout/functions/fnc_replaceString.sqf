@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_str", "_toFind", "_subsitution", ["_numLimit",10,[1]], ["_limit",true,[true]]];
 if (typeName _toFind != typeName []) then {_toFind = [_toFind]};
 {

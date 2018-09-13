@@ -1,4 +1,5 @@
 // Original Author: Belbo [SeL] http://spezialeinheit-luchs.de/
+#include "script_component.hpp"
 
 params [
 	["_unit", player, [objNull]]

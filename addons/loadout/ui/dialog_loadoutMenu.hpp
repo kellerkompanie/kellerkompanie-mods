@@ -1,21 +1,20 @@
-class keko_loadout_menuDialog {
+class GVAR(menuDialog) {
 
 	idd = 11;
 	movingEnable = true;
 	enableSimulation = true;
-	
-	onload = "(_this) spawn keko_loadout_fnc_dialogLoadoutMenuInit;";
+	onload = QUOTE(_this spawn FUNC(dialogLoadoutMenuInit));
 
-	controls[] = { 
-		KEKO_LOADOUT_UI_BACK,	
-		KEKO_LOADOUT_UI_FRAME,
-		KEKO_LOADOUT_UI_LIST,
-		KEKO_LOADOUT_UI_TEXT,
-		KEKO_LOADOUT_UI_BUTTON_OK,
-		KEKO_LOADOUT_UI_BUTTON_CANCEL
+	controls[] = {
+		Back,
+		Frame,
+		List,
+		Text,
+		ButtonOk,
+		ButtonCancel
 	};
 
-	class KEKO_LOADOUT_UI_BACK: IGUIBack
+	class Back: IGUIBack
 	{
 		idc = 2200;
 		x = 0.06 * GUI_GRID_W + GUI_GRID_X;
@@ -25,7 +24,7 @@ class keko_loadout_menuDialog {
 		moving = 1;
 	};
 
-	class KEKO_LOADOUT_UI_FRAME: RscFrame
+	class Frame: RscFrame
 	{
 		idc = 1800;
 		text = "Loadout-Auswahlmenü";
@@ -36,7 +35,7 @@ class keko_loadout_menuDialog {
 		sizeEx = 1 * GUI_GRID_H;
 	};
 
-	class KEKO_LOADOUT_UI_LIST: RscListbox
+	class List: RscListbox
 	{
 		idc = 1500;
 		text = "Loadouts";
@@ -44,8 +43,8 @@ class keko_loadout_menuDialog {
 		y = 3 * GUI_GRID_H + GUI_GRID_Y;
 		w = 16 * GUI_GRID_W;
 		h = 21 * GUI_GRID_H;
-		
-		colorSelectBackground[] = 
+
+		colorSelectBackground[] =
 		{
 			0.03,
 			0.42,
@@ -54,7 +53,7 @@ class keko_loadout_menuDialog {
 		};
 	};
 
-	class KEKO_LOADOUT_UI_TEXT: RscText
+	class Text: RscText
 	{
 		idc = 1000;
 		text = "Loadouts";
@@ -63,8 +62,8 @@ class keko_loadout_menuDialog {
 		w = 15.5 * GUI_GRID_W;
 		h = 2 * GUI_GRID_H;
 	};
-	
-	class KEKO_LOADOUT_UI_BUTTON_OK: RscButton
+
+	class ButtonOk: RscButton
 	{
 		idc = 1600;
 		text = "OK";
@@ -72,10 +71,10 @@ class keko_loadout_menuDialog {
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "lbData [1500, lbCurSel 1500] spawn keko_loadout_fnc_dialogLoadoutMenuCallback;";
+		action = QUOTE(lbData [ARR_2(1500, lbCurSel 1500)] spawn FUNC(dialogLoadoutMenuCallback));
 	};
 
-	class KEKO_LOADOUT_UI_BUTTON_CANCEL: RscButton
+	class ButtonCancel: RscButton
 	{
 		idc = 1601;
 		text = "Abbrechen";

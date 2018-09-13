@@ -1,15 +1,16 @@
+#include "script_component.hpp"
 
 // give map and compass
-if (keko_var_giveMap) then {
+if (GVAR(giveMap)) then {
 	player linkItem "ItemMap";
-	
+
 };
-if (keko_var_giveCompass) then {
-	player linkItem "ItemCompass";	
+if (GVAR(giveCompass)) then {
+	player linkItem "ItemCompass";
 };
 
 // add night gear
-switch(keko_var_giveNvg) do {
+switch(GVAR(giveNvg)) do {
 	case 1: {
 		// Headlamp white
 		player linkItem "SAN_Headlamp_v1";
@@ -17,47 +18,47 @@ switch(keko_var_giveNvg) do {
 	case 2: {
 		// Headlamp color
 		player linkItem "SAN_Headlamp_v2";
-	}; 
+	};
 	case 3: {
 		// NVG 1.Gen
 		player linkItem "ACE_NVG_Gen1";
-	}; 
+	};
 	case 4: {
 		// NVG 2.Gen
 		player linkItem "ACE_NVG_Gen2";
-	}; 
+	};
 	case 5: {
 		// NVG 3.Gen
 		player linkItem "NVGoggles_OPFOR";
-	}; 
+	};
 	case 6: {
 		// NVG 4.Gen
 		player linkItem "ACE_NVG_Gen4";
-	}; 
+	};
 	case 7: {
 		// NVG Wide
 		player linkItem "ACE_NVG_Wide";
-	}; 
+	};
 	case 8: {
 		// Wärmesicht
 		player linkItem "NVGogglesB_blk_F";
-	}; 
+	};
 	case 9: {
 		// (main) Ami Mono
 		player linkItem "meu_ANPVS_14";
-	}; 
+	};
 	case 10: {
 		// (main) Ami Dual
 		player linkItem "meu_ANPVS_15";
-	}; 
+	};
 	case 11: {
 		// (main) BAF Mono
 		player linkItem "UK3CB_BAF_HMNVS";
-	}; 
+	};
 	case 12: {
 		// (main) Sovjet Mono
 		player linkItem "rhs_1PN138";
-	}; 
+	};
 	case 13: {
 		// GPNVG-18 tan
 		player linkItem "A3_GPNVG18_F";
@@ -76,8 +77,8 @@ switch(keko_var_giveNvg) do {
 	};
 };
 
-if(keko_var_giveGps > 0) then {
-	switch (keko_var_giveGps) do {
+if(GVAR(giveGps) > 0) then {
+	switch (GVAR(giveGps)) do {
 		case 1: {
 			//GPS
 			player linkItem "ItemGPS";
