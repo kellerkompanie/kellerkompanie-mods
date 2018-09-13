@@ -1,4 +1,5 @@
 class CfgVehicles {
+
 	//units
 	class SoldierWB;
 	class B_Soldier_base_F : SoldierWB {
@@ -788,5 +789,10 @@ class CfgVehicles {
 		displayName = "Custom 9";
 		loadoutDummy = "kekoCustom9";
 	};
+
+
+
+	// Legacy units
+	#include "CfgVehiclesLegacy.hpp"
 
 };
