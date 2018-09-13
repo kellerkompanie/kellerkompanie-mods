@@ -1,4 +1,6 @@
-diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", keko_unknown_weapon_whitelist];
+#include "script_component.hpp"
+
+diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", GVAR(whitelist)];
 
 _weaponCfg = getText (configFile >> "kekoFaction" >> keko_var_faction >> "weaponCfg");
 _weapon_config = configFile >> "kekoFaction" >> keko_var_faction >> _weaponCfg;
@@ -7,7 +9,7 @@ _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName
 
 // weapons from config class
 {
-	keko_unknown_weapon_whitelist pushBackUnique toUpper(_x);
+	GVAR(whitelist) pushBackUnique toUpper(_x);
 } forEach _classNames;
 
 
@@ -15,7 +17,7 @@ _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName
 if !(isNil "keko_var_customLoadouts") then {
 	{
 		_primaryWeapon = ((_x select 2) select 0) select 0;
-		keko_unknown_weapon_whitelist pushBackUnique toUpper(_primaryWeapon);
+		GVAR(whitelist) pushBackUnique toUpper(_primaryWeapon);
 	} forEach keko_var_customLoadouts;
 };
 
@@ -39,7 +41,7 @@ if(isNil "_crates") then {
 };
 
 {
-	_section_title = _x select 0;	
+	_section_title = _x select 0;
 	_section_crates = _x select 1;
 
 	{
@@ -58,30 +60,30 @@ if(isNil "_crates") then {
 
 						if (isClass (configFile >> "CfgWeapons" >> _item)) then {
 							if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-								keko_unknown_weapon_whitelist pushBackUnique toUpper(_item);
-							};		
-						} 					
+								GVAR(whitelist) pushBackUnique toUpper(_item);
+							};
+						}
 					} forEach _entryContents;
 				};
 			} forEach keko_var_logistics_customCrates select 0;
-			
+
 		}
-		else {			
-			_crateConfig = configFile >> "kekoFaction" >> keko_var_faction >> _x;			
+		else {
+			_crateConfig = configFile >> "kekoFaction" >> keko_var_faction >> _x;
 			_inventory = getArray (_crateConfig >> "inventory");
-			
+
 			{
 				_item = _x select 1;
 
 				if (isClass (configFile >> "CfgWeapons" >> _item)) then {
 					if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-						keko_unknown_weapon_whitelist pushBackUnique toUpper(_item);
-					};		
-				} 					
-			} forEach _inventory;			
-		};	
-		
+						GVAR(whitelist) pushBackUnique toUpper(_item);
+					};
+				}
+			} forEach _inventory;
+		};
+
 	} forEach _section_crates;
 } forEach _crates;
 
-diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist after: %1", keko_unknown_weapon_whitelist];
+diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist after: %1", GVAR(whitelist)];
