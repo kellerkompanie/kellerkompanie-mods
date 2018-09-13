@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 disableSerialization;
 
 private _display = findDisplay 90000;
@@ -7,8 +9,8 @@ private _ctrlReplace = _display displayCtrl 1100;
 private _find = ctrlText _ctrlFind;
 private _replace = ctrlText _ctrlReplace;
 
-profileNamespace setVariable ["keko_lastReplaceFind", _find];
-profileNamespace setVariable ["keko_lastReplaceReplace", _replace];
+profileNamespace setVariable [QGVAR(lastReplaceFind), _find];
+profileNamespace setVariable [QGVAR(lastReplaceReplace), _replace];
 
 _TER_fnc_editString =
 {

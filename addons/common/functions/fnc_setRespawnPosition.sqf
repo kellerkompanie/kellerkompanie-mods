@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_position", "_respawnSide"];
 
 diag_log text format["[KEKO] (common) setting respawn position to %1 for side %2", _position, _respawnSide];

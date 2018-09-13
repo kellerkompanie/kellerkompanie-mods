@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if !(isServer) exitWith{};
 
 _handle = _this spawn {

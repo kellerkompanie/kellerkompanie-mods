@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 {
 	_type = typeOf _x;
 	systemChat str _type;

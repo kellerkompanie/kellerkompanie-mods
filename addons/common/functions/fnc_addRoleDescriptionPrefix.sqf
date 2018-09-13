@@ -1,10 +1,12 @@
+#include "script_component.hpp"
+
 disableSerialization;
 
 private _display = findDisplay 90000;
 private _ctrlPrefix = _display displayCtrl 1000;
 
 private _prefix = ctrlText _ctrlPrefix;
-profileNamespace setVariable ["keko_lastPrefix",_prefix];
+profileNamespace setVariable [QGVAR(lastPrefix),_prefix];
 
 {
 	_description = (_x get3DENAttribute "description") select 0;

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_logic"];
 if (!local _logic) exitWith {};
 
@@ -14,7 +16,7 @@ switch (true) do {
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-		[_unit] call keko_common_fnc_fullHeal;
+		[_unit] call FUNC(fullHeal);
     };
 };
 

@@ -1,23 +1,23 @@
-class keko_common_lockDoorsDialog {
-	
+class GVAR(lockDoorsDialog) {
+
 	idd = -1;
 	movingEnable = true;
-	enableSimulation = true;	
+	enableSimulation = true;
 
-	onLoad = "uiNamespace setVariable ['keko_common_lockdoors_dialog', _this select 0]; (_this) call keko_common_fnc_lockDoorsDialogInit";
+	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(lockdoors_dialog), _this select 0)]; _this call FUNC(lockDoorsDialogInit));
 
-	controls[] = { 
-		KEKO_COMMON_LOCKDOORS_UI_BACK, 
-		KEKO_COMMON_LOCKDOORS_UI_TITLE_TEXT, 
-		KEKO_COMMON_LOCKDOORS_UI_RADIUS_TEXT, 
-		KEKO_COMMON_LOCKDOORS_UI_RADIUS_EDIT,
-		KEKO_COMMON_LOCKDOORS_UI_METERS_TEXT,
-		KEKO_COMMON_LOCKDOORS_UI_LOCK_BUTTON,
-		KEKO_COMMON_LOCKDOORS_UI_UNLOCK_BUTTON,
-		KEKO_COMMON_LOCKDOORS_UI_CANCEL_BUTTON
+	controls[] = {
+		Back,
+		TitleText,
+		RadiusText,
+		RadiusEdit,
+		Text,
+		Button,
+		UnlockButton,
+		CancelButton
 	};
 
-	class KEKO_COMMON_LOCKDOORS_UI_BACK: IGUIBack
+	class Back: IGUIBack
 	{
 		idc = 2200;
 		x = 6.14 * GUI_GRID_W + GUI_GRID_X;
@@ -25,7 +25,7 @@ class keko_common_lockDoorsDialog {
 		w = 27.5 * GUI_GRID_W;
 		h = 12 * GUI_GRID_H;
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_TITLE_TEXT: RscText
+	class TitleText: RscText
 	{
 		idc = 1000;
 		text = "(Un-)Lock Doors"; //--- ToDo: Localize;
@@ -34,7 +34,7 @@ class keko_common_lockDoorsDialog {
 		w = 7 * GUI_GRID_W;
 		h = 1 * GUI_GRID_H;
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_RADIUS_TEXT: RscText
+	class RadiusText: RscText
 	{
 		idc = 1001;
 		text = "Radius:"; //--- ToDo: Localize;
@@ -43,7 +43,7 @@ class keko_common_lockDoorsDialog {
 		w = 4 * GUI_GRID_W;
 		h = 1 * GUI_GRID_H;
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_RADIUS_EDIT: RscEdit
+	class RadiusEdit: RscEdit
 	{
 		idc = 1400;
 		x = 11 * GUI_GRID_W + GUI_GRID_X;
@@ -51,7 +51,7 @@ class keko_common_lockDoorsDialog {
 		w = 7 * GUI_GRID_W;
 		h = 1 * GUI_GRID_H;
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_METERS_TEXT: RscText
+	class Text: RscText
 	{
 		idc = 1002;
 		text = "meters"; //--- ToDo: Localize;
@@ -59,8 +59,8 @@ class keko_common_lockDoorsDialog {
 		y = 12 * GUI_GRID_H + GUI_GRID_Y;
 		w = 3.5 * GUI_GRID_W;
 		h = 1 * GUI_GRID_H;
-	};	
-	class KEKO_COMMON_LOCKDOORS_UI_LOCK_BUTTON: RscButton
+	};
+	class Button: RscButton
 	{
 		idc = 1600;
 		text = "Lock"; //--- ToDo: Localize;
@@ -68,9 +68,9 @@ class keko_common_lockDoorsDialog {
 		y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 4 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "[true] spawn keko_common_fnc_lockDoorsDialogCallback;";
+		action = QUOTE([ARR_1(true)] spawn FUNC(lockDoorsDialogCallback));
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_UNLOCK_BUTTON: RscButton
+	class UnlockButton: RscButton
 	{
 		idc = 1600;
 		text = "Unlock"; //--- ToDo: Localize;
@@ -78,9 +78,9 @@ class keko_common_lockDoorsDialog {
 		y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 4 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "[false] spawn keko_common_fnc_lockDoorsDialogCallback;";
+		action = QUOTE([ARR_1(false)] spawn FUNC(lockDoorsDialogCallback));
 	};
-	class KEKO_COMMON_LOCKDOORS_UI_CANCEL_BUTTON: RscButton
+	class CancelButton: RscButton
 	{
 		idc = 1601;
 		text = "Cancel"; //--- ToDo: Localize;
@@ -92,5 +92,3 @@ class keko_common_lockDoorsDialog {
 	};
 
 };
-
-
