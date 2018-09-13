@@ -10,11 +10,14 @@ class CfgPatches {
         };
         weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main","ace_modules"};
+        requiredAddons[] = {
+			"ace_main",
+			"ace_modules",
+			"keko_faction_generic"};
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
 
