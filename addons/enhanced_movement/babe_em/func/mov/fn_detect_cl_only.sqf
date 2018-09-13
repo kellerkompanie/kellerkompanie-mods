@@ -1,1 +1,0 @@
-[player, true] call babe_em_fnc_detect;
