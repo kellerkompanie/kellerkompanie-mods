@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 
-_logic = _this select 0;
+private _logic = _this select 0;
 
 diag_log text "[KEKO] (persistency_settings) running modulePersistencyBlacklist3den";
 
-_objects = synchronizedObjects _logic;
+private _objects = synchronizedObjects _logic;
 
 if ((count _objects) > 0) then {
     {
