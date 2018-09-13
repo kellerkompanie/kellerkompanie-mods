@@ -3,7 +3,7 @@
 
 params ["_obj_emp", "_rang_emp"];
 
-_poz_g = position _obj_emp;
+private _poz_g = position _obj_emp;
 
 list_man_emp = _poz_g nearEntities [["Civilian","SoldierGB","SoldierEB","SoldierWB"],_rang_emp];
 list_car_emp = _poz_g nearEntities [["Car", "Motorcycle", "Tank","Air","Ship"],_rang_emp];
