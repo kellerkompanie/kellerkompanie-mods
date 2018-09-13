@@ -2,15 +2,15 @@
 
 disableSerialization;
 
-_keko_fnc_getInventory = {
+private _keko_fnc_getInventory = {
 	private ["_object","_raw","_itemTypes","_itemAmounts","_idx"];
 	params ["_object"];
-	
+
 	_raw = (itemCargo _object) + (magazineCargo _object) + (weaponCargo _object) + (backpackCargo _object);
 	_raw sort true;
 
 	//systemChat format ["raw: %1", _raw];
-	
+
 	_itemTypes = [];
 	_itemAmounts = [];
 
@@ -25,8 +25,7 @@ _keko_fnc_getInventory = {
 			_idx = _idx + 1;
 		}
 		else {
-			_n = _itemAmounts select _idx;
-			_n = _n + 1;
+			private _n = (_itemAmounts select _idx) + 1;
 			_itemAmounts set [_idx, _n];
 		};
 	};
@@ -34,24 +33,25 @@ _keko_fnc_getInventory = {
 	//systemChat str _itemTypes;
 	//systemChat str _itemAmounts;
 
-	_inventory = [];
+	private _inventory = [];
+	private _i = 0;
 	for [{_i=0}, {_i< (count _itemTypes)}, {_i=_i+1}] do {
-		_itemType = _itemTypes select _i;
-		_itemAmount = _itemAmounts select _i;
+		private _itemType = _itemTypes select _i;
+		private _itemAmount = _itemAmounts select _i;
 		_inventory pushBack [_itemAmount, _itemType];
 	};
 
 	_inventory
 };
 
-_output = [];
+private _output = [];
 {
-	_classname = typeOf _x;
-	_name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
+	private _classname = typeOf _x;
+	private _name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
 
 	//systemChat format["classname: %1 | name: %2", _classname, _name];
 
-	_content = _x call _keko_fnc_getInventory;
+	private _content = _x call _keko_fnc_getInventory;
 
 	//systemChat format["_content: %1", _content];
 

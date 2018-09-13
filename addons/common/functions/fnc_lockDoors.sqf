@@ -4,14 +4,14 @@ params ["_centerPos", "_distance", "_isLocked"];
 
 diag_log text format["[KEKO] (common) lockDoors: %1 %2 %3", _centerPos, _distance, _isLocked];
 
-_lockState = 0;
+private _lockState = 0;
 if(_isLocked) then {
 	_lockState = 1;
 };
 
 diag_log text format["[KEKO] (common) _lockState: %1", _lockState];
 
-_buildings = nearestObjects [_centerPos, ["House_F"], _distance, true];
+private _buildings = nearestObjects [_centerPos, ["House_F"], _distance, true];
 //diag_log text format["[KEKO] (common) _buildings: %1", _buildings];
 
 {
@@ -23,5 +23,5 @@ _buildings = nearestObjects [_centerPos, ["House_F"], _distance, true];
 	{
 		//diag_log text format["[KEKO] (common) setting door %1 @ %2", _i, _x];
 		_x setVariable [format["bis_disabled_Door_%1", _i], _lockState, true];
-	};	
+	};
 } forEach _buildings;
