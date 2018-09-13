@@ -1,4 +1,8 @@
 class CfgVehicleClasses {
+
+	// Legacy units
+	#include "CfgVehicleClassesLegacy.hpp"
+
 	class GVAR(blufor) {
 		displayName = "Men";
 		priority = 2;

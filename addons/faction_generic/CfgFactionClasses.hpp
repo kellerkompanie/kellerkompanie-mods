@@ -1,4 +1,8 @@
 class cfgFactionClasses {
+
+	// Legacy units
+	#include "CfgFactionClassesLegacy.hpp"
+
 	class GVAR(blufor) {
 		displayName = "Kellerkompanie BLUFOR";
 		priority = 1;
