@@ -3,35 +3,35 @@ class CfgVehicles {
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_Head {
-				class keko_pn_punch {
+				class GVAR(punch) {
 					displayName = "Punch";
 					condition = "alive _target && !(_target getVariable ['ACE_isUnconscious', false])";
-					statement = "[_player,_target] call keko_punch_fnc_punchHead";
+					statement = QUOTE([ARR_2(_player,_target)] call FUNC(punchHead));
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = "\keko_punch\ui\knock.paa";
+					icon = QPATHTOF(ui\knock.paa);
 				};
 
-				class keko_pn_inhale {
+				class GVAR(inhale) {
 					displayName = "Use smelling salt";
 					condition = "alive _target && (_target getVariable ['ACE_isUnconscious', false]) && !([_target] call ace_medical_fnc_getUnconsciousCondition)";
-					statement = "[_player,_target] call keko_punch_fnc_wakeHead";
+					statement = QUOTE([ARR_2(_player,_target)] call FUNC(wakeHead));
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = "\keko_punch\ui\nose.paa";
+					icon = QPATHTOF(ui\nose.paa);
 				};
 			};
 			class ACE_MainActions {
-				class keko_ma_hide {
+				class GVAR(hide) {
 					displayName = "Hide corpse";
 					condition = "!(alive _target) && ('ACE_EntrenchingTool' in items _player)";
-					statement = "[_player,_target] call keko_punch_fnc_hideCorpse";
+					statement = QUOTE([ARR_2(_player,_target)] call FUNC(hideCorpse));
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = "\keko_punch\ui\shovel.paa";
+					icon = QPATHTOF(ui\shovel.paa);
 				};
 			};
 		};

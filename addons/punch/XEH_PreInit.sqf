@@ -8,12 +8,12 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [
-	"keko_settings_punch_enabled", // key/reference variable
+	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Knock People Unconscious", "Enable/Disable Knock People Unconscious"], // name and tooltip
 	"Kellerkompanie Punch", // category
 	[
-		[1,0], // values
+		[true,false], // values
 		["Enabled","Disabled"], // names
 		0 // default index
 	],
@@ -22,6 +22,6 @@ PREP_RECOMPILE_END;
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h";
 
-["Kellerkompanie", "keko_punch", "Punch", {[player] call keko_punch_fnc_punchTarget}, {}, [DIK_HOME, [false,false,false]]] call cba_fnc_addKeybind;
+["Kellerkompanie", "keko_punch", "Punch", {[player] call FUNC(punchTarget)}, {}, [DIK_HOME, [false,false,false]]] call cba_fnc_addKeybind;
 
 ADDON = true;

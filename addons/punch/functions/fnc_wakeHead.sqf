@@ -1,4 +1,6 @@
-if (keko_settings_punch_enabled == 0) exitWith {diag_log text "[KEKO] (punch) punching disabled, exiting"; false};
+#include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (punch) punching disabled, exiting"; false};
 
 [_this select 0, _this select 1] spawn {
 	_player = _this select 0;
@@ -8,7 +10,7 @@ if (keko_settings_punch_enabled == 0) exitWith {diag_log text "[KEKO] (punch) pu
 
 	sleep 0.5;
 
-	[_target, "keko_InhaleSound"] remoteExec ["say3D", 0, false];
+	[_target, QGVAR(InhaleSound)] remoteExec ["say3D", 0, false];
 
 	sleep 4;
 
