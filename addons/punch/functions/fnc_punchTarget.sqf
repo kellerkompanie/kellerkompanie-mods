@@ -3,9 +3,9 @@
 if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (punch) punching disabled, exiting"; false};
 
 [_this select 0, cursorTarget] spawn {
-	_player = _this select 0;
-	_target = _this select 1;
-	_dist = (_player distance _target);
+	private _player = _this select 0;
+	private _target = _this select 1;
+	private _dist = (_player distance _target);
 
 	if (_dist <= 3) then {
 		if (_target isKindOf "Man") then {
@@ -22,7 +22,7 @@ if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (punch) punching disabled, e
 				[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 
 				if (isPlayer _target) then {
-					_msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
+					private _msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
 					_msg remoteExec ["systemChat", 0, false];
 					_msg remoteExec ["diag_log", 2, false];
 				};
