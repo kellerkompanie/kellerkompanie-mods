@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 // TODO:
 // - handle when worldToScreen freaks out
 // - incorporate into STHUD

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 GVAR(NT_Cache_LastCheckedUnit) = objNull;
 GVAR(NT_Cache_LastValidCheckTime) = 0;
 GVAR(NT_DrawData) = [];

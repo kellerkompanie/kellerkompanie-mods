@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_text"];
 private _width = [GVAR(TextLengths), _text] call CBA_fnc_hashGet;
 if (!isNil {_width}) exitWith {_width};

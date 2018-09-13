@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 // Server can also ensure owner id is correct
 if (isServer) then
 {

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_funcName"];
 
 if !(_funcName isEqualType "") exitWith

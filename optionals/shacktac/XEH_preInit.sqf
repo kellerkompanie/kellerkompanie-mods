@@ -43,12 +43,12 @@ GVAR(ALUT) =
     ,"YELLOW"
 ];
 
-_nil = call FUNC(stgi);
+[] call FUNC(stgi);
 
-_nil = call FUNC(nametagsInit);
+[] call FUNC(nametagsInit);
 
-_nil = QFUNC(stamina) call FUNC(canvasAdd);
+QFUNC(stamina) call FUNC(canvasAdd);
 
-_nil = call FUNC(sthud);
+[] call FUNC(sthud);
 
 ADDON = true;

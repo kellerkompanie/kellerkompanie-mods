@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_startPos", "_endPos", "_colour"];
   if (count _startPos != 3) exitWith {};
   if (count _endPos != 3) exitWith {};

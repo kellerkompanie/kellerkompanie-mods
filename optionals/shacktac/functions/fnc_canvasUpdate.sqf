@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 {
     private "_start";
     private _funcName = _x;

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_start", "_end", "_colour"];
 
 private _canvas = GET_CANVAS;

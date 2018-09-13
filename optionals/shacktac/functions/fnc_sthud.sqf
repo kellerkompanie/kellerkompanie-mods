@@ -1,4 +1,5 @@
-#include "defines.hpp"
+#include "script_component.hpp"
+#include "\x\keko\addons\shacktac\defines.hpp"
 
 STHud_UIMode = STHud_ShowBoth;
 
@@ -50,7 +51,7 @@ STHud_CompassData = [
     [270, 12 * 0.85, "W"]
 ];
 {
-    _x set [2, format ["x\keko\addons\shacktac\ui\sthud_%1.paa", _x select 2]];
+    _x set [2, format ["\x\keko\addons\shacktac\ui\sthud_%1.paa", _x select 2]];
 } forEach STHud_CompassData;
 
 
@@ -337,7 +338,7 @@ STHud_Icon =
             if (vehicle _unit isKindOf "Air") then
             {
                 //no suitable icons for this so we are using a resized one
-                QPATHTOF("ui\imagepilot_ca.paa")
+                QPATHTOF(ui\imagepilot_ca.paa)
             } else
             {
                 "a3\ui_f\data\igui\cfg\commandbar\imagedriver_ca.paa"
