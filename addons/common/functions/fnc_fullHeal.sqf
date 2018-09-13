@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 /*
 * Heals player using vanilla and ACE healing
 *

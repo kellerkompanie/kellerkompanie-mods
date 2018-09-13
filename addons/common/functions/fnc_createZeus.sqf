@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if (!isServer) exitWith {};
 
 params ["_player"];

@@ -1,9 +1,11 @@
+#include "script_component.hpp"
+
 params ["_logic"];
 
 if !(local _logic) exitWith {};
 
-profileNamespace setVariable ["keko_common_lockDoors_center", getPos _logic];
+profileNamespace setVariable [QGVAR(lockDoors_center), getPos _logic];
 
-createDialog "keko_common_lockDoorsDialog";
+createDialog QGVAR(lockDoorsDialog);
 
 deleteVehicle _logic;

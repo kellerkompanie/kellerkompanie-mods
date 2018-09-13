@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_centerPos", "_distance", "_isLocked"];
 
 diag_log text format["[KEKO] (common) lockDoors: %1 %2 %3", _centerPos, _distance, _isLocked];

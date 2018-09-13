@@ -40,47 +40,45 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "gui\dialog_baseClasses.hpp"
-#include "gui\keko_baseDefines.hpp"
-
-#include "gui\keko_addRoleDescriptionPrefixDisplay.hpp"
-#include "gui\keko_addRoleDescriptionSuffixDisplay.hpp"
-#include "gui\keko_replaceRoleDescriptionDisplay.hpp"
-
 #include "gui\dialog_lockDoors.hpp"
+#include "gui\display_addRoleDescriptionPrefix.hpp"
+#include "gui\display_addRoleDescriptionSuffix.hpp"
+#include "gui\display_replaceRoleDescription.hpp"
+
 
 class Display3DEN {
 	class ContextMenu: ctrlMenu {
 		class Items	{
 			class Edit {
 				items[] = {
-					"keko_addRoleDescriptionPrefix",
-                    "keko_addRoleDescriptionSuffix",
-					"keko_removeRoleDescriptionPrefix",
-					"keko_resetRoleDescription",
-					"keko_exportCrate"};
+					QGVAR(addRoleDescriptionPrefix),
+					QGVAR(addRoleDescriptionSuffix),
+					QGVAR(removeRoleDescriptionPrefix),
+					QGVAR(resetRoleDescription),
+					QGVAR(exportCrate)};
 			};
-			class keko_addRoleDescriptionPrefix	{
+			class GVAR(addRoleDescriptionPrefix)	{
 				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionPrefixDisplay'";
 				Text = "Add role description prefix";
 				conditionShow = "selectedObject";
 			};
-      class keko_addRoleDescriptionSuffix {
-          action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
-          Text = "Add role description suffix";
-          conditionShow = "selectedObject";
-      };
-			class keko_removeRoleDescriptionPrefix {
+			class GVAR(addRoleDescriptionSuffix) {
+				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
+				Text = "Add role description suffix";
+				conditionShow = "selectedObject";
+			};
+			class GVAR(removeRoleDescriptionPrefix) {
 				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
 				Text = "Replace in role description";
 				conditionShow = "selectedObject";
 			};
-			class keko_resetRoleDescription	{
-				action = "call keko_common_fnc_resetRoleDescription";
+			class GVAR(resetRoleDescription)	{
+				action = QUOTE(call FUNC(resetRoleDescription));
 				Text = "Reset role description";
 				conditionShow = "selectedObject";
 			};
-			class keko_exportCrate	{
-				action = "call keko_common_fnc_exportCrate";
+			class GVAR(exportCrate)	{
+				action = QUOTE(call FUNC(exportCrate));
 				Text = "Export custom crate";
 				conditionShow = "selectedObject";
 			};

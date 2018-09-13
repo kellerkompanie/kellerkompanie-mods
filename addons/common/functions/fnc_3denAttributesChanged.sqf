@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 //systemChat str "InitModule 3denAttributesChanged";
 
 _module = _this select 0;
@@ -14,12 +16,12 @@ _hc3Exists = false;
 	_logicName = (_x get3DENAttribute "name") select 0;
 	//systemChat _logicName;
 	switch(_logicName) do {
-		case "keko_3den_initModule": {
+		case QGVAR(3den_initModule): {
 			_initModuleExists = true;
 			_existingInitModule = _x;
 			break;
 		};
-		case "keko_3den_gameMaster": {
+		case QGVAR(3den_gameMaster): {
 			_gameMasterModuleExists = true;
 			break;
 		};
@@ -63,7 +65,7 @@ if !(_initModuleExists) then {
 	    ["Multiplayer", "GameType", "COOP"]
 	];
 
-	_module set3DENAttribute ["Name", "keko_3den_initModule"];
+	_module set3DENAttribute ["Name", QGVAR(3den_initModule)];
 };
 
 // update number of players + 3 for headless clients
@@ -105,7 +107,7 @@ if !(_gameMasterModuleExists) then {
 	// create GameMaster/Zeus module for logged-in admin
 	_gameMasterPos = [(_modulePos select 0) + 2, _modulePos select 1, _modulePos select 2];
 	_gameMasterEntity = create3DENEntity ["Logic", "ModuleCurator_F", _gameMasterPos];
-	_gameMasterEntity set3DENAttribute ["Name", "keko_3den_gameMaster"];
+	_gameMasterEntity set3DENAttribute ["Name", QGVAR(3den_gameMaster)];
 	set3DENAttributes [[ [_gameMasterEntity], "ModuleCurator_F_Owner", "#adminLogged" ]];
 	set3DENAttributes [[ [_gameMasterEntity], "ModuleCurator_F_Addons", 3 ]];
 	set3DENAttributes [[ [_gameMasterEntity], "ModuleCurator_F_Name", "Admin" ]];
