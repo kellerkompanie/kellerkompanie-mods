@@ -8,8 +8,8 @@ if (!isServer) exitWith {diag_log text "[KEKO] (teleport) fnc_dialogJumpGroup on
 
 diag_log text format["[KEKO] (teleport) jumping group @ marker: %1", _teleporterName];
 
-_playerGroup = group _player;
-_groupLeader = leader _playerGroup;
+private _playerGroup = group _player;
+private _groupLeader = leader _playerGroup;
 
 if(_groupLeader == _player) then {
   {

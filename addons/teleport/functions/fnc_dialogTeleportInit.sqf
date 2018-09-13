@@ -4,8 +4,8 @@
 disableSerialization;
 
 //dialog
-_display = _this select 0;
-_listBox = _display displayCtrl 1500;
+private _display = _this select 0;
+private _listBox = _display displayCtrl 1500;
 
 // LBs leeren
 lbClear _listBox;
@@ -16,7 +16,7 @@ switch(side player) do {
 
 		diag_log text format["[KEKO] (teleport) dialogTeleportInit: keko_teleport_destinations_blufor = %1", keko_teleport_destinations_blufor];
 
-		{ 
+		{
 			diag_log text format["[KEKO] (teleport) dialogTeleportInit _x = %1", _x];
 
 			lbAdd [1500, _x];
@@ -28,7 +28,7 @@ switch(side player) do {
 
 		diag_log text format["[KEKO] (teleport) dialogTeleportInit: keko_teleport_destinations_indfor = %1", keko_teleport_destinations_indfor];
 
-		{ 
+		{
 			diag_log text format["[KEKO] (teleport) dialogTeleportInit _x = %1", _x];
 
 			lbAdd [1500, _x];
@@ -41,7 +41,7 @@ switch(side player) do {
 
 		diag_log text format["[KEKO] (teleport) dialogTeleportInit: keko_teleport_destinations_opfor = %1", keko_teleport_destinations_opfor];
 
-		{ 
+		{
 			diag_log text format["[KEKO] (teleport) dialogTeleportInit _x = %1", _x];
 
 			lbAdd [1500, _x];
@@ -53,7 +53,7 @@ switch(side player) do {
 
 		diag_log text format["[KEKO] (teleport) dialogTeleportInit: keko_teleport_destinations_civ = %1", keko_teleport_destinations_civ];
 
-		{ 
+		{
 			diag_log text format["[KEKO] (teleport) dialogTeleportInit _x = %1", _x];
 
 			lbAdd [1500, _x];

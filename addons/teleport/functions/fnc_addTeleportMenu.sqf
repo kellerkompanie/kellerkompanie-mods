@@ -2,10 +2,10 @@
 
 params ["_object", ["_sideArray", [true,true,true,true]]];
 
-_allowBLUFOR = _sideArray select 0;
-_allowINDFOR = _sideArray select 1;
-_allowOPFOR  = _sideArray select 2;
-_allowCIV    = _sideArray select 3;
+private _allowBLUFOR = _sideArray select 0;
+private _allowINDFOR = _sideArray select 1;
+private _allowOPFOR  = _sideArray select 2;
+private _allowCIV    = _sideArray select 3;
 
 diag_log text format["[KEKO] (teleport) adding teleport menu on %1 for sides %2", _object, _sideArray];
 
