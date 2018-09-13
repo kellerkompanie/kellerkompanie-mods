@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 //diag_log "dialogTeleportDestination";
 
 _text = ctrlText ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 1400);

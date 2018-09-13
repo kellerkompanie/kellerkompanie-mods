@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_teleporterName"];
 
 _chuteheight = 200;

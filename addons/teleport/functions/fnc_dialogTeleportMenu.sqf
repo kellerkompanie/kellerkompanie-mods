@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 disableSerialization;
 
 _object = profileNamespace getVariable "keko_teleport_menu_object";
