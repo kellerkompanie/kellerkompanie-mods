@@ -2,23 +2,23 @@
 
 diag_log text format["[KEKO] (teleport) teleporting %1 to leader", player];
 
-_playerGroup = group player;
-_groupLeader = leader _playerGroup;
+private _playerGroup = group player;
+private _groupLeader = leader _playerGroup;
 
-_pos = [];
+private _pos = [];
 if(_groupLeader == player) then {
   // player is already group leader, move to other team member
-  _otherGroupMembers = (units _playerGroup) - [player];
+  private _otherGroupMembers = (units _playerGroup) - [player];
 
   if((count _otherGroupMembers) > 0) then {
     _pos = _otherGroupMembers select 0;
   } else {
     // no other group members found, move to highest ranking player
     _pos = getPos player;
-    _highest_rank = -1;
+    private _highest_rank = -1;
     {
-      _rank = rank _x;
-      _rank_no = -1;
+      private _rank = rank _x;
+      private _rank_no = -1;
       switch(_rank) do {
         case "PRIVATE": {
           _rank_no = 0;

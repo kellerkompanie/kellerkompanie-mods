@@ -4,16 +4,16 @@
 disableSerialization;
 
 //dialog
-_display = _this select 0;
-_ctrlAllowBLUFOR = _display displayCtrl 2800;
-_ctrlAllowINDFOR = _display displayCtrl 2801;
-_ctrlAllowOPFOR  = _display displayCtrl 2802;
-_ctrlAllowCIV    = _display displayCtrl 2803;
+private _display = _this select 0;
+private _ctrlAllowBLUFOR = _display displayCtrl 2800;
+private _ctrlAllowINDFOR = _display displayCtrl 2801;
+private _ctrlAllowOPFOR  = _display displayCtrl 2802;
+private _ctrlAllowCIV    = _display displayCtrl 2803;
 
-_lastBLUFOR = profileNamespace getVariable ["keko_teleport_lastBLUFOR", true ];
-_lastINDFOR = profileNamespace getVariable ["keko_teleport_lastINDFOR", false];
-_lastOPFOR  = profileNamespace getVariable ["keko_teleport_lastOPFOR",  false];
-_lastCIV    = profileNamespace getVariable ["keko_teleport_lastCIV",    false];
+private _lastBLUFOR = profileNamespace getVariable ["keko_teleport_lastBLUFOR", true ];
+private _lastINDFOR = profileNamespace getVariable ["keko_teleport_lastINDFOR", false];
+private _lastOPFOR  = profileNamespace getVariable ["keko_teleport_lastOPFOR",  false];
+private _lastCIV    = profileNamespace getVariable ["keko_teleport_lastCIV",    false];
 
 _ctrlAllowBLUFOR cbSetChecked _lastBLUFOR;
 _ctrlAllowINDFOR cbSetChecked _lastINDFOR;

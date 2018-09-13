@@ -1,19 +1,17 @@
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+private _logic = _this select 0;
 
 // Only server, dedicated, or headless beyond this point
 if (hasInterface && !isServer) exitWith {};
 //diag_log "running destination module init";
 
-_destinationName = _logic getVariable ["teleportDestination", ""];
+private _destinationName = _logic getVariable ["teleportDestination", ""];
 
-_allowBLUFOR = _logic getVariable ["allowBLUFOR", true];
-_allowINDFOR = _logic getVariable ["allowINDFOR", true];
-_allowOPFOR  = _logic getVariable ["allowOPFOR",  true];
-_allowCIV 	 = _logic getVariable ["allowCIV", true];
+private _allowBLUFOR = _logic getVariable ["allowBLUFOR", true];
+private _allowINDFOR = _logic getVariable ["allowINDFOR", true];
+private _allowOPFOR  = _logic getVariable ["allowOPFOR",  true];
+private _allowCIV 	 = _logic getVariable ["allowCIV", true];
 
 //diag_log format ["creating destination: %1", _destinationName];
 

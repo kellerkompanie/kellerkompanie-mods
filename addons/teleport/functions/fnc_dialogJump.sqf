@@ -2,11 +2,11 @@
 
 params ["_teleporterName"];
 
-_chuteheight = 200;
+private _chuteheight = 200;
 
-_markerName = "keko_teleport_" + _teleporterName;
-_markerPos = getMarkerPos _markerName;
-_destination = [_markerPos select 0, _markerPos select 1, _chuteheight];
+private _markerName = "keko_teleport_" + _teleporterName;
+private _markerPos = getMarkerPos _markerName;
+private _destination = [_markerPos select 0, _markerPos select 1, _chuteheight];
 
 titleText ["", "BLACK OUT", 2];
 sleep 2;
@@ -25,7 +25,7 @@ paraLandSafe =
 	disableUserInput true;
 	_unit action ["eject", vehicle _unit];
 	sleep 1;
-	_inv = name _unit;
+	private _inv = name _unit;
 	[_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;// Reload Loadout.
 	_unit allowdamage true;// Now you can take damage.
 
@@ -43,7 +43,7 @@ OpenPlayerChute =
 	_paraPlayer action ["openParachute", _paraPlayer];
 };
 
-_inv = name player;// Get Unique name for Unit's loadout.
+private _inv = name player;// Get Unique name for Unit's loadout.
 [player, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_saveInventory;// Save Loadout
 removeBackpack player;
 player allowdamage false;// Trying to prevent damage.
