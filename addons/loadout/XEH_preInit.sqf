@@ -22,7 +22,7 @@ PREP_RECOMPILE_END;
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(faction), // key/reference variable
+	QGVAR(loadoutFaction), // key/reference variable
 	"LIST", // type of setting
 	["Default faction", "Choose default faction"], // name and tooltip
 	CBA_SETTINGS_CATEGORY, // category
