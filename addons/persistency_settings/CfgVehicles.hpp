@@ -17,7 +17,7 @@ class CfgVehicles {
 			expression = "_this setVariable ['%s',_value];";
 		};
 	};
-	class keko_ModulePersistencyBlacklist3den: Module_F	{
+	class GVAR(ModulePersistencyBlacklist3den): Module_F	{
 		scope              = 2;
 		scopeCurator       = 1;
 		displayName        = "Persistency blacklist object";
@@ -29,7 +29,7 @@ class CfgVehicles {
 		isDisposable       = 0;
 	};
 
-	class keko_ModulePersistencyOverwriteID3den: Module_F {
+	class GVAR(ModulePersistencyOverwriteID3den): Module_F {
 		scope              = 2;
 		scopeCurator       = 1;
 		displayName        = "Persistency overwrite ID";
@@ -42,7 +42,7 @@ class CfgVehicles {
 
 		class Attributes: AttributesBase {
 			class ID: Edit {
-				property = "keko_persistency_settings_ModuleOverwrite_ID";
+				property = QGVAR(ModuleOverwrite_ID);
 				displayName = "Database ID";
 				typeName = "STRING";
 				defaultValue = "'-1'";

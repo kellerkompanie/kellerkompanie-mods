@@ -25,7 +25,7 @@ Parameters:
 */
 
 [
-	"keko_settings_persistency_enabled", // key/reference variable
+	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Persistency", "Enable/Disable Persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -39,7 +39,7 @@ Parameters:
 
 
 [
-	"keko_settings_persistency_key",
+	QGVAR(key),
 	"EDITBOX",
 	["Key", "Database storage key"],
 	"Kellerkompanie Persistency",
@@ -49,7 +49,7 @@ Parameters:
 
 
 [
-	"keko_settings_persistency_autosave_interval",
+	QGVAR(autosaveInterval),
 	"LIST",
 	["Autosave", "Interval for Autosave"],
 	"Kellerkompanie Persistency",
@@ -62,7 +62,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_persistency_vehiclesEnabled", // key/reference variable
+	QGVAR(vehiclesEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -75,7 +75,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_persistency_cratesEnabled", // key/reference variable
+	QGVAR(cratesEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -88,7 +88,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_persistency_playersEnabled", // key/reference variable
+	QGVAR(playersEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
