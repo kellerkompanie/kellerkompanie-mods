@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+private _logic = _this select 0;
+private _units = _this select 1;
+private _activated = _this select 2;
 
 // Only server, dedicated, or headless beyond this point
 if (hasInterface && !isServer) exitWith {};

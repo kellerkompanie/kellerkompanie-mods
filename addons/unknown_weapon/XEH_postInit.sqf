@@ -47,7 +47,7 @@ if(hasInterface) then {
 	};
 
   	player addEventHandler["Fired",{
-		_weapon = _this select 1;
+		private _weapon = _this select 1;
 		if(!(primaryWeapon ace_player == _weapon)) exitWith {};
 		if(isNil QGVAR(whitelist)) exitWith {};
 
@@ -63,15 +63,15 @@ if(hasInterface) then {
 				* 1: slowdownFactor <NUMBER>
 				* 2: jamChance <NUMBER>
 				*/
-				_weaponData set[0,(_weaponData#0 + GVAR(dispersion_add))];
-				_weaponData set[2,(_weaponData#2 + (GVAR(jamchance_add) / 100))];
+				_weaponData set[0,(_weaponData select 0 + GVAR(dispersion_add))];
+				_weaponData set[2,(_weaponData select 2 + (GVAR(jamchance_add) / 100))];
 				ace_overheating_cacheWeaponData setVariable [_weapon, _weaponData];
 			};
 		};
 	}];
 
 	player addEventHandler["Reloaded", {
-		params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+		params ["_unit", "_weapon", "", "", ""];
 
 		if(!(primaryWeapon ace_player == _weapon)) exitWith {};
 		if(isNil QGVAR(whitelist)) exitWith {};
@@ -81,7 +81,7 @@ if(hasInterface) then {
 			// weapon not in whitelist
 			if( (random 100) <= GVAR(reload_failure) ) then {
 				// reload failed
-				ace_player addMagazine [_newMagazine#0, _newMagazine#1];
+				ace_player addMagazine [_newMagazine select 0, _newMagazine select 1];
 				ace_player setAmmo [_weapon, 0];
 
 				[{["Reload failed"] call ace_common_fnc_displayTextStructured;}, []] call CBA_fnc_execNextFrame;
@@ -156,7 +156,7 @@ if(hasInterface) then {
 							_dam = (missionNamespace getVariable ["ace_medical_playerDamageThreshold", 1]) / 10;
 						} else {
 							private _res = ace_player getVariable ["ace_medical_unitDamageThreshold", [1, 1, 1]];
-							_dam = ((_res#0 + _res#1 + _res#2) / 3) / 5;
+							_dam = ((_res select 0 + _res select 1 + _res select 2) / 3) / 5;
 						};
 						[ace_player, _dam, selectRandom ["head", "body", "hand_l", "hand_r"], "stab"] call ace_medical_fnc_addDamageToUnit;
 					} else {
