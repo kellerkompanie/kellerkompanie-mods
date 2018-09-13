@@ -1,12 +1,13 @@
-// original version by Duda https://github.com/sethduda/AdvancedTowing
 #include "script_component.hpp"
 
-#define keko_Find_Surface_ASL_Under_Position(_object,_positionAGL,_returnSurfaceASL,_canFloat) \
-_objectASL = AGLToASL (_object modelToWorldVisual (getCenterOfMass _object)); \
-_surfaceIntersectStartASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) + 1]; \
-_surfaceIntersectEndASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) - 5]; \
-_surfaces = lineIntersectsSurfaces [_surfaceIntersectStartASL, _surfaceIntersectEndASL, _object, objNull, true, 5]; \
-_returnSurfaceASL = AGLToASL _positionAGL; \
+params ["_vehicle","_vehicleHitchModelPos","_cargo","_cargoHitchModelPos","_ropeLength"];
+
+#define keko_Find_Surface_ASL_Under_Position(_object,_positionAGL,_returnSurfaceASL,_canFloat)\
+_objectASL = AGLToASL (_object modelToWorldVisual (getCenterOfMass _object));\
+_surfaceIntersectStartASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) + 1];\
+_surfaceIntersectEndASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) - 5];\
+_surfaces = lineIntersectsSurfaces [_surfaceIntersectStartASL, _surfaceIntersectEndASL, _object, objNull, true, 5];\
+_returnSurfaceASL = AGLToASL _positionAGL;\
 { \
 	scopeName "surfaceLoop"; \
 	if( isNull (_x select 2) ) then { \
@@ -34,7 +35,6 @@ keko_Find_Surface_ASL_Under_Model(_object,_modelOffset,_returnSurfaceAGL,_canFlo
 _returnSurfaceAGL = ASLtoAGL _returnSurfaceAGL;
 
 
-params ["_vehicle","_vehicleHitchModelPos","_cargo","_cargoHitchModelPos","_ropeLength"];
 
 diag_log text format ["[KEKO] (advancedtowing) simulateTowing _vehicle=%1 _vehicleHitchModelPos=%2 _cargo=%3 _cargoHitchModelPos=%4 _ropeLength=%5", _vehicle, _vehicleHitchModelPos, _cargo, _cargoHitchModelPos, _ropeLength];
 

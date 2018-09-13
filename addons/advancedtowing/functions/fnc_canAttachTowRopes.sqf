@@ -2,6 +2,7 @@
 #include "script_component.hpp"
 
 params ["_player", "_cargo"];
+private ["_vehicle"];
 
 _vehicle = _player getVariable [QGVAR(towRopesVehicle), objNull];
 

@@ -4,7 +4,7 @@
 params ["_player", "_vehicle"];
 
 if(local _vehicle) then {
-  private ["_existingTowRopes","_hitchPoint","_rope"];
+  private ["_existingTowRopes"];
 
   _existingTowRopes = _vehicle getVariable [QGVAR(towRopes),[]];
   if(count _existingTowRopes > 0) then {

@@ -2,6 +2,7 @@
 #include "script_component.hpp"
 
 params ["_player", "_cargo"];
+private ["_vehicle"];
 
 _vehicle = _player getVariable [QGVAR(towRopesVehicle), objNull];
 
@@ -21,6 +22,8 @@ if(!isNull _vehicle) then {
 			if( _objDistance > _ropeLength ) then {
 				"The tow ropes are too short. Move vehicle closer." remoteExec ["hint", _player];
 			} else {
+				private ["_helper"];
+				
 				[_player, _vehicle] call FUNC(dropTowRopes);
 				_helper = "Land_Can_V2_F" createVehicle position _cargo;
 				// TODO add ACE interaction to rope end aka. helper object

@@ -4,7 +4,7 @@
 params ["_vehicle"];
 
 private ["_cornerPoints","_rearCorner","_rearCorner2","_frontCorner","_frontCorner2","_rearHitchPoint"];
-private ["_frontHitchPoint","_sideLeftPoint","_sideRightPoint"];
+private ["_frontHitchPoint"];
 
 _cornerPoints = [_vehicle] call FUNC(getCornerPoints);
 _rearCorner = _cornerPoints select 0;
