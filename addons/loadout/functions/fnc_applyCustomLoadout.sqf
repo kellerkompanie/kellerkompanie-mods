@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_role","_faction"];
+params ["_role",""];
 
 diag_log text format["[KEKO] (loadout) applyCustomLoadout: %1", _role];
 
@@ -37,7 +37,7 @@ if (isNil GVAR(customLoadouts)) then {
 	};
 } forEach GVAR(customLoadouts);
 
-_nil = call FUNC(addPresetItems);
+call FUNC(addPresetItems);
 
 player enableSimulation true;
 
