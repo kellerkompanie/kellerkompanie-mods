@@ -1,4 +1,5 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
+#include "script_component.hpp"
 
 private ["_unit_afect","_e_static"];
 

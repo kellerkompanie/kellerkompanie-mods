@@ -1,5 +1,6 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 // Creates 1 spark at object position (objSrc) and waits for specified amount of time afterwards
+#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -24,7 +25,19 @@ if (_spark_type == "orange") then {
 	_scantei_spark setParticleRandom [1, [0.05, 0.05, 0.1], [5, 5, 3], 0, 0.0025, [0, 0, 0, 0], 0, 0];
 };
 
-_scantei_spark setParticleParams [["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1], "", "SpaceObject", 1, 1, [0, 0,_spark_poz_rel], [0, 0, 0], 0, 15, 7.9, 0, [0.5,0.5,0.05], [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]], [0.08], 1, 0, "", "", _objSrc,0,true,0.3,[[0,0,0,0]]];
+_scantei_spark setParticleParams [
+	["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1],
+	"",
+	"SpaceObject",
+	1, 1,
+	[0, 0,_spark_poz_rel],
+	[0, 0, 0], 
+	0, 15, 7.9, 0,
+	[0.5,0.5,0.05],
+	[[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]],
+	[0.08], 1, 0, "", "",
+	_objSrc,0,true,0.3,[[0,0,0,0]]
+];
 _scantei_spark setDropInterval _drop;
 
 _objSrc say3D [selectRandom ["spark1","spark3","spark11","spark2","spark22","spark5","spark4"], 350];

@@ -1,5 +1,6 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 // Creates a random amount of sparks at given object (objSrc)
+#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -12,6 +13,6 @@ for "_i" from 0 to _sparksCount do
 {
 	private "_pauseBetweenSparks";
 	_pauseBetweenSparks = 0.1 + (random 2);
-	[_objSrc, _pauseBetweenSparks] call keko_emp_fnc_sparkEffect;
+	[_objSrc, _pauseBetweenSparks] call FUNC(sparkEffect);
 	sleep _pauseBetweenSparks;
 };
