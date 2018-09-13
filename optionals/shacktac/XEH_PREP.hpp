@@ -22,4 +22,4 @@ PREP(stgi);
 PREP(sthud);
 PREP(testMetrics);
 PREP(truncateText);
-PREP(usignTeams);
+PREP(usingTeams);

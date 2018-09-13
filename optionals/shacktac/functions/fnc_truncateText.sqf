@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_text", "_max"];
 private _chars = toArray(_text);
 private _width = 0;

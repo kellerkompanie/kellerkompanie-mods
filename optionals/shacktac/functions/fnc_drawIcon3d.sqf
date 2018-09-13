@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_screen_pos", "_colour", "_texture", "_angle"];
 if (isNil "_screen_pos") exitWith {};
 if (isNil "_colour") exitWith {};

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_canvas"];
 
 TEST_Index = TEST_Index + 1;

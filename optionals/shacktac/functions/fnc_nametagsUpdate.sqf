@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 
 if (!(call GVAR(Canvas_ShownHUD))) exitWith {};
 

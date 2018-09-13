@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if (isNil GVAR(AutoBrightness_Enabled)) then {GVAR(AutoBrightness_Enabled) = true;};
 
 GVAR(AutoBrightness_MaxDark) = 0.7;

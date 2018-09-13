@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_canvas"];
 // Remove existing draw handles to prevent onload running more than once
 _canvas ctrlRemoveAllEventHandlers "draw";
