@@ -8,19 +8,19 @@ class CfgVehicles {
         class AttributesBase
 		{
 			class Default;
-			class Edit; 
+			class Edit;
 			class Combo;
-			class Checkbox; 
-			class CheckboxNumber; 
+			class Checkbox;
+			class CheckboxNumber;
 			class ModuleDescription;
-			class Units; 
+			class Units;
 
 			expression = "_this setVariable ['%s',_value];";
 		};
     };
     class GVAR(moduleBase): Module_F {
         category = "KEKO";
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
         functionPriority   = 1;
         isGlobal           = 1;
@@ -29,7 +29,7 @@ class CfgVehicles {
     };
     class GVAR(moduleBase3den): Module_F {
         category = "KEKO";
-        scope              = 2; 
+        scope              = 2;
         scopeCurator       = 1;
         functionPriority   = 1;
         isGlobal           = 1;
@@ -37,33 +37,33 @@ class CfgVehicles {
         function = QEFUNC(common,dummy);
     };
 
-    class keko_ModuleAddLogisticsMenu: GVAR(moduleBase) {        
-        displayName        = "Add Logistics Menu"; 
+    class GVAR(moduleAddLogisticsMenu): GVAR(moduleBase) {
+        displayName        = "Add Logistics Menu";
         category           = QGVAR(Logistics);
-        function           = QFUNC(moduleAddLogisticsMenu);        
+        function           = QFUNC(moduleAddLogisticsMenu);
         icon               = QPATHTOF(ui\icon_logistics.paa);
         curatorCanAttach   = 1;
     };
-    class keko_ModuleAddLogisticsMenu3den: Module_F {
-        displayName        = "Add Logistics Menu"; 
+    class GVAR(moduleAddLogisticsMenu3den): Module_F {
+        displayName        = "Add Logistics Menu";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleAddLogisticsMenu3den);
         icon               = QPATHTOF(ui\icon_logistics.paa);
     };
-    class keko_ModuleSpawnCrate: GVAR(moduleBase) {
-        displayName        = "Spawn Crate"; 
+    class GVAR(moduleSpawnCrate): GVAR(moduleBase) {
+        displayName        = "Spawn Crate";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleSpawnCrate);
         icon               = QPATHTOF(ui\icon_crate.paa);
     };
-    class keko_ModuleSupplyDrop: GVAR(moduleBase) {
-        displayName        = "Supply Drop"; 
+    class GVAR(moduleSupplyDrop): GVAR(moduleBase) {
+        displayName        = "Supply Drop";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleSupplyDrop);
         icon               = QPATHTOF(ui\icon_paradrop.paa);
     };
-    class keko_ModuleFuelConsumption3den: GVAR(moduleBase3den) {
-        displayName        = "Fuel Consumption"; 
+    class GVAR(moduleFuelConsumption3den): GVAR(moduleBase3den) {
+        displayName        = "Fuel Consumption";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleFuelConsumption3den);
         icon               = QPATHTOF(ui\icon_fuel.paa);
@@ -71,37 +71,37 @@ class CfgVehicles {
         class Attributes: AttributesBase
 		{
 			class EnableFuelConsumption: Checkbox {
-            	property = "keko_logistics_ModuleFuel_Enable";
+            	property = QGVAR(EnableFuelConsumption);
                 displayName = "Give map";
                 typeName = "BOOL";
-                defaultValue = true;                
+                defaultValue = true;
             };
 			class ConsumptionCar: Edit {
-				property = "keko_logistics_ModuleFuel_Car";
+				property = QGVAR(ConsumptionCar);
 				displayName = "Consumption Car";
-				typeName = "STRING"; 
-				defaultValue = "'[0.0002, 0.0004, 0.0006]'";			
+				typeName = "STRING";
+				defaultValue = "'[0.0002, 0.0004, 0.0006]'";
 			};
 			class ConsumptionTruck: Edit {
-				property = "keko_logistics_ModuleFuel_Truck";
+				property = QGVAR(ConsumptionTruck);
                 displayName = "Consumption Truck";
                 typeName = "STRING";
                 defaultValue = "'[0.0002, 0.0004, 0.0006]'";
             };
             class ConsumptionTank: Edit {
-            	property = "keko_logistics_ModuleFuel_Tank";
+            	property = QGVAR(ConsumptionTank);
             	displayName = "Consumption Tank";
                 typeName = "STRING";
                 defaultValue = "'[0.0002, 0.0004, 0.0006]'";
             };
             class ConsumptionHelo: Edit {
-            	property = "keko_logistics_ModuleFuel_Helo";
+            	property = QGVAR(ConsumptionHelo);
             	displayName = "Consumption Helo";
                 typeName = "STRING";
                 defaultValue = "'[0.0005, 0.0005, 0.0005]'";
             };
             class ConsumptionPlane: Edit {
-            	property = "keko_logistics_ModuleFuel_Plane";
+            	property = QGVAR(ConsumptionPlane);
             	displayName = "Consumption Plane";
                 typeName = "STRING";
                 defaultValue = "'[0.0002, 0.0005, 0.0009]'";
@@ -110,11 +110,11 @@ class CfgVehicles {
 			class ModuleDescription: ModuleDescription{};
 		};
     };
-    class keko_ModuleCustomLogistics3den: GVAR(moduleBase3den)
+    class GVAR(moduleCustomLogistics3den): GVAR(moduleBase3den)
     {
-        displayName        = "Custom Crates"; 
+        displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleCustomLogistics3den);
-        icon = QPATHTOF(ui\icon_crate.paa);       
+        icon = QPATHTOF(ui\icon_crate.paa);
     };
 };
