@@ -2,44 +2,44 @@
 
 disableSerialization;
 
-_display = _this select 0;
-_listBox = _display displayCtrl 1500;
+private _display = _this select 0;
+private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-_crates = [];
+private _crates = [];
 
 if(GVAR(customLogistics) == 2) then {
 	_crates = [["Kisten", GVAR(customCrates)]];
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadFaction) >> "crates");
 };
 
 diag_log text format["[KEKO] (logistics) logisticsMenuInit: _crates = %1", _crates];
 
-_i = 0;
+private _i = 0;
 {
-	_section_title = _x select 0;
+	private _section_title = _x select 0;
 	lbAdd [1500, format ["------ %1 ------", _section_title]];
 	lbSetData [1500, _i, ""];
 	_i = _i + 1;
 
-	_section_crates = _x select 1;
+	private _section_crates = _x select 1;
 
 	{
-		_crate_name = "";
+		private _crate_name = "";
 		if(GVAR(customLogistics) == 2) then {
 			_crate_name = _x select 0;
 			lbAdd [1500, _crate_name];
-			_escapedString = [_crate_name, " ", "%20"] call EFUNC(loadout,replaceString);
+			private _escapedString = [_crate_name, " ", "%20"] call EFUNC(loadout,replaceString);
 			lbSetData [1500, _i, format ["%1", _escapedString]];
 		}
 		else {
-			_crate_name = getText (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _x >> "name");
+			_crate_name = getText (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> _x >> "name");
 			lbAdd [1500, _crate_name];
-			lbSetData [1500, _i, format ["%1 %2", EGVAR(loadout,faction), _x]];
-			//diag_log text format ["[KEKO] (logistics) LogisticsMenuInit adding '%1 %2' @ %3", EGVAR(loadout,faction), _x, _i];
+			lbSetData [1500, _i, format ["%1 %2", EGVAR(loadout,loadoutFaction), _x]];
+			//diag_log text format ["[KEKO] (logistics) LogisticsMenuInit adding '%1 %2' @ %3", EGVAR(loadout,loadoutFaction), _x, _i];
 		};
 
 		_i = _i + 1;

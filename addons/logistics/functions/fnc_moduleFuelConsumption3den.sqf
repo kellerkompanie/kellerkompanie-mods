@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-_logic = _this select 0;
+private _logic = _this select 0;
 
 diag_log text "[KEKO] (logistics) running moduleFuelConsumption3den";
 

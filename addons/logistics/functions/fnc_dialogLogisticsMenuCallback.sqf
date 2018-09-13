@@ -4,16 +4,16 @@
 
 if (_this isEqualTo "") exitWith {};
 
-_arr = _this splitString " ";
+private _arr = _this splitString " ";
 
 if(GVAR(customLogistics) == 2) then {
-	_crate_name = _arr select 0;
+	private _crate_name = _arr select 0;
 
 	[getPosATL player, _crate_name] spawn FUNC(spawnCrate);
 }
 else {
-	_faction = _arr select 0;
-	_crate = _arr select 1;
+	private _faction = _arr select 0;
+	private _crate = _arr select 1;
 
 	//diag_log text format ["[KEKO] (logistics) LogisticsMenuCallback %1 %2", _faction, _crate];
 

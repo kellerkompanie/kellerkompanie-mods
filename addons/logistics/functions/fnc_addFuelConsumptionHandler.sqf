@@ -42,16 +42,16 @@ if (isNil QGVAR(fuelUptake)) then {
          };
          while {alive player} do {
             waitUntil {vehicle player != player && player == driver vehicle player };
-            _vh = vehicle player;
+            private _vh = vehicle player;
             while {vehicle player != player && player == driver (vehicle player) && alive player} do {
                waitUntil {isEngineOn _vh};
                diag_log text "[KEKO] (logistics) isEngineOn vehicle player == TRUE";
                while {isEngineOn _vh && alive player} do {
                   if !(driver _vh == player || alive player || alive _vh) exitWith {};
 
-                  _maxSpeedThreshold = (getNumber (configFile >> "CfgVehicles" >> typeOf _vh >> "maxSpeed") * 0.8);
-                  _speed = speed _vh;
-                  _fuel = fuel _vh;
+                  private _maxSpeedThreshold = (getNumber (configFile >> "CfgVehicles" >> typeOf _vh >> "maxSpeed") * 0.8);
+                  private _speed = speed _vh;
+                  private _fuel = fuel _vh;
 
                   if (_vh isKindOf "Car") Then {
                      if(_speed <= 5) then {
@@ -111,7 +111,7 @@ if (isNil QGVAR(fuelUptake)) then {
                   if (_vh isKindOf "Plane") Then {
                      // TODO include height calculation
 
-                     _throttle = airplaneThrottle _vh;
+                     private _throttle = airplaneThrottle _vh;
 
                      if(_throttle < 0.25) then {
                         _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 0));

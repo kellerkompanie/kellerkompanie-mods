@@ -29,6 +29,6 @@ if (EGVAR(loadout,loadoutOnSpawn)) then {
 	if( (player isKindOf "keko_blufor_soldier") || (player isKindOf "keko_opfor_soldier") || (player isKindOf "keko_indfor_soldier") ) then {
 		private _playerObjectClass = typeOf player;
 		private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
-		[player, EGVAR(loadout,faction), _loadoutDummyClass] call EFUNC(loadout,giveLoadout);
+		[player, EGVAR(loadout,loadoutFaction), _loadoutDummyClass] call EFUNC(loadout,giveLoadout);
 	};
 };
