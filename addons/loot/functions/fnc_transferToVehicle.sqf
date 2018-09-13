@@ -1,7 +1,8 @@
 // original version by Bear https://steamcommunity.com/sharedfiles/filedetails/?id=1439779114
+#include "script_component.hpp"
 
 params ["_target", "_vehicle"];
-    
+
 private _items = [];
 private _backpacks = [];
 private _isMan = _target isKindOf "CAManBase";
@@ -12,19 +13,19 @@ if (_isMan) then {
     _items append weapons _target;
 
     removeAllWeapons _target;
-    
+
     private _backpack = backpack _target;
     if !(_backpack isEqualTo "") then {
         _backpacks pushBack _backpack;
         removeBackpackGlobal _target;
     };
-    
+
     private _uniform = uniform _target;
     if !(_uniform isEqualTo "") then {
-        if !(_target getVariable ["keko_looter", false]) then {
+        if !(_target getVariable [GVAR(looter), false]) then {
             _items pushBack _uniform;
         };
-        
+
         // removeUniform _target; // keep your pants on for muh immersions
     };
     private _vest = vest _target;
@@ -42,14 +43,14 @@ if (_isMan) then {
         _items pushBack _nvg;
         _target unlinkItem _nvg;
     };
-    
-    _target setVariable ["keko_looter", true, true];
+
+    _target setVariable [GVAR(looter), true, true];
 } else {
     _items = magazineCargo _target;
     _items append weaponCargo _target;
     _items append itemCargo _target;
     _backpacks = backpackCargo _target;
-    
+
     clearWeaponCargoGlobal _target;
     clearMagazineCargoGlobal _target;
     clearBackpackCargoGlobal _target;
