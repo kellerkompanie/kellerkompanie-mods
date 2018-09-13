@@ -2,10 +2,10 @@
 
 disableSerialization;
 
-_action = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1401);
-_title = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1400);
-_content = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1402);
-_remove = cbChecked ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 2800);
+private _action = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1401);
+private _title = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1400);
+private _content = ctrlText ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 1402);
+private _remove = cbChecked ((uiNamespace getVariable QGVAR(mainDialog)) displayCtrl 2800);
 
 systemChat format ["_remove %1", _remove];
 
@@ -16,7 +16,7 @@ profileNamespace setVariable [QGVAR(lastAction), _remove];
 
 //diag_log text format["[KEKO] (intel) dialogIntelCallback: %1 %2 %3 %4", _action, _title, _content, _remove];
 
-_logic = profileNamespace getVariable QGVAR(logic);
+private _logic = profileNamespace getVariable QGVAR(logic);
 
 private _object = attachedTo _logic;
 diag_log text format["[KEKO] (intel) dialogIntelCallback on object: %1", _object];

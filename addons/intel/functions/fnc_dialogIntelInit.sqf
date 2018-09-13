@@ -4,16 +4,16 @@
 disableSerialization;
 
 //dialog
-_display = _this select 0;
-_ctrlAction = _display displayCtrl 1401;
-_ctrlTitle = _display displayCtrl 1400;
-_ctrlContent = _display displayCtrl 1402;
-_ctrlRemove = _display displayCtrl 2800;
+private _display = _this select 0;
+private _ctrlAction = _display displayCtrl 1401;
+private _ctrlTitle = _display displayCtrl 1400;
+private _ctrlContent = _display displayCtrl 1402;
+private _ctrlRemove = _display displayCtrl 2800;
 
-_lastAction = profileNamespace getVariable [QGVAR(lastAction), "Dokumente aufhaben"];
-_lastTitle = profileNamespace getVariable [QGVAR(lastTitel), "Dokumenttitel"];
-_lastContent = profileNamespace getVariable [QGVAR(lastContent), "Das Dokument enthält einiges an Text"];
-_lastRemove = profileNamespace getVariable [QGVAR(lastRemove), false];
+private _lastAction = profileNamespace getVariable [QGVAR(lastAction), "Dokumente aufhaben"];
+private _lastTitle = profileNamespace getVariable [QGVAR(lastTitel), "Dokumenttitel"];
+private _lastContent = profileNamespace getVariable [QGVAR(lastContent), "Das Dokument enthält einiges an Text"];
+private _lastRemove = profileNamespace getVariable [QGVAR(lastRemove), false];
 
 _ctrlAction ctrlSetText _lastAction;
 _ctrlTitle ctrlSetText _lastTitle;
