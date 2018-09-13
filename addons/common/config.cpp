@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
     	name = COMPONENT_NAME;
-        units[] = {            
+        units[] = {
             QGVAR(moduleFullHeal),
             QGVAR(moduleAssignEngineer),
             QGVAR(moduleAssignRepairSpecialist),
@@ -23,7 +23,6 @@ class CfgPatches {
         requiredAddons[] = {
             "keko_main",
         	"3den",
-            "keko_loadout",
             "ace_ai",
             "cba_settings",
             "A3_Modules_F",
