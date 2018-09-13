@@ -1,12 +1,10 @@
 #include "script_component.hpp"
 
-_logic     = _this select 0;
-_units     = _this select 1;
-_activated = _this select 2;
+params["_logic","_units","_activated"];
 
 if !(_activated && local _logic) exitWith {};
 
-if(!("respawn" in allMapMarkers)) then 
+if(!("respawn" in allMapMarkers)) then
 {
     createMarker ["respawn", getPos _logic];
 }

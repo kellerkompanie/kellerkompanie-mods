@@ -2,28 +2,28 @@
 
 if !(isServer) exitWith{};
 
-_handle = _this spawn {
+private _handle = _this spawn {
 
 	// give enough time for headless clients to take over AI
 	waitUntil{time > 90};
 
-	_logic = _this select 0;
+	private _logic = _this select 0;
 
 	diag_log text "[KEKO] (common) running moduleACEGarrison3den";
 
-	_pos = getPos _logic;
-	_radiusStr = _logic getVariable ["Radius", 100];
-	_radius = parseNumber _radiusStr;
-	_teleport = _logic getVariable ["Teleport", true];
-	_topDownMode = _logic getVariable ["TopDown", false];
-	_mode = _logic getVariable ["Mode", 1];
+	private _pos = getPos _logic;
+	private _radiusStr = _logic getVariable ["Radius", 100];
+	private _radius = parseNumber _radiusStr;
+	private _teleport = _logic getVariable ["Teleport", true];
+	private _topDownMode = _logic getVariable ["TopDown", false];
+	private _mode = _logic getVariable ["Mode", 1];
 
-	_objects = synchronizedObjects _logic;
+	private _objects = synchronizedObjects _logic;
 	if ((count _objects) > 0) then {
-		_units = [];
+		private _units = [];
 
 		{
-			_group = units _x;
+			private _group = units _x;
 			{
 				_units pushBackUnique _x;
 			} forEach _group;
@@ -35,3 +35,5 @@ _handle = _this spawn {
 	};
 	deleteVehicle _logic;
 };
+
+_handle;

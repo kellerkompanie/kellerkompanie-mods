@@ -2,18 +2,15 @@
 
 //systemChat str "InitModule 3denAttributesChanged";
 
-_module = _this select 0;
-_moduleName = str (_module get3DENAttribute "name");
-
-
-_initModuleExists = false;
-_existingInitModule = objNull;
-_gameMasterModuleExists = false;
-_hc1Exists = false;
-_hc2Exists = false;
-_hc3Exists = false;
-{ 
-	_logicName = (_x get3DENAttribute "name") select 0;
+private _module = _this select 0;
+private _initModuleExists = false;
+private _existingInitModule = objNull;
+private _gameMasterModuleExists = false;
+private _hc1Exists = false;
+private _hc2Exists = false;
+private _hc3Exists = false;
+{
+	private _logicName = (_x get3DENAttribute "name") select 0;
 	//systemChat _logicName;
 	switch(_logicName) do {
 		case QGVAR(3den_initModule): {
@@ -26,7 +23,7 @@ _hc3Exists = false;
 			break;
 		};
 		case "HC1": {
-			_hc1Exists = true; 
+			_hc1Exists = true;
 			break;
 		};
 		case "HC2": {
@@ -47,16 +44,16 @@ if (_initModuleExists) then {
 		delete3DENEntities _this;
 		if(true) exitWith {};
 	};
-}; 
+};
 
 if !(_initModuleExists) then {
 	set3DENMissionAttributes [
 	    ["Scenario", "SaveBinarized", false],
-	    
+
 	    ["Multiplayer", "Respawn", 3],
 	    ["Multiplayer", "RespawnDelay", 10],
 	    ["Multiplayer", "MinPlayers", 1],
-	    
+
 	    ["Multiplayer", "DisabledAI", true],
 	    ["Multiplayer", "AIKills", false],
 	    ["Multiplayer", "EnableTeamSwitch", false],
@@ -72,11 +69,11 @@ if !(_initModuleExists) then {
 set3DENMissionAttributes [ ["Multiplayer", "MaxPlayers", (count playableUnits) + 3] ];
 
 // update scenario variables from module settings
-_missionTitle = _module getVariable "MissionTitle";
-_missionAuthor = _module getVariable "MissionAuthor";
-_missionPicture = _module getVariable "MissionPicture";
-_missionPictureSubtitle = _module getVariable "MissionPictureSubtitle";
-_sideRelations = _module getVariable "SideRelations";
+private _missionTitle = _module getVariable "MissionTitle";
+private _missionAuthor = _module getVariable "MissionAuthor";
+private _missionPicture = _module getVariable "MissionPicture";
+private _missionPictureSubtitle = _module getVariable "MissionPictureSubtitle";
+private _sideRelations = _module getVariable "SideRelations";
 
 "Scenario" set3DENMissionAttribute ["Author", _missionAuthor];
 "Scenario" set3DENMissionAttribute ["IntelBriefingName", _missionTitle];
@@ -84,7 +81,7 @@ _sideRelations = _module getVariable "SideRelations";
 "Scenario" set3DENMissionAttribute ["OnLoadMission", _missionPictureSubtitle];
 
 switch(_sideRelations) do {
-	case 0: {		
+	case 0: {
 		"Multiplayer" set3DENMissionAttribute ["IntelIndepAllegiance",[0,0]];
 	};
 	case 1: {
@@ -101,12 +98,12 @@ switch(_sideRelations) do {
 
 // create additional logics on first create
 
-_modulePos = getPos _module;
+private _modulePos = getPos _module;
 
 if !(_gameMasterModuleExists) then {
 	// create GameMaster/Zeus module for logged-in admin
-	_gameMasterPos = [(_modulePos select 0) + 2, _modulePos select 1, _modulePos select 2];
-	_gameMasterEntity = create3DENEntity ["Logic", "ModuleCurator_F", _gameMasterPos];
+	private _gameMasterPos = [(_modulePos select 0) + 2, _modulePos select 1, _modulePos select 2];
+	private _gameMasterEntity = create3DENEntity ["Logic", "ModuleCurator_F", _gameMasterPos];
 	_gameMasterEntity set3DENAttribute ["Name", QGVAR(3den_gameMaster)];
 	set3DENAttributes [[ [_gameMasterEntity], "ModuleCurator_F_Owner", "#adminLogged" ]];
 	set3DENAttributes [[ [_gameMasterEntity], "ModuleCurator_F_Addons", 3 ]];
@@ -115,8 +112,8 @@ if !(_gameMasterModuleExists) then {
 
 // create modules for headless clients
 if !(_hc1Exists) then {
-	_hc1Pos = [(_modulePos select 0) + 3, _modulePos select 1, _modulePos select 2];
-	_hc1Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc1Pos];
+	private _hc1Pos = [(_modulePos select 0) + 3, _modulePos select 1, _modulePos select 2];
+	private _hc1Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc1Pos];
 	_hc1Entity set3DENAttribute ["Name", "HC1"];
 	_hc1Entity set3DENAttribute ["ControlSP", false];
 	_hc1Entity set3DENAttribute ["ControlMP", true];
@@ -124,8 +121,8 @@ if !(_hc1Exists) then {
 };
 
 if !(_hc2Exists) then {
-	_hc2Pos = [(_modulePos select 0) + 4, _modulePos select 1, _modulePos select 2];
-	_hc2Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc2Pos];
+	private _hc2Pos = [(_modulePos select 0) + 4, _modulePos select 1, _modulePos select 2];
+	private _hc2Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc2Pos];
 	_hc2Entity set3DENAttribute ["Name", "HC2"];
 	_hc2Entity set3DENAttribute ["ControlSP", false];
 	_hc2Entity set3DENAttribute ["ControlMP", true];
@@ -133,8 +130,8 @@ if !(_hc2Exists) then {
 };
 
 if !(_hc3Exists) then {
-	_hc3Pos = [(_modulePos select 0) + 5, _modulePos select 1, _modulePos select 2];
-	_hc3Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc3Pos];
+	private _hc3Pos = [(_modulePos select 0) + 5, _modulePos select 1, _modulePos select 2];
+	private _hc3Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc3Pos];
 	_hc3Entity set3DENAttribute ["Name", "HC3"];
 	_hc3Entity set3DENAttribute ["ControlSP", false];
 	_hc3Entity set3DENAttribute ["ControlMP", true];

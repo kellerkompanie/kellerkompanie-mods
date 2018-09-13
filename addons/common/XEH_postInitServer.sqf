@@ -9,4 +9,4 @@ diag_log text "[KEKO] (common) running XEH_postInitServer";
 { _x setVariable ["birdType",""]; _x setVariable ["showNotification",false]; [_x, [-1, -2, 2]] call bis_fnc_setCuratorVisionModes; nil;} count allCurators;
 
 //deletes empty groups:
-GVAR(emptyGroupsDeleter) = addMissionEventHandler ["EntityKilled",{_grp = group (_this select 0);if ( count (units _grp) == 0 ) then { deleteGroup _grp };}];
+GVAR(emptyGroupsDeleter) = addMissionEventHandler ["EntityKilled",{private _grp = group (_this select 0);if ( count (units _grp) == 0 ) then { deleteGroup _grp };}];

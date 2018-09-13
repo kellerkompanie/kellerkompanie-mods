@@ -9,7 +9,7 @@ private _suffix = ctrlText _ctrlSuffix;
 profileNamespace setVariable [QGVAR(lastSuffix),_suffix];
 
 {
-	_description = (_x get3DENAttribute "description") select 0;
+	private _description = (_x get3DENAttribute "description") select 0;
 	_description = _description + _suffix;
 	_x set3DENAttribute ["description", _description];
 } forEach (get3DENSelected "object");

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-_logic     = _this select 0;
+private _logic     = _this select 0;
 
 if(isServer) then {
 	createMarker ["respawn", getPos _logic];
