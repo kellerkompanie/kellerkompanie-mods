@@ -66,4 +66,4 @@ _objects = synchronizedObjects _logic;
 } forEach _objects;
 
 publicVariable QGVAR(customCrates);
-diag_log text format ["[KEKO] (logistic) keko_var_logistics_customCrates: %1", GVAR(customCrates)];
+diag_log text format ["[KEKO] (logistic) customCrates: %1", GVAR(customCrates)];

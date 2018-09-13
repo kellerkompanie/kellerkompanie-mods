@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 diag_log text "[KEKO] (common) running XEH_postInitClient";
 
 player setVariable ["BIS_noCoreConversations", true];
@@ -9,24 +11,24 @@ if ( player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_comman
 	if ( isNull (getAssignedCuratorLogic player) ) then {
 		diag_log text format["[KEKO] (common) no assigned curator module found, creating zeus for %1", name player];
 		//[name player, 3] remoteExec ["keko_common_fnc_createZeus",2];
-		[player] remoteExec ["keko_common_fnc_createZeus",2];
+		[player] remoteExec [QFUNC(createZeus),2];
 	};
 	if ( isNil "keko_evh_createZeusRespawn" ) then {
 		diag_log text format["[KEKO] (common) no zeus respawn event handler assigned, adding one for %1", name player];
-		keko_evh_createZeusRespawn = player addEventhandler ["RESPAWN",{
+		GVAR(createZeusRespawn) = player addEventhandler ["RESPAWN",{
 			if ( isNull (getAssignedCuratorLogic player) ) then {
 				diag_log text format["[KEKO] (common) no assigned curator module found after respawn, creating zeus for %1", name player];
 				//[name player, 3] remoteExec ["keko_common_fnc_createZeus",2];
-				[player] remoteExec ["keko_common_fnc_createZeus",2];
+				[player] remoteExec [QFUNC(createZeus),2];
 			};
 		}];
 	};
 };
 
-if (keko_var_loadoutOnSpawn) then {
+if (EGVAR(loadout,loadoutOnSpawn)) then {
 	if( (player isKindOf "keko_blufor_soldier") || (player isKindOf "keko_opfor_soldier") || (player isKindOf "keko_indfor_soldier") ) then {
 		_playerObjectClass = typeOf player;
 		_loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
-		[player, keko_var_faction, _loadoutDummyClass] call keko_loadout_fnc_giveLoadout;
+		[player, EGVAR(loadout,faction), _loadoutDummyClass] call EFUNC(loadout,giveLoadout);
 	};
 };

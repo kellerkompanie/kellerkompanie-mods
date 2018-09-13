@@ -7,7 +7,7 @@ _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-_customLoadout = keko_var_faction isEqualTo "kekoCustom";
+_customLoadout = GVAR(faction) isEqualTo "kekoCustom";
 if(_customLoadout) then {
 
 	if (isNil QGVAR(customLoadouts)) then {
@@ -19,12 +19,12 @@ if(_customLoadout) then {
 		_x params ["_role", "_role_name", "_loadout"];
 
 		lbAdd [1500, _role_name];
-		lbSetData [1500, _i, format ["%1 %2", keko_var_faction, _role]];
+		lbSetData [1500, _i, format ["%1 %2", GVAR(faction), _role]];
 		_i = _i + 1;
 	} forEach GVAR(customLoadouts);
 
 } else {
-	_roles = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "roles");
+	_roles = getArray (configFile >> "kekoFaction" >> GVAR(faction) >> "roles");
 
 	_i = 0;
 	{
@@ -36,9 +36,9 @@ if(_customLoadout) then {
 		_section_roles = _x select 1;
 
 		{
-			_role_name = getText (configFile >> "kekoFaction" >> keko_var_faction >> _x >> "name");
+			_role_name = getText (configFile >> "kekoFaction" >> GVAR(faction) >> _x >> "name");
 			lbAdd [1500, _role_name];
-			lbSetData [1500, _i, format ["%1 %2", keko_var_faction, _x]];
+			lbSetData [1500, _i, format ["%1 %2", GVAR(faction), _x]];
 			_i = _i + 1;
 		} forEach _section_roles;
 	} forEach _roles;

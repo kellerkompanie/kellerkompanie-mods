@@ -2,8 +2,8 @@
 
 diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", GVAR(whitelist)];
 
-_weaponCfg = getText (configFile >> "kekoFaction" >> keko_var_faction >> "weaponCfg");
-_weapon_config = configFile >> "kekoFaction" >> keko_var_faction >> _weaponCfg;
+_weaponCfg = getText (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "weaponCfg");
+_weapon_config = configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _weaponCfg;
 
 _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName")};
 
@@ -14,24 +14,24 @@ _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName
 
 
 // weapons from custom loadouts
-if !(isNil "keko_var_customLoadouts") then {
+if !(isNil QEGVAR(loadout,customLoadouts)) then {
 	{
 		_primaryWeapon = ((_x select 2) select 0) select 0;
 		GVAR(whitelist) pushBackUnique toUpper(_primaryWeapon);
-	} forEach keko_var_customLoadouts;
+	} forEach EGVAR(loadout,customLoadouts);
 };
 
 // weapons from crates
 _crates = [];
 
-if(keko_var_customLogistics == 2) then {
-	if !(isNil "keko_var_logistics_customCrates") then {
-		_crates = [["Kisten", keko_var_logistics_customCrates]];
+if(EGVAR(logistics,customLogistics) == 2) then {
+	if !(isNil QGVAR(customCrates)) then {
+		_crates = [["Kisten", EGVAR(logistics,customCrates)]];
 		diag_log format ["[KEKO] (unkown_weapon) _crates loaded from customCrates: %1", _crates];
 	};
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "crates");
 	diag_log format ["[KEKO] (unkown_weapon) _crates loaded from config: %1", _crates];
 };
 
@@ -46,7 +46,7 @@ if(isNil "_crates") then {
 
 	{
 		_crate_name = "";
-		if(keko_var_customLogistics == 2) then {
+		if(EGVAR(logistics,customLogistics) == 2) then {
 			_crate_name = _x select 0;
 
 			{
@@ -65,11 +65,11 @@ if(isNil "_crates") then {
 						}
 					} forEach _entryContents;
 				};
-			} forEach keko_var_logistics_customCrates select 0;
+			} forEach EGVAR(logistics,customCrates) select 0;
 
 		}
 		else {
-			_crateConfig = configFile >> "kekoFaction" >> keko_var_faction >> _x;
+			_crateConfig = configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _x;
 			_inventory = getArray (_crateConfig >> "inventory");
 
 			{
