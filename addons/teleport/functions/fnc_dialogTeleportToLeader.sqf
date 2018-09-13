@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 diag_log text format["[KEKO] (teleport) teleporting %1 to leader", player];
 
 _playerGroup = group player;

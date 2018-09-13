@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_object", ["_sideArray", [true,true,true,true]]];
 
 _allowBLUFOR = _sideArray select 0;

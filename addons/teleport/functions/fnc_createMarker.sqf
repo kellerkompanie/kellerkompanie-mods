@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_position", "_name", "_side"];
 
 _markerName = "keko_teleport_" + _name;

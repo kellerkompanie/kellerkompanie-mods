@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_teleporterName"];
 
 diag_log text format["[KEKO] (teleport) teleporting to marker: %1", _teleporterName];

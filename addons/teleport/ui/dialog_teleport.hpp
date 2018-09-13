@@ -1,25 +1,25 @@
-class keko_teleport_mainDialog {
+class GVAR(mainDialog) {
 
 	idd = -1;
 	movingEnable = true;
 	enableSimulation = true;
 
-	onLoad = "(_this) spawn keko_teleport_fnc_dialogTeleportInit;";
+	onLoad = QUOTE(_this spawn FUNC(dialogTeleportInit));
 
 	controls[] = {
-		KEKO_TELEPORT_UI_BACK,
-		KEKO_TELEPORT_UI_FRAME,
-		KEKO_TELEPORT_UI_LIST,
-		KEKO_TELEPORT_UI_TEXT,
-		KEKO_TELEPORT_UI_BUTTON_JUMP,
-		KEKO_TELEPORT_UI_BUTTON_JUMP_GROUP,
-		KEKO_TELEPORT_UI_BUTTON_TELEPORT,
-		KEKO_TELEPORT_UI_BUTTON_TELEPORT_GROUP,
-		KEKO_TELEPORT_UI_BUTTON_NACHPORTEN,
-		KEKO_TELEPORT_UI_BUTTON_CANCEL
+		Back,
+		Frame,
+		List,
+		Text,
+		ButtonJump,
+		ButtonJumpGroup,
+		ButtonTeleport,
+		ButtonTeleportGroup,
+		ButtonJIP,
+		ButtonCancel
 	};
 
-	class KEKO_TELEPORT_UI_BACK: IGUIBack
+	class Back: IGUIBack
 	{
 		idc = 2200;
 		x = 0.06 * GUI_GRID_W + GUI_GRID_X;
@@ -29,7 +29,7 @@ class keko_teleport_mainDialog {
 		moving = 1;
 	};
 
-	class KEKO_TELEPORT_UI_FRAME: RscFrame
+	class Frame: RscFrame
 	{
 		idc = 1800;
 		text = "Teleport-Auswahlmenü";
@@ -40,7 +40,7 @@ class keko_teleport_mainDialog {
 		sizeEx = 1 * GUI_GRID_H;
 	};
 
-	class KEKO_TELEPORT_UI_LIST: RscListbox
+	class List: RscListbox
 	{
 		idc = 1500;
 		text = "Teleport-Ziele";
@@ -58,7 +58,7 @@ class keko_teleport_mainDialog {
 		};
 	};
 
-	class KEKO_TELEPORT_UI_TEXT: RscText
+	class Text: RscText
 	{
 		idc = 1000;
 		text = "Teleport-Ziele";
@@ -68,7 +68,7 @@ class keko_teleport_mainDialog {
 		h = 2 * GUI_GRID_H;
 	};
 
-	class KEKO_TELEPORT_UI_BUTTON_JUMP: RscButton
+	class ButtonJump: RscButton
 	{
 		idc = 1600;
 		text = "Parajump";
@@ -76,9 +76,9 @@ class keko_teleport_mainDialog {
 		y = 11 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogJump;";
+		action = QUOTE(closeDialog 1; [ARR_1(lbData [ARR_2(1500, lbCurSel 1500)])] spawn FUNC(dialogJump));
 	};
-	class KEKO_TELEPORT_UI_BUTTON_JUMP_GROUP: RscButton
+	class ButtonJumpGroup: RscButton
 	{
 		idc = 1601;
 		text = "Parajump Group";
@@ -86,10 +86,10 @@ class keko_teleport_mainDialog {
 		y = 11 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [player, lbData [1500, lbCurSel 1500]] remoteExec ['keko_teleport_fnc_dialogJumpGroup', 2, false];";
+		action = QUOTE(closeDialog 1; [ARR_2(player, lbData [ARR_2(1500, lbCurSel 1500)])] remoteExec [ARR_3(QQFUNC(dialogJumpGroup), 2, false)]);
 	};
 
-	class KEKO_TELEPORT_UI_BUTTON_TELEPORT: RscButton
+	class ButtonTeleport: RscButton
 	{
 		idc = 1602;
 		text = "Teleport";
@@ -97,9 +97,9 @@ class keko_teleport_mainDialog {
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [lbData [1500, lbCurSel 1500]] spawn keko_teleport_fnc_dialogTeleport;";
+		action = QUOTE(closeDialog 1; [ARR_1(lbData [ARR_2(1500, lbCurSel 1500)])] spawn FUNC(dialogTeleport));
 	};
-	class KEKO_TELEPORT_UI_BUTTON_TELEPORT_GROUP: RscButton
+	class ButtonTeleportGroup: RscButton
 	{
 		idc = 1603;
 		text = "Teleport Group";
@@ -107,10 +107,10 @@ class keko_teleport_mainDialog {
 		y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [player, lbData [1500, lbCurSel 1500]] remoteExec ['keko_teleport_fnc_dialogTeleportGroup', 2, false];";
+		action = QUOTE(closeDialog 1; [ARR_2(player, lbData [ARR_2(1500, lbCurSel 1500)])] remoteExec [ARR_3(QQFUNC(dialogTeleportGroup), 2, false)]);
 	};
 
-	class KEKO_TELEPORT_UI_BUTTON_NACHPORTEN: RscButton
+	class ButtonJIP: RscButton
 	{
 		idc = 1604;
 		text = "Teleport to Leader";
@@ -118,10 +118,10 @@ class keko_teleport_mainDialog {
 		y = 6.0 * GUI_GRID_H + GUI_GRID_Y;
 		w = 9 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 1; [player] spawn keko_teleport_fnc_dialogTeleportToLeader;";
+		action = QUOTE(closeDialog 1; [ARR_1(player)] spawn FUNC(dialogTeleportToLeader));
 	};
 
-	class KEKO_TELEPORT_UI_BUTTON_CANCEL: RscButton
+	class ButtonCancel: RscButton
 	{
 		idc = 1605;
 		text = "Abbrechen";

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_player","_teleporterName"];
 
 diag_log text format["[KEKO] (teleport) fnc_dialogJumpGroup: %1 %2", _player, _teleporterName];
