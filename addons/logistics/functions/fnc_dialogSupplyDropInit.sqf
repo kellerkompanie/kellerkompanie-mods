@@ -13,7 +13,7 @@ if(GVAR(customLogistics) == 2) then {
 	_crates = [["Kisten", GVAR(customCrates)]];
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "crates");
 };
 
 _logicPos = missionNamespace getVariable QGVAR(supply_drop_pos);
@@ -38,9 +38,9 @@ _i = 0;
 			lbSetData [1500, _i, format ["%1 %2 %3", _escapedString, _xPos, _yPos]];
 		}
 		else {
-			_crate_name = getText (configFile >> "kekoFaction" >> keko_var_faction >> _x >> "name");
+			_crate_name = getText (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _x >> "name");
 			lbAdd [1500, _crate_name];
-			lbSetData [1500, _i, format ["%1 %2 %3 %4", keko_var_faction, _x, _xPos, _yPos]];
+			lbSetData [1500, _i, format ["%1 %2 %3 %4", EGVAR(loadout,faction), _x, _xPos, _yPos]];
 		};
 
 		_i = _i + 1;

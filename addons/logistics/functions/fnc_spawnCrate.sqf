@@ -6,7 +6,7 @@ _returnCrate = "";
 if(GVAR(customLogistics) == 2) then {
 	params ["_position", "_crate_name"];
 
-	diag_log text "[KEKO] (logistics) spawnCrate keko_var_customLogistics == 2";
+	diag_log text "[KEKO] (logistics) spawnCrate customLogistics == 2";
 	diag_log text format["[KEKO] (logistics) spawnCrate customCrates = %1", GVAR(customCrates)];
 	diag_log text format["[KEKO] (logistics) spawnCrate _crate_name = '%1'", _crate_name];
 
@@ -43,7 +43,7 @@ if(GVAR(customLogistics) == 2) then {
 else {
 	params ["_position", "_faction", "_crate"];
 
-	diag_log text "[KEKO] (logistics) spawnCrate keko_var_customLogistics != 2";
+	diag_log text "[KEKO] (logistics) spawnCrate customLogistics != 2";
 	diag_log text format["[KEKO] (logistics) spawnCrate: %1 %2 %3", _position, _faction, _crate];
 
 	_crateConfig = configFile >> "kekoFaction" >> _faction >> _crate;

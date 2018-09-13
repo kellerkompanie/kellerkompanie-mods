@@ -27,4 +27,4 @@ diag_log text format ["[KEKO] (loadout) synchronizedObjects _logic: %1", _object
 } forEach _objects;
 
 publicVariable QGVAR(customLoadouts);
-diag_log text format ["[KEKO] (loadout) keko_var_customLoadouts: %1", GVAR(customLoadouts)];
+diag_log text format ["[KEKO] (loadout) customLoadouts: %1", GVAR(customLoadouts)];

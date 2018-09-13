@@ -3,7 +3,7 @@
 if (isServer and isDedicated) exitWith {};
 waitUntil {!isNull player && player == player};
 
-if(isNil QGVAR(enableFuelConsumption)) exitWith{diag_log text "[KEKO] (logistics) isNil keko_var_logistics_enableFuelConsumption"; true};
+if(isNil QGVAR(enableFuelConsumption)) exitWith{diag_log text "[KEKO] (logistics) isNil enableFuelConsumption"; true};
 
 if(!GVAR(enableFuelConsumption)) exitWith{diag_log text "[KEKO] (logistics) fuelConsumption disabled"; true};
 diag_log text "[KEKO] (logistics) fuelConsumption enabled";
