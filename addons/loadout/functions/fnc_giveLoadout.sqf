@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_unit", "_faction", "_role"];
 
 //hint format ["%1 %2 %3", _unit, _faction, _role];
@@ -9,7 +11,7 @@ params ["_unit", "_faction", "_role"];
 _customLoadout = _faction isEqualTo "kekoCustom";
 
 if(_customLoadout) then {
-	[_role, _faction] call keko_loadout_fnc_applyCustomLoadout;
+	[_role, _faction] call FUNC(applyCustomLoadout);
 };
 
 if (_customLoadout) exitWith{};
@@ -63,19 +65,19 @@ if(rank player isEqualTo "PRIVATE") then {
 if(count _uniform != 0) then {
 	_random_uniform = selectRandom _uniform;
 	//_random_uniform = [_random_uniform] call keko_fnc_replaceKeyword;
-	player forceAddUniform _random_uniform;	
+	player forceAddUniform _random_uniform;
 };
 
 if(count _vest != 0) then {
 	_random_vest = selectRandom _vest;
 	//_random_vest = [_random_vest] call keko_fnc_replaceKeyword;
-	player addVest _random_vest;	
+	player addVest _random_vest;
 };
 
 if(count _backpack != 0) then {
 	_random_backpack = selectRandom _backpack;
 	//_random_backpack = [_random_backpack] call keko_fnc_replaceKeyword;
-	player addBackpack _random_backpack;	
+	player addBackpack _random_backpack;
 };
 
 /* Workaround for Mods adding Medikits and Firstaidkits to Uniforms, Backpacks etc.*/
@@ -88,35 +90,35 @@ if(count _uniform != 0) then {
 				_item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
 				player addItemToUniform _item;
-			};		
+			};
 		} forEach _uniformInventory;
 	};
 };
 
 if(count _vest != 0) then {
-	if(count _vestInventory != 0) then {		
-		{ 
+	if(count _vestInventory != 0) then {
+		{
 			for "_i" from 1 to (_x select 0) do {
 				_item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
 				player addItemToVest _item;
-			};		
+			};
 		} forEach _vestInventory;
 
-		if(keko_var_giveGps == 3) then {
+		if(GVAR(giveGps) == 3) then {
 			player addItemToVest "ACE_microDAGR";
 		};
 	};
 };
 
 if(count _backpack != 0) then {
-	if(count _backpackInventory != 0) then {		
-		{ 
+	if(count _backpackInventory != 0) then {
+		{
 			for "_i" from 1 to (_x select 0) do {
 				_item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
 				player addItemToBackpack _item;
-			};		
+			};
 		} forEach _backpackInventory;
 	};
 };
@@ -142,23 +144,23 @@ if(count _primary != 0) then {
 	player addWeapon _primary_cfgName;
 
 	if(count _primary_items != 0) then {
-		{ 
+		{
 			_item = _x;
-			//_item = [_item] call keko_fnc_replaceKeyword; 
-			player addPrimaryWeaponItem _item; 
+			//_item = [_item] call keko_fnc_replaceKeyword;
+			player addPrimaryWeaponItem _item;
 		} forEach _primary_items;
-	};	
+	};
 
 	if(count _primary_magazines != 0) then {
 		_item = _primary_magazines select 0;
-		//_item = [_item] call keko_fnc_replaceKeyword; 
-		player addItemToVest _item; 
+		//_item = [_item] call keko_fnc_replaceKeyword;
+		player addItemToVest _item;
 	};
 
 	if(count _primary_uglMagazines != 0) then {
 		_item = _primary_uglMagazines select 0;
-		//_item = [_item] call keko_fnc_replaceKeyword; 
-		player addItemToVest _item; 
+		//_item = [_item] call keko_fnc_replaceKeyword;
+		player addItemToVest _item;
 	};
 };
 
@@ -175,15 +177,15 @@ if(count _secondary != 0) then {
 	if(count _secondary_items != 0) then {
 		{
 			_item = _x;
-			//_item = [_x] call keko_fnc_replaceKeyword; 
-			player addHandgunItem _item; 
+			//_item = [_x] call keko_fnc_replaceKeyword;
+			player addHandgunItem _item;
 		} forEach _secondary_items;
-	};	
+	};
 
 	if(count _secondary_magazines != 0) then {
 		_item = _secondary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
-		player addItemToUniform _item; 
+		player addItemToUniform _item;
 	};
 };
 
@@ -198,17 +200,17 @@ if(count _launcher != 0) then {
 	player addWeapon _launcher_cfgName;
 
 	if(count _launcher_items != 0) then {
-		{ 
+		{
 			_item = _x;
 			//_item = [_x] call keko_fnc_replaceKeyword;
-			player addSecondaryWeaponItem _item; 
+			player addSecondaryWeaponItem _item;
 		} forEach _launcher_items;
 	};
 
 	if(count _launcher_magazines != 0) then {
 		_item = _launcher_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
-		player addItemToBackpack _item; 
+		player addItemToBackpack _item;
 	};
 };
 
@@ -226,11 +228,11 @@ if(count _optics != 0) then {
 };
 
 // add compass/map, nvg etc. based on mission's preset
-call keko_loadout_fnc_addPresetItems;
+_nil = call FUNC(addPresetItems);
 
 if(count _items != 0) then {
-	{ 
-		player linkItem _x; 
+	{
+		player linkItem _x;
 	} forEach _items;
 };
 
@@ -244,8 +246,8 @@ if !(weaponLowered player) then {
 // sleep 3;
 
 // give radio
-if (keko_var_giveRadio > 0) then {
-	switch (keko_var_giveRadio) do {
+if (GVAR(giveRadio) > 0) then {
+	switch (GVAR(giveRadio)) do {
 		case 1: {
 			//Verstellbare für alle
 			switch (side player) do {
@@ -289,7 +291,7 @@ if (keko_var_giveRadio > 0) then {
 					};
 					default {};
 				};
-			};			
+			};
 		};
 		case 3: {
 			//Nur für Führungspos
@@ -313,4 +315,4 @@ if (keko_var_giveRadio > 0) then {
 };
 
 
-[player] spawn keko_loadout_fnc_setChannels;
+[player] spawn FUNC(setChannels);

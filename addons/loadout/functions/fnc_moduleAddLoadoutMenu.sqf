@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_logic"];
 if (!local _logic) exitWith {};
 
@@ -18,7 +20,7 @@ switch (true) do {
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-        [_object] call keko_loadout_fnc_addLoadoutMenu;
+        [_object] call FUNC(addLoadoutMenu);
     };
 };
 
