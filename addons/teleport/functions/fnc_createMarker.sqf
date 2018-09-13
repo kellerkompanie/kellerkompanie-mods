@@ -3,7 +3,7 @@
 params ["_position", "_name", "_side"];
 
 private _markerName = "keko_teleport_" + _name;
-private _marker = createMarkerLocal [_markerName, _position];
+createMarkerLocal [_markerName, _position];
 _markerName setMarkerSizeLocal [0.5, 0.5];
 
 switch (_side) do {
