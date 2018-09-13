@@ -29,61 +29,61 @@ sleep 5;
 //set frequencies depending on group for tfar
 if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitWith {
 	waitUntil { time > 1 && call TFAR_fnc_haveSWRadio };
-	
-	_activeSWRadio = call TFAR_fnc_activeSwRadio;
-	_hasLRRadio = call TFAR_fnc_haveLRRadio;
-	_activeLRRadio = if (_hasLRRadio) then {call TFAR_fnc_activeLRRadio} else {[""]};
-	
+
+	private _activeSWRadio = call TFAR_fnc_activeSwRadio;
+	private _hasLRRadio = call TFAR_fnc_haveLRRadio;
+	private _activeLRRadio = if (_hasLRRadio) then {call TFAR_fnc_activeLRRadio} else {[""]};
+
 	if ( toUpper (groupID group _unit) in ["COMMAND"] ) exitWith {
 		[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 			[_activeLRRadio, 5] call TFAR_fnc_setAdditionalLrChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["LEAD"] ) exitWith {
 		[_activeSWRadio, 0] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 			[_activeLRRadio, 5] call TFAR_fnc_setAdditionalLrChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["ALPHA"] ) exitWith {
 		[_activeSWRadio, 1] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["BRAVO"] ) exitWith {
 		[_activeSWRadio, 2] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["CHARLIE"] ) exitWith {
 		[_activeSWRadio, 3] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["DELTA"] ) exitWith {
 		[_activeSWRadio, 4] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["ECHO"] ) exitWith {
 		[_activeSWRadio, 5] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 2] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 2] call TFAR_fnc_setLRChannel;
 		};
 	};
 	if ( toUpper (groupID group _unit) in ["FOX"] ) exitWith {
 		[_activeSWRadio, 6] call TFAR_fnc_setSwChannel;
-		if (_hasLRRadio) then { 
-			[_activeLRRadio, 0] call TFAR_fnc_setLRChannel; 
+		if (_hasLRRadio) then {
+			[_activeLRRadio, 0] call TFAR_fnc_setLRChannel;
 		};
-	};		
+	};
 
 	// TFAR_fnc_setLRChannel
 	// TFAR_fnc_setLrStereo
@@ -97,7 +97,7 @@ if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitW
 	// TFAR_fnc_setAdditionalLrStereo
 	// TFAR_fnc_setAdditionalSwChannel
 	// TFAR_fnc_setAdditionalSwStereo
-	
+
 	true
 };
 
