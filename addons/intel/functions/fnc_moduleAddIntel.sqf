@@ -1,7 +1,9 @@
+#include "script_component.hpp"
+
 params ["_logic"];
 
 if !(local _logic) exitWith{};
 
-profileNamespace setVariable ["keko_intel_logic", _logic];
+profileNamespace setVariable [QGVAR(logic), _logic];
 
-createDialog "keko_intel_mainDialog";
+createDialog QGVAR(mainDialog);

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 _logic = _this select 0;
 
 diag_log "[KEKO] (common) running moduleInitMission3den";
@@ -10,6 +12,6 @@ if(isServer) then {
 
 	_objects = synchronizedObjects _logic;
 	{
-		[_x, _action, _title, _content, _remove] call keko_intel_fnc_addIntel;
-	} forEach _objects;	
+		[_x, _action, _title, _content, _remove] call FUNC(addIntel);
+	} forEach _objects;
 };

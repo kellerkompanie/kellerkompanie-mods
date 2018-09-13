@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_object", "_action", "_title", "_content", "_remove"];
 
 // TODO set duration in dialog
@@ -15,15 +17,15 @@ _duration = 3;
 	{
 		params ["_object", "_finder", "_ID", "_arguments"];
 		_arguments params ["_title", "_content", "_remove"];
-		
+
 		["intelAdded",[format ["Intel gefunden",player,_title] ,"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
 
-		if !(player diarySubjectExists "keko_intel") then 
+		if !(player diarySubjectExists QGVAR(brefingIntel)) then
 		{
-			player createDiarySubject ["keko_intel", "Intel"];
+			player createDiarySubject [GVAR(brefingIntel), "Intel"];
 		};
-		player createDiaryRecord ["keko_intel",[_title,_content]];
-		
+		player createDiaryRecord [GVAR(brefingIntel),[_title,_content]];
+
 		if (_remove) then {deleteVehicle _object};
 
 		openMap [true,false];
@@ -33,5 +35,5 @@ _duration = 3;
 	_duration,	// Action duration
 	20,			// Priority
 	true,		// Remove on completion
-	false		// Show in unconscious state 
+	false		// Show in unconscious state
 ] remoteExec ["BIS_fnc_holdActionAdd",0,_object];
