@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 #include "\A3\Ui_f\hpp\defineResincl.inc"
 
 params 								
