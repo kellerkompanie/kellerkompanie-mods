@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_backpack"];
+params ["", "_backpack"];
 
 private _target = objectParent _backpack;
 
