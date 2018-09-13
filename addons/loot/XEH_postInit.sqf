@@ -1,24 +1,25 @@
 // original version by Bear https://steamcommunity.com/sharedfiles/filedetails/?id=1439779114
+#include "script_component.hpp"
 
 private _action = [
-    "keko_looter_transferAction", "Transfer Loot to Vehicle", "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
+    GVAR(transferAction), "Transfer Loot to Vehicle", "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
     {
         params ["_target", "_player"];
-        
+
         (nearestObjects [_player, ace_cargo_cargoHolderTypes, 10]) select {
             (_x != _target) && {([_target, _x] call ace_interaction_fnc_getInteractionDistance) < 10}
         } params [["_nearestVehicle", objNull]];
-        
+
         if (isNull _nearestVehicle) then {
-            
+
         } else {
-            
-            [_target, _nearestVehicle] call keko_loot_fnc_transferToVehicle;
+
+            [_target, _nearestVehicle] call FUNC(transferToVehicle);
         };
     },
     {
         (_target isKindOf "WeaponHolderSimulated" || _target isKindOf "WeaponHolder" || !alive _target || _target isKindOf "ReammoBox_F") &&
-        {!(_target getVariable ["keko_looter", false])} &&
+        {!(_target getVariable [GVAR(looter), false])} &&
         {[_player, _target] call ace_common_fnc_canInteractWith} &&
         {
             0 < {
@@ -29,9 +30,9 @@ private _action = [
     {
         private _statement = {
             params ["_target", "_player", "_vehicle"];
-            [_target, _vehicle] call keko_loot_fnc_transferToVehicle;
+            [_target, _vehicle] call FUNC(transferToVehicle);
         };
-        
+
         private _vehicles = (nearestObjects [_target, ace_cargo_cargoHolderTypes, 15]) select {
             (_x != _target) && {([_target, _x] call ace_interaction_fnc_getInteractionDistance) < 10}
         };

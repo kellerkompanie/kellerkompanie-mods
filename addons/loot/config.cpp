@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-	class ADDON
-	{
+class CfgPatches {
+	class ADDON {
         name = COMPONENT_NAME;
 		units[] = {};
         weapons[] = {};
@@ -13,7 +11,7 @@ class CfgPatches
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
 
