@@ -3,7 +3,7 @@
 params ["_object", "_action", "_title", "_content", "_remove"];
 
 // TODO set duration in dialog
-_duration = 3;
+private _duration = 3;
 
 [
 	_object,	// Object the action is attached to
