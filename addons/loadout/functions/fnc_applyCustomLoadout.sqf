@@ -30,9 +30,7 @@ if (isNil GVAR(customLoadouts)) then {
 };
 
 {
-	_type = _x select 0;
-	_name = _x select 1;
-	_loadout = _x select 2;
+	_x params ["_type","","_loadout"];
 
 	if(_type isEqualTo _role) then {
 		player setUnitLoadout _loadout;

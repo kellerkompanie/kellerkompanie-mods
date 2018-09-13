@@ -2,10 +2,10 @@
 
 if (_this isEqualTo "") exitWith {};
 
-_arr = _this splitString " ";
+private _arr = _this splitString " ";
 
-_faction = _arr select 0;
-_role = _arr select 1;
+private _faction = _arr select 0;
+private _role = _arr select 1;
 
 [player, _faction, _role] spawn FUNC(giveLoadout);
 
