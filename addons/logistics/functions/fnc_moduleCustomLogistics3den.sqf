@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-_logic = _this select 0;
+private _logic = _this select 0;
 
 if (!isServer) exitWith {};
 diag_log text "[KEKO] (logistic) running moduleCustomLogistics3den";
@@ -9,7 +9,7 @@ if (isNil QGVAR(customCrates)) then {
 	GVAR(customCrates) = [];
 };
 
-_keko_fnc_getInventory = {
+private _keko_fnc_getInventory = {
 	private ["_object","_raw","_itemTypes","_itemAmounts","_idx"];
 	params ["_object"];
 
@@ -32,7 +32,7 @@ _keko_fnc_getInventory = {
 			_idx = _idx + 1;
 		}
 		else {
-			_n = _itemAmounts select _idx;
+			private _n = _itemAmounts select _idx;
 			_n = _n + 1;
 			_itemAmounts set [_idx, _n];
 		};
@@ -41,24 +41,25 @@ _keko_fnc_getInventory = {
 	//systemChat str _itemTypes;
 	//systemChat str _itemAmounts;
 
-	_inventory = [];
+	private _inventory = [];
+	private _i = 0;
 	for [{_i=0}, {_i< (count _itemTypes)}, {_i=_i+1}] do {
-		_itemType = _itemTypes select _i;
-		_itemAmount = _itemAmounts select _i;
+		private _itemType = _itemTypes select _i;
+		private _itemAmount = _itemAmounts select _i;
 		_inventory pushBack [_itemAmount, _itemType];
 	};
 
 	_inventory
 };
 
-_objects = synchronizedObjects _logic;
+private _objects = synchronizedObjects _logic;
 
 {
 	diag_log text format ["[KEKO] (logistic) converting %1 to crate", _x];
 
-	_classname = typeOf _x;
-	_name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
-	_content = _x call _keko_fnc_getInventory;
+	private _classname = typeOf _x;
+	private _name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
+	private _content = _x call _keko_fnc_getInventory;
 	GVAR(customCrates) pushBack [_name, _classname, _content];
 
 	deleteVehicle _x;

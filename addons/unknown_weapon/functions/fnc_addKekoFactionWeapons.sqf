@@ -2,8 +2,8 @@
 
 diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", GVAR(whitelist)];
 
-_weaponCfg = getText (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "weaponCfg");
-_weapon_config = configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _weaponCfg;
+_weaponCfg = getText (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "weaponCfg");
+_weapon_config = configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> _weaponCfg;
 
 _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName")};
 
@@ -31,7 +31,7 @@ if(EGVAR(logistics,customLogistics) == 2) then {
 	};
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "crates");
 	diag_log format ["[KEKO] (unkown_weapon) _crates loaded from config: %1", _crates];
 };
 
@@ -69,7 +69,7 @@ if(isNil "_crates") then {
 
 		}
 		else {
-			_crateConfig = configFile >> "kekoFaction" >> EGVAR(loadout,faction) >> _x;
+			_crateConfig = configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> _x;
 			_inventory = getArray (_crateConfig >> "inventory");
 
 			{

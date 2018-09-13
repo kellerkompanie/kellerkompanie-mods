@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 //[_targetPos select 0, _targetPos select 1, 300]
-_pos = [];
-_crate = "";
+private _pos = [];
+private _crate = "";
 if(GVAR(customLogistics) == 2) then {
 	params ["_position", "_crate_name"];
 	_pos = _position;
@@ -16,8 +16,8 @@ else
 };
 
 
-_targetPos = [_pos select 0, _pos select 1, 200];
-_chute = createVehicle ["B_Parachute_02_F", _targetPos, [], 0, "NONE"];
+private _targetPos = [_pos select 0, _pos select 1, 200];
+private _chute = createVehicle ["B_Parachute_02_F", _targetPos, [], 0, "NONE"];
 _crate setPos _targetPos;
 
 {
@@ -27,8 +27,8 @@ _crate setPos _targetPos;
 _crate attachTo [_chute, [0, 0, -0.2]];
 _chute setVelocity [0,0,-50];
 
-_light = createVehicle ["Chemlight_red", (getPosATL _crate), [], 0, "NONE"];
-_IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE"];
+private _light = createVehicle ["Chemlight_red", (getPosATL _crate), [], 0, "NONE"];
+private _IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE"];
 {
 	_x attachTo [_crate, [0, 0, 0]];
 } forEach [_light,_IRlight];
@@ -36,7 +36,7 @@ _IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE"];
 [_crate,"G_40mm_SmokeGreen"] spawn {
 	waitUntil {sleep 1; ((getPos (_this select 0)) select 2) < 30};
 
-	_smoke = createVehicle [(_this select 1), (getPos (_this select 0)), [], 0, "NONE"];
+	private _smoke = createVehicle [(_this select 1), (getPos (_this select 0)), [], 0, "NONE"];
 	_smoke attachTo [(_this select 0), [0, 0, -1]];
 
 	waitUntil {sleep 1; ((getPos (_this select 0)) select 2) < 4};
