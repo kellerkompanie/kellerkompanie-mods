@@ -1,20 +1,20 @@
 class CfgSounds {
-	sounds[] = {"keko_PunchSound", "keko_InhaleSound", "keko_ShovelSound"};
+	sounds[] = {QGVAR(PunchSound), QGVAR(InhaleSound), QGVAR(ShovelSound)};
 
-	class keko_PunchSound {
-		name = "keko_PunchSound";
+	class GVAR(PunchSound) {
+		name = QGVAR(PunchSound);
 		sound[] = {QPATHTOF(sounds\punchSound.ogg), 3, 1};
 		titles[] = {};
 	};
 
-	class keko_InhaleSound {
-		name = "keko_InhaleSound";
+	class GVAR(InhaleSound) {
+		name = QGVAR(InhaleSound);
 		sound[] = {QPATHTOF(sounds\inhaleSound.ogg), 3, 1};
 		titles[] = {};
 	};
 
-	class keko_ShovelSound {
-		name = "keko_ShovelSound";
+	class GVAR(ShovelSound) {
+		name = QGVAR(ShovelSound);
 		sound[] = {QPATHTOF(sounds\shovelSound.ogg), 3, 1};
 		titles[] = {};
 	};
