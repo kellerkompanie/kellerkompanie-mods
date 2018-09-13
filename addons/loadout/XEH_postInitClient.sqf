@@ -8,7 +8,7 @@ if (GVAR(loadoutOnSpawn)) then {
 		[player, GVAR(faction), _loadoutDummyClass] call FUNC(giveLoadout);
 	};
 
-	if( (player isKindOf QEGVAR(faction_generic,blufor_soldier) || (player isKindOf QEGVAR(faction_generic,opfor_soldier)) || (player isKindOf QEGVAR(faction_generic,indfor_soldier)) ) then {
+	if( (player isKindOf QEGVAR(faction_generic,blufor_soldier)) || (player isKindOf QEGVAR(faction_generic,opfor_soldier)) || (player isKindOf QEGVAR(faction_generic,indfor_soldier)) ) then {
 		_playerObjectClass = typeOf player;
 		_loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
 		[player, GVAR(faction), _loadoutDummyClass] call FUNC(giveLoadout);
