@@ -1,4 +1,6 @@
-if (keko_settings_kill_enabled == 0) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
+#include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
 
 [_this select 0, _this select 1] spawn {
 	_player = _this select 0;

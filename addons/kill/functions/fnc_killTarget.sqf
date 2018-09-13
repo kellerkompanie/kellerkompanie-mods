@@ -1,4 +1,6 @@
-if (keko_settings_kill_enabled == 0) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
+#include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
 
 [_this select 0, cursorTarget] spawn {
 	_player = _this select 0;
@@ -11,7 +13,7 @@ if (keko_settings_kill_enabled == 0) exitWith {diag_log text "[KEKO] (kill) kill
 
 				_player playActionNow "PutDown";
 
-				[_player, "keko_KillSound"] remoteExec ["say3D", 0, false];
+				[_player, QGVAR(KillSound)] remoteExec ["say3D", 0, false];
 
 				//[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 				_target call ace_medical_fnc_setDead;

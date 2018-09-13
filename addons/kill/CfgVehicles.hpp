@@ -6,7 +6,7 @@ class CfgVehicles {
 				class GVAR(Kill) {
 					displayName = "Kill";
 					condition = "(alive _target) && (_target getVariable ['ACE_isUnconscious', false])";
-					statement = "[_player,_target] call keko_kill_fnc_killHead";
+					statement = QUOTE([ARR_2(_player,_target)] call FUNC(killHead));
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
