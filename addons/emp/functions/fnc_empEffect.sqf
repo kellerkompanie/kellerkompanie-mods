@@ -1,9 +1,7 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 #include "script_component.hpp"
 
-private ["_al_grenade","_shooter","_poz_g","_zgud","_obj_emp"];
-
-_delay_check = 0.01;
+private _delay_check = 0.01;
 
 ["earthquake_02"] remoteExec ["playSound", [0,-2] select isDedicated];
 

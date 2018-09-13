@@ -6,8 +6,8 @@ if (!hasInterface) exitWith {};
 
 params ["_objSrc"];
 
-sleep 0.1 + (random 0.1);
-_sparksCount = 1 + floor (random 5);
+sleep (0.1 + (random 0.1));
+private _sparksCount = 1 + floor (random 5);
 
 for "_i" from 0 to _sparksCount do
 {

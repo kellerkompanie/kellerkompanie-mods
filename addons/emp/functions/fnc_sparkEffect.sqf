@@ -6,17 +6,17 @@ if (!hasInterface) exitWith {};
 
 params ["_objSrc","_pauseBetweenSparks"];
 
-_bbr = boundingBoxReal vehicle _objSrc;
-_p1 = _bbr select 0;
-_p2 = _bbr select 1;
-_maxHeight = abs ((_p2 select 2) - (_p1 select 2));
+private _bbr = boundingBoxReal vehicle _objSrc;
+private _p1 = _bbr select 0;
+private _p2 = _bbr select 1;
+private _maxHeight = abs ((_p2 select 2) - (_p1 select 2));
 
 //_spark_poz_rel = [getPos _objSrc select 0,getPos _objSrc select 1,_maxHeight-0.5];
-_spark_poz_rel = (_maxHeight/2)-0.45;
-_spark_type = selectRandom ["white","orange"];
+private _spark_poz_rel = (_maxHeight/2)-0.45;
+private _spark_type = selectRandom ["white","orange"];
 
-_drop = 0.001+(random 0.05);
-_scantei_spark = "#particlesource" createVehicleLocal (getPosATL _objSrc);
+private _drop = 0.001+(random 0.05);
+private _scantei_spark = "#particlesource" createVehicleLocal (getPosATL _objSrc);
 _scantei_spark setParticleCircle [0, [0, 0, 0]];
 
 if (_spark_type == "orange") then {
@@ -31,7 +31,7 @@ _scantei_spark setParticleParams [
 	"SpaceObject",
 	1, 1,
 	[0, 0,_spark_poz_rel],
-	[0, 0, 0], 
+	[0, 0, 0],
 	0, 15, 7.9, 0,
 	[0.5,0.5,0.05],
 	[[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]],
