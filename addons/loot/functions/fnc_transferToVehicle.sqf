@@ -6,7 +6,6 @@ params ["_target", "_vehicle"];
 private _items = [];
 private _backpacks = [];
 private _isMan = _target isKindOf "CAManBase";
-private _targetTypeStr = ["ground", "body"] select _isMan;
 
 if (_isMan) then {
     _items = magazines _target;
