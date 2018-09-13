@@ -15,7 +15,7 @@ private _duration = 3;
 	{},		// Code executed when action starts
 	{},		// Code executed on every progress tick
 	{
-		params ["_object", "_finder", "_ID", "_arguments"];
+		params ["_object", "", "", "_arguments"];
 		_arguments params ["_title", "_content", "_remove"];
 
 		["intelAdded",[format ["Intel gefunden",player,_title] ,"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
