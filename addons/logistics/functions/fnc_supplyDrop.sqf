@@ -1,16 +1,18 @@
+#include "script_component.hpp"
+
 //[_targetPos select 0, _targetPos select 1, 300]
 _pos = [];
 _crate = "";
-if(keko_var_customLogistics == 2) then {
+if(GVAR(customLogistics) == 2) then {
 	params ["_position", "_crate_name"];
 	_pos = _position;
-	_crate = [_position, _crate_name] call keko_logistics_fnc_spawnCrate;
-} 
+	_crate = [_position, _crate_name] call FUNC(spawnCrate);
+}
 else
 {
 	params ["_position", "_faction", "_crateCfg"];
 	_pos = _position;
-	_crate = [_position, _faction, _crateCfg] call keko_logistics_fnc_spawnCrate;
+	_crate = [_position, _faction, _crateCfg] call FUNC(spawnCrate);
 };
 
 
@@ -18,7 +20,7 @@ _targetPos = [_pos select 0, _pos select 1, 200];
 _chute = createVehicle ["B_Parachute_02_F", _targetPos, [], 0, "NONE"];
 _crate setPos _targetPos;
 
-{ 
+{
 	_x addCuratorEditableObjects [[_crate], false];
 } forEach allCurators;
 

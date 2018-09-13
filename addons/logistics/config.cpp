@@ -1,10 +1,8 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class ADDON
-    {
-        units[] = {            
+class CfgPatches {
+    class ADDON {
+        units[] = {
             QGVAR(moduleAddLogisticsMenu),
             QGVAR(moduleAddLogisticsMenu3den),
             QGVAR(moduleSpawnCrate),
@@ -22,12 +20,12 @@ class CfgPatches
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG;    
+        VERSION_CONFIG;
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
-
 #include "CfgVehicles.hpp"
 
 #include "defines.hpp"

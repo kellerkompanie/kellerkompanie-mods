@@ -1,21 +1,23 @@
+#include "script_component.hpp"
+
 _logic = _this select 0;
 
 if (!isServer) exitWith {};
 diag_log text "[KEKO] (logistic) running moduleCustomLogistics3den";
 
-if (isNil "keko_var_logistics_customCrates") then {
-	keko_var_logistics_customCrates = [];
+if (isNil QGVAR(customCrates)) then {
+	GVAR(customCrates) = [];
 };
 
 _keko_fnc_getInventory = {
 	private ["_object","_raw","_itemTypes","_itemAmounts","_idx"];
 	params ["_object"];
-	
+
 	_raw = (itemCargo _object) + (magazineCargo _object) + (weaponCargo _object) + (backpackCargo _object);
 	_raw sort true;
 
 	//systemChat format ["raw: %1", _raw];
-	
+
 	_itemTypes = [];
 	_itemAmounts = [];
 
@@ -57,11 +59,11 @@ _objects = synchronizedObjects _logic;
 	_classname = typeOf _x;
 	_name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
 	_content = _x call _keko_fnc_getInventory;
-	keko_var_logistics_customCrates pushBack [_name, _classname, _content];
+	GVAR(customCrates) pushBack [_name, _classname, _content];
 
 	deleteVehicle _x;
 
 } forEach _objects;
 
-publicVariable "keko_var_logistics_customCrates";
-diag_log text format ["[KEKO] (logistic) keko_var_logistics_customCrates: %1", keko_var_logistics_customCrates];
+publicVariable QGVAR(customCrates);
+diag_log text format ["[KEKO] (logistic) keko_var_logistics_customCrates: %1", GVAR(customCrates)];

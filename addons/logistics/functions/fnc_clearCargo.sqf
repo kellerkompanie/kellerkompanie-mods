@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if (count _this == 0) exitWith {};
 //removes all content from the target:
 {

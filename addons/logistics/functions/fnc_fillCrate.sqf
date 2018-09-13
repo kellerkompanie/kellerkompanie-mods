@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 _crate = _this select 0;
 _crate_content = _this select 1;
 

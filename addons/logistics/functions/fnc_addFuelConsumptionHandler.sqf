@@ -1,35 +1,37 @@
+#include "script_component.hpp"
+
 if (isServer and isDedicated) exitWith {};
 waitUntil {!isNull player && player == player};
 
-if(isNil "keko_var_logistics_enableFuelConsumption") exitWith{diag_log text "[KEKO] (logistics) isNil keko_var_logistics_enableFuelConsumption"; true};
+if(isNil QGVAR(enableFuelConsumption)) exitWith{diag_log text "[KEKO] (logistics) isNil keko_var_logistics_enableFuelConsumption"; true};
 
-if(!keko_var_logistics_enableFuelConsumption) exitWith{diag_log text "[KEKO] (logistics) fuelConsumption disabled"; true};
+if(!GVAR(enableFuelConsumption)) exitWith{diag_log text "[KEKO] (logistics) fuelConsumption disabled"; true};
 diag_log text "[KEKO] (logistics) fuelConsumption enabled";
 
-if (isNil "keko_logistics_handler_fuelUptake") then {
+if (isNil QGVAR(fuelUptake)) then {
    diag_log text "[KEKO] (logistics) fuelConsumption no handler found creating new";
 
-   keko_logistics_handler_fuelUptake = [] spawn {
+   GVAR(fuelUptake) = [] spawn {
 
       // initialize variables if not set already
-      if (isNil "keko_var_logistics_fuelConsumption_car") then {
-         keko_var_logistics_fuelConsumption_car = [0.0002, 0.0004, 0.0006];
+      if (isNil QGVAR(fuelConsumption_car)) then {
+         GVAR(fuelConsumption_car) = [0.0002, 0.0004, 0.0006];
       };
 
-      if (isNil "keko_var_logistics_fuelConsumption_truck") then {
-         keko_var_logistics_fuelConsumption_truck = [0.0002, 0.0004, 0.0006];
+      if (isNil QGVAR(fuelConsumption_truck)) then {
+         GVAR(fuelConsumption_truck) = [0.0002, 0.0004, 0.0006];
       };
 
-      if (isNil "keko_var_logistics_fuelConsumption_tank") then {
-         keko_var_logistics_fuelConsumption_tank = [0.0002, 0.0004, 0.0006];
+      if (isNil QGVAR(fuelConsumption_tank)) then {
+         GVAR(fuelConsumption_tank) = [0.0002, 0.0004, 0.0006];
       };
 
-      if (isNil "keko_var_logistics_fuelConsumption_helo") then {
-         keko_var_logistics_fuelConsumption_helo = [0.0005, 0.0005, 0.0005];
+      if (isNil QGVAR(fuelConsumption_helo)) then {
+         GVAR(fuelConsumption_helo) = [0.0005, 0.0005, 0.0005];
       };
 
-      if (isNil "keko_var_logistics_fuelConsumption_plane") then {
-         keko_var_logistics_fuelConsumption_plane = [0.0002, 0.0005, 0.0009];
+      if (isNil QGVAR(fuelConsumption_plane)) then {
+         GVAR(fuelConsumption_plane) = [0.0002, 0.0005, 0.0009];
       };
 
       while {alive player} do   {
@@ -53,12 +55,12 @@ if (isNil "keko_logistics_handler_fuelUptake") then {
 
                   if (_vh isKindOf "Car") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_car select 0));
+                        _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 0));
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_car select 1));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 1));
                         } else {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_car select 2));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 2));
                         };
                      };
                      sleep .20;
@@ -66,41 +68,41 @@ if (isNil "keko_logistics_handler_fuelUptake") then {
 
                   if (_vh isKindOf "Truck") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_truck select 0));
+                        _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 0));
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_truck select 1));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 1));
                         } else {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_truck select 2));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 2));
                         };
                      };
                      sleep .20;
                   };
-                  
+
                   if (_vh isKindOf "Tank") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_tank select 0));
+                        _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 0));
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_tank select 1));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 1));
                         } else {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_tank select 2));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 2));
                         };
                      };
                      sleep .20;
                   };
-                  
+
                   if (_vh isKindOf "Helicopter") Then {
                      // TODO include weight based on weightRTD
                      // TODO calculate based on throttle
 
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_helo select 0));
+                        _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 0));
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_helo select 1));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 1));
                         } else {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_helo select 2));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 2));
                         };
                      };
                      sleep .20;
@@ -112,12 +114,12 @@ if (isNil "keko_logistics_handler_fuelUptake") then {
                      _throttle = airplaneThrottle _vh;
 
                      if(_throttle < 0.25) then {
-                        _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_plane select 0));
+                        _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 0));
                      } else {
                         if(_throttle < 0.75) then {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_plane select 1));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 1));
                         } else {
-                           _vh setFuel (_fuel - (keko_var_logistics_fuelConsumption_plane select 2));
+                           _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 2));
                         };
                      };
                      sleep .20;

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 disableSerialization;
 
 _display = _this select 0;
@@ -7,8 +9,8 @@ lbClear _listBox;
 
 _crates = [];
 
-if(keko_var_customLogistics == 2) then {
-	_crates = [["Kisten", keko_var_logistics_customCrates]];
+if(GVAR(customLogistics) == 2) then {
+	_crates = [["Kisten", GVAR(customCrates)]];
 }
 else {
 	_crates = getArray (configFile >> "kekoFaction" >> keko_var_faction >> "crates");
@@ -19,7 +21,7 @@ _xPos = _logicPos select 0;
 _yPos = _logicPos select 1;
 
 _i = 0;
-{ 
+{
 	_section_title = _x select 0;
 	lbAdd [1500, format ["------ %1 ------", _section_title]];
 	lbSetData [1500, _i, ""];
@@ -29,10 +31,10 @@ _i = 0;
 
 	{
 		_crate_name = "";
-		if(keko_var_customLogistics == 2) then {
+		if(GVAR(customLogistics) == 2) then {
 			_crate_name = _x select 0;
 			lbAdd [1500, _crate_name];
-			_escapedString = [_crate_name, " ", "%20"] call keko_loadout_fnc_replaceString;
+			_escapedString = [_crate_name, " ", "%20"] call EFUNC(loadout,replaceString);
 			lbSetData [1500, _i, format ["%1 %2 %3", _escapedString, _xPos, _yPos]];
 		}
 		else {
@@ -40,7 +42,7 @@ _i = 0;
 			lbAdd [1500, _crate_name];
 			lbSetData [1500, _i, format ["%1 %2 %3 %4", keko_var_faction, _x, _xPos, _yPos]];
 		};
-		
+
 		_i = _i + 1;
 	} forEach _section_crates;
 } forEach _crates;
