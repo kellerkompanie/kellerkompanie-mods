@@ -36,37 +36,35 @@
 class CfgVehicles {
 
 	class Logic;
-	class Module_F: Logic
-	{
-			class EventHandlers;
-			class ModuleDescription;
-
-			class AttributesBase
-	{
-		class Default;
-		class Edit;
-		class Combo;
-		class Checkbox;
-		class CheckboxNumber;
+	class Module_F: Logic {
+		class EventHandlers;
 		class ModuleDescription;
-		class Units;
 
-		expression = "_this setVariable ['%s',_value];";
-	};
+		class AttributesBase {
+			class Default;
+			class Edit;
+			class Combo;
+			class Checkbox;
+			class CheckboxNumber;
+			class ModuleDescription;
+			class Units;
+
+			expression = "_this setVariable ['%s',_value];";
+		};
 	};
 
-	class keko_redneck_ModuleBase3den: Module_F
+	class GVAR(moduleBase3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "Base";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleBase3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleBase3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_base.pac";
+			icon = QPATHTOF(ui\icon_base.pac);
 
 			class Attributes: AttributesBase
 			{
@@ -74,138 +72,138 @@ class CfgVehicles {
 			};
 	};
 
-	class keko_redneck_ModuleAirport3den: Module_F
+	class GVAR(moduleAirport3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Airport";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleAirport3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleAirport3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_airport.pac";
+			icon = QPATHTOF(ui\icon_airport.pac);
 
 			class Attributes: AttributesBase
 	{
-					class id: Edit {
-							property = "keko_redneck_ModuleAirport3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
 					};
 		};
 	};
-	class keko_redneck_ModuleDollar3den: Module_F
+	class GVAR(moduleDollar3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Dollar";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleDollar3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleDollar3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_dollar.pac";
+			icon = QPATHTOF(ui\icon_dollar.pac);
 
 			class Attributes: AttributesBase
 			{
-					class id: Edit {
-							property = "keko_redneck_ModuleDollar3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
 					};
 			};
 	};
-	class keko_redneck_ModuleFlag3den: Module_F
+	class GVAR(moduleFlag3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Flag";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleFlag3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleFlag3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_flag.pac";
+			icon = QPATHTOF(ui\icon_flag.pac);
 
 			class Attributes: AttributesBase
 			{
-					class id: Edit {
-							property = "keko_redneck_ModuleFlag3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
 					};
 			};
 	};
-	class keko_redneck_ModuleFuel3den: Module_F
+	class GVAR(moduleFuel3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Fuel";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleFuel3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleFuel3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_fuel.pac";
+			icon = QPATHTOF(ui\icon_fuel.pac);
 
 			class Attributes: AttributesBase
 			{
-					class id: Edit {
-							property = "keko_redneck_ModuleFuel3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
 					};
 			};
 	};
-	class keko_redneck_ModuleRadiotower3den: Module_F
+	class GVAR(moduleRadiotower3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Radiotower";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleRadiotower3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleRadiotower3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_radiotower.pac";
+			icon = QPATHTOF(ui\icon_radiotower.pac);
 
 			class Attributes: AttributesBase
 			{
-					class id: Edit {
-							property = "keko_redneck_ModuleRadiotower3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
 					};
 			};
 	};
-	class keko_redneck_ModuleResearch3den: Module_F
+	class GVAR(moduleResearch3den): Module_F
 	{
 			scope              = 2;
 			scopeCurator       = 1;
 			displayName        = "POI - Research";
-			category           = "keko_redneck";
-			function           = "keko_redneck_fnc_moduleResearch3den";
+			category           = QGVAR(redneck);
+			function           = QFUNC(moduleResearch3den);
 			functionPriority   = 1;
 			isGlobal           = 1;
 			isTriggerActivated = 1;
 			isDisposable       = 0;
-			icon = "\keko_redneck\icons\icon_research.pac";
+			icon = QPATHTOF(ui\icon_research.pac);
 
 			class Attributes: AttributesBase
 			{
-					class id: Edit {
-							property = "keko_redneck_ModuleResearch3den_id";
+					class GVAR(id): Edit {
+							property = QGVAR(id);
 							displayName = "ID";
 							typeName = "STRING";
 							defaultValue = "''";
@@ -217,22 +215,22 @@ class CfgVehicles {
 
 
 	class FlagCarrier;
-	class keko_redneck_flag: FlagCarrier {
+	class GVAR(flag): FlagCarrier {
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Flag (Redneck)";
 
 		class EventHandlers {
-			init = "(_this select 0) setFlagTexture '\keko_redneck\images\redneck_flag.paa'";
+			init = QUOTE((_this select 0) setFlagTexture QQPATHTOF(ui\redneck_flag.paa));
 		};
 	};
 
 	class Banner_01_base_F;
-	class keko_redneck_banner: Banner_01_base_F {
+	class GVAR(banner): Banner_01_base_F {
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Banner (Redneck)";
-		hiddenSelectionsTextures[] = {"\keko_redneck\images\redneck_flag.paa"};
+		hiddenSelectionsTextures[] = {QPATHTOF(ui\redneck_flag.paa)};
 	};
 
 
@@ -247,12 +245,12 @@ class CfgVehicles {
 	modelsides[] = {3,2,1,0};
 	};
 
-	class keko_redneck_blufor_soldier_base : B_Soldier_base_F {
+	class GVAR(blufor_soldier_base) : B_Soldier_base_F {
 	    author = "Schwaggot";
 	    scope = 1;
 	    curatorScope = 1;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
+	    faction = QGVAR(blufor);
 	    vehicleClass = "Men";
 	    model = "\a3\characters_f\blufor\b_soldier_01.p3d";
 	    modelSides[]={3,2,1,0};
@@ -278,7 +276,7 @@ class CfgVehicles {
 	    };
 	};
 
-	class keko_redneck_blufor_soldier1 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier1) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (HK416)";
@@ -287,10 +285,9 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier2 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier2) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (MP5K)";
@@ -299,10 +296,9 @@ class CfgVehicles {
 	    weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier3 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier3) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (M4)";
@@ -311,10 +307,9 @@ class CfgVehicles {
 	    weapons[] = {"SMA_M4afgSTOCK","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier4 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier4) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (Mk18)";
@@ -323,10 +318,9 @@ class CfgVehicles {
 	    weapons[] = {"SMA_MK18afgTANBLK","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier5 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier5) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (M16)";
@@ -335,10 +329,9 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_m16a4_carryhandle","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier6 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier6) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (Shotgun)";
@@ -347,10 +340,9 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_M590_8RD","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_soldier7 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_soldier7) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman (AKM)";
@@ -359,13 +351,12 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_akmn","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
 
-	class keko_redneck_blufor_grenadier1 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_grenadier1) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Grenadier (M4)";
@@ -374,10 +365,9 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_m4_m203","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_grenadier2 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_grenadier2) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Grenadier (HK416)";
@@ -386,12 +376,11 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416GL","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_blufor_rifleman_at : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_rifleman_at) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Rifleman AT";
@@ -400,7 +389,6 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","rhs_weap_M136_hedp","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManAT";
 	};
 
@@ -408,7 +396,7 @@ class CfgVehicles {
 
 
 
-	class keko_redneck_blufor_minimi : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_minimi) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Autorifleman (Minimi)";
@@ -417,11 +405,10 @@ class CfgVehicles {
 	    weapons[] = {"sma_minimi_mk3_762tlb","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManMG";
 	};
 
-	class keko_redneck_blufor_m60 : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_m60) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Machine Gunner (M60)";
@@ -430,14 +417,13 @@ class CfgVehicles {
 	    weapons[] = {"hlc_lmg_m60","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManMG";
 	};
 
 
 
 
-	class keko_redneck_blufor_medic : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_medic) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Medic";
@@ -446,13 +432,12 @@ class CfgVehicles {
 	    weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit","Medikit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManMedic";
 	};
 
 
 
-	class keko_redneck_blufor_sniper : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_sniper) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Sniper";
@@ -461,10 +446,9 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_XM2010_wd_leu","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit","optic_lrps"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_sniper_sws : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_sniper_sws) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Sniper (SWS)";
@@ -473,10 +457,9 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_m24sws_leu","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit","optic_lrps"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_blufor_marksman : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_marksman) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Marksman";
@@ -485,12 +468,11 @@ class CfgVehicles {
 	    weapons[] = {"rhs_weap_m14ebrri_leu","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit","optic_lrps"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_blufor_ftl : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_ftl) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Team Leader";
@@ -499,11 +481,10 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	    icon = "iconManLeader";
 	};
 
-	class keko_redneck_blufor_pilot : keko_redneck_blufor_soldier_base {
+	class GVAR(blufor_pilot) : GVAR(blufor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Pilot";
@@ -512,7 +493,6 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 
 			class EventHandlers: EventHandlers {
 	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
@@ -522,28 +502,28 @@ class CfgVehicles {
 
 	// vehicles
 	class C_Offroad_01_F;
-	class keko_redneck_blufor_offroad: C_Offroad_01_F {
+	class GVAR(blufor_offroad): C_Offroad_01_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier2"};
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
+	    typicalCargo[] = {QGVAR(blufor_soldier2)};
 	    displayName = "Pickup";
 	    vehicleClass = "Car";
 	    animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
 	};
 
 	class LOP_AFR_OPF_Offroad_M2;
-	class keko_redneck_blufor_offroad_mg: LOP_AFR_OPF_Offroad_M2 {
+	class GVAR(blufor_offroad_mg): LOP_AFR_OPF_Offroad_M2 {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier2"};
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
+	    typicalCargo[] = {QGVAR(blufor_soldier2)};
 	    displayName = "Pickup (MG)";
 	    vehicleClass = "Car";
 	    animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
@@ -552,27 +532,27 @@ class CfgVehicles {
 	};
 
 	class C_Offroad_02_unarmed_F;
-	class keko_redneck_blufor_jeep: C_Offroad_02_unarmed_F {
+	class GVAR(blufor_jeep): C_Offroad_02_unarmed_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier2"};
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
+	    typicalCargo[] = {QGVAR(blufor_soldier2)};
 	    displayName = "Jeep";
 	    vehicleClass = "Car";
 	};
 
 	class I_C_Offroad_02_LMG_F;
-	class keko_redneck_blufor_jeep_mg: I_C_Offroad_02_LMG_F {
+	class GVAR(blufor_jeep_mg): I_C_Offroad_02_LMG_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier2"};
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
+	    typicalCargo[] = {QGVAR(blufor_soldier2)};
 	    displayName = "Jeep (MG)";
 	    vehicleClass = "Car";
 	};
@@ -580,62 +560,62 @@ class CfgVehicles {
 
 
 	class C_Van_01_transport_F;
-	class keko_redneck_blufor_truck_cargo: C_Van_01_transport_F {
+	class GVAR(blufor_truck_cargo): C_Van_01_transport_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier2";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier2);
 	    displayName = "Truck (Cargo)";
 	    vehicleClass = "Car";
 	};
 
 	class C_Quadbike_01_F;
-	class keko_redneck_blufor_quadbike: C_Quadbike_01_F {
+	class GVAR(blufor_quadbike): C_Quadbike_01_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
 	    displayName = "Quadbike";
 	    vehicleClass = "Car";
 	};
 
 	class C_Van_02_vehicle_F;
-	class keko_redneck_blufor_van_cargo: C_Van_02_vehicle_F {
+	class GVAR(blufor_van_cargo): C_Van_02_vehicle_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier2";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier2);
 	    displayName = "Van (Cargo)";
 	    vehicleClass = "Car";
 	};
 
 	class C_Van_02_transport_F;
-	class keko_redneck_blufor_van_transport: C_Van_02_transport_F {
+	class GVAR(blufor_van_transport): C_Van_02_transport_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier2";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier2);
 	    displayName = "Van (Transport)";
 	    vehicleClass = "Car";
 	};
 
 
 	class LOP_ISTS_M998_D_4DR;
-	class keko_redneck_blufor_humvee: LOP_ISTS_M998_D_4DR {
+	class GVAR(blufor_humvee): LOP_ISTS_M998_D_4DR {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier3";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier3);
 	    displayName = "Humvee";
 	    vehicleClass = "Car";
 	    editorSubcategory = "EdSubcat_Cars";
@@ -643,25 +623,25 @@ class CfgVehicles {
 	};
 
 	class C_SUV_01_F;
-	class keko_redneck_blufor_suv: C_SUV_01_F {
+	class GVAR(blufor_suv): C_SUV_01_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier4";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier4);
 	    displayName = "SUV";
 	    vehicleClass = "Car";
 	};
 
 	class LOP_UKR_KAMAZ_Covered;
-	class keko_redneck_blufor_kamaz: LOP_UKR_KAMAZ_Covered {
+	class GVAR(blufor_kamaz): LOP_UKR_KAMAZ_Covered {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier4";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier4);
 	    displayName = "Truck (Covered)";
 	    vehicleClass = "Car";
 	    editorSubcategory = "EdSubcat_Cars";
@@ -669,72 +649,72 @@ class CfgVehicles {
 	};
 
 	class PO_AFR_RDS_tt650_Civ_01;
-	class keko_redneck_blufor_yamaha: PO_AFR_RDS_tt650_Civ_01 {
+	class GVAR(blufor_yamaha): PO_AFR_RDS_tt650_Civ_01 {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier5";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier5);
 	    displayName = "Crossbike";
 	    vehicleClass = "Car";
 	    editorSubcategory = "EdSubcat_Cars";
 	    delete dlc;
-	    typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+	    typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 
 	class C_Heli_Light_01_civil_F;
-	class keko_redneck_blufor_md500: C_Heli_Light_01_civil_F {
+	class GVAR(blufor_md500): C_Heli_Light_01_civil_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier5";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier5);
 	    displayName = "MD-500";
 	    vehicleClass = "Air";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+	    typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class MU_CIV_Orca;
-	class keko_redneck_blufor_orca: MU_CIV_Orca {
+	class GVAR(blufor_orca): MU_CIV_Orca {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier5";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier5);
 	    displayName = "Orca";
 	    vehicleClass = "Air";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+	    typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 
 	class C_Plane_Civil_01_F;
-	class keko_redneck_blufor_cessna: C_Plane_Civil_01_F {
+	class GVAR(blufor_cessna): C_Plane_Civil_01_F {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier5";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier5);
 	    displayName = "Cessna";
 	    vehicleClass = "Air";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+	    typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class RHS_AN2;
-	class keko_redneck_blufor_doppeldecker: RHS_AN2 {
+	class GVAR(blufor_doppeldecker): RHS_AN2 {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier5";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier5);
 	    displayName = "Doppeldecker";
 	    vehicleClass = "Air";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+	    typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 
@@ -742,48 +722,48 @@ class CfgVehicles {
 
 
 	class RHS_M2StaticMG_USMC_WD;
-	class keko_redneck_blufor_mg_high: RHS_M2StaticMG_USMC_WD {
+	class GVAR(blufor_mg_high): RHS_M2StaticMG_USMC_WD {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
 	    displayName = "Machine Gun (High)";
 	};
 
 	class RHS_M2StaticMG_MiniTripod_USMC_WD;
-	class keko_redneck_blufor_mg_low: RHS_M2StaticMG_MiniTripod_USMC_WD {
+	class GVAR(blufor_mg_low): RHS_M2StaticMG_MiniTripod_USMC_WD {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
 	    displayName = "Machine Gun (Low)";
 	};
 
 	class RHS_M252_USMC_WD;
-	class keko_redneck_blufor_mortar: RHS_M252_USMC_WD {
+	class GVAR(blufor_mortar): RHS_M252_USMC_WD {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
 	    displayName = "Mortar";
 	};
 
 	class RHS_zu23_MSV;
-	class keko_redneck_blufor_antiair: RHS_zu23_MSV {
+	class GVAR(blufor_antiair): RHS_zu23_MSV {
 	    author = "Schwaggot";
 	    scope = 2;
 	    curatorScope = 2;
 	    side = 1;
-	    faction = "keko_faction_redneck_blufor";
-	    crew = "keko_redneck_blufor_soldier1";
+	    faction = QGVAR(blufor);
+	    crew = QGVAR(blufor_soldier1);
 	    displayName = "Anti-Air";
-	    typicalCargo[] = {"keko_redneck_blufor_soldier3"};
+	    typicalCargo[] = {QGVAR(blufor_soldier3)};
 	};
 
 
@@ -796,146 +776,146 @@ class CfgVehicles {
 
 
 	class sab_paratrike_west;
-	class keko_redneck_blufor_paratrike: sab_paratrike_west {
+	class GVAR(blufor_paratrike): sab_paratrike_west {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Paratrike";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class sab_paraglider;
-	class keko_redneck_blufor_paraglider: sab_paraglider {
+	class GVAR(blufor_paraglider): sab_paraglider {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Paraglider";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class sab_gladiator;
-	class keko_redneck_blufor_gladiator: sab_gladiator {
+	class GVAR(blufor_gladiator): sab_gladiator {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Gladiator";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class sab_mustang;
-	class keko_redneck_blufor_mustang: sab_mustang {
+	class GVAR(blufor_mustang): sab_mustang {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Mustang";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class sab_texan;
-	class keko_redneck_blufor_texan: sab_texan {
+	class GVAR(blufor_texan): sab_texan {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Texan";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 	class sab_ultralight;
-	class keko_redneck_blufor_ultralight: sab_ultralight {
+	class GVAR(blufor_ultralight): sab_ultralight {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 1;
-			faction = "keko_faction_redneck_blufor";
-			crew = "keko_redneck_blufor_soldier5";
+			faction = QGVAR(blufor);
+			crew = QGVAR(blufor_soldier5);
 			displayName = "Ultralight";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_blufor_soldier1"};
+			typicalCargo[] = {QGVAR(blufor_soldier1)};
 	};
 
 
 	class rhs_uh1h_hidf;
-	class keko_redneck_blufor_uh1h: rhs_uh1h_hidf {
+	class GVAR(blufor_uh1h): rhs_uh1h_hidf {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
 		displayName = "UH-1H";
-		faction = "keko_faction_redneck_blufor";
-		crew = "keko_redneck_blufor_pilot";
-		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		faction = QGVAR(blufor);
+		crew = QGVAR(blufor_pilot);
+		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class rhs_uh1h_hidf_gunship;
-	class keko_redneck_blufor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+	class GVAR(blufor_uh1h_gunship): rhs_uh1h_hidf_gunship {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
 		displayName = "UH-1H Gunship";
-		faction = "keko_faction_redneck_blufor";
-		crew = "keko_redneck_blufor_pilot";
-		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		faction = QGVAR(blufor);
+		crew = QGVAR(blufor_pilot);
+		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class rhs_uh1h_hidf_unarmed;
-	class keko_redneck_blufor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+	class GVAR(blufor_uh1h_unarmed): rhs_uh1h_hidf_unarmed {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
 		displayName = "UH-1H Unarmed";
-		faction = "keko_faction_redneck_blufor";
-		crew = "keko_redneck_blufor_pilot";
-		typicalCargo[] = {"keko_redneck_blufor_pilot"};
+		faction = QGVAR(blufor);
+		crew = QGVAR(blufor_pilot);
+		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class RwG_Mozzie_Carl_Black;
-	class keko_redneck_blufor_mozzie_black: RwG_Mozzie_Carl_Black {
+	class GVAR(blufor_mozzie_black): RwG_Mozzie_Carl_Black {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
 		displayName = "Mosquito Black";
-		faction = "keko_faction_redneck_blufor";
-		crew = "keko_redneck_blufor_pilot";
+		faction = QGVAR(blufor);
+		crew = QGVAR(blufor_pilot);
 	};
 
 	class RwG_Mozzie_Carl_Red;
-	class keko_redneck_blufor_mozzie_red: RwG_Mozzie_Carl_Red {
+	class GVAR(blufor_mozzie_red): RwG_Mozzie_Carl_Red {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
 		displayName = "Mosquito Red";
-		faction = "keko_faction_redneck_blufor";
-		crew = "keko_redneck_blufor_pilot";
+		faction = QGVAR(blufor);
+		crew = QGVAR(blufor_pilot);
 	};
 
 
@@ -956,12 +936,12 @@ class CfgVehicles {
 		modelsides[] = {3,2,1,0};
 	};
 
-	class keko_redneck_indfor_soldier_base : I_Soldier_base_F {
+	class GVAR(indfor_soldier_base) : I_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 1;
 		curatorScope = 1;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
+		faction = QGVAR(indfor);
 		vehicleClass = "Men";
 		model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
 		modelSides[]={3,2,1,0};
@@ -987,7 +967,7 @@ class CfgVehicles {
 		};
 	};
 
-	class keko_redneck_indfor_soldier1 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier1) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (HK416)";
@@ -996,10 +976,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier2 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier2) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (MP5K)";
@@ -1008,10 +987,9 @@ class CfgVehicles {
 		weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier3 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier3) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (M4)";
@@ -1020,10 +998,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_M4afgSTOCK","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier4 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier4) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (Mk18)";
@@ -1032,10 +1009,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_MK18afgTANBLK","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier5 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier5) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (M16)";
@@ -1044,10 +1020,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m16a4_carryhandle","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier6 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier6) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (Shotgun)";
@@ -1056,10 +1031,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_M590_8RD","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_soldier7 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_soldier7) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (AKM)";
@@ -1068,13 +1042,12 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_akmn","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
 
-	class keko_redneck_indfor_grenadier1 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_grenadier1) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Grenadier (M4)";
@@ -1083,10 +1056,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m4_m203","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_grenadier2 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_grenadier2) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Grenadier (HK416)";
@@ -1095,12 +1067,11 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416GL","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_indfor_rifleman_at : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_rifleman_at) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman AT";
@@ -1109,7 +1080,6 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","rhs_weap_M136_hedp","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManAT";
 	};
 
@@ -1117,7 +1087,7 @@ class CfgVehicles {
 
 
 
-	class keko_redneck_indfor_minimi : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_minimi) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Autorifleman (Minimi)";
@@ -1126,11 +1096,10 @@ class CfgVehicles {
 		weapons[] = {"sma_minimi_mk3_762tlb","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMG";
 	};
 
-	class keko_redneck_indfor_m60 : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_m60) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Machine Gunner (M60)";
@@ -1139,14 +1108,13 @@ class CfgVehicles {
 		weapons[] = {"hlc_lmg_m60","hgun_P07_F","Throw","Put"};
 		magazines[] = {"hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMG";
 	};
 
 
 
 
-	class keko_redneck_indfor_medic : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_medic) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Medic";
@@ -1155,13 +1123,12 @@ class CfgVehicles {
 		weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","Medikit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMedic";
 	};
 
 
 
-	class keko_redneck_indfor_sniper : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_sniper) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Sniper";
@@ -1170,10 +1137,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_XM2010_wd_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_sniper_sws : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_sniper_sws) : GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Sniper (SWS)";
@@ -1182,10 +1148,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m24sws_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_indfor_marksman : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_marksman): GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Marksman";
@@ -1194,12 +1159,11 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m14ebrri_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_indfor_ftl : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_ftl): GVAR(indfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Team Leader";
@@ -1208,10 +1172,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
 	};
-	class keko_redneck_indfor_pilot : keko_redneck_indfor_soldier_base {
+	class GVAR(indfor_pilot): GVAR(indfor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Pilot";
@@ -1220,7 +1183,6 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 
 			class EventHandlers: EventHandlers {
 	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
@@ -1229,27 +1191,27 @@ class CfgVehicles {
 
 
 	// vehicles
-	class keko_redneck_indfor_offroad: C_Offroad_01_F {
+	class GVAR(indfor_offroad): C_Offroad_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
-		typicalCargo[] = {"keko_redneck_indfor_soldier2"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
+		typicalCargo[] = {QGVAR(indfor_soldier2)};
 		displayName = "Pickup";
 		vehicleClass = "Car";
 		animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
 	};
 
-	class keko_redneck_indfor_offroad_mg: LOP_AFR_OPF_Offroad_M2 {
+	class GVAR(indfor_offroad_mg): LOP_AFR_OPF_Offroad_M2 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
-		typicalCargo[] = {"keko_redneck_indfor_soldier2"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
+		typicalCargo[] = {QGVAR(indfor_soldier2)};
 		displayName = "Pickup (MG)";
 		vehicleClass = "Car";
 		animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
@@ -1257,343 +1219,343 @@ class CfgVehicles {
 		delete dlc;
 	};
 
-	class keko_redneck_indfor_jeep: C_Offroad_02_unarmed_F {
+	class GVAR(indfor_jeep): C_Offroad_02_unarmed_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
-		typicalCargo[] = {"keko_redneck_indfor_soldier2"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
+		typicalCargo[] = {QGVAR(indfor_soldier2)};
 		displayName = "Jeep";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_jeep_mg: I_C_Offroad_02_LMG_F {
+	class GVAR(indfor_jeep_mg): I_C_Offroad_02_LMG_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
-		typicalCargo[] = {"keko_redneck_indfor_soldier2"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
+		typicalCargo[] = {QGVAR(indfor_soldier2)};
 		displayName = "Jeep (MG)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_truck_cargo: C_Van_01_transport_F {
+	class GVAR(indfor_truck_cargo): C_Van_01_transport_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier2";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier2);
 		displayName = "Truck (Cargo)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_quadbike: C_Quadbike_01_F {
+	class GVAR(indfor_quadbike): C_Quadbike_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
 		displayName = "Quadbike";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_van_cargo: C_Van_02_vehicle_F {
+	class GVAR(indfor_van_cargo): C_Van_02_vehicle_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier2";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier2);
 		displayName = "Van (Cargo)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_van_transport: C_Van_02_transport_F {
+	class GVAR(indfor_van_transport): C_Van_02_transport_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier2";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier2);
 		displayName = "Van (Transport)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_humvee: LOP_ISTS_M998_D_4DR {
+	class GVAR(indfor_humvee): LOP_ISTS_M998_D_4DR {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier3";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier3);
 		displayName = "Humvee";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
 	};
 
-	class keko_redneck_indfor_suv: C_SUV_01_F {
+	class GVAR(indfor_suv): C_SUV_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier4";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier4);
 		displayName = "SUV";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_indfor_kamaz: LOP_UKR_KAMAZ_Covered {
+	class GVAR(indfor_kamaz): LOP_UKR_KAMAZ_Covered {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier4";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier4);
 		displayName = "Truck (Covered)";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
 	};
 
-	class keko_redneck_indfor_yamaha: PO_AFR_RDS_tt650_Civ_01 {
+	class GVAR(indfor_yamaha): PO_AFR_RDS_tt650_Civ_01 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier5";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier5);
 		displayName = "Crossbike";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
-		typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+		typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_md500: C_Heli_Light_01_civil_F {
+	class GVAR(indfor_md500): C_Heli_Light_01_civil_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier5";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier5);
 		displayName = "MD-500";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+		typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_orca: MU_CIV_Orca {
+	class GVAR(indfor_orca): MU_CIV_Orca {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier5";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier5);
 		displayName = "Orca";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+		typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_cessna: C_Plane_Civil_01_F {
+	class GVAR(indfor_cessna): C_Plane_Civil_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier5";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier5);
 		displayName = "Cessna";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+		typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_doppeldecker: RHS_AN2 {
+	class GVAR(indfor_doppeldecker): RHS_AN2 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier5";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier5);
 		displayName = "Doppeldecker";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+		typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_mg_high: RHS_M2StaticMG_USMC_WD {
+	class GVAR(indfor_mg_high): RHS_M2StaticMG_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
 		displayName = "Machine Gun (High)";
 	};
 
-	class keko_redneck_indfor_mg_low: RHS_M2StaticMG_MiniTripod_USMC_WD {
+	class GVAR(indfor_mg_low): RHS_M2StaticMG_MiniTripod_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
 		displayName = "Machine Gun (Low)";
 	};
 
-	class keko_redneck_indfor_mortar: RHS_M252_USMC_WD {
+	class GVAR(indfor_mortar): RHS_M252_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
 		displayName = "Mortar";
 	};
 
-	class keko_redneck_indfor_antiair: RHS_zu23_MSV {
+	class GVAR(indfor_antiair): RHS_zu23_MSV {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 2;
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_soldier1";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_soldier1);
 		displayName = "Anti-Air";
-		typicalCargo[] = {"keko_redneck_indfor_soldier3"};
+		typicalCargo[] = {QGVAR(indfor_soldier3)};
 	};
 
-	class keko_redneck_indfor_paratrike: sab_paratrike_west {
+	class GVAR(indfor_paratrike): sab_paratrike_west {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Paratrike";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_paraglider: sab_paraglider {
+	class GVAR(indfor_paraglider): sab_paraglider {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Paraglider";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_gladiator: sab_gladiator {
+	class GVAR(indfor_gladiator): sab_gladiator {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Gladiator";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_mustang: sab_mustang {
+	class GVAR(indfor_mustang): sab_mustang {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Mustang";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_texan: sab_texan {
+	class GVAR(indfor_texan): sab_texan {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Texan";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_ultralight: sab_ultralight {
+	class GVAR(indfor_ultralight): sab_ultralight {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 2;
-			faction = "keko_faction_redneck_indfor";
-			crew = "keko_redneck_indfor_soldier5";
+			faction = QGVAR(indfor);
+			crew = QGVAR(indfor_soldier5);
 			displayName = "Ultralight";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_indfor_soldier1"};
+			typicalCargo[] = {QGVAR(indfor_soldier1)};
 	};
 
-	class keko_redneck_indfor_uh1h: rhs_uh1h_hidf {
+	class GVAR(indfor_uh1h): rhs_uh1h_hidf {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		displayName = "UH-1H";
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_pilot";
-		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_pilot);
+		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_indfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+	class GVAR(indfor_uh1h_gunship): rhs_uh1h_hidf_gunship {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		displayName = "UH-1H Gunship";
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_pilot";
-		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_pilot);
+		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_indfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+	class GVAR(indfor_uh1h_unarmed): rhs_uh1h_hidf_unarmed {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		displayName = "UH-1H Unarmed";
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_pilot";
-		typicalCargo[] = {"keko_redneck_indfor_pilot"};
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_pilot);
+		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_indfor_mozzie_black: RwG_Mozzie_Carl_Black {
+	class GVAR(indfor_mozzie_black): RwG_Mozzie_Carl_Black {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		displayName = "Mosquito Black";
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_pilot";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_pilot);
 	};
 
-	class keko_redneck_indfor_mozzie_red: RwG_Mozzie_Carl_Red {
+	class GVAR(indfor_mozzie_red): RwG_Mozzie_Carl_Red {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		displayName = "Mosquito Red";
-		faction = "keko_faction_redneck_indfor";
-		crew = "keko_redneck_indfor_pilot";
+		faction = QGVAR(indfor);
+		crew = QGVAR(indfor_pilot);
 	};
 
 
@@ -1621,12 +1583,12 @@ class CfgVehicles {
 		modelsides[] = {3,2,1,0};
 	};
 
-	class keko_redneck_opfor_soldier_base : O_Soldier_base_F {
+	class GVAR(opfor_soldier_base) : O_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 1;
 		curatorScope = 1;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
+		faction = QGVAR(opfor);
 		vehicleClass = "Men";
 		model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
 		modelSides[]={3,2,1,0};
@@ -1652,7 +1614,7 @@ class CfgVehicles {
 		};
 	};
 
-	class keko_redneck_opfor_soldier1 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier1): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (HK416)";
@@ -1661,10 +1623,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier2 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier2): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (MP5K)";
@@ -1673,10 +1634,9 @@ class CfgVehicles {
 		weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier3 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier3): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (M4)";
@@ -1685,10 +1645,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_M4afgSTOCK","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier4 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier4): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (Mk18)";
@@ -1697,10 +1656,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_MK18afgTANBLK","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier5 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier5): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (M16)";
@@ -1709,10 +1667,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m16a4_carryhandle","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier6 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier6): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (Shotgun)";
@@ -1721,10 +1678,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_M590_8RD","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_00Buck","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_soldier7 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_soldier7): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman (AKM)";
@@ -1733,13 +1689,12 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_akmn","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
 
-	class keko_redneck_opfor_grenadier1 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_grenadier1): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Grenadier (M4)";
@@ -1748,10 +1703,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m4_m203","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_grenadier2 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_grenadier2): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Grenadier (HK416)";
@@ -1760,12 +1714,11 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416GL","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","rhs_mag_M441_HE","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_opfor_rifleman_at : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_rifleman_at): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Rifleman AT";
@@ -1774,7 +1727,6 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","rhs_weap_M136_hedp","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManAT";
 	};
 
@@ -1782,7 +1734,7 @@ class CfgVehicles {
 
 
 
-	class keko_redneck_opfor_minimi : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_minimi): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Autorifleman (Minimi)";
@@ -1791,11 +1743,10 @@ class CfgVehicles {
 		weapons[] = {"sma_minimi_mk3_762tlb","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","SMA_150Rnd_762_M80A1_Mixed","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMG";
 	};
 
-	class keko_redneck_opfor_m60 : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_m60): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Machine Gunner (M60)";
@@ -1804,14 +1755,13 @@ class CfgVehicles {
 		weapons[] = {"hlc_lmg_m60","hgun_P07_F","Throw","Put"};
 		magazines[] = {"hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","hlc_100Rnd_762x51_B_M60E4","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMG";
 	};
 
 
 
 
-	class keko_redneck_opfor_medic : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_medic): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Medic";
@@ -1820,13 +1770,12 @@ class CfgVehicles {
 		weapons[] = {"SMG_05_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","Medikit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManMedic";
 	};
 
 
 
-	class keko_redneck_opfor_sniper : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_sniper): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Sniper";
@@ -1835,10 +1784,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_XM2010_wd_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_sniper_sws : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_sniper_sws): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Sniper (SWS)";
@@ -1847,10 +1795,9 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m24sws_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","rhsusf_5Rnd_762x51_m993_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
-	class keko_redneck_opfor_marksman : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_marksman): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Marksman";
@@ -1859,12 +1806,11 @@ class CfgVehicles {
 		weapons[] = {"rhs_weap_m14ebrri_leu","hgun_P07_F","Throw","Put"};
 		magazines[] = {"rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit","optic_lrps"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
 
 
-	class keko_redneck_opfor_ftl : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_ftl): GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Team Leader";
@@ -1873,10 +1819,9 @@ class CfgVehicles {
 		weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		items[] = {"FirstAidKit"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		icon = "iconManLeader";
 	};
-	class keko_redneck_opfor_pilot : keko_redneck_opfor_soldier_base {
+	class GVAR(opfor_pilot): GVAR(opfor_soldier_base) {
 	    scope = 2;
 	    curatorScope = 2;
 	    displayName = "Pilot";
@@ -1885,7 +1830,6 @@ class CfgVehicles {
 	    weapons[] = {"SMA_HK416afg","hgun_P07_F","Throw","Put"};
 	    magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	    items[] = {"FirstAidKit"};
-	    linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 
 			class EventHandlers: EventHandlers {
 	         init = "if (local (_this select 0)) then { _unit = (_this select 0); _uniform = selectRandom ['TRYK_shirts_DENIM_BK','TRYK_shirts_DENIM_BL','TRYK_shirts_DENIM_BWH','TRYK_shirts_DENIM_od','TRYK_shirts_DENIM_R','TRYK_shirts_DENIM_RED2','TRYK_shirts_DENIM_WH','TRYK_shirts_DENIM_WHB','TRYK_shirts_DENIM_ylb','TRYK_shirts_DENIM_od_Sleeve','TRYK_shirts_DENIM_ylb_Sleeve','TRYK_shirts_DENIM_BK_Sleeve','TRYK_shirts_DENIM_BL_Sleeve','TRYK_shirts_DENIM_BWH_Sleeve','TRYK_shirts_DENIM_R_Sleeve','TRYK_shirts_DENIM_RED2_Sleeve','TRYK_shirts_DENIM_WH_Sleeve','TRYK_shirts_DENIM_WHB_Sleeve']; _unit forceAddUniform _uniform; _unit addHeadgear 'H_Cap_marshal'; _vest = selectRandom ['lbt_light_od','lbt_light_coy','VSM_OGA_OD_IOTV_1','VSM_OGA_IOTV_1','VSM_LBT1961_OGA_OD','VSM_LBT1961_GRN','VSM_LBT1961_CB','VSM_LBT1961_Black','TRYK_V_TacVest_coyo','TRYK_V_PlateCarrier_blk_L','TRYK_V_PlateCarrier_coyo_L','LOP_V_CarrierLite_OLV','V_TacVest_oli','V_TacVest_khk','V_TacVest_brn','V_BandollierB_oli','V_BandollierB_khk','V_BandollierB_rgr','V_BandollierB_cbr','V_BandollierB_blk']; _unit addVest _vest;};";
@@ -1894,27 +1838,27 @@ class CfgVehicles {
 
 
 	// vehicles
-	class keko_redneck_opfor_offroad: C_Offroad_01_F {
+	class GVAR(opfor_offroad): C_Offroad_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
-		typicalCargo[] = {"keko_redneck_opfor_soldier2"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
+		typicalCargo[] = {QGVAR(opfor_soldier2)};
 		displayName = "Pickup";
 		vehicleClass = "Car";
 		animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
 	};
 
-	class keko_redneck_opfor_offroad_mg: LOP_AFR_OPF_Offroad_M2 {
+	class GVAR(opfor_offroad_mg): LOP_AFR_OPF_Offroad_M2 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
-		typicalCargo[] = {"keko_redneck_opfor_soldier2"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
+		typicalCargo[] = {QGVAR(opfor_soldier2)};
 		displayName = "Pickup (MG)";
 		vehicleClass = "Car";
 		animationList[] = {"HideBumper1",0,"HideBumper2",0,"HideConstruction",0.4,"HideDoor3",0};
@@ -1922,351 +1866,351 @@ class CfgVehicles {
 		delete dlc;
 	};
 
-	class keko_redneck_opfor_jeep: C_Offroad_02_unarmed_F {
+	class GVAR(opfor_jeep): C_Offroad_02_unarmed_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
-		typicalCargo[] = {"keko_redneck_opfor_soldier2"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
+		typicalCargo[] = {QGVAR(opfor_soldier2)};
 		displayName = "Jeep";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_opfor_jeep_mg: I_C_Offroad_02_LMG_F {
+	class GVAR(opfor_jeep_mg): I_C_Offroad_02_LMG_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
-		typicalCargo[] = {"keko_redneck_opfor_soldier2"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
+		typicalCargo[] = {QGVAR(opfor_soldier2)};
 		displayName = "Jeep (MG)";
 		vehicleClass = "Car";
 	};
 
 
 
-	class keko_redneck_opfor_truck_cargo: C_Van_01_transport_F {
+	class GVAR(opfor_truck_cargo): C_Van_01_transport_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier2";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier2);
 		displayName = "Truck (Cargo)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_opfor_quadbike: C_Quadbike_01_F {
+	class GVAR(opfor_quadbike): C_Quadbike_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
 		displayName = "Quadbike";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_opfor_van_cargo: C_Van_02_vehicle_F {
+	class GVAR(opfor_van_cargo): C_Van_02_vehicle_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier2";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier2);
 		displayName = "Van (Cargo)";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_opfor_van_transport: C_Van_02_transport_F {
+	class GVAR(opfor_van_transport): C_Van_02_transport_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier2";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier2);
 		displayName = "Van (Transport)";
 		vehicleClass = "Car";
 	};
 
 
-	class keko_redneck_opfor_humvee: LOP_ISTS_M998_D_4DR {
+	class GVAR(opfor_humvee): LOP_ISTS_M998_D_4DR {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier3";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier3);
 		displayName = "Humvee";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
 	};
 
-	class keko_redneck_opfor_suv: C_SUV_01_F {
+	class GVAR(opfor_suv): C_SUV_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier4";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier4);
 		displayName = "SUV";
 		vehicleClass = "Car";
 	};
 
-	class keko_redneck_opfor_kamaz: LOP_UKR_KAMAZ_Covered {
+	class GVAR(opfor_kamaz): LOP_UKR_KAMAZ_Covered {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier4";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier4);
 		displayName = "Truck (Covered)";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
 	};
 
-	class keko_redneck_opfor_yamaha: PO_AFR_RDS_tt650_Civ_01 {
+	class GVAR(opfor_yamaha): PO_AFR_RDS_tt650_Civ_01 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier5";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier5);
 		displayName = "Crossbike";
 		vehicleClass = "Car";
 		editorSubcategory = "EdSubcat_Cars";
 		delete dlc;
-		typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+		typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
 
-	class keko_redneck_opfor_md500: C_Heli_Light_01_civil_F {
+	class GVAR(opfor_md500): C_Heli_Light_01_civil_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier5";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier5);
 		displayName = "MD-500";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+		typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_orca: MU_CIV_Orca {
+	class GVAR(opfor_orca): MU_CIV_Orca {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier5";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier5);
 		displayName = "Orca";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+		typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
 
-	class keko_redneck_opfor_cessna: C_Plane_Civil_01_F {
+	class GVAR(opfor_cessna): C_Plane_Civil_01_F {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier5";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier5);
 		displayName = "Cessna";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+		typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_doppeldecker: RHS_AN2 {
+	class GVAR(opfor_doppeldecker): RHS_AN2 {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier5";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier5);
 		displayName = "Doppeldecker";
 		vehicleClass = "Air";
-		typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+		typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
 
 
 
-	class keko_redneck_opfor_mg_high: RHS_M2StaticMG_USMC_WD {
+	class GVAR(opfor_mg_high): RHS_M2StaticMG_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
 		displayName = "Machine Gun (High)";
 	};
 
-	class keko_redneck_opfor_mg_low: RHS_M2StaticMG_MiniTripod_USMC_WD {
+	class GVAR(opfor_mg_low): RHS_M2StaticMG_MiniTripod_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
 		displayName = "Machine Gun (Low)";
 	};
 
-	class keko_redneck_opfor_mortar: RHS_M252_USMC_WD {
+	class GVAR(opfor_mortar): RHS_M252_USMC_WD {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
 		displayName = "Mortar";
 	};
 
-	class keko_redneck_opfor_antiair: RHS_zu23_MSV {
+	class GVAR(opfor_antiair): RHS_zu23_MSV {
 		author = "Schwaggot";
 		scope = 2;
 		curatorScope = 2;
 		side = 0;
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_soldier1";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_soldier1);
 		displayName = "Anti-Air";
-		typicalCargo[] = {"keko_redneck_opfor_soldier3"};
+		typicalCargo[] = {QGVAR(opfor_soldier3)};
 	};
 
-	class keko_redneck_opfor_paratrike: sab_paratrike_west {
+	class GVAR(opfor_paratrike): sab_paratrike_west {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Paratrike";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_paraglider: sab_paraglider {
+	class GVAR(opfor_paraglider): sab_paraglider {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Paraglider";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_gladiator: sab_gladiator {
+	class GVAR(opfor_gladiator): sab_gladiator {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Gladiator";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_mustang: sab_mustang {
+	class GVAR(opfor_mustang): sab_mustang {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Mustang";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_texan: sab_texan {
+	class GVAR(opfor_texan): sab_texan {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Texan";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_ultralight: sab_ultralight {
+	class GVAR(opfor_ultralight): sab_ultralight {
 			author = "Schwaggot";
 			scope = 2;
 			curatorScope = 2;
 			side = 0;
-			faction = "keko_faction_redneck_opfor";
-			crew = "keko_redneck_opfor_soldier5";
+			faction = QGVAR(opfor);
+			crew = QGVAR(opfor_soldier5);
 			displayName = "Ultralight";
 			vehicleClass = "Air";
-			typicalCargo[] = {"keko_redneck_opfor_soldier1"};
+			typicalCargo[] = {QGVAR(opfor_soldier1)};
 	};
 
-	class keko_redneck_opfor_uh1h: rhs_uh1h_hidf {
+	class GVAR(opfor_uh1h): rhs_uh1h_hidf {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
 		displayName = "UH-1H";
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_pilot";
-		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_pilot);
+		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_opfor_uh1h_gunship: rhs_uh1h_hidf_gunship {
+	class GVAR(opfor_uh1h_gunship): rhs_uh1h_hidf_gunship {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
 		displayName = "UH-1H Gunship";
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_pilot";
-		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_pilot);
+		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_opfor_uh1h_unarmed: rhs_uh1h_hidf_unarmed {
+	class GVAR(opfor_uh1h_unarmed): rhs_uh1h_hidf_unarmed {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
 		displayName = "UH-1H Unarmed";
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_pilot";
-		typicalCargo[] = {"keko_redneck_opfor_pilot"};
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_pilot);
+		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
 		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
-	class keko_redneck_opfor_mozzie_black: RwG_Mozzie_Carl_Black {
+	class GVAR(opfor_mozzie_black): RwG_Mozzie_Carl_Black {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
 		displayName = "Mosquito Black";
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_pilot";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_pilot);
 	};
 
-	class keko_redneck_opfor_mozzie_red: RwG_Mozzie_Carl_Red {
+	class GVAR(opfor_mozzie_red): RwG_Mozzie_Carl_Red {
 		author = "Schwaggot";
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
 		displayName = "Mosquito Red";
-		faction = "keko_faction_redneck_opfor";
-		crew = "keko_redneck_opfor_pilot";
+		faction = QGVAR(opfor);
+		crew = QGVAR(opfor_pilot);
 	};
 
 };
