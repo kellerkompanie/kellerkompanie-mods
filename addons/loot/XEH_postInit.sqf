@@ -19,7 +19,7 @@ private _action = [
     },
     {
         (_target isKindOf "WeaponHolderSimulated" || _target isKindOf "WeaponHolder" || !alive _target || _target isKindOf "ReammoBox_F") &&
-        {!(_target getVariable [GVAR(looter), false])} &&
+        {!(_target getVariable [QGVAR(looter), false])} &&
         {[_player, _target] call ace_common_fnc_canInteractWith} &&
         {
             0 < {
