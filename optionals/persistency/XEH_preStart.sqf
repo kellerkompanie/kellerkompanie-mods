@@ -18,3 +18,8 @@ if(!(_result isEqualTo "[1]")) exitWith {diag_log text "[KEKO] (persistency) ext
 diag_log text "[KEKO] (persistency) added custom sql protocol keko_persistency:kellerkompanie-persistency.ini";
 
 // TODO create tables if not exist
+
+"extDB3" callExtension format [ "1:keko_persistency:createTableLoadout"];
+"extDB3" callExtension format [ "1:keko_persistency:createTableCrate"];
+"extDB3" callExtension format [ "1:keko_persistency:createTableVehicle"];
+"extDB3" callExtension format [ "1:keko_persistency:createTableMoney"];

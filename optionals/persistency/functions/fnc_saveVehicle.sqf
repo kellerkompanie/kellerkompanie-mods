@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency disabled, exiting!"; false};
-if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency key not set, exiting!"; false};
-if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency for vehicles is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency disabled, exiting!"; false};
+if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency key not set, exiting!"; false};
+if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency for vehicles is disabled, exiting!"; false};
 
 params ["_vehicle"];
 
@@ -11,7 +11,7 @@ private _vehicleClass = typeOf _vehicle;
 private _vehiclePosition = getPos _vehicle;
 private _vehicleOrientation = getDir _vehicle;
 
-private _vehicleSerialization = _vehicle call keko_persistency_fnc_getContainerContent;
+private _vehicleSerialization = _vehicle call FUNC(getContainerContent);
 private _vehicleItems = _vehicleSerialization select 0;
 private _vehicleMagazines = _vehicleSerialization select 1;
 private _vehicleWeapons = _vehicleSerialization select 2;
@@ -25,7 +25,7 @@ diag_log text format["[KEKO] (persistency) saveVehicle _vehicleID=%1 _vehicleCla
 if(_vehicleID == -1) then {
 	// vehicle does not exist yet, create new and store vehicleID
 	private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:addVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10",
-		keko_settings_persistency_key,
+		EGVAR(persistency_settings,key),
 		_vehicleClass,
 		_vehiclePosition,
 		_vehicleOrientation,
@@ -51,7 +51,7 @@ if(_vehicleID == -1) then {
 } else {
 	// vehicle already exists, update information
 	private _ret = "extDB3" callExtension format [ "1:keko_persistency:updateVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11",
-		keko_settings_persistency_key,
+		EGVAR(persistency_settings,key),
 		_vehicleClass,
 		_vehiclePosition,
 		_vehicleOrientation,

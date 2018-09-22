@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
-if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency key not set, exiting!"; false};
-if !(keko_settings_persistency_cratesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency for crates is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
+if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency key not set, exiting!"; false};
+if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency for crates is disabled, exiting!"; false};
 
 params [
 	["_input", objNull, [objNull, -1]]
@@ -67,7 +67,7 @@ if ((_ret select 0) == 1) then {
 
 	_crate setDir _orientation;
 	private _serializedData = [_items, _magazines, _weapons, _containers];
-	[_crate, _serializedData] call keko_persistency_fnc_setContainerContent;
+	[_crate, _serializedData] call FUNC(setContainerContent);
 
 	_crate setVariable ["keko_persistency_crateID", _crateID];
 

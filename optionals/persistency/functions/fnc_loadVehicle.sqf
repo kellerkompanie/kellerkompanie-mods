@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
-if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency key not set, exiting!"; false};
-if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency for vehicles is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
+if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency key not set, exiting!"; false};
+if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency for vehicles is disabled, exiting!"; false};
 
 params [
 	["_input", objNull, [objNull, -1]]
@@ -71,7 +71,7 @@ if ((_ret select 0) == 1) then {
 
 	_vehicle setDir _orientation;
 	private _serializedData = [_items, _magazines, _weapons, _containers];
-	[_vehicle, _serializedData] call keko_persistency_fnc_setContainerContent;
+	[_vehicle, _serializedData] call FUNC(setContainerContent);
 
 	_vehicle setVariable ["keko_persistency_vehicleID", _vehicleID];
 
