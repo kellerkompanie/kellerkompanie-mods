@@ -1,28 +1,30 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency key not set, exiting!"; false};
 if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency for vehicles is disabled, exiting!"; false};
 
 params ["_vehicle"];
 
-_vehicleID = _vehicle getVariable ["keko_persistency_vehicleID", -1];
-_vehicleClass = typeOf _vehicle;
-_vehiclePosition = getPos _vehicle;
-_vehicleOrientation = getDir _vehicle;
+private _vehicleID = _vehicle getVariable ["keko_persistency_vehicleID", -1];
+private _vehicleClass = typeOf _vehicle;
+private _vehiclePosition = getPos _vehicle;
+private _vehicleOrientation = getDir _vehicle;
 
-_vehicleSerialization = _vehicle call keko_persistency_fnc_getContainerContent;
-_vehicleItems = _vehicleSerialization select 0;
-_vehicleMagazines = _vehicleSerialization select 1;
-_vehicleWeapons = _vehicleSerialization select 2;
-_vehicleContainers = _vehicleSerialization select 3;
+private _vehicleSerialization = _vehicle call keko_persistency_fnc_getContainerContent;
+private _vehicleItems = _vehicleSerialization select 0;
+private _vehicleMagazines = _vehicleSerialization select 1;
+private _vehicleWeapons = _vehicleSerialization select 2;
+private _vehicleContainers = _vehicleSerialization select 3;
 
-_vehicleFuel = fuel _vehicle;
-_vehicleDamage = getAllHitPointsDamage _vehicle;
+private _vehicleFuel = fuel _vehicle;
+private _vehicleDamage = getAllHitPointsDamage _vehicle;
 
 diag_log text format["[KEKO] (persistency) saveVehicle _vehicleID=%1 _vehicleClass=%2 _vehiclePosition=%3", _vehicleID, _vehicleClass, _vehiclePosition];
 
 if(_vehicleID == -1) then {
 	// vehicle does not exist yet, create new and store vehicleID
-	_ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:addVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10",
+	private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:addVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10",
 		keko_settings_persistency_key,
 		_vehicleClass,
 		_vehiclePosition,
@@ -48,7 +50,7 @@ if(_vehicleID == -1) then {
 
 } else {
 	// vehicle already exists, update information
-	_ret = "extDB3" callExtension format [ "1:keko_persistency:updateVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11",
+	private _ret = "extDB3" callExtension format [ "1:keko_persistency:updateVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11",
 		keko_settings_persistency_key,
 		_vehicleClass,
 		_vehiclePosition,

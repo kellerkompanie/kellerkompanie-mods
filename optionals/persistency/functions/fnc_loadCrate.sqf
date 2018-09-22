@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency key not set, exiting!"; false};
 if !(keko_settings_persistency_cratesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency for crates is disabled, exiting!"; false};
@@ -8,7 +10,7 @@ params [
 
 diag_log text format ["[KEKO] (persistency) loadCrate: _input=%1", _input];
 
-_objIsNull = false;
+private _objIsNull = false;
 if((typeName _input) == (typeName objNull)) then {
 	if(isNull _input) then {
 		_objIsNull = true;
@@ -17,8 +19,8 @@ if((typeName _input) == (typeName objNull)) then {
 
 if(_objIsNull) exitWith{diag_log text "[KEKO] (persistency) loadCrate: illegal argument, exiting!"; false};
 
-_crate = objNull;
-_crateID = -1;
+private _crate = objNull;
+private _crateID = -1;
 
 if ((typeName _input) == (typeName objNull)) then {
 	// an object was passed as input, assume it's a crate
@@ -31,7 +33,7 @@ if ((typeName _input) == (typeName objNull)) then {
 
 if(_crateID == -1) exitWith{diag_log text "[KEKO] (persistency) loadCrate: crate has no ID assigned, exiting!"; false};
 
-_ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getCrate:%1", _crateID]);
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getCrate:%1", _crateID]);
 
 if ((_ret select 0) == 1) then {
 	diag_log text format ["[KEKO] (persistency) loadCrate: loading sucessful %1", _ret];
@@ -51,7 +53,7 @@ if ((_ret select 0) == 1) then {
 	// ReammoBox_F
 	if(isNull _crate) then {
 		//_allPossibleCrates = nearestObjects [_position, [_class], 100000];
-		_allPossibleCrates = allMissionObjects _class;
+		private _allPossibleCrates = allMissionObjects _class;
 		{
 			if (_x getVariable ["keko_persistency_crateID", -1] == _crateID) exitWith{_crate = _x;};
 		} forEach _allPossibleCrates;
@@ -64,7 +66,7 @@ if ((_ret select 0) == 1) then {
 	};
 
 	_crate setDir _orientation;
-	_serializedData = [_items, _magazines, _weapons, _containers];
+	private _serializedData = [_items, _magazines, _weapons, _containers];
 	[_crate, _serializedData] call keko_persistency_fnc_setContainerContent;
 
 	_crate setVariable ["keko_persistency_crateID", _crateID];

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency key not set, exiting!"; false};
 if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency for vehicles is disabled, exiting!"; false};
@@ -8,7 +10,7 @@ params [
 
 diag_log text format ["[KEKO] (persistency) loadVehicle: _input=%1", _input];
 
-_objIsNull = false;
+private _objIsNull = false;
 if((typeName _input) == (typeName objNull)) then {
 	if(isNull _input) then {
 		_objIsNull = true;
@@ -17,8 +19,8 @@ if((typeName _input) == (typeName objNull)) then {
 
 if(_objIsNull) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: illegal argument, exiting!"; false};
 
-_vehicle = objNull;
-_vehicleID = -1;
+private _vehicle = objNull;
+private _vehicleID = -1;
 
 if ((typeName _input) == (typeName objNull)) then {
 	// an object was passed as input, assume it's a vehicle
@@ -31,7 +33,7 @@ if ((typeName _input) == (typeName objNull)) then {
 
 if(_vehicleID == -1) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: vehicle has no ID assigned, exiting!"; false};
 
-_ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getVehicle:%1", _vehicleID]);
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getVehicle:%1", _vehicleID]);
 
 if ((_ret select 0) == 1) then {
 	diag_log text format ["[KEKO] (persistency) loadVehicle: loading sucessful %1", _ret];
@@ -51,14 +53,14 @@ if ((_ret select 0) == 1) then {
 	diag_log text format ["[KEKO] (persistency) loadVehicle: _class=%1 _position=%2 _orientation=%3 _fuel=%4 _damage=%5 _items=%6", _class, _position, _orientation, _fuel, _damage, _items];
 
 	if(isNull _vehicle) then {
-		_allPossiblevehicles = allMissionObjects _class;
+		private _allPossiblevehicles = allMissionObjects _class;
 		{
 			if (_x getVariable ["keko_persistency_vehicleID", -1] == _vehicleID) exitWith{_vehicle = _x;};
 		} forEach _allPossiblevehicles;
 	};
 
 	// spawn vehicle slightly higher to prevent getting it stucked in the surface
-	_z = _position select 2;
+	private _z = _position select 2;
 	_position set [2, _z + 0.3];
 
 	if(isNull _vehicle) then {
@@ -68,16 +70,16 @@ if ((_ret select 0) == 1) then {
 	};
 
 	_vehicle setDir _orientation;
-	_serializedData = [_items, _magazines, _weapons, _containers];
+	private _serializedData = [_items, _magazines, _weapons, _containers];
 	[_vehicle, _serializedData] call keko_persistency_fnc_setContainerContent;
 
 	_vehicle setVariable ["keko_persistency_vehicleID", _vehicleID];
 
 	_vehicle setFuel _fuel;
 
-	_damage params ["_hitpointsNamesArray", "_selectionsNamesArray", "_damageValuesArray"];
+	_damage params ["_hitpointsNamesArray", "", "_damageValuesArray"];
 	{
-		_damagePart = _damageValuesArray select _forEachIndex;
+		private _damagePart = _damageValuesArray select _forEachIndex;
 		_vehicle setHitIndex  [_forEachIndex, _damagePart];
 	} forEach _hitpointsNamesArray;
 

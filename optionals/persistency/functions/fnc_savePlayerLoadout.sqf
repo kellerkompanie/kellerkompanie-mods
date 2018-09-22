@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency key not set, exiting!"; false};
 if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency for players is disabled, exiting!"; false};
@@ -6,20 +8,20 @@ params ["_playerUnit"];
 
 if !(isPlayer _playerUnit) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: not a player, exiting!"; false};
 
-_playerUID = getPlayerUID _playerUnit;
-_playerName = name _playerUnit;
+private _playerUID = getPlayerUID _playerUnit;
+private _playerName = name _playerUnit;
 
 if (_playerUID find "HC" >= 0) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: HC detected, exiting!"; false};
 
-_loadout = getUnitLoadout _playerUnit;
-_medicClass = _playerUnit getVariable ["ace_medical_medicClass", 0];
-_engineerClass = _playerUnit getVariable ["ACE_isEngineer", 0];
-_rank = rank _playerUnit;
-_position = getPos _playerUnit;
+private _loadout = getUnitLoadout _playerUnit;
+private _medicClass = _playerUnit getVariable ["ace_medical_medicClass", 0];
+private _engineerClass = _playerUnit getVariable ["ACE_isEngineer", 0];
+private _rank = rank _playerUnit;
+private _position = getPos _playerUnit;
 
 diag_log text format["[KEKO] (persistency) savePlayerLoadout _playerUID=%1 _playerName=%2", _playerUID, _playerName];
 
-_ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
+private _ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
 	keko_settings_persistency_key,
 	_playerUID,
 	_playerName,
