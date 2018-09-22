@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
-if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency key not set, exiting!"; false};
-if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency for players is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
+if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency key not set, exiting!"; false};
+if !(EGVAR(persistency_settings,playersEnabled)) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency for players is disabled, exiting!"; false};
 
 params ["_playerUnit"];
 
@@ -22,7 +22,7 @@ private _position = getPos _playerUnit;
 diag_log text format["[KEKO] (persistency) savePlayerLoadout _playerUID=%1 _playerName=%2", _playerUID, _playerName];
 
 private _ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
-	keko_settings_persistency_key,
+	EGVAR(persistency_settings,key),
 	_playerUID,
 	_playerName,
 	_loadout,

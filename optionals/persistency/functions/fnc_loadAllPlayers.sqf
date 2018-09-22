@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 
-if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) loadAllPlayers: persistency for player is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,playersEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadAllPlayers: persistency for player is disabled, exiting!"; false};
 
 private _allHCs = entities "HeadlessClient_F";
 private _allHPs = allPlayers - _allHCs;
 
 {
-	_x call keko_persistency_fnc_loadPlayerLoadout;
+	_x call FUNC(loadPlayerLoadout);
 } forEach _allHPs;
 
 true
