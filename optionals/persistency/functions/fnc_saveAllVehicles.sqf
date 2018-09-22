@@ -1,12 +1,14 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_vehiclesEnabled) exitWith{diag_log text "[KEKO] (persistency) saveAllVehicles: persistency for vehicles is disabled, exiting!"; false};
 
-_allPlaneObjects = allMissionObjects "Plane";
-_allHelicopterObjects = allMissionObjects "Helicopter";
-_allShipObjects = allMissionObjects "Ship";
-_allCarObjects = allMissionObjects "Car";
-_allTankObjects = allMissionObjects "Tank";
+private _allPlaneObjects = allMissionObjects "Plane";
+private _allHelicopterObjects = allMissionObjects "Helicopter";
+private _allShipObjects = allMissionObjects "Ship";
+private _allCarObjects = allMissionObjects "Car";
+private _allTankObjects = allMissionObjects "Tank";
 
-_allPossibleVehicles = [];
+private _allPossibleVehicles = [];
 _allPossibleVehicles = _allPossibleVehicles + _allPlaneObjects;
 _allPossibleVehicles = _allPossibleVehicles + _allHelicopterObjects;
 _allPossibleVehicles = _allPossibleVehicles + _allShipObjects;
@@ -14,9 +16,9 @@ _allPossibleVehicles = _allPossibleVehicles + _allCarObjects;
 _allPossibleVehicles = _allPossibleVehicles + _allTankObjects;
 
 diag_log text format ["[KEKO] (persistency) saveAllVehicles: saving %1 vehicles", count _allPossibleVehicles];
-_successfulSaves = 0;
+private _successfulSaves = 0;
 {
-  _retVal = _x call keko_persistency_fnc_saveVehicle;
+  private _retVal = _x call keko_persistency_fnc_saveVehicle;
   if(_retVal) then {
     _successfulSaves = _successfulSaves + 1;
   };

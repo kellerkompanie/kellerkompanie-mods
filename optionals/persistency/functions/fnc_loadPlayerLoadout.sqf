@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 if !(keko_settings_persistency_enabled) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency disabled, exiting!"; false};
 if(keko_settings_persistency_key == "") exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency key not set, exiting!"; false};
 if !(keko_settings_persistency_playersEnabled) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: persistency for players is disabled, exiting!"; false};
@@ -6,14 +8,14 @@ params ["_playerUnit"];
 
 if !(isPlayer _playerUnit) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: not a player, exiting!"; false};
 
-_playerUID = getPlayerUID _playerUnit;
-_playerName = name _playerUnit;
+private _playerUID = getPlayerUID _playerUnit;
+private _playerName = name _playerUnit;
 
 if (_playerUID find "HC" >= 0) exitWith{diag_log text "[KEKO] (persistency) loadPlayerLoadout: not a player!"; false};
 
 diag_log text format["[KEKO] (persistency) loadPlayerLoadout: _playerUID=%1 _playerName=%2 key=%3", _playerUID, _playerName, keko_settings_persistency_key];
 
-_ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", keko_settings_persistency_key, _playerUID]);
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", keko_settings_persistency_key, _playerUID]);
 
 if ((_ret select 0) == 1) then {
 	diag_log text format ["[KEKO] (persistency) loadPlayerLoadout: loading sucessful %1", _ret];
