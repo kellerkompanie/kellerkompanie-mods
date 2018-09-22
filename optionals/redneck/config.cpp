@@ -217,7 +217,7 @@ class CfgPatches {
 #include "CfgMarkerClasses.hpp"
 #include "CfgMarkers.hpp"
 
-#include "ui\defines.hpp"
+#include "defines.hpp"
 
 #include "CfgVehicles.hpp"
 #include "CfgGroups.hpp"
