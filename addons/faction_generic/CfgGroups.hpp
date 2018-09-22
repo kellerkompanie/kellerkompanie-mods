@@ -323,7 +323,7 @@ class CfgGroups
 					};
 					class Unit8
 					{
-						vehicle = QGVAR(blufor_lmg)
+						vehicle = QGVAR(blufor_lmg);
 						rank = "PRIVATE";
 						position[] = {3,-9,0};
 					};
