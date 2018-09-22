@@ -100,4 +100,35 @@ Parameters:
 	1
 ] call cba_settings_fnc_init;
 
+[
+	QGVAR(moneyEnabled), // key/reference variable
+	"LIST", // type of setting
+	["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
+	"Kellerkompanie Persistency", // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(defaultMoney),
+	"EDITBOX",
+	["Default Cash", "Default cash given to new players"],
+	"Kellerkompanie Persistency",
+	"100",
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(defaultMoneyBank),
+	"EDITBOX",
+	["Default Bank Account", "Default account amount given to new players"],
+	"Kellerkompanie Persistency",
+	"1000",
+	1
+] call cba_settings_fnc_init;
+
 ADDON = true;
