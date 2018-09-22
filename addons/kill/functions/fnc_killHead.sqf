@@ -10,7 +10,7 @@ if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exi
 
 	_player playActionNow "PutDown";
 
-	[_player, "keko_KillSound"] remoteExec ["say3D", 0, false];
+	[_player, QGVAR(KillSound)] remoteExec ["say3D", 0, false];
 
 	//[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 	_target call ace_medical_fnc_setDead;
