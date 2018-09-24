@@ -15,4 +15,6 @@ private _pulse = _unit getVariable "ACE_medical_heartrate";
 if(_pulse > 85) then { _unit setVariable ["ACE_medical_heartrate", _pulse - 5, true] };
 if(_pulse < 75) then { _unit setVariable ["ACE_medical_heartrate", _pulse + 5, true] };
 
+call FUNC(drinkEffect);
+
 true
