@@ -3,6 +3,7 @@
 if (GVAR(loadoutOnSpawn)) then {
 	// Legacy code
 	if( (player isKindOf "keko_blufor_soldier") || (player isKindOf "keko_opfor_soldier") || (player isKindOf "keko_indfor_soldier") ) then {
+		systemChat "WARNING: You are using old, deprecated Kellerkompanie Player units!!!";
 		private _playerObjectClass = typeOf player;
 		private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
 		[player, GVAR(loadoutFaction), _loadoutDummyClass] call FUNC(giveLoadout);
