@@ -228,7 +228,7 @@ if(count _optics != 0) then {
 };
 
 // add compass/map, nvg etc. based on mission's preset
-_nil = call FUNC(addPresetItems);
+call FUNC(addPresetItems);
 
 if(count _items != 0) then {
 	{
