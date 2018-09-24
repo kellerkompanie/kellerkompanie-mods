@@ -18,22 +18,23 @@ class CfgPatches {
 };
  
 class RscBackPicture;
-class anprc148jem_radio_dialog
-{
-	onLoad = "if(sunOrMoon < 0.2)then{((_this select 0) displayCtrl TF_BACKGROUND_ID) ctrlSetText 'x\keko\addons\tfar_tape\ui\148_n_20150611.paa';};";
-
-	class background: RscBackPicture
-	{
-		text = QPATHTOF(ui\148_20150611.paa);
+class anprc148jem_radio_dialog {
+	onLoad = "if (sunOrMoon < 0.2) then {((_this select 0) displayCtrl 67676) ctrlSetText '\x\keko\addons\tfar_tape\ui\148_n.paa';};";
+	class background: RscBackPicture {
+		text = QPATHTOF(ui\148.paa);
 	};
 };
 
-class anprc152_radio_dialog
-{
-	onLoad = "if(sunOrMoon < 0.2)then{((_this select 0) displayCtrl TF_BACKGROUND_ID) ctrlSetText 'x\keko\addons\tfar_tape\ui\152_n_20150611.paa';};";
+class anprc152_radio_dialog {
+	onLoad = "if (sunOrMoon < 0.2) then {((_this select 0) displayCtrl 67676) ctrlSetText '\x\keko\addons\tfar_tape\ui\152_n.paa';};";
+	class background: RscBackPicture {
+		text = QPATHTOF(ui\152.paa);
+	};
+};
 
-	class background: RscBackPicture
-	{
-		text = QPATHTOF(ui\152_20150611.paa);
+class fadak_radio_dialog {
+	onLoad = "if (sunOrMoon < 0.2) then { ((_this select 0) displayCtrl 67676) ctrlSetText '\x\keko\addons\tfar_tape\ui\fadak_n.paa';};";
+	class background: RscBackPicture {
+		text = QPATHTOF(ui\fadak.paa);
 	};
 };
