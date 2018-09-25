@@ -14,5 +14,5 @@ private _allowCIV 	 = _logic getVariable ["allowCIV",    true];
 private _objects = synchronizedObjects _logic;
 {
 	//diag_log format ["adding menu to: %1", str _x];
-	[_x, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call keko_teleport_fnc_addTeleportMenu;
+	[_x, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call FUNC(addTeleportMenu);
 } forEach _objects;

@@ -4,6 +4,6 @@ params ["_logic"];
 
 if !(local _logic) exitWith{};
 
-profileNamespace setVariable ["keko_teleport_dest_object", _logic];
+profileNamespace setVariable [QGVAR(destObject), _logic];
 
-createDialog "keko_teleport_destinationDialog";
+createDialog QGVAR(destinationDialog);
