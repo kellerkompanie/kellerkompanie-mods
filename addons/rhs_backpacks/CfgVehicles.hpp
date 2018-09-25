@@ -1,25 +1,3 @@
-class CfgPatches
-{
-	class keko_rhs_backpacks
-	{
-		units[]= {};
-		requiredVersion= 1.80;
-		requiredAddons[]= {
-            "rhs_main",
-            "rhssaf_main",
-            "rhssaf_backpacks",
-            "rhsgref_main",
-			"rhsusf_main",
-            "A3_Weapons_F_Ammoboxes",
-            "rhsusf_c_troops",
-            "rhsusf_c_uav",
-            "rhs_c_troops"
-		};
-		author = "Schwaggot";
-		version = 1.0;
-	};
-};
-
 class CfgVehicles {
 
     class B_AssaultPack_Base;
