@@ -4,7 +4,7 @@ params ["_teleporterName"];
 
 private _chuteheight = 200;
 
-private _markerName = QGVAR() + _teleporterName;
+private _markerName = "keko_teleport_" + _teleporterName;
 private _markerPos = getMarkerPos _markerName;
 private _destination = [_markerPos select 0, _markerPos select 1, _chuteheight];
 

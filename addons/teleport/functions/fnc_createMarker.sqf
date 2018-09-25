@@ -2,7 +2,7 @@
 
 params ["_position", "_name", "_side"];
 
-private _markerName = QGVAR() + _name;
+private _markerName = "keko_teleport_" + _name;
 createMarkerLocal [_markerName, _position];
 _markerName setMarkerSizeLocal [0.5, 0.5];
 
