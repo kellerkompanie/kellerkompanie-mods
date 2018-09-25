@@ -8,6 +8,8 @@
 #define PRIMARY_MAG_AS "rhs_20rnd_9x39mm_SP5"
 #define PRIMARY_MAG_MARKSMAN "rhs_10Rnd_762x54mmR_7N1"
 #define PRIMARY_MAG_MARKSMAN_TRACER "rhs_10Rnd_762x54mmR_7N1"
+#define PRIMARY_MAG_LMG "rhs_75Rnd_762x39mm"
+#define PRIMARY_MAG_LMG_TRACER "rhs_75Rnd_762x39mm_tracer"
 
 #define RAT_LAUNCHER "launch_MRAWS_green_rail_F"
 #define AT_LAUNCHER "launch_O_Vorona_green_F"
@@ -49,6 +51,14 @@ class kekoWeaponsRussiaSpeznas {
         cfgName = "rhs_weap_asval_grip_npz";
         items[] = {"rhsusf_acc_eotech_xps3","rhs_acc_2dpzenit_ris"};
         magazines[] = {PRIMARY_MAG_AS};
+    };
+
+    //LMG
+    class keko_W_RPK: kekoPrimaryWeapon
+    {
+        cfgName = "rhs_weap_akm_zenitco01_b33";
+        items[] = {"rhsusf_acc_grip1", "rhs_acc_1p87", "rhs_acc_dtkakm"};
+        magazines[] = {PRIMARY_MAG_LMG, PRIMARY_MAG_LMG_TRACER};
     };
 
 
