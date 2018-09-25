@@ -6,12 +6,12 @@ class CfgVehicles {
 		modelsides[] = {3,2,1,0};
 	};
 
-	class keko_moon_opfor_soldier_base : O_Soldier_base_F {
+	class GVAR(opfor_soldier_base) : O_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 1;
 		curatorScope = 1;
 		side = 0;
-		faction = "keko_faction_moon_opfor";
+		faction = GVAR(opfor);
 		vehicleClass = "Men";
 		model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
 		modelSides[]={3,2,1,0};
@@ -37,7 +37,7 @@ class CfgVehicles {
 	    };
 	};
 
-	class keko_moon_opfor_soldier1 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier1) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (StG44)";
@@ -49,7 +49,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR","DPC_KER_Helmet","WAINO_BLC_BK","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier2 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier2) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Sniper";
@@ -61,7 +61,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR","DPC_KER_Helmet","WAINO_BLC_BK","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier3 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier3) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (MP40)";
@@ -73,7 +73,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR","DPC_KER_Helmet","WAINO_BLC_BK","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier4 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier4) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (MG42)";
@@ -86,7 +86,7 @@ class CfgVehicles {
 		icon = "iconManMG";
 	};
 
-	class keko_moon_opfor_soldier5 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier5) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (Panzerschreck)";
@@ -99,7 +99,7 @@ class CfgVehicles {
 		icon = "iconManAT";
 	};
 
-	class keko_moon_opfor_soldier6 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier6) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (FG42)";
@@ -111,7 +111,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR","DPC_KER_Helmet","WAINO_BLC_BK","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier7 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier7) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (Flamethrower)";
@@ -123,7 +123,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR","DPC_KER_Helmet","WAINO_BLC_BK","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier8 : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_soldier8) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Soldier (Panzerfaust)";
@@ -136,7 +136,7 @@ class CfgVehicles {
 		icon = "iconManAT";
 	};
 
-	class keko_moon_opfor_medic : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_medic) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Medic";
@@ -149,7 +149,7 @@ class CfgVehicles {
 		icon = "iconManMedic";
 	};
 
-	class keko_moon_opfor_ftl : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_ftl) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Feldwebel";
@@ -162,7 +162,7 @@ class CfgVehicles {
 		icon = "iconManLeader";
 	};
 
-	class keko_moon_opfor_officer : keko_moon_opfor_soldier_base {
+	class GVAR(opfor_officer) : GVAR(opfor_soldier_base) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Garrison Officer";
@@ -188,12 +188,12 @@ class CfgVehicles {
 
 
 
-	class keko_moon_opfor_soldier_base_rs : O_Soldier_base_F {
+	class GVAR(opfor_soldier_base_rs) : O_Soldier_base_F {
 		author = "Schwaggot";
 		scope = 1;
 		curatorScope = 1;
 		side = 0;
-		faction = "keko_faction_moon_opfor";
+		faction = GVAR(opfor);
 		vehicleClass = "Men";
 		model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
 		modelSides[]={3,2,1,0};
@@ -220,7 +220,7 @@ class CfgVehicles {
 	};
 
 
-	class keko_moon_opfor_soldier1_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier1_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (StG44)";
@@ -232,7 +232,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR_RS","DPC_KER_RS_Helmet","WAINO_BLC_RG","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier2_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier2_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Sniper";
@@ -244,7 +244,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR_RS","DPC_KER_RS_Helmet2","WAINO_BLC_RG","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier3_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier3_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (MP40)";
@@ -256,7 +256,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR_RS","DPC_KER_RS_Helmet","WAINO_BLC_RG","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier4_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier4_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (MG42)";
@@ -269,7 +269,7 @@ class CfgVehicles {
 		icon = "iconManMG";
 	};
 
-	class keko_moon_opfor_soldier5_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier5_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (Panzerschreck)";
@@ -282,7 +282,7 @@ class CfgVehicles {
 		icon = "iconManAT";
 	};
 
-	class keko_moon_opfor_soldier6_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier6_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (FG42)";
@@ -294,7 +294,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR_RS","DPC_KER_RS_Helmet2","WAINO_BLC_RG","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier7_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier7_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (Flamethrower)";
@@ -306,7 +306,7 @@ class CfgVehicles {
 		linkedItems[] = {"DPC_KER_ARMOR_RS","DPC_KER_RS_Helmet","WAINO_BLC_RG","ItemMap","ItemCompass","ItemWatch","DPC_KER_GASMASK_NV"};
 	};
 
-	class keko_moon_opfor_soldier8_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_soldier8_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Soldier (Panzerfaust)";
@@ -319,7 +319,7 @@ class CfgVehicles {
 		icon = "iconManAT";
 	};
 
-	class keko_moon_opfor_medic_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_medic_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Medic";
@@ -332,7 +332,7 @@ class CfgVehicles {
 		icon = "iconManMedic";
 	};
 
-	class keko_moon_opfor_ftl_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_ftl_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Feldwebel";
@@ -345,7 +345,7 @@ class CfgVehicles {
 		icon = "iconManLeader";
 	};
 
-	class keko_moon_opfor_officer_rs : keko_moon_opfor_soldier_base_rs {
+	class GVAR(opfor_officer_rs) : GVAR(opfor_soldier_base_rs) {
 		scope = 2;
 		curatorScope = 2;
 		displayName = "Reichswehr Officer";
