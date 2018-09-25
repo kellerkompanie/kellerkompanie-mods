@@ -20,6 +20,3 @@ class CfgPatches {
 };
 
 #include "CfgSounds.hpp"
-
-#include "defines.hpp"
-#include "ui\dialog_policeSettings.hpp"
