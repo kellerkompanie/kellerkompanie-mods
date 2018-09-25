@@ -7,5 +7,4 @@ PREP(giveLoadout);
 PREP(moduleAddLoadoutMenu);
 PREP(moduleAddLoadoutMenu3den);
 PREP(moduleCustomLoadouts3den);
-PREP(replaceString);
 PREP(setChannels);
