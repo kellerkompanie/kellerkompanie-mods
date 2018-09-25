@@ -1,17 +1,3 @@
-class CfgPatches
-{
-	class keko_cbrn
-	{
-		units[]= {};
-		requiredVersion= 1.80;
-		requiredAddons[]= {
-            "skn_nbc_units"
-		};
-		author = "Schwaggot";
-		version = 1.0;
-	};
-};
-
 class CfgWeapons {
 
     class ItemCore;
@@ -75,7 +61,7 @@ class CfgWeapons {
         };
     };
 
-    
+
     class skn_nbc_vest_base: ItemCore
     {
         class ItemInfo;
