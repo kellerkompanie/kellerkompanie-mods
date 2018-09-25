@@ -23,5 +23,6 @@ PREP(moduleRespawnLocation3den);
 PREP(moduleRespawnPosition);
 PREP(moduleRespawnPosition3den);
 PREP(replaceRoleDescription);
+PREP(replaceString);
 PREP(resetRoleDescription);
 PREP(setRespawnPosition);
