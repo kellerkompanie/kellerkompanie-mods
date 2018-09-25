@@ -32,7 +32,7 @@ private _i = 0;
 		if(GVAR(customLogistics) == 2) then {
 			_crate_name = _x select 0;
 			lbAdd [1500, _crate_name];
-			private _escapedString = [_crate_name, " ", "%20"] call EFUNC(loadout,replaceString);
+			private _escapedString = [_crate_name, " ", "%20"] call EFUNC(common,replaceString);
 			lbSetData [1500, _i, format ["%1", _escapedString]];
 		}
 		else {

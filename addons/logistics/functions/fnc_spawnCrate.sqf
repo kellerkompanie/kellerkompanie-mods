@@ -10,7 +10,7 @@ if(GVAR(customLogistics) == 2) then {
 	diag_log text format["[KEKO] (logistics) spawnCrate customCrates = %1", GVAR(customCrates)];
 	diag_log text format["[KEKO] (logistics) spawnCrate _crate_name = '%1'", _crate_name];
 
-	private _descapedString = [_crate_name, "%20", " "] call EFUNC(loadout,replaceString);
+	private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceString);
 
 	diag_log text format["[KEKO] (logistics) spawnCrate _descapedString = '%1'", _descapedString];
 
