@@ -15,4 +15,4 @@ private _allowCIV 	 = _logic getVariable ["allowCIV", true];
 
 //diag_log format ["creating destination: %1", _destinationName];
 
-[_logic, _destinationName, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call keko_teleport_fnc_addTeleportDestination;
+[_logic, _destinationName, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call FUNC(addTeleportDestination);

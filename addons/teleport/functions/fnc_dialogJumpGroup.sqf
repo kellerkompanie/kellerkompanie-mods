@@ -13,7 +13,7 @@ private _groupLeader = leader _playerGroup;
 
 if(_groupLeader == _player) then {
   {
-    [_teleporterName] remoteExec ["keko_teleport_fnc_dialogJump", _x, false];
+    [_teleporterName] remoteExec [QFUNC(dialogJump), _x, false];
 		sleep 3;
   } forEach units _playerGroup;
 } else {

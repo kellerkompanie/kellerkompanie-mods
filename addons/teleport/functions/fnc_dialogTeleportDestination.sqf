@@ -2,24 +2,24 @@
 
 //diag_log "dialogTeleportDestination";
 
-private _text = ctrlText ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 1400);
+private _text = ctrlText ((uiNamespace getVariable QGVAR(destDialog)) displayCtrl 1400);
 
-private _allowBLUFOR = cbChecked ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 2800);
-private _allowINDFOR = cbChecked ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 2801);
-private _allowOPFOR  = cbChecked ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 2802);
-private _allowCIV    = cbChecked ((uiNamespace getVariable "keko_teleport_dest_dialog") displayCtrl 2803);
+private _allowBLUFOR = cbChecked ((uiNamespace getVariable QGVAR(destDialog)) displayCtrl 2800);
+private _allowINDFOR = cbChecked ((uiNamespace getVariable QGVAR(destDialog)) displayCtrl 2801);
+private _allowOPFOR  = cbChecked ((uiNamespace getVariable QGVAR(destDialog)) displayCtrl 2802);
+private _allowCIV    = cbChecked ((uiNamespace getVariable QGVAR(destDialog)) displayCtrl 2803);
 
 //diag_log format ["_text: %1", _text];
-private _object = profileNamespace getVariable "keko_teleport_dest_object";
+private _object = profileNamespace getVariable QGVAR(destObject);
 //diag_log format ["_object: %1", _object];
 
-profileNamespace setVariable ["keko_teleport_lastName", _text];
-profileNamespace setVariable ["keko_teleport_lastBLUFOR", _allowBLUFOR];
-profileNamespace setVariable ["keko_teleport_lastINDFOR", _allowINDFOR];
-profileNamespace setVariable ["keko_teleport_lastOPFOR", _allowOPFOR];
-profileNamespace setVariable ["keko_teleport_lastCIV", _allowCIV];
+profileNamespace setVariable [QGVAR(lastName), _text];
+profileNamespace setVariable [QGVAR(lastBLUFOR), _allowBLUFOR];
+profileNamespace setVariable [QGVAR(lastINDFOR), _allowINDFOR];
+profileNamespace setVariable [QGVAR(lastOPFOR), _allowOPFOR];
+profileNamespace setVariable [QGVAR(lastCIV), _allowCIV];
 
-[_object, _text, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call keko_teleport_fnc_addTeleportDestination;
+[_object, _text, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call FUNC(addTeleportDestination);
 
 deleteVehicle _object;
 

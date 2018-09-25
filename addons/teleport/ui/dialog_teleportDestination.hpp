@@ -4,7 +4,7 @@ class GVAR(destinationDialog) {
 	movingEnable = true;
 	enableSimulation = true;
 
-	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(dest_dialog), _this select 0)]; _this spawn FUNC(dialogDestinationInit));
+	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(destDialog), _this select 0)]; _this spawn FUNC(dialogDestinationInit));
 
 	controls[] = {
 		Back,
