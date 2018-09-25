@@ -1,6 +1,8 @@
+#include "script_component.hpp"
+
 params ["_unit", "_state", "_func"];
 
-civilian_handcuffed = [
+private _civilian_handcuffed = [
 		"keko_police_15_ich_will_meinen_anwalt",
 		"keko_police_12_loslassen_oder_es_knallt",
 		"keko_police_10_lasst_mich_in_ruhe",
@@ -17,7 +19,7 @@ civilian_handcuffed = [
 		"keko_police_03_verdammte_cops"
 	];
 
-gangster_handcuffed = [
+private _gangster_handcuffed = [
 		"keko_police_15_ich_will_meinen_anwalt",
 		"keko_police_14_ah_verdammt",
 		"keko_police_12_loslassen_oder_es_knallt",
@@ -44,14 +46,13 @@ if((_func isEqualTo "SetHandcuffed") && _state) then {
 		[_unit] spawn {
 			params ["_unit"];
 			sleep 1.5;
-			_unit say3D (selectRandom gangster_handcuffed);					
+			_unit say3D (selectRandom _gangster_handcuffed);
 		};
 	} else {
 		[_unit] spawn {
 			params ["_unit"];
 			sleep 2;
-			_unit say3D (selectRandom civilian_handcuffed);					
+			_unit say3D (selectRandom _civilian_handcuffed);
 		};
 	};
 };
-

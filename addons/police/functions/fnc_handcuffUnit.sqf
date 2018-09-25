@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 _target = cursorTarget;
 
 _canOpenMedicMenu = [player, _target] call ace_medical_menu_fnc_canOpenMenu;

@@ -1,13 +1,9 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-	class ADDON
-	{
-		units[] = {
-            QGVAR(modulePoliceSettings3den),
-            QGVAR(modulePoliceSettings)
-        };
+class CfgPatches {
+	class ADDON {
+		name = COMPONENT_NAME;
+		units[] = {};
         weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -19,12 +15,10 @@ class CfgPatches
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
 
-#include "CfgFactionClasses.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 
 #include "defines.hpp"
