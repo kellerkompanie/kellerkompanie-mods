@@ -19,7 +19,7 @@ PREP(snow_breath);
 PREP(snow_menuOnload);
 PREP(snow_rotocol_client);
 PREP(snow_setSliderValue);
-PREP(snow__setVehicleVarName);
+PREP(snow_setVehicleVarName);
 PREP(snow_storm_init);
 PREP(snow_terminateSnow);
 PREP(snow_umblator);
