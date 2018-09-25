@@ -1,13 +1,15 @@
-#define RAND_SLEEP sleep (2 + (floor random 3));
+#include "script_component.hpp"
+
+#define RANDOM_TIME (2 + (floor random 3))
 
 //params [["_distance", keko_police_var_shoutDistance, ["15"]],["_playSounds", true, [true]]];
 
 // TODO fix parameters with default values
-_distance = keko_police_var_shoutDistance;
+_distance = GVAR(shoutDistance);
 
 _playerSide = side player;
 
-police_shouts = [
+private _police_shouts = [
 		"keko_police_02_gangster_gesichtet",
 		"keko_police_02_ganz_ruhig",
 		"keko_police_02_halt_oder_ich_schiesse",
@@ -21,7 +23,7 @@ police_shouts = [
 		"keko_police_02_waffe_weg"
 	];
 
-civilian_shouts = [
+private _civilian_shouts = [
 		"keko_police_15_nicht_schiessen",
 		"keko_police_15_erschiesst_mich_nicht",
 		"keko_police_14_ich_ergebe_mich",
@@ -43,7 +45,7 @@ civilian_shouts = [
 		"keko_police_05_was_immer_sie_sagen"
 	];
 
-civilian_fleeing_shouts = [
+private _civilian_fleeing_shouts = [
 		"keko_police_10_lasst_mich_in_ruhe",
 		"keko_police_10_nichts_wie_weg",
 		"keko_police_09_was_soll_das_geballer",
@@ -55,7 +57,7 @@ civilian_fleeing_shouts = [
 
 
 
-gangster_surrender_shouts = [
+private _gangster_surrender_shouts = [
 		"keko_police_15_erschiesst_mich_nicht",
 		"keko_police_15_ganz_ruhig",
 		"keko_police_15_ich_geb_auf",
@@ -92,7 +94,7 @@ gangster_surrender_shouts = [
 		"keko_police_04_nicht_schiessen"
 	];
 
-gangster_uncooperative_shouts = [
+private _gangster_uncooperative_shouts = [
 		"keko_police_15_ach_zum_teufel",
 		"keko_police_15_halt_oder_ich_schiesse",
 		"keko_police_14_keinekapitulation",
@@ -114,7 +116,7 @@ gangster_uncooperative_shouts = [
 		"keko_police_03_was_zum"
 	];
 
-gangster_fleeing_shouts = [
+private _gangster_fleeing_shouts = [
 		"keko_police_15_ich_hau_ab",
 		"keko_police_13_wir_sind_aufgeflogen",
 		"keko_police_13_verdammt_cops",
@@ -142,31 +144,17 @@ gangster_fleeing_shouts = [
 		"keko_police_03_verdammt_die_bullen"
 	];
 
-
-
-
-keko_police_fnc_flee = {
-	params ["_fleeing_unit"];
-	_dir = 180 + (_fleeing_unit getDir player); //direction opposite to enemy
-	_fleeing_location = _fleeing_unit getrelPos [300,_dir];
-	[_fleeing_unit] join grpNull;
-	_fleeing_unit setBehaviour "CARELESS";
-	_fleeing_unit setSpeedMode "FULL";
-	_fleeing_unit doMove _fleeing_location;
-};
-
-
 // unused sounds:
 // 		keko_police_13_rugig_und_nicht_bewegen
 // 		keko_police_12_nicht_bewegen
 // 		keko_police_09_jetzt_wirds_uebel
 // 		keko_police_03_maul_halten
 
-player say3D (selectRandom police_shouts);
+player say3D (selectRandom _police_shouts);
 
 [_distance, _playerSide] spawn {
 	params ["_distance", "_playerSide"];
-	
+
 	_list = player nearEntities ["Man", _distance];
 	{
 		if!(isPlayer _x || side player == side _x) then {
@@ -176,79 +164,79 @@ player say3D (selectRandom police_shouts);
 
 			_surrenderAlreadyDecided = _unit getVariable ["keko_police_surrenderAlreadyDecided", false];
 			_isWounded = damage _unit > 0;
-			_surrenderChance = _unit getVariable ["keko_police_surrenderChance", keko_police_var_defaultSurrenderChance];
-			_fleeingChance = _unit getVariable ["keko_police_fleeingChance", keko_police_var_defaultFleeingChance];
+			_surrenderChance = _unit getVariable [QGVAR(surrenderChance), GVAR(defaultSurrenderChance)];
+			_fleeingChance = _unit getVariable [QGVAR(fleeingChance), GVAR(defaultFleeingChance)];
 
-			if(keko_police_var_higherSurrenderWounded && _isWounded) then {
+			if(GVAR(higherSurrenderWounded) && _isWounded) then {
 				_surrenderChance = _surrenderChance + 0.2;
 			};
-		
+
 			if!(_isFriendly) then {
 				/* Gangsters */
 				// TODO replace true/false with value giving feedback if and why surrendered
-				
+
 				if !(_surrenderAlreadyDecided) then {
-					_unit setVariable ["keko_police_surrenderAlreadyDecided", true, true];
+					_unit setVariable [QGVAR(surrenderAlreadyDecided), true, true];
 
 					_random = (random 1.0) * 100;
 					if(_random <= _surrenderChance) then {
 						// do surrender
 						[_unit] spawn {
 							params ["_unit"];
-							RAND_SLEEP
+							sleep RANDOM_TIME;
 							["ACE_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
-							_unit say3D (selectRandom gangster_surrender_shouts);					
+							_unit say3D (selectRandom _gangster_surrender_shouts);
 						};
 					} else {
 						_random = (random 1.0) * 100;
 						if(_random <= _fleeingChance) then {
 							[_unit] spawn {
 								params ["_unit"];
-								RAND_SLEEP
-								_unit say3D (selectRandom gangster_uncooperative_shouts);
+								sleep RANDOM_TIME;
+								_unit say3D (selectRandom _gangster_uncooperative_shouts);
 							};
 						} else {
 							[_unit] spawn {
 								params ["_unit"];
-								RAND_SLEEP
-								_unit say3D (selectRandom gangster_fleeing_shouts);
+								sleep RANDOM_TIME;
+								_unit say3D (selectRandom _gangster_fleeing_shouts);
 								// [_unit] call keko_police_fnc_flee;
-								[_unit] remoteExec ["keko_police_fnc_flee", _unit, false];
+								[_unit] remoteExec [QFUNC(flee), _unit, false];
 							};
-						};					
+						};
 					};
 				} else {
 					// shout based on state
-					
-				};	
+
+				};
 			} else {
 				/* Civilians and Friendlies */
 				if !(_surrenderAlreadyDecided) then {
-					_unit setVariable ["keko_police_surrenderAlreadyDecided", true, true];						
+					_unit setVariable [QGVAR(surrenderAlreadyDecided), true, true];
 
 					_random = (random 1.0) * 100;
 					if(_random <= _surrenderChance) then {
-						// do surrender					
+						// do surrender
 						[_unit] spawn {
 							params ["_unit"];
-							RAND_SLEEP
+							sleep RANDOM_TIME;
 							["ACE_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
-							_unit say3D (selectRandom civilian_shouts);
+							_unit say3D (selectRandom _civilian_shouts);
 						};
 					} else {
 						_random = (random 1.0) * 100;
 						if(_random <= _fleeingChance) then {
-							
+
 						} else {
 							[_unit] spawn {
 								params ["_unit"];
-								RAND_SLEEP
-								_unit say3D (selectRandom civilian_fleeing_shouts);
+								sleep RANDOM_TIME;
+								_unit say3D (selectRandom _civilian_fleeing_shouts);
 								// [_unit] call keko_police_fnc_flee;
 								[_unit] remoteExec ["keko_police_fnc_flee", _unit, false];
 							};
 						};
-						
+
 					};
 				} else {
 					// shout based on state
