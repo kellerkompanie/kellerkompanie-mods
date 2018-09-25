@@ -1,3 +1,12 @@
+#include "script_component.hpp"
+
+ADDON = false;
+
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
+
+
 diag_log text format["[KEKO] (logging) preInit %1 %2 %3", missionName, missionVersion, worldName];
 
 _ret = "extDB3" callExtension format [ "0:keko_logging:onMissionLoad:%1:%2:%3", missionName, missionVersion, worldName ];
@@ -38,3 +47,6 @@ _disconHandler = addMissionEventHandler ["PlayerDisconnected",
 	_ret = "extDB3" callExtension format [ "0:keko_logging:onPlayerDisconnected:%1:%2:%3", _uid, _name, _jip ];
 	diag_log text format["[KEKO] (logging) %1", _ret];
 }];
+
+
+ADDON = true;
