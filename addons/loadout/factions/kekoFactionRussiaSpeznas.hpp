@@ -13,7 +13,8 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         { "Plebs",{
                     kekoRifleman,
                     kekoRiflemanAT,
-                    kekoGrenadier} },
+                    kekoGrenadier,
+					kekoLMG} },
         { "Heavy Weapons",{
                     kekoATSpecialist,
                     kekoATSpecialistAsst,
@@ -175,6 +176,18 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
             { 2, GRENADE } };
         primary[] = {
             keko_W_AK74MR_GL };
+    };
+
+	class kekoLMG : kekoSoldierRussiaSpeznas {
+        name = "LMG";
+        vestInventory[] = {
+            { 2, PRIMARY_MAG_LMG },
+            { 2, PRIMARY_MAG_LMG_TRACER },
+            { 2, GRENADE },
+            { 1, SMOKE_WHITE }};
+        backpack[] = { "rhs_assault_umbts" };
+        backpackInventory[] = { { 4, PRIMARY_MAG_LMG }, {3, PRIMARY_MAG_LMG_TRACER} };
+        primary[] = {keko_W_RPK};
     };
 
     class kekoATSpecialist : kekoSoldierRussiaSpeznas {
