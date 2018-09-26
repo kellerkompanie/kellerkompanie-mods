@@ -41,6 +41,3 @@ private _searchString = "respawn" + _respawnSuffix;
 
 private _marker = createMarker [_searchString, _position];
 _marker setMarkerAlpha 0;
-//_marker setMarkerPos _position;
-
-diag_log text format["[KEKO] (common) %1 setMarkerPos %2", _marker, _position];
