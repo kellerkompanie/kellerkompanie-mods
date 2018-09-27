@@ -8,11 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_Data_F_Tank_Loadorder",
-            // CBA
-            "cba_ui",
-            "cba_xeh",
-            "cba_jr",
-            // ACE3
+            "cba_main",
             "ace_main"
         };
         author = ECSTRING(common,ACETeam);

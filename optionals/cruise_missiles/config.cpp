@@ -3,19 +3,19 @@ class CfgPatches {
         units[] = {};
         requiredVersion = 1.80;
         requiredAddons[] = {
-            "cba_main_a3"}; 
+            "cba_main"}; 
         version = 1.0;
         author = "Schwaggot";
         authorUrl = "http://kellerkompanie.com";
     };
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
-    class keko_cruise_missiles 
+    class keko_cruise_missiles
     {
         tag = "keko_cruise_missiles";
-        class main 
+        class main
         {
             file = "keko_cruise_missiles\functions";
             class cruiseMissileLaunch {};

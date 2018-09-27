@@ -24,7 +24,7 @@ class CfgPatches {
             "keko_main",
         	"3den",
             "ace_ai",
-            "cba_settings",
+            "cba_main",
             "A3_Modules_F",
   			"A3_Modules_F_Curator" };
         author = ECSTRING(common,KEKOTeam);

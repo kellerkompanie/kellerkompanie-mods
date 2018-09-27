@@ -182,7 +182,7 @@ class CfgPatches {
         	"3den",
           	"keko_common",
           	"ace_main",
-          	"cba_settings",
+          	"cba_main",
           	"A3_Characters_F_BLUFOR",
         	"A3_Characters_F_INDEP",
     		"A3_Characters_F_OPFOR",

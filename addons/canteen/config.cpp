@@ -12,7 +12,7 @@ class CfgPatches {
 			QGVAR(canteen)
 		};
 		requiredAddons[] = {
-			"cba_settings",
+			"cba_main",
 			"ace_medical",
 			"a3_structures_f",
 			"a3_weapons_f"};

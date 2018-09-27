@@ -10,15 +10,13 @@ class CfgPatches {
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"cba_main",
-			"cba_settings",
-			"cba_xeh",
 			"3den",
 			"A3_Modules_F",
 			"A3_Modules_F_Curator"};
 		author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
 

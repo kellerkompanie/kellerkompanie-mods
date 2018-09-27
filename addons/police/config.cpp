@@ -9,8 +9,6 @@ class CfgPatches {
         requiredAddons[] = {
         	"3den",
         	"cba_main",
-        	"cba_keybinding",
-        	"cba_settings",
             "ace_main"};
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};

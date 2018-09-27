@@ -8,7 +8,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.0;
-        requiredAddons[] = {"cba_settings"};
+        requiredAddons[] = {
+			"cba_main"};
         version = 1.0;
         authors[] = {"commy2"};
     };

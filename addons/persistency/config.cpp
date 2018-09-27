@@ -7,8 +7,6 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "cba_main",
-            "cba_settings",
-            "cba_xeh",
             "extDB3",
             "keko_persistency_settings"};
 		author = ECSTRING(common,KEKOTeam);

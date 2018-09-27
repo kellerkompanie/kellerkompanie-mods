@@ -15,23 +15,24 @@ class CfgPatches
 			units[] = {Box_cTab_items};
 			weapons[] = {ItemcTab,ItemAndroid,ItemMicroDAGR,ItemcTabHCam};
 			requiredVersion = 1.80;
-			requiredAddons[] = {"CBA_MAIN"};
+			requiredAddons[] = {
+				"cba_main"};
 			author = "Gundy, Riouken, Raspu";
 			authorUrl = "https://github.com/Riouken/cTab";
-			version = 1.0;		
+			version = 1.0;
 		};
 };
 
-class CfgSettings 
+class CfgSettings
 {
-	class CBA 
+	class CBA
 	{
-		class Versioning 
+		class Versioning
 		{
-			class cTab 
+			class cTab
 			{
 				main_addon = cTab;
-				class Dependencies 
+				class Dependencies
 				{
 					CBA[] = {"cba_main", { 1,0,0 },"true"};
 				};
@@ -165,7 +166,7 @@ class CfgWeapons
 		};
 		author = "cTab";
 	};
-	
+
 	class ItemAndroid: ItemcTab {
 		descriptionshort = "GD300 Rugged Wearable Computer";
 		descriptionuse = "<t color='#9cf953'>Use: </t>Show Android Based BFT";
@@ -189,7 +190,7 @@ class CfgWeapons
 		};
 		author = "cTab";
 	};
-	
+
 	class ItemcTabHCam: ItemCore {
 		descriptionshort = "HD Helmet Mounted Camera";
 		descriptionuse = "<t color='#9cf953'>Use: </t>Used to record and stream video";
@@ -203,12 +204,12 @@ class CfgWeapons
 			mass = 4;
 		};
 		author = "cTab";
-	};	
+	};
 };
 
 class CfgNotifications
 {
-	
+
 	class cTabUavNotAval
 	{
 		title = "cTab";
@@ -220,7 +221,7 @@ class CfgNotifications
 		priority = 7;
 		difficulty[] = {};
 	};
-	
+
 	class cTabNewMsg
 	{
 		title = "cTab";
@@ -243,7 +244,7 @@ class CfgNotifications
 		duration = 4;
 		priority = 7;
 		difficulty[] = {};
-	};	
+	};
 
 };
 
@@ -288,13 +289,13 @@ class CfgVehicles
 				name = "ItemcTabHCam";
 			};
 		};
-	
-	
+
+
 		class TransportMagazines {};
 		class TransportWeapons {};
-	
+
 	};
-	
+
 };
 
 class CfgSounds
@@ -304,7 +305,7 @@ class CfgSounds
 	{
 		// filename, volume, pitch
 		sound[] = {"\cTab\sounds\phoneVibrate.wss",1,1};
-		// subtitle delay in seconds, subtitle text 
+		// subtitle delay in seconds, subtitle text
 		titles[] = {};
 	};
 	class cTab_mailSent
