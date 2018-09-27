@@ -16,9 +16,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] = {
 			"A3_UI_F",
-			"cba_main",
-			"cba_keybinding",
-			"cba_settings"
+			"cba_main"
 		};
 	};
 };

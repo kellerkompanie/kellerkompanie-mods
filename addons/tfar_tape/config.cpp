@@ -5,18 +5,18 @@ class CfgPatches {
 		name = COMPONENT_NAME;
 		units[] = {};
 		weapons[] = {};
-		requiredVersion = 1.80;
+		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"CBA_Main", 
-			"tfar_core", 
+			"cba_main",
+			"tfar_core",
 			"tfar_handhelds"};
 		author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
- 
+
 class RscBackPicture;
 class anprc148jem_radio_dialog {
 	onLoad = "if (sunOrMoon < 0.2) then {((_this select 0) displayCtrl 67676) ctrlSetText '\x\keko\addons\tfar_tape\ui\148_n.paa';};";

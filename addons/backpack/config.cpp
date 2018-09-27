@@ -8,8 +8,6 @@ class CfgPatches {
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"cba_main",
-			"cba_settings",
-			"cba_xeh",
 			"ace_main",
 			"ace_interact_menu"};
 		author = ECSTRING(common,KEKOTeam);

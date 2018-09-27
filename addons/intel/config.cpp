@@ -13,7 +13,7 @@ class CfgPatches {
         	"3den",
             "ace_main",
             "ace_modules",
-            "cba_settings" };
+            "cba_main" };
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
