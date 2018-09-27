@@ -40,7 +40,7 @@ class CfgVehicles {
 	};
 
 	class ModuleEndMission_F : Module_F {
-		scopeCurator = 1; 
+		scopeCurator = 1;
 		scope = 1;
 	};
 
@@ -115,6 +115,9 @@ class CfgVehicles {
 			};
 			class ModuleDescription: ModuleDescription{};
 		};
+	};
+	class keko_ModuleInitMission3den: GVAR(moduleInitMission3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Initialize Mission";
 	};
 	class GVAR(moduleRespawnPosition3den): GVAR(moduleBase3den)	{
 		displayName        = "Respawn Position";
@@ -223,7 +226,7 @@ class CfgVehicles {
 	class GVAR(moduleRemoveAllActions): GVAR(moduleBase) {
 		displayName        = "Remove all menus";
 		category           = QGVAR(Default);
-		function           = QFUNC(moduleRemoveAllActions);        
+		function           = QFUNC(moduleRemoveAllActions);
 		icon = QPATHTOF(ui\icon_delete.paa);
 		curatorCanAttach   = 1;
 	};
