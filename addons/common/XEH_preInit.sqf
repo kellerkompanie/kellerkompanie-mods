@@ -8,4 +8,8 @@ PREP_RECOMPILE_END;
 
 enableSaving [false, false];
 
+["ace_settingsInitialized", {
+    call FUNC(checkPBOs)
+}] call CBA_fnc_addEventHandler;
+
 ADDON = true;

@@ -1,6 +1,7 @@
 PREP(3denAttributesChanged);
 PREP(addRoleDescriptionPrefix);
 PREP(addRoleDescriptionSuffix);
+PREP(checkPBOs);
 PREP(createZeus);
 PREP(exportCrate);
 PREP(fullHeal);
