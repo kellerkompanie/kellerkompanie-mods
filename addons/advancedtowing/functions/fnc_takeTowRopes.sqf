@@ -3,9 +3,9 @@
 
 params ["_player", "_vehicle"];
 
-if(local _vehicle) then {
-	diag_log text format ["[KEKO] (advancedtowing) takeTowRopes: %1", _this];
+TRACE_2("takeTowRopes", _player, _vehicle);
 
+if(local _vehicle) then {
 	private ["_existingTowRopes","_hitchPoint","_rope"];
 
 	_existingTowRopes = _vehicle getVariable ["keko_advancedtowing_towRopes",[]];

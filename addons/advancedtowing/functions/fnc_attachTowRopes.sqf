@@ -6,7 +6,7 @@ private ["_vehicle"];
 
 _vehicle = _player getVariable [QGVAR(towRopesVehicle), objNull];
 
-diag_log text format ["[KEKO] (advancedtowing) attachTowRopes _player=%1 _cargo=%2 _vehicle=%3", _player, _cargo, _vehicle];
+TRACE_3("attachTowRopes", _player, _cargo, _vehicle);
 
 if(!isNull _vehicle) then {
 	if(local _vehicle) then {
@@ -23,7 +23,7 @@ if(!isNull _vehicle) then {
 				"The tow ropes are too short. Move vehicle closer." remoteExec ["hint", _player];
 			} else {
 				private ["_helper"];
-				
+
 				[_player, _vehicle] call FUNC(dropTowRopes);
 				_helper = "Land_Can_V2_F" createVehicle position _cargo;
 				// TODO add ACE interaction to rope end aka. helper object
