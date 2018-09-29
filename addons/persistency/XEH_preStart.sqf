@@ -14,7 +14,7 @@ if(isNil "keko_logging_db_setupComplete") then {
 };
 
 private _result = "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Database:SQL_CUSTOM:keko_persistency:kellerkompanie-persistency.ini";
-if(!(_result isEqualTo "[1]")) exitWith {diag_log text "[KEKO] (persistency) extDB3: Error with Database Connection";};
+if(!(_result isEqualTo "[1]")) exitWith {ERROR("extDB3: Error with Database Connection");};
 diag_log text "[KEKO] (persistency) added custom sql protocol keko_persistency:kellerkompanie-persistency.ini";
 
 // TODO create tables if not exist

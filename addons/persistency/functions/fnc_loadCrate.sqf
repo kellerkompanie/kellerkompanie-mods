@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadCrate: persistency for crates is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("loadCrate: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadCrate: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{WARNING("loadCrate: persistency for crates is disabled, exiting!"); false};
 
 params [
 	["_input", objNull, [objNull, -1]]
 ];
 
-diag_log text format ["[KEKO] (persistency) loadCrate: _input=%1", _input];
+TRACE_1("loadCrate", _input);
 
 private _objIsNull = false;
 if((typeName _input) == (typeName objNull)) then {
@@ -17,7 +17,10 @@ if((typeName _input) == (typeName objNull)) then {
 	};
 };
 
-if(_objIsNull) exitWith{diag_log text "[KEKO] (persistency) loadCrate: illegal argument, exiting!"; false};
+if(_objIsNull) exitWith {
+	ERROR("loadCrate: illegal argument, exiting!");
+	false
+};
 
 private _crate = objNull;
 private _crateID = -1;
@@ -31,12 +34,15 @@ if ((typeName _input) == (typeName objNull)) then {
 	_crateID = _input;
 };
 
-if(_crateID == -1) exitWith{diag_log text "[KEKO] (persistency) loadCrate: crate has no ID assigned, exiting!"; false};
+if(_crateID == -1) exitWith {
+	ERROR("loadCrate: crate has no ID assigned, exiting!");
+	false
+};
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getCrate:%1", _crateID]);
 
 if ((_ret select 0) == 1) then {
-	diag_log text format ["[KEKO] (persistency) loadCrate: loading sucessful %1", _ret];
+	TRACE_1("loadCrate: loading sucessful", _ret);
 
 	// assume loading was sucess
 	((_ret select 1) select 0) params [
@@ -48,7 +54,7 @@ if ((_ret select 0) == 1) then {
 		"_weapons",
 		"_containers"];
 
-	diag_log text format ["[KEKO] (persistency) loadCrate: _class=%1 _position=%2 _orientation=%3 _items=%4", _class, _position, _orientation, _items];
+	TRACE_4("loadCrate", _class, _position, _orientation, _items);
 
 	// ReammoBox_F
 	if(isNull _crate) then {
@@ -73,6 +79,6 @@ if ((_ret select 0) == 1) then {
 
 	true
 } else {
-	diag_log text format ["[KEKO] (persistency) loadCrate: loading unsucessful %1", _ret];
+	ERROR("loadCrate: loading unsucessful", _ret);
 	false
 };

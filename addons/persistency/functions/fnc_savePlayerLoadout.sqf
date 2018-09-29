@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,playersEnabled)) exitWith{diag_log text "[KEKO] (persistency) savePlayerLoadout: persistency for players is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("savePlayerLoadout: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("savePlayerLoadout: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,playersEnabled)) exitWith{WARNING("savePlayerLoadout: persistency for players is disabled, exiting!"); false};
 
 params ["_playerUnit"];
 

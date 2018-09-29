@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{diag_log text "[KEKO] (persistency) saveVehicle: persistency for vehicles is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("saveVehicle: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("saveVehicle: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{WARNING("saveVehicle: persistency for vehicles is disabled, exiting!"); false};
 
 params ["_vehicle"];
 

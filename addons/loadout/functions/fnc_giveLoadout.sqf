@@ -2,12 +2,6 @@
 
 params ["", "_faction", "_role"];
 
-//hint format ["%1 %2 %3", _unit, _faction, _role];
-
-//diag_log format ["_unit: %1", _unit];
-//diag_log format ["_faction: %1", _faction];
-//diag_log format ["_role: %1", _role];
-
 private _customLoadout = _faction isEqualTo "kekoCustom";
 
 if(_customLoadout) then {

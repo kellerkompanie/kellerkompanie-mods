@@ -3,7 +3,7 @@
 private _logic = _this select 0;
 
 if (!isServer) exitWith {};
-diag_log text "[KEKO] (logistic) running moduleCustomLogistics3den";
+INFO("running moduleCustomLogistics3den");
 
 if (isNil QGVAR(customCrates)) then {
 	GVAR(customCrates) = [];
@@ -55,7 +55,7 @@ private _keko_fnc_getInventory = {
 private _objects = synchronizedObjects _logic;
 
 {
-	diag_log text format ["[KEKO] (logistic) converting %1 to crate", _x];
+	TRACE_1("converting to crate", _x);
 
 	private _classname = typeOf _x;
 	private _name = getText (configFile >> "cfgVehicles" >> _classname >> "displayName");
@@ -67,4 +67,4 @@ private _objects = synchronizedObjects _logic;
 } forEach _objects;
 
 publicVariable QGVAR(customCrates);
-diag_log text format ["[KEKO] (logistic) customCrates: %1", GVAR(customCrates)];
+TRACE_1("customCrates", GVAR(customCrates));

@@ -2,7 +2,7 @@
 
 params ["_position", "_respawnSide"];
 
-diag_log text format["[KEKO] (common) setting respawn position to %1 for side %2", _position, _respawnSide];
+TRACE_2("setting respawn position", _position, _respawnSide);
 
 private _respawnSuffix = "";
 

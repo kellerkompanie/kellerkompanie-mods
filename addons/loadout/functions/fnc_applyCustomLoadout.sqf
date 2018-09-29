@@ -2,7 +2,7 @@
 
 params ["_role",""];
 
-diag_log text format["[KEKO] (loadout) applyCustomLoadout: %1", _role];
+TRACE_1("applyCustomLoadout", _role);
 
 player enableSimulation false;
 

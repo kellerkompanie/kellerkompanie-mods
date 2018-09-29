@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) saveCrate: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) saveCrate: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{diag_log text "[KEKO] (persistency) saveCrate: persistency for crates is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("saveCrate: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("saveCrate: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{WARNING("saveCrate: persistency for crates is disabled, exiting!"); false};
 
 params ["_crate"];
 
@@ -17,7 +17,7 @@ private _crateMagazines = _crateSerialization select 1;
 private _crateWeapons = _crateSerialization select 2;
 private _crateContainers = _crateSerialization select 3;
 
-diag_log text format["[KEKO] (persistency) saveCrate _crateID=%1 _crateClass=%2 _cratePosition=%3", _crateID, _crateClass, _cratePosition];
+TRACE_3("saveCrate", _crateID, _crateClass, _cratePosition);
 
 if(_crateID == -1) then {
 	// crate does not exist yet, create new and store CrateID
@@ -30,15 +30,15 @@ if(_crateID == -1) then {
 		_crateMagazines,
 		_crateWeapons,
 		_crateContainers]);
-	diag_log text format["[KEKO] (persistency) addCrate returns: %1", _ret];
+	TRACE_1("addCrate returns", _ret);
 
 	if ((_ret select 0) == 1) then {
 		_crateID = ((_ret select 1) select 0);
-		diag_log text format["[KEKO] (persistency) crate was created with CrateID %1", _crateID];
+		TRACE_1("crate was created with", _crateID);
 		_crate setVariable ["keko_persistency_crateID", _crateID];
 		true
 	} else {
-		diag_log text format["[KEKO] (persistency) creation of crate was unsucessful :("];
+		ERROR("creation of crate was unsucessful :(");
 		false
 	};
 
@@ -56,6 +56,6 @@ if(_crateID == -1) then {
 		_crateContainers,
 		_crateID];
 
-	diag_log text format["[KEKO] (persistency) updateCrate returns: %1", _ret];
+	TRACE_1("updateCrate returns", _ret);
 	true
 };

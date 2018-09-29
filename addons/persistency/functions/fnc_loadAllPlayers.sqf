@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,playersEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadAllPlayers: persistency for player is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,playersEnabled)) exitWith{WARNING("loadAllPlayers: persistency for player is disabled, exiting!"); false};
 
 private _allHCs = entities "HeadlessClient_F";
 private _allHPs = allPlayers - _allHCs;

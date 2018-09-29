@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith {diag_log text "[KEKO] (persistency) setMoney: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith {diag_log text "[KEKO] (persistency) setMoney: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,moneyEnabled)) exitWith {diag_log text "[KEKO] (persistency) setMoney: persistency for money is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith {WARNING("setMoney: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith {WARNING("setMoney: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,moneyEnabled)) exitWith {WARNING("setMoney: persistency for money is disabled, exiting!"); false};
 
 params ["_playerUnit", "_money", "_bank"];
 

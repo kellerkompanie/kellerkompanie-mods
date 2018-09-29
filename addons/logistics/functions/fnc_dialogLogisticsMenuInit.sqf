@@ -16,7 +16,7 @@ else {
 	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadFaction) >> "crates");
 };
 
-diag_log text format["[KEKO] (logistics) logisticsMenuInit: _crates = %1", _crates];
+TRACE_1("logisticsMenuInit", _crates);
 
 private _i = 0;
 {
@@ -39,7 +39,6 @@ private _i = 0;
 			_crate_name = getText (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> _x >> "name");
 			lbAdd [1500, _crate_name];
 			lbSetData [1500, _i, format ["%1 %2", EGVAR(loadout,loadoutFaction), _x]];
-			//diag_log text format ["[KEKO] (logistics) LogisticsMenuInit adding '%1 %2' @ %3", EGVAR(loadout,loadoutFaction), _x, _i];
 		};
 
 		_i = _i + 1;

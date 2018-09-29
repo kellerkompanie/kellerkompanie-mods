@@ -2,7 +2,7 @@
 
 
 
-if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
+if (!GVAR(enabled)) exitWith {WARNING("killing disabled, exiting"); false};
 
 [_this select 0, cursorTarget] spawn {
 	private["_player","_target","_dist"];
@@ -24,7 +24,7 @@ if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exi
 
 				if(isPlayer _target) then {
 					private["_msg"];
-					
+
 					_msg = format ["[KEKO] (kill) %1 killed %2 by snapping the neck", name _player, name _target];
 					_msg remoteExec ["systemChat", 0, false];
 					_msg remoteExec ["diag_log", 2, false];

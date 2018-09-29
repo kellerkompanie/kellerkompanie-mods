@@ -10,7 +10,7 @@ private _radiusText = ctrlText ((uiNamespace getVariable QGVAR(lockdoors_dialog)
 private _centerPos = profileNamespace getVariable QGVAR(lockDoors_center);
 private _radius = parseNumber _radiusText;
 
-diag_log text format["[KEKO] (common) callback _lockedState: %1", _lockedState];
+TRACE_1("lockDoorsDialogCallback", _lockedState);
 [_centerPos, _radius, _lockedState] call FUNC(lockDoors);
 
 profileNamespace setVariable [QGVAR(lastDoorRadius), _radiusText];

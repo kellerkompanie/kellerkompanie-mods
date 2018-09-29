@@ -73,7 +73,6 @@ class CfgVehicles {
 
 		class EventHandlers: EventHandlers {
 			AttributesChanged3DEN = "_this call keko_common_fnc_3denAttributesChanged;";
-			//Init = "diag_log 'XXX EventHandler Init';";
 		};
 
 		class Attributes: AttributesBase {

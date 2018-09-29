@@ -14,12 +14,10 @@ profileNamespace setVariable [QGVAR(lastAction), _title];
 profileNamespace setVariable [QGVAR(lastAction), _content];
 profileNamespace setVariable [QGVAR(lastAction), _remove];
 
-//diag_log text format["[KEKO] (intel) dialogIntelCallback: %1 %2 %3 %4", _action, _title, _content, _remove];
-
 private _logic = profileNamespace getVariable QGVAR(logic);
 
 private _object = attachedTo _logic;
-diag_log text format["[KEKO] (intel) dialogIntelCallback on object: %1", _object];
+TRACE_1("dialogIntelCallback", _object);
 
 // TODO spawn object if not placed on object
 // ["Land_File1_F","Land_File2_F","Land_FilePhotos_F","Land_Map_F","Land_Map_unfolded_F","Land_Laptop_unfolded_F","Land_MobilePhone_smart_F","Land_Tablet_01_F","Land_Tablet_02_F"]
@@ -27,7 +25,7 @@ diag_log text format["[KEKO] (intel) dialogIntelCallback on object: %1", _object
 
 switch (true) do {
     case (isNull _object): {
-    	diag_log text "[KEKO] (common) ERROR: _object is null";
+    	ERROR("_object is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
