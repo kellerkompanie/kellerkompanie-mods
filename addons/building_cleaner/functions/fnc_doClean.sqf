@@ -18,5 +18,5 @@ if (_isRuin) then {
 
     {deleteVehicle _x} forEach _objectsInBuilding;
 
-    diag_log "[KEKO] (building_cleaner) - Killed AI and removed objects from a ruin";
+    INFO("Killed AI and removed objects from a ruin");
 };
