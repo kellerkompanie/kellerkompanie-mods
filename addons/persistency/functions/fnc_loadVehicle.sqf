@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency disabled, exiting!"; false};
-if(EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency key not set, exiting!"; false};
-if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: persistency for vehicles is disabled, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("loadVehicle: persistency disabled, exiting!"); false};
+if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadVehicle: persistency key not set, exiting!"); false};
+if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{WARNING("loadVehicle: persistency for vehicles is disabled, exiting!"); false};
 
 params [
 	["_input", objNull, [objNull, -1]]
 ];
 
-diag_log text format ["[KEKO] (persistency) loadVehicle: _input=%1", _input];
+TRACE_1("loadVehicle", _input);
 
 private _objIsNull = false;
 if((typeName _input) == (typeName objNull)) then {
@@ -17,7 +17,10 @@ if((typeName _input) == (typeName objNull)) then {
 	};
 };
 
-if(_objIsNull) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: illegal argument, exiting!"; false};
+if(_objIsNull) exitWith{
+	ERROR("loadVehicle: illegal argument, exiting!");
+	false
+};
 
 private _vehicle = objNull;
 private _vehicleID = -1;
@@ -31,12 +34,15 @@ if ((typeName _input) == (typeName objNull)) then {
 	_vehicleID = _input;
 };
 
-if(_vehicleID == -1) exitWith{diag_log text "[KEKO] (persistency) loadVehicle: vehicle has no ID assigned, exiting!"; false};
+if(_vehicleID == -1) exitWith {
+	ERROR("loadVehicle: vehicle has no ID assigned, exiting!");
+	false
+};
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getVehicle:%1", _vehicleID]);
 
 if ((_ret select 0) == 1) then {
-	diag_log text format ["[KEKO] (persistency) loadVehicle: loading sucessful %1", _ret];
+	TRACE_1("loadVehicle: loading sucessful", _ret);
 
 	// assume loading was sucess
 	((_ret select 1) select 0) params [
@@ -50,7 +56,7 @@ if ((_ret select 0) == 1) then {
 		"_fuel",
 		"_damage"];
 
-	diag_log text format ["[KEKO] (persistency) loadVehicle: _class=%1 _position=%2 _orientation=%3 _fuel=%4 _damage=%5 _items=%6", _class, _position, _orientation, _fuel, _damage, _items];
+	TRACE_6("loadVehicle", _class, _position, _orientation, _fuel, _damage, _items);
 
 	if(isNull _vehicle) then {
 		private _allPossiblevehicles = allMissionObjects _class;
@@ -85,6 +91,6 @@ if ((_ret select 0) == 1) then {
 
 	true
 } else {
-	diag_log text format ["[KEKO] (persistency) loadVehicle: loading unsucessful %1", _ret];
+	ERROR("loadVehicle: loading unsucessful", _ret);
 	false
 };

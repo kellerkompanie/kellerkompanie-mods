@@ -1,24 +1,24 @@
 #include "script_component.hpp"
 
-diag_log text format ["[KEKO] (emp) running keko_emp_fnc_moduleEMP: %1", _this];
+TRACE_1("moduleEMP", _this);
 
 params ["_logic"];
 if (!local _logic) exitWith {};
 
 private _object = attachedTo _logic;
-diag_log text format["[KEKO] (emp) spawning effect: %1 %2 %3", _logic, _object, typeOf _object];
+TRACE_3("spawning effect", _logic, _object, typeOf _object);
 
 switch (true) do {
     case (isNull _object): {
-    	diag_log text "[KEKO] (emp) ERROR: _object is null";
+    	ERROR("_object is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (isPlayer _object): {
-    	diag_log text "[KEKO] (emp) ERROR: _object is player";
+    	ERROR("_object is player");
         [objNull, "place on object"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (!alive _object): {
-    	diag_log text "[KEKO] (emp) ERROR: _object is not alive";
+    	ERROR("_object is not alive");
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {

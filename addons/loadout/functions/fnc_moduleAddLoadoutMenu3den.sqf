@@ -3,11 +3,11 @@
 private _logic = _this select 0;
 
 if (!isServer) exitWith {};
-diag_log text "[KEKO] (loadout) running moduleAddLoadoutMenu3den";
+INFO("running moduleAddLoadoutMenu3den");
 
 private _objects = synchronizedObjects _logic;
 {
-	diag_log text format ["[KEKO] (loadout) adding menu to: %1", _x];
+	TRACE_1("adding menu to object", _x);
 	[_x] call FUNC(addLoadoutMenu);
 } forEach _objects;
 

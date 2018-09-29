@@ -2,7 +2,7 @@
 
 private _logic = _this select 0;
 
-diag_log text "[KEKO] (persistency_settings) running modulePersistencyOverwriteID3den";
+INFO("running modulePersistencyOverwriteID3den");
 
 private _overwriteID = parseNumber (_logic getVariable ["ID", "-1"]);
 
@@ -12,7 +12,7 @@ private _objects = synchronizedObjects _logic;
 
 if ((count _objects) == 1) then {
   private _object = _objects select 0;
-  diag_log text format ["[KEKO] (persistency_settings) overwriting ID of object %1 to %2", _object, _overwriteID];
+  TRACE_2("overwriting ID of object", _object, _overwriteID);
 
   if(_object isKindOf "ReammoBox_F") then {
     _object setVariable [QGVAR(crateID), _overwriteID, true];

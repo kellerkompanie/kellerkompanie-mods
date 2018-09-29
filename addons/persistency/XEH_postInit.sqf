@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{diag_log text "[KEKO] (persistency) preInit: persistency disabled, exiting!"; false};
-if (EGVAR(persistency_settings,key) == "") exitWith{diag_log text "[KEKO] (persistency) preInit: persistency key not set, exiting!"; false};
+if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
 
 diag_log text "[KEKO] (persistency) running XEH_postInit";
 

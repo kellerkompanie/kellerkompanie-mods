@@ -2,7 +2,7 @@
 
 private _logic = _this select 0;
 
-diag_log text "[KEKO] (logistics) running moduleFuelConsumption3den";
+INFO("running moduleFuelConsumption3den");
 
 if(isServer) then {
 	GVAR(enableFuelConsumption) = _logic getVariable "EnableFuelConsumption";

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if ! (GVAR(enabled)) exitWith {diag_log text "[KEKO] (unknown_weapon) keko_settings_unknown_weapon_enable = false"};
+if ! (GVAR(enabled)) exitWith {WARNING("keko_settings_unknown_weapon_enable = false, exiting");};
 
 if ! (isClass(configFile >> "CfgPatches" >> "ace_overheating")) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not found! Punishing unknown weapons cannot be used!"};
 if ! (ace_overheating_enabled) exitWith {diag_log text "[KEKO] (unknown_weapon) ACE Overheating not enabled! Punishing unknown weapons cannot be used!"};

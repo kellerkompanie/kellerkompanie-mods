@@ -1,7 +1,7 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 #include "script_component.hpp"
 
-diag_log text format ["[KEKO] (emp) running keko_emp_fnc_Starter: %1", _this];
+TRACE_1("empStarter", _this);
 
 if (!isServer) exitWith {};
 

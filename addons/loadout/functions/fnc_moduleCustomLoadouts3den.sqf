@@ -3,17 +3,17 @@
 private _logic = _this select 0;
 
 if (!isServer) exitWith {};
-diag_log text "[KEKO] (loadout) running moduleCustomLoadouts3den";
+INFO("running moduleCustomLoadouts3den");
 
 if (isNil QGVAR(customLoadouts)) then {
 	GVAR(customLoadouts) = [];
 };
 
 private _objects = synchronizedObjects _logic;
-diag_log text format ["[KEKO] (loadout) synchronizedObjects _logic: %1", _objects];
+TRACE_1("synchronizedObjects", _objects);
 
 {
-	diag_log text format ["[KEKO] (loadout) converting %1 to loadout", _x];
+	TRACE_1("converting to loadout", _x);
 
 	private _loadout = getUnitLoadout _x;
 	private _type = typeOf _x;
@@ -27,4 +27,4 @@ diag_log text format ["[KEKO] (loadout) synchronizedObjects _logic: %1", _object
 } forEach _objects;
 
 publicVariable QGVAR(customLoadouts);
-diag_log text format ["[KEKO] (loadout) customLoadouts: %1", GVAR(customLoadouts)];
+TRACE_1("customLoadouts", GVAR(customLoadouts));

@@ -2,7 +2,7 @@
 
 private _logic = _this select 0;
 
-diag_log "[KEKO] (common) running moduleInitMission3den";
+INFO("moduleInitMission3den");
 
 if(isServer) then {
 	private _action = _logic getVariable ["Action",""];

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (kill) killing disabled, exiting"; false};
+if (!GVAR(enabled)) exitWith {WARNING("killing disabled, exiting"); false};
 
 [_this select 0, _this select 1] spawn {
 	private["_player","_target"];
