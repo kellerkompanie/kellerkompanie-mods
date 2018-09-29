@@ -34,7 +34,7 @@ _returnSurfaceAGL = ASLtoAGL _returnSurfaceAGL;
 
 params ["_vehicle","_vehicleHitchModelPos","_cargo","_cargoHitchModelPos","_ropeLength"];
 
-diag_log text format ["[KEKO] (advancedtowing) simulateTowing _vehicle=%1 _vehicleHitchModelPos=%2 _cargo=%3 _cargoHitchModelPos=%4 _ropeLength=%5", _vehicle, _vehicleHitchModelPos, _cargo, _cargoHitchModelPos, _ropeLength];
+TRACE_5("simulateTowing", _vehicle, _vehicleHitchModelPos, _cargo, _cargoHitchModelPos, _ropeLength);
 
 private ["_lastCargoHitchPosition","_lastCargoVectorDir","_cargoLength","_maxDistanceToCargo","_lastMovedCargoPosition","_cargoHitchPoints"];
 private ["_vehicleHitchPosition","_cargoHitchPosition","_newCargoHitchPosition","_cargoVector","_movedCargoVector","_currentCargo"];
