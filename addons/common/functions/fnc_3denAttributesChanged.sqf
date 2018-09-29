@@ -40,7 +40,7 @@ private _hc3Exists = false;
 
 if (_initModuleExists) then {
 	if(_module != _existingInitModule) then {
-		systemChat "ERROR: there can be only one Init Module";
+		ERROR_MSG("There can be only one Init Module");
 		delete3DENEntities _this;
 		if(true) exitWith {};
 	};

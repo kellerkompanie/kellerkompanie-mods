@@ -2,7 +2,7 @@
 
 params ["_centerPos", "_distance", "_isLocked"];
 
-diag_log text format["[KEKO] (common) lockDoors: %1 %2 %3", _centerPos, _distance, _isLocked];
+TRACE_3("lockDoors", _centerPos, _distance, _isLocked);
 
 private _lockState = 0;
 if(_isLocked) then {

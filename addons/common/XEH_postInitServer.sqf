@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-diag_log text "[KEKO] (common) running XEH_postInitServer";
+INFO("running XEH_postInitServer");
 
 //stops the blabbering of AI units and players
 {_x setVariable ["BIS_noCoreConversations", true, true]} count allUnits;
