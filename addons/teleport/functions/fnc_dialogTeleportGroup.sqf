@@ -2,11 +2,11 @@
 
 params ["_player","_teleporterName"];
 
-diag_log text format["[KEKO] (teleport) fnc_dialogTeleportGroup: %1 %2", _player, _teleporterName];
+TRACE_2("dialogTeleportGroup", _player, _teleporterName);
 
-if (!isServer) exitWith {diag_log text "[KEKO] (teleport) fnc_dialogTeleportGroup only permitted on server"; false};
+if (!isServer) exitWith {WARNING("dialogTeleportGroup only permitted on server"); false};
 
-diag_log text format["[KEKO] (teleport) teleport group @ marker: %1", _teleporterName];
+TRACE_1("teleport group @ marker", _teleporterName);
 
 private _playerGroup = group _player;
 private _groupLeader = leader _playerGroup;

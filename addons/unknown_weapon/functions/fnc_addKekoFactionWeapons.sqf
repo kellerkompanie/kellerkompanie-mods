@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist before: %1", GVAR(whitelist)];
+TRACE_1("addKekoFactionWeapons, whitelist before", GVAR(whitelist));
 
 private _weaponCfg = getText (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "weaponCfg");
 private _weapon_config = configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> _weaponCfg;
@@ -27,16 +27,16 @@ private _crates = [];
 if(EGVAR(logistics,customLogistics) == 2) then {
 	if !(isNil QGVAR(customCrates)) then {
 		_crates = [["Kisten", EGVAR(logistics,customCrates)]];
-		diag_log format ["[KEKO] (unkown_weapon) _crates loaded from customCrates: %1", _crates];
+		TRACE_1("_crates loaded from customCrates", _crates);
 	};
 }
 else {
 	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "crates");
-	diag_log format ["[KEKO] (unkown_weapon) _crates loaded from config: %1", _crates];
+	TRACE_1("_crates loaded from config", _crates);
 };
 
 if(isNil "_crates") then {
-	diag_log "[KEKO] (unkown_weapon) _crates isNil";
+	INFO("_crates isNil");
 	_crates = [];
 };
 
@@ -84,4 +84,4 @@ if(isNil "_crates") then {
 	} forEach _section_crates;
 } forEach _crates;
 
-diag_log text format["[KEKO] (unknown_weapon) addKekoFactionWeapons, whitelist after: %1", GVAR(whitelist)];
+TRACE_1("addKekoFactionWeapons, whitelist after", GVAR(whitelist));

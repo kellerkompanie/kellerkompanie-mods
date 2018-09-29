@@ -7,7 +7,7 @@ private _allowINDFOR = _sideArray select 1;
 private _allowOPFOR  = _sideArray select 2;
 private _allowCIV    = _sideArray select 3;
 
-diag_log text format["[KEKO] (teleport) adding teleport menu on %1 for sides %2", _object, _sideArray];
+TRACE_2("adding teleport menu for sides", _object, _sideArray);
 
 //_object addAction [("<t color='#A6A600' size='2' align='center'>" + ("Fast-Travel") + "</t>"), {createDialog "keko_teleport_mainDialog";}];
 

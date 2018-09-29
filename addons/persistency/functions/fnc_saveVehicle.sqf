@@ -20,7 +20,7 @@ private _vehicleContainers = _vehicleSerialization select 3;
 private _vehicleFuel = fuel _vehicle;
 private _vehicleDamage = getAllHitPointsDamage _vehicle;
 
-diag_log text format["[KEKO] (persistency) saveVehicle _vehicleID=%1 _vehicleClass=%2 _vehiclePosition=%3", _vehicleID, _vehicleClass, _vehiclePosition];
+TRACE_3("saveVehicle", _vehicleID, _vehicleClass, _vehiclePosition);
 
 if(_vehicleID == -1) then {
 	// vehicle does not exist yet, create new and store vehicleID
@@ -35,15 +35,15 @@ if(_vehicleID == -1) then {
 		_vehicleContainers,
 		_vehicleFuel,
 		_vehicleDamage]);
-	diag_log text format["[KEKO] (persistency) addVehicle returns: %1", _ret];
+	TRACE_1("addVehicle returns", _ret);
 
 	if ((_ret select 0) == 1) then {
 		_vehicleID = ((_ret select 1) select 0);
-		diag_log text format["[KEKO] (persistency) vehicle was created with VehicleID %1", _vehicleID];
+		TRACE_1("vehicle was created with VehicleID", _vehicleID);
 		_vehicle setVariable ["keko_persistency_vehicleID", _vehicleID];
 		true
 	} else {
-		diag_log text format["[KEKO] (persistency) creation of vehicle was unsucessful :("];
+		ERROR("creation of vehicle was unsucessful :(");
 		false
 	};
 
@@ -63,6 +63,6 @@ if(_vehicleID == -1) then {
 		_vehicleDamage,
 		_vehicleID];
 
-	diag_log text format["[KEKO] (persistency) updatevehicle returns: %1", _ret];
+	TRACE_1("updatevehicle returns", _ret);
 	true
 };

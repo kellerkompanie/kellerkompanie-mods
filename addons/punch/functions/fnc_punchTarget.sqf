@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {diag_log text "[KEKO] (punch) punching disabled, exiting"; false};
+if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
 [_this select 0, cursorTarget] spawn {
 	private _player = _this select 0;
