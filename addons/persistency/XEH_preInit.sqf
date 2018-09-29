@@ -9,11 +9,11 @@ PREP_RECOMPILE_END;
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
 if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
 
-diag_log text "[KEKO] (persistency) running XEH_preInit";
+INFO("running XEH_preInit");
 
 addMissionEventHandler ["HandleDisconnect",
 {
-	diag_log text format["[KEKO] (persistency) HandleDisconnect %1", _this];
+	TRACE_1("HandleDisconnect", _this);
 
 	// params ["_unit,", "_id", "_uid", "_name"];
 	private _unit = _this select 0;

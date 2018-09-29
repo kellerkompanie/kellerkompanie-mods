@@ -41,7 +41,7 @@ private _gangster_handcuffed = [
 	];
 
 if((_func isEqualTo "SetHandcuffed") && _state) then {
-	diag_log text format["[KEKO] (police) captiveStatusChanged: %1", _this];
+	TRACE_1("captiveStatusChanged", _this);
 	if(side _unit == civilian) then {
 		[_unit] spawn {
 			params ["_unit"];

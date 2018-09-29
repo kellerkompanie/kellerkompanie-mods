@@ -3,7 +3,7 @@
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
 if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
 
-diag_log text "[KEKO] (persistency) running XEH_postInit";
+INFO("running XEH_postInit");
 
 if(EGVAR(persistency_settings,autosaveInterval) > 0) then {
 	[] spawn {

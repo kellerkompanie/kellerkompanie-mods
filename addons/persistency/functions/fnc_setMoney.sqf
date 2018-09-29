@@ -23,6 +23,6 @@ private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency
 	_money,
 	_bank]);
 
-diag_log text format["[KEKO] (persistency) setting money returned %1", _ret];
+TRACE_1("setting money returned", _ret);
 
-diag_log text format["[KEKO] (persistency) setting money of player %1 to money=%2 bank=%3", _playerName, _money, _bank];
+TRACE_3("setting money of player", _playerName, _money, _bank);

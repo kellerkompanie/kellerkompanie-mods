@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-diag_log text format["[KEKO] (teleport) teleporting %1 to leader", player];
+TRACE_1("teleporting to leader", player);
 
 private _playerGroup = group player;
 private _groupLeader = leader _playerGroup;

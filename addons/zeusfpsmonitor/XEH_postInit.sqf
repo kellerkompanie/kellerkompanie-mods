@@ -1,9 +1,9 @@
 // Original version by DriftingNitro with help from Commy2, Dedmen, and Dscha
 
-if (keko_settings_zeusfpsmonitor_enabled == 0) exitWith{diag_log text "[KEKO] (zeusfpsmonitor) disabled";};
-if (!hasInterface) exitWith{diag_log text "[KEKO] (zeusfpsmonitor) no need to execute on server, exiting";};
+if (keko_settings_zeusfpsmonitor_enabled == 0) exitWith{WARNING("zeusfpsmonitor disabled");};
+if (!hasInterface) exitWith{WARNING("(zeusfpsmonitor) no need to execute on server, exiting");};
 
-diag_log text "[KEKO] (zeusfpsmonitor) running postInit";
+INFO("running postInit");
 
 //	Let each client update their FPS into a public variable based on a fixed update interval
 
@@ -22,7 +22,7 @@ _fpsUpdateHandle = [] spawn {
 // Only continue with admins and curators
 _isAdmin = (call BIS_fnc_admin) == 2;
 _isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_command" || player isKindOf "keko_indfor_command");
-if !(_isCurator || _isAdmin) exitWith {diag_log text "[KEKO] (zeusfpsmonitor) player is neither admin nor curator, exiting";};
+if !(_isCurator || _isAdmin) exitWith {ERROR("player is neither admin nor curator, exiting");};
 
 // For curators and admins show FPS counter underneath players
 keko_showFrames = true;
@@ -55,4 +55,4 @@ addMissionEventHandler ["Draw3D", {
 	//changed to be an array of specific units or players if you wish
 }];
 
-diag_log text "[KEKO] (zeusfpsmonitor) finished postInit";
+INFO("finished postInit");
