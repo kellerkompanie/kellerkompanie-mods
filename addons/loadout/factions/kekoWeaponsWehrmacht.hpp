@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "fow_e_nb39b"
 #define GRENADE "fow_e_m24"
 
@@ -68,7 +70,7 @@ class kekoWeaponsWehrmacht {
 	{
 		cfgName = "LIB_P38";
 		items[] = {};
-		magazines[] = {SECONDARY_MAG_P38};		
+		magazines[] = {SECONDARY_MAG_P38};
 	};
 
 

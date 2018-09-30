@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
 #define SMOKE_RED "SmokeShellRed"
@@ -42,7 +44,7 @@ class kekoWeaponsFIA {
 	};
 	class keko_W_A3_TRG21_GL: keko_W_A3_Mk20_GL
 	{
-		cfgName = "arifle_TRG21_GL_F";		
+		cfgName = "arifle_TRG21_GL_F";
 	};
 
 	// Marksman

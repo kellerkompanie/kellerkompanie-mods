@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "LIB_nb39"
 #define GRENADE "LIB_m39"
 
@@ -66,13 +68,13 @@ class kekoWeaponsArmiaKrajowa {
 	{
 		cfgName = "LIB_P38";
 		items[] = {};
-		magazines[] = {SECONDARY_MAG_P38};		
+		magazines[] = {SECONDARY_MAG_P38};
 	};
 	class keko_W_MAUSER: kekoSecondaryWeapon
 	{
 		cfgName = "LIB_M1896";
 		items[] = {};
-		magazines[] = {SECONDARY_MAG_MAUSER};		
+		magazines[] = {SECONDARY_MAG_MAUSER};
 	};
 
 

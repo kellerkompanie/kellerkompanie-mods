@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
 #define SMOKE_RED "SmokeShellRed"
@@ -98,7 +100,7 @@ class kekoWeaponsCBRNMarines {
 	};
 	class keko_W_A3_LRR_CAMO: keko_W_A3_LRR
 	{
-		cfgName = "srifle_LRR_camo_F";		
+		cfgName = "srifle_LRR_camo_F";
 	};
 
 
@@ -127,7 +129,7 @@ class kekoWeaponsCBRNMarines {
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
-		items[] = {};		
+		items[] = {};
 	};
 
 
