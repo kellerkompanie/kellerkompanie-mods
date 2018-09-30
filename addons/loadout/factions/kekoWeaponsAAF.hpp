@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
 #define SMOKE_RED "SmokeShellRed"
@@ -39,7 +41,7 @@ class kekoWeaponsAAF {
 		items[] = {"acc_pointer_IR","bipod_03_F_blk"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
-	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {		
+	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {
 		cfgName = "MMG_02_black_F";
 		items[] = {"acc_pointer_IR","bipod_03_F_blk"};
 		magazines[] = {PRIMARY_MAG_MMG};

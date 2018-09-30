@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 class kekoWeaponsIDAP {
 	// Secondary
 	class keko_W_VMH3: kekoSecondaryWeapon

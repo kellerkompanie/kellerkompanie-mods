@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "rhs_mag_rdg2_white"
 #define SMOKE_GREEN "rhs_mag_nspn_green"
 #define SMOKE_RED "rhs_mag_nspn_red"

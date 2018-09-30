@@ -38,6 +38,11 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
 #include "kekoSoldier.hpp"
 #include "kekoCrate.hpp"
 
+#undef KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY
+#undef KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY
+#undef KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY
+#undef KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY
+
 #define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{8, PRIMARY_MAG_AS}}
 #define KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"}}
 #define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{8, PRIMARY_MAG_AS}}
@@ -240,7 +245,7 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
             { 1,"ACE_Kestrel4500" },
             { 1,"ACE_microDAGR" },
             { 1,"ACE_surgicalKit" },
-            { 1,"ACE_RangeCard" },
+            { 1,"ACE_RangeCard" } };
         vest[] = { "VSM_OGA_OD_Vest_3" };
         vestInventory[] = {
             { 1,SMOKE_WHITE },

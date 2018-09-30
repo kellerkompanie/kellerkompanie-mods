@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "fow_e_no77"
 #define GRENADE "fow_e_no36mk1"
 

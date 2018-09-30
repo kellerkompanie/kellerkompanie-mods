@@ -48,6 +48,11 @@ class kekoFactionCBRNMarines: kekoFactionBase {
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
+#undef KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY
+#undef KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY
+#undef KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY
+#undef KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY
+	
 #define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
 #define KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"}}
 #define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
