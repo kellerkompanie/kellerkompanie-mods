@@ -1,9 +1,4 @@
 class CfgSounds {
-	class GVAR(horror_scary) {
-		name = "Scary Sound 1";
-		sound[] = {QPATHTOF(horror_music_pack\scary.ogg),1,1};
-		titles[] = {0,""};
-	};
 	class GVAR(horror_scary1) {
 		name = "Scary Sound 1";
 		sound[] = {QPATHTOF(horror_music_pack\scary1.ogg),1,1};
