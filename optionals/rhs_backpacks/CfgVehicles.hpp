@@ -4,11 +4,11 @@ class CfgVehicles {
 
     class rhsusf_assault_eagleaiii_ucp: B_AssaultPack_Base {
         maximumLoad = 280;
-    }
+    };
 
     class rhsusf_assault_eagleaiii_ocp: rhsusf_assault_eagleaiii_ucp {
         maximumLoad = 280;
-    }
+    };
 
     class B_rhsusf_B_BACKPACK: rhsusf_assault_eagleaiii_ocp {
         maximumLoad = 280;
