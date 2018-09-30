@@ -8,7 +8,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"ui_f_orange"};
+			"A3_Ui_F"};
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
