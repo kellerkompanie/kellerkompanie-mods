@@ -143,7 +143,7 @@ class GVAR(destinationDialog) {
 		y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 4 * GUI_GRID_W;
 		h = 1.5 * GUI_GRID_H;
-		action = "closeDialog 2;"
+		action = "closeDialog 2;";
 	};
 
 };
