@@ -5,7 +5,8 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleAddIntel),
-            QGVAR(moduleAddIntel3den)
+            QGVAR(moduleAddIntel3den),
+			"keko_ModuleAddIntel3den"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
