@@ -25,11 +25,9 @@ class RscDisplayMain: RscStandardDisplay {
 			picture = QPATHTOF(ui\button.paa); // Square picture, ideally 512x512
 			//video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover
 			//action = "0 = [_this, 'your.domain.name', '2302', 'yourpasshere'] execVM '\amp_spotlight\joinServer.sqf';";
-			action = "0 = [_this, 'server.kellerkompanie.com', '2302', 'keko'] call keko_button_fnc_joinServer;";
+			action = "0 = [_this, 'server.kellerkompanie.com', '2302', 'keko'] execVM '\x\keko\addons\button\joinServer.sqf';";
 			actionText = "Join server: Kellerkompanie Server"; // Text displayed in top left corner of on-hover white frame
 			condition = "true"; // Condition for showing the spotlight
 		};
 	};
 };
-
-#include "CfgEventHandlers.hpp"
