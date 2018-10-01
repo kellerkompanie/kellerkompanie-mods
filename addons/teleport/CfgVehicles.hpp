@@ -63,7 +63,7 @@ class CfgVehicles {
             };
         };
     };
-	class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportMenu3den) {
+	class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportDestination3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Destination";
 		category           = QEGVAR(common,Deprecated);
 	};
