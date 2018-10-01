@@ -6,7 +6,9 @@ class CfgPatches {
 		units[] = {
             QGVAR(moduleAddLoadoutMenu),
             QGVAR(moduleAddLoadoutMenu3den),
-            QGVAR(moduleCustomLoadouts3den)
+            QGVAR(moduleCustomLoadouts3den),
+			"keko_ModuleAddLoadoutMenu3den",
+			"keko_ModuleCustomLoadouts3den"
         };
         weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
