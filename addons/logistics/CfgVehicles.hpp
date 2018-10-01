@@ -1,7 +1,6 @@
 class CfgVehicles {
     class Logic;
-    class Module_F: Logic
-    {
+    class Module_F: Logic {
         class EventHandlers;
         class ModuleDescription;
 
@@ -114,8 +113,7 @@ class CfgVehicles {
 			class ModuleDescription: ModuleDescription{};
 		};
     };
-    class GVAR(moduleCustomLogistics3den): GVAR(moduleBase3den)
-    {
+    class GVAR(moduleCustomLogistics3den): GVAR(moduleBase3den) {
         displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleCustomLogistics3den);
