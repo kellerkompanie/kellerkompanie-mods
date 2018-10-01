@@ -31,6 +31,10 @@ class CfgVehicles {
 		function           = QFUNC(moduleAddLoadoutMenu3den);
 		icon = QPATHTOF(ui\loadout_menu_icon.paa);
 	};
+	class keko_ModuleAddLoadoutMenu3den: GVAR(moduleAddLoadoutMenu3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Add Loadout Menu";
+		category           = QEGVAR(common,Deprecated);
+	};
 	class GVAR(moduleAddLoadoutMenu): GVAR(moduleBase) {
 		displayName        = "Add Loadout Menu";
 		category           = QGVAR(Loadout);
@@ -43,5 +47,9 @@ class CfgVehicles {
 		category           = QGVAR(Loadout);
 		function           = QFUNC(moduleCustomLoadouts3den);
 		icon = QPATHTOF(ui\icon_loadouts.paa);
+	};
+	class keko_ModuleCustomLoadouts3den: GVAR(moduleCustomLoadouts3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Custom Loadouts";
+		category           = QEGVAR(common,Deprecated);
 	};
 };
