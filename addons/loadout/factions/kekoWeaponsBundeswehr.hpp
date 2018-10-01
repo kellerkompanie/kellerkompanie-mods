@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "BWA3_DM25"
 #define SMOKE_GREEN "BWA3_DM32_Green"
 #define SMOKE_RED "BWA3_DM32_Red"
@@ -125,7 +127,7 @@ class kekoWeaponsBundeswehr {
 	{
 		cfgName = RAT_LAUNCHER;
 		magazines[] = {};
-	}
+	};
 	class keko_W_Fliegerfaust: kekoLauncherWeapon
 	{
 		cfgName = AA_LAUNCHER;

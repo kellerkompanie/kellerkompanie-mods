@@ -1,9 +1,6 @@
 PREP(3denAttributesChanged);
-PREP(addRoleDescriptionPrefix);
-PREP(addRoleDescriptionSuffix);
 PREP(checkPBOs);
 PREP(createZeus);
-PREP(exportCrate);
 PREP(fullHeal);
 PREP(lockDoors);
 PREP(lockDoorsDialogCallback);
@@ -23,7 +20,5 @@ PREP(moduleRespawnLocation);
 PREP(moduleRespawnLocation3den);
 PREP(moduleRespawnPosition);
 PREP(moduleRespawnPosition3den);
-PREP(replaceRoleDescription);
 PREP(replaceString);
-PREP(resetRoleDescription);
 PREP(setRespawnPosition);

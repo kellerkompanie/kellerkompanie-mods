@@ -865,7 +865,7 @@ class CfgVehicles {
 		crew = QGVAR(blufor_pilot);
 		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class rhs_uh1h_hidf_gunship;
@@ -879,7 +879,7 @@ class CfgVehicles {
 		crew = QGVAR(blufor_pilot);
 		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class rhs_uh1h_hidf_unarmed;
@@ -893,7 +893,7 @@ class CfgVehicles {
 		crew = QGVAR(blufor_pilot);
 		typicalCargo[] = {QGVAR(blufor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class RwG_Mozzie_Carl_Black;
@@ -1509,7 +1509,7 @@ class CfgVehicles {
 		crew = QGVAR(indfor_pilot);
 		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(indfor_uh1h_gunship): rhs_uh1h_hidf_gunship {
@@ -1522,7 +1522,7 @@ class CfgVehicles {
 		crew = QGVAR(indfor_pilot);
 		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(indfor_uh1h_unarmed): rhs_uh1h_hidf_unarmed {
@@ -1535,7 +1535,7 @@ class CfgVehicles {
 		crew = QGVAR(indfor_pilot);
 		typicalCargo[] = {QGVAR(indfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(indfor_mozzie_black): RwG_Mozzie_Carl_Black {
@@ -2164,7 +2164,7 @@ class CfgVehicles {
 		crew = QGVAR(opfor_pilot);
 		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(opfor_uh1h_gunship): rhs_uh1h_hidf_gunship {
@@ -2177,7 +2177,7 @@ class CfgVehicles {
 		crew = QGVAR(opfor_pilot);
 		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(opfor_uh1h_unarmed): rhs_uh1h_hidf_unarmed {
@@ -2190,7 +2190,7 @@ class CfgVehicles {
 		crew = QGVAR(opfor_pilot);
 		typicalCargo[] = {QGVAR(opfor_pilot)};
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
-		hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
+		//hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\uh1h_gue_in_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\mlod_gue_co.paa", "rhsgref\addons\rhsgref_air\uh1h\data\decals\blank_ca.paa"};
 	};
 
 	class GVAR(opfor_mozzie_black): RwG_Mozzie_Carl_Black {

@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
 #define SMOKE_RED "SmokeShellRed"
@@ -117,7 +119,7 @@ class kekoWeaponsCTRG {
 	};
 	class keko_W_P99_SPECOPS: keko_W_P99
 	{
-		items[] = {"muzzle_snds_L"};		
+		items[] = {"muzzle_snds_L"};
 	};
 
 

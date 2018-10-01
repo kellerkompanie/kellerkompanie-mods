@@ -77,15 +77,19 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 	// define all weapons and mags
 	#include "kekoWeaponsUSBlackOpsTropic.hpp"
 
+	#undef KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY
+	#undef KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY
+	#undef KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY
+	#undef KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY
+	#undef KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY
+	#undef KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY
+
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{4, PRIMARY_MAG_P90}}
 	#define KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"}}
 	#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
 	#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{4, PRIMARY_MAG_P90}}
 	#define KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"adv_aceCPR_AED"},{20,"adv_aceSplint_splint"}}
-
-	#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{6, PRIMARY_MAG_P90}}
-	#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY_P90 {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{6, PRIMARY_MAG_P90}}
 
 	#define KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}}
 	#define KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY {{1, "ToolKit"},{1, "ACE_wirecutter"},{1, "ACE_EntrenchingTool"},{1, "ACE_Fortify"}}
@@ -133,6 +137,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		optics[] = {};
 	};
 
+	#undef KEKO_LOGISTICS_FT_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_FT_CRATE_DEFAULT {\
 			{6, PRIMARY_MAG},\
 			{6, PRIMARY_MAG_416},\
@@ -154,6 +159,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{10, "adv_aceSplint_splint"},\
 			{2, "ACE_CableTie"}}
 
+	#undef KEKO_LOGISTICS_INF_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_INF_CRATE_DEFAULT {\
 			{14, PRIMARY_MAG},\
 			{8, PRIMARY_MAG_TRACER},\
@@ -167,6 +173,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{6, SECONDARY_MAG},\
 			{10, UGL_MAG}}
 
+	#undef KEKO_LOGISTICS_GRE_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_GRE_CRATE_DEFAULT {\
 			{20, UGL_MAG},\
 			{10, GRENADE},\
@@ -174,6 +181,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{10, SMOKE_GREEN},\
 			{10, SMOKE_RED}}
 
+	#undef KEKO_LOGISTICS_MG_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_MG_CRATE_DEFAULT {\
 			{8, PRIMARY_MAG_LMG},\
 			{4, PRIMARY_MAG_LMG_STONER},\
@@ -183,23 +191,27 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{1, "B_Carryall_cbr"},\
 			{2, "ACE_SpareBarrel"}}
 
+	#undef KEKO_LOGISTICS_AT_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_AT_CRATE_DEFAULT {\
 			{1, AT_LAUNCHER},\
 			{3, AT_MAG},\
 			{1, "B_FieldPack_cbr"},\
 			{2, RAT_LAUNCHER}}
 
+	#undef KEKO_LOGISTICS_AT_GUSTAV_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_AT_GUSTAV_CRATE_DEFAULT {\
 			{2, "launch_MRAWS_green_rail_F"},\
 			{1, "launch_MRAWS_green_F"},\
 			{6, "MRAWS_HEAT_F"},\
 			{1, "B_FieldPack_cbr"}}
 
+	#undef KEKO_LOGISTICS_AA_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_AA_CRATE_DEFAULT {\
 			{1, AA_LAUNCHER},\
 			{3, AA_MAG},\
 			{1, "B_FieldPack_cbr"}}
 
+	#undef KEKO_LOGISTICS_MED_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_MED_CRATE_DEFAULT {\
 			{50, "ACE_fieldDressing"},\
 			{50, "ACE_elasticBandage"},\
@@ -214,6 +226,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{10, "SmokeShell"},\
 			{30, "adv_aceSplint_splint"}}
 
+	#undef KEKO_LOGISTICS_SUP_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
 			{2, "SmokeShell"},\
 			{2, "ToolKit"},\
@@ -236,6 +249,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{4, "ACE_bodyBag"},\
 			{1, "adv_aceCPR_AED"}}
 
+	#undef KEKO_LOGISTICS_EOD_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_EOD_CRATE_DEFAULT {\
 			{4, "ACE_Cellphone"},\
 			{2, "ACE_Clacker"},\
@@ -252,6 +266,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{4, "SatchelCharge_Remote_Mag"},\
 			{10, "DemoCharge_Remote_Mag"}}
 
+	#undef KEKO_LOGISTICS_RAT_CRATE_DEFAULT
 	#define KEKO_LOGISTICS_RAT_CRATE_DEFAULT {\
 			{20, "murshun_cigs_matches"},\
 			{20, "murshun_cigs_cigpack"},\

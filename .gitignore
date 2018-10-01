@@ -59,3 +59,15 @@ fabric.properties
 # ArmA 3
 *.pbo
 *.bisign
+
+# from ACE3 github
+release/*
+tools/temp
+*.cache
+*.pbo
+texHeaders.bin
+*.swp
+*.swo
+*.biprivatekey
+Thumbs.db
+CHANGELOG.md

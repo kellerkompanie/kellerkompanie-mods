@@ -35,7 +35,7 @@ class CfgVehicles {
 		displayName        = "Add Loadout Menu";
 		category           = QGVAR(Loadout);
 		function           = QFUNC(moduleAddLoadoutMenu);
-		icon = icon = QPATHTOF(ui\loadout_menu_icon.paa);
+		icon 			   = QPATHTOF(ui\loadout_menu_icon.paa);
 		curatorCanAttach   = 1;
 	};
 	class GVAR(moduleCustomLoadouts3den): GVAR(moduleBase3den) {

@@ -3,7 +3,10 @@
 #define MAINPREFIX x
 #define PREFIX keko
 
-#include "script_version.hpp"
+#define MAJOR 2
+#define MINOR 0
+#define PATCHLVL 0
+#define BUILD 1
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

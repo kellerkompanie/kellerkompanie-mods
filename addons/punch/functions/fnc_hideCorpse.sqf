@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (!GVAR(enabled)) exitWith {
-	WARNING("punching disabled, exiting";
+	WARNING("punching disabled, exiting");
 	false
 };
 

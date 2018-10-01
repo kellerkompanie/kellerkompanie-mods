@@ -75,7 +75,7 @@
 
 #define SL_TEXTURES       0x10
 
-// progress bar 
+// progress bar
 #define ST_VERTICAL       0x01
 #define ST_HORIZONTAL     0
 
@@ -139,7 +139,6 @@
 
 class RscText //Text Resource Class
 {
-    access = 0;
     type = 0;
     idc = -1;
     colorBackground[] = {0.25,0.25,0.25,0};
@@ -162,7 +161,6 @@ class RscText //Text Resource Class
 
 class RscPicture
 {
-	access = 0;
 	type = CT_STATIC;
 	idc = -1;
 	style = 48;//ST_PICTURE
@@ -178,7 +176,6 @@ class RscPicture
 
 class RscCombo //Combo Resource Class
 {
-	access = 0;
 	type = CT_COMBO;
 	style = ST_CENTER + LB_TEXTURES;
 	h = 0.05;
@@ -224,7 +221,6 @@ class RscCombo //Combo Resource Class
 
 class RscSlider //Slider Resource Class
 {
-	access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 	type = CT_XSLIDER; // Type
 	style = SL_HORZ; // Style
 	default = 0; // Control selected by default (only one within a display can be used)
@@ -255,4 +251,3 @@ class RscSlider //Slider Resource Class
 		colorActive[] = {1,0.5,0,1}; // Text color when the slider is active
 	};
 };
-

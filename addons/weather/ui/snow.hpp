@@ -6,7 +6,6 @@ class snow_menu{
 	{
 		class c_objects
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			idc = 2100; // Control identification (without it, the control won't be displayed)
 			type = CT_COMBO; // Type is 4
 			style = ST_LEFT + LB_TEXTURES; // Style
@@ -64,7 +63,6 @@ class snow_menu{
 		};
 		class c_breath
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			idc = 2101; // Control identification (without it, the control won't be displayed)
 			type = CT_COMBO; // Type is 4
 			style = ST_LEFT + LB_TEXTURES; // Style
@@ -122,7 +120,6 @@ class snow_menu{
 		};
 		class c_clientserver
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			idc = 2102; // Control identification (without it, the control won't be displayed)
 			type = CT_COMBO; // Type is 4
 			style = ST_LEFT + LB_TEXTURES; // Style
@@ -180,7 +177,6 @@ class snow_menu{
 		};
 		class c_fog
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			idc = 2103; // Control identification (without it, the control won't be displayed)
 			type = CT_COMBO; // Type is 4
 			style = ST_LEFT + LB_TEXTURES; // Style
@@ -238,7 +234,6 @@ class snow_menu{
 		};
 		class s_direction
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			type = CT_XSLIDER; // Type
 			style = SL_HORZ; // Style
 			idc = 1900;
@@ -277,7 +272,6 @@ class snow_menu{
 		};
 		class s_duration
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			type = CT_XSLIDER; // Type
 			style = SL_HORZ; // Style
 			idc = 1901;
@@ -316,7 +310,6 @@ class snow_menu{
 		};
 		class s_delay
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			type = CT_XSLIDER; // Type
 			style = SL_HORZ; // Style
 			idc = 1902;
@@ -355,7 +348,6 @@ class snow_menu{
 		};
 		class s_intensity
 		{
-			access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 			type = CT_XSLIDER; // Type
 			style = SL_HORZ; // Style
 			idc = 1903;
@@ -507,7 +499,6 @@ class snow_menu{
 		{
 			idc = 1000;
 			text = QPATHTOF(ui\tablet.paa);
-			access = 0;
 			type = CT_STATIC;
 			style = 48;//ST_PICTURE
 			colorBackground[] = {0,0,0,0};
@@ -524,7 +515,6 @@ class snow_menu{
 		};
 		class t_header_bg
 		{
-			access = 0;
 			type = 0;
 			idc = 1002;
 			colorBackground[] = {1,1,1,1};
@@ -546,7 +536,6 @@ class snow_menu{
 		};
 		class t_header
 		{
-			access = 0;
 			type = 0;
 			idc = 1001;
 			colorText[] = {1,1,1,1};
@@ -568,7 +557,6 @@ class snow_menu{
 		};
 		class t_objects
 		{
-			access = 0;
 			type = 0;
 			idc = 1003;
 			colorText[] = {1,1,1,1};
@@ -590,7 +578,6 @@ class snow_menu{
 		};
 		class t_breath
 		{
-			access = 0;
 			type = 0;
 			idc = 1004;
 			colorText[] = {1,1,1,1};
@@ -612,7 +599,6 @@ class snow_menu{
 		};
 		class t_clientserver
 		{
-			access = 0;
 			type = 0;
 			idc = 1005;
 			colorText[] = {1,1,1,1};
@@ -634,7 +620,6 @@ class snow_menu{
 		};
 		class t_fog
 		{
-			access = 0;
 			type = 0;
 			idc = 1006;
 			colorText[] = {1,1,1,1};
@@ -656,7 +641,6 @@ class snow_menu{
 		};
 		class t_direction
 		{
-			access = 0;
 			type = 0;
 			idc = 1007;
 			colorText[] = {1,1,1,1};
@@ -678,7 +662,6 @@ class snow_menu{
 		};
 		class t_duration
 		{
-			access = 0;
 			type = 0;
 			idc = 1008;
 			colorText[] = {1,1,1,1};
@@ -700,7 +683,6 @@ class snow_menu{
 		};
 		class t_delay
 		{
-			access = 0;
 			type = 0;
 			idc = 1009;
 			colorText[] = {1,1,1,1};
@@ -722,7 +704,6 @@ class snow_menu{
 		};
 		class t_intensity
 		{
-			access = 0;
 			type = 0;
 			idc = 1010;
 			colorText[] = {1,1,1,1};
@@ -744,7 +725,6 @@ class snow_menu{
 		};
 		class t_s_direction
 		{
-			access = 0;
 			type = 0;
 			idc = 19000;
 			colorText[] = {1,1,1,1};
@@ -766,7 +746,6 @@ class snow_menu{
 		};
 		class t_s_duration
 		{
-			access = 0;
 			type = 0;
 			idc = 19001;
 			colorText[] = {1,1,1,1};
@@ -788,7 +767,6 @@ class snow_menu{
 		};
 		class t_s_delay
 		{
-			access = 0;
 			type = 0;
 			idc = 19002;
 			colorText[] = {1,1,1,1};
@@ -810,7 +788,6 @@ class snow_menu{
 		};
 		class t_s_intensity
 		{
-			access = 0;
 			type = 0;
 			idc = 19003;
 			colorText[] = {1,1,1,1};

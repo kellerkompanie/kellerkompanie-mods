@@ -22,7 +22,7 @@ if(GVAR(customLogistics) == 2) then {
 		TRACE_2("spawnCrate iterating", _entryName, _entryClass);
 
 		if(_entryName isEqualTo _descapedString) then {
-			TRACE_2("isEqualTo", _entryName, _descapedString];
+			TRACE_2("isEqualTo", _entryName, _descapedString);
 
 			_position = [_position select 0, _position select 1, (_position select 2) + 0.1];
 			private _crate = createVehicle [_entryClass, _position, [], 0, "CAN_COLLIDE"];
