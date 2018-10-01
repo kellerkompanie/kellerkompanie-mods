@@ -10,7 +10,7 @@ params
     ["_TIMEOUT", 30]
 ];
 
-ctrlactivate ((ctrlparent (_buttons # 0)) displayctrl 105);
+ctrlactivate ((ctrlparent (_buttons select 0)) displayctrl 105);
 
 /*
 1	_IP

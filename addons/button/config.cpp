@@ -31,3 +31,5 @@ class RscDisplayMain: RscStandardDisplay {
 		};
 	};
 };
+
+#include "CfgEventHandlers.hpp"
