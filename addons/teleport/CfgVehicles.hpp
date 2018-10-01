@@ -8,7 +8,7 @@ class CfgVehicles {
         author = ECSTRING(common,KEKOTeam);
         category = "KEKO";
         function = QEFUNC(common,dummy);
-        scope              = 1; 
+        scope              = 1;
         scopeCurator       = 2;
         functionPriority   = 1;
         isGlobal           = 1;
@@ -63,6 +63,10 @@ class CfgVehicles {
             };
         };
     };
+	class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportMenu3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Destination";
+		category           = QEGVAR(common,Deprecated);
+	};
     class GVAR(moduleAddTeleportMenu3den): GVAR(moduleBase3den) {
         displayName        = "Add Fast-Travel Menu";
         category           = QGVAR(Teleport);
@@ -96,14 +100,18 @@ class CfgVehicles {
             };
         };
     };
+	class keko_ModuleAddTeleportMenu3den: GVAR(moduleAddTeleportMenu3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Menu";
+		category           = QEGVAR(common,Deprecated);
+	};
     class GVAR(moduleAddTeleportDestination): GVAR(moduleBase) {
-        displayName        = "Add Fast-Travel Destination";        
+        displayName        = "Add Fast-Travel Destination";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportDestination);
         icon               = QPATHTOF(ui\teleport_dest_icon.paa);
     };
     class GVAR(moduleAddTeleportMenu): GVAR(moduleBase) {
-        displayName        = "Add Fast-Travel Menu";        
+        displayName        = "Add Fast-Travel Menu";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportMenu);
         icon               = QPATHTOF(ui\teleport_menu_icon.paa);
