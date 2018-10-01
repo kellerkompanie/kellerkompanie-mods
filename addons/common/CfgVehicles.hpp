@@ -117,6 +117,7 @@ class CfgVehicles {
 	};
 	class keko_ModuleInitMission3den: GVAR(moduleInitMission3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Initialize Mission";
+		category           = QGVAR(Deprecated);
 	};
 	class GVAR(moduleRespawnPosition3den): GVAR(moduleBase3den)	{
 		displayName        = "Respawn Position";
@@ -141,6 +142,10 @@ class CfgVehicles {
 				};
 			};
 		};
+	};
+	class keko_ModuleRespawnPosition3den: GVAR(moduleRespawnPosition3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Respawn Position";
+		category           = QGVAR(Deprecated);
 	};
 	class GVAR(moduleACEGarrison3den): GVAR(moduleBase3den)	{
 		displayName        = "ACE AI Garrison";
@@ -179,6 +184,10 @@ class CfgVehicles {
 				};
 			};
 		};
+	};
+	class keko_ModuleACEGarrison3den: GVAR(moduleACEGarrison3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) ACE Garrison";
+		category           = QGVAR(Deprecated);
 	};
 	class GVAR(moduleRespawnPosition): GVAR(moduleBase)	{
 		displayName        = "Respawn Position";
