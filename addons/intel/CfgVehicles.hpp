@@ -54,6 +54,10 @@ class CfgVehicles {
             };
 		};
     };
+	class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
+		displayName        = "(DEPRECATED - DO NOT USE) Add Intel";
+		category           = QEGVAR(common,Deprecated);
+	};
     class GVAR(moduleAddIntel): Module_F {
         displayName        = "Add Intel";
         icon               = QPATHTOF(ui\icon_intel.paa);
