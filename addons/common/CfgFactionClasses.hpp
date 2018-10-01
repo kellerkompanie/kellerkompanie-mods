@@ -12,4 +12,10 @@ class CfgFactionClasses
         priority = 2;
         side = 7;
     };
+	class GVAR(Deprecated)
+    {
+        displayName = "(DEPRECATED - DO NOT USE) Kellerkompanie";
+        priority = 2;
+        side = 7;
+    };
 };

@@ -17,7 +17,11 @@ class CfgPatches {
             QGVAR(moduleLockDoors),
             QGVAR(moduleMissionSuccess),
             QGVAR(moduleMissionFail),
-            QGVAR(moduleACEGarrison3den)
+            QGVAR(moduleACEGarrison3den),
+
+			"keko_ModuleInitMission3den",
+			"keko_ModuleRespawnPosition3den",
+			"keko_ModuleACEGarrison3den"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
