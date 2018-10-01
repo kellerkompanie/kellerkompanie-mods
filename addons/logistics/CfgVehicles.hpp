@@ -52,7 +52,7 @@ class CfgVehicles {
     };
 	class keko_ModuleAddLogisticsMenu3den: GVAR(moduleAddLogisticsMenu3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Add Logistics Menu";
-        category           = QEGVAR(Logistics);
+        category           = QEGVAR(common,Deprecated);
 	};
     class GVAR(moduleSpawnCrate): GVAR(moduleBase) {
         displayName        = "Spawn Crate";
