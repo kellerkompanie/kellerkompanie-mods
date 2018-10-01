@@ -7,7 +7,8 @@ class CfgPatches {
             QGVAR(moduleAddTeleportMenu),
             QGVAR(moduleAddTeleportDestination3den),
             QGVAR(moduleAddTeleportMenu3den),
-			"keko_ModuleAddLogisticsMenu3den"
+			"keko_ModuleAddTeleportDestination3den",
+			"keko_ModuleAddTeleportMenu3den"			
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
