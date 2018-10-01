@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 // TODO switch to faction specific
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"

@@ -1,3 +1,5 @@
+#include "script_macro.hpp"
+
 #define SMOKE_WHITE "SmokeShell"
 #define SMOKE_GREEN "SmokeShellGreen"
 #define SMOKE_RED "SmokeShellRed"
@@ -28,7 +30,7 @@ class kekoWeaponsCSAT {
 	};
 	class keko_W_A3_KATIBA_SHORT: keko_W_A3_KATIBA {
 		cfgName = "arifle_Katiba_C_F";
-	};	
+	};
 	class keko_W_A3_KATIBA_GL: keko_W_A3_KATIBA	{
 		cfgName = "arifle_Katiba_GL_F";
 		uglMagazines[] = {UGL_MAG};
@@ -48,7 +50,7 @@ class kekoWeaponsCSAT {
 		items[] = {"acc_pointer_IR","bipod_02_F_hex"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
-	
+
 
 
 	// Secondary
@@ -60,7 +62,7 @@ class kekoWeaponsCSAT {
 	class keko_W_ROOK_SILENCED: keko_W_ROOK {
 		items[] = {"muzzle_snds_L"};
 	};
-	
+
 
 
 	// Launcher

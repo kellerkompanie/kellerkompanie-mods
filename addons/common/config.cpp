@@ -38,51 +38,8 @@ class CfgPatches {
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 
-#include "gui\dialog_baseClasses.hpp"
-#include "gui\dialog_lockDoors.hpp"
-#include "gui\display_addRoleDescriptionPrefix.hpp"
-#include "gui\display_addRoleDescriptionSuffix.hpp"
-#include "gui\display_replaceRoleDescription.hpp"
+#include "defines.hpp"
 
-
-class Display3DEN {
-	class ContextMenu: ctrlMenu {
-		class Items	{
-			class Edit {
-				items[] = {
-					QGVAR(addRoleDescriptionPrefix),
-					QGVAR(addRoleDescriptionSuffix),
-					QGVAR(removeRoleDescriptionPrefix),
-					QGVAR(resetRoleDescription),
-					QGVAR(exportCrate)};
-			};
-			class GVAR(addRoleDescriptionPrefix)	{
-				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionPrefixDisplay'";
-				Text = "Add role description prefix";
-				conditionShow = "selectedObject";
-			};
-			class GVAR(addRoleDescriptionSuffix) {
-				action = "(findDisplay 313) createDisplay 'keko_addRoleDescriptionSuffixDisplay'";
-				Text = "Add role description suffix";
-				conditionShow = "selectedObject";
-			};
-			class GVAR(removeRoleDescriptionPrefix) {
-				action = "(findDisplay 313) createDisplay 'keko_replaceRoleDescriptionDisplay'";
-				Text = "Replace in role description";
-				conditionShow = "selectedObject";
-			};
-			class GVAR(resetRoleDescription)	{
-				action = QUOTE(call FUNC(resetRoleDescription));
-				Text = "Reset role description";
-				conditionShow = "selectedObject";
-			};
-			class GVAR(exportCrate)	{
-				action = QUOTE(call FUNC(exportCrate));
-				Text = "Export custom crate";
-				conditionShow = "selectedObject";
-			};
-		};
-	};
-};
+#include "ui\dialog_lockDoors.hpp"
 
 #include "CfgEventHandlers.hpp"

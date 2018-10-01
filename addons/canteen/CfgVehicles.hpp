@@ -26,7 +26,7 @@ class CfgVehicles {
 					icon = QPATHTOF(ui\icon_canteen_action.paa);
 					statement = QUOTE(_player call QQFUNC(fillCanteen));
 				};*/
-			}
+			};
 		};
 		class ACE_Actions {
 			class ACE_Head {

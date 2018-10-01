@@ -99,7 +99,7 @@ class CfgMusic {
 	};
 	class GVAR(horror_musichectic2)	{
 		name = "Music Hectic 3";
-		sound[] = {QPATHTOF(horror_music_pack\musichectic3.ogg),1,1};
+		sound[] = {QPATHTOF(horror_music_pack\musichectic2.ogg),1,1};
 		theme = "action";
 		duration = "92";
 		musicClass = QGVAR(horror);
