@@ -35,7 +35,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers {
-			AttributesChanged3DEN = QUOTE(if ((_this select 0) isKindOf QQGVAR(blufor_soldier) && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call QQFUNC(fnc_addRoleDescription);};);
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_faction_generic_blufor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 
@@ -299,7 +299,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers {
-			AttributesChanged3DEN = QUOTE(if ((_this select 0) isKindOf QQGVAR(indfor_soldier) && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call QQFUNC(fnc_addRoleDescription);};);
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_faction_generic_indfor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 
@@ -565,7 +565,7 @@ class CfgVehicles {
 		loadoutDummy = "kekoSoldier";
 
 		class EventHandlers: EventHandlers {
-			AttributesChanged3DEN = QUOTE(if ((_this select 0) isKindOf QQGVAR(opfor_soldier) && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call QQFUNC(fnc_addRoleDescription);};);
+			AttributesChanged3DEN = "if ((_this select 0) isKindOf 'keko_faction_generic_opfor_soldier' && (((_this select 0) get3DENAttribute 'description') select 0) isEqualTo '') then {_entity = _this select 0; _entity set3DENAttribute ['ControlMP', true]; _entity call keko_faction_generic_fnc_addRoleDescription;};";
 		};
 	};
 
