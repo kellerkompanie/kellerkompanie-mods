@@ -9,4 +9,10 @@ class CfgVehicles {
 		enginePower = 100;
 		maxSpeed = 65;
 	};
+
+
+	class Land_WoodenCrate_01_F;
+	class GVAR(boatCrate): Land_WoodenCrate_01_F {
+		displayName="Boat crate";
+	};
 };
