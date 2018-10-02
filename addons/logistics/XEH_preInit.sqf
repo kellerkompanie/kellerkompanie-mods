@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [
-	GVAR(customLogistics), // key/reference variable
+	QGVAR(customLogistics), // key/reference variable
 	"LIST", // type of setting
 	["Logistics", "Enable/Disable logistics"], // name and tooltip
 	"Kellerkompanie Logistics", // category
