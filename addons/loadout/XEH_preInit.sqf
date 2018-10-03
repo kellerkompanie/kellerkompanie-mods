@@ -127,7 +127,7 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(giveGps), // key/reference variable
 	"LIST", // type of setting
-	["Give compass", "Enable/Disable giving compass to player"], // name and tooltip
+	["Give GPS", "Enable/Disable giving GPS to player"], // name and tooltip
 	CBA_SETTINGS_CATEGORY, // category
 	[
 		[0,1,2,3,4], // values
