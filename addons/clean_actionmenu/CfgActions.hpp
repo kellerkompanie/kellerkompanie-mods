@@ -22,7 +22,7 @@ class CfgActions {
     };
 
 
-	class LoadMagazine: None {
+	/*class LoadMagazine: None {
         show = 0;
 	};
 	class LoadEmptyMagazine: LoadMagazine {
@@ -30,5 +30,5 @@ class CfgActions {
 	};
 	class LoadOtherMagazine: LoadMagazine {
 		show = 0;
-	};
+	};*/
 };
