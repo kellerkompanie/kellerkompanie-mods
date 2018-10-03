@@ -13,7 +13,7 @@ if(GVAR(customLogistics) == 2) then {
 	_crates = [["Kisten", GVAR(customCrates)]];
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadFaction) >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "crates");
 };
 
 TRACE_1("logisticsMenuInit", _crates);

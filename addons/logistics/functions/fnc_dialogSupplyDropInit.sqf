@@ -13,7 +13,7 @@ if(GVAR(customLogistics) == 2) then {
 	_crates = [["Kisten", GVAR(customCrates)]];
 }
 else {
-	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,ladoutFaction) >> "crates");
+	_crates = getArray (configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction) >> "crates");
 };
 
 private _logicPos = missionNamespace getVariable QGVAR(supply_drop_pos);
