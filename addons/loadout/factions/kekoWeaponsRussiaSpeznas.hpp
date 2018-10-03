@@ -21,6 +21,7 @@
 #define AT_MAG "Vorona_HEAT"
 #define AA_MAG "rhs_mag_9k38_rocket"
 #define UGL_MAG "rhs_VOG25"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsRussiaSpeznas {
     // Primary

@@ -426,8 +426,8 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_A3_MX_GL_BLACK,
-			keko_W_A3_MX_GL_TROPIC};
+			keko_W_A3_MX_GL_BLACK_HUNTIR,
+			keko_W_A3_MX_GL_TROPIC_HUNTIR};
 	};
 	class kekoLead416: kekoSoldierUSBlackOpsTropic416	{
 		name = "Lead (HK416)";
@@ -441,8 +441,8 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_A3_HK416_GL,
-			keko_W_A3_HK416_GL_TROPIC};
+			keko_W_A3_HK416_GL_HUNTIR,
+			keko_W_A3_HK416_GL_TROPIC_HUNTIR};
 	};
 
 
@@ -472,8 +472,8 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		name = "Squad Leader (MX)";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_A3_MX_GL_BLACK,
-			keko_W_A3_MX_GL_TROPIC};
+			keko_W_A3_MX_GL_BLACK_HUNTIR,
+			keko_W_A3_MX_GL_TROPIC_HUNTIR};
 		backpack[] = {"TFAR_rt1523g_black"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
@@ -484,8 +484,8 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		name = "Squad Leader (HK416)";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_A3_HK416_GL,
-			keko_W_A3_HK416_GL_TROPIC};
+			keko_W_A3_HK416_GL_HUNTIR,
+			keko_W_A3_HK416_GL_TROPIC_HUNTIR};
 		backpack[] = {"TFAR_rt1523g_black"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
@@ -992,6 +992,10 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		backpack[] = {"TFAR_rt1523g_black"};
 		backpackInventory[] = {{4,"Laserbatteries"}};
 		optics[] = {"Laserdesignator"};
+		primary[] = {
+			keko_W_A3_MX_GL_BLACK_HUNTIR,
+			keko_W_A3_MX_GL_TROPIC_HUNTIR
+		};
 	};
 	class kekoJTAC416: kekoGrenadier416 {
 		name = "JTAC (HK416)";
@@ -1010,6 +1014,10 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		backpack[] = {"TFAR_rt1523g_black"};
 		backpackInventory[] = {{4,"Laserbatteries"}};
 		optics[] = {"Laserdesignator"};
+		primary[] = {
+			keko_W_A3_HK416_GL_HUNTIR,
+			keko_W_A3_HK416_GL_TROPIC_HUNTIR
+		};
 	};
 
 
@@ -1027,6 +1035,10 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
+		primary[] = {
+			keko_W_A3_MX_GL_BLACK_HUNTIR,
+			keko_W_A3_MX_GL_TROPIC_HUNTIR
+		};
 	};
 	class kekoUAVOperator416: kekoGrenadier416	{
 		name = "UAV Operator (HK416)";
@@ -1038,6 +1050,10 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
+		primary[] = {
+			keko_W_A3_HK416_GL_HUNTIR,
+			keko_W_A3_HK416_GL_TROPIC_HUNTIR
+		};
 	};
 
 

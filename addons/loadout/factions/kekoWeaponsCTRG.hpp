@@ -23,6 +23,7 @@
 #define AT_MAG "Titan_AT"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsCTRG {
 	// Primary
@@ -55,10 +56,15 @@ class kekoWeaponsCTRG {
 		cfgName = "arifle_SPAR_01_GL_blk_F";
 		uglMagazines[] = {UGL_MAG};
 	};
-	class keko_W_A3_HK416_GL_SAND: keko_W_A3_HK416_SAND
-	{
+	class keko_W_A3_HK416_GL_HUNTIR: keko_W_A3_HK416_GL	{
+		uglMagazines[] = {HUNTIR_MAG};
+	};
+	class keko_W_A3_HK416_GL_SAND: keko_W_A3_HK416_SAND	{
 		cfgName = "arifle_SPAR_01_GL_snd_F";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_A3_HK416_GL_SAND_HUNTIR: keko_W_A3_HK416_GL_SAND	{
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 
 	// Marksman

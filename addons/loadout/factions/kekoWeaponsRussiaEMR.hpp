@@ -21,6 +21,7 @@
 #define AT_MAG "rhs_rpg7_PG7VL_mag"
 #define AA_MAG "rhs_mag_9k38_rocket"
 #define UGL_MAG "rhs_VOG25"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsRussiaEMR {
 	// Primary
@@ -34,10 +35,13 @@ class kekoWeaponsRussiaEMR {
 	{
 		cfgName = "rhs_weap_ak74m_folded_dtk";
 	};
-	class keko_W_AK74M_GL: keko_W_AK74M
-	{
+	class keko_W_AK74M_GL: keko_W_AK74M	{
 		cfgName = "rhs_weap_ak74m_gp25_dtk";
 		items[] = {"rhs_acc_dtk","rhs_acc_pkas"};
+		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_AK74M_GL_HUNTIR: keko_W_AK74M_GL {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 	class keko_W_AKS74U: keko_W_AK74M
 	{

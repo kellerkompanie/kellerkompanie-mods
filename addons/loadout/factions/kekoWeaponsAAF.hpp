@@ -21,6 +21,7 @@
 #define AT_MAG_TANKS "MRAWS_HEAT_F"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsAAF {
 	// Primary
@@ -32,6 +33,9 @@ class kekoWeaponsAAF {
 	class keko_W_A3_F2000_UGL: keko_W_A3_F2000 {
 		cfgName = "arifle_Mk20_GL_F";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_A3_F2000_UGL_HUNTIR: keko_W_A3_F2000_UGL {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 	class keko_W_A3_F2000_SHORT: keko_W_A3_F2000 {
 		cfgName = "arifle_Mk20C_F";

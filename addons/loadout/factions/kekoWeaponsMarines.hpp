@@ -21,6 +21,7 @@
 #define AT_MAG "rhs_mag_smaw_HEDP"
 #define AA_MAG "rhs_fim92_mag"
 #define UGL_MAG "rhs_mag_M441_HE"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsMarines {
 	// Primary
@@ -39,16 +40,20 @@ class kekoWeaponsMarines {
 	};
 
 	// Grenadier
-	class keko_W_RHS_M16A4_GL: keko_W_RHS_M16A4
-	{
+	class keko_W_RHS_M16A4_GL: keko_W_RHS_M16A4	{
 		cfgName = "rhs_weap_m16a4_carryhandle_M203";
 		uglMagazines[] = {UGL_MAG};
 	};
+	class keko_W_RHS_M16A4_GL_HUNTIR: keko_W_RHS_M16A4_GL {
+		uglMagazines[] = {HUNTIR_MAG};
+	};
 
-	class keko_W_RHS_M4A1_GL: keko_W_RHS_M4A1
-	{
+	class keko_W_RHS_M4A1_GL: keko_W_RHS_M4A1 {
 		cfgName = "rhs_weap_m4a1_carryhandle_m203";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_RHS_M4A1_GL_HUNTIR: keko_W_RHS_M4A1_GL {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 
 	// Marksman

@@ -42,7 +42,7 @@ class kekoFactionAAF: kekoFactionBase {
 
 	// define all weapons and mags
 	#include "kekoWeaponsAAF.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
@@ -58,7 +58,7 @@ class kekoFactionAAF: kekoFactionBase {
 			"V_PlateCarrierIA2_dgtl"};
 
 		helmet[] = {
-			"H_HelmetIA"};	
+			"H_HelmetIA"};
 
 		primary[] = {
 			keko_W_A3_F2000};
@@ -74,7 +74,7 @@ class kekoFactionAAF: kekoFactionBase {
 
 	class kekoLead: kekoSoldierAAF	{
 		name = "Lead";
-		rank = "LIEUTENANT";		
+		rank = "LIEUTENANT";
 		uniform[] = {"U_I_OfficerUniform"};
 		vest[] = {"V_TacVest_oli"};
 		helmet[] = {"H_MilCap_dgtl"};
@@ -84,13 +84,13 @@ class kekoFactionAAF: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_A3_F2000_UGL};
+			keko_W_A3_F2000_UGL_HUNTIR};
 	};
 
 	class kekoCommand: kekoLead	{
 		name = "Command";
-		rank = "COLONEL";	
-		medicClass = 2;	
+		rank = "COLONEL";
+		medicClass = 2;
 		engineerClass = 2;
 		helmet[] = {"H_Cap_blk_Raven"};
 	};
@@ -104,7 +104,7 @@ class kekoFactionAAF: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_A3_F2000_UGL};
+			keko_W_A3_F2000_UGL_HUNTIR};
 	};
 
 	class kekoSergeant: kekoSQL	{
@@ -114,7 +114,7 @@ class kekoFactionAAF: kekoFactionBase {
 	class kekoFTL: kekoSoldierAAF	{
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
-		optics[] = {"Binocular"};		
+		optics[] = {"Binocular"};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -140,12 +140,12 @@ class kekoFactionAAF: kekoFactionBase {
 	};
 
 	class kekoRifleman: kekoSoldierAAF	{
-		name = "Rifleman";		
+		name = "Rifleman";
 	};
 
 	class kekoRiflemanAT: kekoSoldierAAF	{
 		name = "Rifleman Anti-Tank";
-		launcher[] = {keko_W_NLAW};		
+		launcher[] = {keko_W_NLAW};
 	};
 
 	class kekoRiflemanATTanks: kekoRiflemanAT	{
@@ -183,7 +183,7 @@ class kekoFactionAAF: kekoFactionBase {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_oli"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierAAF {
@@ -201,7 +201,7 @@ class kekoFactionAAF: kekoFactionBase {
 		name = "Medium Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_oli"};
 		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierAAF {
@@ -276,13 +276,13 @@ class kekoFactionAAF: kekoFactionBase {
 	};
 
 	class kekoSpotter: kekoSniper {
-		name = "Spotter";	
+		name = "Spotter";
 		vestInventory[] = {
 			{1,"SmokeShell"},
 			{1,"SmokeShellGreen"},
 			{2,"9Rnd_45ACP_Mag"},
 			{10,"30Rnd_556x45_Stanag"},
-			{1,"HandGrenade"}};	
+			{1,"HandGrenade"}};
 		primary[] = {
 			keko_W_A3_F2000};
 	};
@@ -330,7 +330,7 @@ class kekoFactionAAF: kekoFactionBase {
 	class kekoHeliCrew: kekoHeliPilot {
 		name = "Helicopter Crew";
 		helmet[] = {"H_CrewHelmetHeli_I"};
-	};	
+	};
 
 	class kekoJetPilot: kekoHeliPilot {
 		name = "Jet Pilot";
@@ -343,7 +343,7 @@ class kekoFactionAAF: kekoFactionBase {
 	class kekoJTAC: kekoGrenadier {
 		name = "JTAC";
 		primary[] = {
-			keko_W_A3_F2000_UGL};
+			keko_W_A3_F2000_UGL_HUNTIR};
 		vestInventory[] = {
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
@@ -364,7 +364,7 @@ class kekoFactionAAF: kekoFactionBase {
 	class kekoUAVOperator: kekoSoldierLight	{
 		name = "UAV Operator";
 		primary[] = {
-			keko_W_A3_F2000_UGL};
+			keko_W_A3_F2000_UGL_HUNTIR};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
 			{2,PRIMARY_MAG},

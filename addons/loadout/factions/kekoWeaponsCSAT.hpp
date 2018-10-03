@@ -20,6 +20,7 @@
 #define AT_MAG "Titan_AT"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsCSAT {
 	// Primary
@@ -34,6 +35,9 @@ class kekoWeaponsCSAT {
 	class keko_W_A3_KATIBA_GL: keko_W_A3_KATIBA	{
 		cfgName = "arifle_Katiba_GL_F";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_A3_KATIBA_GL_HUNTIR: keko_W_A3_KATIBA_GL	{
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 	class keko_W_A3_DMR: kekoPrimaryWeapon {
 		cfgName = "srifle_DMR_01_DMS_BI_F";

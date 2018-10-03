@@ -19,6 +19,7 @@
 #define AT_MAG "rhs_fgm148_magazine_AT"
 #define AA_MAG "rhs_fim92_mag"
 #define UGL_MAG "rhs_mag_M441_HE"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsUSArmy {
 	// Primary
@@ -30,10 +31,12 @@ class kekoWeaponsUSArmy {
 	};
 
 	// Grenadier
-	class keko_W_M4_GL: keko_W_M4
-	{
+	class keko_W_M4_GL: keko_W_M4 {
 		cfgName = "rhs_weap_m4_m320";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_M4_GL_HUNTIR: keko_W_M4_GL {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 
 	// Marksman
