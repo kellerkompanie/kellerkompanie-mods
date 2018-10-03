@@ -43,7 +43,7 @@ class CfgVehicles {
         icon               = QPATHTOF(ui\icon_logistics.paa);
         curatorCanAttach   = 1;
     };
-    class GVAR(moduleAddLogisticsMenu3den): Module_F {
+    class GVAR(moduleAddLogisticsMenu3den): GVAR(moduleBase3den) {
         displayName        = "Add Logistics Menu";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleAddLogisticsMenu3den);
@@ -117,7 +117,7 @@ class CfgVehicles {
         displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleCustomLogistics3den);
-        icon = QPATHTOF(ui\icon_crate.paa);
+        icon 			   = QPATHTOF(ui\icon_crate.paa);
     };
 	class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
