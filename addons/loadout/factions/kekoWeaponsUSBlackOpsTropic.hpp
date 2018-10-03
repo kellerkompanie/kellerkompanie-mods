@@ -32,6 +32,7 @@
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
 #define GUSTAV_MAG "MRAWS_HEAT_F"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsUSBlackOpsTropic {
 	// Primary
@@ -87,26 +88,34 @@ class kekoWeaponsUSBlackOpsTropic {
 
 
 	// Grenadier
-	class keko_W_A3_MX_GL_TROPIC: keko_W_A3_MX_TROPIC
-	{
+	class keko_W_A3_MX_GL_TROPIC: keko_W_A3_MX_TROPIC {
 		cfgName = "arifle_MX_GL_khk_F";
 		uglMagazines[] = {UGL_MAG};
 	};
-	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL_TROPIC
-	{
+	class keko_W_A3_MX_GL_TROPIC_HUNTIR: keko_W_A3_MX_GL_TROPIC {
+		uglMagazines[] = {HUNTIR_MAG};
+	};
+	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL_TROPIC {
 		items[] = {"acc_pointer_IR","optic_Hamr"};
 		cfgName = "arifle_MX_GL_Black_F";
 	};
+	class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
+		uglMagazines[] = {HUNTIR_MAG};
+	};
 
-	class keko_W_A3_HK416_GL: keko_W_A3_HK416
-	{
+	class keko_W_A3_HK416_GL: keko_W_A3_HK416 {
 		cfgName = "arifle_SPAR_01_GL_blk_F";
 		uglMagazines[] = {UGL_MAG};
 	};
-	class keko_W_A3_HK416_GL_TROPIC: keko_W_A3_HK416_TROPIC
-	{
+	class keko_W_A3_HK416_GL_HUNTIR: keko_W_A3_HK416_GL {
+		uglMagazines[] = {HUNTIR_MAG};
+	};
+	class keko_W_A3_HK416_GL_TROPIC: keko_W_A3_HK416_TROPIC {
 		cfgName = "arifle_SPAR_01_GL_khk_F";
 		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_A3_HK416_GL_TROPIC_HUNTIR: keko_W_A3_HK416_GL_TROPIC {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 
 

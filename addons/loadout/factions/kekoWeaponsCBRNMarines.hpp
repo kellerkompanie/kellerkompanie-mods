@@ -21,6 +21,7 @@
 #define AT_MAG "Titan_AT"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsCBRNMarines {
 	// Primary

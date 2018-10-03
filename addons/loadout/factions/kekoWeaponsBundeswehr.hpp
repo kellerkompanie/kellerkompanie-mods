@@ -24,6 +24,7 @@
 #define AT_MAG "BWA3_Pzf3_IT"
 #define AA_MAG "BWA3_Fliegerfaust_Mag"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsBundeswehr {
 	// Primary

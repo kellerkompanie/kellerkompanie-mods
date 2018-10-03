@@ -19,6 +19,7 @@
 #define AT_MAG "Titan_AT"
 #define AA_MAG "Titan_AA"
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
+#define HUNTIR_MAG "ACE_HuntIR_M203"
 
 class kekoWeaponsNato {
 	// Primary
@@ -45,14 +46,18 @@ class kekoWeaponsNato {
 	};
 
 	// Grenadier
-	class keko_W_A3_MX_GL: keko_W_A3_MX
-	{
+	class keko_W_A3_MX_GL: keko_W_A3_MX	{
 		cfgName = "arifle_MX_GL_F";
 		uglMagazines[] = {UGL_MAG};
 	};
-	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL
-	{
+	class keko_W_A3_MX_GL_HUNTIR: keko_W_A3_MX_GL	{
+		uglMagazines[] = {HUNTIR_MAG};
+	};
+	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL {
 		cfgName = "arifle_MX_GL_Black_F";
+	};
+	class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
+		uglMagazines[] = {HUNTIR_MAG};
 	};
 
 	// Marksman

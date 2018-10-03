@@ -41,7 +41,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 
 	// define all weapons and mags
 	#include "kekoWeaponsMarines.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
@@ -69,7 +69,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
 			"rhsusf_lwh_helmet_marpatd",
 			"rhsusf_lwh_helmet_marpatd_ess",
-			"rhsusf_lwh_helmet_marpatd_headset"};	
+			"rhsusf_lwh_helmet_marpatd_headset"};
 
 		primary[] = {
 			keko_W_RHS_M16A4};
@@ -84,7 +84,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 
 	class kekoLead: kekoSoldierMarine_Desert	{
 		name = "Lead";
-		rank = "LIEUTENANT";		
+		rank = "LIEUTENANT";
 		vest[] = {"rhsusf_spc_light"};
 		helmet[] = {"rhs_8point_marpatd"};
 		backpack[] = {"tfw_ilbe_d"};
@@ -93,13 +93,13 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_RHS_M4A1_GL};
-	}; 
+			keko_W_RHS_M4A1_GL_HUNTIR};
+	};
 
 	// TODO replace headgear with boonie e.g.
 	class kekoCommand: kekoLead	{
 		name = "Command";
-		rank = "COLONEL";		
+		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
 		helmet[] = {"rhs_booniehat2_marpatd"};
@@ -109,7 +109,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_RHS_M4A1_GL};
+			keko_W_RHS_M4A1_GL_HUNTIR};
 		vest[] = {"rhsusf_spc_squadleader"};
 		backpack[] = {"tfw_ilbe_d"};
 		backpackInventory[] = {
@@ -125,7 +125,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	class kekoFTL: kekoSoldierMarine_Desert	{
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -153,7 +153,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	};
 
 	class kekoRifleman: kekoSoldierMarine_Desert	{
-		name = "Rifleman";		
+		name = "Rifleman";
 	};
 
 	class kekoRiflemanAT: kekoSoldierMarine_Desert	{
@@ -170,7 +170,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 			{9, UGL_MAG},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_RHS_M16A4_GL};		
+			keko_W_RHS_M16A4_GL};
 	};
 
 	class kekoLMG: kekoSoldierMarine_Desert {
@@ -190,7 +190,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierMarine_Desert {
@@ -209,7 +209,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
 		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierMarine_Desert {
@@ -287,14 +287,14 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	};
 
 	class kekoSpotter: kekoSniper {
-		name = "Spotter";	
+		name = "Spotter";
 		vestInventory[] = {
 			{1,"SmokeShell"},
 			{1,"SmokeShellGreen"},
 			{2,"11Rnd_45ACP_Mag"},
 			{7,PRIMARY_MAG},
 			{3,PRIMARY_MAG_TRACER},
-			{1,GRENADE}};	
+			{1,GRENADE}};
 		primary[] = {
 			keko_W_RHS_M16A4};
 	};
@@ -356,7 +356,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	class kekoJTAC: kekoGrenadier {
 		name = "JTAC";
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M16A4_GL_HUNTIR};
 		vestInventory[] = {
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
@@ -377,7 +377,7 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	class kekoUAVOperator: kekoSoldierLight	{
 		name = "UAV Operator";
 		primary[] = {
-			keko_W_RHS_M16A4_GL};
+			keko_W_RHS_M16A4_GL_HUNTIR};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
 			{2,PRIMARY_MAG},

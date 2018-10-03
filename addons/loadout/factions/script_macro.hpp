@@ -104,6 +104,9 @@
 #ifdef GUSTAV_MAG
 	#undef GUSTAV_MAG
 #endif
+#ifdef HUNTIR_MAG
+	#undef UGL_MAG
+#endif
 
 
 
