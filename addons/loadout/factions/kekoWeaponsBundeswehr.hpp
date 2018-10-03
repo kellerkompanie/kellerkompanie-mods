@@ -31,7 +31,7 @@ class kekoWeaponsBundeswehr {
 	class keko_W_G36: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G36A2";
-		items[] = {"bwa3_acc_varioray_irlaser"};
+		items[] = {"bwa3_acc_varioray_irlaser","bwa3_optic_rsas"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 	};
 	class keko_W_G36_D: keko_W_G36
@@ -91,6 +91,13 @@ class kekoWeaponsBundeswehr {
 	{
 		cfgName = "BWA3_MG3";
 		magazines[] = {PRIMARY_MAG_MMG};
+	};
+
+	class keko_W_MG5: kekoPrimaryWeapon
+	{
+		cfgName = "BWA3_MG5";
+		items[] = {"BWA3_120Rnd_762x51_Tracer_soft"};
+		magazines[] = {PRIMARY_MAG_LMG};
 	};
 
 	// Sniper
