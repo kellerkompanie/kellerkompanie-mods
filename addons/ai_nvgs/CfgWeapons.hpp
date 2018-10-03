@@ -1,6 +1,6 @@
 class CfgWeapons {
     class NVGoggles;
-    class NVGoggles_AI : NVGoggles {
+    class GVAR(NVGoggles_AI) : NVGoggles {
         author = "Schwaggot";
         descriptionShort = "Night Vision Goggles - AI Only";
         displayName = "NV Goggles (AI Only)";
