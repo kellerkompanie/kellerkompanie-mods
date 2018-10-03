@@ -25,7 +25,7 @@ if( _role isEqualTo "kekoEOD" ) then {
 	player setVariable ["ACE_isEngineer", 2, true];
 };
 
-if (isNil GVAR(customLoadouts)) then {
+if (isNil QGVAR(customLoadouts)) then {
 	GVAR(customLoadouts) = [];
 };
 
