@@ -9,26 +9,26 @@ PREP_RECOMPILE_END;
 
 TRACE_3("preInit", missionName, missionVersion, worldName);
 
-_ret = "extDB3" callExtension format [ "0:keko_logging:onMissionLoad:%1:%2:%3", missionName, missionVersion, worldName ];
+private _ret = "extDB3" callExtension format [ "0:keko_logging:onMissionLoad:%1:%2:%3", missionName, missionVersion, worldName ];
 TRACE_1("", _ret);
 
-_handle = [] spawn {
+private _handle = [] spawn {
 	waitUntil { time > 0; };
 
 	_ret = "extDB3" callExtension format [ "0:keko_logging:onMissionStart:%1:%2:%3", missionName, missionVersion, worldName ];
 	TRACE_1("", _ret);
 };
 
-_endHandler = addMissionEventHandler ["Ended",{
+private _endHandler = addMissionEventHandler ["Ended",{
 	_ret = "extDB3" callExtension format [ "0:keko_logging:onMissionEnd:%1:%2:%3", missionName, missionVersion, worldName ];
 	TRACE_1("", _ret);
 }];
 
-_conHandler = addMissionEventHandler ["PlayerConnected",
+private _conHandler = addMissionEventHandler ["PlayerConnected",
 {
 	TRACE_1("onPlayerConnected", _this);
 
-	params ["_id,", "_uid", "_name", "_jip", "_owner"];
+	params ["", "_uid", "_name", "_jip", ""];
 
 	if(_name == "__SERVER__" ) exitWith {};
 
@@ -36,11 +36,11 @@ _conHandler = addMissionEventHandler ["PlayerConnected",
 	TRACE_1("", _ret);
 }];
 
-_disconHandler = addMissionEventHandler ["PlayerDisconnected",
+private _disconHandler = addMissionEventHandler ["PlayerDisconnected",
 {
 	TRACE_1("onPlayerDisconnected", _this);
 
-	params ["_id,", "_uid", "_name", "_jip", "_owner"];
+	params ["", "_uid", "_name", "_jip", ""];
 
 	if(_name == "__SERVER__" ) exitWith {};
 
