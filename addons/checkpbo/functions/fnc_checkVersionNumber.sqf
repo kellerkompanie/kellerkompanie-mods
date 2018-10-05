@@ -1,8 +1,7 @@
-// by commy2
+// original version by commy2 from ACE3
 #include "script_component.hpp"
 
 private _files = [];
-
 {
     if (_x find "a3_" != 0 && {_x find "keko_" != 0} && {!(toLower _x in (missionNamespace getVariable ["keko_Version_Whitelist", []]))}) then {
         _files pushBack _x;
