@@ -1,5 +1,4 @@
 PREP(3denAttributesChanged);
-PREP(checkPBOs);
 PREP(createZeus);
 PREP(fullHeal);
 PREP(lockDoors);
