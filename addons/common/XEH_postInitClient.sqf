@@ -6,7 +6,7 @@ player setVariable ["BIS_noCoreConversations", true];
 enableRadio false;
 
 //failsafe for missing curator interface:
-if ( player isKindOf "keko_blufor_command" || player isKindOf "keko_opfor_command" || player isKindOf "keko_indfor_command" ) then {
+if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
 	TRACE_1("enabling Zeus on player", name player);
 	if ( isNull (getAssignedCuratorLogic player) ) then {
 		TRACE_1("no assigned curator module found, creating zeus for player", name player);
