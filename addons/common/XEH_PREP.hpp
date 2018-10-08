@@ -1,4 +1,5 @@
 PREP(3denAttributesChanged);
+PREP(addStatisticValues);
 PREP(createZeus);
 PREP(fullHeal);
 PREP(lockDoors);
