@@ -24,3 +24,37 @@ if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf Q
 		}];
 	};
 };
+
+
+
+// event handlers for the statistics at mission end
+GVAR(bandagesApplied) = 0;
+GVAR(pulseChecked) = 0;
+GVAR(cprPerformed) = 0;
+GVAR(fragsOut) = 0;
+
+["ace_treatmentSucceded", {
+	params ["_medic", "_patient", "_bodyPart", "_className"];
+
+	if (_className in ["FieldDressing", "PackingBandage", "ElasticBandage", "QuikClot"]) exitWith {
+		GVAR(bandagesApplied) = GVAR(bandagesApplied) + 1;
+	};
+
+	if (_className isEqualTo "CheckPulse") exitWith {
+		GVAR(pulseChecked) = GVAR(pulseChecked) + 1;
+	};
+
+	if (_className isEqualTo "CPR") exitWith {
+		GVAR(cprPerformed) = GVAR(cprPerformed) + 1;
+	};
+}] call CBA_fnc_addEventHandler;
+
+["ace_throwableThrown", {
+	params ["_unit", "_frag"];
+
+	if (isPlayer _unit) then {
+		if ((typeOf _frag) isEqualTo "GrenadeHand" || (typeOf _frag) isEqualTo "mini_Grenade") then {
+			GVAR(fragsOut) = GVAR(fragsOut) + 1;
+		};
+	};
+}] call CBA_fnc_addEventHandler;
