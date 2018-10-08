@@ -221,7 +221,7 @@ class CfgVehicles {
 		displayName = "Flag (Redneck)";
 
 		class EventHandlers {
-			init = QUOTE((_this select 0) setFlagTexture QQPATHTOF(ui\redneck_flag.paa));
+			init = QUOTE((_this select 0) setFlagTexture 'PATHTOF(ui\redneck_flag.paa)');
 		};
 	};
 
