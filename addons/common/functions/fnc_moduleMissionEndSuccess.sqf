@@ -15,6 +15,7 @@ if (isServer) then {
 		publicVariable QGVAR(fragsOut);
 	}, [], 8] call CBA_fnc_waitAndExecute;
 } else {
+	disableUserInput true;
 	[GVAR(bandagesApplied), GVAR(pulseChecked), GVAR(cprPerformed), GVAR(fragsOut)] remoteExec [QFUNC(addStatisticValues), 2, false];
 };
 
