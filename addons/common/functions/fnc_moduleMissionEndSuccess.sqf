@@ -3,7 +3,6 @@
 params ["_logic"];
 
 if (isServer) then {
-	publicVariable QGVAR(shotsFired);
 	publicVariable QGVAR(aiKilled);
 	publicVariable QGVAR(peoplePunched);
 	publicVariable QGVAR(civsKilled);
@@ -13,10 +12,11 @@ if (isServer) then {
 		publicVariable QGVAR(bandagesApplied);
 		publicVariable QGVAR(cprPerformed);
 		publicVariable QGVAR(fragsOut);
+		publicVariable QGVAR(shotsFired);
 	}, [], 8] call CBA_fnc_waitAndExecute;
 } else {
 	disableUserInput true;
-	[GVAR(bandagesApplied), GVAR(pulseChecked), GVAR(cprPerformed), GVAR(fragsOut)] remoteExec [QFUNC(addStatisticValues), 2, false];
+	[GVAR(bandagesApplied), GVAR(pulseChecked), GVAR(cprPerformed), GVAR(fragsOut), GVAR(shotsFired)] remoteExec [QFUNC(addStatisticValues), 2, false];
 };
 
 [] spawn {

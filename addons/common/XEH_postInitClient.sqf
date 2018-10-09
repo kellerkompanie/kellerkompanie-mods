@@ -32,6 +32,7 @@ GVAR(bandagesApplied) = 0;
 GVAR(pulseChecked) = 0;
 GVAR(cprPerformed) = 0;
 GVAR(fragsOut) = 0;
+GVAR(shotsFired) = 0;
 
 ["ace_treatmentSucceded", {
 	params ["_medic", "_patient", "_bodyPart", "_className"];
@@ -58,3 +59,15 @@ GVAR(fragsOut) = 0;
 		};
 	};
 }] call CBA_fnc_addEventHandler;
+
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "_muzzle"];
+
+	if (_muzzle isEqualTo "HandGrenadeMuzzle" || _muzzle isEqualTo "MiniGrenadeMuzzle") then {
+		GVAR(fragsOut) = GVAR(fragsOut) + 1;
+	};
+
+	if (_weapon isEqualTo primaryWeapon _unit) then {
+		GVAR(shotsFired) = GVAR(shotsFired) + 1;
+	};
+}];
