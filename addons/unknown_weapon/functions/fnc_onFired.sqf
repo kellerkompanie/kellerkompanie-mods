@@ -17,8 +17,12 @@ if(isNil "_weaponData") then {
 		* 1: slowdownFactor <NUMBER>
 		* 2: jamChance <NUMBER>
 		*/
-		_weaponData set[0,(_weaponData select 0 + GVAR(dispersion_add))];
-		_weaponData set[2,(_weaponData select 2 + (GVAR(jamchance_add) / 100))];
+		diag_log text format ["_weaponData %1", _weaponData ];
+		diag_log text format ["_weapon %1", _weapon ];
+		diag_log text format ["dispersion_add %1", GVAR(dispersion_add) ];
+
+		_weaponData set[0,((_weaponData select 0) + GVAR(dispersion_add))];
+		_weaponData set[2,((_weaponData select 2) + (GVAR(jamchance_add) / 100))];
 		ace_overheating_cacheWeaponData setVariable [_weapon, _weaponData];
 	};
 };

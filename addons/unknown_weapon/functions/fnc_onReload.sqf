@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_unit", "_weapon"];
+params ["", "_weapon", "_newMagazine"];
 
 if(!(primaryWeapon ace_player == _weapon)) exitWith {};
 if(isNil QGVAR(whitelist)) exitWith {};
