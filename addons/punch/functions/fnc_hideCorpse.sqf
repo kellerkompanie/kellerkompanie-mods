@@ -15,7 +15,7 @@ if (!GVAR(enabled)) exitWith {
 
 	[_player, "AinvPknlMstpSnonWnonDnon_medic4"] remoteExec ["playMove", _player];
 
-	sleep 17;
+	sleep 15;
 
 	[_target] remoteExec ["deleteVehicle", _target];
 };
