@@ -16,9 +16,12 @@ if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
 	[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 
+	[GVAR(onPunched), [_player, _target]] call CBA_fnc_globalEvent;
+
 	if (isPlayer _target) then {
     	private _msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
 		_msg remoteExec ["systemChat", 0, false];
 		_msg remoteExec ["diag_log", 2, false];
+
 	};
 };
