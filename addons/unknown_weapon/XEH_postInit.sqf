@@ -52,8 +52,8 @@ if(hasInterface) then {
 	}];
 
 	player addEventHandler["Reloaded", {
-		params ["_unit", "_weapon"];
-		[_unit, _weapon] call FUNC(onReload);
+		params ["_unit", "_weapon", "", "_newMagazine", ""];
+		[_unit, _weapon, _newMagazine] call FUNC(onReload);
 	}];
 
 	["ace_weaponJammed", {
