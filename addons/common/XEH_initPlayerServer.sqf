@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if !(isServer) exitWith {};
+
 params ["_unit"];
 
 if(isPlayer _unit) then {

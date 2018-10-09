@@ -14,7 +14,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
-            serverInit = QUOTE(_this call COMPILE_FILE(XEH_initPlayerServer));
+            init = QUOTE(_this call COMPILE_FILE(XEH_initPlayerServer));
         };
     };
 };
