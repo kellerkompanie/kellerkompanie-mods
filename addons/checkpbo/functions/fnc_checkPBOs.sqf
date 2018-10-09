@@ -8,12 +8,12 @@
 
 private _whitelist = ace_common_checkPBOsWhitelist;
 
-TRACE_1("params", _whitelist);
+//TRACE_1("params", _whitelist);
 
 //lowercase and convert whiteList String into array of strings:
 _whitelist = toLower _whitelist;
 _whitelist = _whitelist splitString "[,""']";
-TRACE_1("Array",_whitelist);
+//TRACE_1("Array",_whitelist);
 
 keko_Version_Whitelist = _whitelist;
 
