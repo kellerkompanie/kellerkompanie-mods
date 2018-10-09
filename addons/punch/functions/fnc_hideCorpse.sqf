@@ -9,7 +9,7 @@ if (!GVAR(enabled)) exitWith {
 	private _player = _this select 0;
 	private _target = _this select 1;
 
-	[GVAR(onCorpseHidden), [_player, _target]] call CBA_fnc_globalEvent;
+	[QGVAR(onCorpseHidden), [_player, _target]] call CBA_fnc_globalEvent;
 
 	[_player, QGVAR(ShovelSound)] remoteExec ["say3D", 0, false];
 
