@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
     	name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleFullHeal),
+            QGVAR(moduleLimitWounds),
             QGVAR(moduleAssignEngineer),
             QGVAR(moduleAssignRepairSpecialist),
             QGVAR(moduleAssignMedic),

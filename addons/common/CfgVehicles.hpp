@@ -196,10 +196,10 @@ class CfgVehicles {
 		icon = QPATHTOF(ui\icon_destination.paa);
 		curatorCanAttach   = 1;
 	};
-	class GVAR(moduleFullHeal): GVAR(moduleBase) {
-		displayName        = "Full Heal";
+	class GVAR(moduleLimitWounds): GVAR(moduleBase) {
+		displayName        = "Limit Wounds";
 		category           = QGVAR(Default);
-		function           = QFUNC(moduleFullHeal);
+		function           = QFUNC(moduleLimitWounds);
 		icon = QPATHTOF(ui\icon_full_heal.paa);
 		curatorCanAttach   = 1;
 	};
