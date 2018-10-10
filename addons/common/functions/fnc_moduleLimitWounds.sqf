@@ -23,7 +23,7 @@ switch (true) do {
 			_target call FUNC(applyTourniquets);
 		};
 
-		while {_numOpenWounds > 6} do {
+		while {_numOpenWounds > 4} do {
 			_target call FUNC(bandageRandomWound);
 			_numOpenWounds = _target call FUNC(getNumOpenWounds);
 		};
