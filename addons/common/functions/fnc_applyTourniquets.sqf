@@ -49,17 +49,17 @@ private _rightLegWounds = 0;
 
 if(_leftArmWounds > 0) then {
 	INFO("applying tourniquet to left arm");
-	[_unit, _unit, "hand_l", "Tourniquet"] call ace_medical_fnc_treatmentAdvanced_bandage;
+	[_unit, "", "hand_l"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
 };
 if(_rightArmWounds > 0) then {
 	INFO("applying tourniquet to right arm");
-	[_unit, _unit, "hand_r", "Tourniquet"] call ace_medical_fnc_treatmentAdvanced_bandage;
+	[_unit, "", "hand_r"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
 };
 if(_leftLegWounds > 0) then {
 	INFO("applying tourniquet to left leg");
-	[_unit, _unit, "leg_l", "Tourniquet"] call ace_medical_fnc_treatmentAdvanced_bandage;
+	[_unit, "", "leg_l"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
 };
 if(_rightLegWounds > 0) then {
 	INFO("applying tourniquet to right leg");
-	[_unit, _unit, "leg_r", "Tourniquet"] call ace_medical_fnc_treatmentAdvanced_bandage;
+	[_unit, "", "leg_r"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
 };
