@@ -256,4 +256,13 @@ class CfgVehicles {
 		function           = QFUNC(moduleMissionEndFail);
 		icon = QPATHTOF(ui\icon_fail.paa);
 	};
+	class GVAR(moduleLightning): GVAR(moduleBase)	{
+		displayName        = "Lightning without damage";
+		category           = QGVAR(Default);
+		function           = QFUNC(moduleLightning);
+		icon="\a3\Modules_F_Curator\Data\iconLightning_ca.paa";
+		portrait="\a3\Modules_F_Curator\Data\portraitLightning_ca.paa";
+		isTriggerActivated=1;
+		curatorCanAttach=1;
+	};
 };

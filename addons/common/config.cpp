@@ -13,6 +13,7 @@ class CfgPatches {
             QGVAR(moduleRespawnPosition3den),
             QGVAR(moduleInitMission),
             QGVAR(moduleInitMission3den),
+			QGVAR(moduleLightning),
             QGVAR(moduleRemoveAllActions),
             QGVAR(moduleLockDoors),
             QGVAR(moduleMissionSuccess),
