@@ -12,6 +12,7 @@ PREP(moduleAssignMedic);
 PREP(moduleAssignRepairSpecialist);
 PREP(moduleFullHeal);
 PREP(moduleInitMission3den);
+PREP(moduleLightning);
 PREP(moduleLockDoors);
 PREP(moduleMissionEndFail);
 PREP(moduleMissionEndSuccess);
