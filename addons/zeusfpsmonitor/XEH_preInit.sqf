@@ -19,19 +19,19 @@ Parameters:
 */
 
 [
-	"keko_settings_zeusfpsmonitor_enabled", // key/reference variable
+	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Zeus FPS Monitor", "Enable/Disable Zeus FPS Monitor"], // name and tooltip
 	"Kellerkompanie Zeus FPS Monitor", // category
 	[
-		[1,0], // values
+		[true,false], // values
 		["Enabled","Disabled"], // names
 		0 // default index
 	]
 ] call cba_settings_fnc_init;
 
 [
-	"keko_settings_zeusfpsmonitor_updateInterval", // key/reference variable
+	QGVAR(updateInterval), // key/reference variable
 	"SLIDER", // type of setting
 	["Update interval", "Set the FPS update interval in seconds"], // name and tooltip
 	"Kellerkompanie Zeus FPS Monitor", // category
