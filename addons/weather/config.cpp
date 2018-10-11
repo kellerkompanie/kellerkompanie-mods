@@ -6,6 +6,7 @@ class CfgPatches {
         units[] = {
         	QGVAR(moduleSnowStorm),
           	QGVAR(moduleDustStorm),
+			QGVAR(moduleTornado),
           	QGVAR(moduleDisableStorm)
         };
         requiredVersion = REQUIRED_VERSION;

@@ -45,6 +45,19 @@ class CfgVehicles {
         isDisposable       = 0;
         icon = QPATHTOF(ui\icon_weather_on.paa);
     };
+	class GVAR(moduleTornado): Module_F
+    {
+        scope              = 1;
+        scopeCurator       = 2;
+        displayName        = "Tornado";
+        category           = GVAR(Weather);
+        function           = QFUNC(moduleTornado);
+        functionPriority   = 1;
+        isGlobal           = 1;
+        isTriggerActivated = 1;
+        isDisposable       = 0;
+        icon = QPATHTOF(ui\icon_weather_on.paa);
+    };
     class GVAR(moduleDisableStorm): Module_F
     {
         scope              = 1;

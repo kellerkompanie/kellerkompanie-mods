@@ -188,29 +188,42 @@ class CfgSounds
 	};
 
 
-  class uragan_1
-  {
-    name = "uragan_1";
-    sound[] = {QPATHTOF(sound\uragan_1.ogg), db+5, 1};
-    titles[] = {1, ""};
-  };
+	class uragan_1
+	{
+		name = "uragan_1";
+		sound[] = {QPATHTOF(sound\uragan_1.ogg), db+5, 1};
+		titles[] = {1, ""};
+	};
 
-  class rafala_4_dr
-  {
-    name = "rafala_4_dr";
-    sound[] = {QPATHTOF(sound\rafala_4_dr.ogg), db+1, 1};
-    titles[] = {1, ""};
-  };
-  class rafala_5_st
-  {
-    name = "rafala_5_st";
-    sound[] = {QPATHTOF(sound\rafala_5_st.ogg), db+1, 1};
-    titles[] = {1, ""};
-  };
-  class sandstorm
-  {
-    name = "sandstorm";
-    sound[] = {QPATHTOF(sound\sandstorm.ogg), db+10, 1};
-    titles[] = {1, ""};
-  };
+	class rafala_4_dr
+	{
+		name = "rafala_4_dr";
+		sound[] = {QPATHTOF(sound\rafala_4_dr.ogg), db+1, 1};
+		titles[] = {1, ""};
+	};
+	class rafala_5_st
+	{
+		name = "rafala_5_st";
+		sound[] = {QPATHTOF(sound\rafala_5_st.ogg), db+1, 1};
+		titles[] = {1, ""};
+	};
+	class sandstorm
+	{
+		name = "sandstorm";
+		sound[] = {QPATHTOF(sound\sandstorm.ogg), db+10, 1};
+		titles[] = {1, ""};
+	};
+
+	class tornado_uragan_1
+	{
+		name = "tornado_uragan_1";
+		sound[] = {QPATHTOF(sound\tornado_uragan_1.ogg), db+10, 1};
+		titles[] = {1, ""};
+	};
+	class tornado_uragan_end
+	{
+		name = "tornado_uragan_end";
+		sound[] = {QPATHTOF(sound\tornado_uragan_end.ogg), db+15, 1};
+		titles[] = {1, ""};
+	};
 };
