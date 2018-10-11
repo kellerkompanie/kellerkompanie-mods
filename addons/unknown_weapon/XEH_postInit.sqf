@@ -35,10 +35,6 @@ if(isServer) then {
 	publicVariable QGVAR(whitelist);
 };
 
-waitUntil{!isNil QGVAR(whitelist)};
-
-TRACE_1("whitelist after init", GVAR(whitelist));
-
 if(hasInterface) then {
 	INFO("running client side functions");
 
