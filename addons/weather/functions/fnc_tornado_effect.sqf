@@ -55,11 +55,13 @@ _palarie setParticleRandom [5,[20,20,1],[400,400,5],50,2,[0,0,0,0.1],0,0];
 _palarie setParticleParams [["\A3\data_f\cl_basic", 1, 0, 1],"","Billboard",1,16,[0,0,150],[0,0,250],80,11.5,7.9,0.1,[10,20,35],[[0,0,0,0.5],[0,0,0,0.5],[0,0,0,0]],[0.08],0,0,"", "", _tornadamid];
 _palarie setDropInterval 0.002;
 
-While {tornadosino != "goof"} do {
-	effect_screen = ppEffectCreate ["FilmGrain", 2000];
-	effect_screen ppEffectEnable true;
-	effect_screen ppEffectAdjust [0.1,0.1,0.5,0.1,0.1,true];
-	effect_screen ppEffectCommit 0;sleep 0.5
+private _effect_screen = "";
+While { tornadosino != "goof" } do {
+	_effect_screen = ppEffectCreate ["FilmGrain", 2000];
+	_effect_screen ppEffectEnable true;
+	_effect_screen ppEffectAdjust [0.1,0.1,0.5,0.1,0.1,true];
+	_effect_screen ppEffectCommit 0;
+	sleep 0.5;
 };
 
 _source_end_part = "#particlesource" createVehicle (getpos _tsource);
@@ -78,6 +80,6 @@ sleep 17;
 
 deleteVehicle _source_end_part;
 
-effect_screen ppEffectEnable false;
-ppEffectDestroy effect_screen;
+_effect_screen ppEffectEnable false;
+ppEffectDestroy _effect_screen;
 enableCamShake false;

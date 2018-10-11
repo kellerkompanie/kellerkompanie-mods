@@ -21,4 +21,6 @@ _tornadoStartMarker setMarkerAlpha 0;
 
 	["tornado_start","tornado_end"] remoteExec [QFUNC(tornado), 2];
 
-}, "Tornado Module", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call ace_zeus_fnc_getModuleDestination;
+	_logic remoteExec ["deleteVehicle", _logic];
+
+}, "Tornado Destination", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call ace_zeus_fnc_getModuleDestination;
