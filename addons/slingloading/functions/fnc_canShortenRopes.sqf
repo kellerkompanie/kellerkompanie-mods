@@ -2,8 +2,6 @@
 
 params ["_vehicle"];
 
-if(player distance _vehicle > 10) exitWith { false };
-
 if!([_vehicle] call FUNC(isSupportedVehicle)) exitWith { false };
 
 private _existingRopes = _vehicle getVariable [QGVAR(Ropes),[]];

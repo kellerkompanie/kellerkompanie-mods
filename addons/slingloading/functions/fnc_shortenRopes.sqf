@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_vehicle","",["_ropeIndex",0]];
+params ["_vehicle",["_ropeIndex",0]];
 
 if(local _vehicle) then {
 	private _existingRopes = [_vehicle,_ropeIndex] call FUNC(getRopes);

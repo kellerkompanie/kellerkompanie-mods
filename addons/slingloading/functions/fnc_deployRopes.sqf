@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-params ["_vehicle","_player",["_cargoCount",1]];
+params ["_player", "_vehicle", ["_cargoCount",1]];
+
+INFO_3("deployRopes _player=%1 _vehicle=%2 _cargoCount=%3",_player,_vehicle,_cargoCount);
 
 if(local _vehicle) then {
 	private _slingLoadPoints = [_vehicle] call FUNC(getSlingLoadPoints);
@@ -27,7 +29,7 @@ if(local _vehicle) then {
 		_vehicle setVariable [QGVAR(Cargo),_cargo,true];
 
 		for "_i" from 0 to (_cargoCount-1) do {
-			[_vehicle,_player,_i] call FUNC(deployRopesIndex);
+			[_vehicle,_i] call FUNC(deployRopesIndex);
 		};
 	} else {
 		"Vehicle already has cargo ropes deployed" remoteExec ["hint", _player];
