@@ -1,12 +1,11 @@
 #include "script_component.hpp"
 
-params ["_vehicle","_player",["_ropeIndex",0]];
+params ["_vehicle","",["_ropeIndex",0]];
 
 if(local _vehicle) then {
-	private ["_existingRopesAndCargo","_existingRopes","_existingCargo","_allRopes","_activeRopes"];
-	_existingRopesAndCargo = [_vehicle,_ropeIndex] call FUNC(getRopesAndCargo);
-	_existingRopes = _existingRopesAndCargo select 0;
-	_existingCargo = _existingRopesAndCargo select 1;
+	private _existingRopesAndCargo = [_vehicle,_ropeIndex] call FUNC(getRopesAndCargo);
+	private _existingRopes = _existingRopesAndCargo select 0;
+	private _existingCargo = _existingRopesAndCargo select 1;
 	if(isNull _existingCargo) then {
 		_this call FUNC(dropRopes);
 		{
@@ -22,14 +21,14 @@ if(local _vehicle) then {
 				ropeDestroy _rope;
 			};
 		} forEach _existingRopes;
-		_allRopes = _vehicle getVariable [QGVAR(Ropes),[]];
+		private _allRopes = _vehicle getVariable [QGVAR(Ropes),[]];
 		_allRopes set [_ropeIndex,[]];
 		_vehicle setVariable [QGVAR(Ropes),_allRopes,true];
 	};
-	_activeRopes = [_vehicle] call FUNC(getActiveRopes);
+	private _activeRopes = [_vehicle] call FUNC(getActiveRopes);
 	if(count _activeRopes == 0) then {
 		_vehicle setVariable [QGVAR(Ropes),nil,true];
 	};
 } else {
-	[_this,QFUNC(retractRopes),_vehicle,true] call FUNC(remoteExec);
+	_this remoteExecCall [QFUNC(retractRopes), _vehicle];
 };

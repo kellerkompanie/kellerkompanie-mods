@@ -1,14 +1,16 @@
 #include "script_component.hpp"
 
-private ["_vehicle","_canRetractRopes"];
+params ["_vehicle"];
+
 if(vehicle player == player) then {
 	_vehicle = cursorTarget;
 } else {
 	_vehicle = vehicle player;
 };
+
 if([_vehicle] call FUNC(canRetractRopes)) then {
-	private ["_activeRopes"];
-	_activeRopes = [_vehicle] call FUNC(getActiveRopesWithoutCargo);
+	private _activeRopes = [_vehicle] call FUNC(getActiveRopesWithoutCargo);
+
 	if(count _activeRopes > 1) then {
 		player setVariable [QGVAR(RetractRopesIndexVehicle), _vehicle];
 		["Retract Cargo Ropes",QFUNC(retractRopesIndexAction),_activeRopes] call FUNC(showSelectRopesMenu);

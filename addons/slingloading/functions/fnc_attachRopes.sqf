@@ -2,8 +2,8 @@
 
 params ["_cargo","_player"];
 
-_vehicleWithIndex = _player getVariable [QGVAR(RopesVehicle), [objNull,0]];
-_vehicle = _vehicleWithIndex select 0;
+private _vehicleWithIndex = _player getVariable [QGVAR(RopesVehicle), [objNull,0]];
+private _vehicle = _vehicleWithIndex select 0;
 
 if(!isNull _vehicle) then {
 	if(local _vehicle) then {
@@ -16,7 +16,7 @@ if(!isNull _vehicle) then {
 			_ropeLength = (ropeLength (_ropes select 0));
 			_objDistance = (_cargo distance _vehicle) + 2;
 			if( _objDistance > _ropeLength ) then {
-				[["The cargo ropes are too short. Move vehicle closer.", false],QFUNC(hint),_player] call FUNC(remoteExec);
+				"The cargo ropes are too short. Move vehicle closer." remoteExec ["hint", _player];
 			} else {
 				[_vehicle,_player] call FUNC(dropRopes);
 				[_cargo, _attachmentPoints select 0, [0,0,-1]] ropeAttachTo (_ropes select 0);
@@ -32,6 +32,6 @@ if(!isNull _vehicle) then {
 			};
 		};
 	} else {
-		[_this,QFUNC(attachRopes),_vehicle,true] call FUNC(remoteExec);
+		_this remoteExecCall [QFUNC(attachRopes), _vehicle];
 	};
 };

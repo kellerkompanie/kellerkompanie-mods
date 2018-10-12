@@ -1,11 +1,12 @@
 #include "script_component.hpp"
 
-params ["_vehicle","_player",["_ropeIndex",0]];
+params ["_vehicle","",["_ropeIndex",0]];
+
 if(local _vehicle) then {
-	private ["_existingRopes"];
-	_existingRopes = [_vehicle,_ropeIndex] call FUNC(getRopes);
+	private _existingRopes = [_vehicle,_ropeIndex] call FUNC(getRopes);
+
 	if(count _existingRopes > 0) then {
-		_ropeLength = ropeLength (_existingRopes select 0);
+		private _ropeLength = ropeLength (_existingRopes select 0);
 		if(_ropeLength <= 2 ) then {
 			_this call FUNC(releaseCargo);
 		} else {
@@ -19,5 +20,5 @@ if(local _vehicle) then {
 		};
 	};
 } else {
-	[_this,QFUNC(shortenRopes),_vehicle,true] call FUNC(remoteExec);
+	_this remoteExecCall [QFUNC(shortenRopes), _vehicle];
 };
