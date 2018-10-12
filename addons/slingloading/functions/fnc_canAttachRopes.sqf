@@ -1,9 +1,11 @@
 #include "script_component.hpp"
 
-params ["_vehicle","_cargo"];
+params ["_player","_target"];
 
-if(!isNull _vehicle && !isNull _cargo) then {
-	[_vehicle,_cargo] call FUNC(isSupportedCargo) && vehicle player == player && player distance _cargo < 10 && _vehicle != _cargo;
+private _vehicle = (_player getVariable [QGVAR(RopesVehicle), [objNull,0]]) select 0;
+
+if(!isNull _vehicle && !isNull _target) then {
+	[_vehicle,_target] call FUNC(isSupportedCargo) && vehicle _player == _player && _player distance _target < 10 && _vehicle != _target;
 } else {
 	false;
 };

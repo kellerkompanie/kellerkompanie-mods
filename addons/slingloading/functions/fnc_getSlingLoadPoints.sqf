@@ -16,7 +16,7 @@ private _slingLoadPointHeightOffset = 0;
 	if(_vehicle isKindOf (_x select 0)) then {
 		_slingLoadPointHeightOffset = (_x select 1);
 	};
-} forEach QGVAR(SlingLoadPointClassHeightOffset);
+} forEach GVAR(SlingLoadPointClassHeightOffset);
 
 private _slingLoadPoints = [];
 {
