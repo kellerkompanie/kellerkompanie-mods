@@ -4,9 +4,9 @@
 #define PREFIX keko
 
 #define MAJOR 2
-#define MINOR 0
-#define PATCHLVL 14
-#define BUILD 15
+#define MINOR 1
+#define PATCHLVL 0
+#define BUILD 16
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
