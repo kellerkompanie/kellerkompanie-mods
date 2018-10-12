@@ -9,7 +9,7 @@ if([_vehicle,_cargo] call FUNC(canAttachRopes)) then {
 
 	if!(missionNamespace getVariable [QGVAR(LockedVehiclesEnabled),false]) then {
 		if( locked _cargo > 1 ) then {
-			["Cannot attach cargo ropes to locked vehicle",false] call FUNC(hint);
+			hint "Cannot attach cargo ropes to locked vehicle";
 			_canBeAttached = false;
 		};
 	};

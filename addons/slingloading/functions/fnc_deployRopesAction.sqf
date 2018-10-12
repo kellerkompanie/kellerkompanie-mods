@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_vehicle","_canDeployRopes"];
+params ["_vehicle"];
 
 if(vehicle player == player) then {
 	_vehicle = cursorTarget;
@@ -10,18 +10,18 @@ if(vehicle player == player) then {
 
 if([_vehicle] call FUNC(canDeployRopes)) then {
 
-	_canDeployRopes = true;
+	private _canDeployRopes = true;
 
 	if!(missionNamespace getVariable [QGVAR(LockedVehiclesEnabled),false]) then {
 		if( locked _vehicle > 1 ) then {
-			["Cannot deploy cargo ropes from locked vehicle",false] call FUNC(hint);
+			hint "Cannot deploy cargo ropes from locked vehicle";
 			_canDeployRopes = false;
 		};
 	};
 
 	if(_canDeployRopes) then {
 
-		_inactiveRopes = [_vehicle] call FUNC(getInactiveRopes);
+		private _inactiveRopes = [_vehicle] call FUNC(getInactiveRopes);
 
 		if(count _inactiveRopes > 0) then {
 
@@ -34,7 +34,7 @@ if([_vehicle] call FUNC(canDeployRopes)) then {
 
 		} else {
 
-			_slingLoadPoints = [_vehicle] call FUNC(getSlingLoadPoints);
+			private _slingLoadPoints = [_vehicle] call FUNC(getSlingLoadPoints);
 			if(count _slingLoadPoints > 1) then {
 				player setVariable [QGVAR(DeployCountVehicle), _vehicle];
 				GVAR(DeployRopesCountMenu) = [

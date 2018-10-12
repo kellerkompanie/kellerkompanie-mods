@@ -2,10 +2,8 @@
 
 params ["_vehicle","_ropeIndex"];
 
-private ["_allRopes","_selectedRopes"];
-
-_selectedRopes = [];
-_allRopes = _vehicle getVariable [QGVAR(Ropes),[]];
+private _selectedRopes = [];
+private _allRopes = _vehicle getVariable [QGVAR(Ropes),[]];
 if(count _allRopes > _ropeIndex) then {
 	_selectedRopes = _allRopes select _ropeIndex;
 };

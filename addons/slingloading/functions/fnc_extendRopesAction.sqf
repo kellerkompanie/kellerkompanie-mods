@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_vehicle"];
+params ["_vehicle"];
 
 _vehicle = vehicle player;
 
