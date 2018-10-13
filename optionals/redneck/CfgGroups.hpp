@@ -111,7 +111,7 @@ class CfgGroups
 											};
 											class Unit3
 											{
-													 vehicle = QGVAR(blufor_at_asst);
+													 vehicle = QGVAR(blufor_grenadier2);
 													 rank = PRIVATE;
 													 position[] = {0,-9,0};
 		 											 side = 1;
@@ -568,7 +568,7 @@ class CfgGroups
 					};
 					class Unit3
 					{
-						vehicle = QGVAR(at_asst);
+						vehicle = QGVAR(opfor_grenadier2);
 						rank = PRIVATE;
 						position[] = {0,-9,0};
 					};
@@ -959,7 +959,7 @@ class CfgGroups
 					};
 					class Unit3
 					{
-						vehicle = QGVAR(at_asst);
+						vehicle = QGVAR(indfor_grenadier2);
 						rank = PRIVATE;
 						position[] = {0,-9,0};
 					};
