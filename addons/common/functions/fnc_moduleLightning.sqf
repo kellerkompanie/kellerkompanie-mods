@@ -15,7 +15,8 @@ if (_activated) then {
 	};
 
 	private _thunder = ["thunder_1", "thunder_2"] call BIS_fnc_selectRandom;
-	_thunder remoteExec ["playSound", [0,-2] select isDedicated];
+	//_thunder remoteExec ["playSound", [0,-2] select isDedicated];
+	playSound _thunder;
 
 	private _light = "#lightpoint" createvehiclelocal _pos;
 	_light setposatl [_pos select 0,_pos select 1,(_pos select 2) + 10];
