@@ -1,9 +1,11 @@
 #include "script_macro.hpp"
 
-#define SMOKE_WHITE "rhs_mag_rdg2_white"
-#define SMOKE_GREEN "rhs_mag_nspn_green"
-#define SMOKE_RED "rhs_mag_nspn_red"
+#define SMOKE_WHITE "rhssaf_mag_brd_m83_white"
+#define SMOKE_GREEN "rhssaf_mag_brd_m83_green"
+#define SMOKE_RED "rhssaf_mag_brd_m83_red"
 #define GRENADE "rhs_mag_rgn"
+#define GRENADE_2 "rhs_mag_rgo"
+#define FLASHBANG "rhs_mag_fakels"
 
 #define PRIMARY_MAG "rhs_30Rnd_545x39_7N22_AK"
 #define PRIMARY_MAG_TRACER "rhs_30Rnd_545x39_AK_plum_green"
@@ -14,10 +16,14 @@
 #define PRIMARY_MAG_LMG_TRACER "rhs_75Rnd_762x39mm_tracer"
 
 #define RAT_LAUNCHER "launch_MRAWS_green_rail_F"
+#define RAT_LAUNCHER_2 "rhs_weap_rpg7"
 #define AT_LAUNCHER "launch_O_Vorona_green_F"
 #define AA_LAUNCHER "rhs_weap_igla"
 
 #define RAT_MAG "MRAWS_HEAT_F"
+#define RAT_MAG_2 "rhs_rpg7_PG7V_mag"
+#define RAT_MAG_2_2 "rhs_rpg7_PG7VL_mag"
+#define RAT_MAG_2_3 "rhs_rpg7_PG7VR_mag"
 #define AT_MAG "Vorona_HEAT"
 #define AA_MAG "rhs_mag_9k38_rocket"
 #define UGL_MAG "rhs_VOG25"
@@ -95,12 +101,18 @@ class kekoWeaponsRussiaSpeznas {
     class keko_W_MAAWS: kekoLauncherWeapon
     {
         cfgName = RAT_LAUNCHER;
-        magazines[] = {AT_MAG};
+        magazines[] = {RAT_MAG};
+    };
+	class keko_W_RPG: kekoLauncherWeapon
+    {
+        cfgName = RAT_LAUNCHER_2;
+		items[] = {"rhs_acc_pgo7v3"};
+        magazines[] = {RAT_MAG_2};
     };
     class keko_W_Vorona: kekoLauncherWeapon
     {
         cfgName = AT_LAUNCHER;
-        magazines[] = {RAT_MAG};
+        magazines[] = {AT_MAG};
     };
     class keko_W_Igla: kekoLauncherWeapon
     {
@@ -114,6 +126,9 @@ class kekoWeaponsRussiaSpeznas {
     class keko_W_GRENADE {
         cfgName = GRENADE;
     };
+	class keko_W_GRENADE_2 {
+        cfgName = GRENADE_2;
+    };
     class keko_W_SMOKE_WHITE {
         cfgName = SMOKE_WHITE;
     };
@@ -122,5 +137,8 @@ class kekoWeaponsRussiaSpeznas {
     };
     class keko_W_SMOKE_RED {
         cfgName = SMOKE_RED;
+    };
+	class keko_W_FLASHBANG {
+        cfgName = FLASHBANG;
     };
 };
