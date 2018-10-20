@@ -1,0 +1,5 @@
+C:\Users\Schwaggot\Documents\Visual Studio 2013\Projects\ARMAExtCS\ARMAExtCS\bin\Release\ARMAExtCS.dll
+C:\Users\Schwaggot\Documents\Visual Studio 2013\Projects\ARMAExtCS\ARMAExtCS\bin\Release\ARMAExtCS.pdb
+C:\Users\Schwaggot\Documents\Visual Studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Release\ARMAExtCS.csprojResolveAssemblyReference.cache
+C:\Users\Schwaggot\Documents\Visual Studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Release\ARMAExtCS.dll
+C:\Users\Schwaggot\Documents\Visual Studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Release\ARMAExtCS.pdb
