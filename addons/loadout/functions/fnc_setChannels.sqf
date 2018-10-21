@@ -48,7 +48,7 @@ if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitW
 			[_activeLRRadio, 5] call TFAR_fnc_setAdditionalLrChannel;
 		};
 	};
-	if ( toUpper (groupID group _unit) in ["ALPHA"] ) exitWith {
+	if ( toUpper (groupID group _unit) in ["ALPHA","ALFA"] ) exitWith {
 		[_activeSWRadio, 1] call TFAR_fnc_setSwChannel;
 		if (_hasLRRadio) then {
 			[_activeLRRadio, 1] call TFAR_fnc_setLRChannel;
