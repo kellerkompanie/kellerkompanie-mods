@@ -8,7 +8,7 @@ sleep 1;
 private ["_tank","_deep","_rate","_ppo2"];
 
 
-_tank = 7200;		// Tank/System Size
+_tank = 7200 * keko_tank_multiplier;		// Tank/System Size
 tankVol = _tank;
 _deep = 0;		// Depth/Pressure
 _rate = 0;		// Breathing Rate

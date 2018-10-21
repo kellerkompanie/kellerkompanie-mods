@@ -91,3 +91,10 @@ class cfgSounds {
 class cfgMarkers {
 	#include "\vqi_frogs\VQI-CombatDiver\Markers\cfgMarkers.hpp"
 };
+
+class Extended_PreInit_EventHandlers {
+    class vqi_frogs_preinit {
+        init = "call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
+        disableModuload = true;
+    };
+};
