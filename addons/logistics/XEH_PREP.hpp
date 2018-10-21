@@ -8,6 +8,7 @@ PREP(dialogSpawnCrateInit);
 PREP(dialogSupplyDropCallback);
 PREP(dialogSupplyDropInit);
 PREP(fillCrate);
+PREP(hasAccess);
 PREP(moduleAddLogisticsMenu);
 PREP(moduleAddLogisticsMenu3den);
 PREP(moduleCustomLogistics3den);
