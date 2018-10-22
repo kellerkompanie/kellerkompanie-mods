@@ -14,7 +14,7 @@ GVAR(variableHandler) = call CBA_fnc_createNamespace;
 GVAR(enabled) = true;
 
 [
-    "L_Suppress_enabled",
+    QGVAR(enabled),
     "CHECKBOX",
     ["Enable Supress", "Enable Suppress Effect"],
     "Laxemann Suppress",
