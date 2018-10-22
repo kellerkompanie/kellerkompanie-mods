@@ -87,7 +87,7 @@ class kekoWeaponsNato {
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_sand_F";
-		items[] = {"acc_pointer_IR","bipod_01_F_blk"};
+		items[] = {"acc_pointer_IR","bipod_01_F_blk","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG

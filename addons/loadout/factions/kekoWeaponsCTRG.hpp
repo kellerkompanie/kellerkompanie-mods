@@ -98,6 +98,7 @@ class kekoWeaponsCTRG {
 	class keko_W_A3_MINIMI: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_03_F";
+		items[] = {"optic_ERCO_blk_F","acc_pointer_IR"};
 		magazines[] = {PRIMARY_MAG_MMG_TRACER};
 	};
 
