@@ -38,7 +38,7 @@ GVAR(recoilEnabled) = true;
 GVAR(forceEnabled) = true;
 
 [
-    "L_Immerse_twitch",
+    QGVAR(twitch),
     "CHECKBOX",
     ["Enable Twitch", "Enable Slight ""twitching"" when someone fires nearby"],
     "Laxemann Immerse",
@@ -51,7 +51,7 @@ GVAR(forceEnabled) = true;
 ] call CBA_Settings_fnc_init;
 
 [
-    "L_Immerse_exShake",
+    QGVAR(exShake),
     "CHECKBOX",
     ["Enable exShake", "CamShake for explosions, even distant ones!"],
     "Laxemann Immerse",
@@ -74,7 +74,7 @@ GVAR(forceEnabled) = true;
 ] call CBA_Settings_fnc_init;
 
 [
-    "L_Immerse_recoil",
+    QGVAR(recoil),
     "CHECKBOX",
     ["Enable recoil", "Adds a slight CamShake when shooting, should make shooting the guns feel more satisfying (Disabled if L_align is Activ)"],
     "Laxemann Immerse",
@@ -87,7 +87,7 @@ GVAR(forceEnabled) = true;
 ] call CBA_Settings_fnc_init;
 
 [
-    "L_Immerse_force",
+    QGVAR(force),
     "CHECKBOX",
     ["Enable force", "Adds a slight radial blur and darkens the screen a bit for a split second when firing"],
     "Laxemann Immerse",

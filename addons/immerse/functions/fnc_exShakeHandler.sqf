@@ -21,7 +21,7 @@ private _deleted = false;
     } else {
         private _dist = ((positionCameraToworld [0,0,0]) distance _pos);
         private _data = _dist call (missionNamespace getVariable [_fncName, {hintSilent "Error Function Dont exist"; [0,0,0]}]);
-        DUMP("exShake Handler Triggerd")
+        
         [{
             if ((vehicle player) != player) exitWith {};
             if (((getPos player) select 2) > 1) exitWith {};

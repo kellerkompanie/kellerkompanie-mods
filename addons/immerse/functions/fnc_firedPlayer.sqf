@@ -19,22 +19,24 @@ params [
 	"",
 	"_projectile"
 ];
+
 if (toLower(_weapon) isEqualTo "put") exitWith {};
+
 if (isNull _projectile) then {
      _projectile = nearestObject [_shooter, _ammo];
      _this set [6, _projectile];
 };
+
 if (GVAR(recoilEnabled)) then {
 	if (isNil "L_align_active") then {
 		if ((_weapon != (toLower "throw")) && (_weapon != (toLower "put"))) then {
 			addCamshake [1.3,0.4,15];
-			DUMP("Recoil Triggerd")
 		};
 	};
 };
+
 if (GVAR(forceEnabled)) then {
-    if (_weapon != (toLower "throw")) then {
-        DUMP("Force Triggerd")
+    if (_weapon != (toLower "throw")) then {        
         if ( ( diag_tickTime - GVAR(force_lastShot) ) <= 0.45 ) then {
             GVAR(force_multiplier) = (GVAR(force_multiplier) + 0.025) min 1;
         } else {
