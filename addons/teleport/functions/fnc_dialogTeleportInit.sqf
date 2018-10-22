@@ -21,7 +21,15 @@ switch(side player) do {
 
 			lbAdd [1500, _x];
 			lbSetData [1500, _forEachIndex, _x];
+			lbSetCurSel [1500, 0];
 		} forEach GVAR(destinations_blufor);
+
+		if(count GVAR(destinations_blufor) == 0) then {
+			ctrlEnable [1600, false];
+			ctrlEnable [1601, false];
+			ctrlEnable [1602, false];
+			ctrlEnable [1603, false];
+		};
 	};
 	case resistance: {
 		if (isNil "keko_teleport_destinations_indfor") then {GVAR(destinations_indfor) = []};
@@ -33,7 +41,15 @@ switch(side player) do {
 
 			lbAdd [1500, _x];
 			lbSetData [1500, _forEachIndex, _x];
+			lbSetCurSel [1500, 0];
 		} forEach GVAR(destinations_indfor);
+
+		if(count GVAR(destinations_indfor) == 0) then {
+			ctrlEnable [1600, false];
+			ctrlEnable [1601, false];
+			ctrlEnable [1602, false];
+			ctrlEnable [1603, false];
+		};
 	};
 	case east:
 	{
@@ -46,7 +62,15 @@ switch(side player) do {
 
 			lbAdd [1500, _x];
 			lbSetData [1500, _forEachIndex, _x];
+			lbSetCurSel [1500, 0];
 		} forEach GVAR(destinations_opfor);
+
+		if(count GVAR(destinations_opfor) == 0) then {
+			ctrlEnable [1600, false];
+			ctrlEnable [1601, false];
+			ctrlEnable [1602, false];
+			ctrlEnable [1603, false];
+		};
 	};
 	case civilian: {
 		if (isNil "keko_teleport_destinations_civ") then {GVAR(destinations_civ) = []};
@@ -58,7 +82,15 @@ switch(side player) do {
 
 			lbAdd [1500, _x];
 			lbSetData [1500, _forEachIndex, _x];
+			lbSetCurSel [1500, 0];
 		} forEach GVAR(destinations_civ);
+
+		if(count GVAR(destinations_civ) == 0) then {
+			ctrlEnable [1600, false];
+			ctrlEnable [1601, false];
+			ctrlEnable [1602, false];
+			ctrlEnable [1603, false];
+		};
 	};
 };
 
