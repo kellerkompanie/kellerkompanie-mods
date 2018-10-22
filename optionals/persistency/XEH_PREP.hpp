@@ -6,6 +6,8 @@ PREP(loadAllVehicles);
 PREP(loadCrate);
 PREP(loadPlayerLoadout);
 PREP(loadVehicle);
+PREP(manualLoad);
+PREP(manualSave);
 PREP(saveAllCrates);
 PREP(saveAllPlayers);
 PREP(saveAllVehicles);

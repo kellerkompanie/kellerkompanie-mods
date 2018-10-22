@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("getMoney: persistency disabled, exiting!"); false};
-if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("getMoney: persistency key not set, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("getMoney: persistency key not set, exiting!"); false};
 if !(EGVAR(persistency_settings,moneyEnabled)) exitWith{WARNING("getMoney: persistency for money is disabled, exiting!"); false};
 
 params ["_playerUnit"];
