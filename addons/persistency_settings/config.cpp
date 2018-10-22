@@ -1,11 +1,14 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON
-	{
+	class ADDON	{
 		name = COMPONENT_NAME;
 		units[] = {
-			QGVAR(modulePersistencyBlacklist3den)
+			QGVAR(modulePersistencyBlacklist3den),
+			QGVAR(modulePersistencyOverwriteID3den),
+			QGVAR(moduleSelectivePersistency3den),
+			QGVAR(moduleManualLoad),
+			QGVAR(moduleManualSave)
 		};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
