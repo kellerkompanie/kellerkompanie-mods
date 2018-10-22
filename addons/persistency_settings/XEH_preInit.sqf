@@ -61,14 +61,15 @@ Parameters:
 	1
 ] call cba_settings_fnc_init;
 
+
 [
 	QGVAR(vehiclesEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
 	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
+		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+		["Disabled", "Enabled (for all)", "Selective"], // names
 		0 // default index
 	],
 	1
@@ -80,8 +81,8 @@ Parameters:
 	["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
 	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
+		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+		["Disabled", "Enabled (for all)", "Selective"], // names
 		0 // default index
 	],
 	1
@@ -93,8 +94,8 @@ Parameters:
 	["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
 	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
+		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+		["Disabled", "Enabled (for all)", "Selective"], // names
 		0 // default index
 	],
 	1

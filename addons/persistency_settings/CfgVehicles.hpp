@@ -5,40 +5,50 @@ class CfgVehicles {
 		class ModuleDescription;
 
 		class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
+			{
+				class Default;
+				class Edit;
+				class Combo;
+				class Checkbox;
+				class CheckboxNumber;
+				class ModuleDescription;
+				class Units;
 
-			expression = "_this setVariable ['%s',_value];";
-		};
+				expression = "_this setVariable ['%s',_value];";
+			};
 	};
-	class GVAR(ModulePersistencyBlacklist3den): Module_F	{
-		scope              = 2;
-		scopeCurator       = 1;
+	class GVAR(moduleBase): Module_F {
+		author = ECSTRING(common,KEKOTeam);
+		category = "KEKO";
+		function = QEFUNC(common,dummy);
+		functionPriority = 1;
+		isGlobal = 1;
+		isTriggerActivated = 0;
+		scope = 1;
+		scopeCurator = 2;
+	};
+	class GVAR(moduleBase3den): Module_F {
+		author = ECSTRING(common,KEKOTeam);
+		category = "KEKO";
+		function = QEFUNC(common,dummy);
+		functionPriority = 1;
+		isGlobal = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
+		scope = 2;
+		scopeCurator = 1;
+	};
+
+
+	class GVAR(ModulePersistencyBlacklist3den): GVAR(moduleBase3den) {
 		displayName        = "Persistency blacklist object";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(modulePersistencyBlacklist3den);
-		functionPriority   = 1;
-		isGlobal           = 1;
-		isTriggerActivated = 1;
-		isDisposable       = 0;
 	};
-
-	class GVAR(ModulePersistencyOverwriteID3den): Module_F {
-		scope              = 2;
-		scopeCurator       = 1;
+	class GVAR(ModulePersistencyOverwriteID3den): GVAR(moduleBase3den) {
 		displayName        = "Persistency overwrite ID";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(moduleOverwriteID3den);
-		functionPriority   = 1;
-		isGlobal           = 1;
-		isTriggerActivated = 1;
-		isDisposable       = 0;
 
 		class Attributes: AttributesBase {
 			class ID: Edit {
@@ -48,5 +58,21 @@ class CfgVehicles {
 				defaultValue = "'-1'";
 			};
 		};
+	};
+	class GVAR(ModuleSelectivePersistency3den): GVAR(moduleBase3den) {
+		displayName        = "Enable selective Peristency";
+		category           = QGVAR(Persistency);
+		function           = QFUNC(moduleSelectivePersistency3den);
+	};
+
+	class GVAR(moduleManualSave): GVAR(moduleBase) {
+		displayName        = "Manual Save";
+		category           = QGVAR(Persistency);
+		function           = QFUNC(moduleManualSave);
+	};
+	class GVAR(moduleManualLoad): GVAR(moduleBase) {
+		displayName        = "Manual Load";
+		category           = QGVAR(Persistency);
+		function           = QFUNC(moduleManualLoad);
 	};
 };
