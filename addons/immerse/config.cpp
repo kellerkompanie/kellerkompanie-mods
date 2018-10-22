@@ -7,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+			"A3_Weapons_F",
             "cba_main" };
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
