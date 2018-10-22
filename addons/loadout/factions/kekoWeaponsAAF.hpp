@@ -42,12 +42,12 @@ class kekoWeaponsAAF {
 	};
 	class keko_W_A3_STONER: kekoPrimaryWeapon {
 		cfgName = "LMG_Mk200_F";
-		items[] = {"acc_pointer_IR","bipod_03_F_blk"};
+		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
 	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {
 		cfgName = "MMG_02_black_F";
-		items[] = {"acc_pointer_IR","bipod_03_F_blk"};
+		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 	class keko_W_A3_EBR: kekoPrimaryWeapon {

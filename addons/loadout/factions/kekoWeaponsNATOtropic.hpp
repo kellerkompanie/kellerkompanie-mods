@@ -66,6 +66,7 @@ class kekoWeaponsNatoTropic {
 	class keko_W_A3_MMG_BLACK: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_black_F";
+		items[] = {"acc_pointer_IR","bipod_01_F_blk","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 

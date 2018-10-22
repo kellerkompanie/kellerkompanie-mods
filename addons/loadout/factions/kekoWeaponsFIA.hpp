@@ -59,7 +59,7 @@ class kekoWeaponsFIA {
 	class keko_W_A3_Mk200: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_Mk200_F";
-		items[] = {"acc_flashlight","bipod_03_F_blk"};
+		items[] = {"acc_flashlight","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
 
@@ -67,7 +67,7 @@ class kekoWeaponsFIA {
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_black_F";
-		items[] = {"acc_flashlight","bipod_01_F_snd"};
+		items[] = {"acc_flashlight","bipod_01_F_snd","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 
