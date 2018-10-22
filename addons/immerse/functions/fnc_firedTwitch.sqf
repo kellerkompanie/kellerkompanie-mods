@@ -14,8 +14,11 @@ params ["_shooter", "", "", "", "_ammo"];
 // -------------------------------------------------------------------------------------------
 // Exit Checks
 if (player == _shooter) exitWith {};
+
 if ((vehicle player) != player) exitWith {};
+
 private _dist = ((positionCameraToWorld [0,0,0]) distance _shooter);
+
 if (_dist > 60) exitWith {};
 
 
@@ -24,10 +27,12 @@ if (_dist > 60) exitWith {};
 private _caliber = [(configFile >> "CfgAmmo" >> _ammo >> "caliber"), QGVAR(twitch_) + _ammo, 0] call FUNC(readCacheValues);
 
 if (isNil "_caliber" && {_caliber isEqualTo 0}) exitWith {};
+
 if (_caliber isEqualType "") then {
     _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber");
     GVAR(variableHandler) setVariable [QGVAR(twitch_) + _ammo, _caliber];
 };
+
 private _maxDist = 14 + (_caliber / 1.1);
 // if (_dist > _maxDist) exitWith {};
 private _intensity = (_dist / _maxDist);
@@ -45,7 +50,6 @@ if (_force < 0) then {_force = 0;};
 if (_length < 0) then {_length = 0;};
 if (_frequency < 0) then {_frequency = 0;};
 
-DUMP("Twitch Triggerd")
 // -------------------------------------------------------------------------------------------
 // Actual CamShake & blur
 addCamShake [_force, _length, _frequency];
