@@ -14,7 +14,7 @@ if(_groupLeader == player) then {
     _pos = _otherGroupMembers select 0;
   } else {
     // no other group members found, move to highest ranking player
-    _pos = getPos player;
+    _pos = getPosASL player;
     private _highest_rank = -1;
     {
       private _rank = rank _x;
@@ -45,12 +45,12 @@ if(_groupLeader == player) then {
 
       if(_rank_no > _highest_rank) then {
         _highest_rank = _rank_no;
-        _pos = getPos _x;
+        _pos = getPosASL _x;
       };
     } forEach (allPlayers - [player]);
   };
 } else {
-  _pos = getPos _groupLeader;
+  _pos = getPosASL _groupLeader;
 };
 
 player allowDamage false;
@@ -58,7 +58,7 @@ titleText ["", "BLACK OUT", 2];
 sleep 2;
 titleText ["Du wirst zur Front verlegt.", "BLACK FADED"];
 sleep 1;
-player setPos _pos;
+player setPosASL _pos;
 sleep 1;
 titleFadeOut 2;
 player allowDamage true;
