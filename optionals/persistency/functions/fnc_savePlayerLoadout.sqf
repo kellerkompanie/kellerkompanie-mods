@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("savePlayerLoadout: persistency disabled, exiting!"); false};
-if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("savePlayerLoadout: persistency key not set, exiting!"); false};
-if !(EGVAR(persistency_settings,playersEnabled)) exitWith{WARNING("savePlayerLoadout: persistency for players is disabled, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("savePlayerLoadout: persistency key not set, exiting!"); false};
+if (EGVAR(persistency_settings,playersEnabled) == 0) exitWith{WARNING("savePlayerLoadout: persistency for players is disabled, exiting!"); false};
 
 params ["_playerUnit"];
 

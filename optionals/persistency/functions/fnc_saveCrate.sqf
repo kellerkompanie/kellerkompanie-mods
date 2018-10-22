@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("saveCrate: persistency disabled, exiting!"); false};
-if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("saveCrate: persistency key not set, exiting!"); false};
-if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{WARNING("saveCrate: persistency for crates is disabled, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("saveCrate: persistency key not set, exiting!"); false};
+if (EGVAR(persistency_settings,cratesEnabled) == 0) exitWith{WARNING("saveCrate: persistency for crates is disabled, exiting!"); false};
 
 params ["_crate"];
 

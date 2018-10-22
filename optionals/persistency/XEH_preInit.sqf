@@ -24,4 +24,10 @@ addMissionEventHandler ["HandleDisconnect",
 	_unit call FUNC(savePlayerLoadout);
 }];
 
+if !(isServer) then {
+	["keko_loadout_onLoadoutFinished", {
+		player call FUNC(loadPlayerLoadout);		
+	}] call CBA_fnc_addEventHandler;
+};
+
 ADDON = true;

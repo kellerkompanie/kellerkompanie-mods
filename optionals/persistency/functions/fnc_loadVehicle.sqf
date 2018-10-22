@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("loadVehicle: persistency disabled, exiting!"); false};
-if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadVehicle: persistency key not set, exiting!"); false};
-if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{WARNING("loadVehicle: persistency for vehicles is disabled, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadVehicle: persistency key not set, exiting!"); false};
+if (EGVAR(persistency_settings,vehiclesEnabled) == 0) exitWith{WARNING("loadVehicle: persistency for vehicles is disabled, exiting!"); false};
 
 params [
 	["_input", objNull, [objNull, -1]]

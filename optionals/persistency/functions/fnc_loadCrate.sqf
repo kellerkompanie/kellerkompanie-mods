@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("loadCrate: persistency disabled, exiting!"); false};
-if(EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadCrate: persistency key not set, exiting!"); false};
-if !(EGVAR(persistency_settings,cratesEnabled)) exitWith{WARNING("loadCrate: persistency for crates is disabled, exiting!"); false};
+if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadCrate: persistency key not set, exiting!"); false};
+if (EGVAR(persistency_settings,cratesEnabled) == 0) exitWith{WARNING("loadCrate: persistency for crates is disabled, exiting!"); false};
 
 params [
 	["_input", objNull, [objNull, -1]]

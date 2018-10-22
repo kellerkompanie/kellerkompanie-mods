@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,vehiclesEnabled)) exitWith{WARNING("loadAllVehicles: persistency for vehicles is disabled, exiting!"); false};
+if (EGVAR(persistency_settings,vehiclesEnabled) == 0) exitWith{WARNING("loadAllVehicles: persistency for vehicles is disabled, exiting!"); false};
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getAllVehicles:%1", EGVAR(persistency_settings,key)]);
 
