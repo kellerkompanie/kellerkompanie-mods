@@ -53,168 +53,198 @@ class CfgVehicles {
 		};
 	};
 
-	class GVAR(moduleBase3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "Base";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleBase3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_base.pac);
+	class GVAR(modulePOI3den): Module_F	{
+		scope              = 2;
+		scopeCurator       = 1;
+		displayName        = "POI";
+		category           = QGVAR(redneck);
+		function           = QFUNC(modulePOI3den);
+		functionPriority   = 1;
+		isGlobal           = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
 
-			class Attributes: AttributesBase
-			{
-
+		class Attributes: AttributesBase {
+			class poi_name: Edit {
+				property = "poi_name";
+				displayName = "Name";
+				typeName = "STRING";
+				defaultValue = "'Unnamed'";
 			};
-	};
-
-	class GVAR(moduleAirport3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Airport";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleAirport3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_airport.pac);
-
-			class Attributes: AttributesBase
-	{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
+			class poi_type: Combo {
+				property = "poi_type";
+				displayName="Type";
+				typeName = "NUMBER";
+				defaultValue = 0;
+				class Values {
+					class atm			{name = "ATM"; 				value = 0; };
+					class item_shop		{name = "Item Shop";		value = 1; };
+					class gear_shop		{name = "Gear Shop";		value = 2; };
+					class vehicle_shop	{name = "Vehicle Shop";		value = 3; };
+					class garage		{name = "Garage";			value = 4; };
+					class parking		{name = "Parking";			value = 5; };
+					class cardealer		{name = "Car Dealer";		value = 6; };
+					class trader		{name = "Trader";			value = 7; };
+					class pharmacy		{name = "Pharmacy";			value = 8; };
+					class hangar		{name = "Hangar";			value = 9; };
+					class weapon_shop	{name = "Weapon Shop";		value = 10;};
+					class mechanic		{name = "Mechanic";			value = 11;};
+					class doctor		{name = "Doctor";			value = 12;};
+					class fuel_shop		{name = "Fuel Shop";		value = 13;};
+					class heli_shop		{name = "Heli Shop";		value = 14;};
+					class plane_shop	{name = "Plane Shop";		value = 15;};
+					class helipad		{name = "Helipad";			value = 16;};
+					class airdealer 	{name = "Aircraft Dealer";	value = 17;};
+					class builder		{name = "Builder";			value = 18;};
+				};
+			};
+			class poi_shop: Edit {
+				property = "poi_shop";
+				displayName = "Shop";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
 		};
 	};
-	class GVAR(moduleDollar3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Dollar";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleDollar3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_dollar.pac);
 
-			class Attributes: AttributesBase
-			{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
+	class GVAR(moduleLocation3den): Module_F	{
+		scope              = 2;
+		scopeCurator       = 1;
+		displayName        = "Location";
+		category           = QGVAR(redneck);
+		function           = QFUNC(moduleLocation3den);
+		functionPriority   = 1;
+		isGlobal           = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
+		icon = QPATHTOF(ui\icon_flag.paa);
+
+		class Attributes: AttributesBase {
+			class loc_name: Edit {
+				property = "loc_name";
+				displayName = "Name";
+				typeName = "STRING";
+				defaultValue = "'Unnamed Location'";
 			};
+			class loc_type: Combo {
+				property = "loc_type";
+				displayName="Type";
+				typeName = "NUMBER";
+				defaultValue = 0;
+				class Values {
+					class flag 			{name = "Flag"; 				value = 0; };
+					class checkpoint 	{name = "Checkpoint"; 			value = 1; };
+					class hotel 		{name = "Hotel"; 				value = 2; };
+					class prison 		{name = "Prison"; 				value = 3; };
+					class research 		{name = "Research Facility"; 	value = 4; };
+					class industry 		{name = "Industrial Complex"; 	value = 5; };
+					class farm 			{name = "Farm"; 				value = 6; };
+					class radiotower 	{name = "Radio Tower"; 			value = 7; };
+					class powerplant 	{name = "Power Plant"; 			value = 8; };
+					class fuelstation 	{name = "Fuel Station"; 		value = 9; };
+					class outpost 		{name = "Outpost"; 				value = 10;};
+					class hq 			{name = "HQ"; 					value = 11;};
+					class airport 		{name = "Airport"; 				value = 12;};
+				};
+			};
+			class loc_radius: Edit {
+				property = "loc_radius";
+				displayName = "Radius";
+				typeName = "STRING";
+				defaultValue = "'100'";
+			};
+			class loc_side: Combo {
+				property = "loc_side";
+				displayName="Initial Side";
+				typeName = "NUMBER";
+				defaultValue = 0;
+				class Values {
+					class enemyside		{name = "Enemy"; 	value = 0; };
+					class playerside 	{name = "Player"; 	value = 1; };
+				};
+			};
+		};
 	};
-	class GVAR(moduleFlag3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Flag";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleFlag3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_flag.pac);
-
-			class Attributes: AttributesBase
-			{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
-			};
+	class GVAR(moduleSpawnPoint3den): Module_F	{
+		scope              = 2;
+		scopeCurator       = 1;
+		displayName        = "Spawn Point";
+		category           = QGVAR(redneck);
+		function           = QFUNC(moduleSpawnPoint3den);
+		functionPriority   = 1;
+		isGlobal           = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
+		icon = QPATHTOF(ui\icon_destination.paa);
 	};
-	class GVAR(moduleFuel3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Fuel";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleFuel3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_fuel.pac);
-
-			class Attributes: AttributesBase
-			{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
-			};
-	};
-	class GVAR(moduleRadiotower3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Radiotower";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleRadiotower3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_radiotower.pac);
-
-			class Attributes: AttributesBase
-			{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
-			};
-	};
-	class GVAR(moduleResearch3den): Module_F
-	{
-			scope              = 2;
-			scopeCurator       = 1;
-			displayName        = "POI - Research";
-			category           = QGVAR(redneck);
-			function           = QFUNC(moduleResearch3den);
-			functionPriority   = 1;
-			isGlobal           = 1;
-			isTriggerActivated = 1;
-			isDisposable       = 0;
-			icon = QPATHTOF(ui\icon_research.pac);
-
-			class Attributes: AttributesBase
-			{
-					class GVAR(id): Edit {
-							property = QGVAR(id);
-							displayName = "ID";
-							typeName = "STRING";
-							defaultValue = "''";
-					};
-			};
+	class GVAR(moduleStorePoint3den): Module_F	{
+		scope              = 2;
+		scopeCurator       = 1;
+		displayName        = "Store Point";
+		category           = QGVAR(redneck);
+		function           = QFUNC(moduleStorePoint3den);
+		functionPriority   = 1;
+		isGlobal           = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
+		icon = QPATHTOF(ui\icon_save.paa);
 	};
 
 
 
 
-	class FlagCarrier;
+	class Man;
+	class CAManBase: Man {
+		class ACE_SelfActions {
+			class GVAR(actions) {
+                displayName = "Books";
+                condition = "";
+                exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
+                statement = "";
+                showDisabled = 1;
+                priority = 2.1;
+
+				class GVAR(readMedic1) {
+					displayName = "Read Medic 101";
+					condition = QUOTE([ARR_2(_player,'medic1')] call FUNC(readCondition));
+					exceptions[] = {};
+					statement = QUOTE([ARR_2(_player,'medic1')] call FUNC(readAction));
+				};
+				class GVAR(readMedic2) {
+					displayName = "Read Medic Encyclopedia";
+					condition = QUOTE([ARR_2(_player,'medic2')] call FUNC(readCondition));
+					exceptions[] = {};
+					statement = QUOTE([ARR_2(_player,'medic2')] call FUNC(readAction));
+				};
+				class GVAR(readMechanic1) {
+					displayName = "Read Mechanic 101";
+					condition = QUOTE([ARR_2(_player,'mechanic1')] call FUNC(readCondition));
+					exceptions[] = {};
+					statement = QUOTE([ARR_2(_player,'mechanic1')] call FUNC(readAction));
+				};
+				class GVAR(readMechanic2) {
+					displayName = "Read Mechanic Encyclopedia";
+					condition = QUOTE([ARR_2(_player,'mechanic2')] call FUNC(readCondition));
+					exceptions[] = {};
+					statement = QUOTE([ARR_2(_player,'mechanic2')] call FUNC(readAction));
+				};
+			};
+		};
+	};
+
+	class FlagCarrierCore;
+	class FlagCarrier: FlagCarrierCore {
+		class ACE_Actions {
+		   	class ACE_MainActions {
+				displayName = "Flag";
+				selection = "";
+				distance = 3;
+				condition = "true";
+				position = "[0,0,-2.5]";
+		   	};
+		};
+	};
+
 	class GVAR(flag): FlagCarrier {
 		scope = 2;
 		scopeCurator = 2;
@@ -235,6 +265,215 @@ class CfgVehicles {
 
 
 
+
+	class Civilian_F;
+	class C_man_1: Civilian_F
+	{
+		class EventHandlers;
+	};
+
+	class GVAR(civilian_base): C_man_1 {
+		author = "Schwaggot";
+		scope = 0;
+		curatorScope = 1;
+		side = 3;
+		faction = QGVAR(civilian);
+		genericNames="TanoanMen";
+		identityTypes[] = {"Head_Euro"};
+		modelSides[] = {6};
+		nakedUniform = "U_BasicBody";
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		headgearList[] = {};
+	};
+
+	class GVAR(civilian_pharmacist): GVAR(civilian_base) {
+	    displayName = "Pharmacist";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_Paramedic_01_F";
+	    backpack = "B_Messenger_Gray_Medical_F";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
+	    linkedItems[] = {"","","G_Respirator_white_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","","","","","","","",""};
+	};
+	class GVAR(civilian_hangar): GVAR(civilian_base) {
+	    displayName = "Hangar";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "TRYK_OVERALL_SAGE_BLKboots_nk_blk";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","rhs_tsh4","","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","","","","","","","",""};
+	};
+	class GVAR(civilian_parking): GVAR(civilian_base) {
+	    displayName = "Parking";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_Man_casual_2_F";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","H_Cap_blu","","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_garage): GVAR(civilian_base) {
+	    displayName = "Garage";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_Marshal";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","","G_WirelessEarpiece_F","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_vehicle_shop): GVAR(civilian_base) {
+	    displayName = "Vehicle Shop";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "TRYK_SUITS_BLK_F";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","","G_WirelessEarpiece_F","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_cardealer): GVAR(civilian_base) {
+	    displayName = "Car Dealer";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_MU_PoloshirtPants2";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","H_StrawHat","G_Aviator","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_trader): GVAR(civilian_base) {
+	    displayName = "Trader";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "TRYK_U_denim_jersey_blk";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","","immersion_cigs_cigar3","ItemMap","ItemCompass","ItemWatch","TRYK_G_Shades_Black_NV","","","","","","","",""};
+	};
+	class GVAR(civilian_weapon_shop): GVAR(civilian_base) {
+	    displayName = "Weapon Shop";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "VSM_G2_sweater_camo_PZW";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"lbt_light_coy","TRYK_H_Bandana_wig_g","murshun_cigs_cig2","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_item_shop): GVAR(civilian_base) {
+	    displayName = "Item Shop";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_HunterBody_grn";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","H_Booniehat_grn","","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_doctor): GVAR(civilian_base) {
+	    displayName = "Doctor";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "LOP_U_CHR_Doctor_01";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","","","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_mechanic): GVAR(civilian_base) {
+	    displayName = "Mechanic";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_Mechanic_01_F";
+	    backpack = "B_LegStrapBag_black_F";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"V_Rangemaster_belt","H_Construction_earprot_yellow_F","G_EyeProtectors_F","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_gear_shop): GVAR(civilian_base) {
+	    displayName = "Gear Shop";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_BG_Guerrilla_6_1";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"V_PlateCarrier1_rgr","rhssaf_booniehat_md2camo","rhs_googles_black","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_fuel_shop): GVAR(civilian_base)	{
+	    displayName = "Fuel Shop";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_ConstructionCoverall_Red_F";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","H_Cap_red","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_atm): GVAR(civilian_base)	{
+	    displayName = "ATM";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "TRYK_SUITS_BR_F";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","","G_Squares","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_helipilot): GVAR(civilian_base) {
+	    displayName = "Helicopter Pilot";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_MU_PoloshirtPants1";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","H_Cap_headphones","","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","","","","","","","",""};
+	};
+	class GVAR(civilian_pilot): GVAR(civilian_base) {
+	    displayName = "Pilot";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_B_HeliPilotCoveralls";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {};
+	    linkedItems[] = {"","rhs_gssh18","G_Aviator","ItemMap","ItemCompass","ItemWatch","","","","","","","",""};
+	};
+	class GVAR(civilian_builder): GVAR(civilian_base) {
+	    displayName = "Builder";
+		scope = 2;
+	    curatorScope = 2;
+	    uniformClass = "U_C_ConstructionCoverall_Black_F";
+	    backpack = "";
+	    weapons[] = {"Throw","Put"};
+	    magazines[] = {};
+	    items[] = {"FirstAidKit"};
+	    linkedItems[] = {"","H_Construction_earprot_yellow_F","G_EyeProtectors_Earpiece_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","","","","","","","",""};
+	};
 
 
 

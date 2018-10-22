@@ -4,6 +4,30 @@ class CfgPatches {
     class ADDON {
 		name = COMPONENT_NAME;
       	units[] = {
+			QGVAR(moduleLocation3den),
+			QGVAR(modulePOI3den),
+			QGVAR(moduleSpawnPoint3den),
+			QGVAR(moduleStorePoint3den),
+
+			/* Civilians */
+			QGVAR(civilian_pharmacist),
+			QGVAR(civilian_hangar),
+			QGVAR(civilian_parking),
+			QGVAR(civilian_garage),
+			QGVAR(civilian_cardealer),
+			QGVAR(civilian_trader),
+			QGVAR(civilian_weapon_shop),
+			QGVAR(civilian_item_shop),
+			QGVAR(civilian_doctor),
+			QGVAR(civilian_mechanic),
+			QGVAR(civilian_gear_shop),
+			QGVAR(civilian_fuel_shop),
+			QGVAR(civilian_atm),
+			QGVAR(civilian_vehicle_shop),
+			QGVAR(civilian_helipilot),
+			QGVAR(civilian_pilot),
+			QGVAR(civilian_builder),
+
 	        /* BLUFOR units */
 	        QGVAR(blufor_soldier1),
 	        QGVAR(blufor_soldier2),
@@ -176,7 +200,7 @@ class CfgPatches {
 	        QGVAR(opfor_mozzie_black),
 	        QGVAR(opfor_mozzie_red)
 		};
-	  	weapons[] = {};
+	  	weapons[] = {"SMA_556_RIFLEBASE","SMA_762_RIFLEBASE"};
 		requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
         	"3den",
@@ -202,7 +226,14 @@ class CfgPatches {
           	"sab_ultralight",
           	"rhsgref_air",
           	"rhsgref_c_air",
-          	"RwG_Addon_Choppers_Mozzie"
+          	"RwG_Addon_Choppers_Mozzie",
+			"rhsusf_weapons",
+			"rhsusf_weapons2",
+			"rhsusf_weapons3",
+			//"SMA_StandardAmmo",
+			"A3_Weapons_F",
+			"SMA_Weapons",
+			"SMA_Weapons_Magazines"
        };
 	   author = ECSTRING(common,KEKOTeam);
 	   authors[] = {"Schwaggot"};
@@ -216,6 +247,7 @@ class CfgPatches {
 #include "CfgVehicleClasses.hpp"
 #include "CfgMarkerClasses.hpp"
 #include "CfgMarkers.hpp"
+#include "CfgWeapons.hpp"
 
 #include "defines.hpp"
 
