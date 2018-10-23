@@ -12,8 +12,8 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
                     kekoMedic } },
         { "Plebs",{
                     kekoRifleman,
-                    kekoRiflemanAT (RPG),
-					kekoRiflemanAT (MAAWS),
+                    kekoRiflemanAT,
+					kekoRiflemanAT_MAAWS,
                     kekoGrenadier,
 					kekoLMG} },
         { "Heavy Weapons",{
@@ -84,19 +84,21 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
             { 1,"ACE_epinephrine" },
             { 2,"ACE_tourniquet" },
             { 1,"ACE_CableTie"},
-            { 1,"rhs_mag_9x19_17"}
+            { 1,"rhs_mag_9x19_17"},
 			{ 1,"adv_aceSplint_splint"}};
 
         vestInventory[] = {
             { 4, PRIMARY_MAG },
             { 4, PRIMARY_MAG_TRACER },
             { 2, SMOKE_WHITE},
-            { 1, GRENADE }
-			{ 1, GRENADE_2 }
+            { 1, GRENADE },
+			{ 1, GRENADE_2 },
 			{ 1, FLASHBANG }};
 
         primary[] = {
-            keko_W_AK74MR, keko_W_AK74M, keko_W_AK105 };
+            keko_W_AK74MR,
+			keko_W_AK74M,
+			keko_W_AK105 };
 
         secondary[] = {
             keko_W_Grach };
@@ -106,8 +108,8 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
 		vestInventory[] = {
             { 8, PRIMARY_MAG_AS },
             { 2, SMOKE_WHITE},
-            { 1, GRENADE }
-			{ 1, GRENADE_2 }
+            { 1, GRENADE },
+			{ 1, GRENADE_2 },
 			{ 1, FLASHBANG }};
         primary[] = {
             keko_W_ASVAL };
@@ -188,10 +190,12 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         name = "Rifleman Anti-Tank (RPG)";
         launcher[] = { keko_W_RPG };
         backpack[] = { "rhs_assault_umbts" };
-        backpackInventory[] = { { 1, RAT_MAG_2 }, {1, RAT_MAG_2_2} };
+        backpackInventory[] = {
+			{ 1, RAT_MAG_2 },
+			{ 1, RAT_MAG_2_2} };
     };
 
-    class kekoRiflemanAT (MAAWS): kekoSoldierRussiaSpeznas {
+    class kekoRiflemanAT_MAAWS: kekoSoldierRussiaSpeznas {
         name = "Rifleman Anti-Tank (MAAWS)";
         launcher[] = { keko_W_MAAWS };
         backpack[] = { "rhs_assault_umbts" };
@@ -281,7 +285,7 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
 			{ 1,"ACE_ATragMX" },
             { 1,"ACE_Kestrel4500" },
             { 1,"ACE_microDAGR" },
-			{ 1,"adv_aceSplint_splint"}};
+			{ 1,"adv_aceSplint_splint"},
             { 1,"ACE_surgicalKit" }};
         vest[] = { "VSM_OGA_OD_Vest_3" };
         vestInventory[] = {
