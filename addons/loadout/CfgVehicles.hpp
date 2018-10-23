@@ -52,4 +52,11 @@ class CfgVehicles {
 		displayName        = "(DEPRECATED - DO NOT USE) Custom Loadouts";
 		category           = QEGVAR(common,Deprecated);
 	};
+
+	class GVAR(moduleApplyLoadout): GVAR(moduleBase) {
+		displayName        = "Apply Loadout";
+		category           = QGVAR(Loadout);
+		function           = QFUNC(moduleApplyLoadout);
+		curatorCanAttach   = 1;
+	};
 };
