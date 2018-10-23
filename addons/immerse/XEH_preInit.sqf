@@ -41,7 +41,7 @@ GVAR(forceEnabled) = true;
     QGVAR(twitch),
     "CHECKBOX",
     ["Enable Twitch", "Enable Slight ""twitching"" when someone fires nearby"],
-    "Laxemann Immerse",
+    "Kellerkompanie Immerse",
     true,
     nil,
     {
@@ -54,7 +54,7 @@ GVAR(forceEnabled) = true;
     QGVAR(exShake),
     "CHECKBOX",
     ["Enable exShake", "CamShake for explosions, even distant ones!"],
-    "Laxemann Immerse",
+    "Kellerkompanie Immerse",
     true,
     nil,
     {
@@ -77,7 +77,7 @@ GVAR(forceEnabled) = true;
     QGVAR(recoil),
     "CHECKBOX",
     ["Enable recoil", "Adds a slight CamShake when shooting, should make shooting the guns feel more satisfying (Disabled if L_align is Activ)"],
-    "Laxemann Immerse",
+    "Kellerkompanie Immerse",
     true,
     nil,
     {
@@ -90,7 +90,7 @@ GVAR(forceEnabled) = true;
     QGVAR(force),
     "CHECKBOX",
     ["Enable force", "Adds a slight radial blur and darkens the screen a bit for a split second when firing"],
-    "Laxemann Immerse",
+    "Kellerkompanie Immerse",
     true,
     nil,
     {
