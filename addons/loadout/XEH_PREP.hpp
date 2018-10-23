@@ -6,5 +6,6 @@ PREP(dialogLoadoutMenuInit);
 PREP(giveLoadout);
 PREP(moduleAddLoadoutMenu);
 PREP(moduleAddLoadoutMenu3den);
+PREP(moduleApplyLoadout);
 PREP(moduleCustomLoadouts3den);
 PREP(setChannels);

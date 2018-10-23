@@ -7,6 +7,7 @@ class CfgPatches {
             QGVAR(moduleAddLoadoutMenu),
             QGVAR(moduleAddLoadoutMenu3den),
             QGVAR(moduleCustomLoadouts3den),
+			QGVAR(moduleApplyLoadout),
 			"keko_ModuleAddLoadoutMenu3den",
 			"keko_ModuleCustomLoadouts3den"
         };
@@ -29,5 +30,6 @@ class CfgPatches {
 #include "defines.hpp"
 
 #include "ui\dialog_loadoutMenu.hpp"
+#include "ui\dialog_applyLoadout.hpp"
 
 #include "factions\kekoFaction.hpp"
