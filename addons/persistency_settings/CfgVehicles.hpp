@@ -60,7 +60,7 @@ class CfgVehicles {
 		};
 	};
 	class GVAR(ModuleSelectivePersistency3den): GVAR(moduleBase3den) {
-		displayName        = "Enable selective Peristency";
+		displayName        = "Peristency enable";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(moduleSelectivePersistency3den);
 	};
