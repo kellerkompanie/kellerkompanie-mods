@@ -85,7 +85,7 @@ class rscTitles {
 class cfgSounds {
 	#include "\vqi_frogs\VQI-CombatDiver\Sounds\cfgSounds.hpp"
 	sounds[] = {};
-}; 
+};
 
 // Marker Setup
 class cfgMarkers {
@@ -94,7 +94,7 @@ class cfgMarkers {
 
 class Extended_PreInit_EventHandlers {
     class vqi_frogs_preinit {
-        init = "call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
+        init = "call compile preprocessFileLineNumbers '\vqi_frogs\XEH_preInit.sqf'";
         disableModuload = true;
     };
 };
