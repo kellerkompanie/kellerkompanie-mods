@@ -240,7 +240,7 @@ class CfgVehicles {
 				selection = "";
 				distance = 3;
 				condition = "true";
-				position = "[0,0,-2.5]";
+				position = "[-0.05,-0.35,-2.6]";
 		   	};
 		};
 	};
