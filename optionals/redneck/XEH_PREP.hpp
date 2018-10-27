@@ -1,7 +1,10 @@
 PREP(captureLocation);
 PREP(createPOI);
+PREP(dbGetLocations);
+PREP(dbUpdateLocation);
 PREP(moduleLocation3den);
 PREP(modulePOI3den);
+PREP(moduleShippingPath3den);
 PREP(moduleSpawnPoint3den);
 PREP(moduleStorePoint3den);
 PREP(readAction);

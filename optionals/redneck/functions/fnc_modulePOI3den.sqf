@@ -6,7 +6,7 @@ GVAR(POIs) pushBack _logic;
 
 if !(isServer) exitWith {};
 
-INFO("modulePOI3den");
+//INFO("modulePOI3den");
 
 private _poi_id   = format ['%1',_logic];
 private _poi_name = _logic getVariable ["poi_name", ""];
@@ -154,15 +154,15 @@ if(count _syncedObjects > 0) then {
 		//systemChat format ["synced object %1 _typeOf=%2", _x, typeOf _x];
 
 		if(_x isKindOf QGVAR(moduleLocation3den)) then {
-			INFO("_x isKindOf moduleLocation3den");
+			//INFO("_x isKindOf moduleLocation3den");
 			_location = _x;
 		} else {
 			if(_x isKindOf QGVAR(moduleSpawnPoint3den)) then {
-				INFO("_x isKindOf moduleSpawnPoint3den");
+				//INFO("_x isKindOf moduleSpawnPoint3den");
 				_spawnPointMarker = _poi_id + "_Spawn";
 			} else {
 				if(_x isKindOf QGVAR(moduleStorePoint3den)) then {
-					INFO("_x isKindOf moduleStorePoint3den");
+					//INFO("_x isKindOf moduleStorePoint3den");
 					_storePointMarker = _poi_id + "_Store";
 				} else {
 					_entity = _x;

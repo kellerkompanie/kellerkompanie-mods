@@ -189,7 +189,33 @@ class CfgVehicles {
 		isDisposable       = 0;
 		icon = QPATHTOF(ui\icon_save.paa);
 	};
+	class GVAR(moduleShippingPath3den): Module_F	{
+		scope              = 2;
+		scopeCurator       = 1;
+		displayName        = "Shipping Path";
+		category           = QGVAR(redneck);
+		function           = QFUNC(moduleShippingPath3den);
+		functionPriority   = 1;
+		isGlobal           = 1;
+		isTriggerActivated = 1;
+		isDisposable       = 0;
+		icon = QPATHTOF(ui\shipping.paa);
 
+		class Attributes: AttributesBase {
+			class shippingDirection: Combo {
+				property = "shippingDirection";
+				displayName="Type";
+				typeName = "NUMBER";
+				defaultValue = 0;
+				class Values {
+					class sw 	{name = "SW"; 	value = 0; };
+					class nw 	{name = "NW";	value = 1; };
+					class ne 	{name = "NE"; 	value = 2; };
+					class se 	{name = "SE"; 	value = 3; };
+				};
+			};
+		};
+	};
 
 
 
