@@ -308,6 +308,6 @@ if (GVAR(giveRadio) > 0) then {
 	};
 };
 
-[QGVAR(onLoadoutFinished)] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutFinished), [player]] call CBA_fnc_globalEvent;
 
 [player] spawn FUNC(setChannels);
