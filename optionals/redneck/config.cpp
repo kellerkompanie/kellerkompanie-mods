@@ -6,6 +6,7 @@ class CfgPatches {
       	units[] = {
 			QGVAR(moduleLocation3den),
 			QGVAR(modulePOI3den),
+			QGVAR(moduleShippingPath3den),
 			QGVAR(moduleSpawnPoint3den),
 			QGVAR(moduleStorePoint3den),
 

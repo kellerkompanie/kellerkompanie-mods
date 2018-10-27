@@ -14,6 +14,12 @@ private _loc_type 	= _logic getVariable ["loc_type", 0];
 private _loc_radius = _logic getVariable ["loc_radius", 0];
 private _loc_side 	= _logic getVariable ["loc_side", 0];
 
+if (_loc_side == 0) then {
+	_loc_side = 'BLACKORDER';
+} else {
+	_loc_side = 'REDNECK';
+};
+
 //INFO_1("moduleLocation3den _loc_id=%1",_loc_id);
 
 private _markerType = "";
@@ -22,6 +28,15 @@ private _markerScale = 1.0;
 private _markerName = _loc_name;
 private _markerPos = getPos _logic;
 private _markerAreaSize = parseNumber _loc_radius;
+
+if (_loc_id in GVAR(LocationMapKeys)) then {
+	private _idx = GVAR(LocationMapKeys) find _loc_id;
+	_loc_side = GVAR(LocationMapValues) select _idx;
+} else {
+	GVAR(LocationMapKeys) pushBack _loc_id;
+	GVAR(LocationMapValues) pushBack 'BLACKORDER';
+	[_loc_id, 'BLACKORDER'] call FUNC(dbUpdateLocation);
+};
 
 switch (_loc_type) do {
 		case 0: {
@@ -70,8 +85,6 @@ switch (_loc_type) do {
 			/* Power Plant */
 			_markerType = QGVAR(marker_powerplant);
 			_markerScale = 0.7;
-
-			GVAR(PowerPlants) pushBack _logic;
 		};
 		case 9: {
 			/* Fuel Station */
@@ -100,16 +113,27 @@ switch (_loc_type) do {
 		};
 };
 
+//INFO_1("_loc_side %1", _loc_side);
 
 private _flagClass = "keko_redneck_flag";
-if(_loc_side == 0) then {
+if(_loc_side == 'BLACKORDER') then {
 	_flagClass = "blackorder_flag_F";
 };
 private _flagObject = createVehicle [_flagClass, position _logic, [], 0, "CAN_COLLIDE"];
 
-if(_loc_side == 0) then {
+if(_loc_side == 'BLACKORDER') then {
 	private _action = ["CaptureLocation","Capture","",{_this call FUNC(captureLocation);},{true},{},[_loc_id,_loc_name,_loc_type,_loc_radius]] call ace_interact_menu_fnc_createAction;
 	[_flagObject, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+	_markerColor = "colorOPFOR";
+} else {
+	_markerColor = "colorBLUFOR";
+};
+
+if(_loc_type == 8) then {
+	if(_loc_side == 'REDNECK') then {
+		GVAR(PowerPlants) = GVAR(PowerPlants) + 1;
+	};
 };
 
 private _areaMarkerName = _loc_id + "_area";
@@ -117,6 +141,7 @@ createMarker [_areaMarkerName, _markerPos];
 _areaMarkerName setMarkerSize [_markerAreaSize, _markerAreaSize];
 _areaMarkerName setMarkerColor _markerColor;
 _areaMarkerName setMarkerShape "ELLIPSE";
+_areaMarkerName setMarkerAlpha 0.7;
 
 private _markerName = _loc_id;
 createMarker [_markerName, _markerPos];
@@ -124,3 +149,4 @@ _markerName setMarkerType _markerType;
 _markerName setMarkerSize [_markerScale, _markerScale];
 _markerName setMarkerColor _markerColor;
 _markerName setMarkerText _loc_name;
+_markerName setMarkerAlpha 0.7;
