@@ -25,7 +25,7 @@ Parameters:
 */
 
 [
-	QGVAR(enabled), // key/reference variable
+	QEGVAR(persistency,enabled), // key/reference variable
 	"LIST", // type of setting
 	["Persistency", "Enable/Disable Persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -39,7 +39,7 @@ Parameters:
 
 
 [
-	QGVAR(key),
+	QEGVAR(persistency,key),
 	"EDITBOX",
 	["Key", "Database storage key"],
 	"Kellerkompanie Persistency",
@@ -49,7 +49,7 @@ Parameters:
 
 
 [
-	QGVAR(autosaveInterval),
+	QEGVAR(persistency,autosaveInterval),
 	"LIST",
 	["Autosave", "Interval for Autosave"],
 	"Kellerkompanie Persistency",
@@ -63,7 +63,7 @@ Parameters:
 
 
 [
-	QGVAR(vehiclesEnabled), // key/reference variable
+	QEGVAR(persistency,vehiclesEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -76,7 +76,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(cratesEnabled), // key/reference variable
+	QEGVAR(persistency,cratesEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -89,7 +89,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(playersEnabled), // key/reference variable
+	QEGVAR(persistency,playersEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -102,7 +102,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(moneyEnabled), // key/reference variable
+	QEGVAR(persistency,moneyEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
 	"Kellerkompanie Persistency", // category
@@ -115,7 +115,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(defaultMoney),
+	QEGVAR(persistency,defaultMoney),
 	"EDITBOX",
 	["Default Cash", "Default cash given to new players"],
 	"Kellerkompanie Persistency",
@@ -124,7 +124,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
-	QGVAR(defaultMoneyBank),
+	QEGVAR(persistency,defaultMoneyBank),
 	"EDITBOX",
 	["Default Bank Account", "Default account amount given to new players"],
 	"Kellerkompanie Persistency",

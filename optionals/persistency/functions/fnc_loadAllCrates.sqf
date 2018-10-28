@@ -1,20 +1,25 @@
 #include "script_component.hpp"
 
-if (EGVAR(persistency_settings,cratesEnabled) == 0) exitWith{WARNING("loadAllCrates: persistency for crates is disabled, exiting!"); false};
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
 
-private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getAllCrates:%1", EGVAR(persistency_settings,key)]);
+if (GVAR(cratesEnabled) == 0) exitWith{WARNING("loadAllCrates: persistency for crates is disabled, exiting!"); 0};
 
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getAllCrates:%1", GVAR(key)]);
+
+private _count = 0;
 if ((_ret select 0) == 1) then {
-	TRACE_1("loadAllCrates: loading sucessful %1", _ret);
+	INFO_1("loadAllCrates: loading sucessful %1", _ret);
 
 	// assume loading was sucess
-  {
-    private _crateID = _x select 0;
-    _crateID call FUNC(loadCrate);
-    TRACE_1("loadAllCrates: loaded crate %1", _crateID);
-  } forEach (_ret select 1);
-	true
+	{
+		private _objectVariable = _x select 0;
+		_objectVariable call FUNC(loadCrateByVariable);
+		INFO_1("loadAllCrates: loading crate %1", _objectVariable);
+		_count = _count + 1;
+	} forEach (_ret select 1);
 } else {
-	TRACE_1("loadAllCrates: loading unsucessful %1", _ret);
-	false
+	ERROR_1("loadAllCrates: loading unsucessful %1", _ret);
 };
+
+_count

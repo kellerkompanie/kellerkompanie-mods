@@ -1,18 +1,21 @@
 #include "script_component.hpp"
 
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
+
 params ["_player"];
 
-if (EGVAR(persistency_settings,playersEnabled) > 0) then {
-	"[KEKO] (Peristency) saving players to DB ..." remoteExec ["systemChat", _player];
-	call FUNC(saveAllPlayers);
+if (GVAR(playersEnabled) > 0) then {
+	private _savedPlayers = call FUNC(saveAllPlayers);
+	(format ["[KEKO] (Peristency) saved %1 players", _savedPlayers]) remoteExec ["systemChat", _player];
 };
 
-if (EGVAR(persistency_settings,vehiclesEnabled) > 0) then {
-	"[KEKO] (Peristency) saving vehicles to DB ..." remoteExec ["systemChat", _player];
-	call FUNC(saveAllVehicles);
+if (GVAR(vehiclesEnabled) > 0) then {
+	private _savedVehicles = call FUNC(saveAllVehicles);
+	(format ["[KEKO] (Peristency) saved %1 vehicles", _savedVehicles]) remoteExec ["systemChat", _player];
 };
 
-if (EGVAR(persistency_settings,cratesEnabled) > 0) then {
-	"[KEKO] (Peristency) saving crates to DB ..." remoteExec ["systemChat", _player];
-	call FUNC(saveAllCrates);
+if (GVAR(cratesEnabled) > 0) then {
+	private _savedCrates = call FUNC(saveAllCrates);
+	(format ["[KEKO] (Peristency) saved %1 crates", _savedCrates]) remoteExec ["systemChat", _player];
 };

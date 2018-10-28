@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith {WARNING("setMoney: persistency disabled, exiting!"); false};
-if (EGVAR(persistency_settings,key) == "") exitWith {WARNING("setMoney: persistency key not set, exiting!"); false};
-if !(EGVAR(persistency_settings,moneyEnabled)) exitWith {WARNING("setMoney: persistency for money is disabled, exiting!"); false};
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
+if !(GVAR(moneyEnabled)) exitWith {WARNING("setMoney: persistency for money is disabled, exiting!"); false};
 
 params ["_playerUnit", "_money", "_bank"];
 
@@ -17,7 +17,7 @@ if(typeName _bank == "STRING") then {
 };
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:setMoney:%1:%2:%3:%4:%5",
-	EGVAR(persistency_settings,key),
+	GVAR(key),
 	_playerUID,
 	_playerName,
 	_money,

@@ -5,10 +5,10 @@ class CfgPatches {
 		name = COMPONENT_NAME;
 		units[] = {
 			QGVAR(modulePersistencyBlacklist3den),
-			QGVAR(modulePersistencyOverwriteID3den),
 			QGVAR(moduleSelectivePersistency3den),
 			QGVAR(moduleManualLoad),
-			QGVAR(moduleManualSave)
+			QGVAR(moduleManualSave),
+			QGVAR(moduleEnablePersistency)
 		};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
