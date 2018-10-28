@@ -41,26 +41,12 @@ class CfgVehicles {
 
 
 	class GVAR(ModulePersistencyBlacklist3den): GVAR(moduleBase3den) {
-		displayName        = "Persistency blacklist object";
+		displayName        = "Blacklist Object";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(modulePersistencyBlacklist3den);
 	};
-	class GVAR(ModulePersistencyOverwriteID3den): GVAR(moduleBase3den) {
-		displayName        = "Persistency overwrite ID";
-		category           = QGVAR(Persistency);
-		function           = QFUNC(moduleOverwriteID3den);
-
-		class Attributes: AttributesBase {
-			class ID: Edit {
-				property = QGVAR(ModuleOverwrite_ID);
-				displayName = "Database ID";
-				typeName = "STRING";
-				defaultValue = "'-1'";
-			};
-		};
-	};
 	class GVAR(ModuleSelectivePersistency3den): GVAR(moduleBase3den) {
-		displayName        = "Peristency enable";
+		displayName        = "Enable Selective Persistency";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(moduleSelectivePersistency3den);
 	};
@@ -74,5 +60,11 @@ class CfgVehicles {
 		displayName        = "Manual Load";
 		category           = QGVAR(Persistency);
 		function           = QFUNC(moduleManualLoad);
+	};
+	class GVAR(moduleEnablePersistency): GVAR(moduleBase) {
+		displayName        = "Enable Persistency - Object";
+		category           = QGVAR(Persistency);
+		function           = QFUNC(moduleEnablePersistency);
+		curatorCanAttach   = 1;
 	};
 };

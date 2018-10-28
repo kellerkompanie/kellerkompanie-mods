@@ -1,23 +1,25 @@
 #include "script_component.hpp"
 
-if (EGVAR(persistency_settings,playersEnabled) == 0) exitWith{WARNING("saveAllPlayers: persistency for players is disabled, exiting!"); false};
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
+if (GVAR(playersEnabled) == 0) exitWith{WARNING("saveAllPlayers: persistency for players is disabled, exiting!"); 0};
 
 private _allHCs = entities "HeadlessClient_F";
-private _allHPs = allPlayers - _allHCs;
+private _allPlayers = allPlayers - _allHCs;
 
 private _successfulSaves = 0;
 {
-	private _isBlacklisted = _x getVariable [QEGVAR(persistency_settings,isBlacklisted), false];
-	private _selectivePersistencyEnabled = _x getVariable [QEGVAR(persistency_settings,persistencyEnabled), false];
+	private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
+	private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
 
-	if(!_isBlacklisted && ( EGVAR(persistency_settings,cratesEnabled) == 1 || (EGVAR(persistency_settings,cratesEnabled) == 2 && _selectivePersistencyEnabled) ) ) then {
+	if(!_isBlacklisted && ( GVAR(playersEnabled) == PERSISTENCY_ENABLED || (GVAR(playersEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
 		private _retVal = _x call FUNC(savePlayerLoadout);
 		if(_retVal) then {
 			_successfulSaves = _successfulSaves + 1;
 		};
 	};
-} forEach _allHPs;
+} forEach _allPlayers;
 
-(format ["[KEKO] (persistency) saved %1 players", _successfulSaves]) remoteExec ["systemChat", -2];
+INFO_2("saveAllPlayers: saved %1/%2 crates successfully", _successfulSaves, count _allPlayers);
 
-true
+_successfulSaves

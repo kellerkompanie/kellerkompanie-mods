@@ -23,7 +23,7 @@ INFO("added custom sql protocol keko_persistency:kellerkompanie-persistency.ini"
 
 // TODO create tables if not exist
 
-"extDB3" callExtension format [ "1:keko_persistency:createTableLoadout"];
-"extDB3" callExtension format [ "1:keko_persistency:createTableCrate"];
-"extDB3" callExtension format [ "1:keko_persistency:createTableVehicle"];
-"extDB3" callExtension format [ "1:keko_persistency:createTableMoney"];
+"extDB3" callExtension "1:keko_persistency:createTableLoadout";
+"extDB3" callExtension "1:keko_persistency:createTableCrate";
+"extDB3" callExtension "1:keko_persistency:createTableVehicle";
+"extDB3" callExtension "1:keko_persistency:createTableMoney";

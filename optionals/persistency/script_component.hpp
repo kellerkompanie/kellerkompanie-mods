@@ -15,3 +15,4 @@
 #endif
 
 #include "\x\keko\addons\main\script_macros.hpp"
+#include "\x\keko\addons\persistency\script_macros.hpp"

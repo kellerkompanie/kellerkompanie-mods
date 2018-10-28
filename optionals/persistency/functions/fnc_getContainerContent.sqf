@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
+
 params ["_crate"];
 
 // get all items without containers

@@ -6,8 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
-if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
+if !(GVAR(enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
+if (GVAR(key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
 
 INFO("running XEH_preInit");
 
@@ -24,10 +24,9 @@ addMissionEventHandler ["HandleDisconnect",
 	_unit call FUNC(savePlayerLoadout);
 }];
 
-if !(isServer) then {
-	["keko_loadout_onLoadoutFinished", {
-		player call FUNC(loadPlayerLoadout);		
-	}] call CBA_fnc_addEventHandler;
-};
+["keko_loadout_onLoadoutFinished", {
+	params ["_player"];
+	_player call FUNC(loadPlayerLoadout);
+}] call CBA_fnc_addEventHandler;
 
 ADDON = true;

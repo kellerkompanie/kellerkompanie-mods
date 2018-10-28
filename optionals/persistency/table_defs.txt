@@ -18,6 +18,7 @@ COLLATE 'utf8_german2_ci';
 CREATE TABLE IF NOT EXISTS crate (
 	CrateID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	PersistencyKey CHAR(32) NOT NULL,
+	CrateVariable CHAR(64) NOT NULL,
 	Time DATETIME NOT NULL,
 	Class TEXT NOT NULL,
 	Position TEXT NOT NULL,
@@ -25,7 +26,8 @@ CREATE TABLE IF NOT EXISTS crate (
 	Items TEXT NOT NULL,
 	Magazines TEXT NOT NULL,
 	Weapons TEXT NOT NULL,
-	Containers TEXT NOT NULL)
+	Containers TEXT NOT NULL,
+	UNIQUE (PersistencyKey, CrateVariable))
 CHARACTER SET 'utf8'
 COLLATE 'utf8_german2_ci';
 
@@ -34,6 +36,7 @@ COLLATE 'utf8_german2_ci';
 CREATE TABLE IF NOT EXISTS vehicle (
 	VehicleID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	PersistencyKey CHAR(32) NOT NULL,
+	VehicleVariable CHAR(64) NOT NULL,
 	Time DATETIME NOT NULL,
 	Class TEXT NOT NULL,
 	Position TEXT NOT NULL,
@@ -43,7 +46,8 @@ CREATE TABLE IF NOT EXISTS vehicle (
 	Weapons TEXT NOT NULL,
 	Containers TEXT NOT NULL,
 	Fuel TEXT NOT NULL,
-	Damage TEXT NOT NULL)
+	Damage TEXT NOT NULL,
+	UNIQUE (PersistencyKey, VehicleVariable))
 CHARACTER SET 'utf8'
 COLLATE 'utf8_german2_ci';
 

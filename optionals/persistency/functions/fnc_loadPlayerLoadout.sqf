@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-if !(EGVAR(persistency_settings,enabled)) exitWith{WARNING("loadPlayerLoadout: persistency disabled, exiting!"); false};
-if (EGVAR(persistency_settings,key) == "") exitWith{WARNING("loadPlayerLoadout: persistency key not set, exiting!"); false};
-if (EGVAR(persistency_settings,playersEnabled) == 0) exitWith{WARNING("loadPlayerLoadout: persistency for players is disabled, exiting!"); false};
+EXIT_IF_PERSISTENCY_DISABLED;
+EXIT_IF_KEY_INVALID;
+if (GVAR(playersEnabled) == 0) exitWith{WARNING("loadPlayerLoadout: persistency for players is disabled, exiting!"); false};
 
 params ["_playerUnit"];
 
@@ -19,9 +19,9 @@ if (_playerUID find "HC" >= 0) exitWith{
 	false
 };
 
-TRACE_3("loadPlayerLoadout", _playerUID, _playerName, EGVAR(persistency_settings,key));
+TRACE_3("loadPlayerLoadout", _playerUID, _playerName, GVAR(key));
 
-private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", EGVAR(persistency_settings,key), _playerUID]);
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", GVAR(key), _playerUID]);
 
 if ((_ret select 0) == 1) then {
 	TRACE_1("loadPlayerLoadout: loading sucessful %1", _ret);
