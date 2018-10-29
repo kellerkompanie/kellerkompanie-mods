@@ -28,7 +28,7 @@ if(isServer) then {
 				GVAR(aiKilled) = GVAR(aiKilled) + 1;
 			};
 			private _faction = faction _unit;
-			if ( _faction == "CIV_F" || _faction == "CIV_IDAP_F") then {
+			if ( _faction in ["CIV_F","CIV_IDAP_F","LOP_AFR_Civ","LOP_CHR_Civ","LOP_TAK_Civ","ISC_Civs","rds_rus_civ"]) then {
 				GVAR(civsKilled) = GVAR(civsKilled) + 1;
 			};
 		};
