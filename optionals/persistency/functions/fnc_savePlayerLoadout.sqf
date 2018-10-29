@@ -27,7 +27,7 @@ private _position = getPos _playerUnit;
 
 TRACE_2("savePlayerLoadout", _playerUID, _playerName);
 
-private _ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
+"extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
 	GVAR(key),
 	_playerUID,
 	_playerName,
@@ -36,6 +36,10 @@ private _ret = "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoad
 	_engineerClass,
 	_rank,
 	_position];
+
+if (GVAR(moneyEnabled)) then {
+	_playerUnit call FUNC(saveMoney);
+};
 
 TRACE_1("savePlayerLoadout", _ret);
 
