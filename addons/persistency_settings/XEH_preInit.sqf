@@ -102,6 +102,19 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
+	QEGVAR(persistency,synchronizePlayerPosition), // key/reference variable
+	"LIST", // type of setting
+	["Synchronize Player Position", "Enable/Disable synchronization of player position."], // name and tooltip
+	"Kellerkompanie Persistency", // category
+	[
+		[false,true], // values
+		["Disabled", "Enabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
 	QEGVAR(persistency,moneyEnabled), // key/reference variable
 	"LIST", // type of setting
 	["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
