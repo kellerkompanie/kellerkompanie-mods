@@ -1,3 +1,5 @@
+PREP(canLocationBeCaptured);
+PREP(canPOIBeUsed);
 PREP(captureLocation);
 PREP(createPOI);
 PREP(dbGetLocations);
