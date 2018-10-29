@@ -11,8 +11,7 @@ GVAR(Locations) = [];
 
 GVAR(Checkpoints) = [];
 GVAR(PowerPlants) = 0;
-
-GVAR(PersistencyKey) = "YELLOWSTONE";
+GVAR(ControlledIndustrials) = [];
 
 GVAR(LocationMapKeys) = [];
 GVAR(LocationMapValues) = [];
@@ -23,7 +22,7 @@ if (isServer) then {
 	{
 		_x params ["_locationVariable", "_side"];
 		GVAR(LocationMapKeys) pushBack _locationVariable;
-		GVAR(LocationMapValues) pushBack _side;
+		GVAR(LocationMapValues) pushBack ["", "", "", _side, ""];
 	} forEach _dbLocations;
 };
 

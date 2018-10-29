@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private _ret = call compile ("extDB3" callExtension format [ "0:keko_redneck:getLocations:%1", GVAR(PersistencyKey)]);
+private _ret = call compile ("extDB3" callExtension format [ "0:keko_redneck:getLocations:%1", EGVAR(persistency,key)]);
 private _locations = [];
 
 if ((_ret select 0) == 1) then {

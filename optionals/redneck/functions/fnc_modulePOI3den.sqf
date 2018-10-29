@@ -174,10 +174,15 @@ if(count _syncedObjects > 0) then {
 
 if (isNull _entity) then {
 	_entity = createAgent [_entityClass, _entityPosition, [], 0, "FORM"];
+	_entity setVariable ["acex_headless_blacklist", true];
 };
 
+private _location_id = "";
 if (isNull _location) then {
 	systemChat format ["WARNING: POI %1 has no location attached!", _poi_id];
+} else {
+	_location_id = format ['%1',_location];
+	_entity setVariable [QGVAR(location), _location_id, true];
 };
 
 _entity allowDamage false;
@@ -186,87 +191,89 @@ _entity setVariable [QGVAR(POI_NAME), _poi_name, true];
 _entity setVariable [QGVAR(POI_TYPE), _poi_type, true];
 _entity setVariable [QGVAR(POI_SHOP), _poi_shop, true];
 
+private _accessCondition = format ['(alive player) && !dialog && player distance _target < 3 && "%1" call keko_redneck_fnc_canPOIBeUsed', _location_id];
+
 switch (_poi_type) do {
 		case 0: {
 			/* ATM */
-			_entity addAction["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 1: {
 			/* Item Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 2: {
 			/* Gear Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 3: {
 			/* Vehicle Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
 		};
 		case 4: {
 			/* Garage */
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
 		};
 		case 5: {
 			/* Parking */
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
+			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
 		};
 		case 6: {
 			/* Car Dealer */
-			_entity addAction["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 7: {
 			/* Trader */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 8: {
 			/* Pharmacy */
-			_entity addAction["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 9: {
 			/* Hangar */
-			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
-			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
 		};
 		case 10: {
 			/* Weapon Shop */
-			_entity addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",_accessCondition];
 		};
 		case 11: {
 			/* Mechanic */
-			_entity addAction["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 12: {
 			/* Doctor */
-			_entity addAction["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 13: {
 			/* Fuel Shop */
-			_entity addAction["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
 		};
 		case 14: {
 			/* Heli Shop */
-			_entity addAction["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
 		};
 		case 15: {
 			/* Plane Shop */
-			_entity addAction["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
 		};
 		case 16: {
 			/* Helipad */
-			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
-			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
 		};
 		case 17: {
 			/* Aircraft Dealer */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition];
 		};
 		case 18: {
 			/* Base Builder */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
 		};
 };
 

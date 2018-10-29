@@ -249,6 +249,8 @@ class CfgPatches {
 #include "CfgMarkerClasses.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgMusicClasses.hpp"
+#include "CfgMusic.hpp"
 
 #include "defines.hpp"
 
