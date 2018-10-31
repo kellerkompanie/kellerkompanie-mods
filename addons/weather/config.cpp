@@ -24,9 +24,11 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 
+#include "defines.hpp"
 #include "ui\snow_defines.hpp"
 #include "ui\snow.hpp"
-#include "ui\dust_defines.hpp"
+//#include "ui\dust_defines.hpp"
 #include "ui\dust.hpp"
+
 
 #include "CfgSounds.hpp"
