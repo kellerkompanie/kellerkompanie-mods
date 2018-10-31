@@ -10,11 +10,8 @@ private _action = [
             (_x != _target) && {([_target, _x] call ace_interaction_fnc_getInteractionDistance) < 10}
         } params [["_nearestVehicle", objNull]];
 
-        if (isNull _nearestVehicle) then {
-
-        } else {
-
-            [_target, _nearestVehicle] call FUNC(transferToVehicle);
+        if !(isNull _nearestVehicle) then {
+			[_target, _nearestVehicle] call FUNC(transferToVehicle);
         };
     },
     {
@@ -45,3 +42,8 @@ private _action = [
 ["WeaponHolder", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["ReammoBox_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+
+if (isServer && GVAR(preventCorpseLooting)) then {
+	addMissionEventHandler ["EntityKilled", {call FUNC(onEntityKilled)}];
+};
