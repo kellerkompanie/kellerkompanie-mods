@@ -5,49 +5,26 @@ params ["_unit"];
 removeAllWeapons _unit;
 removeAllAssignedItems _unit;
 removeAllItems _unit;
+clearMagazineCargo _unit;
 
-private _backpack = backpack _unit;
-private _uniform = uniform _unit;
-private _vest = vest _unit;
-private _nvg = hmd _unit;
+private _uniform = uniformContainer _unit;
+private _vest = vestContainer _unit;
+private _backpack = backpackContainer _unit;
 
-if !(_uniform isEqualTo "") then {
-	clearWeaponCargoGlobal _uniform;
-    clearMagazineCargoGlobal _uniform;
-    clearBackpackCargoGlobal _uniform;
-    clearItemCargoGlobal _uniform;
-};
+private _possiblecontainers = [_uniform, _vest, _backpack];
 
-if !(_vest isEqualTo "") then {
-	clearWeaponCargoGlobal _uniform;
-    clearMagazineCargoGlobal _uniform;
-    clearBackpackCargoGlobal _uniform;
-    clearItemCargoGlobal _uniform;
-};
+for "_i" from 0 to (floor random [0, 3, 6]) step 1 do {
+	private _medicalItem = selectRandom ["ACE_fieldDressing","keko_medical_painkillers","ACE_tourniquet","ACE_quikclot","adv_aceSplint_splint","ACE_elasticBandage","ACE_packingBandage"];
 
-if !(_backpack isEqualTo "") then {
-	clearWeaponCargoGlobal _uniform;
-    clearMagazineCargoGlobal _uniform;
-    clearBackpackCargoGlobal _uniform;
-    clearItemCargoGlobal _uniform;
-};
+	{
+		private _itemAdded = false;
+	    if ( !(isNull _x) ) then {
+	        if ( _x canAdd [_medicalItem, 1] ) exitWith {
+	            _x addItemCargoGlobal [_medicalItem, 1];
+				_itemAdded = true;
+	        };
+	    };
 
-if !(_nvg isEqualTo "") then {
-	_unit unlinkItem _nvg;
-};
-
-// add random distribution of medical items
-for "_i" from 0 to 5 step 1 do {
-	private _medicalItem = selectRandom ["ACE_fieldDressing","ACE_morphine","ACE_tourniquet","ACE_epinephrine","ACE_quikclot","adv_aceSplint_splint","ACE_elasticBandage","ACE_packingBandage"];
-	if !(_uniform isEqualTo "") then {
-		_unit addItemToUniform _medicalItem;
-	} else {
-		if !(_vest isEqualTo "") then {
-			_unit addItemToVest _medicalItem;
-		} else {
-			if !(_backpack isEqualTo "") then {
-				_unit addItemToBackpack _medicalItem;
-			};
-		};
-	};
+		if(_itemAdded) exitWith {};
+	} foreach _possiblecontainers;
 };

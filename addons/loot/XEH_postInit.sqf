@@ -46,7 +46,10 @@ private _action = [
 
 if (isServer && GVAR(preventCorpseLooting)) then {
 	addMissionEventHandler ["EntityKilled", {
-		[{(_this select 0) call FUNC(onEntityKilled)}, [_this], 5] call CBA_fnc_waitAndExecute;
+		params ["_unit"];
+		if (_unit isKindOf "CAManBase") then {
+			[{(_this select 0) call FUNC(onEntityKilled)}, [_this], 5] call CBA_fnc_waitAndExecute;
+		};
 	}];
 
 
