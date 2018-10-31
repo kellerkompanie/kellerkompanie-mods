@@ -1,4 +1,3 @@
-// original version by Bear https://steamcommunity.com/sharedfiles/filedetails/?id=1439779114
 #include "script_component.hpp"
 
 params ["_target", "_vehicle"];
