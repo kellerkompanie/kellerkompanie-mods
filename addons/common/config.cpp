@@ -19,6 +19,7 @@ class CfgPatches {
             QGVAR(moduleMissionSuccess),
             QGVAR(moduleMissionFail),
             QGVAR(moduleACEGarrison3den),
+			QGVAR(moduleCuratorCamEars),
 
 			"keko_ModuleInitMission3den",
 			"keko_ModuleRespawnPosition3den",

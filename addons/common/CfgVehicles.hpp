@@ -265,4 +265,9 @@ class CfgVehicles {
 		isTriggerActivated=1;
 		curatorCanAttach=1;
 	};
+	class GVAR(moduleCuratorCamEars): GVAR(moduleBase)	{
+		displayName        = "Enable/Disable CuratorCam Ears";
+		category           = QGVAR(Default);
+		function           = QFUNC(moduleCuratorCamEars);
+	};
 };

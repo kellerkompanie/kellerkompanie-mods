@@ -12,6 +12,7 @@ PREP(moduleAssignDoctor);
 PREP(moduleAssignEngineer);
 PREP(moduleAssignMedic);
 PREP(moduleAssignRepairSpecialist);
+PREP(moduleCuratorCamEars);
 PREP(moduleInitMission3den);
 PREP(moduleLightning);
 PREP(moduleLimitWounds);
