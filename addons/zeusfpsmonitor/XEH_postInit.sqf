@@ -2,14 +2,13 @@
 
 // Original version by DriftingNitro with help from Commy2, Dedmen, and Dscha
 
-if (!GVAR(enabled)) exitWith { WARNING("zeusfpsmonitor disabled"); };
-if (!hasInterface)  exitWith { WARNING("(zeusfpsmonitor) no need to execute on server, exiting"); };
+if (!GVAR(enabled)) exitWith { };
+if (!hasInterface)  exitWith { };
 
-INFO("running postInit");
 
 //	Let each client update their FPS into a public variable based on a fixed update interval
 
-private _handle = [] spawn {
+[] spawn {
 	if(isNil QGVAR(FPSDiagActive)) then
 	{
 		GVAR(FPSDiagActive) = true;
