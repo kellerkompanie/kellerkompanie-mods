@@ -1,20 +1,31 @@
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+    name = #ITEM; \
+    count = COUNT; \
+};
+
 class CfgVehicles {
-    class ACE_morphineItem;
-	class GVAR(painkillersItem): ACE_morphineItem {
+  	class Item_Base_F;
+    class ACE_painKillerItem: ACE_morphineItem {
         scope = 2;
         scopeCurator = 2;
-        displayName = "Painkillers";
+        displayName = "Painkiller";
         author = "Schwaggot";
         vehicleClass = "Items";
-		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_PainKillers_F.jpg";
+		    //editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_PainKillers_F.jpg";
         class TransportItems {
-			class GVAR(painkillers) {
-				name = QGVAR(painkillers);
-				count = 1;
-			};
+              MACRO_ADDITEM(ACE_painKiller,1);
         };
-	};
-};
+    };
+
+  class NATO_Box_Base;
+  class ACE_medicalSupplyCrate: NATO_Box_Base {
+    class TransportItems;
+  };
+  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
+    class TransportItems: TransportItems {
+      MACRO_ADDITEM(ACE_painKiller,20);
+    };
+  };
 
 class Man;
 class CAManBase: Man {
@@ -33,4 +44,5 @@ class CAManBase: Man {
 		   };
 	   };
    };
+};
 };

@@ -3,10 +3,10 @@
 class CfgPatches {
     class ADDON {
         units[] = {
-            QGVAR(painkillersItem)
+            "ACE_painKillerItem"
         };
         weapons[] = {
-			QGVAR(painkillers)};
+			"ACE_painKiller"
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",

@@ -1,9 +1,9 @@
 class CfgSounds {
-	sounds[] = {QGVAR(PainkillersSound)};
+	sounds[] = {QGVAR(PainkillerSound)};
 
-	class GVAR(PainkillersSound) {
-		name = QGVAR(PainkillersSound);
-		sound[] = {QPATHTOF(sounds\take_painkillers.ogg), 3, 1};
+	class GVAR(PainkillerSound) {
+		name = QGVAR(PainkillerSound);
+		sound[] = {QPATHTOF(sounds\take_painkiller.ogg), 3, 1};
 		titles[] = {};
 	};
 };
