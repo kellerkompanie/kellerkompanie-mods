@@ -42,7 +42,7 @@ if (_isMan) then {
         _target unlinkItem _nvg;
     };
 
-    _target setVariable [GVAR(looter), true, true];
+    _target setVariable [QGVAR(looter), true, true];
 } else {
     _items = magazineCargo _target;
     _items append weaponCargo _target;
