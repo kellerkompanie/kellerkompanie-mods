@@ -65,6 +65,12 @@ class CfgVehicles {
         function           = QFUNC(moduleSupplyDrop);
         icon               = QPATHTOF(ui\icon_paradrop.paa);
     };
+	class GVAR(moduleHeliDrop): GVAR(moduleBase) {
+        displayName        = "Heli Drop";
+        category           = QGVAR(Logistics);
+        function           = QFUNC(moduleHeliDrop);
+        icon               = QPATHTOF(ui\icon_paradrop.paa);
+    };
     class GVAR(moduleFuelConsumption3den): GVAR(moduleBase3den) {
         displayName        = "Fuel Consumption";
         category           = QGVAR(Logistics);
