@@ -57,6 +57,7 @@ class CfgVehicles {
 		displayName        = "Apply Loadout";
 		category           = QGVAR(Loadout);
 		function           = QFUNC(moduleApplyLoadout);
+		icon = QPATHTOF(ui\loadout_change_icon.paa);
 		curatorCanAttach   = 1;
 	};
 };
