@@ -7,6 +7,7 @@ class CfgPatches {
             QGVAR(moduleAddLogisticsMenu3den),
             QGVAR(moduleSpawnCrate),
             QGVAR(moduleSupplyDrop),
+			QGVAR(moduleHeliDrop),
             QGVAR(moduleFuelConsumption3den),
             QGVAR(moduleCustomLogistics3den),
 			"keko_ModuleAddLogisticsMenu3den",
@@ -34,3 +35,4 @@ class CfgPatches {
 #include "ui\dialog_logisticsMenu.hpp"
 #include "ui\dialog_spawnCrate.hpp"
 #include "ui\dialog_supplyDrop.hpp"
+#include "ui\dialog_heliDrop.hpp"
