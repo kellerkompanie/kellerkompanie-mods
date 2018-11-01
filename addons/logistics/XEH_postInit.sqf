@@ -10,6 +10,9 @@ if ( GVAR(customLogistics) == 2 ) then {
 	};
 };
 
+if (GVAR(virtualLogistics)) then {
+	call FUNC(addVirtualLogisticActions);
+};
 
 if(isServer && isDedicated) exitWith {WARNING("postInit: exiting because isServer && isDedicated");};
 
