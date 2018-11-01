@@ -30,3 +30,8 @@ for "_i" from 0 to (floor random [0, 3, 6]) step 1 do {
 		if(_itemAdded) exitWith {};
 	} foreach _possiblecontainers;
 };
+
+private _weaponHolders = nearestObjects [_unit, ["WeaponHolderSimulated"], 5];
+{
+    _x setDamage 1;
+} forEach _weaponHolders;
