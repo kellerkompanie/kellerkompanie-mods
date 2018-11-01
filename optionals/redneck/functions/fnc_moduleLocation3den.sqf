@@ -39,10 +39,13 @@ if (_loc_id in GVAR(LocationMapKeys)) then {
 	_previousVal set [4, _loc_position];
 	_loc_side = (GVAR(LocationMapValues) select _idx) select 3;
 	GVAR(LocationMapValues) set [_idx, _previousVal];
+	publicVariable QGVAR(LocationMapValues);
 } else {
 	GVAR(LocationMapKeys) pushBack _loc_id;
 	GVAR(LocationMapValues) pushBack [_loc_name,_loc_type,_loc_radius,_loc_side,_loc_position];
 	[_loc_id, _loc_side] call FUNC(dbUpdateLocation);
+	publicVariable QGVAR(LocationMapKeys);
+	publicVariable QGVAR(LocationMapValues);
 };
 
 switch (_loc_type) do {

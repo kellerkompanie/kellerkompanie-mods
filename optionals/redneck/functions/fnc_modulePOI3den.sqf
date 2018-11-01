@@ -196,84 +196,84 @@ private _accessCondition = format ['(alive player) && !dialog && player distance
 switch (_poi_type) do {
 		case 0: {
 			/* ATM */
-			_entity addAction["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 1: {
 			/* Item Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 2: {
 			/* Gear Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 3: {
 			/* Vehicle Shop */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 4: {
 			/* Garage */
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 5: {
 			/* Parking */
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
-			_entity addAction["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 6: {
 			/* Car Dealer */
-			_entity addAction["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 7: {
 			/* Trader */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 8: {
 			/* Pharmacy */
-			_entity addAction["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 9: {
 			/* Hangar */
-			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
-			_entity addAction["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+			[_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 10: {
 			/* Weapon Shop */
-			_entity addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition];
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 11: {
 			/* Mechanic */
-			_entity addAction["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 12: {
 			/* Doctor */
-			_entity addAction["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 13: {
 			/* Fuel Shop */
-			_entity addAction["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 14: {
 			/* Heli Shop */
-			_entity addAction["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 15: {
 			/* Plane Shop */
-			_entity addAction["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 16: {
 			/* Helipad */
-			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition];
-			_entity addAction["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+			[_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 17: {
 			/* Aircraft Dealer */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 		case 18: {
 			/* Base Builder */
-			_entity addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition];
+			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
 		};
 };
 

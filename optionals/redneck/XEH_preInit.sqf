@@ -24,6 +24,9 @@ if (isServer) then {
 		GVAR(LocationMapKeys) pushBack _locationVariable;
 		GVAR(LocationMapValues) pushBack ["", "", "", _side, ""];
 	} forEach _dbLocations;
+
+	publicVariable QGVAR(LocationMapKeys);
+	publicVariable QGVAR(LocationMapValues);
 };
 
 ADDON = true;
