@@ -1,5 +1,7 @@
+PREP(aceForceLoadItem);
 PREP(addFuelConsumptionHandler);
 PREP(addLogisticsMenu);
+PREP(addVirtualLogisticActions);
 PREP(clearCargo);
 PREP(dialogHeliDropCallback);
 PREP(dialogHeliDropInit);

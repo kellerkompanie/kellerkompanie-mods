@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if !(isServer) exitWith {_this remoteExecCall [QFUNC(heliDrop), 2]};
+
 //[_targetPos select 0, _targetPos select 1, 300]
 private _targetPos = [];
 private _crate = "";
@@ -44,7 +46,7 @@ createVehicleCrew _vehicle;
 	_x addCuratorEditableObjects [[_crate], false];
 } forEach allCurators;
 
-[_crate, _vehicle, true] call ace_cargo_fnc_loadItem;
+[_crate, _vehicle, true] call FUNC(aceForceLoadItem);
 
 _vehicle allowDamage false;
 _vehicle flyInHeight 100;

@@ -47,4 +47,17 @@ PREP_RECOMPILE_END;
 	1
 ] call cba_settings_fnc_init;
 
+[
+	QGVAR(virtualLogistics), // key/reference variable
+	"LIST", // type of setting
+	["Virtual Logistics", "Enable/Disable virtual logistics."], // name and tooltip
+	"Kellerkompanie Logistics", // category
+	[
+		[true, false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
 ADDON = true;
