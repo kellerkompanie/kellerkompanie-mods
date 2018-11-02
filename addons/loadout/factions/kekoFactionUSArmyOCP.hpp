@@ -197,7 +197,7 @@ class kekoFactionUSArmyOCP: kekoFactionBase {
 	class kekoATSpecialist: kekoSoldierUSArmyOCP {
 		name = "Anti-Tank Specialist";
 
-		backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
+		backpack[] = {"B_Carryall_cbr"};
 		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_Javelin};
 	};
@@ -205,7 +205,7 @@ class kekoFactionUSArmyOCP: kekoFactionBase {
 	class kekoATSpecialistAsst: kekoSoldierUSArmyOCP {
 		name = "Anti-Tank Specialist Assistant";
 
-		backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
+		backpack[] = {"B_Carryall_cbr"};
 		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"Rangefinder"};
 	};
