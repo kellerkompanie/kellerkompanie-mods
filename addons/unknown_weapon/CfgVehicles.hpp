@@ -8,7 +8,7 @@ class CfgVehicles {
         displayName        = "Whitelist Weapons"; 
         category           = QGVAR(UnknownWeapon);
         function           = QFUNC(moduleWhitelistWeapons3den);
-        icon = QPATHTOF(ui\icon_weapon.pac);
+        icon = QPATHTOF(ui\icon_weapon.paa);
         scope              = 2; 
         scopeCurator       = 1;
         functionPriority   = 2;
@@ -18,7 +18,7 @@ class CfgVehicles {
     };
     class GVAR(moduleWhitelistWeapons): Module_F {
         displayName        = "Whitelist Weapons";
-        icon               = QPATHTOF(ui\icon_weapon.pac); 
+        icon               = QPATHTOF(ui\icon_weapon.paa); 
         category           = QGVAR(UnknownWeapon);
         function           = QFUNC(moduleWhitelistWeapons);
         scope              = 1; 

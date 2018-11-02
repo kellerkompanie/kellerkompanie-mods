@@ -10,7 +10,7 @@ class CfgVehicles {
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = QPATHTOF(ui\kill.paa);
+					icon = QPATHTOF(ui\icon_kill.paa);
 				};
 			};
 		};
