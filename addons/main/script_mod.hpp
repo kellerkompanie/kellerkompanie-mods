@@ -5,8 +5,8 @@
 
 #define MAJOR 2
 #define MINOR 4
-#define PATCHLVL 4
-#define BUILD 26
+#define PATCHLVL 5
+#define BUILD 27
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
