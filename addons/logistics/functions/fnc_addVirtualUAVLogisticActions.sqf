@@ -21,14 +21,17 @@ private _action = [QGVAR(supplyDropUAV), "Call UAV Supply", QPATHTOF(ui\icon_uav
   QEGVAR(faction_generic,blufor_lead),
   QEGVAR(faction_generic,blufor_sergeant),
   QEGVAR(faction_generic,blufor_jtac),
+  QEGVAR(faction_generic,blufor_sql),
   QEGVAR(faction_generic,indfor_zeus),
   QEGVAR(faction_generic,indfor_lead),
   QEGVAR(faction_generic,indfor_sergeant),
   QEGVAR(faction_generic,indfor_jtac),
+  QEGVAR(faction_generic,indfor_sql),
   QEGVAR(faction_generic,opfor_zeus),
   QEGVAR(faction_generic,opfor_lead),
   QEGVAR(faction_generic,opfor_sergeant),
-  QEGVAR(faction_generic,opfor_jtac)];
+  QEGVAR(faction_generic,opfor_jtac),
+  QEGVAR(faction_generic,opfor_sql)];
 
 private _i = 0;
 {
