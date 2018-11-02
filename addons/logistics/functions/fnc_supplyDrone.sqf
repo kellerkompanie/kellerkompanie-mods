@@ -66,14 +66,12 @@ _pilot setSkill 1;
 _group allowFleeing 0;
 _group deleteGroupWhenEmpty true;
 
-_uav setVariable [QGVAR(UAVHomeBase), _spawnPos];
 _uav flyInHeight 30;
 
 private _actionFlyHome = [QGVAR(UAVFlyHome), "Return to Base", "",
 	{
-		private _dest = _target getVariable QGVAR(UAVHomeBase);
 		_target flyInHeight 30;
-		private _homeWP = (group ((crew _target) select 0)) addWaypoint [_dest, 0];
+		private _homeWP = (group ((crew _target) select 0)) addWaypoint [QGVAR(uavSupplyBase), 0];
 		_homeWP setWaypointStatements ["true", "private _vehicle = vehicle this; _vehicle remoteExec ['deleteVehicle', _vehicle];"];
 	},
 	{true}] call ace_interact_menu_fnc_createAction;
