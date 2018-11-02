@@ -125,6 +125,12 @@ class CfgVehicles {
         function           = QFUNC(moduleCustomLogistics3den);
         icon 			   = QPATHTOF(ui\icon_crate.paa);
     };
+	class GVAR(moduleUAVBase3den): GVAR(moduleBase3den) {
+        displayName        = "UAV Supply Base";
+        category           = QGVAR(Logistics);
+        function           = QFUNC(moduleUAVBase3den);
+        icon 			   = QPATHTOF(ui\icon_uav.paa);
+    };
 	class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
         category           = QEGVAR(common,Deprecated);
