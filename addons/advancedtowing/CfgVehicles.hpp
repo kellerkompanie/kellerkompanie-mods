@@ -5,7 +5,7 @@
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
-		icon = QPATHTOF(ui\rope.paa);\
+		icon = QPATHTOF(ui\icon_rope.paa);\
 	};
 
 #define KEKO_ADVANCEDTOWING_PUTAWAY_ACTION class keko_advancedtowing_putAwayTowRopes {\
@@ -15,7 +15,7 @@
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
-		icon = QPATHTOF(ui\rope.paa);\
+		icon = QPATHTOF(ui\icon_rope.paa);\
 	};
 
 #define KEKO_ADVANCEDTOWING_ATTACH_ACTION class keko_advancedtowing_attachToTowRopes {\
@@ -25,7 +25,7 @@
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
-		icon = QPATHTOF(ui\rope.paa);\
+		icon = QPATHTOF(ui\icon_rope.paa);\
 	};
 
 #define	KEKO_ADVANCEDTOWING_PICKUP_ACTION class keko_advancedtowing_pickupTowRopes {\
@@ -35,7 +35,7 @@
 		showDisabled = 0;\
 		priority = 1;\
 		distance = 5;\
-		icon = QPATHTOF(ui\rope.paa);\
+		icon = QPATHTOF(ui\icon_rope.paa);\
 	};
 
 class CfgVehicles {
@@ -47,7 +47,7 @@ class CfgVehicles {
 				displayName = "Drop Tow Ropes";
 				condition = "keko_advancedtowing_enabled && (_player call keko_advancedtowing_fnc_canDropTowRopes)";
 				statement = "[_player, _player getVariable ['keko_advancedtowing_towRopesVehicle', objNull]] call keko_advancedtowing_fnc_dropTowRopes";
-				icon = QPATHTOF(ui\rope.paa);
+				icon = QPATHTOF(ui\icon_rope.paa);
 			};
 		};
 	};
