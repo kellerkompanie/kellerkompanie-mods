@@ -12,6 +12,7 @@ PREP(dialogSpawnCrateCallback);
 PREP(dialogSpawnCrateInit);
 PREP(dialogSupplyDropCallback);
 PREP(dialogSupplyDropInit);
+PREP(droneReturnHome);
 PREP(fillCrate);
 PREP(hasAccess);
 PREP(heliDrop);
