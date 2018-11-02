@@ -101,9 +101,9 @@
 		{10, "ACE_salineIV_500"},\
 		{2, "ACE_surgicalKit"},\
 		{10, "ACE_tourniquet"},\
-		{10, "ACE_larynx"},\
-		{10, "ACE_guedel"},\
-		{1, "ACE_accuvac"},\
+		{10, "KAT_larynx"},\
+		{10, "KAT_guedel"},\
+		{1, "KAT_accuvac"},\
 		{30, "adv_aceSplint_splint"}}
 
 #define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
