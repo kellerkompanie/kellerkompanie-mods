@@ -10,8 +10,16 @@ if ( GVAR(customLogistics) == 2 ) then {
 	};
 };
 
-if (GVAR(virtualLogistics)) then {
-	call FUNC(addVirtualLogisticActions);
+if (GVAR(virtualHeliLogistics)) then {
+	call FUNC(addVirtualHeliLogisticActions);
+};
+
+if (GVAR(virtualUAVLogistics)) then {
+	if (isNil QGVAR(uavSupplyBase)) then {
+		systemChat "[KEKO] (Logistics) WARNING: Virtual UAV Logistics enabled but no supply base set! UAV supply not available.";
+	} else {
+		call FUNC(addVirtualUAVLogisticActions);
+	};
 };
 
 if(isServer && isDedicated) exitWith {WARNING("postInit: exiting because isServer && isDedicated");};
