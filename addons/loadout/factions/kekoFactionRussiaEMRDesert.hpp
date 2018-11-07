@@ -117,7 +117,7 @@ class kekoFactionRussiaEMRDesert: kekoFactionBase {
 			{4, PRIMARY_MAG},
 			{4, PRIMARY_MAG_TRACER},
 			{6, UGL_MAG},
-			{2, GRENADE}
+			{2, GRENADE},
 			{2, PRIMARY_MAG}};
 		primary[] = {
 			keko_W_AK74M_GL};
