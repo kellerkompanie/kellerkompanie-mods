@@ -17,17 +17,17 @@ private _action = [QGVAR(supplyDropUAV), "Call UAV Supply", QPATHTOF(ui\icon_uav
 {
 	[_x, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 } forEach [
-  QEGVAR(faction_generic,blufor_zeus),
+  QEGVAR(faction_generic,blufor_command),
   QEGVAR(faction_generic,blufor_lead),
   QEGVAR(faction_generic,blufor_sergeant),
   QEGVAR(faction_generic,blufor_jtac),
   QEGVAR(faction_generic,blufor_sql),
-  QEGVAR(faction_generic,indfor_zeus),
+  QEGVAR(faction_generic,indfor_command),
   QEGVAR(faction_generic,indfor_lead),
   QEGVAR(faction_generic,indfor_sergeant),
   QEGVAR(faction_generic,indfor_jtac),
   QEGVAR(faction_generic,indfor_sql),
-  QEGVAR(faction_generic,opfor_zeus),
+  QEGVAR(faction_generic,opfor_command),
   QEGVAR(faction_generic,opfor_lead),
   QEGVAR(faction_generic,opfor_sergeant),
   QEGVAR(faction_generic,opfor_jtac),
@@ -68,17 +68,17 @@ private _i = 0;
 			*/
 		   [_x, 1, ["ACE_SelfActions", QGVAR(supplyDropUAV)], _action] call ace_interact_menu_fnc_addActionToClass;
 		} forEach [
-		   QEGVAR(faction_generic,blufor_zeus),
+		   QEGVAR(faction_generic,blufor_command),
 		   QEGVAR(faction_generic,blufor_lead),
 		   QEGVAR(faction_generic,blufor_sergeant),
 		   QEGVAR(faction_generic,blufor_jtac),
 		   QEGVAR(faction_generic,blufor_sql),
-		   QEGVAR(faction_generic,indfor_zeus),
+		   QEGVAR(faction_generic,indfor_command),
 		   QEGVAR(faction_generic,indfor_lead),
 		   QEGVAR(faction_generic,indfor_sergeant),
 		   QEGVAR(faction_generic,indfor_jtac),
 		   QEGVAR(faction_generic,indfor_sql),
-		   QEGVAR(faction_generic,opfor_zeus),
+		   QEGVAR(faction_generic,opfor_command),
 		   QEGVAR(faction_generic,opfor_lead),
 		   QEGVAR(faction_generic,opfor_sergeant),
 		   QEGVAR(faction_generic,opfor_jtac),
