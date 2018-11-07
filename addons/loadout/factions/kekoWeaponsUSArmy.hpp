@@ -28,6 +28,7 @@ class kekoWeaponsUSArmy {
 		cfgName = "rhs_weap_m4";
 		items[] = {"rhsusf_acc_anpeq15","rhsusf_acc_compm4"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -53,6 +54,7 @@ class kekoWeaponsUSArmy {
 		cfgName = "rhs_weap_m249_pip_L";
 		magazines[] = {PRIMARY_MAG_LMG};
 		items[] = {"rhsusf_acc_elcan"};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
@@ -61,6 +63,7 @@ class kekoWeaponsUSArmy {
 		cfgName = "rhs_weap_m240B";
 		magazines[] = {PRIMARY_MAG_MMG};
 		items[] = {"rhsusf_acc_elcan"};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// Sniper

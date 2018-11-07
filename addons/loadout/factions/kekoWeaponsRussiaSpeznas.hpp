@@ -34,26 +34,30 @@ class kekoWeaponsRussiaSpeznas {
     class keko_W_AK74MR_GL: kekoPrimaryWeapon
     {
         cfgName = "rhs_weap_ak74mr_gp25";
-        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3","rhs_acc_dtk4short"};
+        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3"};
         magazines[] = {PRIMARY_MAG, PRIMARY_MAG_TRACER};
+		silencer[] = {"rhs_acc_dtk4short"};
     };
     class keko_W_AK74MR: kekoPrimaryWeapon
     {
         cfgName = "rhs_weap_ak74mr";
-        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_dtk4short","rhs_acc_grip_rk6"};
+        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_grip_rk6"};
         magazines[] = {PRIMARY_MAG, PRIMARY_MAG_TRACER};
+		silencer[] = {"rhs_acc_dtk4short"};
     };
     class keko_W_AK74M: kekoPrimaryWeapon
     {
         cfgName = "rhs_weap_ak74m_zenitco01_b33";
-        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_dtk4short","rhs_acc_grip_rk6"};
+        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_grip_rk6"};
         magazines[] = {PRIMARY_MAG, PRIMARY_MAG_TRACER};
+		silencer[] = {"rhs_acc_dtk4short"};
     };
     class keko_W_AK105: kekoPrimaryWeapon
     {
         cfgName = "rhs_weap_ak105_zenitco01_b33";
-        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_dtk4short","rhs_acc_grip_rk6"};
+        items[] = {"rhs_acc_rakurspm","rhs_acc_perst3_2dp_h","rhs_acc_grip_rk6"};
         magazines[] = {PRIMARY_MAG, PRIMARY_MAG_TRACER};
+		silencer[] = {"rhs_acc_dtk4short"};
     };
     class keko_W_ASVAL: kekoPrimaryWeapon
     {
@@ -77,6 +81,7 @@ class kekoWeaponsRussiaSpeznas {
         cfgName = "rhs_weap_svdp";
         items[] = {"rhs_acc_pso1m21"};
         magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"rhs_acc_tgpv"};
     };
 
 
