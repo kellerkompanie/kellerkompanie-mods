@@ -121,6 +121,14 @@ class kekoFactionBundeswehrSchnee: kekoFactionBase {
 		name = "Truppführer";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_G36_GL};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
