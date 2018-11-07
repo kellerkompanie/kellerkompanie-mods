@@ -41,6 +41,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		cfgName = "arifle_MX_khk_F";
 		items[] = {"acc_pointer_IR","optic_Hamr_khk_F"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX_TROPIC
 	{
@@ -53,6 +54,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		cfgName = "arifle_SPAR_01_blk_F";
 		items[] = {"acc_pointer_IR","optic_ERCO_blk_F"};
 		magazines[] = {PRIMARY_MAG_416,PRIMARY_MAG_TRACER_416};
+		silencer[] = {"muzzle_snds_m"};
 	};
 	class keko_W_A3_HK416_TROPIC: keko_W_A3_HK416
 	{
@@ -77,6 +79,7 @@ class kekoWeaponsUSBlackOpsTropic {
 	{
 		cfgName = "SMG_03C_black";
 		magazines[] = {PRIMARY_MAG_P90};
+		silencer[] = {"muzzle_snds_570"};
 	};
 	class keko_W_A3_P90_TROPIC: keko_W_A3_P90
 	{
@@ -139,6 +142,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		cfgName = "arifle_SPAR_03_blk_F";
 		items[] = {"bipod_01_F_blk","optic_SOS"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN_417,PRIMARY_MAG_MARKSMAN_TRACER_417};
+		silencer[] = {"muzzle_snds_b"};
 	};
 	class keko_W_A3_HK417_TROPIC: keko_W_A3_HK417
 	{
@@ -175,6 +179,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		cfgName = "LMG_Mk200_F";
 		items[] = {"acc_pointer_IR","bipod_03_F_blk"};
 		magazines[] = {PRIMARY_MAG_LMG_STONER};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 
@@ -185,12 +190,14 @@ class kekoWeaponsUSBlackOpsTropic {
 	{
 		cfgName = "MMG_02_black_F";
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 	class keko_W_A3_MINIMI: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_03_F";
 		magazines[] = {PRIMARY_MAG_MMG_TRACER_MINIMI,PRIMARY_MAG_MMG_MINIMI};
+		silencer[] = {"muzzle_snds_m"};
 	};
 
 
@@ -201,6 +208,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		cfgName = "hgun_P07_F";
 		items[] = {"muzzle_snds_L"};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_570"};
 	};
 	class keko_W_P99_TROPIC: keko_W_P99
 	{

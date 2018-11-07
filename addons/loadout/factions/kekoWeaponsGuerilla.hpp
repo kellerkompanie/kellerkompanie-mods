@@ -28,6 +28,7 @@ class kekoWeaponsGuerilla {
 		cfgName = "arifle_TRG21_F";
 		items[] = {"acc_flashlight","optic_ACO_grn"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_m"};
 	};
 
 	// Grenadier
@@ -43,6 +44,7 @@ class kekoWeaponsGuerilla {
 		cfgName = "srifle_DMR_06_olive_F";
 		items[] = {"acc_flashlight","optic_KHS_blk"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"muzzle_snds_b"};
 	};
 
 	// LMG
@@ -51,6 +53,7 @@ class kekoWeaponsGuerilla {
 		cfgName = "LMG_Mk200_F";
 		items[] = {"acc_flashlight","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// MMG
@@ -59,6 +62,7 @@ class kekoWeaponsGuerilla {
 		cfgName = "MMG_02_black_F";
 		items[] = {"acc_flashlight","bipod_01_F_snd","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 
@@ -69,6 +73,7 @@ class kekoWeaponsGuerilla {
 		cfgName = "hgun_Rook40_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_l"};
 	};
 
 
