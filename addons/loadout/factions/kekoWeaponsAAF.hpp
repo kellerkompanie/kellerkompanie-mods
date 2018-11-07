@@ -29,6 +29,7 @@ class kekoWeaponsAAF {
 		cfgName = "arifle_Mk20_F";
 		items[] = {"acc_pointer_IR","optic_MRCO"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_m"};
 	};
 	class keko_W_A3_F2000_UGL: keko_W_A3_F2000 {
 		cfgName = "arifle_Mk20_GL_F";
@@ -44,16 +45,19 @@ class kekoWeaponsAAF {
 		cfgName = "LMG_Mk200_F";
 		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {
 		cfgName = "MMG_02_black_F";
 		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 	class keko_W_A3_EBR: kekoPrimaryWeapon {
 		cfgName = "srifle_EBR_MRCO_LP_BI_F";
 		items[] = {"acc_pointer_IR","optic_SOS","bipod_03_F_blk"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"muzzle_snds_b"};
 	};
 	class keko_W_A3_GM6: kekoPrimaryWeapon {
 		cfgName = "srifle_GM6_LRPS_F";
@@ -67,9 +71,11 @@ class kekoWeaponsAAF {
 	class keko_W_A3_ACP: kekoSecondaryWeapon {
 		cfgName = "hgun_ACPC2_F";
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_A3_ACP_SILENCED: keko_W_A3_ACP {
 		items[] = {"muzzle_snds_acp"};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 
 

@@ -124,6 +124,15 @@ class kekoFactionCTRG: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_A3_HK416_GL,
+			keko_W_A3_HK416_GL_SAND};
 	};
 
 	class kekoDoctor: kekoSoldierLight {

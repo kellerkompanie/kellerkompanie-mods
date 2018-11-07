@@ -28,6 +28,7 @@ class kekoWeaponsCSAT {
 		cfgName = "arifle_Katiba_F";
 		items[] = {"acc_pointer_IR","optic_Arco_blk_F"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_KATIBA_SHORT: keko_W_A3_KATIBA {
 		cfgName = "arifle_Katiba_C_F";
@@ -40,9 +41,10 @@ class kekoWeaponsCSAT {
 		uglMagazines[] = {HUNTIR_MAG};
 	};
 	class keko_W_A3_DMR: kekoPrimaryWeapon {
-		cfgName = "srifle_DMR_01_DMS_BI_F";
+		cfgName = "srifle_DMR_01_F";
 		items[] = {"acc_pointer_IR","optic_DMS","bipod_02_F_hex"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"muzzle_snds_b"};
 	};
 	class keko_W_A3_ZAFIR: kekoPrimaryWeapon {
 		cfgName = "LMG_Zafir_F";
@@ -53,6 +55,7 @@ class kekoWeaponsCSAT {
 		cfgName = "MMG_01_hex_F";
 		items[] = {"acc_pointer_IR","bipod_02_F_hex","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_93mmg"};
 	};
 
 
@@ -62,9 +65,11 @@ class kekoWeaponsCSAT {
 		cfgName = "hgun_Rook40_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_l"};
 	};
 	class keko_W_ROOK_SILENCED: keko_W_ROOK {
 		items[] = {"muzzle_snds_L"};
+		silencer[] = {"muzzle_snds_l"};
 	};
 
 

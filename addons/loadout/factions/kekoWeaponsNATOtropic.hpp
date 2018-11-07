@@ -29,6 +29,7 @@ class kekoWeaponsNatoTropic {
 		cfgName = "arifle_MX_khk_F";
 		items[] = {"acc_pointer_IR","optic_Hamr_khk_F"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_h_khk_f"};
 	};
 
 	// Staff
@@ -90,16 +91,19 @@ class kekoWeaponsNatoTropic {
 		cfgName = "hgun_P07_khk_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_l"};
 	};
 	class keko_W_TACTICAL: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG_SPECOPS};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
 		items[] = {"muzzle_snds_acp","acc_flashlight_pistol","optic_MRD"};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 
 
