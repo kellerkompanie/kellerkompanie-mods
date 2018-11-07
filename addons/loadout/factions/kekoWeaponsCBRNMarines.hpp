@@ -30,6 +30,7 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "arifle_MX_F";
 		items[] = {};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX
 	{
@@ -64,6 +65,7 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "arifle_MXM_F";
 		items[] = {};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
 	{
@@ -87,6 +89,7 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "MMG_02_sand_F";
 		items[] = {"bipod_01_F_blk"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
 	{
@@ -110,6 +113,7 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "SMG_03C_TR_black";
 		items[] = {"acc_flashlight","optic_Holosight_smg_blk_F"};
 		magazines[] = {PRIMARY_MAG_P90};
+		silencer[] = {"muzzle_snds_570"};
 	};
 
 	class keko_W_P99_KHAKI: kekoSecondaryWeapon
@@ -117,6 +121,7 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "hgun_P07_khk_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG_P99};
+		silencer[] = {"muzzle_snds_l"};
 	};
 
 
@@ -127,10 +132,12 @@ class kekoWeaponsCBRNMarines {
 		cfgName = "hgun_Pistol_heavy_01_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
 		items[] = {};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 
 

@@ -186,4 +186,17 @@ PREP_RECOMPILE_END;
 	1
 ] call cba_settings_fnc_init;
 
+[
+	QGVAR(giveSilencer), // key/reference variable
+	"LIST", // type of setting
+	["Give Silencer", "Enable/Disable giving silencer to player"], // name and tooltip
+	CBA_SETTINGS_CATEGORY, // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
+		0 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
 ADDON = true;

@@ -113,6 +113,14 @@ class kekoFactionCSAT: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
+		primary[] = {
+			keko_W_A3_KATIBA_GL};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
 	};
 
 	class kekoDoctor: kekoSoldierLight {

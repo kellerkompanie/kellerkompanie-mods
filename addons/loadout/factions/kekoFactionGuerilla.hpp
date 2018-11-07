@@ -24,7 +24,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 			kekoAASpecialist,
 			kekoAASpecialistAsst}},
 		{"Support", {
-			kekoMarksman,			
+			kekoMarksman,
 			kekoEOD,
 			kekoEngineer,
 			kekoDriver,
@@ -35,7 +35,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 	// define all weapons and mags
 	#include "kekoWeaponsGuerilla.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
@@ -104,9 +104,9 @@ class kekoFactionGuerilla: kekoFactionBase {
 			"H_Bandanna_camo",
 			"H_Shemag_olive",
 			"H_ShemagOpen_tan",
-			"H_ShemagOpen_khk"};	
+			"H_ShemagOpen_khk"};
 
-		primary[] = {			 
+		primary[] = {
 			keko_W_A3_TRG21};
 
 		secondary[] = {
@@ -121,7 +121,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 	class kekoLead: kekoSoldierGuerilla	{
 		name = "Lead";
-		rank = "LIEUTENANT";		
+		rank = "LIEUTENANT";
 		uniform[] = {"U_IG_leader"};
 		backpack[] = {"TFAR_rt1523g"};
 		backpackInventory[] = {{6,"UGL_FlareWhite_F"},{3,"UGL_FlareGreen_F"},{3,"UGL_FlareRed_F"}};
@@ -129,11 +129,11 @@ class kekoFactionGuerilla: kekoFactionBase {
 		primary[] = {
 			keko_W_A3_TRG21_GL};
 		helmet[] = {"H_Bandanna_khk_hs"};
-	}; 
+	};
 
 	class kekoCommand: kekoLead	{
 		name = "Command";
-		rank = "COLONEL";		
+		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
 	};
@@ -156,7 +156,15 @@ class kekoFactionGuerilla: kekoFactionBase {
 	class kekoFTL: kekoSoldierGuerilla	{
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_A3_TRG21_GL};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -182,7 +190,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 	};
 
 	class kekoRifleman: kekoSoldierGuerilla	{
-		name = "Rifleman";		
+		name = "Rifleman";
 	};
 
 	class kekoRiflemanAT: kekoSoldierGuerilla	{
@@ -200,7 +208,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 			{5, "UGL_FlareWhite_F"},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_A3_TRG21_GL};		
+			keko_W_A3_TRG21_GL};
 	};
 
 	class kekoLMG: kekoSoldierGuerilla {
@@ -219,7 +227,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierGuerilla {
@@ -237,7 +245,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
 		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierGuerilla {
@@ -279,7 +287,7 @@ class kekoFactionGuerilla: kekoFactionBase {
 			{2, GRENADE},
 			{3, PRIMARY_MAG_MARKSMAN}};
 		primary[] = {
-			keko_W_A3_DMR};		
+			keko_W_A3_DMR};
 	};
 
 	class kekoEOD: kekoSoldierLight {

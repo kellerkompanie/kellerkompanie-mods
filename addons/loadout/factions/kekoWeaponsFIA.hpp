@@ -24,6 +24,7 @@ class kekoWeaponsFIA {
 		cfgName = "arifle_Mk20_F";
 		items[] = {"acc_flashlight","optic_ACO_grn"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_m"};
 	};
 	class keko_W_A3_TRG21: keko_W_A3_Mk20
 	{
@@ -53,6 +54,7 @@ class kekoWeaponsFIA {
 		cfgName = "srifle_DMR_06_olive_F";
 		items[] = {"acc_flashlight","optic_KHS_blk"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"muzzle_snds_b"};
 	};
 
 	// LMG
@@ -61,6 +63,7 @@ class kekoWeaponsFIA {
 		cfgName = "LMG_Mk200_F";
 		items[] = {"acc_flashlight","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// MMG
@@ -69,6 +72,7 @@ class kekoWeaponsFIA {
 		cfgName = "MMG_02_black_F";
 		items[] = {"acc_flashlight","bipod_01_F_snd","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 
@@ -79,6 +83,7 @@ class kekoWeaponsFIA {
 		cfgName = "hgun_ACPC2_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 
 

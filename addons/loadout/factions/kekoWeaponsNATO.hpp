@@ -28,6 +28,7 @@ class kekoWeaponsNato {
 		cfgName = "arifle_MX_F";
 		items[] = {"acc_pointer_IR","optic_Hamr"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX
 	{
@@ -89,6 +90,7 @@ class kekoWeaponsNato {
 		cfgName = "MMG_02_sand_F";
 		items[] = {"acc_pointer_IR","bipod_01_F_blk","optic_Arco"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
 	{
@@ -114,10 +116,12 @@ class kekoWeaponsNato {
 		cfgName = "hgun_Pistol_heavy_01_F";
 		items[] = {};
 		magazines[] = {SECONDARY_MAG};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
 		items[] = {"muzzle_snds_acp","acc_flashlight_pistol","optic_MRD"};
+		silencer[] = {"muzzle_snds_acp"};
 	};
 
 
