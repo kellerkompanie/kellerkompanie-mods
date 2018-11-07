@@ -134,6 +134,7 @@ if(count _primary != 0) then {
 	private _primary_items = getArray (_primaryCfg >> "items");
 	private _primary_magazines = getArray (_primaryCfg >> "magazines");
 	private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
+	private _primary_silencer = getArray (_primaryCfg >> "silencer");
 
 	_player addWeapon _primary_cfgName;
 
@@ -156,6 +157,14 @@ if(count _primary != 0) then {
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToVest _item;
 	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _primary_silencer != 0) then {
+			private _item = selectRandom _primary_silencer;
+			//_item = [_item] call keko_fnc_replaceKeyword;
+			_player addPrimaryWeaponItem _item;
+		};
+	};
 };
 
 if(count _secondary != 0) then {
@@ -165,6 +174,7 @@ if(count _secondary != 0) then {
 	private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
 	private _secondary_items = getArray (_secondaryCfg >> "items");
 	private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
+	private _secondary_silencer = getArray (_secondaryCfg >> "silencer");
 
 	_player addWeapon _secondary_cfgName;
 
@@ -180,6 +190,14 @@ if(count _secondary != 0) then {
 		private _item = _secondary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToUniform _item;
+	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _secondary_silencer != 0) then {
+			private _item = selectRandom _secondary_silencer;
+			//_item = [_item] call keko_fnc_replaceKeyword;
+			_player addHandgunItem _item;
+		};
 	};
 };
 
