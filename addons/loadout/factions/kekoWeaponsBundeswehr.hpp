@@ -33,6 +33,7 @@ class kekoWeaponsBundeswehr {
 		cfgName = "BWA3_G36A2";
 		items[] = {"bwa3_acc_varioray_irlaser","bwa3_optic_rsas"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"bwa3_muzzle_snds_rotex_iiic"};
 	};
 	class keko_W_G36_D: keko_W_G36
 	{
@@ -76,6 +77,7 @@ class kekoWeaponsBundeswehr {
 		cfgName = "BWA3_G28";
 		items[] = {"bwa3_acc_varioray_irlaser","bwa3_optic_zo4x30_microt2_brown"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_TRACER};
+		silencer[] = {"bwa3_muzzle_snds_rotex_iia"};
 	};
 
 	// LMG
@@ -84,6 +86,7 @@ class kekoWeaponsBundeswehr {
 		cfgName = "BWA3_MG4";
 		items[] = {"BWA3_optic_ZO4x30_MicroT2"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"bwa3_muzzle_snds_rotex_iiic"};
 	};
 
 	// MMG
@@ -98,6 +101,7 @@ class kekoWeaponsBundeswehr {
 		cfgName = "BWA3_MG5";
 		items[] = {"BWA3_120Rnd_762x51_Tracer_soft"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"bwa3_muzzle_snds_rotex_iia"};
 	};
 
 	// Sniper
@@ -106,6 +110,7 @@ class kekoWeaponsBundeswehr {
 		cfgName = "BWA3_G29";
 		items[] = {"bwa3_optic_m5xi_msr_microt2","bwa3_acc_varioray_irlaser"};
 		magazines[] = {PRIMARY_MAG_SNIPER};
+		silencer[] = {"bwa3_muzzle_snds_rotex_monoblock"};
 	};
 	class keko_W_G82: kekoPrimaryWeapon
 	{

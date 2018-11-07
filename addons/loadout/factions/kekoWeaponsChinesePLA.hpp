@@ -27,6 +27,7 @@ class kekoWeaponsChinesePLA {
 	{
 		cfgName = "vme_pla_qbz95_1";
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// Grenadier
@@ -42,6 +43,7 @@ class kekoWeaponsChinesePLA {
 		cfgName = "vme_pla_qbu88";
 		items[] = {"VME_QBU88_Scope"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// LMG
@@ -49,6 +51,7 @@ class kekoWeaponsChinesePLA {
 	{
 		cfgName = "vme_pla_qjb95_1";
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// MMG
@@ -56,6 +59,7 @@ class kekoWeaponsChinesePLA {
 	{
 		cfgName = "MMG_01_tan_F";
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 	// Sniper
