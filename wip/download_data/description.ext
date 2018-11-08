@@ -1,6 +1,0 @@
-#include "base_defines.hpp"
-
-class RscTitles
-{
-	#include "rsc_downloadingData.hpp"
-};
