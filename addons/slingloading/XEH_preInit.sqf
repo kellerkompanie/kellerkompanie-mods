@@ -44,12 +44,12 @@ Parameters:
 [
 	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
-	["Advanced Towing", "Enable/Disable Advanced Towing"], // name and tooltip
-	"Kellerkompanie Advanced Towing", // category
+	["Advanced Slingloading", "Enable/Disable Advanced Slingloading"], // name and tooltip
+	"Kellerkompanie Advanced Slingloading", // category
 	[
 		[true,false], // values
 		["Enabled","Disabled"], // names
-		0 // default index
+		1 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
@@ -58,7 +58,7 @@ Parameters:
 	QGVAR(maxRopeLength), // key/reference variable
 	"SLIDER", // type of setting
 	["Max Rope Length", "Set the maximum length of the towing rope"], // name and tooltip
-	"Kellerkompanie Advanced Towing", // category
+	"Kellerkompanie Advanced Slingloading", // category
 	[
 		5,  // min value
 		30, // max value
@@ -72,7 +72,7 @@ Parameters:
 	QGVAR(classRestriction), // key/reference variable
 	"LIST", // type of setting
 	["Limit to class", "Limit towing ability to specific class"], // name and tooltip
-	"Kellerkompanie Advanced Towing", // category
+	"Kellerkompanie Advanced Slingloading", // category
 	[
 		[0,1,2,3], // values
 		["All", "Engineer", "Repair Specialist", "Engineer & Repair Specialist"], // names
@@ -85,7 +85,7 @@ Parameters:
 	QGVAR(maxTowedVehicles), // key/reference variable
 	"SLIDER", // type of setting
 	["Max towed vehicles", "Set the maximum number of vehicles that can be towed"], // name and tooltip
-	"Kellerkompanie Advanced Towing", // category
+	"Kellerkompanie Advanced Slingloading", // category
 	[
 		1,  // min value
 		3, // max value
