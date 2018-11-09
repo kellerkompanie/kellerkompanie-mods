@@ -1,5 +1,5 @@
 #define COMPONENT slingloading
-#define COMPONENT_BEAUTIFIED Sling Loading
+#define COMPONENT_BEAUTIFIED Slingloading
 #include "\x\keko\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
