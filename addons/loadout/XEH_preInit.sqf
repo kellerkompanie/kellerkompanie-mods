@@ -194,7 +194,7 @@ PREP_RECOMPILE_END;
 	[
 		[true,false], // values
 		["Enabled","Disabled"], // names
-		0 // default index
+		1 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
