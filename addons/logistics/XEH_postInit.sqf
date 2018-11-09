@@ -10,15 +10,17 @@ if ( GVAR(customLogistics) == 2 ) then {
 	};
 };
 
-if (GVAR(virtualHeliLogistics)) then {
-	call FUNC(addVirtualHeliLogisticActions);
-};
+if(hasInterface) then {
+	if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess)) then {
+		call FUNC(addVirtualHeliLogisticActions);
+	};
 
-if (GVAR(virtualUAVLogistics)) then {
-	if (isNil QGVAR(uavSupplyBase)) then {
-		systemChat "[KEKO] (Logistics) WARNING: Virtual UAV Logistics enabled but no supply base set! UAV supply not available.";
-	} else {
-		call FUNC(addVirtualUAVLogisticActions);
+	if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess)) then {
+		if (isNil QGVAR(uavSupplyBase)) then {
+			systemChat "[KEKO] (Logistics) WARNING: Virtual UAV Logistics enabled but no supply base set! UAV supply not available.";
+		} else {
+			call FUNC(addVirtualUAVLogisticActions);
+		};
 	};
 };
 

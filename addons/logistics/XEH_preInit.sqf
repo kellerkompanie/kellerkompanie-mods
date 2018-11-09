@@ -23,7 +23,7 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(accessLevel), // key/reference variable
 	"LIST", // type of setting
-	["Access Level", "Who may spawn crates? Zeus may always."], // name and tooltip
+	["Access Level: Logistics Menu", "Who may spawn crates? Zeus may always."], // name and tooltip
 	"Kellerkompanie Logistics", // category
 	[
 		[
@@ -32,6 +32,7 @@ PREP_RECOMPILE_END;
 			ACCESS_SERGEANT,
 			ACCESS_LIEUTENANT,
 			ACCESS_ENGINEERS,
+			ACCESS_JTAC,
 			ACCESS_ZEUS
 		],
 		[
@@ -40,6 +41,7 @@ PREP_RECOMPILE_END;
 			"Sergeant/SQL and up",
 			"Lead/Lt. and up",
 			"Engineers only",
+			"JTACs only",
 			"Zeus only"
 		], // names
 		2 // default index
@@ -50,12 +52,28 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(virtualHeliLogistics), // key/reference variable
 	"LIST", // type of setting
-	["Virtual Heli Logistics", "Enable/Disable virtual heli logistics."], // name and tooltip
+	["Access Level: Virtual Heli Logistics", "Enable/Disable virtual heli logistics."], // name and tooltip
 	"Kellerkompanie Logistics", // category
 	[
-		[true, false], // values
-		["Enabled","Disabled"], // names
-		0 // default index
+		[
+			ACCESS_EVERYONE,
+			ACCESS_CORPORAL,
+			ACCESS_SERGEANT,
+			ACCESS_LIEUTENANT,
+			ACCESS_UAVOPERATOR,
+			ACCESS_JTAC,
+			ACCESS_ZEUS
+		],
+		[
+			"Everyone",
+			"Corporal/FTL and up",
+			"Sergeant/SQL and up",
+			"Lead/Lt. and up",
+			"UAV Operators only",
+			"JTACs only",
+			"Zeus only"
+		], // names
+		2 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
@@ -63,12 +81,28 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(virtualUAVLogistics), // key/reference variable
 	"LIST", // type of setting
-	["Virtual UAV Logistics", "Enable/Disable virtual UAV logistics."], // name and tooltip
+	["Access Level: Virtual UAV Logistics", "Enable/Disable virtual UAV logistics."], // name and tooltip
 	"Kellerkompanie Logistics", // category
 	[
-		[true, false], // values
-		["Enabled","Disabled"], // names
-		0 // default index
+		[
+			ACCESS_EVERYONE,
+			ACCESS_CORPORAL,
+			ACCESS_SERGEANT,
+			ACCESS_LIEUTENANT,
+			ACCESS_UAVOPERATOR,
+			ACCESS_JTAC,
+			ACCESS_ZEUS
+		],
+		[
+			"Everyone",
+			"Corporal/FTL and up",
+			"Sergeant/SQL and up",
+			"Lead/Lt. and up",
+			"UAV Operators only",
+			"JTACs only",
+			"Zeus only"
+		], // names
+		2 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
