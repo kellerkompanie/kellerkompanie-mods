@@ -1,11 +1,14 @@
 #include "script_component.hpp"
 
-params ["_player"];
+params ["_player","_accessLevel"];
 
 private _rank = rankId _player;
 private _canAccess = false;
 
-switch (GVAR(accessLevel)) do {
+switch (_accessLevel) do {
+	case ACCESS_DISABLED: {
+		_canAccess = false;
+	};
 	case ACCESS_EVERYONE: {
 		_canAccess = true;
 	};
@@ -19,7 +22,13 @@ switch (GVAR(accessLevel)) do {
 		_canAccess = _rank > 2;
 	};
 	case ACCESS_ENGINEERS: {
-		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_engineer) || _player isKindOf QEGVAR(faction_generic,blufor_engineer) || _player isKindOf QEGVAR(faction_generic,blufor_engineer) || (_player getVariable ["ACE_isEngineer", 0] > 0);
+		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_engineer) || _player isKindOf QEGVAR(faction_generic,indfor_engineer) || _player isKindOf QEGVAR(faction_generic,opfor_engineer) || (_player getVariable ["ACE_isEngineer", 0] > 0);
+	};
+	case ACCESS_JTAC: {
+		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_jtac) || _player isKindOf QEGVAR(faction_generic,indfor_jtac) || _player isKindOf QEGVAR(faction_generic,opfor_jtac);
+	};
+	case ACCESS_UAVOPERATOR: {
+		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_uav) || _player isKindOf QEGVAR(faction_generic,indfor_uav) || _player isKindOf QEGVAR(faction_generic,opfor_uav);
 	};
 	case ACCESS_ZEUS: {
 		_canAccess = false;
