@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+cba_settings_whitelist = ["76561197987754545"];
+
 class CfgPatches {
     class ADDON {
     	name = COMPONENT_NAME;
