@@ -11,4 +11,4 @@ private _group = group _crewMember;
 INFO_1("_group %1", _group);
 INFO_1("GVAR(uavSupplyBase) %1", GVAR(uavSupplyBase));
 private _homeWP = _group addWaypoint [GVAR(uavSupplyBase), 0];
-_homeWP setWaypointStatements ["true", "private _vehicle = vehicle this; _vehicle remoteExec ['deleteVehicle', _vehicle];"];
+_homeWP setWaypointStatements ["true", "private _vehicle = vehicle this; _vehicle remoteExec ['deleteVehicle', _vehicle]; ['keko_loadout_onUAVReturned', []] call CBA_fnc_serverEvent;"];
