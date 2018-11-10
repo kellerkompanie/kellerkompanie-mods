@@ -6,6 +6,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(customLoadouts) = [];
+GVAR(addLoadouts) = [];
+
 #define CBA_SETTINGS_CATEGORY "Kellerkompanie Loadout"
 
 [

@@ -3,6 +3,19 @@ class CfgVehicles {
 	class Module_F: Logic {
 		class ArgumentsBaseUnits;
 		class ModuleDescription;
+
+		class AttributesBase
+		{
+			class Default;
+			class Edit;
+			class Combo;
+			class Checkbox;
+			class CheckboxNumber;
+			class ModuleDescription;
+			class Units;
+
+			expression = "_this setVariable ['%s',_value];";
+		};
 	};
 	class GVAR(moduleBase): Module_F {
 		author = ECSTRING(common,KEKOTeam);
@@ -51,6 +64,103 @@ class CfgVehicles {
 	class keko_ModuleCustomLoadouts3den: GVAR(moduleCustomLoadouts3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Custom Loadouts";
 		category           = QEGVAR(common,Deprecated);
+	};
+	class GVAR(moduleAddLoadouts3den): GVAR(moduleBase3den) {
+		displayName        = "Add Loadouts";
+		category           = QGVAR(Loadout);
+		function           = QFUNC(moduleAddLoadouts3den);
+		icon = QPATHTOF(ui\icon_loadouts.paa);
+		scopeCurator = 1;
+	};
+	class GVAR(moduleModifyLoadout3den): GVAR(moduleBase3den) {
+		displayName        = "Modify Loadout";
+		category           = QGVAR(Loadout);
+		function           = QFUNC(moduleModifyLoadout3den);
+		icon = QPATHTOF(ui\icon_loadouts.paa);
+
+		class Attributes: AttributesBase {
+			class ReplaceUniform: Edit {
+				property = "ReplaceUniform";
+				displayName = "Replace uniform";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class ReplaceVest: Edit {
+				property = "ReplaceVest";
+				displayName = "Replace vest";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class ReplaceBackpack: Edit {
+				property = "ReplaceBackpack";
+				displayName = "Replace backpack";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class ReplaceHelmet: Edit {
+				property = "ReplaceHelmet";
+				displayName = "Replace helmet";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class ReplaceGoggles: Edit {
+				property = "ReplaceGoggles";
+				displayName = "Replace goggles";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+
+			class AddToUniform: Edit {
+				property = "AddToUniform";
+				displayName = "Add items to uniform";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class AddToVest: Edit {
+				property = "AddToVest";
+				displayName = "Add items to vest";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class AddToBackpack: Edit {
+				property = "AddToBackpack";
+				displayName = "Add items to backpack";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+
+			class RemoveFromUniform: Edit {
+				property = "RemoveFromUniform";
+				displayName = "Remove items from uniform";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class RemoveFromVest: Edit {
+				property = "RemoveFromVest";
+				displayName = "Remove items from vest";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+			class RemoveFromBackpack: Edit {
+				property = "RemoveFromBackpack";
+				displayName = "Remove items from backpack";
+				tooltip = "List of classnames without quotes: classname1,classname2,...";
+				typeName = "STRING";
+				defaultValue = "''";
+			};
+
+			class ModuleDescription: ModuleDescription{};
+		};
 	};
 
 	class GVAR(moduleApplyLoadout): GVAR(moduleBase) {

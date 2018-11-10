@@ -1,13 +1,16 @@
 PREP(addLoadoutMenu);
 PREP(addPresetItems);
-PREP(applyCustomLoadout);
 PREP(dialogApplyLoadoutCallback);
 PREP(dialogApplyLoadoutInit);
 PREP(dialogLoadoutMenuCallback);
 PREP(dialogLoadoutMenuInit);
 PREP(giveLoadout);
+PREP(modifyLoadout);
 PREP(moduleAddLoadoutMenu);
 PREP(moduleAddLoadoutMenu3den);
+PREP(moduleAddLoadouts3den);
+PREP(moduleModifyLoadout3den);
 PREP(moduleApplyLoadout);
 PREP(moduleCustomLoadouts3den);
+PREP(parseStringToList);
 PREP(setChannels);
