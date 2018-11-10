@@ -122,5 +122,14 @@ GVAR(currentUAVs) = 0;
 
 ["keko_loadout_onUAVReturned", {GVAR(currentUAVs) = GVAR(currentUAVs) - 1;}] call CBA_fnc_addEventHandler;
 
+[
+	QGVAR(automaticUAVReturn),
+	"SLIDER",
+	["Automatic return", "Set after how many seconds UAV should automatically return to base."],
+	[CBA_CATEGORY, "UAV Logistics"],
+	[-1, 1200, 600, 0],
+	1
+] call cba_settings_fnc_init;
+
 
 ADDON = true;
