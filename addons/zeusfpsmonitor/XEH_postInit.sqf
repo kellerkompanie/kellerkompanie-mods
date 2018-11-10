@@ -7,14 +7,12 @@ if (!hasInterface)  exitWith { };
 
 
 //	Let each client update their FPS into a public variable based on a fixed update interval
-
 [] spawn {
 	if(isNil QGVAR(FPSDiagActive)) then
 	{
 		GVAR(FPSDiagActive) = true;
 		while {true} do	{
-			player setVariable [QGVAR(PlayerFPS), floor diag_fps, true];
-			sleep GVAR(updateInterval);
+			[{player setVariable [QGVAR(PlayerFPS), floor diag_fps, true];}, [], GVAR(updateInterval)] call CBA_fnc_waitAndExecute;
 		};
 	};
 };
@@ -22,7 +20,8 @@ if (!hasInterface)  exitWith { };
 // Only continue with admins and curators
 private _isAdmin = (call BIS_fnc_admin) == 2;
 private _isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf QEGVAR(faction_generic,blufor_command) || (player isKindOf QEGVAR(faction_generic,indfor_command)) || (player isKindOf QEGVAR(faction_generic,opfor_command)));
-if !(_isCurator || _isAdmin) exitWith {ERROR("player is neither admin nor curator, exiting");};
+//private _isCurator = player in (call BIS_fnc_listCuratorPlayers); 
+if !(_isCurator || _isAdmin) exitWith {};
 
 // For curators and admins show FPS counter underneath players
 GVAR(showFrames) = true;
@@ -31,7 +30,7 @@ addMissionEventHandler ["Draw3D", {
 		private _distance = (ATLToASL (positionCameraToWorld [0,0,0])) distance _x;
 		//if camera is farther than 1200 meters away from the targets the text will not display
 		if (_distance < 1200) then {
-			private _playerFPS = _x getVariable [QGVAR(PlayerFPS),50];
+			private _playerFPS = _x getVariable [QGVAR(PlayerFPS), 50];
 			//if the FPS is below 20 it turns red and becomes more visible for zeus/admin to see so they are aware
 			if(GVAR(showFrames)) then {
 				drawIcon3D
@@ -54,5 +53,3 @@ addMissionEventHandler ["Draw3D", {
 	//Here is the array of units you wish to display the FPS text for, it can be
 	//changed to be an array of specific units or players if you wish
 }];
-
-INFO("finished postInit");
