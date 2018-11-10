@@ -344,6 +344,11 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		cfgName[] = {"ACE_Track","ACE_Track","ACE_Track"};
 	};
 
+
+	#ifdef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
+		#undef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
+	#endif
+
 	#define KEKO_LOGISTICS_DEFAULT_CRATE_LIST {\
 		{"Munition", {kekoFireTeamCrate,kekoInfantryCrate,kekoGrenadesCrate,kekoMGCrate,kekoATCrate,kekoATGustavCrate,kekoAACrate}},\
 		{"Support", {kekoMedicCrate,kekoSupportCrate,kekoEODCrate,kekoRationsCrate,kekoEmptyCrate}},\
