@@ -43,14 +43,14 @@ private _gangster_handcuffed = [
 if((_func isEqualTo "SetHandcuffed") && _state) then {
 	TRACE_1("captiveStatusChanged", _this);
 	if(side _unit == civilian) then {
-		[_unit] spawn {
-			params ["_unit"];
+		[_unit, _gangster_handcuffed] spawn {
+			params ["_unit", "_gangster_handcuffed"];
 			sleep 1.5;
 			_unit say3D (selectRandom _gangster_handcuffed);
 		};
 	} else {
-		[_unit] spawn {
-			params ["_unit"];
+		[_unit, _civilian_handcuffed] spawn {
+			params ["_unit", "_civilian_handcuffed"];
 			sleep 2;
 			_unit say3D (selectRandom _civilian_handcuffed);
 		};
