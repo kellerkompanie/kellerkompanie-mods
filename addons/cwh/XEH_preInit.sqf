@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#define CBA_SETTINGS_CAT "Kellerkompanie Carryable Weapon Holders"
+#define CBA_SETTINGS_CATEGORY "Kellerkompanie Carryable Weapon Holders"
 
 [
 	QGVAR(Enabled), // key/reference variable
@@ -25,7 +25,7 @@ PREP_RECOMPILE_END;
     QGVAR(AllowedNumberOfItems),
     "SLIDER",
     ["Max. items to carry","Limit of items in weapon holder to allow carrying/dragging. Average man has 2 hands to keep at least 2 items, but don't be too transhuman and use backpacks to carry all extra stuff."],
-    CBA_SETTINGS_CAT,
+    CBA_SETTINGS_CATEGORY,
     [1, 6, 2, 0],
     true
 ] call CBA_Settings_fnc_init;
@@ -34,7 +34,7 @@ PREP_RECOMPILE_END;
     QGVAR(CheckTimeout),
     "SLIDER",
     ["Check timeout (in seconds)","Timeout between revealing weapon holders near the player."],
-    CBA_SETTINGS_CAT,
+    CBA_SETTINGS_CATEGORY,
     [1, 6, 2, 0],
     true
 ] call CBA_Settings_fnc_init;
@@ -43,7 +43,7 @@ PREP_RECOMPILE_END;
     QGVAR(CheckRadius),
     "SLIDER",
     ["Check radius (in meters)","Radius to check for weapon holders. Big values may affect performance."],
-    CBA_SETTINGS_CAT,
+    CBA_SETTINGS_CATEGORY,
     [5, 50, 15, 0],
     true
 ] call CBA_Settings_fnc_init;
