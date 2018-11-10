@@ -43,6 +43,7 @@ class kekoSoldier
 		{1, "ACE_IR_Strobe_Item"},
 		{1, SECONDARY_MAG},
 		{1, SMOKE_WHITE},
+		{1, "keko_canteen_canteen"},
 		{1, SMOKE_GREEN}};
 	vest[] = {};
 	vestInventory[] = {
