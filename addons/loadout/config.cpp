@@ -9,7 +9,9 @@ class CfgPatches {
             QGVAR(moduleCustomLoadouts3den),
 			QGVAR(moduleApplyLoadout),
 			"keko_ModuleAddLoadoutMenu3den",
-			"keko_ModuleCustomLoadouts3den"
+			"keko_ModuleCustomLoadouts3den",
+			QGVAR(moduleAddLoadouts3den),
+			QGVAR(moduleModifyLoadout3den)
         };
         weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
