@@ -58,6 +58,7 @@ PREP_RECOMPILE_END;
 	[CBA_CATEGORY, "Heli Logistics"], // category
 	[
 		[
+			ACCESS_DISABLED,
 			ACCESS_EVERYONE,
 			ACCESS_CORPORAL,
 			ACCESS_SERGEANT,
@@ -67,6 +68,7 @@ PREP_RECOMPILE_END;
 			ACCESS_ZEUS
 		],
 		[
+			"Disabled",
 			"Everyone",
 			"Corporal/FTL and up",
 			"Sergeant/SQL and up",
@@ -75,7 +77,7 @@ PREP_RECOMPILE_END;
 			"JTACs only",
 			"Zeus only"
 		], // names
-		2 // default index
+		3 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
@@ -87,6 +89,7 @@ PREP_RECOMPILE_END;
 	[CBA_CATEGORY, "UAV Logistics"], // category
 	[
 		[
+			ACCESS_DISABLED,
 			ACCESS_EVERYONE,
 			ACCESS_CORPORAL,
 			ACCESS_SERGEANT,
@@ -96,6 +99,7 @@ PREP_RECOMPILE_END;
 			ACCESS_ZEUS
 		],
 		[
+			"Disabled",
 			"Everyone",
 			"Corporal/FTL and up",
 			"Sergeant/SQL and up",
@@ -104,7 +108,7 @@ PREP_RECOMPILE_END;
 			"JTACs only",
 			"Zeus only"
 		], // names
-		2 // default index
+		3 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
