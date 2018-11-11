@@ -1,5 +1,6 @@
 PREP(addLoadoutMenu);
 PREP(addPresetItems);
+PREP(applyCustomLoadout);
 PREP(dialogApplyLoadoutCallback);
 PREP(dialogApplyLoadoutInit);
 PREP(dialogLoadoutMenuCallback);
