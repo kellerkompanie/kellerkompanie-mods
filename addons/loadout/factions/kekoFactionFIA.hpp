@@ -281,4 +281,53 @@ class kekoFactionFIA: kekoFactionBase {
 			"H_HeadBandage_stained_F",
 			"H_HeadBandage_bloody_F"};
 	};
+
+	class kekoSniper: kekoSoldierFIA {
+		name = "Sniper";
+		uniform[] = {"U_B_FullGhillie_sard"};
+		vest[] = {"V_Chestrig_khk"};
+		vestInventory[] = {
+			{8, PRIMARY_MAG_SNIPER},
+			{1, "ACE_RangeCard"}
+		};
+		helmet[] = {"H_HelmetSpecB"};
+		primary[] = {keko_W_A3_GM6_CSAT};
+		secondary[] = {keko_W_M1911};
+		backpack[] = {"B_AssaultPack_cbr"};
+		backpackInventory[] = {
+			{8, PRIMARY_MAG_SNIPER},
+			{2, "ACE_salineIV_500"},
+			{6, "adv_aceSplint_splint"}
+		};
+		optics[] = {"Rangefinder"};
+	};
+
+	class kekoSpotter: kekoMarksman {
+		name = "Spotter";
+		uniform[] = {"U_I_FullGhillie_ard"};
+		vest[] = {"V_Chestrig_rgr"};
+		vestInventory[] = {
+			{1, "ACE_RangeCard"},
+			{5, PRIMARY_MAG_MARKSMAN},
+			{1, SMOKE_WHITE},
+			{2, GRENADE},
+			{5, PRIMARY_MAG_MARKSMAN}
+		};
+		helmet[] = {"H_HelmetSpecB"};
+		secondary[] = {keko_W_M1911};
+		backpack[] = {"B_AssaultPack_cbr"};
+		backpackInventory[] = {
+			{1, "ACE_surgicalKit"},
+			{1, "ACE_EntrenchingTool"},
+			{2, "ACE_salineIV"},
+			{20, "ACE_quikclot"},
+			{1, "ACE_ATragMX"},
+			{1, "ACE_Kestrel4500"},
+			{1, "ACE_Tripod"},
+			{1, "ACE_SpottingScope"},
+			{14, "ACE_fieldDressing"}
+		};
+		optics[] = {"Rangefinder"};
+		primary[] = {keko_W_A3_DMR_SILENCED};
+	};
 };
