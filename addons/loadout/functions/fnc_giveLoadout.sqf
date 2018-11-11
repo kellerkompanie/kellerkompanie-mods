@@ -331,6 +331,3 @@ _player call FUNC(modifyLoadout);
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
 
 [_player] spawn FUNC(setChannels);
-
-// let player lower the weapon
-[_player, ["WeaponOnBack", _player]] remoteExec ["action", _player];
