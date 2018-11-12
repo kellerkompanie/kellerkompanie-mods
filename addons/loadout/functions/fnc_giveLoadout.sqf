@@ -329,5 +329,3 @@ if (GVAR(giveRadio) > 0) then {
 _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
-
-[_player] spawn FUNC(setChannels);

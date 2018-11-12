@@ -9,6 +9,10 @@ PREP_RECOMPILE_END;
 GVAR(customLoadouts) = [];
 GVAR(addLoadouts) = [];
 
+if (hasInterface) then {
+	["TFAR_event_OnRadiosReceived", {[player] call FUNC(setChannels);}] call CBA_fnc_addEventHandler;
+};
+
 #define CBA_SETTINGS_CATEGORY "Kellerkompanie Loadout"
 
 [

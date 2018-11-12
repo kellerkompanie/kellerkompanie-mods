@@ -23,9 +23,6 @@ LR-Kreise:
 5. 70 OPZ/Zeus
 */
 
-// wait a moment until radio has id
-sleep 5;
-
 //set frequencies depending on group for tfar
 if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitWith {
 	waitUntil { time > 1 && call TFAR_fnc_haveSWRadio };
@@ -97,8 +94,4 @@ if ( isClass (configFile >> "CfgPatches" >> "tfar_core") && hasInterface ) exitW
 	// TFAR_fnc_setAdditionalLrStereo
 	// TFAR_fnc_setAdditionalSwChannel
 	// TFAR_fnc_setAdditionalSwStereo
-
-	true
 };
-
-false
