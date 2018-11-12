@@ -20,11 +20,10 @@ private _duration = 3;
 
 		["intelAdded",[format ["Intel gefunden",player,_title] ,"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
 
-		if !(player diarySubjectExists QGVAR(briefingIntel)) then
-		{
-			player createDiarySubject [GVAR(briefingIntel), "Intel"];
+		if !(player diarySubjectExists QGVAR(briefingIntel)) then {
+			player createDiarySubject [QGVAR(briefingIntel), "Intel"];
 		};
-		player createDiaryRecord [GVAR(briefingIntel),[_title,_content]];
+		player createDiaryRecord ["Intel", [_title,_content]];
 
 		if (_remove) then {deleteVehicle _object};
 
