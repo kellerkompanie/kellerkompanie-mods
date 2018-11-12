@@ -70,7 +70,7 @@ class CfgVehicles {
 	};
 
 	class GVAR(blufor_doctor) : GVAR(blufor_soldier) {
-		displayName = "Doctor";
+		displayName = "Platoon Medic";
 		icon = "iconManMedic";
 		loadoutDummy = "kekoDoctor";
 	};
@@ -334,7 +334,7 @@ class CfgVehicles {
 	};
 
 	class GVAR(indfor_doctor) : GVAR(indfor_soldier) {
-		displayName = "Doctor";
+		displayName = "Platoon Medic";
 		icon = "iconManMedic";
 		loadoutDummy = "kekoDoctor";
 	};
@@ -600,7 +600,7 @@ class CfgVehicles {
 	};
 
 	class GVAR(opfor_doctor) : GVAR(opfor_soldier) {
-		displayName = "Doctor";
+		displayName = "Platoon Medic";
 		icon = "iconManMedic";
 		loadoutDummy = "kekoDoctor";
 	};
