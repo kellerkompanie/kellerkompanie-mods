@@ -11,7 +11,7 @@ if ( GVAR(customLogistics) == 2 ) then {
 if(hasInterface) then {
 	if(GVAR(virtualHeliLogistics) > ACCESS_DISABLED) then {
 		if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess)) then {
-			call FUNC(addVirtualHeliLogisticActions);
+			player call FUNC(addVirtualHeliLogisticActions);
 		};
 	};
 
@@ -20,7 +20,7 @@ if(hasInterface) then {
 			systemChat "[KEKO] (Logistics) WARNING: Virtual UAV Logistics enabled but no supply base set! UAV supply not available.";
 		} else {
 			if ([player,GVAR(virtualUAVLogistics)] call FUNC(hasAccess)) then {
-				call FUNC(addVirtualUAVLogisticActions);
+				player call FUNC(addVirtualUAVLogisticActions);
 			};
 		};
 	};
