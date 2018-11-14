@@ -1,9 +1,6 @@
 #include "script_component.hpp"
 
-// leader
-// JTAC
-// Sergeant
-// Zeus
+params ["_player"];
 
 private _crates = [];
 if(GVAR(customLogistics) == 2) then {
@@ -14,24 +11,9 @@ else {
 };
 
 private _action = [QGVAR(supplyDropUAV), "Call UAV Supply", QPATHTOF(ui\icon_uav), {}, {true}] call ace_interact_menu_fnc_createAction;;
-{
-	[_x, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-} forEach [
-  QEGVAR(faction_generic,blufor_command),
-  QEGVAR(faction_generic,blufor_lead),
-  QEGVAR(faction_generic,blufor_sergeant),
-  QEGVAR(faction_generic,blufor_jtac),
-  QEGVAR(faction_generic,blufor_sql),
-  QEGVAR(faction_generic,indfor_command),
-  QEGVAR(faction_generic,indfor_lead),
-  QEGVAR(faction_generic,indfor_sergeant),
-  QEGVAR(faction_generic,indfor_jtac),
-  QEGVAR(faction_generic,indfor_sql),
-  QEGVAR(faction_generic,opfor_command),
-  QEGVAR(faction_generic,opfor_lead),
-  QEGVAR(faction_generic,opfor_sergeant),
-  QEGVAR(faction_generic,opfor_jtac),
-  QEGVAR(faction_generic,opfor_sql)];
+
+[_player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
 
 private _i = 0;
 {
@@ -57,32 +39,7 @@ private _i = 0;
 			_action = [_actionName, _actionTitle, QPATHTOF(ui\icon_uav), _actionStatement, {true}] call ace_interact_menu_fnc_createAction;
 		};
 
-		{
-		   /*
-			* Argument:
-			* 0: TypeOf of the class <STRING>
-			* 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
-			* 2: Parent path of the new action <ARRAY>
-			* 3: Action <ARRAY>
-			* 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
-			*/
-		   [_x, 1, ["ACE_SelfActions", QGVAR(supplyDropUAV)], _action] call ace_interact_menu_fnc_addActionToClass;
-		} forEach [
-		   QEGVAR(faction_generic,blufor_command),
-		   QEGVAR(faction_generic,blufor_lead),
-		   QEGVAR(faction_generic,blufor_sergeant),
-		   QEGVAR(faction_generic,blufor_jtac),
-		   QEGVAR(faction_generic,blufor_sql),
-		   QEGVAR(faction_generic,indfor_command),
-		   QEGVAR(faction_generic,indfor_lead),
-		   QEGVAR(faction_generic,indfor_sergeant),
-		   QEGVAR(faction_generic,indfor_jtac),
-		   QEGVAR(faction_generic,indfor_sql),
-		   QEGVAR(faction_generic,opfor_command),
-		   QEGVAR(faction_generic,opfor_lead),
-		   QEGVAR(faction_generic,opfor_sergeant),
-		   QEGVAR(faction_generic,opfor_jtac),
-		   QEGVAR(faction_generic,opfor_sql)];
+	   [_player, 1, ["ACE_SelfActions", QGVAR(supplyDropUAV)], _action] call ace_interact_menu_fnc_addActionToObject;
 
 		_i = _i + 1;
 	} forEach _section_crates;
