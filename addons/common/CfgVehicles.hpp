@@ -202,35 +202,7 @@ class CfgVehicles {
 		function           = QFUNC(moduleLimitWounds);
 		icon = QPATHTOF(ui\icon_full_heal.paa);
 		curatorCanAttach   = 1;
-	};
-	class GVAR(moduleAssignMedic): GVAR(moduleBase)	{
-		displayName        = "Assign Medic";
-		category           = QGVAR(Default);
-		function           = QFUNC(moduleAssignMedic);
-		icon = QPATHTOF(ui\icon_medic.paa);
-		curatorCanAttach   = 1;
-	};
-	class GVAR(moduleAssignDoctor): GVAR(moduleBase) {
-		displayName        = "Assign Doctor";
-		category           = QGVAR(Default);
-		function           = QFUNC(moduleAssignDoctor);
-		icon = QPATHTOF(ui\icon_doctor.paa);
-		curatorCanAttach   = 1;
-	};
-	class GVAR(moduleAssignEngineer): GVAR(moduleBase) {
-		displayName        = "Assign Engineer";
-		category           = QGVAR(Default);
-		function           = QFUNC(moduleAssignEngineer);
-		icon = QPATHTOF(ui\icon_engineer.paa);
-		curatorCanAttach   = 1;
-	};
-	class GVAR(moduleAssignRepairSpecialist): GVAR(moduleBase) {
-		displayName        = "Assign Repair Specialist";
-		category           = QGVAR(Default);
-		function           = QFUNC(moduleAssignRepairSpecialist);
-		icon = QPATHTOF(ui\icon_repair_specialist.paa);
-		curatorCanAttach   = 1;
-	};
+	};	
 	class GVAR(moduleRemoveAllActions): GVAR(moduleBase) {
 		displayName        = "Remove all menus";
 		category           = QGVAR(Default);
