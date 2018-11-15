@@ -1,16 +1,18 @@
 class ACE_Medical_Actions {
     class Advanced {
-		class fieldDressing;
-        class Painkillers: fieldDressing {
+		class Morphine;
+        class Painkillers: Morphine {
             displayName = "Use Painkillers";
-            displayNameProgress = "Using Painkillers";
+			displayNameProgress = "Using Painkillers...";
             allowedSelections[] = {"head"};
             category = "medication";
-            items[] = {QGVAR(PainkillersBoxPill)};
+            items[] = {};
             treatmentTime = 3;
-            callbackSuccess = "['QGVAR(PainkillersBoxPill)', _player, _target, 'head', 'Painkillers'] call FUNC(painkillersAction)";
+			condition = "'keko_medical_Painkillers' in (magazines _player)";
+            callbackSuccess = "['keko_medical_Painkillers', _player, _target, 'head', 'Painkillers'] call keko_medical_fnc_painkillersAction";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
+
         };
     };
 };
