@@ -1,11 +1,11 @@
 class CfgVehicles {
-    class ACE_morphineItem;
-	class GVAR(painkillersItem): ACE_morphineItem {
+    class WeaponHolder_Single_limited_item_F;
+	  class GVAR(painkillersItem): WeaponHolder_Single_limited_item_F {
         scope = 2;
         scopeCurator = 2;
         displayName = "Painkillers";
-        author = "Schwaggot";
-        vehicleClass = "Items";
+        author = "Katalam";
+        vehicleClass = "Magazines";
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_PainKillers_F.jpg";
         class TransportItems {
 			class GVAR(painkillers) {
