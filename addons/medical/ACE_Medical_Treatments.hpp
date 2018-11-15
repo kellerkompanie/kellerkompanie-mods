@@ -6,11 +6,11 @@ class ACE_Medical_Actions {
             displayNameProgress = "Using Painkillers";
             allowedSelections[] = {"head"};
             category = "medication";
-            items[] = {QGVAR(painkillers)};
+            items[] = {QGVAR(PainkillersBoxPill)};
             treatmentTime = 3;
-            callbackSuccess = QUOTE(ace_medical_fnc_treatmentAdvanced_medication);
+            callbackSuccess = "['QGVAR(PainkillersBoxPill)', _player, _target, 'head', 'Painkillers'] call FUNC(painkillersAction)";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
+            litter[] = {};
         };
     };
 };
