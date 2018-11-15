@@ -41,7 +41,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 
 	// define all weapons and mags
 	#include "kekoWeaponsChinesePLA.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 
@@ -55,7 +55,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 			"PLA_B04_RF_D","PLA_T15Vest_RF_D"};
 
 		helmet[] = {
-			"VME_PLA_Helmet_D","VME_PLA_Helmet_D_G"};	
+			"VME_PLA_Helmet_D","VME_PLA_Helmet_D_G"};
 
 		primary[] = {
 			keko_W_QBZ95};
@@ -69,20 +69,20 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 
 	class kekoLead: kekoSoldierChinesePLADesert	{
 		name = "Lead";
-		rank = "LIEUTENANT";		
+		rank = "LIEUTENANT";
 		uniform[] = {"PLA_CombatUniform_HM_SW","PLA_CombatUniform_HM_SWCB"};
 		vest[] = {"PLA_T15Vest_RD_D"};
 		helmet[] = {"VME_PLA_Hat_D"};
 		backpack[] = {"TFAR_rt1523g_black"};
 		backpackInventory[] = {};
 		optics[] = {"Rangefinder"};
-	}; 
+	};
 
 	class kekoCommand: kekoLead	{
 		name = "Command";
-		rank = "COLONEL";		
+		rank = "COLONEL";
 		medicClass = 2;
-		engineerClass = 2;	
+		engineerClass = 2;
 	};
 
 	class kekoSQL: kekoSoldierChinesePLADesert	{
@@ -103,7 +103,14 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
-		primary[] = {keko_W_QBZ95_GL};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_QBZ95_GL};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -127,7 +134,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 	};
 
 	class kekoRifleman: kekoSoldierChinesePLADesert	{
-		name = "Rifleman";		
+		name = "Rifleman";
 	};
 
 	class kekoRiflemanAT: kekoSoldierChinesePLADesert	{
@@ -144,7 +151,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 			{9, UGL_MAG},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_QBZ95_GL};		
+			keko_W_QBZ95_GL};
 	};
 
 	class kekoLMG: kekoSoldierChinesePLADesert {
@@ -164,7 +171,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"rhsusf_falconii_coy"};
 		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierChinesePLADesert {
@@ -183,7 +190,7 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 
 		backpack[] = {"rhsusf_falconii_coy"};
 		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};	
+		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierChinesePLADesert {
@@ -254,19 +261,19 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 			{2,SECONDARY_MAG}};
 		helmet[] = {"H_HelmetSpecB"};
 		primary[] = {
-			keko_W_A3_LRR, 
+			keko_W_A3_LRR,
 			keko_W_A3_LRR_CAMO};
 		optics[] = {"Laserdesignator"};
 	};
 
 	class kekoSpotter: kekoSniper {
-		name = "Spotter";	
+		name = "Spotter";
 		vestInventory[] = {
 			{1,"SmokeShell"},
 			{1,"SmokeShellGreen"},
 			{2,"11Rnd_45ACP_Mag"},
 			{8,PRIMARY_MAG_MARKSMAN},
-			{1,GRENADE}};	
+			{1,GRENADE}};
 		primary[] = {
 			keko_W_QBU88};
 	};

@@ -10,7 +10,7 @@ class CfgVehicles {
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = QPATHTOF(ui\knock.paa);
+					icon = QPATHTOF(ui\icon_knock.paa);
 				};
 
 				class GVAR(inhale) {
@@ -20,7 +20,7 @@ class CfgVehicles {
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = QPATHTOF(ui\nose.paa);
+					icon = QPATHTOF(ui\icon_nose.paa);
 				};
 			};
 			class ACE_MainActions {
@@ -31,7 +31,7 @@ class CfgVehicles {
 					showDisabled = 0;
 					priority = 1;
 					distance = 4.5;
-					icon = QPATHTOF(ui\shovel.paa);
+					icon = QPATHTOF(ui\icon_shovel.paa);
 				};
 			};
 		};

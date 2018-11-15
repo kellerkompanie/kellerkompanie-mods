@@ -34,6 +34,9 @@
 #ifdef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
 	#undef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
 #endif
+#ifdef KEKO_LOGISTICS_CQB_CRATE_DEFAULT
+	#undef KEKO_LOGISTICS_CQB_CRATE_DEFAULT
+#endif
 
 #define KEKO_LOGISTICS_FT_CRATE_DEFAULT {\
 		{10, PRIMARY_MAG},\
@@ -101,9 +104,9 @@
 		{10, "ACE_salineIV_500"},\
 		{2, "ACE_surgicalKit"},\
 		{10, "ACE_tourniquet"},\
-		{10, "ACE_larynx"},\
-		{10, "ACE_guedel"},\
-		{1, "ACE_accuvac"},\
+		{10, "KAT_larynx"},\
+		{10, "KAT_guedel"},\
+		{1, "KAT_accuvac"},\
 		{30, "adv_aceSplint_splint"}}
 
 #define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
@@ -149,6 +152,12 @@
 		{20, "murshun_cigs_cigpack"},\
 		{10, "immersion_pops_poppack"},\
 		{10, "ACE_banana"}}
+
+#define KEKO_LOGISTICS_CQB_CRATE_DEFAULT {\
+		{40, "ACE_M84"},\
+		{20, "ACE_CableTie"},\
+		{10, "ACE_SpraypaintGreen"},\
+		{10, "ACE_SpraypaintRed"}}
 
 class kekoCrateBase {
 	name = "Empty Crate";
@@ -208,6 +217,10 @@ class kekoRationsCrate: kekoSupportCrate {
 	name = "Rationen Kiste";
 	inventory[] = KEKO_LOGISTICS_RAT_CRATE_DEFAULT;
 };
+class kekoCQBCrate: kekoGrenadesCrate {
+	name = "OHK/CQB Kiste";
+	inventory[] = KEKO_LOGISTICS_CQB_CRATE_DEFAULT;
+};
 class kekoEmptyCrate: kekoCrateBase {
 	name = "Leere Kiste";
 	cfgName[] = {"B_CargoNet_01_ammo_F","I_CargoNet_01_ammo_F","O_CargoNet_01_ammo_F"};
@@ -223,5 +236,5 @@ class kekoSpareTrack: kekoCrateBase {
 
 #define KEKO_LOGISTICS_DEFAULT_CRATE_LIST {\
 	{"Munition", {kekoFireTeamCrate,kekoInfantryCrate,kekoGrenadesCrate,kekoMGCrate,kekoATCrate,kekoATGustavCrate,kekoAACrate}},\
-	{"Support", {kekoMedicCrate,kekoSupportCrate,kekoEODCrate,kekoRationsCrate,kekoEmptyCrate}},\
+	{"Support", {kekoMedicCrate,kekoSupportCrate,kekoEODCrate,kekoCQBCrate,kekoRationsCrate,kekoEmptyCrate}},\
 	{"Andere", {kekoSpareWheel,kekoSpareTrack}}}

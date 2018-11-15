@@ -30,6 +30,7 @@ class kekoWeaponsMarines {
 		cfgName = "rhs_weap_m16a4_carryhandle";
 		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	class keko_W_RHS_M4A1: kekoPrimaryWeapon
@@ -37,6 +38,7 @@ class kekoWeaponsMarines {
 		cfgName = "rhs_weap_m4a1_carryhandle";
 		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -70,6 +72,7 @@ class kekoWeaponsMarines {
 		cfgName = "rhs_weap_m249_pip_L_para";
 		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
 		magazines[] = {PRIMARY_MAG_LMG};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
@@ -78,6 +81,7 @@ class kekoWeaponsMarines {
 		cfgName = "rhs_weap_m240B";
 		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
 		magazines[] = {PRIMARY_MAG_MMG};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// Sniper

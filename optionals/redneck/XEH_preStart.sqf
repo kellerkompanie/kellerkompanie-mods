@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if !(isServer) exitWith {};
+
 if(isNil "keko_logging_db_setupComplete") then {
 	INFO("keko_logging_db_setupComplete not set or false");
 
@@ -7,7 +9,7 @@ if(isNil "keko_logging_db_setupComplete") then {
 	if(!(_result isEqualTo "[1]")) exitWith {ERROR("extDB3: Error with Database Connection");};
 	INFO("added database");
 
-	keko_logging_db_setupComplete = true;	
+	keko_logging_db_setupComplete = true;
 };
 
 

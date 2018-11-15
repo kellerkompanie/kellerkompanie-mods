@@ -110,6 +110,14 @@ class kekoFactionUSArmyUCP: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_M4_GL};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -197,7 +205,7 @@ class kekoFactionUSArmyUCP: kekoFactionBase {
 	class kekoATSpecialist: kekoSoldierUSArmyUCP {
 		name = "Anti-Tank Specialist";
 
-		backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
+		backpack[] = {"B_Carryall_cbr"};
 		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_Javelin};
 	};
@@ -205,7 +213,7 @@ class kekoFactionUSArmyUCP: kekoFactionBase {
 	class kekoATSpecialistAsst: kekoSoldierUSArmyUCP {
 		name = "Anti-Tank Specialist Assistant";
 
-		backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
+		backpack[] = {"B_Carryall_cbr"};
 		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"Rangefinder"};
 	};

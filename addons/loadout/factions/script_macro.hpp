@@ -55,6 +55,9 @@
 #ifdef PRIMARY_MAG_P90
 	#undef PRIMARY_MAG_P90
 #endif
+#ifdef PRIMARY_MAG_SNIPER
+	#undef PRIMARY_MAG_SNIPER
+#endif
 
 
 #ifdef SMOKE_WHITE

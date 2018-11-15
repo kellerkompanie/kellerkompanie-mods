@@ -4,7 +4,7 @@ private _ret = call compile ("extDB3" callExtension format [ "0:keko_redneck:get
 private _locations = [];
 
 if ((_ret select 0) == 1) then {
-	INFO_1("dbGetLocations: loading sucessful %1", _ret);
+	INFO("dbGetLocations: loading sucessful");
 
 	// assume loading was sucess
 	{

@@ -4,17 +4,21 @@ class kekoWeaponBase {
 	magazines[] = {};
 };
 
-class kekoPrimaryWeapon: kekoWeaponBase
+class kekoSilenceableWeapon: kekoWeaponBase {
+	silencer[] = {};
+};
+
+class kekoPrimaryWeapon: kekoSilenceableWeapon
 {
 	uglMagazines[] = {};
 };
 
-class kekoSecondaryWeapon: kekoWeaponBase
+class kekoSecondaryWeapon: kekoSilenceableWeapon
 {
-	
+
 };
 
 class kekoLauncherWeapon: kekoWeaponBase
 {
-	
+
 };

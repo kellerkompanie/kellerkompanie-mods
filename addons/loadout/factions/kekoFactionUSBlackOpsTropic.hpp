@@ -344,6 +344,11 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 		cfgName[] = {"ACE_Track","ACE_Track","ACE_Track"};
 	};
 
+
+	#ifdef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
+		#undef KEKO_LOGISTICS_DEFAULT_CRATE_LIST
+	#endif
+
 	#define KEKO_LOGISTICS_DEFAULT_CRATE_LIST {\
 		{"Munition", {kekoFireTeamCrate,kekoInfantryCrate,kekoGrenadesCrate,kekoMGCrate,kekoATCrate,kekoATGustavCrate,kekoAACrate}},\
 		{"Support", {kekoMedicCrate,kekoSupportCrate,kekoEODCrate,kekoRationsCrate,kekoEmptyCrate}},\
@@ -508,9 +513,29 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 
 	class kekoFTL: kekoSoldierUSBlackOpsTropic	{
 		name = "Fire Team Leader (MX)";
+		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG},
+			{4, PRIMARY_MAG_TRACER},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG}};
+		primary[] = {
+			keko_W_A3_MX_GL_BLACK,
+			keko_W_A3_MX_GL_TROPIC};
 	};
 	class kekoFTL416: kekoSoldierUSBlackOpsTropic416	{
 		name = "Fire Team Leader (HK416)";
+		optics[] = {"Binocular"};
+		vestInventory[] = {
+			{4, PRIMARY_MAG_416},
+			{4, PRIMARY_MAG_TRACER_416},
+			{6, UGL_MAG},
+			{2, GRENADE},
+			{2, PRIMARY_MAG_416}};
+		primary[] = {
+			keko_W_A3_HK416_GL,
+			keko_W_A3_HK416_GL_TROPIC};
 	};
 
 

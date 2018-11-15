@@ -18,13 +18,13 @@ private _duration = 3;
 		params ["_object", "", "", "_arguments"];
 		_arguments params ["_title", "_content", "_remove"];
 
-		["intelAdded",[format ["Intel gefunden",player,_title] ,"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
+		["intelAdded", [format ["Intel gefunden", player, _title], "\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
 
-		if !(player diarySubjectExists QGVAR(brefingIntel)) then
-		{
-			player createDiarySubject [GVAR(brefingIntel), "Intel"];
+		if !(player diarySubjectExists QGVAR(briefingIntel)) then {
+			player createDiarySubject [QGVAR(briefingIntel), "Intel"];
 		};
-		player createDiaryRecord [GVAR(brefingIntel),[_title,_content]];
+		
+		player createDiaryRecord [QGVAR(briefingIntel), [_title, _content]];
 
 		if (_remove) then {deleteVehicle _object};
 
@@ -36,4 +36,4 @@ private _duration = 3;
 	20,			// Priority
 	true,		// Remove on completion
 	false		// Show in unconscious state
-] remoteExec ["BIS_fnc_holdActionAdd",0,_object];
+] remoteExec ["BIS_fnc_holdActionAdd", 0, _object];

@@ -18,6 +18,7 @@ private _previousVal = GVAR(LocationMapValues) select _idx;
 _previousVal set [3, 'REDNECK'];
 GVAR(LocationMapValues) set [_idx, _previousVal];
 [_loc_id, 'REDNECK'] call FUNC(dbUpdateLocation);
+publicVariable QGVAR(LocationMapValues);
 
 private _musicTrack = selectRandom [QGVAR(capture01),QGVAR(capture02),QGVAR(capture03),QGVAR(capture04)];
 private _allHCs = entities "HeadlessClient_F";

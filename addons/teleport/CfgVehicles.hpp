@@ -29,7 +29,7 @@ class CfgVehicles {
         displayName        = "Add Fast-Travel Destination";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportDestination3den);
-        icon = QPATHTOF(ui\teleport_dest_icon.paa);
+        icon = QPATHTOF(ui\icon_teleport_dest.paa);
 
         class Arguments: ArgumentsBaseUnits {
             class teleportDestination {
@@ -71,7 +71,7 @@ class CfgVehicles {
         displayName        = "Add Fast-Travel Menu";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportMenu3den);
-        icon = QPATHTOF(ui\teleport_menu_icon.paa);
+        icon = QPATHTOF(ui\icon_teleport_menu.paa);
 
         class Arguments: ArgumentsBaseUnits {
             class allowBLUFOR {
@@ -108,13 +108,13 @@ class CfgVehicles {
         displayName        = "Add Fast-Travel Destination";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportDestination);
-        icon               = QPATHTOF(ui\teleport_dest_icon.paa);
+        icon               = QPATHTOF(ui\icon_teleport_dest.paa);
     };
     class GVAR(moduleAddTeleportMenu): GVAR(moduleBase) {
         displayName        = "Add Fast-Travel Menu";
         category           = QGVAR(Teleport);
         function           = QFUNC(moduleAddTeleportMenu);
-        icon               = QPATHTOF(ui\teleport_menu_icon.paa);
+        icon               = QPATHTOF(ui\icon_teleport_menu.paa);
         curatorCanAttach   = 1;
     };
 };
