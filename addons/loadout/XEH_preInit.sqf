@@ -6,6 +6,13 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(customLoadouts) = [];
+GVAR(addLoadouts) = [];
+
+if (hasInterface) then {
+	["TFAR_event_OnRadiosReceived", {[player] call FUNC(setChannels);}] call CBA_fnc_addEventHandler;
+};
+
 #define CBA_SETTINGS_CATEGORY "Kellerkompanie Loadout"
 
 [
@@ -181,6 +188,19 @@ PREP_RECOMPILE_END;
       "Only personal for lead positions, rifleman for the rest",
       "Just for lead positions (rank > Corporal)"
     ], // names
+		1 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(giveSilencer), // key/reference variable
+	"LIST", // type of setting
+	["Give Silencer", "Enable/Disable giving silencer to player"], // name and tooltip
+	CBA_SETTINGS_CATEGORY, // category
+	[
+		[true,false], // values
+		["Enabled","Disabled"], // names
 		1 // default index
 	],
 	1

@@ -30,6 +30,7 @@ class kekoWeaponsRussiaEMR {
 		cfgName = "rhs_weap_ak74m_dtk";
 		items[] = {"rhs_acc_dtk","rhs_acc_2dpZenit","rhs_acc_pkas"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"rhs_acc_dtk4short"};
 	};
 	class keko_W_AK74M_FOLDED: keko_W_AK74M
 	{
@@ -56,6 +57,7 @@ class kekoWeaponsRussiaEMR {
 		cfgName = "rhs_weap_svdp";
 		items[] = {"rhs_acc_pso1m2"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		silencer[] = {"rhs_acc_tgpv"};
 	};
 
 	// LMG

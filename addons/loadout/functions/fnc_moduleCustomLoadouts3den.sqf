@@ -5,10 +5,6 @@ private _logic = _this select 0;
 if (!isServer) exitWith {};
 INFO("running moduleCustomLoadouts3den");
 
-if (isNil QGVAR(customLoadouts)) then {
-	GVAR(customLoadouts) = [];
-};
-
 private _objects = synchronizedObjects _logic;
 TRACE_1("synchronizedObjects", _objects);
 
@@ -27,4 +23,4 @@ TRACE_1("synchronizedObjects", _objects);
 } forEach _objects;
 
 publicVariable QGVAR(customLoadouts);
-TRACE_1("customLoadouts", GVAR(customLoadouts));
+INFO_1("customLoadouts %1", GVAR(customLoadouts));

@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-private _logic = _this select 0;
-
-INFO("moduleInitMission3den");
+params ["_logic"];
 
 if(isServer) then {
 	private _action = _logic getVariable ["Action",""];

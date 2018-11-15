@@ -44,5 +44,3 @@ player enableSimulation true;
 if !(weaponLowered player) then {
 	player action ["WeaponOnBack", player];
 };
-
-[player] spawn FUNC(setChannels);

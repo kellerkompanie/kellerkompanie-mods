@@ -1,9 +1,9 @@
 #include "script_macro.hpp"
 
-#define SMOKE_WHITE "SmokeShell"
-#define SMOKE_GREEN "SmokeShellGreen"
-#define SMOKE_RED "SmokeShellRed"
-#define GRENADE "HandGrenade"
+#define SMOKE_WHITE "rhs_mag_an_m8hc"
+#define SMOKE_GREEN "rhs_mag_m18_green"
+#define SMOKE_RED "rhs_mag_m18_red"
+#define GRENADE "rhs_mag_m67"
 
 #define PRIMARY_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"
 #define PRIMARY_MAG_TRACER "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
@@ -26,8 +26,9 @@ class kekoWeaponsUSArmy {
 	class keko_W_M4: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m4";
-		items[] = {"acc_pointer_IR","rhsusf_acc_compm4"};
+		items[] = {"rhsusf_acc_anpeq15","rhsusf_acc_compm4"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -43,15 +44,17 @@ class kekoWeaponsUSArmy {
 	class keko_W_M14: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m14ebrri";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"};
+		items[] = {"rhsusf_acc_anpeq15","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 
 	// LMG
 	class keko_W_M249: kekoPrimaryWeapon
 	{
-		cfgName = "rhs_weap_m249";
+		cfgName = "rhs_weap_m249_pip_L";
 		magazines[] = {PRIMARY_MAG_LMG};
+		items[] = {"rhsusf_acc_elcan"};
+		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
@@ -59,6 +62,8 @@ class kekoWeaponsUSArmy {
 	{
 		cfgName = "rhs_weap_m240B";
 		magazines[] = {PRIMARY_MAG_MMG};
+		items[] = {"rhsusf_acc_elcan"};
+		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// Sniper

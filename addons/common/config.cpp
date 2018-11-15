@@ -1,14 +1,12 @@
 #include "script_component.hpp"
 
+cba_settings_whitelist = ["76561197987754545"];
+
 class CfgPatches {
     class ADDON {
     	name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleLimitWounds),
-            QGVAR(moduleAssignEngineer),
-            QGVAR(moduleAssignRepairSpecialist),
-            QGVAR(moduleAssignMedic),
-            QGVAR(moduleAssignDoctor),
+            QGVAR(moduleLimitWounds),            
             QGVAR(moduleRespawnPosition),
             QGVAR(moduleRespawnPosition3den),
             QGVAR(moduleInitMission),
