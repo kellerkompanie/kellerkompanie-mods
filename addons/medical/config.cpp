@@ -20,7 +20,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgSounds.hpp"
 
 #include "ACE_Medical_Treatments.hpp"
