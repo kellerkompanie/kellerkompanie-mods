@@ -1,8 +1,0 @@
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\keko_checkpbo\bin\x64\keko_checkpbo.dll
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\keko_checkpbo\bin\x64\keko_checkpbo.pdb
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\keko_checkpbo\obj\x64\Release\keko_checkpbo.dll
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\keko_checkpbo\obj\x64\Release\keko_checkpbo.pdb
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\client\keko_checkpbo\bin\x64\keko_checkpbo.dll
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\client\keko_checkpbo\bin\x64\keko_checkpbo.pdb
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\client\keko_checkpbo\obj\x64\Release\keko_checkpbo.dll
-C:\Users\Schwaggot\Development\kellerkompanie-mods\extension\client\keko_checkpbo\obj\x64\Release\keko_checkpbo.pdb

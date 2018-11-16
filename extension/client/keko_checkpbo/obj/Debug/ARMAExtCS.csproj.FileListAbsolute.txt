@@ -1,5 +1,0 @@
-c:\users\schwaggot\documents\visual studio 2013\Projects\ARMAExtCS\ARMAExtCS\bin\Debug\ARMAExtCS.dll
-c:\users\schwaggot\documents\visual studio 2013\Projects\ARMAExtCS\ARMAExtCS\bin\Debug\ARMAExtCS.pdb
-c:\users\schwaggot\documents\visual studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Debug\ARMAExtCS.csprojResolveAssemblyReference.cache
-c:\users\schwaggot\documents\visual studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Debug\ARMAExtCS.dll
-c:\users\schwaggot\documents\visual studio 2013\Projects\ARMAExtCS\ARMAExtCS\obj\Debug\ARMAExtCS.pdb
