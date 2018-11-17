@@ -3,7 +3,7 @@
 #include <iterator>
 #include <sstream>
 #include <cstring>
-#include "nlohmann_json/single_include/nlohmann/json.hpp"
+//#include "nlohmann_json/single_include/nlohmann/json.hpp"
 
 #define CURRENT_VERSION "1.0.0.1"
 
@@ -67,7 +67,7 @@ int RVExtensionArgs(char *output, int outputSize, const char *function, const ch
 
         //--- Extension return code
         return 200;
-    } else if (strcmp(function, "json") == 0) {
+    } /*else if (strcmp(function, "json") == 0) {
 
         using json = nlohmann::json;
 
@@ -105,9 +105,9 @@ int RVExtensionArgs(char *output, int outputSize, const char *function, const ch
         //--- Extension return code
         return 300;
 
-    } else {
+    }*/ else {
         std::stringstream sstream;
-        sstream << "Avaliable Functions: add, subtract";
+        sstream << "Avaliable Functions: add, subtract, json";
         std::strncpy(output, sstream.str().c_str(), outputSize - 1);
         return -1;
     }
