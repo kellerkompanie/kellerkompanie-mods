@@ -3,7 +3,7 @@
 #include <iterator>
 #include <sstream>
 #include <cstring>
-//#include "nlohmann_json/single_include/nlohmann/json.hpp"
+#include "json11.h"
 
 #define CURRENT_VERSION "1.0.0.1"
 
@@ -67,45 +67,20 @@ int RVExtensionArgs(char *output, int outputSize, const char *function, const ch
 
         //--- Extension return code
         return 200;
-    } /*else if (strcmp(function, "json") == 0) {
+    } else if (strcmp(function, "json") == 0) {
+        json11::Json my_json = json11::Json::object {
+                { "key1", "value1" },
+                { "key2", false },
+                { "key3", json11::Json::array { 1, 2, 3 } },
+        };
+        std::string json_str = my_json.dump();
 
-        using json = nlohmann::json;
+        std::stringstream sstream;
+        sstream << json_str;
+        std::strncpy(output, sstream.str().c_str(), outputSize - 1);
 
-        // create an empty structure (null)
-        json j;
-
-        // add a number that is stored as double (note the implicit conversion of j to an object)
-        j["pi"] = 3.141;
-
-        // add a Boolean that is stored as bool
-        j["happy"] = true;
-
-        // add a string that is stored as std::string
-        j["name"] = "Niels";
-
-        // add another null object by passing nullptr
-        j["nothing"] = nullptr;
-
-        // add an object inside the object
-        j["answer"]["everything"] = 42;
-
-        // add an array that is stored as std::vector (using an initializer list)
-        j["list"] = {1, 0, 2};
-
-        // add another object (using an initializer list of pairs)
-        j["object"] = {{"currency", "USD"},
-                       {"value",    42.99}};
-
-        std::ostringstream oss;
-        oss << j;
-
-        //--- Extension result
-        std::strncpy(output, oss.str().c_str(), outputSize - 1);
-
-        //--- Extension return code
         return 300;
-
-    }*/ else {
+    } else {
         std::stringstream sstream;
         sstream << "Avaliable Functions: add, subtract, json";
         std::strncpy(output, sstream.str().c_str(), outputSize - 1);
