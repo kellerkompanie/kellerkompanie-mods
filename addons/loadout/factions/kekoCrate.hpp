@@ -53,7 +53,8 @@
 		{4, "ACE_epinephrine"},\
 		{8, "ACE_tourniquet"},\
 		{10, "adv_aceSplint_splint"},\
-		{2, "ACE_CableTie"}}
+		{2, "ACE_CableTie"},
+		{2, QEGVAR(medical,Painkillers)}}
 
 #define KEKO_LOGISTICS_INF_CRATE_DEFAULT {\
 		{30, PRIMARY_MAG},\
@@ -107,7 +108,8 @@
 		{10, "KAT_larynx"},\
 		{10, "KAT_guedel"},\
 		{1, "KAT_accuvac"},\
-		{30, "adv_aceSplint_splint"}}
+		{30, "adv_aceSplint_splint"},
+		{5, QEGVAR(medical,Painkillers)}}
 
 #define KEKO_LOGISTICS_SUP_CRATE_DEFAULT {\
 		{2, "SmokeShell"},\
@@ -129,7 +131,8 @@
 		{1, "adv_aceCPR_AED"},\
 		{1, "ACE_personalAidKit"},\
 		{4, "ACE_bodyBag"},\
-		{1, "adv_aceCPR_AED"}}
+		{1, "adv_aceCPR_AED"},
+		{5, QEGVAR(medical,Painkillers)}}
 
 #define KEKO_LOGISTICS_EOD_CRATE_DEFAULT {\
 		{4, "ACE_Cellphone"},\
@@ -151,7 +154,8 @@
 		{20, "murshun_cigs_matches"},\
 		{20, "murshun_cigs_cigpack"},\
 		{10, "immersion_pops_poppack"},\
-		{10, "ACE_banana"}}
+		{10, "ACE_banana"},
+		{10, QEGVAR(medical,Painkillers)}}
 
 #define KEKO_LOGISTICS_CQB_CRATE_DEFAULT {\
 		{40, "ACE_M84"},\
