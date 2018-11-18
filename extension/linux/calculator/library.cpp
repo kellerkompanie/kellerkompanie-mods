@@ -14,8 +14,7 @@ __attribute__((dllexport)) void RVExtensionVersion(char *output, int outputSize)
 //--- STRING callExtension STRING
 __attribute__((dllexport)) void RVExtension(char *output, int outputSize, const char *function);
 //--- STRING callExtension ARRAY
-__attribute__((dllexport)) int
-RVExtensionArgs(char *output, int outputSize, const char *function, const char **argv, int argc);
+__attribute__((dllexport)) int RVExtensionArgs(char *output, int outputSize, const char *function, const char **argv, int argc);
 }
 
 //--- Extension version information shown in .rpt file
