@@ -24,7 +24,7 @@ class CfgVehicles {
 						displayName = "Use Painkillers";
 						condition = "'keko_medical_Painkillers' in (magazines _player)";
 						exceptions[] = {"isNotInside", "isNotSitting"};
-						statement = "['keko_medical_Painkillers', _player, _target, 'head', 'Painkillers'] call keko_medical_fnc_painkillersAction";
+						statement = "[_player, _target, 'head', 'Painkillers'] call ace_medical_fnc_treatment";
 						showDisabled = 0;
 						icon = QPATHTOF(ui\icon_painkillers_action.paa);
 					};
