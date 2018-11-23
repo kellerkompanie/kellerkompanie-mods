@@ -16,6 +16,7 @@ _player enableSimulation false;
 private _role_config = configFile >> "kekoFaction" >> _faction >> _role;
 private _weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
 private _weapon_config = configFile >> "kekoFaction" >> _faction >> _weaponCfg;
+private _faces = getArray (configFile >> "kekoFaction" >> _faction >> "faces");
 
 private _uniform = getArray (_role_config >> "uniform");
 private _uniformInventory = getArray (_role_config >> "uniformInventory");
@@ -38,6 +39,7 @@ private _items = getArray (_role_config >> "items");
 private _goggles = getArray (_role_config >> "goggles");
 
 private _optics = getArray (_role_config >> "optics");
+
 
 
 removeAllWeapons _player;
@@ -248,11 +250,15 @@ if(count _items != 0) then {
 	} forEach _items;
 };
 
+if (!(_faces isEqualTo [])) then {
+	private _face = selectRandom _faces;
+	[_player, _face] remoteExec ["setFace", 0, true];
+};
+
+
 _player enableSimulation true;
 
-if !(weaponLowered _player) then {
-	_player action ["WeaponOnBack", _player];
-};
+
 
 // let TFAR initialize
 // sleep 3;
@@ -329,3 +335,5 @@ if (GVAR(giveRadio) > 0) then {
 _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
+
+_player action ["WeaponOnBack", _player];
