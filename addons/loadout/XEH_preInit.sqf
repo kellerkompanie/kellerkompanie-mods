@@ -45,6 +45,14 @@ if (hasInterface) then {
 			"kekoFactionUSBlackOpsTropic",
 			"kekoFactionNATOtropic",
 			"kekoFactionIDAP",
+
+			"kekoFactionNAA",
+			"kekoFactionHAF",
+			"kekoFactionUNTOFIAAS",
+			"kekoFactionMyrimidones",
+			"kekoFactionWAM",
+			"kekoFactionAlSirae",
+
 			"kekoFactionBundeswehrFleck",
 			"kekoFactionBundeswehrTropen",
 			"kekoFactionBundeswehrSchnee",
@@ -59,6 +67,8 @@ if (hasInterface) then {
 			"kekofactionBlackorder",
 			"kekofactionBlackorderRedBerets",
 			"kekoFactionRussiaSpeznas",
+			"kekoFactionSpecOpsTropic",
+
 			"kekoFactionWehrmacht",
 			"kekoFactionWehrmachtAfrica",
 			"kekoFactionArmiaKrajowaPartyzanci",
@@ -79,6 +89,14 @@ if (hasInterface) then {
 		"[Minimal] U.S. BlackOps (Tropic)",
 		"[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)",
 		"[Minimal] IDAP - International Development and Aid Project",
+
+		"[Minimal] (WIP) NAA - New Altis Army",
+		"[Minimal] (WIP) HAF - Hellenic Armed Forces",
+		"[Minimal] (WIP) UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis",
+		"[Minimal] (WIP) Myrimidones Inc. (PMC)",
+		"[Minimal] (WIP) WAM - West Altian Militia",
+		"[Minimal] (WIP) Al Sirae (Terrorists)",
+
 		"[Main] Bundeswehr (Flecktarn)",
 		"[Main] Bundeswehr (Tropentarn)",
 		"[Main] Bundeswehr (Schneetarn)",
@@ -93,6 +111,8 @@ if (hasInterface) then {
 		"[Main] Black Order",
 		"[Main] Black Order (Red Berets)",
 		"[Main] Russia Speznas",
+		"[Main] Western Special Forces (Tropic)",
+
 		"[Ironfront] Wehrmacht",
 		"[Ironfront] Wehrmacht (Africa)",
 		"[Ironfront] Polska Armia Krajowa (Partyzanci)",
