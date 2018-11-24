@@ -51,6 +51,7 @@ if (hasInterface) then {
 			"kekoFactionUNTOFIAAS",
 			"kekoFactionMyrimidones",
 			"kekoFactionWAM",
+			"kekoFactionWAMVolunteers",
 			"kekoFactionAlSirae",
 
 			"kekoFactionBundeswehrFleck",
@@ -94,7 +95,8 @@ if (hasInterface) then {
 		"[Minimal] (WIP) HAF - Hellenic Armed Forces",
 		"[Minimal] (WIP) UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis",
 		"[Minimal] (WIP) Myrimidones Inc. (PMC)",
-		"[Minimal] (WIP) WAM - West Altian Militia",
+		"[Minimal] (WIP) WAM - West Altian Militia (Paramilitary)",
+		"[Minimal] (WIP) WAM - West Altian Militia (Volunteers)",
 		"[Minimal] (WIP) Al Sirae (Terrorists)",
 
 		"[Main] Bundeswehr (Flecktarn)",

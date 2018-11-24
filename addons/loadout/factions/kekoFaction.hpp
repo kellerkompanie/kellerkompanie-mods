@@ -27,6 +27,7 @@ class kekoFaction
 	#include "kekoFactionNAA.hpp"
 	#include "kekoFactionUNTOFIAAS.hpp"
 	#include "kekoFactionWAM.hpp"
+	#include "kekoFactionWAMVolunteers.hpp"
 
 	#include "kekoFactionUSArmyOCP.hpp"
 	#include "kekoFactionUSArmyUCP.hpp"

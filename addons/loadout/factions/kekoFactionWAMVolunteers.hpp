@@ -1,6 +1,6 @@
-class kekoFactionWAM: kekoFactionBase {
+class kekoFactionWAMVolunteers: kekoFactionBase {
 
-	name = "[Minimal] WAM - West Altian Militia (Paramilitary)";
+	name = "[Minimal] WAM - West Altian Militia (Volunteers)";
 	roles[] = {
 		{"Führung", {
 			kekoCommand,
@@ -34,10 +34,10 @@ class kekoFactionWAM: kekoFactionBase {
 			kekoUAVOperator,
 			kekoSurvivor}}
 	};
-	weaponCfg = kekoWeaponsWAM;
+	weaponCfg = kekoWeaponsWAMVolunteers;
 
 	// define all weapons and mags
-	#include "kekoWeaponsWAM.hpp"
+	#include "kekoWeaponsWAMVolunteers.hpp"
 
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
@@ -46,29 +46,65 @@ class kekoFactionWAM: kekoFactionBase {
 
 	class kekoSoldierWAM: kekoSoldier {
 		uniform[] = {
-			"WAM_fat_multitarn",
-			"WAM_fat_AOR1",
-			"WAM_fat_AOR2",
 			"WAM_fat_CE_villapaita",
-			"WAM_fat_CE_green_pants"
+			"WAM_fat_1",
+			"WAM_fat_4",
+			"WAM_fat_jeans",
+			"WAM_fat_jeans_2",
+			"WAM_fat_21",
+			"WAM_fat_22",
+			"WAM_fat_5",
+			"WAM_fat_3"
 		};
 
 		vest[] = {
+			"V_BandollierB_blk",
+			"V_BandollierB_cbr",
+			"V_BandollierB_rgr",
+			"V_BandollierB_khk",
+			"V_BandollierB_oli",
+			"V_TacVest_blk",
+			"V_TacVest_brn",
+			"V_TacVest_camo",
 			"V_TacVest_khk",
-			"MYR_vest_GA_rig_blk",
-			"WAM_vest_GA_rig_CAcamo",
 			"V_TacVest_oli",
+			"V_I_G_resistanceLeader_F",
 			"V_TacChestrig_cbr_F",
 			"V_TacChestrig_grn_F",
-			"V_TacChestrig_oli_F",
-			"WAM_vest_GA_lite_CAcamo",
-			"MYR_vest_GA_lite_blk",
-			"V_TacVest_camo"
+			"V_TacChestrig_oli_F"
 		};
 
 		helmet[] = {
-			"H_Cap_headphones",
-			"GUR_beret_01"
+			"H_Bandanna_gry",
+			"H_Bandanna_blu",
+			"H_Bandanna_cbr",
+			"H_Bandanna_khk",
+			"H_Bandanna_mcamo",
+			"H_Bandanna_sgg",
+			"H_Bandanna_sand",
+			"H_Bandanna_surfer",
+			"H_Bandanna_surfer_blk",
+			"H_Bandanna_surfer_grn",
+			"H_Bandanna_camo",
+			"H_Booniehat_khk",
+			"H_Booniehat_mcamo",
+			"H_Booniehat_oli",
+			"H_Booniehat_tan",
+			"H_Cap_blk",
+			"H_Cap_blu",
+			"H_Cap_blk_CMMG",
+			"H_Cap_grn",
+			"H_Cap_oli",
+			"H_Cap_red",
+			"H_Cap_tan",
+			"H_Hat_blue",
+			"H_Hat_brown",
+			"H_Hat_camo",
+			"H_Hat_checker",
+			"H_Hat_grey",
+			"H_Hat_tan",
+			"H_StrawHat",
+			"H_StrawHat_dark"
 		};
 
 		primary[] = {
