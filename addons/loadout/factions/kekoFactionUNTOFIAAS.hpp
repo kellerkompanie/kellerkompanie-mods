@@ -25,8 +25,6 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			kekoAASpecialistAsst}},
 		{"Support", {
 			kekoMarksman,
-			kekoSniper,
-			kekoSpotter,
 			kekoEOD,
 			kekoEngineer,
 			kekoDriver,
@@ -35,7 +33,12 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			kekoJetPilot,
 			kekoJTAC,
 			kekoUAVOperator,
-			kekoSurvivor}}
+			kekoSurvivor}},
+		{"Officials", {
+			kekoObserverCanada,
+			kekoObserverChina,
+			kekoObserverFinland,
+			kekoObserverRussia}}
 	};
 	weaponCfg = kekoWeaponsUNTOFIAAS;
 
@@ -49,41 +52,48 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 
 	class kekoSoldierUNTOFIAAS: kekoSoldier {
 		uniform[] = {
-			"U_B_CombatUniform_mcam"};
+			"U_MU_B_soldier_wdl",
+			"U_MU_B_soldier_wdl_vest",
+			"U_MU_B_soldier_wdl_tshirt"
+		};
 
 		vest[] = {
-			"V_PlateCarrier1_rgr"};
+			"V_I_G_resistanceLeader_F",
+			"V_TacVest_oli",
+			"V_TacVest_camo"
+		};
 
 		helmet[] = {
-			"H_HelmetSpecB_blk"};
+			"UNT_basic_helmet",
+			"UNT_hel_can_UN"
+		};
 
 		primary[] = {
-			keko_W_A3_MX};
+			keko_W_A3_Mk20
+		};
 
 		secondary[] = {
-			keko_W_TACTICAL};
+			keko_W_TACTICAL
+		};
 	};
 
 	class kekoSoldierLight: kekoSoldierUNTOFIAAS {
 		primary[] = {
-			keko_W_A3_MXC,
-			keko_W_A3_MXC_BLACK};
+			keko_W_A3_Mk20C
+		};
 	};
 
 	class kekoLead: kekoSoldierUNTOFIAAS	{
 		name = "Lead";
 		rank = "LIEUTENANT";
-		uniform[] = {"U_B_CombatUniform_mcam"};
-		vest[] = {"V_Chestrig_rgr"};
-		helmet[] = {"H_MilCap_mcamo"};
-		backpack[] = {"TFAR_rt1523g_rhs"};
+		helmet[] = {"UNT_Beret_02"};
+		backpack[] = {"TFAR_rt1523g_bwmod"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_A3_MX_GL_HUNTIR,
-			keko_W_A3_MX_GL_BLACK_HUNTIR};
+			keko_W_A3_Mk20_GL_HuntIR};
 	};
 
 	class kekoCommand: kekoLead	{
@@ -91,16 +101,14 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
-		helmet[] = {"H_Cap_tan_specops_US"};
 	};
 
 	class kekoSQL: kekoSoldierUNTOFIAAS	{
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_A3_MX_GL_HUNTIR,
-			keko_W_A3_MX_GL_BLACK_HUNTIR};
-		backpack[] = {"TFAR_rt1523g_rhs"};
+			keko_W_A3_Mk20_GL_HuntIR};
+		backpack[] = {"TFAR_rt1523g_bwmod"};
 		backpackInventory[] = {
 			{1,"ACE_HuntIR_monitor"},
 			{4,"ACE_HuntIR_M203"}};
@@ -122,18 +130,17 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{2, GRENADE},
 			{2, PRIMARY_MAG}};
 		primary[] = {
-			keko_W_A3_MX_GL,
-			keko_W_A3_MX_GL_BLACK};
+			keko_W_A3_Mk20_GL};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
 		name = "Doctor";
 		medicClass = 2;
 		rank = "SERGEANT";
-		vest[] = {"V_PlateCarrierSpec_rgr"};
+		vest[] = {"V_PlateCarrierIAGL_oli"};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -141,10 +148,10 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
-		vest[] = {"V_PlateCarrierSpec_rgr"};
+		vest[] = {"V_PlateCarrierIAGL_oli"};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -165,8 +172,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{9, UGL_MAG},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_A3_MX_GL,
-			keko_W_A3_MX_GL_BLACK};
+			keko_W_A3_Mk20_GL};
 	};
 
 	class kekoLMG: kekoSoldierUNTOFIAAS {
@@ -176,8 +182,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{1, SMOKE_WHITE},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_A3_MX_SW,
-			keko_W_A3_MX_SW_BLACK};
+			keko_W_A3_Stoner};
 		backpack[] = {"B_FieldPack_khk"};
 		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
@@ -195,8 +200,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{2, PRIMARY_MAG_MMG},
 			{2, GRENADE}};
 		primary[] = {
-			keko_W_A3_MMG,
-			keko_W_A3_MMG_BLACK};
+			keko_W_A3_MMG};
 		backpack[] = {"B_FieldPack_khk"};
 	};
 
@@ -247,53 +251,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{2, GRENADE},
 			{5, PRIMARY_MAG_MARKSMAN}};
 		primary[] = {
-			keko_W_A3_MXM,
-			keko_W_A3_MXM_BLACK};
-	};
-
-	class kekoSniper: kekoSoldierUNTOFIAAS {
-		name = "Sniper";
-		uniform[] = {"U_B_FullGhillie_sard"};
-		uniformInventory[] = {
-			{1,"ACE_ATragMX"},
-			{10,"ACE_quikclot"},
-			{1,"ACE_Flashlight_MX991"},
-			{1,"ACE_IR_Strobe_Item"},
-			{1,"ACE_Kestrel4500"},
-			{1,"ACE_MapTools"},
-			{1,"ACE_microDAGR"},
-			{2,"ACE_morphine"},
-			{3,"ACE_tourniquet"},
-			{1,"ACE_surgicalKit"},
-			{1,"ACE_RangeCard"},
-			{2,"ACE_epinephrine"},
-			{1,"ACE_salineIV"},
-			{8,"ACE_fieldDressing"}};
-		vest[] = {"V_PlateCarrier2_blk"};
-		vestInventory[] = {
-			{1,SMOKE_WHITE},
-			{1,SMOKE_GREEN},
-			{8,"ACE_7Rnd_408_305gr_Mag"},
-			{2,SECONDARY_MAG}};
-		helmet[] = {"H_HelmetSpecB"};
-		primary[] = {
-			keko_W_A3_LRR,
-			keko_W_A3_LRR_CAMO};
-		secondary[] = {keko_W_TACTICAL_SPECOPS};
-		optics[] = {"Laserdesignator"};
-	};
-
-	class kekoSpotter: kekoSniper {
-		name = "Spotter";
-		vestInventory[] = {
-			{1,"SmokeShell"},
-			{1,"SmokeShellGreen"},
-			{2,"11Rnd_45ACP_Mag"},
-			{10,"ACE_30Rnd_65x47_Scenar_mag"},
-			{1,GRENADE}};
-		primary[] = {
-			keko_W_A3_MXM,
-			keko_W_A3_MXM_BLACK};
+			keko_W_A3_EBR};
 	};
 
 	class kekoEOD: kekoSoldierLight {
@@ -352,8 +310,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 	class kekoJTAC: kekoGrenadier {
 		name = "JTAC";
 		primary[] = {
-			keko_W_A3_MX_GL_HUNTIR,
-			keko_W_A3_MX_GL_BLACK_HUNTIR};
+			keko_W_A3_Mk20_GL_HuntIR};
 		vestInventory[] = {
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
@@ -366,7 +323,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			{2,"SmokeShellPurple"},
 			{2,"SmokeShellYellow"}
 		};
-		backpack[] = {"TFAR_rt1523g_rhs"};
+		backpack[] = {"TFAR_rt1523g_bwmod"};
 		backpackInventory[] = {{4,"Laserbatteries"}};
 		optics[] = {"Laserdesignator"};
 	};
@@ -374,8 +331,7 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 	class kekoUAVOperator: kekoSoldierLight	{
 		name = "UAV Operator";
 		primary[] = {
-			keko_W_A3_MX_GL_HUNTIR,
-			keko_W_A3_MX_GL_BLACK_HUNTIR};
+			keko_W_A3_Mk20_GL_HuntIR};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
 			{2,PRIMARY_MAG},
@@ -395,5 +351,31 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
 			"H_HeadBandage_bloody_F"};
+	};
+
+	class kekoObserverCanada: kekoSoldierUNTOFIAAS {
+		name = "U.N. Observer (Canada)";
+		rank = "COLONEL";
+		uniform[] = {"UNT_fat_cadpat"};
+		helmet[] = {"UNT_Beret_02"};
+		primary[] = {};
+		secondary[] = {};
+		vest[] = {};
+		vestInventory[] = {};
+	};
+
+	class kekoObserverChina: kekoObserverCanada {
+		name = "U.N. Observer (China)";
+		uniform[] = {"UNT_fat_hex_officer"};
+	};
+
+	class kekoObserverFinland: kekoObserverCanada {
+		name = "U.N. Observer (Finland)";
+		uniform[] = {"UNT_unf_m04_helle_1"};
+	};
+
+	class kekoObserverRussia: kekoObserverCanada {
+		name = "U.N. Observer (Russia)";
+		uniform[] = {"UNT_unf_rus_surpat_1"};
 	};
 };
