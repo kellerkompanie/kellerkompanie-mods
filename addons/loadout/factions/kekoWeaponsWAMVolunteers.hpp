@@ -22,7 +22,7 @@
 #define UGL_MAG "1Rnd_HE_Grenade_shell"
 #define HUNTIR_MAG "ACE_HuntIR_M203"
 
-class kekoWeaponsWAM {
+class kekoWeaponsWAMVolunteers {
 	// Primary
 	class keko_W_A3_CTAR: kekoPrimaryWeapon
 	{
