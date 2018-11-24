@@ -307,14 +307,14 @@ class kekoFactionWAMVolunteers: kekoFactionBase {
 
 	class kekoEOD: kekoSoldierLight {
 		name = "Explosive Specialist";
-		backpack[] = {"B_Carryall_cbr"};
+		backpack[] = {"WAM_Carryall_mcamo_ammo"};
 		backpackInventory[] = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
 
 	class kekoEngineer: kekoSoldierLight {
 		name = "Engineer";
-		backpack[] = {"B_Carryall_cbr"};
+		backpack[] = {"WAM_Carryall_mcamo_ammo"};
 		backpackInventory[] = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
