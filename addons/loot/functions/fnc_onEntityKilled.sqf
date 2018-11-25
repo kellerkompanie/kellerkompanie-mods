@@ -2,6 +2,7 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith { WARNING("passed objNull as parameter to onEntityKilled, exiting") };
 if !(local _unit) exitWith { _this remoteExecCall [QFUNC(onEntityKilled), _unit]; };
 
 removeAllWeapons _unit;
