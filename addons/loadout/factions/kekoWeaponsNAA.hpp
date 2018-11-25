@@ -27,7 +27,7 @@ class kekoWeaponsNAA {
 	// Primary
 	class keko_W_A3_F2000: kekoPrimaryWeapon {
 		cfgName = "NAA_arifle_Mk20_alpat_ard1";
-		items[] = {"acc_pointer_IR","optic_MRCO"};
+		items[] = {"acc_pointer_IR","optic_aco"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 		silencer[] = {"muzzle_snds_m"};
 	};
@@ -49,7 +49,7 @@ class kekoWeaponsNAA {
 	};
 	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {
 		cfgName = "NAA_MMG_02_alpat_F";
-		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_Arco"};
+		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_aco"};
 		magazines[] = {PRIMARY_MAG_MMG};
 		silencer[] = {"muzzle_snds_338_black"};
 	};

@@ -336,4 +336,6 @@ _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
 
-_player action ["WeaponOnBack", _player];
+if !(weaponLowered _player) then {
+	_player action ["WeaponOnBack", _player];
+};

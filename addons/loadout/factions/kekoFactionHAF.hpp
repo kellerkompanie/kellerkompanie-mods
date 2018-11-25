@@ -135,7 +135,7 @@ class kekoFactionHAF: kekoFactionBase {
 		rank = "SERGEANT";
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -145,7 +145,7 @@ class kekoFactionHAF: kekoFactionBase {
 		rank = "CORPORAL";
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"B_Kitbag_mcamo"};
+		backpack[] = {"B_Kitbag_rgr"};
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -178,13 +178,13 @@ class kekoFactionHAF: kekoFactionBase {
 		primary[] = {
 			keko_W_A3_MX_SW};
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierHAF {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {{5, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
@@ -293,14 +293,14 @@ class kekoFactionHAF: kekoFactionBase {
 
 	class kekoEOD: kekoSoldierLight {
 		name = "Explosive Specialist";
-		backpack[] = {"B_Carryall_cbr"};
+		backpack[] = {"B_Carryall_khk"};
 		backpackInventory[] = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
 
 	class kekoEngineer: kekoSoldierLight {
 		name = "Engineer";
-		backpack[] = {"B_Carryall_cbr"};
+		backpack[] = {"B_Carryall_khk"};
 		backpackInventory[] = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
