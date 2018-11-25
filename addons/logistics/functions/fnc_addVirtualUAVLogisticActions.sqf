@@ -26,7 +26,7 @@ private _i = 0;
 
 			private _actionName = format ["keko_logistics_supplyDropUAV_%1", _i];
 			private _actionTitle = format ["%1", _crateName];
-			private _actionStatement = compile (format ["[%3, getPos _player, '%1'] call keko_logistics_fnc_supplyDrone;", _crateName, GVAR(uavSupplyBase)]);
+			private _actionStatement = compile (format ["[%2, getPos _player, '%1'] call keko_logistics_fnc_supplyDrone;", _crateName, GVAR(uavSupplyBase)]);
 			_action = [_actionName, _actionTitle, QPATHTOF(ui\icon_uav), _actionStatement, {true}] call ace_interact_menu_fnc_createAction;
 		}
 		else {
