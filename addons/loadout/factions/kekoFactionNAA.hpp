@@ -55,10 +55,7 @@ class kekoFactionNAA: kekoFactionBase {
 			"NAA_fat_alpat_ard1",
 			"NAA_fat_alpat_rs_ard1",
 			"NAA_fat_alpat_rs_ard3",
-			"NAA_fat_alpat_rs_ard2",
-			"NAA_fat_alpat_tanktop2",
-			"NAA_fat_alpat_tanktop1",
-			"NAA_fat_alpat_tanktop3"};
+			"NAA_fat_alpat_rs_ard2"};
 
 		vest[] = {
 			"NAA_vst_GA_heavy_alpat_ard1",
@@ -194,7 +191,7 @@ class kekoFactionNAA: kekoFactionBase {
 	class kekoRiflemanATTanks: kekoRiflemanAT	{
 		name = "Rifleman Anti-Tank (Tanks DLC)";
 		launcher[] = {keko_W_MAAWS};
-		backpack[] = {"B_AssaultPack_dgtl"};
+		backpack[] = {"NAA_bac_ass_alpat_ard1"};
 		backpackInventory[] = {{2, AT_MAG_TANKS}};
 	};
 
@@ -212,7 +209,7 @@ class kekoFactionNAA: kekoFactionBase {
 	class kekoLMG: kekoSoldierAAF {
 		name = "Light Machine Gunner";
 		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
+			{2, PRIMARY_MAG_LMG},
 			{1, SMOKE_WHITE},
 			{2, GRENADE}};
 		primary[] = {
@@ -225,19 +222,20 @@ class kekoFactionNAA: kekoFactionBase {
 	class kekoLMGAsst: kekoSoldierAAF {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierAAF {
 		name = "Medium Machine Gunner";
 		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
+			{1, PRIMARY_MAG_MMG},
 			{2, GRENADE}};
 		primary[] = {
 			keko_W_A3_MMG_AAF};
 
 		backpack[] = {"B_FieldPack_oli"};
+		backpackInventory[] = {{2, PRIMARY_MAG_MMG}};
 	};
 
 	class kekoMMGAsst: kekoSoldierAAF {
