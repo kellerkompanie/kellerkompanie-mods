@@ -80,7 +80,7 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 /*[
-	"keko_settings_advancedtowing_locked", // key/reference variable
+	"keko_settings_towing_locked", // key/reference variable
 	"LIST", // type of setting
 	["Allow towing locked vehicles", "Enable/Disable towing locked vehicles"], // name and tooltip
 	"Kellerkompanie Advanced Towing", // category
@@ -91,7 +91,7 @@ Parameters:
 	],
 	0
 ] call cba_settings_fnc_init;*/
-/* if!(keko_settings_advancedtowing_locked == 1) then {
+/* if!(keko_settings_towing_locked == 1) then {
 	if( locked _vehicle > 1 ) then {
 		hint "Cannot pick up tow ropes from locked vehicle";
 		_canPickupTowRopes = false;
