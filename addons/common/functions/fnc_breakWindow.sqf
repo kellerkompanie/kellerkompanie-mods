@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+// Original version by Axebeard https://steamcommunity.com/sharedfiles/filedetails/?id=1578884800
 
 private _window_pos_arr = [];
 private _house = nearestObject [player , "House"];
