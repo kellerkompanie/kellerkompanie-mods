@@ -1,6 +1,14 @@
 #include "script_component.hpp"
 
 if (isServer) then {
+
+	["CAManBase", "Fired", {
+		params ["_unit", "", "", "", "", "", "_projectile"];
+
+		deleteVehicle _projectile;
+		["ace_captives_setHandcuffed", [_unit, true], [_unit]] call CBA_fnc_targetEvent;
+	}] call CBA_fnc_addClassEventHandler;
+
 	publicVariable QGVAR(aiKilled);
 	publicVariable QGVAR(peoplePunched);
 	publicVariable QGVAR(civsKilled);
@@ -13,7 +21,6 @@ if (isServer) then {
 		publicVariable QGVAR(shotsFired);
 	}, [], 8] call CBA_fnc_waitAndExecute;
 } else {
-	disableUserInput true;
 	[GVAR(bandagesApplied), GVAR(pulseChecked), GVAR(cprPerformed), GVAR(fragsOut), GVAR(shotsFired)] remoteExec [QFUNC(addStatisticValues), 2, false];
 };
 
