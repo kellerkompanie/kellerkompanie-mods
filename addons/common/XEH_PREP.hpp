@@ -2,6 +2,7 @@ PREP(3denAttributesChanged);
 PREP(addStatisticValues);
 PREP(applyTourniquets);
 PREP(bandageRandomWound);
+PREP(breakWindow);
 PREP(createZeus);
 PREP(getNumOpenWounds);
 PREP(lockDoors);
