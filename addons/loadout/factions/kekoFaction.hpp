@@ -44,6 +44,7 @@ class kekoFaction
 	#include "kekoFactionBlackorder.hpp"
 	#include "kekoFactionBlackorderRedBerets.hpp"
 	#include "kekoFactionSpecOpsTropic.hpp"
+	#include "kekoFactionHorizonIsland.hpp"
 
 	#include "kekoFactionWehrmacht.hpp"
 	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"

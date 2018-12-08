@@ -69,6 +69,7 @@ if (hasInterface) then {
 			"kekofactionBlackorderRedBerets",
 			"kekoFactionRussiaSpeznas",
 			"kekoFactionSpecOpsTropic",
+			"kekoFactionHorizonIsland",
 
 			"kekoFactionWehrmacht",
 			"kekoFactionWehrmachtAfrica",
@@ -114,6 +115,7 @@ if (hasInterface) then {
 		"[Main] Black Order (Red Berets)",
 		"[Main] Russia Speznas",
 		"[Main] Western Special Forces (Tropic)",
+		"[Main] Horizon Island Defense Forces",
 
 		"[Ironfront] Wehrmacht",
 		"[Ironfront] Wehrmacht (Africa)",
