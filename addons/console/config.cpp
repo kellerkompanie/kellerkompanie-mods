@@ -10,8 +10,8 @@ class CfgPatches {
 		author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG; 
+        VERSION_CONFIG;
 	};
 };
 
-enableDebugConsole = 1;
+enableDebugConsole = {"76561197987754545"};
