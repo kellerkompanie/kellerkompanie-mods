@@ -85,7 +85,10 @@ if(count _uniform != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToUniform _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToUniform _item;
+				};
 			};
 		} forEach _uniformInventory;
 	};
@@ -97,7 +100,10 @@ if(count _vest != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToVest _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToVest _item;
+				};
 			};
 		} forEach _vestInventory;
 
@@ -113,7 +119,10 @@ if(count _backpack != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToBackpack _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToBackpack _item;
+				};
 			};
 		} forEach _backpackInventory;
 	};
@@ -151,7 +160,7 @@ if(count _primary != 0) then {
 	if(count _primary_magazines != 0) then {
 		private _item = _primary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
-		_player addItemToVest _item;
+			_player addItemToVest _item;
 	};
 
 	if(count _primary_uglMagazines != 0) then {

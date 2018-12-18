@@ -11,16 +11,28 @@ _crate allowDamage false;
 
 	if (isClass (configFile >> "CfgWeapons" >> _item)) then {
 		if(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-			_crate addItemCargoGlobal [_item, _amount];
+			if (_item call EFUNC(loadout,isItemRequired)) then {
+				_item = _item call EFUNC(loadout,replaceItem);
+				_crate addItemCargoGlobal [_item, _amount];
+			};
 		} else {
-			_crate addWeaponCargoGlobal [_item, _amount];
+			if (_item call EFUNC(loadout,isItemRequired)) then {
+				_item = _item call EFUNC(loadout,replaceItem);
+				_crate addWeaponCargoGlobal [_item, _amount];
+			};
 		};
 	} else {
 		if (isClass (configFile >> "CfgMagazines" >> _item)) then {
-			_crate addMagazineCargoGlobal [_item, _amount];
+			if (_item call EFUNC(loadout,isItemRequired)) then {
+				_item = _item call EFUNC(loadout,replaceItem);
+				_crate addMagazineCargoGlobal [_item, _amount];
+			};
 		} else {
 			if (isClass (configFile >> "CfgVehicles" >> _item)) then {
-				_crate addBackpackCargoGlobal [_item, _amount];
+				if (_item call EFUNC(loadout,isItemRequired)) then {
+					_item = _item call EFUNC(loadout,replaceItem);
+					_crate addBackpackCargoGlobal [_item, _amount];
+				};
 			};
 		};
 	};
