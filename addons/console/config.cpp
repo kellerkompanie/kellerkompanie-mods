@@ -14,4 +14,4 @@ class CfgPatches {
 	};
 };
 
-enableDebugConsole = {"76561197987754545"};
+enableDebugConsole[] = {"76561197987754545"};
