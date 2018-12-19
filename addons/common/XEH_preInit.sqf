@@ -9,6 +9,18 @@ PREP_RECOMPILE_END;
 
 enableSaving [false, false];
 
+
+// fix for units losing their loadout when switching to Headless Client
+["CAManBase", "Local", {
+    params ["_entity", "_isLocal"];
+
+    if (_isLocal) then {
+        if ((uniform _entity) isEqualTo "") then {
+            _entity setUnitLoadout (getUnitLoadout (typeOf _entity));
+        };
+    };
+}] call CBA_fnc_addClassEventHandler;
+
 if(isServer) then {
 	GVAR(aiKilled) = 0;
 	GVAR(fragsOut) = 0;
