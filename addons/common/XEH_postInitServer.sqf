@@ -8,5 +8,15 @@ INFO("running XEH_postInitServer");
 //removes notification and bird of all curators:
 { _x setVariable ["birdType",""]; _x setVariable ["showNotification",false]; [_x, [-1, -2, 2]] call bis_fnc_setCuratorVisionModes; nil;} count allCurators;
 
-//deletes empty groups:
-GVAR(emptyGroupsDeleter) = addMissionEventHandler ["EntityKilled",{private _grp = group (_this select 0);if ( count (units _grp) == 0 ) then { deleteGroup _grp };}];
+//deletes empty groups via MissionEventHandler
+GVAR(emptyGroupsDeleter) = addMissionEventHandler ["EntityKilled", {private _grp = group (_this select 0);if ( count (units _grp) == 0 ) then { deleteGroup _grp };}];
+
+//for good measure add CBA per frame handler as well
+[
+    {
+        {
+            if ((units _x) isEqualTo []) then {[_x] call CBA_fnc_deleteEntity};
+        } forEach allGroups;
+    },
+    1800
+] call CBA_fnc_addPerFrameHandler;
