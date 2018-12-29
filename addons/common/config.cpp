@@ -49,3 +49,8 @@ class CfgPatches {
 #include "ui\dialog_lockDoors.hpp"
 
 #include "CfgEventHandlers.hpp"
+
+// remove BI default missions
+class CfgMissions {
+	class MPMissions {};
+};
