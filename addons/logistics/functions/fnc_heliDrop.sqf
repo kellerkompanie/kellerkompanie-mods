@@ -9,17 +9,17 @@ if(GVAR(customLogistics) == 2) then {
 	params ["_position", "_crate_name"];
 	_targetPos = _position;
 	_targetPos set [2, 100];
-	_crate = [[0, 0, 100], _crate_name] call FUNC(spawnCrate);
+	_crate = [GVAR(heliEntryPoint), _crate_name] call FUNC(spawnCrate);
 }
 else
 {
 	params ["_position", "_faction", "_crateCfg"];
 	_targetPos = _position;
 	_targetPos set [2, 100];
-	_crate = [[0, 0, 100], _faction, _crateCfg] call FUNC(spawnCrate);
+	_crate = [GVAR(heliEntryPoint), _faction, _crateCfg] call FUNC(spawnCrate);
 };
 
-private _spawnPos = [0, 0, 100];
+private _spawnPos = GVAR(heliEntryPoint);
 private _spawnedArr = [_spawnPos, 0, "B_Heli_Transport_03_unarmed_F", civilian] call BIS_fnc_spawnVehicle;
 _spawnedArr params ["_vehicle", "", "_group"];
 _vehicle engineOn true;
@@ -73,4 +73,4 @@ _group deleteGroupWhenEmpty true;
 
 private _dropLocationWaypoint = _group addWaypoint [_targetPos, 0];
 _dropLocationWaypoint setWaypointCompletionRadius 10;
-_dropLocationWaypoint setWaypointStatements ["true", "private _group = group this; private _vehicle = vehicle this; private _crates = _vehicle getVariable 'ace_cargo_loaded'; { [_x, _vehicle] call ace_cargo_fnc_paradropItem } forEach _crates; private _returnLocationWaypoint = _group addWaypoint [[0, 0, 100], 0]; _returnLocationWaypoint setWaypointStatements ['true', 'private _group = group this; private _vehicle = vehicle this; {deleteVehicle _x} forEach crew _vehicle + [_vehicle]; deleteGroup _group;'];"];
+_dropLocationWaypoint setWaypointStatements ["true", "private _group = group this; private _vehicle = vehicle this; private _crates = _vehicle getVariable 'ace_cargo_loaded'; { [_x, _vehicle] call ace_cargo_fnc_paradropItem } forEach _crates; private _returnLocationWaypoint = _group addWaypoint [keko_logistics_heliExitPoint, 0]; _returnLocationWaypoint setWaypointStatements ['true', 'private _group = group this; private _vehicle = vehicle this; {deleteVehicle _x} forEach crew _vehicle + [_vehicle]; deleteGroup _group;'];"];

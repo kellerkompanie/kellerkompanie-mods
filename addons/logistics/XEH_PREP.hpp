@@ -22,6 +22,8 @@ PREP(moduleCustomLogistics3den);
 PREP(moduleFuelConsumption3den);
 PREP(moduleUAVBase3den);
 PREP(moduleHeliDrop);
+PREP(moduleHeliEntry3den);
+PREP(moduleHeliExit3den);
 PREP(moduleSpawnCrate);
 PREP(moduleSupplyDrop);
 PREP(spawnCrate);
