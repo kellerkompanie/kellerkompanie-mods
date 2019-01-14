@@ -19,7 +19,8 @@ class CfgPatches {
 			"fow_weapons",
 			"LIB_weapons",
 			"WW2_Assets_c_Weapons_InfantryWeapons_c",
-			"fow_weapons_c"
+			"fow_weapons_c",
+			"cba_jam"
 		};
 		author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
@@ -29,4 +30,5 @@ class CfgPatches {
 };
 
 #include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
 #include "CfgWeapons.hpp"
