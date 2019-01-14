@@ -2,17 +2,25 @@ class CfgWeapons {
 
 	class LIB_LMG;
 	class LIB_MG34: LIB_LMG {
-		magazines[] = {"LIB_50Rnd_792x57","LIB_50Rnd_792x57_SMK","LIB_50Rnd_792x57_sS",QGVAR(LIB_75Rnd_792x57),QGVAR(LIB_150Rnd_792x57),QGVAR(LIB_250Rnd_792x57),QGVAR(FOW_75Rnd_792x57),QGVAR(FOW_150Rnd_792x57),QGVAR(FOW_250Rnd_792x57)};
+		magazineWell[] = {
+			CBA_792x57_LINKS
+		};
 	};
 	class LIB_MG42: LIB_LMG {
-		magazines[] = {"LIB_50Rnd_792x57","LIB_50Rnd_792x57_SMK","LIB_50Rnd_792x57_sS",QGVAR(LIB_75Rnd_792x57),QGVAR(LIB_150Rnd_792x57),QGVAR(LIB_250Rnd_792x57),QGVAR(FOW_75Rnd_792x57),QGVAR(FOW_150Rnd_792x57),QGVAR(FOW_250Rnd_792x57)};
+		magazineWell[] = {
+			CBA_792x57_LINKS
+		};
 	};
 
 	class fow_rifle_base;
 	class fow_w_mg34: fow_rifle_base {
-		magazines[] = {"fow_50Rnd_792x57",QGVAR(FOW_75Rnd_792x57),QGVAR(FOW_150Rnd_792x57),QGVAR(FOW_250Rnd_792x57),QGVAR(LIB_75Rnd_792x57),QGVAR(LIB_150Rnd_792x57),QGVAR(LIB_250Rnd_792x57)};
+		magazineWell[] = {
+			CBA_792x57_LINKS
+		};
 	};
 	class fow_w_mg42: fow_rifle_base {
-		magazines[] = {"fow_50Rnd_792x57","lib_50Rnd_792x57","lib_50Rnd_792x57_SMK","lib_50Rnd_792x57_sS",QGVAR(FOW_75Rnd_792x57),QGVAR(FOW_150Rnd_792x57),QGVAR(FOW_250Rnd_792x57),QGVAR(LIB_75Rnd_792x57),QGVAR(LIB_150Rnd_792x57),QGVAR(LIB_250Rnd_792x57)};
+		magazineWell[] = {
+			CBA_792x57_LINKS
+		};
 	};
 };
