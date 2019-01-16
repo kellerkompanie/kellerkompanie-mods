@@ -10,7 +10,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",
-            "ace_medical"};
+            "ace_medical",
+			"adv_aceCPR",
+			"adv_aceSplint",
+			"kat_aceAirway"
+		};
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
