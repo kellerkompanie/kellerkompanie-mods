@@ -23,7 +23,7 @@ class ACE_Medical_Actions {
         };
         class BloodIV: fieldDressing {
 			allowSelfTreatment = 1;
-            treatmentTime = 4; // 7			
+            treatmentTime = 4; // 7
         };
         class SurgicalKit: fieldDressing {
             allowSelfTreatment = 1;
@@ -47,7 +47,7 @@ class ACE_Medical_Actions {
 		};
 		class CheckLimbs: fieldDressing {
 			treatmentTime = 2; // 3
-		}
+		};
     };
 };
 
