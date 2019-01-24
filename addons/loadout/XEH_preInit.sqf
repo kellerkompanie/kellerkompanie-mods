@@ -71,6 +71,8 @@ if (hasInterface) then {
 			"kekoFactionSpecOpsTropic",
 			"kekoFactionHorizonIsland",
 
+			"kekoFactionBAFMTP",
+
 			"kekoFactionWehrmacht",
 			"kekoFactionWehrmachtAfrica",
 			"kekoFactionArmiaKrajowaPartyzanci",

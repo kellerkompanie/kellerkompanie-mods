@@ -46,6 +46,8 @@ class kekoFaction
 	#include "kekoFactionSpecOpsTropic.hpp"
 	#include "kekoFactionHorizonIsland.hpp"
 
+	#include "kekoFactionBAFMTP.hpp"
+
 	#include "kekoFactionWehrmacht.hpp"
 	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"
 	#include "kekoFactionArmiaKrajowaCamo.hpp"
