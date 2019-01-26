@@ -9,10 +9,12 @@ enableRadio false;
 if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
 	if (isNull (getAssignedCuratorLogic player)) then {
 		["ace_zeus_createZeus", player] call CBA_fnc_serverEvent;
-	};	
+	};
 };
 
-
+if(hasInterface) then {
+	call FUNC(addBriefingEntries);
+};
 
 // event handlers for the statistics at mission end
 GVAR(bandagesApplied) = 0;

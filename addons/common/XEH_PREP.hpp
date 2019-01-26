@@ -1,4 +1,5 @@
 PREP(3denAttributesChanged);
+PREP(addBriefingEntries);
 PREP(addStatisticValues);
 PREP(applyTourniquets);
 PREP(bandageRandomWound);
