@@ -119,6 +119,8 @@ if (hasInterface) then {
 		"[Main] Western Special Forces (Tropic)",
 		"[Main] Horizon Island Defense Forces",
 
+		"[Event] BAF MTP - British Armed Forces (MTP)",
+
 		"[Ironfront] Wehrmacht",
 		"[Ironfront] Wehrmacht (Africa)",
 		"[Ironfront] Polska Armia Krajowa (Partyzanci)",

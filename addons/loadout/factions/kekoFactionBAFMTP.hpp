@@ -48,9 +48,7 @@ class kekoFactionBAFMTP: kekoFactionBase {
 	class kekoSoldierBAFMTP: kekoSoldier {
 		uniform[] = {
 			"UK3CB_BAF_U_CombatUniform_MTP",
-			"UK3CB_BAF_U_CombatUniform_MTP_RM",
-			"UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve",
-			"UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM"
+			"UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
 		};
 
 		vest[] = {
@@ -119,14 +117,28 @@ class kekoFactionBAFMTP: kekoFactionBase {
 	class kekoLead: kekoSoldierBAFMTP	{
 		name = "Lead";
 		rank = "LIEUTENANT";
-		uniform[] = {"U_B_CombatUniform_mcam"};
-		vest[] = {"UK3CB_BAF_V_Osprey_SL_A"};
-		helmet[] = {"UK3CB_BAF_H_Beret_TYR_PRR"};
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Radio_L_A"};
-		backpackInventory[] = {};
-		optics[] = {"Rangefinder"};
+		uniform[] = {
+			"UK3CB_BAF_U_RolledUniform_MTP"
+		};
+		vest[] = {
+			"UK3CB_BAF_V_Osprey_SL_A"
+		};
+		helmet[] = {
+			"UK3CB_BAF_H_Beret_TYR_PRR"
+		};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Radio_L_B"
+		};
+		backpackInventory[] = {
+			{1,"ACE_HuntIR_monitor"},
+			{4,"ACE_HuntIR_M203"}
+		};
+		optics[] = {
+			"Rangefinder"
+		};
 		primary[] = {
-			keko_W_BAF_L85A2_UGL
+			keko_W_BAF_L85A2_UGL_HUNTIR
 		};
 	};
 
@@ -141,11 +153,21 @@ class kekoFactionBAFMTP: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_BAF_L85A2_UGL
+			keko_W_BAF_L85A2_UGL_HUNTIR
 		};
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Radio_L_A"};
-		backpackInventory[] = {	};
-		optics[] = {"Rangefinder"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Radio_H_A",
+			"UK3CB_BAF_B_Bergen_MTP_Radio_H_B",
+			"UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Radio_L_B"
+		};
+		backpackInventory[] = {
+			{1,"ACE_HuntIR_monitor"},
+			{4,"ACE_HuntIR_M203"}
+		};
+		optics[] = {
+			"Rangefinder"
+		};
 		vest[] = {
 			"UK3CB_BAF_V_Osprey_SL_B",
 			"UK3CB_BAF_V_Osprey_SL_C",
@@ -160,13 +182,16 @@ class kekoFactionBAFMTP: kekoFactionBase {
 	class kekoFTL: kekoSoldierBAFMTP	{
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
-		optics[] = {"Binocular"};
+		optics[] = {
+			"Binocular"
+		};
 		vestInventory[] = {
 			{4, PRIMARY_MAG},
 			{4, PRIMARY_MAG_TRACER},
 			{6, UGL_MAG},
 			{2, GRENADE},
-			{2, PRIMARY_MAG}};
+			{2, PRIMARY_MAG}
+		};
 		primary[] = {
 			keko_W_BAF_L85A2_UGL
 		};
@@ -177,28 +202,27 @@ class kekoFactionBAFMTP: kekoFactionBase {
 		medicClass = 2;
 		rank = "SERGEANT";
 		vest[] = {
+			"UK3CB_BAF_V_Osprey_Medic_A",
 			"UK3CB_BAF_V_Osprey_Medic_B",
 			"UK3CB_BAF_V_Osprey_Medic_C",
 			"UK3CB_BAF_V_Osprey_Medic_D"
 		};
 		vestInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY;
 
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Medic_H_B"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Medic_H_A",
+			"UK3CB_BAF_B_Bergen_MTP_Medic_H_B",
+			"UK3CB_BAF_B_Bergen_MTP_Medic_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Medic_L_B"
+		};
 		backpackInventory[] = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
 	};
 
-	class kekoMedic: kekoSoldierLight {
+	class kekoMedic: kekoDoctor {
 		name = "Medic";
 		medicClass = 1;
 		rank = "CORPORAL";
-		vest[] = {
-			"UK3CB_BAF_V_Osprey_Medic_B",
-			"UK3CB_BAF_V_Osprey_Medic_C",
-			"UK3CB_BAF_V_Osprey_Medic_D"
-		};
 		vestInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY;
-
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Medic_H_B"};
 		backpackInventory[] = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 	};
 
@@ -221,9 +245,11 @@ class kekoFactionBAFMTP: kekoFactionBase {
 			{4, PRIMARY_MAG},
 			{4, PRIMARY_MAG_TRACER},
 			{9, UGL_MAG},
-			{2, GRENADE}};
+			{2, GRENADE}
+		};
 		primary[] = {
-			keko_W_BAF_L85A2_UGL};
+			keko_W_BAF_L85A2_UGL
+		};
 	};
 
 	class kekoLMG: kekoSoldierBAFMTP {
@@ -235,18 +261,36 @@ class kekoFactionBAFMTP: kekoFactionBase {
 		vestInventory[] = {
 			{4, PRIMARY_MAG_LMG},
 			{1, SMOKE_WHITE},
-			{2, GRENADE}};
+			{2, GRENADE}
+		};
 		primary[] = {
-			keko_W_BAF_L110};
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
+			keko_W_BAF_L110
+		};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{2, PRIMARY_MAG_LMG}
+		};
 	};
 
 	class kekoLMGAsst: kekoSoldierBAFMTP {
 		name = "Light Machine Gunner Asst.";
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
-		optics[] = {"Binocular"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{4, PRIMARY_MAG_LMG}
+		};
+		optics[] = {
+			"Binocular"
+		};
 	};
 
 	class kekoMMG: kekoSoldierBAFMTP {
@@ -257,48 +301,100 @@ class kekoFactionBAFMTP: kekoFactionBase {
 		};
 		vestInventory[] = {
 			{2, PRIMARY_MAG_MMG},
-			{2, GRENADE}};
+			{2, GRENADE}
+		};
 		primary[] = {
-			keko_W_BAF_L7A2};
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"};
+			keko_W_BAF_L7A2
+		};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
 	};
 
 	class kekoMMGAsst: kekoSoldierBAFMTP {
 		name = "Medium Machine Gunner Asst.";
 
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
-		optics[] = {"Binocular"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{3, PRIMARY_MAG_MMG}
+		};
+		optics[] = {
+			"Binocular"
+		};
 	};
 
 	class kekoATSpecialist: kekoSoldierBAFMTP {
 		name = "Anti-Tank Specialist";
 
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A"};
-		backpackInventory[] = {{1, AT_MAG}};
-		launcher[] = {keko_W_BAF_JAVELIN};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{1, "UK3CB_BAF_Javelin_CLU"}
+		};
+		launcher[] = {
+			keko_W_BAF_JAVELIN
+		};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierBAFMTP {
 		name = "Anti-Tank Specialist Assistant";
 
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A"};
-		backpackInventory[] = {{2, AT_MAG}};
-		optics[] = {"Rangefinder"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{2, AT_MAG}
+		};
+		optics[] = {
+			"Rangefinder"
+		};
 	};
 
 	class kekoAASpecialist: kekoSoldierLight {
 		name = "Anti-Air Specialist";
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A"};
-		backpackInventory[] = {{1, AA_MAG}};
-		launcher[] = {keko_W_STRINGER};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{1, AA_MAG}
+		};
+		launcher[] = {
+			keko_W_STRINGER
+		};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierBAFMTP {
 		name = "Anti-Air Specialist Assistant";
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A"};
-		backpackInventory[] = {{2, AA_MAG}};
-		optics[] = {"Rangefinder"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
+		};
+		backpackInventory[] = {
+			{2, AA_MAG}
+		};
+		optics[] = {
+			"Rangefinder"
+		};
 	};
 
 	class kekoMarksman: kekoSoldierBAFMTP {
@@ -311,68 +407,105 @@ class kekoFactionBAFMTP: kekoFactionBase {
 			{5, PRIMARY_MAG_MARKSMAN},
 			{1, SMOKE_WHITE},
 			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}};
+			{5, PRIMARY_MAG_MARKSMAN}
+		};
 		primary[] = {
-			keko_W_BAF_L129A1};
+			keko_W_BAF_L129A1
+		};
 	};
 
 	class kekoEOD: kekoSoldierLight {
 		name = "Explosive Specialist";
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Engineer_H_A"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Sapper_H_A",
+			"UK3CB_BAF_B_Bergen_MTP_Sapper_L_A"
+		};
 		backpackInventory[] = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
 
 	class kekoEngineer: kekoSoldierLight {
 		name = "Engineer";
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Engineer_H_A"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_Engineer_H_A",
+			"UK3CB_BAF_B_Bergen_MTP_Engineer_L_A"
+		};
 		backpackInventory[] = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
 	};
 
 	class kekoDriver: kekoSoldierLight {
 		name = "Driver/Crewman";
-		vest[] = {"V_BandollierB_rgr"};
+		vest[] = {
+			"UK3CB_BAF_V_Osprey_Lite",
+			"UK3CB_BAF_V_Osprey",
+			"UK3CB_BAF_V_Osprey_Belt_A"
+		};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
 			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
-		helmet[] = {"H_HelmetCrew_I"};
-		optics[] = {"Binocular"};
+			{10, "ACE_quikclot"}
+		};
+		helmet[] = {
+			"UK3CB_BAF_H_CrewHelmet_B"
+		};
+		optics[] = {
+			"Binocular"
+		};
 		engineerClass = 1;
 	};
 
 	class kekoHeliPilot: kekoSoldierLight {
 		name = "Helicopter Pilot";
-		uniform[] = {"U_B_HeliPilotCoveralls"};
-		vest[] = {"V_TacVest_blk"};
+		uniform[] = {
+			"UK3CB_BAF_U_HeliPilotCoveralls_RAF"
+		};
+		vest[] = {
+			"UK3CB_BAF_V_Pilot_A"
+		};
 		vestInventory[] = {
 			{2, SECONDARY_MAG},
 			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
-		helmet[] = {"H_PilotHelmetHeli_B"};
-		optics[] = {"Binocular"};
+			{10, "ACE_quikclot"}
+		};
+		helmet[] = {
+			"UK3CB_BAF_H_PilotHelmetHeli_A"
+		};
+		optics[] = {
+			"Binocular"
+		};
 	};
 
 	class kekoHeliCrew: kekoHeliPilot {
 		name = "Helicopter Crew";
-		helmet[] = {"H_CrewHelmetHeli_B"};
+		helmet[] = {
+			"UK3CB_BAF_H_PilotHelmetHeli_A"
+		};
 	};
 
 	class kekoJetPilot: kekoHeliPilot {
 		name = "Jet Pilot";
-		uniform[] = {"UK3CB_BAF_U_HeliPilotCoveralls_RAF"};
-		vest[] = {"V_TacVest_blk"};
-		helmet[] = {"H_PilotHelmetFighter_B"};
-		optics[] = {"Binocular"};
+		uniform[] = {
+			"UK3CB_BAF_U_HeliPilotCoveralls_RAF"
+		};
+		vest[] = {
+			"UK3CB_BAF_V_Pilot_A"
+		};
+		helmet[] = {
+			"UK3CB_BAF_H_PilotHelmetHeli_A"
+		};
+		optics[] = {
+			"Binocular"
+		};
 	};
 
 	class kekoJTAC: kekoGrenadier {
 		name = "JTAC";
 		primary[] = {
-			keko_W_BAF_L85A2_UGL};
+			keko_W_BAF_L85A2_UGL_SMOKE
+		};
 		vestInventory[] = {
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
@@ -385,30 +518,44 @@ class kekoFactionBAFMTP: kekoFactionBase {
 			{2,"SmokeShellPurple"},
 			{2,"SmokeShellYellow"}
 		};
-		backpack[] = {"UK3CB_BAF_B_Bergen_MTP_Radio_L_A"};
-		backpackInventory[] = {{4,"Laserbatteries"}};
-		optics[] = {"Laserdesignator"};
+		backpack[] = {
+			"UK3CB_BAF_B_Bergen_MTP_JTAC_H_A",
+			"UK3CB_BAF_B_Bergen_MTP_JTAC_L_A"
+		};
+		backpackInventory[] = {
+			{4,"Laserbatteries"}
+		};
+		optics[] = {
+			"UK3CB_BAF_Soflam_Laserdesignator"
+		};
 	};
 
 	class kekoUAVOperator: kekoSoldierLight	{
 		name = "UAV Operator";
 		primary[] = {
-			keko_W_BAF_L85A2_UGL};
+			keko_W_BAF_L85A2_UGL_HUNTIR
+		};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
 			{2,PRIMARY_MAG},
 			{2,PRIMARY_MAG_TRACER},
 			{1,"ACE_HuntIR_monitor"},
-			{8,"ACE_HuntIR_M203"}};
-		backpack[] = {"B_UAV_01_backpack_F"};
-		items[] = {"B_UavTerminal"};
+			{8,"ACE_HuntIR_M203"}
+		};
+		backpack[] = {
+			"B_UAV_01_backpack_F"
+		};
+		items[] = {
+			"B_UavTerminal"
+		};
 	};
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
 		vestInventory[] = {
 			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
+			{1,SECONDARY_MAG}
+		};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
