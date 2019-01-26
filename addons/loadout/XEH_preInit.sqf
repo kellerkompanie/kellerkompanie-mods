@@ -97,9 +97,9 @@ if (hasInterface) then {
 		"[Minimal] IDAP - International Development and Aid Project",
 
 		"[Minimal] (WIP) NAA - New Altis Army",
-		"[Minimal] (WIP) HAF - Hellenic Armed Forces",
+		"[Minimal] HAF - Hellenic Armed Forces",
 		"[Minimal] (WIP) UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis",
-		"[Minimal] (WIP) Myrimidones Inc. (PMC)",
+		"[Minimal] Myrimidones Inc. (PMC)",
 		"[Minimal] (WIP) WAM - West Altian Militia (Paramilitary)",
 		"[Minimal] (WIP) WAM - West Altian Militia (Volunteers)",
 		"[Minimal] (WIP) Al Sirae (Terrorists)",
