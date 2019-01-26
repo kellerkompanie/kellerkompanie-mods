@@ -16,7 +16,7 @@
 #define AT_LAUNCHER "UK3CB_BAF_Javelin_Slung_Tube"
 #define AA_LAUNCHER "rhs_weap_fim92"
 
-#define AT_MAG "UK3CB_BAF_Javelin_CLU"
+#define AT_MAG "UK3CB_BAF_Javelin_Slung_Tube"
 #define AA_MAG "rhs_fim92_mag"
 #define UGL_MAG "UK3CB_BAF_1Rnd_HE_Grenade_Shell"
 #define HUNTIR_MAG "ACE_HuntIR_M203"
@@ -35,6 +35,15 @@ class kekoWeaponsBAF {
 	class keko_W_BAF_L85A2_UGL: keko_W_BAF_L85A2
 	{
 		cfgName = "UK3CB_BAF_L85A2_UGL";
+		uglMagazines[] = {UGL_MAG};
+	};
+	class keko_W_BAF_L85A2_UGL_HUNTIR: keko_W_BAF_L85A2_UGL
+	{
+		uglMagazines[] = {HUNTIR_MAG};
+	};
+	class keko_W_BAF_L85A2_UGL_SMOKE: keko_W_BAF_L85A2_UGL_HUNTIR
+	{
+		uglMagazines[] = {"1Rnd_Smoke_Grenade_shell"};
 	};
 
 	// Marksman
@@ -75,6 +84,7 @@ class kekoWeaponsBAF {
 	{
 		cfgName = AT_LAUNCHER;
 		magazines[] = {AT_MAG};
+		items[] = {"UK3CB_BAF_Javelin_CLU"};
 	};
 	class keko_W_STRINGER: kekoLauncherWeapon
 	{
