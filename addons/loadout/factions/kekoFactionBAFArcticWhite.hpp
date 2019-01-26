@@ -47,7 +47,7 @@ class kekoFactionBAFArcticWhite: kekoFactionBase {
 
 	class kekoSoldierBAFArcticWhite: kekoSoldier {
 		uniform[] = {
-			"UK3CB_BAF_U_Smock_MTP_Arctic"
+			"UK3CB_BAF_U_Smock_Arctic"
 		};
 
 		vest[] = {
