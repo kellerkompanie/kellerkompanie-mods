@@ -136,7 +136,7 @@ class kekoFactionBAFWDL: kekoFactionBase {
 			"Rangefinder"
 		};
 		vest[] = {
-			"UK3CB_BAF_V_Osprey_DDPM2"
+			"UK3CB_BAF_V_Osprey_DPMW2"
 		};
 	};
 
