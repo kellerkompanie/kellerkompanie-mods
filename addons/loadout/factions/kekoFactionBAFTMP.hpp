@@ -87,9 +87,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 	class kekoLead: kekoSoldierBAFTMP	{
 		name = "Lead";
 		rank = "LIEUTENANT";
-		uniform[] = {
-			"UK3CB_BAF_U_RolledUniform_MTP"
-		};
 		vest[] = {
 			"UK3CB_BAF_V_Osprey_DPMT1"
 		};
