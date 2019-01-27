@@ -461,8 +461,8 @@ class kekoFactionBAFDesert: kekoFactionBase {
 			{2,"SmokeShellYellow"}
 		};
 		backpack[] = {
-			"UK3CB_BAF_B_Bergen_MTP_JTAC_H_A",
-			"UK3CB_BAF_B_Bergen_MTP_JTAC_L_A"
+			"UK3CB_BAF_B_Bergen_TAN_JTAC_H_A",
+			"UK3CB_BAF_B_Bergen_DDPM_JTAC_H_A"
 		};
 		backpackInventory[] = {
 			{4,"Laserbatteries"}
