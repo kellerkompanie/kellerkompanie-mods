@@ -49,6 +49,7 @@ class kekoFaction
 	#include "kekoFactionBAFMTP.hpp"
 	#include "kekoFactionBAFArctic.hpp"
 	#include "kekoFactionBAFArcticWhite.hpp"
+	#include "kekoFactionBAFDesert.hpp"
 
 	#include "kekoFactionWehrmacht.hpp"
 	#include "kekoFactionArmiaKrajowaPartyzanci.hpp"
