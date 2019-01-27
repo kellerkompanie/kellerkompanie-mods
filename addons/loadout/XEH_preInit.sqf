@@ -76,6 +76,7 @@ if (hasInterface) then {
 			"kekoFactionBAFArcticWhite",
 			"kekoFactionBAFDesert",
 			"kekoFactionBAFTMP",
+			"kekoFactionBAFWDL",
 
 			"kekoFactionWehrmacht",
 			"kekoFactionWehrmachtAfrica",
@@ -128,6 +129,7 @@ if (hasInterface) then {
 		"[Event] BAF MTP Arctic White - British Armed Forces (MTP Arctic White)",
 		"[Event] BAF Desert - British Armed Forces (Desert)",
 		"[Event] BAF TMP - British Armed Forces (TMP)",
+		"[Event] BAF WDL - British Armed Forces (WDL)",
 
 		"[Ironfront] Wehrmacht",
 		"[Ironfront] Wehrmacht (Africa)",
