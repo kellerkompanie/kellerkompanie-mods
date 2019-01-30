@@ -4,7 +4,9 @@ class CfgPatches {
 	class ADDON {
 		name = COMPONENT_NAME;
 		units[]= {};
-		weapons[] = {};
+		weapons[] = {
+			"missiles_titan_AA"
+		};
 		requiredVersion= REQUIRED_VERSION;
 		requiredAddons[]= {
             "A3_Weapons_F"
