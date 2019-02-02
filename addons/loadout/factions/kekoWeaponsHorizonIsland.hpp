@@ -27,9 +27,8 @@ class kekoWeaponsHorizonIsland {
 	class keko_W_RHS_M16A4: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m16a4_carryhandle";
-		items[] = {};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -45,7 +44,8 @@ class kekoWeaponsHorizonIsland {
 	class keko_W_RHS_M14EBR: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m14ebrri";
-		items[] = {"rhsusf_acc_harris_bipod","rhsusf_acc_leupoldmk4"};
+		scopes[] = {"rhsusf_acc_harris_bipod"};
+		bipods[] = {"rhsusf_acc_leupoldmk4"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_MARKSMAN_TRACER};
 	};
 
@@ -53,18 +53,16 @@ class kekoWeaponsHorizonIsland {
 	class keko_W_RHS_M249: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m249";
-		items[] = {};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
 	class keko_W_RHS_M240B: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m240B";
-		items[] = {};
+		silencers[] = {"muzzle_snds_h_mg"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 
@@ -72,7 +70,7 @@ class kekoWeaponsHorizonIsland {
 	class keko_W_RHS_SMAW: kekoLauncherWeapon
 	{
 		cfgName = AT_LAUNCHER;
-		items[] = {"rhs_weap_optic_smaw"};
+		scopes[] = {"rhs_weap_optic_smaw"};
 		magazines[] = {AT_MAG};
 	};
 	class keko_W_RHS_STINGER: kekoLauncherWeapon

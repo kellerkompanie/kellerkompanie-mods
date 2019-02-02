@@ -26,9 +26,10 @@ class kekoWeaponsUSArmy {
 	class keko_W_M4: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m4";
-		items[] = {"rhsusf_acc_anpeq15","rhsusf_acc_compm4"};
+		scopes[] = {"rhsusf_acc_compm4"};
+		rails[] = {"rhsusf_acc_anpeq15"};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -44,7 +45,9 @@ class kekoWeaponsUSArmy {
 	class keko_W_M14: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m14ebrri";
-		items[] = {"rhsusf_acc_anpeq15","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"};
+		scopes[] = {"rhsusf_acc_ACOG3"};
+		rails[] = {"rhsusf_acc_anpeq15"};
+		bipods[] = {"rhsusf_acc_harris_bipod"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 
@@ -52,18 +55,18 @@ class kekoWeaponsUSArmy {
 	class keko_W_M249: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m249_pip_L";
+		scopes[] = {"rhsusf_acc_elcan"};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		items[] = {"rhsusf_acc_elcan"};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
 	class keko_W_M240B: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m240B";
+		scopes[] = {"rhsusf_acc_elcan"};
+		silencers[] = {"muzzle_snds_h_mg"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		items[] = {"rhsusf_acc_elcan"};
-		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// Sniper
@@ -79,7 +82,6 @@ class kekoWeaponsUSArmy {
 	class keko_W_M9: kekoSecondaryWeapon
 	{
 		cfgName = "rhsusf_weap_m9";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 

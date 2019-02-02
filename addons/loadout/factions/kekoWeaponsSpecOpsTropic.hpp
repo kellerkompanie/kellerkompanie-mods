@@ -22,9 +22,10 @@ class kekoWeaponsSpecOpsTropic {
 	class keko_HK416: kekoPrimaryWeapon
 	{
 		cfgName = "SMA_HK416afg";
-		items[] = {"sma_sfpeq_hktop_blk","SMA_ELCAN_SPECTER_RDS"};
+		scopes[] = {"SMA_ELCAN_SPECTER_RDS"};
+		rails[] = {"sma_sfpeq_hktop_blk"};
+		silencers[] = {"sma_supp1bod_556"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"sma_supp1bod_556"};
 	};
 	class keko_HK416_PaintedOD: keko_HK416 {
 		cfgName = "SMA_HK416_afg_ODPAINTED";
@@ -49,18 +50,19 @@ class kekoWeaponsSpecOpsTropic {
 	class keko_HK417: kekoPrimaryWeapon
 	{
 		cfgName = "SMA_HK417_16in";
-		items[] = {"sma_spitfire_03_rds_low_black","sma_anpeq15_blk"};
+		scopes[] = {"sma_spitfire_03_rds_low_black"};
+		rails[] = {"sma_anpeq15_blk"};
+		silencers[] = {"sma_gemtech_one_blk"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"sma_gemtech_one_blk"};
 	};
 
 	// LMG
 	class keko_MINIMI: kekoPrimaryWeapon
 	{
 		cfgName = "sma_minimi_mk3_762tsb";
-		items[] = {"SMA_ELCAN_SPECTER_RDS"};
+		scopes[] = {"SMA_ELCAN_SPECTER_RDS"};
+		silencers[] = {"sma_gemtech_one_wdl"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"sma_gemtech_one_wdl"};
 	};
 
 
@@ -68,9 +70,9 @@ class kekoWeaponsSpecOpsTropic {
 	class keko_FIVESEVEN: kekoSecondaryWeapon
 	{
 		cfgName = "RH_fn57";
-		items[] = {"rh_m6x"};
+		rails[] = {"rh_m6x"};
+		silencers[] = {"rh_sfn57"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"rh_sfn57"};
 	};
 
 

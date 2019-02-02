@@ -28,9 +28,10 @@ class kekoWeaponsRussiaEMR {
 	class keko_W_AK74M: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_ak74m_dtk";
-		items[] = {"rhs_acc_dtk","rhs_acc_2dpZenit","rhs_acc_pkas"};
+		scopes[] = {"rhs_acc_pkas"};
+		rails[] = {"rhs_acc_2dpZenit"};
+		silencers[] = {"rhs_acc_dtk4short"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhs_acc_dtk4short"};
 	};
 	class keko_W_AK74M_FOLDED: keko_W_AK74M
 	{
@@ -38,7 +39,7 @@ class kekoWeaponsRussiaEMR {
 	};
 	class keko_W_AK74M_GL: keko_W_AK74M	{
 		cfgName = "rhs_weap_ak74m_gp25_dtk";
-		items[] = {"rhs_acc_dtk","rhs_acc_pkas"};
+		scopes[] = {"rhs_acc_pkas"};
 		uglMagazines[] = {UGL_MAG};
 	};
 	class keko_W_AK74M_GL_HUNTIR: keko_W_AK74M_GL {
@@ -47,7 +48,7 @@ class kekoWeaponsRussiaEMR {
 	class keko_W_AKS74U: keko_W_AK74M
 	{
 		cfgName = "rhs_weap_aks74u";
-		items[] = {"rhs_acc_pgs64_74u"};
+		scopes[] = {"rhs_acc_pgs64_74u"};
 	};
 
 
@@ -55,9 +56,9 @@ class kekoWeaponsRussiaEMR {
 	class keko_W_SVD: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_svdp";
-		items[] = {"rhs_acc_pso1m2"};
+		scopes[] = {"rhs_acc_pso1m2"};
+		silencers[] = {"rhs_acc_tgpv"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"rhs_acc_tgpv"};
 	};
 
 	// LMG
@@ -71,7 +72,7 @@ class kekoWeaponsRussiaEMR {
 	class keko_W_PKP: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_pkp";
-		items[] = {"rhs_acc_pkas"};
+		scopes[] = {"rhs_acc_pkas"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 
@@ -88,13 +89,11 @@ class kekoWeaponsRussiaEMR {
 	class keko_W_Makarov: kekoSecondaryWeapon
 	{
 		cfgName = "rhs_weap_makarov_pm";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 	class keko_W_Grach: kekoSecondaryWeapon
 	{
 		cfgName = "rhs_weap_pya";
-		items[] = {};
 		magazines[] = {"rhs_mag_9x19_17"};
 	};
 
@@ -105,7 +104,7 @@ class kekoWeaponsRussiaEMR {
 	{
 		cfgName = AT_LAUNCHER;
 		magazines[] = {AT_MAG};
-		items[] = {"rhs_acc_pgo7v3"};
+		scopes[] = {"rhs_acc_pgo7v3"};
 	};
 	class keko_W_RPG26: kekoLauncherWeapon
 	{

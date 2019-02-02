@@ -21,25 +21,21 @@ class kekoWeaponsWehrmacht {
 	class keko_W_K98: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_k98";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_K98};
 	};
 	class keko_W_STG44: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_stg44";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_STG44};
 	};
 	class keko_W_MP40: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_mp40";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_MP40};
 	};
 	class keko_W_G43: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_g43";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_G43};
 	};
 
@@ -47,13 +43,11 @@ class kekoWeaponsWehrmacht {
 	class keko_W_MG34: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_mg34";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_MG34};
 	};
 	class keko_W_MG42: kekoPrimaryWeapon
 	{
 		cfgName = "fow_w_mg42";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_MG42};
 	};
 
@@ -63,13 +57,11 @@ class kekoWeaponsWehrmacht {
 	class keko_W_P08: kekoSecondaryWeapon
 	{
 		cfgName = "fow_w_p08";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG_P08};
 	};
 	class keko_W_P38: kekoSecondaryWeapon
 	{
 		cfgName = "LIB_P38";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG_P38};
 	};
 

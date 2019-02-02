@@ -27,9 +27,10 @@ class kekoWeaponsNAA {
 	// Primary
 	class keko_W_A3_F2000: kekoPrimaryWeapon {
 		cfgName = "NAA_arifle_Mk20_alpat_ard1";
-		items[] = {"acc_pointer_IR","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"muzzle_snds_m"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_m"};
 	};
 	class keko_W_A3_F2000_UGL: keko_W_A3_F2000 {
 		cfgName = "NAA_arifle_Mk20_GL_alpat_ard1";
@@ -43,25 +44,33 @@ class kekoWeaponsNAA {
 	};
 	class keko_W_A3_STONER: kekoPrimaryWeapon {
 		cfgName = "NAA_LMG_03_alpat_F";
-		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_03_F_blk"};
+		silencers[] = {"muzzle_snds_h_mg"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"muzzle_snds_h_mg"};
 	};
 	class keko_W_A3_MMG_AAF: kekoPrimaryWeapon {
 		cfgName = "NAA_MMG_02_alpat_F";
-		items[] = {"acc_pointer_IR","bipod_03_F_blk","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_03_F_blk"};
+		silencers[] = {"muzzle_snds_338_black"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_338_black"};
 	};
 	class keko_W_A3_EBR: kekoPrimaryWeapon {
 		cfgName = "NAA_EBR_alpat";
-		items[] = {"acc_pointer_IR","optic_SOS","bipod_03_F_blk"};
+		scopes[] = {"optic_SOS"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_03_F_blk"};
+		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_b"};
 	};
 	class keko_W_A3_GM6: kekoPrimaryWeapon {
 		cfgName = "srifle_GM6_LRPS_F";
-		items[] = {"acc_pointer_IR","optic_LRPS","bipod_03_F_blk"};
+		scopes[] = {"optic_LRPS"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_03_F_blk"};
 		magazines[] = {"5Rnd_127x108_Mag"};
 	};
 
@@ -70,12 +79,11 @@ class kekoWeaponsNAA {
 	// Secondary
 	class keko_W_A3_ACP: kekoSecondaryWeapon {
 		cfgName = "hgun_ACPC2_F";
+		silencers[] = {"muzzle_snds_acp"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_A3_ACP_SILENCED: keko_W_A3_ACP {
-		items[] = {"muzzle_snds_acp"};
-		silencer[] = {"muzzle_snds_acp"};
+		silencers[] = {"muzzle_snds_acp"};
 	};
 
 

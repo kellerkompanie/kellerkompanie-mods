@@ -26,9 +26,8 @@ class kekoWeaponsBAF {
 	class keko_W_BAF_L85A2: kekoPrimaryWeapon
 	{
 		cfgName = "UK3CB_BAF_L85A2";
-		items[] = {"RKSL_optic_LDS"};
+		scopes[] = {"RKSL_optic_LDS"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {};
 	};
 
 	// Grenadier
@@ -50,7 +49,7 @@ class kekoWeaponsBAF {
 	class keko_W_BAF_L129A1: kekoPrimaryWeapon
 	{
 		cfgName = "UK3CB_BAF_L129A1";
-		items[] = {"UK3CB_BAF_TA648_308"};
+		scopes[] = {"UK3CB_BAF_TA648_308"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 
@@ -73,7 +72,6 @@ class kekoWeaponsBAF {
 	class keko_W_BAF_L131A1: kekoSecondaryWeapon
 	{
 		cfgName = "UK3CB_BAF_L131A1";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 
@@ -84,7 +82,7 @@ class kekoWeaponsBAF {
 	{
 		cfgName = AT_LAUNCHER;
 		magazines[] = {AT_MAG};
-		items[] = {"UK3CB_BAF_Javelin_CLU"};
+		scopes[] = {"UK3CB_BAF_Javelin_CLU"};
 	};
 	class keko_W_STRINGER: kekoLauncherWeapon
 	{

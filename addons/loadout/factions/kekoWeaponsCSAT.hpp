@@ -26,9 +26,10 @@ class kekoWeaponsCSAT {
 	// Primary
 	class keko_W_A3_KATIBA: kekoPrimaryWeapon {
 		cfgName = "arifle_Katiba_F";
-		items[] = {"acc_pointer_IR","optic_Arco_blk_F"};
+		scopes[] = {"optic_Arco_blk_F"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"muzzle_snds_h"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_KATIBA_SHORT: keko_W_A3_KATIBA {
 		cfgName = "arifle_Katiba_C_F";
@@ -42,20 +43,26 @@ class kekoWeaponsCSAT {
 	};
 	class keko_W_A3_DMR: kekoPrimaryWeapon {
 		cfgName = "srifle_DMR_01_F";
-		items[] = {"acc_pointer_IR","optic_DMS","bipod_02_F_hex"};
+		scopes[] = {"optic_DMS"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_02_F_hex"};
+		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_b"};
 	};
 	class keko_W_A3_ZAFIR: kekoPrimaryWeapon {
 		cfgName = "LMG_Zafir_F";
-		items[] = {"acc_pointer_IR","bipod_02_F_hex","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_02_F_hex"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
 	class keko_W_A3_MMG_CSAT: kekoPrimaryWeapon {
 		cfgName = "MMG_01_hex_F";
-		items[] = {"acc_pointer_IR","bipod_02_F_hex","optic_Arco"};
+		scopes[] = {"optic_Arco"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_02_F_hex"};
+		silencers[] = {"muzzle_snds_93mmg"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_93mmg"};
 	};
 
 
@@ -63,13 +70,11 @@ class kekoWeaponsCSAT {
 	// Secondary
 	class keko_W_ROOK: kekoSecondaryWeapon {
 		cfgName = "hgun_Rook40_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_l"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_l"};
 	};
 	class keko_W_ROOK_SILENCED: keko_W_ROOK {
-		items[] = {"muzzle_snds_L"};
-		silencer[] = {"muzzle_snds_l"};
+		silencers[] = {"muzzle_snds_l"};
 	};
 
 
