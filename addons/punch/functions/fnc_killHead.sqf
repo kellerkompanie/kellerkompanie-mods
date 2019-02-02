@@ -2,11 +2,10 @@
 
 if (!GVAR(enabled)) exitWith {WARNING("killing disabled, exiting"); false};
 
-[_this select 0, _this select 1] spawn {
-	private["_player","_target"];
+params ["_player", "_target"];
 
-	_player = _this select 0;
-	_target = _this select 1;
+[_this select 0, _this select 1] spawn {
+	params ["_player", "_target"];
 
 	_player playActionNow "PutDown";
 
