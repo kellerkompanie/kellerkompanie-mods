@@ -16,4 +16,5 @@ params ["_player", "_target"];
 	sleep 4;
 
 	[_target, false, 7, true] call ace_medical_fnc_setUnconscious;
+	_target setVariable ["keko_wasPunched", false, true];
 };
