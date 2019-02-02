@@ -31,9 +31,11 @@ class kekoWeaponsBlackorderRedBerets {
 	class keko_W_MK18: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_mk18_bk";
-		items[] = {"rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15_bk","rhsusf_acc_grip2"};
+		scopes[] = {"rhsusf_acc_acog_rmr"};
+		rails[] = {"rhsusf_acc_anpeq15_bk"};
+		bipods[] = {"rhsusf_acc_grip2"};
+		silencers[] = {"rhsusf_acc_rotex5_grey"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhsusf_acc_rotex5_grey"};
 	};
 
 	class keko_W_MK18_M320: keko_W_MK18
@@ -50,39 +52,43 @@ class kekoWeaponsBlackorderRedBerets {
 	class keko_W_SIG556: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_DMR_03_blackorder_F";
-		items[] = {"rhsusf_acc_acog_rmr","bwa3_acc_varioray_irlaser","rhsusf_acc_harris_bipod"};
+		scopes[] = {"rhsusf_acc_acog_rmr"};
+		rails[] = {"bwa3_acc_varioray_irlaser"};
+		bipods[] = {"rhsusf_acc_harris_bipod"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_iia"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_MARKSMAN_TRACER};
-		silencer[] = {"bwa3_muzzle_snds_rotex_iia"};
 	};
 
 	class keko_W_M40A5: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m40a5_blackorder";
-		items[] = {"rhsusf_acc_leupoldmk4","rhsusf_acc_harris_swivel"};
+		scopes[] = {"rhsusf_acc_leupoldmk4"};
+		bipods[] = {"rhsusf_acc_harris_swivel"};
 		magazines[] = {"rhsusf_10Rnd_762x51_m118_special_Mag","rhsusf_10Rnd_762x51_m62_Mag"};
 	};
 
 	class keko_W_M249: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m249_pip_S";
-		items[] = {"rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side_bk"};
+		scopes[] = {"rhsusf_acc_elcan_ard"};
+		rails[] = {"rhsusf_acc_anpeq15side_bk"};
+		silencers[] = {"rhsusf_acc_rotex5_grey"};
 		magazines[] = {PRIMARY_MAG_LMG,PRIMARY_MAG_LMG_TRACER};
-		silencer[] = {"rhsusf_acc_rotex5_grey"};
 	};
 
 	class keko_W_MG42: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_mg42";
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_MMG,PRIMARY_MAG_MMG_TRACER};
 	};
 
 	class keko_W_Tavor: kekoPrimaryWeapon
 	{
 		cfgName = "SMA_CTARBLK_F";
-		items[] = {"sma_anpeq15_blk","sma_barska"};
+		scopes[] = {"sma_barska"};
+		rails[] = {"sma_anpeq15_blk"};
+		silencers[] = {"sma_supp1bb_556"};
 		magazines[] = {"SMA_30Rnd_556x45_Mk262","SMA_30Rnd_556x45_Mk262_Tracer"};
-		silencer[] = {"sma_supp1bb_556"};
 	};
 
 
@@ -93,9 +99,9 @@ class kekoWeaponsBlackorderRedBerets {
 	class keko_W_Glock: kekoSecondaryWeapon
 	{
 		cfgName = "rhsusf_weap_glock17g4";
-		items[] = {"acc_flashlight_pistol","rhsusf_acc_omega9k"};
+		rails[] = {"acc_flashlight_pistol"};
+		silencers[] = {"rhsusf_acc_omega9k"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"rhsusf_acc_omega9k"};
 	};
 
 
@@ -104,7 +110,7 @@ class kekoWeaponsBlackorderRedBerets {
 	class keko_W_MAAWS: kekoLauncherWeapon
 	{
 		cfgName = AT_LAUNCHER;
-		items[] = {"rhs_optic_maaws"};
+		scopes[] = {"rhs_optic_maaws"};
 		magazines[] = {AT_MAG};
 	};
 	class keko_W_STINGER: kekoLauncherWeapon

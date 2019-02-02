@@ -142,19 +142,35 @@ if(count _primary != 0) then {
 	private _primaryCfg = _weapon_config >> _randomPrimaryEntry;
 
 	private _primary_cfgName = getText (_primaryCfg >> "cfgName");
-	private _primary_items = getArray (_primaryCfg >> "items");
+	private _primary_scopes = getArray (_primaryCfg >> "scopes");
+	private _primary_rails = getArray (_primaryCfg >> "rails");
+	private _primary_bipods = getArray (_primaryCfg >> "bipods");
+	private _primary_silencers = getArray (_primaryCfg >> "silencers");
 	private _primary_magazines = getArray (_primaryCfg >> "magazines");
 	private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
-	private _primary_silencer = getArray (_primaryCfg >> "silencer");
 
 	_player addWeapon _primary_cfgName;
 
-	if(count _primary_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_item] call keko_fnc_replaceKeyword;
+	if(count _primary_scopes != 0) then {
+		private _item = selectRandom _primary_scopes;
+		_player addPrimaryWeaponItem _item;
+	};
+	
+	if(count _primary_rails != 0) then {
+		private _item = selectRandom _primary_rails;
+		_player addPrimaryWeaponItem _item;
+	};
+
+	if(count _primary_bipods != 0) then {
+		private _item = selectRandom _primary_bipods;
+		_player addPrimaryWeaponItem _item;
+	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _primary_silencers != 0) then {
+			private _item = selectRandom _primary_silencers;
 			_player addPrimaryWeaponItem _item;
-		} forEach _primary_items;
+		};
 	};
 
 	if(count _primary_magazines != 0) then {
@@ -168,14 +184,6 @@ if(count _primary != 0) then {
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToVest _item;
 	};
-
-	if (GVAR(giveSilencer)) then {
-		if(count _primary_silencer != 0) then {
-			private _item = selectRandom _primary_silencer;
-			//_item = [_item] call keko_fnc_replaceKeyword;
-			_player addPrimaryWeaponItem _item;
-		};
-	};
 };
 
 if(count _secondary != 0) then {
@@ -183,32 +191,40 @@ if(count _secondary != 0) then {
 	private _secondaryCfg = _weapon_config >> _randomSecondaryEntry;
 
 	private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
-	private _secondary_items = getArray (_secondaryCfg >> "items");
+	private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
+	private _secondary_rails = getArray (_secondaryCfg >> "rails");
+	private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
+	private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
 	private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
-	private _secondary_silencer = getArray (_secondaryCfg >> "silencer");
 
 	_player addWeapon _secondary_cfgName;
 
-	if(count _secondary_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_x] call keko_fnc_replaceKeyword;
+	if(count _secondary_scopes != 0) then {
+		private _item = selectRandom _secondary_scopes;
+		_player addHandgunItem _item;
+	};
+
+	if(count _secondary_rails != 0) then {
+		private _item = selectRandom _secondary_rails;
+		_player addHandgunItem _item;
+	};
+
+	if(count _secondary_bipods != 0) then {
+		private _item = selectRandom _secondary_bipods;
+		_player addHandgunItem _item;
+	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _secondary_silencers != 0) then {
+			private _item = selectRandom _secondary_silencers;
 			_player addHandgunItem _item;
-		} forEach _secondary_items;
+		};
 	};
 
 	if(count _secondary_magazines != 0) then {
 		private _item = _secondary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToUniform _item;
-	};
-
-	if (GVAR(giveSilencer)) then {
-		if(count _secondary_silencer != 0) then {
-			private _item = selectRandom _secondary_silencer;
-			//_item = [_item] call keko_fnc_replaceKeyword;
-			_player addHandgunItem _item;
-		};
 	};
 };
 
@@ -217,17 +233,26 @@ if(count _launcher != 0) then {
 	private _launcherCfg = _weapon_config >> _randomLauncherEntry;
 
 	private _launcher_cfgName = getText (_launcherCfg >> "cfgName");
-	private _launcher_items = getArray (_launcherCfg >> "items");
+	private _launcher_scopes = getArray (_launcherCfg >> "scopes");
+	private _launcher_rails = getArray (_launcherCfg >> "rails");
+	private _launcher_bipods = getArray (_launcherCfg >> "bipods");
 	private _launcher_magazines = getArray (_launcherCfg >> "magazines");
 
 	_player addWeapon _launcher_cfgName;
 
-	if(count _launcher_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_x] call keko_fnc_replaceKeyword;
-			_player addSecondaryWeaponItem _item;
-		} forEach _launcher_items;
+	if(count _launcher_scopes != 0) then {
+		private _item = selectRandom _launcher_scopes;
+		_player addSecondaryWeaponItem _item;
+	};
+
+	if(count _launcher_rails != 0) then {
+		private _item = selectRandom _launcher_rails;
+		_player addSecondaryWeaponItem _item;
+	};
+
+	if(count _launcher_bipods != 0) then {
+		private _item = selectRandom _launcher_bipods;
+		_player addSecondaryWeaponItem _item;
 	};
 
 	if(count _launcher_magazines != 0) then {

@@ -28,17 +28,19 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M16A4: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m16a4_carryhandle";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+		scopes[] = {"rhsusf_acc_ACOG_RMR"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	class keko_W_RHS_M4A1: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m4a1_carryhandle";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+		scopes[] = {"rhsusf_acc_ACOG_RMR"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// Grenadier
@@ -62,7 +64,9 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M14EBR: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m14ebrri";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3","rhsusf_acc_harris_bipod"};
+		scopes[] = {"rhsusf_acc_ACOG3"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"rhsusf_acc_harris_bipod"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_MARKSMAN_TRACER};
 	};
 
@@ -70,18 +74,20 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M249: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m249_pip_L_para";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
+		scopes[] = {"rhsusf_acc_ACOG3"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"rhsusf_acc_nt4_black"};
 	};
 
 	// MMG
 	class keko_W_RHS_M240B: kekoPrimaryWeapon
 	{
 		cfgName = "rhs_weap_m240B";
-		items[] = {"acc_pointer_IR","rhsusf_acc_ACOG3"};
+		scopes[] = {"rhsusf_acc_ACOG3"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"muzzle_snds_h_mg"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// Sniper
@@ -98,7 +104,6 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_M9: kekoSecondaryWeapon
 	{
 		cfgName = "rhsusf_weap_m9";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 
@@ -108,7 +113,7 @@ class kekoWeaponsMarines {
 	class keko_W_RHS_SMAW: kekoLauncherWeapon
 	{
 		cfgName = AT_LAUNCHER;
-		items[] = {"rhs_weap_optic_smaw"};
+		scopes[] = {"rhs_weap_optic_smaw"};
 		magazines[] = {AT_MAG};
 	};
 	class keko_W_RHS_STINGER: kekoLauncherWeapon

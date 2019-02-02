@@ -27,16 +27,17 @@ class kekoWeaponsWAM {
 	class keko_W_A3_CTAR: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_TRG21_F";
-		items[] = {"acc_flashlight","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_flashlight"};
+		silencers[] = {"muzzle_snds_m"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_m"};
 	};
 
 	// Staff
 	class keko_W_A3_CTARC: keko_W_A3_CTAR
 	{
 		cfgName = "arifle_TRG20_F";
-		items[] = {};
+		scopes[] = {};
 	};
 
 	// Grenadier
@@ -52,16 +53,19 @@ class kekoWeaponsWAM {
 	// Marksman
 	class keko_W_A3_EBR: kekoPrimaryWeapon {
 		cfgName = "srifle_EBR_MRCO_LP_BI_F";
-		items[] = {"acc_pointer_IR","optic_SOS","bipod_03_F_blk"};
+		scopes[] = {"optic_SOS"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_03_F_blk"};
+		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_b"};
 	};
 
 	// LMG
 	class keko_W_A3_Stoner: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_Mk200_F";
-		items[] = {"acc_flashlight","optic_holosight"};
+		scopes[] = {"optic_holosight"};
+		rails[] = {"acc_flashlight"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
 
@@ -69,9 +73,11 @@ class kekoWeaponsWAM {
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_sand_F";
-		items[] = {"acc_flashlight","bipod_01_F_blk","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_flashlight"};
+		bipods[] = {"bipod_01_F_blk"};
+		silencers[] = {"muzzle_snds_338_black"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 
@@ -79,9 +85,8 @@ class kekoWeaponsWAM {
 	class keko_W_Grach: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Rook40_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_l"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_l"};
 	};
 
 

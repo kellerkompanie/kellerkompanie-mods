@@ -23,25 +23,21 @@ class kekoWeaponsCommandos {
 	class keko_W_Lee: kekoPrimaryWeapon
 	{
 		cfgName = WEAPON_LEE;
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_LEE};
 	};
 	class keko_W_Piat: kekoPrimaryWeapon
 	{
 		cfgName = WEAPON_PIAT;
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_PIAT};
 	};
 	class keko_W_Bren: kekoPrimaryWeapon
 	{
 		cfgName = WEAPON_BREN;
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_BREN};
 	};
 	class keko_W_Thompson: kekoPrimaryWeapon
 	{
 		cfgName = WEAPON_THOMPSON;
-		items[] = {};
 		magazines[] = {PRIMARY_MAG_THOMPSON};
 	};
 
@@ -51,7 +47,6 @@ class kekoWeaponsCommandos {
 	class keko_W_Webley: kekoSecondaryWeapon
 	{
 		cfgName = WEAPON_WEBLEY;
-		items[] = {};
 		magazines[] = {SECONDARY_WEBLEY};
 	};
 

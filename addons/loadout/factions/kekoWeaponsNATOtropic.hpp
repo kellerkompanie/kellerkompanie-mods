@@ -27,9 +27,10 @@ class kekoWeaponsNatoTropic {
 	class keko_W_A3_MX_TROPIC: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_MX_khk_F";
-		items[] = {"acc_pointer_IR","optic_Hamr_khk_F"};
+		scopes[] = {"optic_Hamr_khk_F"};
+		rails[] = {"acc_pointer_IR"};
+		silencers[] = {"muzzle_snds_h_khk_f"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_h_khk_f"};
 	};
 
 	// Staff
@@ -52,7 +53,9 @@ class kekoWeaponsNatoTropic {
 	class keko_W_A3_MXM_TROPIC: keko_W_A3_MX_TROPIC
 	{
 		cfgName = "arifle_MXM_khk_F";
-		items[] = {"acc_pointer_IR","optic_SOS_khk_F","bipod_01_F_khk"};
+		scopes[] = {"optic_SOS_khk_F"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_01_F_khk"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
 	};
 
@@ -67,7 +70,9 @@ class kekoWeaponsNatoTropic {
 	class keko_W_A3_MMG_BLACK: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_black_F";
-		items[] = {"acc_pointer_IR","bipod_01_F_blk","optic_Arco"};
+		scopes[] = {"optic_Arco"};
+		rails[] = {"acc_pointer_IR"};
+		bipods[] = {"bipod_01_F_blk"};
 		magazines[] = {PRIMARY_MAG_MMG};
 	};
 
@@ -75,7 +80,7 @@ class kekoWeaponsNatoTropic {
 	class keko_W_A3_LRR: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_LRR_F";
-		items[] = {"optic_LRPS_tna_F"};
+		scopes[] = {"optic_LRPS_tna_F"};
 		magazines[] = {"ACE_7Rnd_408_305gr_Mag"};
 	};
 	class keko_W_A3_LRR_CAMO: keko_W_A3_LRR
@@ -89,21 +94,21 @@ class kekoWeaponsNatoTropic {
 	class keko_W_P99_TROPIC: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_P07_khk_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_l"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_l"};
 	};
 	class keko_W_TACTICAL: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_acp"};
 		magazines[] = {SECONDARY_MAG_SPECOPS};
-		silencer[] = {"muzzle_snds_acp"};
+
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
-		items[] = {"muzzle_snds_acp","acc_flashlight_pistol","optic_MRD"};
-		silencer[] = {"muzzle_snds_acp"};
+		scopes[] = {"optic_MRD"};
+		rails[] = {"acc_flashlight_pistol"};
+		silencers[] = {"muzzle_snds_acp"};
 	};
 
 

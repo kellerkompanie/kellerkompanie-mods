@@ -26,8 +26,8 @@ class kekoWeaponsChinesePLA {
 	class keko_W_QBZ95: kekoPrimaryWeapon
 	{
 		cfgName = "vme_pla_qbz95_1";
+		silencers[] = {"vme_qbz95_1_silencer"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// Grenadier
@@ -41,25 +41,25 @@ class kekoWeaponsChinesePLA {
 	class keko_W_QBU88: kekoPrimaryWeapon
 	{
 		cfgName = "vme_pla_qbu88";
-		items[] = {"VME_QBU88_Scope"};
+		scopes[] = {"VME_QBU88_Scope"};
+		silencers[] = {"vme_qbz95_1_silencer"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// LMG
 	class keko_W_QJB95: kekoPrimaryWeapon
 	{
 		cfgName = "vme_pla_qjb95_1";
+		silencers[] = {"vme_qbz95_1_silencer"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"vme_qbz95_1_silencer"};
 	};
 
 	// MMG
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_01_tan_F";
+		silencers[] = {"muzzle_snds_338_black"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 	// Sniper
@@ -75,7 +75,6 @@ class kekoWeaponsChinesePLA {
 	class keko_W_Rook: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Rook40_F";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 
