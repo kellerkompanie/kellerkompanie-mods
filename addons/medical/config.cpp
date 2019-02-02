@@ -2,11 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {
-            QGVAR(painkillersItem)
-        };
-        weapons[] = {
-			QGVAR(painkillers)};
+        units[] = {};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",
@@ -23,8 +20,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgSounds.hpp"
 
 #include "ACE_Medical_Treatments.hpp"
