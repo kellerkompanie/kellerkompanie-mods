@@ -85,4 +85,4 @@ private _actionFlyHome = [QGVAR(UAVFlyHome), "Return to Base", "", {_target remo
 
 private _dropLocationWaypoint = _group addWaypoint [_targetPos, 0];
 _dropLocationWaypoint setWaypointCompletionRadius 5;
-_dropLocationWaypoint setWaypointStatements ["true", 'private _vehicle = vehicle this; _vehicle flyInHeight 0; if(GVAR(automaticUAVReturn) > 0) then {[{_this remoteExec [QFUNC(droneReturnHome), _this];}, _vehicle, GVAR(automaticUAVReturn) + 15] call CBA_fnc_waitAndExecute;}'];
+_dropLocationWaypoint setWaypointStatements ["true", 'if (!local (group this)) exitWith {}; private _vehicle = vehicle this; _vehicle flyInHeight 0; if(GVAR(automaticUAVReturn) > 0) then {[{_this remoteExec [QFUNC(droneReturnHome), _this];}, _vehicle, GVAR(automaticUAVReturn) + 15] call CBA_fnc_waitAndExecute;}'];
