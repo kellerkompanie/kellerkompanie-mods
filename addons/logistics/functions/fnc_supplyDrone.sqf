@@ -6,6 +6,10 @@ if (GVAR(virtualUAVLimit) > -1 && GVAR(currentUAVs) >= GVAR(virtualUAVLimit)) ex
 	"[KEKO] (logistics) Maximum number of logistic drones reached, cannot call in more!" remoteExec ["systemChat", 0];
 };
 
+if(GVAR(virtualUAVAmount) != -1 && GVAR(virtualUAVAmount) <= 0) exitWith {
+	"[KEKO] (logistics) You have used all of your UAVs already, no more available!" remoteExec ["systemChat", 0];
+};
+
 private _spawnPos = [];
 private _targetPos = [];
 private _droneInventory = [];
@@ -40,6 +44,10 @@ private _uav = createVehicle ["B_UAV_06_F", _spawnPos, [], 0,""];
 createVehicleCrew _uav;
 
 GVAR(currentUAVs) = GVAR(currentUAVs) + 1;
+if(GVAR(virtualUAVAmount) != -1 && GVAR(virtualUAVAmount) > 0) then {
+		GVAR(virtualUAVAmount) = GVAR(virtualUAVAmount) - 1;
+		(format ["[KEKO] (logistics) Number of remaining UAVs: %1", GVAR(virtualUAVAmount)])  remoteExec ["systemChat", 0];
+};
 
 private _uavCrew = crew _uav;
 private _uavGroup = group (crew _uav select 0);

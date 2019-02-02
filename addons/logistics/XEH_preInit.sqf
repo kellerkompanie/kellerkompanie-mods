@@ -83,9 +83,18 @@ PREP_RECOMPILE_END;
 ] call cba_settings_fnc_init;
 
 [
+	QGVAR(virtualHeliAmount),
+	"SLIDER",
+	["Heli amount", "Set how many Heli drops are initially available. -1 for unlimited."],
+	[CBA_CATEGORY, "Heli Logistics"],
+	[-1, 50, -1, 0],
+	1
+] call cba_settings_fnc_init;
+
+[
 	QGVAR(virtualUAVLogistics), // key/reference variable
 	"LIST", // type of setting
-	["Access Level", "Enable/Disable virtual UAV logistics."], // name and tooltip
+	["Access level", "Enable/Disable virtual UAV logistics."], // name and tooltip
 	[CBA_CATEGORY, "UAV Logistics"], // category
 	[
 		[
@@ -116,15 +125,23 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(virtualUAVLimit),
 	"SLIDER",
-	["UAV Limit", "Set the maximum allowed number of simultaneous UAVs."],
+	["UAV limit", "Set the maximum allowed number of simultaneous UAVs. -1 for unlimited."],
 	[CBA_CATEGORY, "UAV Logistics"],
 	[-1, 20, -1, 0],
 	1
 ] call cba_settings_fnc_init;
 
 GVAR(currentUAVs) = 0;
-
 ["keko_loadout_onUAVReturned", {GVAR(currentUAVs) = GVAR(currentUAVs) - 1;}] call CBA_fnc_addEventHandler;
+
+[
+	QGVAR(virtualUAVAmount),
+	"SLIDER",
+	["UAV amount", "Set how many UAVs are initially available. -1 for unlimited."],
+	[CBA_CATEGORY, "UAV Logistics"],
+	[-1, 50, -1, 0],
+	1
+] call cba_settings_fnc_init;
 
 [
 	QGVAR(automaticUAVReturn),

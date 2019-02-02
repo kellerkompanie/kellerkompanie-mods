@@ -2,6 +2,10 @@
 
 if !(isServer) exitWith {_this remoteExecCall [QFUNC(heliDrop), 2]};
 
+if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) <= 0) exitWith {
+	"[KEKO] (logistics) You have used all of your helos already, no more available!" remoteExec ["systemChat", 0];
+};
+
 //[_targetPos select 0, _targetPos select 1, 300]
 private _targetPos = [];
 private _crate = "";
@@ -40,6 +44,11 @@ _vehicle setVectorDir _normVec;
 _targetPos = _targetPos vectorAdd (_normVec vectorMultiply 100);
 
 createVehicleCrew _vehicle;
+
+if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) > 0) then {
+		GVAR(virtualHeliAmount) = GVAR(virtualHeliAmount) - 1;
+		(format ["[KEKO] (logistics) Number of remaining helos: %1", GVAR(virtualHeliAmount)])  remoteExec ["systemChat", 0];
+};
 
 //_crate = [[0, 0, 100], 'kekoFactionNATO', 'kekoInfantryCrate'] call FUNC(spawnCrate);
 {
