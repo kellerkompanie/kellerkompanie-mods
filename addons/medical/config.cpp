@@ -2,15 +2,16 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {
-            QGVAR(painkillersItem)
-        };
-        weapons[] = {
-			QGVAR(painkillers)};
+        units[] = {};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",
-            "ace_medical"};
+            "ace_medical",
+			"adv_aceCPR",
+			"adv_aceSplint",
+			"kat_aceAirway"
+		};
         author = ECSTRING(common,KEKOTeam);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
@@ -19,8 +20,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgSounds.hpp"
 
 #include "ACE_Medical_Treatments.hpp"

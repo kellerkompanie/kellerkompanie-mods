@@ -5,7 +5,7 @@ if !(isServer) exitWith{};
 private _handle = _this spawn {
 
 	// give enough time for headless clients to take over AI
-	waitUntil{time > 90};
+	waitUntil{time > 45};
 
 	private _logic = _this select 0;
 

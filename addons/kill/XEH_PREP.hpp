@@ -1,2 +1,0 @@
-PREP(killHead);
-PREP(killTarget);

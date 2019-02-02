@@ -2,9 +2,10 @@
 
 if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
-[_this select 0, _this select 1] spawn {
-	private _player = _this select 0;
-	private _target = _this select 1;
+params ["_player", "_target"];
+
+[_player, _target] spawn {
+	params ["_player", "_target"];
 
 	_player playActionNow "PutDown";
 
@@ -15,4 +16,5 @@ if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 	sleep 4;
 
 	[_target, false, 7, true] call ace_medical_fnc_setUnconscious;
+	_target setVariable ["keko_wasPunched", false, true];
 };

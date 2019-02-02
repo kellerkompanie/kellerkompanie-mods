@@ -131,6 +131,16 @@ class CfgVehicles {
         function           = QFUNC(moduleUAVBase3den);
         icon 			   = QPATHTOF(ui\icon_uav.paa);
     };
+	class GVAR(moduleHeliEntry3den): GVAR(moduleBase3den) {
+        displayName        = "Heli Entry";
+        category           = QGVAR(Logistics);
+        function           = QFUNC(moduleHeliEntry3den);
+    };
+	class GVAR(moduleHeliExit3den): GVAR(moduleBase3den) {
+        displayName        = "Heli Exit";
+        category           = QGVAR(Logistics);
+        function           = QFUNC(moduleHeliExit3den);
+    };
 	class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
 		displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
         category           = QEGVAR(common,Deprecated);

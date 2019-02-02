@@ -2,9 +2,10 @@
 
 if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
-[_this select 0, cursorTarget] spawn {
-	private _player = _this select 0;
-	private _target = _this select 1;
+params ["_player"];
+
+[_player, cursorTarget] spawn {
+	params ["_player", "_target"];
 	private _dist = (_player distance _target);
 
 	if (_dist <= 3) then {
@@ -19,6 +20,8 @@ if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
 				//[_target, "head", 0, objNull, "punch", 0, 0.1] call ace_medical_fnc_handleDamage_advanced;
 
+				_target setVariable ["keko_wasPunched", true, true];
+				[{(_this select 0) setVariable ["keko_wasPunched", false, true];}, [_target], 5] call CBA_fnc_waitAndExecute;
 				[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
 
 				[QGVAR(onPunched), [_player, _target]] call CBA_fnc_globalEvent;

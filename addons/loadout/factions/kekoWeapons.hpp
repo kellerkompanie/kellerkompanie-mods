@@ -1,19 +1,18 @@
 class kekoWeaponBase {
 	cfgName = objNull;
-	items[] = {};
+	scopes[] = {};
+	rails[] = {};
+	silencers[] = {};
+	bipods[] = {};
 	magazines[] = {};
 };
 
-class kekoSilenceableWeapon: kekoWeaponBase {
-	silencer[] = {};
-};
-
-class kekoPrimaryWeapon: kekoSilenceableWeapon
+class kekoPrimaryWeapon: kekoWeaponBase
 {
 	uglMagazines[] = {};
 };
 
-class kekoSecondaryWeapon: kekoSilenceableWeapon
+class kekoSecondaryWeapon: kekoWeaponBase
 {
 
 };

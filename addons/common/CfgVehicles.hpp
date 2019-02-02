@@ -1,4 +1,12 @@
 class CfgVehicles {
+
+	class Man;
+	class CAManBase: Man {
+		class ACE_SelfActions {
+			#include "ACE_SelfActions.hpp"
+		};
+	};
+
 	class FlagCarrier;
 	class keko_flag: FlagCarrier {
 		scope = 2;
@@ -202,7 +210,7 @@ class CfgVehicles {
 		function           = QFUNC(moduleLimitWounds);
 		icon = QPATHTOF(ui\icon_full_heal.paa);
 		curatorCanAttach   = 1;
-	};	
+	};
 	class GVAR(moduleRemoveAllActions): GVAR(moduleBase) {
 		displayName        = "Remove all menus";
 		category           = QGVAR(Default);

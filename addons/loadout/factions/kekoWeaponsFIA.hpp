@@ -23,9 +23,10 @@ class kekoWeaponsFIA {
 	class keko_W_A3_Mk20: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_Mk20_F";
-		items[] = {"acc_flashlight","optic_ACO_grn"};
+		scopes[] = {"optic_ACO_grn"};
+		rails[] = {"acc_flashlight"};
+		silencers[] = {"muzzle_snds_m"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_m"};
 	};
 	class keko_W_A3_TRG21: keko_W_A3_Mk20
 	{
@@ -53,17 +54,19 @@ class kekoWeaponsFIA {
 	class keko_W_A3_DMR: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_DMR_06_olive_F";
-		items[] = {"acc_flashlight","optic_KHS_blk"};
+		scopes[] = {"optic_KHS_blk"};
+		rails[] = {"acc_flashlight"};
+		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_b"};
 	};
 
 	class keko_W_A3_DMR_SILENCED: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_DMR_06_olive_F";
-		items[] = {"acc_flashlight","optic_KHS_blk","muzzle_snds_b"};
+		scopes[] = {"optic_KHS_blk"};
+		rails[] = {"acc_flashlight"};
+		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_b"};
 	};
 
 
@@ -72,24 +75,28 @@ class kekoWeaponsFIA {
 	class keko_W_A3_Mk200: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_Mk200_F";
-		items[] = {"acc_flashlight","bipod_03_F_blk","optic_aco"};
+		scopes[] = {"optic_aco"};
+		rails[] = {"acc_flashlight"};
+		bipods[] = {"bipod_03_F_blk"};
+		silencers[] = {"muzzle_snds_h_mg"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"muzzle_snds_h_mg"};
 	};
 
 	// MMG
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_black_F";
-		items[] = {"acc_flashlight","bipod_01_F_snd","optic_Arco"};
+		scopes[] = {"optic_Arco"};
+		rails[] = {"acc_flashlight"};
+		bipods[] = {"bipod_01_F_snd"};
+		silencers[] = {"muzzle_snds_338_black"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_338_black"};
 	};
 
 	class keko_W_A3_GM6_CSAT: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_GM6_camo_F";
-		items[] = {"optic_lrps"};
+		scopes[] = {"optic_lrps"};
 		magazines[] = {PRIMARY_MAG_SNIPER};
 	};
 
@@ -99,9 +106,8 @@ class kekoWeaponsFIA {
 	class keko_W_M1911: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_ACPC2_F";
-		items[] = {};
-		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_acp"};
+		silencers[] = {"muzzle_snds_acp"};
+		magazines[] = {SECONDARY_MAG};		
 	};
 
 

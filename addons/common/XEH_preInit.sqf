@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
 ADDON = false;
 
@@ -7,6 +8,18 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 enableSaving [false, false];
+
+
+// fix for units losing their loadout when switching to Headless Client
+["CAManBase", "Local", {
+    params ["_entity", "_isLocal"];
+
+    if (_isLocal) then {
+        if ((uniform _entity) isEqualTo "") then {
+            _entity setUnitLoadout (getUnitLoadout (typeOf _entity));
+        };
+    };
+}] call CBA_fnc_addClassEventHandler;
 
 if(isServer) then {
 	GVAR(aiKilled) = 0;
@@ -36,6 +49,19 @@ if(isServer) then {
 
 	[QEGVAR(punch,onPunched), { GVAR(peoplePunched) = GVAR(peoplePunched) + 1; }] call CBA_fnc_addEventHandler;
 	[QEGVAR(punch,onCorpseHidden), { GVAR(corpsesHidden) = GVAR(corpsesHidden) + 1; }] call CBA_fnc_addEventHandler;
+};
+
+if(hasInterface) then {
+	[
+		"Kellerkompanie",
+		QGVAR(breakWindow),
+		["Break Window", "Press to smash a window"],
+		{
+			call FUNC(breakWindow)
+		},
+		{},
+		[DIK, [false,false,false]]
+	] call cba_fnc_addKeybind;
 };
 
 ADDON = true;

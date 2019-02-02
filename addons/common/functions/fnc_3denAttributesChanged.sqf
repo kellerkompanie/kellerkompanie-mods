@@ -96,6 +96,18 @@ switch(_sideRelations) do {
 };
 
 
+// set garbage collection by default
+"Multiplayer" set3DENMissionAttribute ["minPlayerDistance", 30];
+"Multiplayer" set3DENMissionAttribute ["WreckManagerMode", 1];
+"Multiplayer" set3DENMissionAttribute ["WreckLimit", 5];
+"Multiplayer" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
+"Multiplayer" set3DENMissionAttribute ["WreckRemovalMaxTime", 600];
+"Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 1];
+"Multiplayer" set3DENMissionAttribute ["CorpseLimit", 10];
+"Multiplayer" set3DENMissionAttribute ["CorpseRemovalMinTime", 300];
+"Multiplayer" set3DENMissionAttribute ["CorpseRemovalMaxTime", 600];
+
+
 // create additional logics on first create
 
 private _modulePos = getPos _module;

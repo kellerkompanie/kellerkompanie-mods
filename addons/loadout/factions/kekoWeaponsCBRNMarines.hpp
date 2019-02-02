@@ -28,9 +28,8 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_A3_MX: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_MX_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_h"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX
 	{
@@ -41,7 +40,6 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_A3_MXC: keko_W_A3_MX
 	{
 		cfgName = "arifle_MXC_F";
-		items[] = {};
 	};
 	class keko_W_A3_MXC_BLACK: keko_W_A3_MXC
 	{
@@ -63,9 +61,8 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_A3_MXM: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_MXM_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_h"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN};
-		silencer[] = {"muzzle_snds_h"};
 	};
 	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
 	{
@@ -87,9 +84,9 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_A3_MMG: kekoPrimaryWeapon
 	{
 		cfgName = "MMG_02_sand_F";
-		items[] = {"bipod_01_F_blk"};
+		bipods[] = {"bipod_01_F_blk"};
+		silencers[] = {"muzzle_snds_338_black"};
 		magazines[] = {PRIMARY_MAG_MMG};
-		silencer[] = {"muzzle_snds_338_black"};
 	};
 	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
 	{
@@ -111,17 +108,17 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_A3_P90: kekoPrimaryWeapon
 	{
 		cfgName = "SMG_03C_TR_black";
-		items[] = {"acc_flashlight","optic_Holosight_smg_blk_F"};
+		scopes[] = {"optic_Holosight_smg_blk_F"};
+		rails[] = {"acc_flashlight"};
+		silencers[] = {"muzzle_snds_570"};
 		magazines[] = {PRIMARY_MAG_P90};
-		silencer[] = {"muzzle_snds_570"};
 	};
 
 	class keko_W_P99_KHAKI: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_P07_khk_F";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG_P99};
-		silencer[] = {"muzzle_snds_l"};
+		silencers[] = {"muzzle_snds_l"};
 	};
 
 
@@ -130,14 +127,12 @@ class kekoWeaponsCBRNMarines {
 	class keko_W_TACTICAL: kekoSecondaryWeapon
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
-		items[] = {};
+		silencers[] = {"muzzle_snds_acp"};
 		magazines[] = {SECONDARY_MAG};
-		silencer[] = {"muzzle_snds_acp"};
 	};
 	class keko_W_TACTICAL_SPECOPS: keko_W_TACTICAL
 	{
-		items[] = {};
-		silencer[] = {"muzzle_snds_acp"};
+		silencers[] = {"muzzle_snds_acp"};
 	};
 
 

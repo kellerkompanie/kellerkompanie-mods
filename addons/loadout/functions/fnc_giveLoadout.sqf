@@ -16,6 +16,7 @@ _player enableSimulation false;
 private _role_config = configFile >> "kekoFaction" >> _faction >> _role;
 private _weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
 private _weapon_config = configFile >> "kekoFaction" >> _faction >> _weaponCfg;
+private _faces = getArray (configFile >> "kekoFaction" >> _faction >> "faces");
 
 private _uniform = getArray (_role_config >> "uniform");
 private _uniformInventory = getArray (_role_config >> "uniformInventory");
@@ -38,6 +39,7 @@ private _items = getArray (_role_config >> "items");
 private _goggles = getArray (_role_config >> "goggles");
 
 private _optics = getArray (_role_config >> "optics");
+
 
 
 removeAllWeapons _player;
@@ -83,7 +85,10 @@ if(count _uniform != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToUniform _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToUniform _item;
+				};
 			};
 		} forEach _uniformInventory;
 	};
@@ -95,7 +100,10 @@ if(count _vest != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToVest _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToVest _item;
+				};
 			};
 		} forEach _vestInventory;
 
@@ -111,7 +119,10 @@ if(count _backpack != 0) then {
 			for "_i" from 1 to (_x select 0) do {
 				private _item = _x select 1;
 				//_item = [_item] call keko_fnc_replaceKeyword;
-				_player addItemToBackpack _item;
+				if (_item call FUNC(isItemRequired)) then {
+					_item = _item call FUNC(replaceItem);
+					_player addItemToBackpack _item;
+				};
 			};
 		} forEach _backpackInventory;
 	};
@@ -131,39 +142,47 @@ if(count _primary != 0) then {
 	private _primaryCfg = _weapon_config >> _randomPrimaryEntry;
 
 	private _primary_cfgName = getText (_primaryCfg >> "cfgName");
-	private _primary_items = getArray (_primaryCfg >> "items");
+	private _primary_scopes = getArray (_primaryCfg >> "scopes");
+	private _primary_rails = getArray (_primaryCfg >> "rails");
+	private _primary_bipods = getArray (_primaryCfg >> "bipods");
+	private _primary_silencers = getArray (_primaryCfg >> "silencers");
 	private _primary_magazines = getArray (_primaryCfg >> "magazines");
 	private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
-	private _primary_silencer = getArray (_primaryCfg >> "silencer");
 
 	_player addWeapon _primary_cfgName;
 
-	if(count _primary_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_item] call keko_fnc_replaceKeyword;
+	if(count _primary_scopes != 0) then {
+		private _item = selectRandom _primary_scopes;
+		_player addPrimaryWeaponItem _item;
+	};
+
+	if(count _primary_rails != 0) then {
+		private _item = selectRandom _primary_rails;
+		_player addPrimaryWeaponItem _item;
+	};
+
+	if(count _primary_bipods != 0) then {
+		private _item = selectRandom _primary_bipods;
+		_player addPrimaryWeaponItem _item;
+	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _primary_silencers != 0) then {
+			private _item = selectRandom _primary_silencers;
 			_player addPrimaryWeaponItem _item;
-		} forEach _primary_items;
+		};
 	};
 
 	if(count _primary_magazines != 0) then {
 		private _item = _primary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
-		_player addItemToVest _item;
+			_player addItemToVest _item;
 	};
 
 	if(count _primary_uglMagazines != 0) then {
 		private _item = _primary_uglMagazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToVest _item;
-	};
-
-	if (GVAR(giveSilencer)) then {
-		if(count _primary_silencer != 0) then {
-			private _item = selectRandom _primary_silencer;
-			//_item = [_item] call keko_fnc_replaceKeyword;
-			_player addPrimaryWeaponItem _item;
-		};
 	};
 };
 
@@ -172,32 +191,40 @@ if(count _secondary != 0) then {
 	private _secondaryCfg = _weapon_config >> _randomSecondaryEntry;
 
 	private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
-	private _secondary_items = getArray (_secondaryCfg >> "items");
+	private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
+	private _secondary_rails = getArray (_secondaryCfg >> "rails");
+	private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
+	private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
 	private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
-	private _secondary_silencer = getArray (_secondaryCfg >> "silencer");
 
 	_player addWeapon _secondary_cfgName;
 
-	if(count _secondary_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_x] call keko_fnc_replaceKeyword;
+	if(count _secondary_scopes != 0) then {
+		private _item = selectRandom _secondary_scopes;
+		_player addHandgunItem _item;
+	};
+
+	if(count _secondary_rails != 0) then {
+		private _item = selectRandom _secondary_rails;
+		_player addHandgunItem _item;
+	};
+
+	if(count _secondary_bipods != 0) then {
+		private _item = selectRandom _secondary_bipods;
+		_player addHandgunItem _item;
+	};
+
+	if (GVAR(giveSilencer)) then {
+		if(count _secondary_silencers != 0) then {
+			private _item = selectRandom _secondary_silencers;
 			_player addHandgunItem _item;
-		} forEach _secondary_items;
+		};
 	};
 
 	if(count _secondary_magazines != 0) then {
 		private _item = _secondary_magazines select 0;
 		//_item = [_item] call keko_fnc_replaceKeyword;
 		_player addItemToUniform _item;
-	};
-
-	if (GVAR(giveSilencer)) then {
-		if(count _secondary_silencer != 0) then {
-			private _item = selectRandom _secondary_silencer;
-			//_item = [_item] call keko_fnc_replaceKeyword;
-			_player addHandgunItem _item;
-		};
 	};
 };
 
@@ -206,17 +233,26 @@ if(count _launcher != 0) then {
 	private _launcherCfg = _weapon_config >> _randomLauncherEntry;
 
 	private _launcher_cfgName = getText (_launcherCfg >> "cfgName");
-	private _launcher_items = getArray (_launcherCfg >> "items");
+	private _launcher_scopes = getArray (_launcherCfg >> "scopes");
+	private _launcher_rails = getArray (_launcherCfg >> "rails");
+	private _launcher_bipods = getArray (_launcherCfg >> "bipods");
 	private _launcher_magazines = getArray (_launcherCfg >> "magazines");
 
 	_player addWeapon _launcher_cfgName;
 
-	if(count _launcher_items != 0) then {
-		{
-			private _item = _x;
-			//_item = [_x] call keko_fnc_replaceKeyword;
-			_player addSecondaryWeaponItem _item;
-		} forEach _launcher_items;
+	if(count _launcher_scopes != 0) then {
+		private _item = selectRandom _launcher_scopes;
+		_player addSecondaryWeaponItem _item;
+	};
+
+	if(count _launcher_rails != 0) then {
+		private _item = selectRandom _launcher_rails;
+		_player addSecondaryWeaponItem _item;
+	};
+
+	if(count _launcher_bipods != 0) then {
+		private _item = selectRandom _launcher_bipods;
+		_player addSecondaryWeaponItem _item;
 	};
 
 	if(count _launcher_magazines != 0) then {
@@ -248,11 +284,15 @@ if(count _items != 0) then {
 	} forEach _items;
 };
 
+if (!(_faces isEqualTo [])) then {
+	private _face = selectRandom _faces;
+	[_player, _face] remoteExec ["setFace", 0, true];
+};
+
+
 _player enableSimulation true;
 
-if !(weaponLowered _player) then {
-	_player action ["WeaponOnBack", _player];
-};
+
 
 // let TFAR initialize
 // sleep 3;
@@ -329,3 +369,10 @@ if (GVAR(giveRadio) > 0) then {
 _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
+
+[_player] spawn {
+	params ["_player"];
+	if !(weaponLowered _player) then {
+		_player action ["WeaponOnBack", _player];
+	};
+};

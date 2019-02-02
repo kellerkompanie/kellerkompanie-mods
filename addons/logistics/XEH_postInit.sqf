@@ -10,6 +10,13 @@ if ( GVAR(customLogistics) == 2 ) then {
 
 if(hasInterface) then {
 	if(GVAR(virtualHeliLogistics) > ACCESS_DISABLED) then {
+		if (isNil QGVAR(heliEntryPoint)) then {
+			systemChat "[KEKO] (Logistics) WARNING: Heli Logistics enabled but no entry point set! Falling back to [0, 0].";
+		};
+		if (isNil QGVAR(heliExitPoint)) then {
+			systemChat "[KEKO] (Logistics) WARNING: Heli Logistics enabled but no exit point set! Falling back to [0, 0].";
+		};
+
 		if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess)) then {
 			player call FUNC(addVirtualHeliLogisticActions);
 		};
@@ -29,4 +36,15 @@ if(hasInterface) then {
 if(hasInterface && !isDedicated) then {
 	// run on players and player host
 	call FUNC(addFuelConsumptionHandler);
+};
+
+if(isServer) then {
+	if (isNil QGVAR(heliEntryPoint)) then {
+		GVAR(heliEntryPoint) = [0, 0, 100];
+		publicVariable QGVAR(heliEntryPoint);
+	};
+	if (isNil QGVAR(heliExitPoint)) then {
+		GVAR(heliExitPoint) = [0, 0, 100];
+		publicVariable QGVAR(heliExitPoint);
+	};
 };

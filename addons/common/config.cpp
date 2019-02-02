@@ -1,12 +1,14 @@
 #include "script_component.hpp"
 
-cba_settings_whitelist = ["76561197987754545"];
+cba_settings_whitelist[] = {"76561197987754545"};
+enableTargetDebug = 1;
+enableDebugConsole[] = {"76561197987754545"};
 
 class CfgPatches {
     class ADDON {
     	name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleLimitWounds),            
+            QGVAR(moduleLimitWounds),
             QGVAR(moduleRespawnPosition),
             QGVAR(moduleRespawnPosition3den),
             QGVAR(moduleInitMission),
@@ -47,3 +49,8 @@ class CfgPatches {
 #include "ui\dialog_lockDoors.hpp"
 
 #include "CfgEventHandlers.hpp"
+
+// remove BI default missions
+class CfgMissions {
+	class MPMissions {};
+};

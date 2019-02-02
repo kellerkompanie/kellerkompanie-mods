@@ -11,7 +11,7 @@ class CfgPatches {
             "cba_main",
             "ace_main"
         };
-        author = ECSTRING(common,ACETeam);
+        author = ECSTRING(common,KEKOTeam);
         url = CSTRING(URL);
         VERSION_CONFIG;
     };
@@ -28,4 +28,9 @@ class CfgMods {
         action = CSTRING(URL);
         description = "Issue Tracker: https://github.com/Schwaggot/kellerkompanie-mods/issues";
     };
+};
+
+// remove BI default missions
+class CfgMissions {
+    delete MPMissions;
 };

@@ -2,6 +2,7 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith { WARNING("passed objNull as parameter to onEntityKilled, exiting") };
 if !(local _unit) exitWith { _this remoteExecCall [QFUNC(onEntityKilled), _unit]; };
 
 removeAllWeapons _unit;
@@ -15,14 +16,23 @@ private _backpack = backpackContainer _unit;
 
 private _possiblecontainers = [_uniform, _vest, _backpack];
 
-for "_i" from 0 to (floor random [0, 3, 6]) step 1 do {
+for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
+	private _bandage = selectRandom ["ACE_fieldDressing","ACE_quikclot","ACE_elasticBandage","ACE_packingBandage"];
 	private _medicalItem = selectRandom ["ACE_fieldDressing","keko_medical_painkillers","ACE_tourniquet","ACE_quikclot","adv_aceSplint_splint","ACE_elasticBandage","ACE_packingBandage"];
+
+	_bandage = _bandage call EFUNC(loadout,replaceItem);
+	_medicalItem = _medicalItem call EFUNC(loadout,replaceItem);
 
 	{
 		private _itemAdded = false;
 	    if ( !(isNull _x) ) then {
 	        if ( _x canAdd [_medicalItem, 1] ) exitWith {
-	            _x addItemCargoGlobal [_medicalItem, 1];
+				if (_medicalItem call EFUNC(loadout,isItemRequired)) then {
+					_x addItemCargoGlobal [_medicalItem, 1];
+				};
+				if (_bandage call EFUNC(loadout,isItemRequired)) then {
+					_x addItemCargoGlobal [_bandage, 1];
+				};
 				_itemAdded = true;
 	        };
 	    };

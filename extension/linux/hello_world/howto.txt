@@ -1,0 +1,5 @@
+compile with:
+gcc -m32 -lstdc++ -shared -o hello.so -fPIC hello.cpp
+
+prerequisites:
+sudo apt-get install g++-multilib libc6-dev-i386

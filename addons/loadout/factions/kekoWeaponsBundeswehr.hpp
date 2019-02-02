@@ -31,9 +31,10 @@ class kekoWeaponsBundeswehr {
 	class keko_W_G36: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G36A2";
-		items[] = {"bwa3_acc_varioray_irlaser","bwa3_optic_rsas"};
+		scopes[] = {"bwa3_optic_rsas"};
+		rails[] = {"bwa3_acc_varioray_irlaser"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_iiic"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
-		silencer[] = {"bwa3_muzzle_snds_rotex_iiic"};
 	};
 	class keko_W_G36_D: keko_W_G36
 	{
@@ -75,18 +76,19 @@ class kekoWeaponsBundeswehr {
 	class keko_W_G28: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G28";
-		items[] = {"bwa3_acc_varioray_irlaser","bwa3_optic_zo4x30_microt2_brown"};
+		scopes[] = {"bwa3_optic_zo4x30_microt2_brown"};
+		rails[] = {"bwa3_acc_varioray_irlaser"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_iia"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_TRACER};
-		silencer[] = {"bwa3_muzzle_snds_rotex_iia"};
 	};
 
 	// LMG
 	class keko_W_MG4: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_MG4";
-		items[] = {"BWA3_optic_ZO4x30_MicroT2"};
+		scopes[] = {"BWA3_optic_ZO4x30_MicroT2"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_iiic"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"bwa3_muzzle_snds_rotex_iiic"};
 	};
 
 	// MMG
@@ -99,23 +101,23 @@ class kekoWeaponsBundeswehr {
 	class keko_W_MG5: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_MG5";
-		items[] = {"BWA3_120Rnd_762x51_Tracer_soft"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_iia"};
 		magazines[] = {PRIMARY_MAG_LMG};
-		silencer[] = {"bwa3_muzzle_snds_rotex_iia"};
 	};
 
 	// Sniper
 	class keko_W_G29: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G29";
-		items[] = {"bwa3_optic_m5xi_msr_microt2","bwa3_acc_varioray_irlaser"};
+		scopes[] = {"bwa3_optic_m5xi_msr_microt2"}
+		rails[] = {"bwa3_acc_varioray_irlaser"};
+		silencers[] = {"bwa3_muzzle_snds_rotex_monoblock"};
 		magazines[] = {PRIMARY_MAG_SNIPER};
-		silencer[] = {"bwa3_muzzle_snds_rotex_monoblock"};
 	};
 	class keko_W_G82: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G82";
-		items[] = {"bwa3_optic_hensoldt"};
+		scopes[] = {"bwa3_optic_hensoldt"};
 		magazines[] = {PRIMARY_MAG_SNIPER_G82};
 	};
 
@@ -124,7 +126,6 @@ class kekoWeaponsBundeswehr {
 	class keko_W_P8: kekoSecondaryWeapon
 	{
 		cfgName = "BWA3_P8";
-		items[] = {};
 		magazines[] = {SECONDARY_MAG};
 	};
 
@@ -139,7 +140,6 @@ class kekoWeaponsBundeswehr {
 	class keko_W_RGW90: kekoLauncherWeapon
 	{
 		cfgName = RAT_LAUNCHER;
-		magazines[] = {};
 	};
 	class keko_W_Fliegerfaust: kekoLauncherWeapon
 	{
