@@ -2,9 +2,10 @@
 
 if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
-[_this select 0, cursorTarget] spawn {
-	private _player = _this select 0;
-	private _target = _this select 1;
+params ["_player"];
+
+[_player, cursorTarget] spawn {
+	params ["_player", "_target"];
 	private _dist = (_player distance _target);
 
 	if (_dist <= 3) then {

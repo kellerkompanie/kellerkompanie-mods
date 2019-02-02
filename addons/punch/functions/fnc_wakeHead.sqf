@@ -2,9 +2,10 @@
 
 if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
 
-[_this select 0, _this select 1] spawn {
-	private _player = _this select 0;
-	private _target = _this select 1;
+params ["_player", "_target"];
+
+[_player, _target] spawn {
+	params ["_player", "_target"];
 
 	_player playActionNow "PutDown";
 
