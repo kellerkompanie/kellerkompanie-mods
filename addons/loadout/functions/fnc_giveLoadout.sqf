@@ -155,7 +155,7 @@ if(count _primary != 0) then {
 		private _item = selectRandom _primary_scopes;
 		_player addPrimaryWeaponItem _item;
 	};
-	
+
 	if(count _primary_rails != 0) then {
 		private _item = selectRandom _primary_rails;
 		_player addPrimaryWeaponItem _item;
@@ -370,6 +370,9 @@ _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
 
-if !(weaponLowered _player) then {
-	_player action ["WeaponOnBack", _player];
+[_player] spawn {
+	params ["_player"];
+	if !(weaponLowered _player) then {
+		_player action ["WeaponOnBack", _player];
+	};
 };
