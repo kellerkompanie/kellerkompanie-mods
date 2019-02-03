@@ -370,8 +370,15 @@ _player call FUNC(modifyLoadout);
 
 [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
 
+// lower weapon if player already had a weapon before
+if !(weaponLowered _player) then {
+	_player action ["WeaponOnBack", _player];
+};
+
+// lower weapon after initial spawn
 [_player] spawn {
 	params ["_player"];
+	sleep 3;
 	if !(weaponLowered _player) then {
 		_player action ["WeaponOnBack", _player];
 	};
