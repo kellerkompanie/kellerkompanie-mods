@@ -2,8 +2,16 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
-        weapons[] = {};
+        units[] = {
+			QGVAR(autoKitItem),
+			QGVAR(manualKitItem),
+			QGVAR(FAKItem)
+		};
+        weapons[] = {
+			QGVAR(autoKit),
+			QGVAR(manualKit),
+			QGVAR(FAK)
+		};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",
@@ -20,5 +28,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgFunctions.hpp"
 
 #include "ACE_Medical_Treatments.hpp"
