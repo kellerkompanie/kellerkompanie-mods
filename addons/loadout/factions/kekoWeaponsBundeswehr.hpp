@@ -109,7 +109,7 @@ class kekoWeaponsBundeswehr {
 	class keko_W_G29: kekoPrimaryWeapon
 	{
 		cfgName = "BWA3_G29";
-		scopes[] = {"bwa3_optic_m5xi_msr_microt2"}
+		scopes[] = {"bwa3_optic_m5xi_msr_microt2"};
 		rails[] = {"bwa3_acc_varioray_irlaser"};
 		silencers[] = {"bwa3_muzzle_snds_rotex_monoblock"};
 		magazines[] = {PRIMARY_MAG_SNIPER};
