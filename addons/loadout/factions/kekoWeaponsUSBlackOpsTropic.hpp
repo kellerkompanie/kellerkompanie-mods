@@ -149,7 +149,7 @@ class kekoWeaponsUSBlackOpsTropic {
 	class keko_W_A3_HK417: kekoPrimaryWeapon
 	{
 		cfgName = "arifle_SPAR_03_blk_F";
-		scopes[] = {optic_SOS"};
+		scopes[] = {"optic_SOS"};
 		bipods[] = {"bipod_01_F_blk"};
 		silencers[] = {"muzzle_snds_b"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN_417,PRIMARY_MAG_MARKSMAN_TRACER_417};
