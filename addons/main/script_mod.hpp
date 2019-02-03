@@ -4,15 +4,15 @@
 #define PREFIX keko
 
 #define MAJOR 2
-#define MINOR 7
-#define PATCHLVL 4
-#define BUILD 41
+#define MINOR 8
+#define PATCHLVL 0
+#define BUILD 42
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.84
+#define REQUIRED_VERSION 1.88
 #define REQUIRED_CBA_VERSION {3,8,0}
 
 #ifdef COMPONENT_BEAUTIFIED
