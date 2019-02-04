@@ -17,7 +17,8 @@ if(hasInterface) then {
 			systemChat "[KEKO] (Logistics) WARNING: Heli Logistics enabled but no exit point set! Falling back to [0, 0].";
 		};
 
-		if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess)) then {
+		private _isJTAC = player isKindOf QEGVAR(faction_generic,blufor_jtac) || player isKindOf QEGVAR(faction_generic,indfor_jtac) || player isKindOf QEGVAR(faction_generic,opfor_jtac);
+		if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess) || _isJTAC) then {
 			player call FUNC(addVirtualHeliLogisticActions);
 		};
 	};
