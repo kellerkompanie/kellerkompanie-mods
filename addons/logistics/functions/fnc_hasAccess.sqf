@@ -4,6 +4,7 @@ params ["_player","_accessLevel"];
 
 private _rank = rankId _player;
 private _canAccess = false;
+private _isJTAC = _player isKindOf QEGVAR(faction_generic,blufor_jtac) || _player isKindOf QEGVAR(faction_generic,indfor_jtac) || _player isKindOf QEGVAR(faction_generic,opfor_jtac);
 
 switch (_accessLevel) do {
 	case ACCESS_DISABLED: {
@@ -25,7 +26,7 @@ switch (_accessLevel) do {
 		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_engineer) || _player isKindOf QEGVAR(faction_generic,indfor_engineer) || _player isKindOf QEGVAR(faction_generic,opfor_engineer) || (_player getVariable ["ACE_isEngineer", 0] > 0);
 	};
 	case ACCESS_JTAC: {
-		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_jtac) || _player isKindOf QEGVAR(faction_generic,indfor_jtac) || _player isKindOf QEGVAR(faction_generic,opfor_jtac);
+		_canAccess = _isJTAC;
 	};
 	case ACCESS_UAVOPERATOR: {
 		_canAccess = _player isKindOf QEGVAR(faction_generic,blufor_uav) || _player isKindOf QEGVAR(faction_generic,indfor_uav) || _player isKindOf QEGVAR(faction_generic,opfor_uav);
