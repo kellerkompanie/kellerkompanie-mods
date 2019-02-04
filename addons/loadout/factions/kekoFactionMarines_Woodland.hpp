@@ -223,7 +223,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Anti-Tank Specialist";
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
-		backpackInventory[] = {{1, AT_MAG}};
+		backpackInventory[] = {{1, AT_MAG}, {4, "rhs_mag_smaw_SR"}};
 		launcher[] = {keko_W_RHS_SMAW};
 	};
 
@@ -231,7 +231,7 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Anti-Tank Specialist Assistant";
 
 		backpack[] = {"rhsusf_assault_eagleaiii_coy"};
-		backpackInventory[] = {{2, AT_MAG}};
+		backpackInventory[] = {{2, AT_MAG}, {4, "rhs_mag_smaw_SR"}};
 		optics[] = {"Rangefinder"};
 	};
 
