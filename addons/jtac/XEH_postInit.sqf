@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if (!GVAR(enabled)) exitWith {};
+
 call FUNC(settings);
 call FUNC(parseAvailableJTACattacks);
 
