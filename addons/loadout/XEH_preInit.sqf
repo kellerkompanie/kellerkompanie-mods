@@ -28,122 +28,41 @@ if (hasInterface) then {
 	1
 ] call cba_settings_fnc_init;
 
+
+
+
+private _factionClassConfigs = "getText (_x >> 'name') != 'objNull'" configClasses (configFile >> "kekoFaction");
+private _factionClasses = [];
+private _factionNames = [];
+
+{
+	private _name = getText(_x >> 'name');
+	private _class = configName _x;
+
+	_factionClasses pushBack _class;
+	_factionNames pushBack _name;
+} forEach _factionClassConfigs;
+
+_factionNames pushBack "Custom";
+_factionClasses pushBack "kekoCustom";
+
+
 [
 	QGVAR(loadoutFaction), // key/reference variable
 	"LIST", // type of setting
 	["Default faction", "Choose default faction"], // name and tooltip
 	CBA_SETTINGS_CATEGORY, // category
 	[
-		[
-			"kekoFactionNATO",
-			"kekoFactionAAF",
-			"kekoFactionCSAT",
-			"kekoFactionCTRG",
-			"kekoFactionFIA",
-			"kekoFactionGuerilla",
-			"kekoFactionUSMarines",
-			"kekoFactionUSBlackOpsTropic",
-			"kekoFactionNATOtropic",
-			"kekoFactionIDAP",
-
-			"kekoFactionNAA",
-			"kekoFactionHAF",
-			"kekoFactionUNTOFIAAS",
-			"kekoFactionMyrimidones",
-			"kekoFactionWAM",
-			"kekoFactionWAMVolunteers",
-			"kekoFactionAlSirae",
-
-			"kekoFactionBundeswehrFleck",
-			"kekoFactionBundeswehrTropen",
-			"kekoFactionBundeswehrSchnee",
-			"kekoFactionUSArmyOCP",
-			"kekoFactionUSArmyUCP",
-			"kekoFactionMarines_Desert",
-			"kekoFactionMarines_Woodland",
-			"kekoFactionRussiaEMRSummer",
-			"kekoFactionRussiaEMRDesert",
-			"kekoFactionChinesePLAWoodland",
-			"kekoFactionChinesePLADesert",
-			"kekofactionBlackorder",
-			"kekofactionBlackorderRedBerets",
-			"kekoFactionRussiaSpeznas",
-			"kekoFactionSpecOpsTropic",
-			"kekoFactionHorizonIsland",
-
-			"kekoFactionBAFMTP",
-			"kekoFactionBAFArctic",
-			"kekoFactionBAFArcticWhite",
-			"kekoFactionBAFDesert",
-			"kekoFactionBAFTMP",
-			"kekoFactionBAFWDL",
-
-			"kekoFactionWehrmacht",
-			"kekoFactionWehrmachtAfrica",
-			"kekoFactionArmiaKrajowaPartyzanci",
-			"kekoFactionArmiaKrajowaCamo",
-			"kekoFactionArmiaKrajowaGrade",
-			"kekoFactionCommandos",
-			"kekoFactionCBRNMarines",
-			"kekoCustom"
-    ], // values
-	[
-		"[Minimal] NATO - North Atlantic Treaty Organization",
-		"[Minimal] AAF - Altis Armed Forces",
-		"[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty",
-		"[Minimal] CTRG - Combat and Technology Research Group",
-		"[Minimal] FIA - Freedom and Independence Alliance",
-		"[Minimal] Guerilla",
-		"[Minimal] U.S. Marine Corps (Woodland)",
-		"[Minimal] U.S. BlackOps (Tropic)",
-		"[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)",
-		"[Minimal] IDAP - International Development and Aid Project",
-
-		"[Minimal] (WIP) NAA - New Altis Army",
-		"[Minimal] HAF - Hellenic Armed Forces",
-		"[Minimal] (WIP) UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis",
-		"[Minimal] Myrimidones Inc. (PMC)",
-		"[Minimal] (WIP) WAM - West Altian Militia (Paramilitary)",
-		"[Minimal] (WIP) WAM - West Altian Militia (Volunteers)",
-		"[Minimal] (WIP) Al Sirae (Terrorists)",
-
-		"[Main] Bundeswehr (Flecktarn)",
-		"[Main] Bundeswehr (Tropentarn)",
-		"[Main] Bundeswehr (Schneetarn)",
-		"[Main] U.S. Army (OCP)",
-		"[Main] U.S. Army (UCP)",
-		"[Main] U.S. Marine Corps - Marine Pattern Desert",
-		"[Main] U.S. Marine Corps - Marine Pattern Woodland",
-		"[Main] Russia EMR (Summer)",
-		"[Main] Russia EMR (Desert)",
-		"[Main] Chinese PLA (Woodland)",
-		"[Main] Chinese PLA (Desert)",
-		"[Main] Black Order",
-		"[Main] Black Order (Red Berets)",
-		"[Main] Russia Speznas",
-		"[Main] Western Special Forces (Tropic)",
-		"[Main] Horizon Island Defense Forces",
-
-		"[Event] BAF MTP - British Armed Forces (MTP)",
-		"[Event] BAF MTP Arctic - British Armed Forces (MTP Arctic)",
-		"[Event] BAF MTP Arctic White - British Armed Forces (MTP Arctic White)",
-		"[Event] BAF Desert - British Armed Forces (Desert)",
-		"[Event] BAF TMP - British Armed Forces (TMP)",
-		"[Event] BAF WDL - British Armed Forces (WDL)",
-
-		"[Ironfront] Wehrmacht",
-		"[Ironfront] Wehrmacht (Africa)",
-		"[Ironfront] Polska Armia Krajowa (Partyzanci)",
-		"[Ironfront] Polska Armia Krajowa (Camo)",
-		"[Ironfront] Polska Armia Krajowa (Grade)",
-		"[Ironfront] Commandos",
-		"[Special] CBRN U.S. Marines (Stepping Stone)",
-		"Custom"
-	], // names
-	0 // default index
+		_factionClasses, // values
+		_factionNames, // names
+		0 // default index
 	],
 	1
 ] call cba_settings_fnc_init;
+
+
+
+
 
 [
 	QGVAR(giveMap), // key/reference variable
