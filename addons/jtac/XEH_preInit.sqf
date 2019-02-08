@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#define CBA_SETTINGS_CATEGORY "Kellerkompanie Loadout"
+#define CBA_SETTINGS_CATEGORY "Kellerkompanie JTAC"
 
 [
 	QGVAR(enabled), // key/reference variable
