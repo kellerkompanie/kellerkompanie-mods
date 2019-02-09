@@ -22,16 +22,19 @@ private _unitLoadout = getUnitLoadout _player;
 if(count _replaceUniform > 0) then {
 	private _uniformEntry = _unitLoadout select 3;
 	_uniformEntry set [0, selectRandom _replaceUniform];
+	_uniformEntry set [1, []];
 	_unitLoadout set [3, _uniformEntry];
 };
 if(count _replaceVest > 0) then {
 	private _vestEntry = _unitLoadout select 4;
 	_vestEntry set [0, selectRandom _replaceVest];
+	_vestEntry set [1, []];
 	_unitLoadout set [4, _vestEntry];
 };
 if(count _replaceBackpack > 0) then {
 	private _backpackEntry = _unitLoadout select 5;
 	_backpackEntry set [0, selectRandom _replaceBackpack];
+	_backpackEntry set [1, []];
 	_unitLoadout set [5, _backpackEntry];
 };
 if(count _replaceHelmet > 0) then {
