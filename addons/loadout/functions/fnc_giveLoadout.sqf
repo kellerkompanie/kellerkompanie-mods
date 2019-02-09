@@ -151,7 +151,7 @@ if(count _primary != 0) then {
 
 	_player addWeapon _primary_cfgName;
 
-	if(count _primary_scopes != 0) then {
+	if(count _primary_scopes != 0 && GVAR(giveScope)) then {
 		private _item = selectRandom _primary_scopes;
 		_player addPrimaryWeaponItem _item;
 	};
@@ -199,7 +199,7 @@ if(count _secondary != 0) then {
 
 	_player addWeapon _secondary_cfgName;
 
-	if(count _secondary_scopes != 0) then {
+	if(count _secondary_scopes != 0 && GVAR(giveScope)) then {
 		private _item = selectRandom _secondary_scopes;
 		_player addHandgunItem _item;
 	};
@@ -240,7 +240,7 @@ if(count _launcher != 0) then {
 
 	_player addWeapon _launcher_cfgName;
 
-	if(count _launcher_scopes != 0) then {
+	if(count _launcher_scopes != 0 && GVAR(giveScope)) then {
 		private _item = selectRandom _launcher_scopes;
 		_player addSecondaryWeaponItem _item;
 	};
@@ -269,7 +269,7 @@ if(count _goggles != 0) then {
 	_player addGoggles _random_goggles;
 };
 
-if(count _optics != 0 && GVAR(giveScope)) then {
+if(count _optics != 0) then {
 	private _random_optics = selectRandom _optics;
 	//_random_optics = [_random_optics] call keko_fnc_replaceKeyword;
 	_player addWeapon _random_optics;
