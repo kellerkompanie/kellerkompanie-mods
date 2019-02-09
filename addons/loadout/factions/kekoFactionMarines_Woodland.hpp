@@ -89,11 +89,12 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		helmet[] = {"rhs_8point_marpatwd"};
 		backpack[] = {"tfw_ilbe_wd"};
 		backpackInventory[] = {
-			{1,"ACE_HuntIR_monitor"},
-			{4,"ACE_HuntIR_M203"}};
+			//{1,"ACE_HuntIR_monitor"},
+			//{4,"ACE_HuntIR_M203"}
+		};
 		optics[] = {"Rangefinder"};
 		primary[] = {
-			keko_W_RHS_M4A1_GL_HUNTIR};
+			keko_W_RHS_M4A1_GL};
 	};
 
 	class kekoCommand: kekoLead	{
@@ -108,12 +109,13 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 		name = "Squad Leader";
 		rank = "SERGEANT";
 		primary[] = {
-			keko_W_RHS_M4A1_GL_HUNTIR};
+			keko_W_RHS_M4A1_GL};
 		vest[] = {"rhsusf_spc_squadleader"};
 		backpack[] = {"tfw_ilbe_wd"};
 		backpackInventory[] = {
-			{1,"ACE_HuntIR_monitor"},
-			{4,"ACE_HuntIR_M203"}};
+			//{1,"ACE_HuntIR_monitor"},
+			//{4,"ACE_HuntIR_M203"}
+		};
 		optics[] = {"Rangefinder"};
 	};
 
