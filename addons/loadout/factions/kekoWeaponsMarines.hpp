@@ -29,7 +29,7 @@ class kekoWeaponsMarines {
 	{
 		cfgName = "rhs_weap_m16a4_carryhandle";
 		scopes[] = {"rhsusf_acc_ACOG_RMR"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"rhsusf_acc_anpeq15_bk_light"};
 		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 	};
@@ -38,7 +38,7 @@ class kekoWeaponsMarines {
 	{
 		cfgName = "rhs_weap_m4a1_carryhandle";
 		scopes[] = {"rhsusf_acc_ACOG_RMR"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"rhsusf_acc_anpeq15_bk_light"};
 		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
 	};
@@ -65,7 +65,7 @@ class kekoWeaponsMarines {
 	{
 		cfgName = "rhs_weap_m14ebrri";
 		scopes[] = {"rhsusf_acc_ACOG3"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"rhsusf_acc_anpeq15_bk_light"};
 		bipods[] = {"rhsusf_acc_harris_bipod"};
 		magazines[] = {PRIMARY_MAG_MARKSMAN,PRIMARY_MAG_MARKSMAN_TRACER};
 	};
@@ -75,7 +75,7 @@ class kekoWeaponsMarines {
 	{
 		cfgName = "rhs_weap_m249_pip_L_para";
 		scopes[] = {"rhsusf_acc_ACOG3"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"rhsusf_acc_anpeq15_bk_light"};
 		silencers[] = {"rhsusf_acc_nt4_black"};
 		magazines[] = {PRIMARY_MAG_LMG};
 	};
