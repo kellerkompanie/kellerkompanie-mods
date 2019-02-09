@@ -269,7 +269,7 @@ if(count _goggles != 0) then {
 	_player addGoggles _random_goggles;
 };
 
-if(count _optics != 0) then {
+if(count _optics != 0 && GVAR(giveScope)) then {
 	private _random_optics = selectRandom _optics;
 	//_random_optics = [_random_optics] call keko_fnc_replaceKeyword;
 	_player addWeapon _random_optics;
