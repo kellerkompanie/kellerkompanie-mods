@@ -59,14 +59,14 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 			"rhsusf_spc_teamleader"};
 
 		helmet[] = {
-			"rhsusf_mich_helmet_marpatwd",
-			"rhsusf_mich_helmet_marpatwd_alt",
-			"rhsusf_mich_helmet_marpatwd_alt_headset",
-			"rhsusf_mich_helmet_marpatwd_headset",
-			"rhsusf_mich_helmet_marpatwd_norotos",
-			"rhsusf_mich_helmet_marpatwd_norotos_arc",
-			"rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
-			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			//"rhsusf_mich_helmet_marpatwd",
+			//"rhsusf_mich_helmet_marpatwd_alt",
+			//"rhsusf_mich_helmet_marpatwd_alt_headset",
+			//"rhsusf_mich_helmet_marpatwd_headset",
+			//"rhsusf_mich_helmet_marpatwd_norotos",
+			//"rhsusf_mich_helmet_marpatwd_norotos_arc",
+			//"rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
+			//"rhsusf_mich_helmet_marpatwd_norotos_headset",
 			"rhsusf_lwh_helmet_marpatwd",
 			"rhsusf_lwh_helmet_marpatwd_ess",
 			"rhsusf_lwh_helmet_marpatwd_headset"};
