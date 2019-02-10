@@ -36,7 +36,7 @@ class kekoSoldier
 	uniform[] = {};
 	uniformInventory[] = {
 		{15, "ACE_fieldDressing"},
-		{1, "KAT_Painkillers"},
+		{1, "KAT_Painkiller"},
 		{3, "ACE_tourniquet"},
 		{1, "ACE_MapTools"},
 		{1, "ACE_Flashlight_XL50"},
