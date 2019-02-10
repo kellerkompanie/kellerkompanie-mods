@@ -18,14 +18,14 @@ private _add = {
 	if  ( _param > 1 && !(backpack _unit isEqualTo "") ) exitWith {
 		private _mediBack = unitBackpack _unit;
 
-		if(_type == "KAT_Painkillers") then {
+		if(_type == "KAT_Painkiller") then {
 			_mediBack addMagazineCargoGlobal [_type, _amount];
 		} else {
 			_mediBack addItemCargoGlobal [_type, _amount];
 		};
 	};
 	for "_i" from 1 to _amount do {
-		if(_type == "KAT_Painkillers") then {
+		if(_type == "KAT_Painkiller") then {
 			_unit addMagazine _type;
 		} else {
 			_unit addItem _type;
@@ -73,7 +73,7 @@ private _success = 0;
 } count _refills;
 
 if ( ( _success < (_mAFAK+1) && _param < 2 ) || ( _success < (_mAMK+1) && _param > 1 ) ) exitWith {
-	if(_item == "KAT_Painkillers") then {
+	if(_item == "KAT_Painkiller") then {
 		_unit addMagazine _item;
 	} else {
 		_unit addItem _item;

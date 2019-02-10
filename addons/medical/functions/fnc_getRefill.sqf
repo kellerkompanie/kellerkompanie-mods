@@ -32,7 +32,7 @@ if (_param isEqualTo 1) exitWith {
 	_return =  [
 			["ACE_fieldDressing",15],
 			["ACE_tourniquet",4],
-			["KAT_Painkillers", 1]
+			["KAT_Painkiller", 1]
 		];
 	if ( (count _FAK_var) > 0 && { (_FAK_var select 0) isEqualType [] }) then {
 		_return = _FAK_var;
@@ -56,7 +56,7 @@ call {
 			["ACE_tourniquet", 6],
 			["ACE_salineIV", 6],
 			["ACE_salineIV_500", 6],
-			["KAT_Painkillers", 1],
+			["KAT_Painkiller", 1],
 			["ACE_surgicalKit", 1]
 		];
 
