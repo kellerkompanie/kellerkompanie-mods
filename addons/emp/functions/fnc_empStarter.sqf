@@ -5,19 +5,19 @@ TRACE_1("empStarter", _this);
 
 if (!isServer) exitWith {};
 
-params ["_obj_emp", "_rang_emp", "_viz_eff", "_player_viz", "_dam_unit"];
+params ["_empSourceObject", "_empRange", "_hasVisualEffect", "_hasVisualEffectOnPlayer", "_dam_unit"];
 
 emp_dam = _dam_unit;
 publicVariable "emp_dam";
 
-if (_viz_eff or _player_viz) then {
-	[_obj_emp, _viz_eff, _player_viz] remoteExec [QFUNC(vizEffEMP), [0,-2] select isDedicated];
+if (_hasVisualEffect or _hasVisualEffectOnPlayer) then {
+	[_empSourceObject, _hasVisualEffect, _hasVisualEffectOnPlayer] remoteExec [QFUNC(vizEffEMP), [0,-2] select isDedicated];
 };
 
-[_obj_emp, _rang_emp] call FUNC(configObj);
+[_empSourceObject, _empRange] call FUNC(configObj);
 
 if (GVAR(affectRadio)) then {
-	[_obj_emp, _rang_emp] call FUNC(affectRadios);
+	[_empSourceObject, _empRange] call FUNC(affectRadios);
 };
 
 [{!isNil "special_launchers_emp" && !isNil "emp_dam"}, {[] call FUNC(empEffect)}, []] call CBA_fnc_waitUntilAndExecute;
