@@ -11,7 +11,7 @@ if(_groupLeader == player) then {
 	private _otherGroupMembers = (units _playerGroup) - [player];
 
 	if((count _otherGroupMembers) > 0) then {
-		_pos = _otherGroupMembers select 0;
+		_pos = getPosASL (selectRandom _otherGroupMembers);
 	} else {
 		// no other group members found, move to highest ranking player
 		_pos = getPosASL player;
