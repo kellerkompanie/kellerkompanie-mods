@@ -1,15 +1,11 @@
 #include "script_component.hpp"
 
-// Medical: Revive Timer
-// Medical: Reopen Wounds
-// Medical: Splints
-
 private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _airwaysRequired = kat_aceAirway_enable;
 
 player createDiarySubject ["missionSettings", "Mission Settings"];
-player createDiaryRecord ["missionSettings", ["Medical", format["
+player createDiaryRecord ["missionSettings", ["Medical", format ["
 <br/>
 Medical:
 <br/>
