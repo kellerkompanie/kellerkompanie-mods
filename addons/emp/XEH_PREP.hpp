@@ -2,6 +2,7 @@ PREP(affectLight);
 PREP(affectStaticTurret);
 PREP(affectVehicle);
 PREP(configObj);
+PREP(disableRadios);
 PREP(empEffect);
 PREP(empStarter);
 PREP(moduleEMP);
