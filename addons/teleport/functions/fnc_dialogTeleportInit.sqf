@@ -6,9 +6,21 @@ disableSerialization;
 //dialog
 private _display = _this select 0;
 private _listBox = _display displayCtrl 1500;
+private _playerListBox = _display displayCtrl 1501;
 
 // LBs leeren
 lbClear _listBox;
+lbClear _playerListBox;
+ctrlEnable [1606, false];
+
+{
+	if(side _x == side player) then {
+		lbAdd [1501, name _x];
+		lbSetData [1501, _forEachIndex, _x];
+		lbSetCurSel [1501, 0];
+		ctrlEnable [1606, true];
+	};
+} forEach allPlayers - [player];
 
 switch(side player) do {
 	case west: {
