@@ -15,6 +15,11 @@ if (_viz_eff or _player_viz) then {
 };
 
 [_obj_emp, _rang_emp] call FUNC(configObj);
+
+if (GVAR(affectRadio)) then {
+	[_obj_emp, _rang_emp] remoteExec [QFUNC(disableRadios), [0,-2] select isDedicated];
+};
+
 waitUntil {!isNil "special_launchers_emp"};
 waitUntil {!isNil "emp_dam"};
 [] call FUNC(empEffect);
