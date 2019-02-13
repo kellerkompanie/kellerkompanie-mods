@@ -35,7 +35,7 @@ switch (true) do {
         [emp_me,500,true,true,0.1] execvm "AL_emp\emp_starter.sqf";
         */
 
-        [_object, 1000, true, true, 0] remoteExec [QFUNC(empStarter), 2, false];
+        [_object, 1000, true, true] remoteExec [QFUNC(empStarter), 2, false];
     };
 };
 

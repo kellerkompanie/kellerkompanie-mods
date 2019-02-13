@@ -72,9 +72,5 @@ private _delay_check = 0.01;
 		_x removeWeaponGlobal (secondaryWeapon _x);
 	};
 
-	if (emp_dam > 0) then {
-		_x setDamage ((getDammage _x) + emp_dam);
-	};
-
 	sleep _delay_check;
 } forEach list_man_emp;
