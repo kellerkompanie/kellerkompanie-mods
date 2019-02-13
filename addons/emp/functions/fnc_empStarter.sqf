@@ -17,7 +17,7 @@ if (_viz_eff or _player_viz) then {
 [_obj_emp, _rang_emp] call FUNC(configObj);
 
 if (GVAR(affectRadio)) then {
-	[_obj_emp, _rang_emp] call FUNC(disableRadios);
+	[_obj_emp, _rang_emp] call FUNC(affectRadios);
 };
 
 [{!isNil "special_launchers_emp" && !isNil "emp_dam"}, {[] call FUNC(empEffect)}, []] call CBA_fnc_waitUntilAndExecute;
