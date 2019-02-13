@@ -11,6 +11,7 @@ PREP(dialogTeleportGroup);
 PREP(dialogTeleportInit);
 PREP(dialogTeleportMenu);
 PREP(dialogTeleportToLeader);
+PREP(dialogTeleportToPlayer);
 PREP(moduleAddTeleportDestination);
 PREP(moduleAddTeleportDestination3den);
 PREP(moduleAddTeleportMenu);
