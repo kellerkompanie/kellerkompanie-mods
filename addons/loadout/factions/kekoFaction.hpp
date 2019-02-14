@@ -59,4 +59,6 @@ class kekoFaction
 	#include "kekoFactionArmiaKrajowaGrade.hpp"
 	#include "kekoFactionCommandos.hpp"
 	#include "kekoFactionCBRNMarines.hpp"
+
+	#include "kekoFactionUNSCDF.hpp"
 };
