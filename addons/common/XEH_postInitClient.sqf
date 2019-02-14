@@ -8,7 +8,7 @@ enableRadio false;
 //failsafe for missing curator interface:
 if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
 	if (isNull (getAssignedCuratorLogic player)) then {
-		["ace_zeus_createZeus", player] call CBA_fnc_serverEvent;
+		player remoteExec [QFUNC(createZeus), 2];
 	};
 };
 
