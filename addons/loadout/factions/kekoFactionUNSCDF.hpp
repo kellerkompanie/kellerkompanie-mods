@@ -66,6 +66,7 @@ class kekoFactionUNSCDF: kekoFactionBase {
 		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
+		backpack[] = {"OPTRE_ANPRC_521_Black"};
 	};
 
 	class kekoSQL: kekoSoldierUNSCDFOlive	{
