@@ -53,7 +53,7 @@ class CfgVehicles {
 	};
 
 	class GVAR(moduleBase): Module_F {
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
 		category = "KEKO";
 		function = QEFUNC(common,dummy);
 		functionPriority = 1;
@@ -63,7 +63,7 @@ class CfgVehicles {
 		scopeCurator = 2;
 	};
 	class GVAR(moduleBase3den): Module_F {
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
 		category = "KEKO";
 		function = QEFUNC(common,dummy);
 		functionPriority = 1;

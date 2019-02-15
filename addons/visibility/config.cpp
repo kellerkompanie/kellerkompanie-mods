@@ -27,7 +27,7 @@ class CfgPatches {
 			"A3_Soft_F",
 			"A3_Soft_F_Exp_Offroad_02"
 		};
-        author = ECSTRING(common,KEKOTeam);
+        author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

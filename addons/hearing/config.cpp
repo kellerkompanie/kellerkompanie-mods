@@ -9,7 +9,7 @@ class CfgPatches
         weapons[] = {};
 		requiredVersion= REQUIRED_VERSION;
 		requiredAddons[]= {"ace_hearing"};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

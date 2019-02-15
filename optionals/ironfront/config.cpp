@@ -22,7 +22,7 @@ class CfgPatches {
 			"fow_weapons_c",
 			"cba_jam"
 		};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

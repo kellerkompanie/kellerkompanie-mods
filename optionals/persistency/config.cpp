@@ -9,7 +9,7 @@ class CfgPatches {
             "cba_main",
             "extDB3",
             "keko_persistency_settings"};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

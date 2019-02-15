@@ -236,7 +236,7 @@ class CfgPatches {
 			"SMA_Weapons",
 			"SMA_Weapons_Magazines"
        };
-	   author = ECSTRING(common,KEKOTeam);
+	   author = ECSTRING(common,Schwaggot);
 	   authors[] = {"Schwaggot"};
 	   url = ECSTRING(main,URL);
 	   VERSION_CONFIG;
