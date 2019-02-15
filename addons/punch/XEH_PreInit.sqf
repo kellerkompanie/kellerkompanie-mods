@@ -7,16 +7,14 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#define CBA_CATEGORY "Kellerkompanie Punch"
-
 [
 	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
-	["Knock People Unconscious", "Enable/Disable Knock People Unconscious"], // name and tooltip
-	CBA_CATEGORY, // category
+	[localize LSTRING(knockPeopleUnconcious), localize LSTRING(knockPeopleUnconciousTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
@@ -25,11 +23,11 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
-	["Snap neck", "Enable/Disable kill people by snapping the neck"], // name and tooltip
-	CBA_CATEGORY, // category
+	[localize LSTRING(snapNeck), localize LSTRING(snapNeckTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
