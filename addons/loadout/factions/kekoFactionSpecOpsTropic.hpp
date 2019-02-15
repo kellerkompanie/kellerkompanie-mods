@@ -30,6 +30,8 @@ class kekoFactionSpecOpsTropic: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsSpecOpsTropic;
 
+	logisticsHelicopter = "RHS_UH60M";
+
 	// define all weapons and mags
 	#include "kekoWeaponsSpecOpsTropic.hpp"
 

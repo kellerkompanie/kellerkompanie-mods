@@ -32,6 +32,8 @@ class kekoFactionAlSirae: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsAlSirae;
 
+	logisticsHelicopter = "MU_CIV_Orca";
+
 	// define all weapons and mags
 	#include "kekoWeaponsAlSirae.hpp"
 

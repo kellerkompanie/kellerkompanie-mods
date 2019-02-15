@@ -39,6 +39,8 @@ class kekoFactionBlackorder: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsBlackorder;
 
+	logisticsHelicopter = "O_RHS_UH60M2_BlackOrder_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsBlackorder.hpp"
 

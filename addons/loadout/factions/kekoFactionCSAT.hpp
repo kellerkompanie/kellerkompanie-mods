@@ -39,6 +39,8 @@ class kekoFactionCSAT: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsCSAT;
 
+	logisticsHelicopter = "O_Heli_Transport_04_box_F";
+
 
 	// define all weapons and mags
 	#include "kekoWeaponsCSAT.hpp"

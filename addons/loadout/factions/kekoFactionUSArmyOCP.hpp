@@ -39,6 +39,8 @@ class kekoFactionUSArmyOCP: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsUSArmy;
 
+	logisticsHelicopter = "RHS_UH60M";
+
 	// define all weapons and mags
 	#include "kekoWeaponsUSArmy.hpp"
 

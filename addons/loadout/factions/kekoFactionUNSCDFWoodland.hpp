@@ -32,6 +32,8 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsUNSCDF;
 
+	logisticsHelicopter = "OPTRE_Pelican_unarmed";
+
 	// define all weapons and mags
 	#include "kekoWeaponsUNSCDF.hpp"
 

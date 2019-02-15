@@ -33,6 +33,8 @@ class kekoFactionGuerilla: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsGuerilla;
 
+	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsGuerilla.hpp"
 

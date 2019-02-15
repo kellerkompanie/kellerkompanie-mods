@@ -37,6 +37,8 @@ class kekoFactionBAFWDL: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsBAF;
 
+	logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
+
 	// define all weapons and mags
 	#include "kekoWeaponsBAF.hpp"
 

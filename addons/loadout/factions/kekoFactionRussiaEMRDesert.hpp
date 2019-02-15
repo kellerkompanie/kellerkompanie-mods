@@ -39,6 +39,8 @@ class kekoFactionRussiaEMRDesert: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsRussiaEMR;
 
+	logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
+
 	// define all weapons and mags
 	#include "kekoWeaponsRussiaEMR.hpp"
 
