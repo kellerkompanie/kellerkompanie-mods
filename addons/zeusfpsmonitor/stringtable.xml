@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="zeusfpsmonitor">
+		<Key ID="STR_keko_zeusfpsmonitor_cbaSettingsCategory">
+            <English>Kellerkompanie Zeus FPS Monitor</English>
+        </Key>
+    </Package>
+</Project>
