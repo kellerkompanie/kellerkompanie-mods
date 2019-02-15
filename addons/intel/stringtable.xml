@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="intel">
+        <Key ID="STR_keko_intel_addIntel">
+            <English>Add Intel</English>
+        </Key>
+		<Key ID="STR_keko_intel_action">
+            <English>Action</English>
+        </Key>
+		<Key ID="STR_keko_intel_pickupDocuments">
+            <English>'Pick up documents'</English>
+        </Key>
+		<Key ID="STR_keko_intel_foundDocuments">
+            <English>'Found Documents'</English>
+        </Key>
+		<Key ID="STR_keko_intel_title">
+            <English>Title</English>
+        </Key>
+		<Key ID="STR_keko_intel_content">
+            <English>Content</English>
+        </Key>
+		<Key ID="STR_keko_intel_contentStr">
+            <English>'In den Dokumenten steht etwas.'</English>
+        </Key>
+
+		<Key ID="STR_keko_intel_removeAfter">
+            <English>Remove after</English>
+        </Key>
+    </Package>
+</Project>

@@ -18,7 +18,7 @@ class CfgVehicles {
     class GVAR(moduleAddIntel3den): Module_F {
         scope              = 2;
         scopeCurator       = 1;
-        displayName        = "Add Intel";
+        displayName        = CSTRING(addIntel);
         category           = QGVAR(Intel);
         function           = QFUNC(moduleAddIntel3den);
         functionPriority   = 1;
@@ -30,25 +30,25 @@ class CfgVehicles {
 		class Attributes: AttributesBase {
             class Action: Edit {
                 property = QGVAR(Action);
-                displayName = "Action";
+                displayName = CSTRING(action);
                 typeName = "STRING";
-                defaultValue = "'Dokument aufheben'";
+                defaultValue = CSTRING(pickupDocuments);
             };
 			class Title: Edit {
 				property = QGVAR(Title);
-				displayName = "Title";
+				displayName = CSTRING(title);
 				typeName = "STRING";
-				defaultValue = "'Gefundene Dokumente'";
+				defaultValue = CSTRING(foundDocuments);
 			};
 			class Content: Edit {
 				property = QGVAR(Content);
-                displayName = "Content";
+                displayName = CSTRING(content);
                 typeName = "STRING";
-                defaultValue = "'In den Dokumenten steht etwas.'";
+                defaultValue = CSTRING(contentStr);
             };
             class Remove: Checkbox {
                 property = QGVAR(Remove);
-                displayName = "Remove after";
+                displayName = CSTRING(removeAfter);
                 typeName = "BOOL";
                 defaultValue = false;
             };
@@ -59,7 +59,7 @@ class CfgVehicles {
 		category           = QEGVAR(common,Deprecated);
 	};
     class GVAR(moduleAddIntel): Module_F {
-        displayName        = "Add Intel";
+        displayName        = CSTRING(addIntel);
         icon               = QPATHTOF(ui\icon_intel.paa);
         category           = QGVAR(Intel);
         function           = QFUNC(moduleAddIntel);
