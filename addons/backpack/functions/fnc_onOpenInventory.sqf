@@ -31,9 +31,9 @@ if (alive _target && {!(_target getVariable ["ACE_isUnconscious",false]) && {_ta
 		{
 			(findDisplay 602) closeDisplay 0;
 			if !(isNil "ace_common_fnc_displayTextStructured") then {
-				["Backpack is locked"] call ace_common_fnc_displayTextStructured;
+				[localize LSTRING(messageLocked)] call ace_common_fnc_displayTextStructured;
 			} else {
-				hint "Backpack is locked";
+				hint localize LSTRING(messageLocked);
 			};
 		},
 		[]
