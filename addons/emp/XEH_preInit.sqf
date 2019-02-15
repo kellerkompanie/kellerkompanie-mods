@@ -11,11 +11,11 @@ PREP_RECOMPILE_END;
 [
 	QGVAR(affectRadio), // key/reference variable
 	"LIST", // type of setting
-	["EMP affects radios", "Enable/Disable radios breaking after EMP pulse."], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(affectRadios), localize LSTRING(affectRadiosTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
