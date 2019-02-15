@@ -34,12 +34,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Car") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - GVAR(consumptionCarLow));
+                        _vh setFuel (_fuel - GVAR(consumptionCarLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - GVAR(consumptionCarMid));
+                           _vh setFuel (_fuel - GVAR(consumptionCarMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - GVAR(consumptionCarHigh));
+                           _vh setFuel (_fuel - GVAR(consumptionCarHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -47,12 +47,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Truck") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - GVAR(consumptionTruckLow));
+                        _vh setFuel (_fuel - GVAR(consumptionTruckLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - GVAR(consumptionTruckMid));
+                           _vh setFuel (_fuel - GVAR(consumptionTruckMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - GVAR(consumptionTruckHigh));
+                           _vh setFuel (_fuel - GVAR(consumptionTruckHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -60,12 +60,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Tank") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - GVAR(consumptionTankLow));
+                        _vh setFuel (_fuel - GVAR(consumptionTankLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - GVAR(consumptionTankMid));
+                           _vh setFuel (_fuel - GVAR(consumptionTankMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - GVAR(consumptionTankHigh));
+                           _vh setFuel (_fuel - GVAR(consumptionTankHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -76,12 +76,12 @@ if (isNil QGVAR(fuelUptake)) then {
                      // TODO calculate based on throttle
 
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - GVAR(consumptionHeloLow));
+                        _vh setFuel (_fuel - GVAR(consumptionHeloLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - GVAR(consumptionHeloMid));
+                           _vh setFuel (_fuel - GVAR(consumptionHeloMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - GVAR(consumptionHeloHigh));
+                           _vh setFuel (_fuel - GVAR(consumptionHeloHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -93,12 +93,12 @@ if (isNil QGVAR(fuelUptake)) then {
                      private _throttle = airplaneThrottle _vh;
 
                      if(_throttle < 0.25) then {
-                        _vh setFuel (_fuel - GVAR(consumptionPlaneLow));
+                        _vh setFuel (_fuel - GVAR(consumptionPlaneLow) / 100);
                      } else {
                         if(_throttle < 0.75) then {
-                           _vh setFuel (_fuel - GVAR(consumptionPlaneMid));
+                           _vh setFuel (_fuel - GVAR(consumptionPlaneMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - GVAR(consumptionPlaneHigh));
+                           _vh setFuel (_fuel - GVAR(consumptionPlaneHigh) / 100);
                         };
                      };
                      sleep .20;
