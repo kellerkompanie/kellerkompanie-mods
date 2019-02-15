@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="backpack">
+        <Key ID="STR_keko_backpack_messageLockRemoved">
+            <English>Backpack lock removed</English>
+        </Key>
+        <Key ID="STR_keko_backpack_messageLocked">
+            <English>Backpack is locked</English>
+        </Key>
+		<Key ID="STR_keko_backpack_locked">
+            <English>Backpack locked</English>
+        </Key>
+		<Key ID="STR_keko_backpack_unlocked">
+            <English>Backpack unlocked</English>
+        </Key>
+		<Key ID="STR_keko_backpack_actionLock">
+            <English>Lock backpack</English>
+        </Key>
+		<Key ID="STR_keko_backpack_actionUnlock">
+            <English>Unlock backpack</English>
+        </Key>
+		</Package>
+</Project>
