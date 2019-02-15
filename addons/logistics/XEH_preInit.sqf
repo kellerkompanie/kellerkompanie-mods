@@ -6,13 +6,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#define CBA_CATEGORY "Kellerkompanie Logistics"
-
 [
 	QGVAR(customLogistics), // key/reference variable
 	"LIST", // type of setting
 	["Logistics", "Enable/Disable logistics"], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[0,1,2], // values
 		["Disabled","Default","Custom"], // names
@@ -26,7 +24,7 @@ PREP_RECOMPILE_END;
 	QGVAR(accessLevel), // key/reference variable
 	"LIST", // type of setting
 	["Access Level: Logistics Menu", "Who may spawn crates? Zeus may always."], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[
 			ACCESS_EVERYONE,
@@ -55,7 +53,7 @@ PREP_RECOMPILE_END;
 	QGVAR(virtualHeliLogistics), // key/reference variable
 	"LIST", // type of setting
 	["Access Level", "Enable/Disable virtual heli logistics."], // name and tooltip
-	[CBA_CATEGORY, "Heli Logistics"], // category
+	[localize LSTRING(cbaSettingsCategory), "Heli Logistics"], // category
 	[
 		[
 			ACCESS_DISABLED,
@@ -86,7 +84,7 @@ PREP_RECOMPILE_END;
 	QGVAR(virtualHeliAmount),
 	"SLIDER",
 	["Heli amount", "Set how many Heli drops are initially available. -1 for unlimited."],
-	[CBA_CATEGORY, "Heli Logistics"],
+	[localize LSTRING(cbaSettingsCategory), "Heli Logistics"],
 	[-1, 50, -1, 0],
 	1
 ] call cba_settings_fnc_init;
@@ -95,7 +93,7 @@ PREP_RECOMPILE_END;
 	QGVAR(virtualUAVLogistics), // key/reference variable
 	"LIST", // type of setting
 	["Access level", "Enable/Disable virtual UAV logistics."], // name and tooltip
-	[CBA_CATEGORY, "UAV Logistics"], // category
+	[localize LSTRING(cbaSettingsCategory), "UAV Logistics"], // category
 	[
 		[
 			ACCESS_DISABLED,
@@ -126,7 +124,7 @@ PREP_RECOMPILE_END;
 	QGVAR(virtualUAVLimit),
 	"SLIDER",
 	["UAV limit", "Set the maximum allowed number of simultaneous UAVs. -1 for unlimited."],
-	[CBA_CATEGORY, "UAV Logistics"],
+	[localize LSTRING(cbaSettingsCategory), "UAV Logistics"],
 	[-1, 20, -1, 0],
 	1
 ] call cba_settings_fnc_init;
@@ -138,7 +136,7 @@ GVAR(currentUAVs) = 0;
 	QGVAR(virtualUAVAmount),
 	"SLIDER",
 	["UAV amount", "Set how many UAVs are initially available. -1 for unlimited."],
-	[CBA_CATEGORY, "UAV Logistics"],
+	[localize LSTRING(cbaSettingsCategory), "UAV Logistics"],
 	[-1, 50, -1, 0],
 	1
 ] call cba_settings_fnc_init;
@@ -147,7 +145,7 @@ GVAR(currentUAVs) = 0;
 	QGVAR(automaticUAVReturn),
 	"SLIDER",
 	["Automatic return", "Set after how many seconds UAV should automatically return to base."],
-	[CBA_CATEGORY, "UAV Logistics"],
+	[localize LSTRING(cbaSettingsCategory), "UAV Logistics"],
 	[-1, 1200, 600, 0],
 	1
 ] call cba_settings_fnc_init;
