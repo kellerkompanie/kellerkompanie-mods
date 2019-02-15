@@ -6,7 +6,7 @@ if !(_unit call FUNC(hasCanteen)) exitWith {false};
 
 _unit playActionNow "Medic";
 
-["You pour some water on your comrade's face.", 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+[localize LSTRING(messagePour), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 
 [_unit, QGVAR(canteen)] call FUNC(removeItemFromMag);
 

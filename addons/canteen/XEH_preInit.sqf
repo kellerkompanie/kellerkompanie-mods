@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
  * 3: Statement <CODE>
  * 4: Condition <CODE>
  */
- private _action = [QGVAR(refill), "Refill Canteen", QPATHTOF(ui\icon_canteen_action), {_player call FUNC(fillCanteen)}, {_player call FUNC(hasCanteen)}] call ace_interact_menu_fnc_createAction;
+ private _action = [QGVAR(refill), localize LSTRING(actionRefill), QPATHTOF(ui\icon_canteen_action), {_player call FUNC(fillCanteen)}, {_player call FUNC(hasCanteen)}] call ace_interact_menu_fnc_createAction;
 
 {
 	/*
