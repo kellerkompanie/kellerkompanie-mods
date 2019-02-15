@@ -5,5 +5,14 @@
             <English>Schwaggot</English>
             <German>Schwaggot</German>
         </Key>
+		<Key ID="STR_keko_common_customFacesNotAllowed">
+            <English>Custom Faces are not allowed on this server!</English>
+        </Key>
+		<Key ID="STR_keko_common_actionBreakWindow">
+            <English>Break Window</English>
+        </Key>
+		<Key ID="STR_keko_common_actionBreakWindowTooltip">
+            <English>Press to smash a window</English>
+        </Key>
     </Package>
 </Project>

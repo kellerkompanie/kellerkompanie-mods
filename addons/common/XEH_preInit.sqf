@@ -55,7 +55,7 @@ if(hasInterface) then {
 	[
 		"Kellerkompanie",
 		QGVAR(breakWindow),
-		["Break Window", "Press to smash a window"],
+		[localize LSTRING(actionBreakWindow), localize LSTRING(actionBreakWindowTooltip)],
 		{
 			call FUNC(breakWindow)
 		},
