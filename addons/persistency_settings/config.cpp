@@ -16,7 +16,7 @@ class CfgPatches {
 			"3den",
 			"A3_Modules_F",
 			"A3_Modules_F_Curator"};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

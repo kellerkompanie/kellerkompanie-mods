@@ -9,7 +9,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
 			"A3_Ui_F"};
-        author = ECSTRING(common,KEKOTeam);
+        author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

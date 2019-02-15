@@ -12,7 +12,7 @@ class CfgPatches {
 			"ace_interaction",
 			"ace_common",
 			"ace_refuel"};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

@@ -5,7 +5,7 @@ class CfgVehicles {
         };
     };
     class GVAR(moduleBase): Module_F {
-        author = ECSTRING(common,KEKOTeam);
+        author = ECSTRING(common,Schwaggot);
         category = "KEKO";
         function = QEFUNC(common,dummy);
         scope              = 1;
@@ -15,7 +15,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
     };
     class GVAR(moduleBase3den): Module_F {
-        author = ECSTRING(common,KEKOTeam);
+        author = ECSTRING(common,Schwaggot);
         category = "KEKO";
         function = QEFUNC(common,dummy);
         scope              = 2;

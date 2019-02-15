@@ -302,7 +302,7 @@ class CfgPatches
 			"A3_Characters_F_OPFOR",
 			"A3_Characters_F"
 		};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

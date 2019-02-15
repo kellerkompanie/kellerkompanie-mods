@@ -8,7 +8,7 @@ class CfgPatches {
 		requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
 			"keko_main"};
-        author = ECSTRING(common,KEKOTeam);
+        author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
