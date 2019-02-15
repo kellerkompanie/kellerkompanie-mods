@@ -40,8 +40,8 @@ GVAR(forceEnabled) = true;
 [
     QGVAR(twitch),
     "CHECKBOX",
-    ["Enable Twitch", "Enable Slight ""twitching"" when someone fires nearby"],
-    "Kellerkompanie Immerse",
+    [localize LSTRING(enableTwitch), localize LSTRING(enableTwitchTooltip)],
+    localize LSTRING(cbaSettingsCategory),
     true,
     nil,
     {
@@ -53,8 +53,8 @@ GVAR(forceEnabled) = true;
 [
     QGVAR(exShake),
     "CHECKBOX",
-    ["Enable exShake", "CamShake for explosions, even distant ones!"],
-    "Kellerkompanie Immerse",
+    [localize LSTRING(enableExShake), localize LSTRING(enableExShakeTooltip)],
+    localize LSTRING(cbaSettingsCategory),
     true,
     nil,
     {
@@ -76,8 +76,8 @@ GVAR(forceEnabled) = true;
 [
     QGVAR(recoil),
     "CHECKBOX",
-    ["Enable recoil", "Adds a slight CamShake when shooting, should make shooting the guns feel more satisfying (Disabled if L_align is Activ)"],
-    "Kellerkompanie Immerse",
+    [localize LSTRING(enableRecoil), localize LSTRING(enableRecoilTooltip)],
+    localize LSTRING(cbaSettingsCategory),
     true,
     nil,
     {
@@ -89,8 +89,8 @@ GVAR(forceEnabled) = true;
 [
     QGVAR(force),
     "CHECKBOX",
-    ["Enable force", "Adds a slight radial blur and darkens the screen a bit for a split second when firing"],
-    "Kellerkompanie Immerse",
+    [localize LSTRING(enableForce), localize LSTRING(enableForceTooltip)],
+    localize LSTRING(cbaSettingsCategory),
     true,
     nil,
     {

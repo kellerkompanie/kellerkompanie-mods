@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="immerse">
+        <Key ID="STR_keko_immerse_cbaSettingsCategory">
+            <English>Kellerkompanie Immerse</English>
+        </Key>
+
+		<Key ID="STR_keko_immerse_enableTwitch">
+            <English>Enable Twitch</English>
+        </Key>
+		<Key ID="STR_keko_immerse_enableTwitchTooltip">
+            <English>CamShake for explosions, even distant ones!</English>
+        </Key>
+
+		<Key ID="STR_keko_immerse_enableExShake">
+            <English>Enable exShake</English>
+        </Key>
+		<Key ID="STR_keko_immerse_enableExShakeTooltip">
+            <English>CamShake for explosions, even distant ones!</English>
+        </Key>
+
+		<Key ID="STR_keko_immerse_enableRecoil">
+            <English>Enable recoil</English>
+        </Key>
+		<Key ID="STR_keko_immerse_enableRecoilTooltip">
+            <English>Adds a slight CamShake when shooting, should make shooting the guns feel more satisfying</English>
+        </Key>
+
+		<Key ID="STR_keko_immerse_enableForce">
+            <English>Enable force</English>
+        </Key>
+		<Key ID="STR_keko_immerse_enableForceTooltip">
+            <English>Adds a slight radial blur and darkens the screen a bit for a split second when firing</English>
+        </Key>
+    </Package>
+</Project>
