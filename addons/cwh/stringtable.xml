@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="common">
+        <Key ID="STR_keko_common_enabled">
+            <English>Enabled</English>
+        </Key>
+		<Key ID="STR_keko_common_disabled">
+            <English>Disabled</English>
+        </Key>
+		<Key ID="STR_keko_common_tooltipEnable">
+            <English>Enable/Disable Carryable Weapon Holders</English>
+        </Key>
+		<Key ID="STR_keko_common_maxItems">
+            <English>Max. items to carry</English>
+        </Key>
+		<Key ID="STR_keko_common_maxItemsTooltip">
+            <English>Limit of items in weapon holder to allow carrying/dragging. Average man has 2 hands to keep at least 2 items, but don't be too transhuman and use backpacks to carry all extra stuff.</English>
+        </Key>
+		<Key ID="STR_keko_common_checkTimeout">
+            <English>Check timeout (in seconds)</English>
+        </Key>
+		<Key ID="STR_keko_common_checkTimeoutTooltip">
+            <English>Timeout between revealing weapon holders near the player.</English>
+        </Key>
+		<Key ID="STR_keko_common_checkRadius">
+            <English>Check radius (in meters)</English>
+        </Key>
+		<Key ID="STR_keko_common_checkRadiusTooltip">
+            <English>Radius to check for weapon holders. Big values may affect performance.</English>
+        </Key>
+    </Package>
+</Project>
