@@ -2,8 +2,8 @@ class CfgWeapons {
     class NVGoggles;
     class GVAR(NVGoggles_AI) : NVGoggles {
         author = "Schwaggot";
-        descriptionShort = "Night Vision Goggles - AI Only";
-        displayName = "NV Goggles (AI Only)";
+        descriptionShort = CSTRING(descriptionShort);
+        displayName = CSTRING(displayName);
         model = "\A3\Weapons_F\empty.p3d";
         modelOptics = "\A3\weapons_f\reticle\optics_night";
         picture = "\A3\Weapons_F\Data\UI\gear_nvg_CA.paa";
