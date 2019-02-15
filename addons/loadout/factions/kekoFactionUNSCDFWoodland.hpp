@@ -67,7 +67,7 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 		rank = "COLONEL";
 		medicClass = 2;
 		engineerClass = 2;
-		backpack[] = {"OPTRE_ANPRC_521_Black"};
+		backpack[] = {"OPTRE_ANPRC_521_Green"};
 	};
 
 	class kekoSQL: kekoSoldierUNSCDFWoodland	{
@@ -148,7 +148,7 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 
 	class kekoRadioOperator: kekoSoldierUNSCDFWoodland {
 		name = "Radio Operator";
-		backpack[] = {"OPTRE_ANPRC_521_Black"};
+		backpack[] = {"OPTRE_ANPRC_521_Green"};
 	};
 
 	class kekoRiflemanAT: kekoSoldierUNSCDFWoodland	{
