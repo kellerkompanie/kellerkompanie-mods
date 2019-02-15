@@ -22,10 +22,10 @@ Parameters:
 	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Zeus FPS Monitor", "Enable/Disable Zeus FPS Monitor"], // name and tooltip
-	"Kellerkompanie Zeus FPS Monitor", // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
+		[true, false], // values
+		["Enabled", "Disabled"], // names
 		0 // default index
 	]
 ] call cba_settings_fnc_init;
@@ -34,7 +34,7 @@ Parameters:
 	QGVAR(updateInterval), // key/reference variable
 	"SLIDER", // type of setting
 	["Update interval", "Set the FPS update interval in seconds"], // name and tooltip
-	"Kellerkompanie Zeus FPS Monitor", // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		1,  // min value
 		10, // max value
