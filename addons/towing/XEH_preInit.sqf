@@ -29,7 +29,7 @@ Parameters:
 	QGVAR(enabled), // key/reference variable
 	"LIST", // type of setting
 	["Advanced Towing", "Enable/Disable Advanced Towing"], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
 		["Enabled","Disabled"], // names
@@ -42,7 +42,7 @@ Parameters:
 	QGVAR(maxRopeLength), // key/reference variable
 	"SLIDER", // type of setting
 	["Max Rope Length", "Set the maximum length of the towing rope"], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		5,  // min value
 		30, // max value
@@ -56,7 +56,7 @@ Parameters:
 	QGVAR(classRestriction), // key/reference variable
 	"LIST", // type of setting
 	["Limit to class", "Limit towing ability to specific class"], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[0,1,2,3], // values
 		["All", "Engineer", "Repair Specialist", "Engineer & Repair Specialist"], // names
@@ -69,7 +69,7 @@ Parameters:
 	QGVAR(maxTowedVehicles), // key/reference variable
 	"SLIDER", // type of setting
 	["Max towed vehicles", "Set the maximum number of vehicles that can be towed"], // name and tooltip
-	CBA_CATEGORY, // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		1,  // min value
 		3, // max value
