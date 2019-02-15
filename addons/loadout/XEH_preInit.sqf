@@ -13,16 +13,14 @@ if (hasInterface) then {
 	["TFAR_event_OnRadiosReceived", {[player] call FUNC(setChannels);}] call CBA_fnc_addEventHandler;
 };
 
-#define CBA_SETTINGS_CATEGORY "Kellerkompanie Loadout"
-
 [
 	QGVAR(loadoutOnSpawn), // key/reference variable
 	"LIST", // type of setting
-	["Loadout on spawn", "Enable/Disable loadout on spawn"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(loadoutOnSpawn), localize LSTRING(loadoutOnSpawnTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
@@ -50,8 +48,8 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(loadoutFaction), // key/reference variable
 	"LIST", // type of setting
-	["Default faction", "Choose default faction"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(defaultFaction), localize LSTRING(defaultFactionTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		_factionClasses, // values
 		_factionNames, // names
@@ -67,11 +65,11 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveMap), // key/reference variable
 	"LIST", // type of setting
-	["Give map", "Enable/Disable giving map to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveMap), localize LSTRING(giveMapTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
@@ -80,11 +78,11 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveCompass), // key/reference variable
 	"LIST", // type of setting
-	["Give compass", "Enable/Disable giving compass to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveCompass), localize LSTRING(giveCompassTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
@@ -93,8 +91,8 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveGps), // key/reference variable
 	"LIST", // type of setting
-	["Give GPS", "Enable/Disable giving GPS to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveGPS), localize LSTRING(giveGPSTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[0,1,2,3,4], // values
 		["None","GPS","GPS and MicroDAGR","MicroDAGR","cTab"], // names
@@ -106,8 +104,8 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveNvg), // key/reference variable
 	"LIST", // type of setting
-	["Give NVG", "Enable/Disable giving NVG to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveNVG), localize LSTRING(giveNVGTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[0,1,2,3,4,5,6,7,8,13,14,15,16,9,10,11,12], // values
 		[
@@ -137,8 +135,8 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveRadio), // key/reference variable
 	"LIST", // type of setting
-	["Give radio", "Enable/Disable giving radio to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveRadio), localize LSTRING(giveRadioTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[0,1,2,3], // values
 		[
@@ -155,11 +153,11 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveSilencer), // key/reference variable
 	"LIST", // type of setting
-	["Give Silencer", "Enable/Disable giving silencer to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveSilencer), localize LSTRING(giveSilencerTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		1 // default index
 	],
 	1
@@ -169,11 +167,11 @@ _factionClasses pushBack "kekoCustom";
 [
 	QGVAR(giveScope), // key/reference variable
 	"LIST", // type of setting
-	["Give scope", "Enable/Disable giving scope to player"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
+	[localize LSTRING(giveScope), localize LSTRING(giveScopeTooltip)], // name and tooltip
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
