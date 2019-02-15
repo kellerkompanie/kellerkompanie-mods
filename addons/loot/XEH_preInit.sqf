@@ -10,10 +10,10 @@ PREP_RECOMPILE_END;
 	QGVAR(preventCorpseLooting), // key/reference variable
 	"LIST", // type of setting
 	["Prevent Corpse Looting", "Enable/Disable corpse looting."], // name and tooltip
-	"Kellerkompanie Loot", // category
+	localize LSTRING(cbaSettingsCategory), // category
 	[
 		[true,false], // values
-		["Enabled","Disabled"], // names
+		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
 		0 // default index
 	],
 	1
