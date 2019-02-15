@@ -70,55 +70,7 @@ class CfgVehicles {
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleHeliDrop);
         icon               = QPATHTOF(ui\icon_paradrop.paa);
-    };
-    class GVAR(moduleFuelConsumption3den): GVAR(moduleBase3den) {
-        displayName        = "Fuel Consumption";
-        category           = QGVAR(Logistics);
-        function           = QFUNC(moduleFuelConsumption3den);
-        icon               = QPATHTOF(ui\icon_fuel.paa);
-
-        class Attributes: AttributesBase
-		{
-			class EnableFuelConsumption: Checkbox {
-            	property = QGVAR(EnableFuelConsumption);
-                displayName = "Give map";
-                typeName = "BOOL";
-                defaultValue = true;
-            };
-			class ConsumptionCar: Edit {
-				property = QGVAR(ConsumptionCar);
-				displayName = "Consumption Car";
-				typeName = "STRING";
-				defaultValue = "'[0.0002, 0.0004, 0.0006]'";
-			};
-			class ConsumptionTruck: Edit {
-				property = QGVAR(ConsumptionTruck);
-                displayName = "Consumption Truck";
-                typeName = "STRING";
-                defaultValue = "'[0.0002, 0.0004, 0.0006]'";
-            };
-            class ConsumptionTank: Edit {
-            	property = QGVAR(ConsumptionTank);
-            	displayName = "Consumption Tank";
-                typeName = "STRING";
-                defaultValue = "'[0.0002, 0.0004, 0.0006]'";
-            };
-            class ConsumptionHelo: Edit {
-            	property = QGVAR(ConsumptionHelo);
-            	displayName = "Consumption Helo";
-                typeName = "STRING";
-                defaultValue = "'[0.0005, 0.0005, 0.0005]'";
-            };
-            class ConsumptionPlane: Edit {
-            	property = QGVAR(ConsumptionPlane);
-            	displayName = "Consumption Plane";
-                typeName = "STRING";
-                defaultValue = "'[0.0002, 0.0005, 0.0009]'";
-            };
-
-			class ModuleDescription: ModuleDescription{};
-		};
-    };
+    };    
     class GVAR(moduleCustomLogistics3den): GVAR(moduleBase3den) {
         displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
