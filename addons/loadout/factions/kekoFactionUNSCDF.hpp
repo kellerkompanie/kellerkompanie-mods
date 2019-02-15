@@ -26,6 +26,7 @@ class kekoFactionUNSCDF: kekoFactionBase {
 			kekoMarksman,
 			kekoEOD,
 			kekoEngineer,
+			kekoDriver,
 			kekoUAVOperator}
 		}
 	};

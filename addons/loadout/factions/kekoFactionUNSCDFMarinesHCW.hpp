@@ -26,6 +26,7 @@ class kekoFactionUNSCDFMarinesHCW: kekoFactionBase {
 			kekoMarksman,
 			kekoEOD,
 			kekoEngineer,
+			kekoDriver,
 			kekoUAVOperator}
 		}
 	};
