@@ -25,5 +25,3 @@ if (!isMultiplayer && {!isNull findDisplay IDD_DISPLAY3DEN}) then {
     removeAllCuratorAddons _zeus;
     _zeus addCuratorAddons _addons;
 };
-
-"[KEKO] Added Zeus" remoteExec ["systemChat", _player];
