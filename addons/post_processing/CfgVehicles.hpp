@@ -49,17 +49,17 @@ class CfgVehicles {
                         default = 0;
                     };
                     class ASCZ_MiddleEast {
-                        name = "Middle East";
+                        name = CSTRING(middleEast);
                         value = "ASCZ_Takistan";
                         default = 0;
                     };
                     class ASCZ_RealIsBrownLight {
-                        name = "Real Is Brown 2";
+                        name = CSTRING(realIsBrown2);
                         value = "ASCZ_RealIsBrownLight";
                         default = 0;
                     };
                     class ASCZ_Nightstalkers {
-                        name = "Nightstalkers";
+                        name = CSTRING(nightstalkers);
                         value = "ASCZ_Nightstalkers";
                         default = 0;
                     };
