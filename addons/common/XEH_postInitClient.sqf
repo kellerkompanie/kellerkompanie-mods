@@ -5,10 +5,16 @@ INFO("running XEH_postInitClient");
 player setVariable ["BIS_noCoreConversations", true];
 enableRadio false;
 
+
 //failsafe for missing curator interface:
 if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
-	if (isNull (getAssignedCuratorLogic player)) then {
-		player remoteExec [QFUNC(createZeus), 2];
+	[] spawn {
+		systemChat "[KEKO] Adding Zeus in 2 seconds";
+		sleep 2;
+
+		if (isNull (getAssignedCuratorLogic player)) then {
+			player remoteExec [QFUNC(createZeus), 2];
+		};
 	};
 };
 
