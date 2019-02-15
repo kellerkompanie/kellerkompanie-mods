@@ -22,14 +22,14 @@ private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 
 if(count _missingAddonsOnClient > 0) then {
 	//INFO("compareAddons error count _missingAddonsOnClient > 0");
-	systemChat format ["FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2", _playerName, _missingAddonsOnClient];
+	systemChat format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient];
 };
 
 //INFO("compareAddons 1");
 
 if(count _missingAddonsOnServer > 0) then {
 	//INFO("compareAddons error count _missingAddonsOnServer > 0");
-	systemChat format ["FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2", _playerName, _missingAddonsOnClient];
+	systemChat format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient];
 };
 
 //INFO("compareAddons 2");
@@ -45,7 +45,7 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
 		if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
 			private _serverAddonName = _serverAddonNames select _i;
 			private _clientAddonName = _clientAddonNames select _i;
-			systemChat format ["FEHLER: Unterschiedliche Versionen - Server: [%1, %2] | %3 [%4, %5]", _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion];
+			systemChat format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion];
 		};
 	};
 };
