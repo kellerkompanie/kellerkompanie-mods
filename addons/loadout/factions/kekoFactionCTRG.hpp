@@ -39,6 +39,8 @@ class kekoFactionCTRG: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsCTRG;
 
+	logisticsHelicopter = "B_CTRG_Heli_Transport_01_tropic_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsCTRG.hpp"
 

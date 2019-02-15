@@ -39,6 +39,8 @@ class kekoFactionNatoTropic: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsNatoTropic;
 
+	logisticsHelicopter = "B_Heli_Transport_03_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsNATOtropic.hpp"
 

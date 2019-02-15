@@ -23,8 +23,15 @@ else
 	_crate = [GVAR(heliEntryPoint), _faction, _crateCfg] call FUNC(spawnCrate);
 };
 
+
+private _helicopterCfgClass = "B_Heli_Transport_03_unarmed_F";
+if (EGVAR(loadout,loadoutFaction) != "kekoCustom") then {
+	private _factionCfg = configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction);
+	_helicopterCfgClass = getText (_factionCfg >> "logisticsHelicopter");
+};
+
 private _spawnPos = GVAR(heliEntryPoint);
-private _spawnedArr = [_spawnPos, 0, "B_Heli_Transport_03_unarmed_F", civilian] call BIS_fnc_spawnVehicle;
+private _spawnedArr = [_spawnPos, 0, _helicopterCfgClass, civilian] call BIS_fnc_spawnVehicle;
 _spawnedArr params ["_vehicle", "", "_group"];
 _vehicle engineOn true;
 

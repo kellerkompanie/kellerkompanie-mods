@@ -39,6 +39,8 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsMarines;
 
+	logisticsHelicopter = "rhsusf_CH53E_USMC_D";
+
 	// define all weapons and mags
 	#include "kekoWeaponsMarines.hpp"
 

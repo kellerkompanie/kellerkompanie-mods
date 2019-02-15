@@ -39,6 +39,8 @@ class kekoFactionMarines_Woodland: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsMarines;
 
+	logisticsHelicopter = "rhsusf_CH53E_USMC";
+
 	// define all weapons and mags
 	#include "kekoWeaponsMarines.hpp"
 

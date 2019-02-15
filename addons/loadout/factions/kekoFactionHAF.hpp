@@ -39,6 +39,8 @@ class kekoFactionHAF: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsHAF;
 
+	logisticsHelicopter = "B_Heli_Transport_03_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsHAF.hpp"
 

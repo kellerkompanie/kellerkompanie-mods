@@ -35,9 +35,11 @@ class kekoFactionIDAP: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsIDAP;
 
+	logisticsHelicopter = "C_IDAP_Heli_Transport_02_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsIDAP.hpp"
-	
+
 	#include "kekoSoldier.hpp"
 	#include "kekoCrate.hpp"
 

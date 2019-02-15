@@ -40,6 +40,8 @@ class kekoFactionNAA: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsNAA;
 
+	logisticsHelicopter = "NAA_Heli_light_03_unarmed_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsNAA.hpp"
 

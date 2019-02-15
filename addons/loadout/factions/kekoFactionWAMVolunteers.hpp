@@ -36,6 +36,8 @@ class kekoFactionWAMVolunteers: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsWAMVolunteers;
 
+	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsWAMVolunteers.hpp"
 

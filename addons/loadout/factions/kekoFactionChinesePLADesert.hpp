@@ -39,6 +39,8 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsChinesePLA;
 
+	logisticsHelicopter = "VME_PLA_Mi17";
+
 	// define all weapons and mags
 	#include "kekoWeaponsChinesePLA.hpp"
 

@@ -39,6 +39,8 @@ class kekoFactionMyrimidones: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsMyrimidones;
 
+	logisticsHelicopter = "MYR_ORCA_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsMyrimidones.hpp"
 

@@ -8,6 +8,8 @@ class kekoFaction
 		weaponCfg = objNull;
 		crates[] = {};
 		faces[] = {};
+
+		logisticsHelicopter = "B_Heli_Transport_03_unarmed_F";
 	};
 
 	#include "kekoFactionNATO.hpp"

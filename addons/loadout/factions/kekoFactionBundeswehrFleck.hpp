@@ -39,6 +39,8 @@ class kekoFactionBundeswehrFleck: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsBundeswehr;
 
+	logisticsHelicopter = "kyo_MH47E_base";
+
 	// define all weapons and mags
 	#include "kekoWeaponsBundeswehr.hpp"
 

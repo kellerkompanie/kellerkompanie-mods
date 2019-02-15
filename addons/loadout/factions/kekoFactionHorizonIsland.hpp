@@ -31,6 +31,8 @@ class kekoFactionHorizonIsland: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsHorizonIsland;
 
+	logisticsHelicopter = "rhs_uh1h_hidf_unarmed";
+
 	// define all weapons and mags
 	#include "kekoWeaponsHorizonIsland.hpp"
 

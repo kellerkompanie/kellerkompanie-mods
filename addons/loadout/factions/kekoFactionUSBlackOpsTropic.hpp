@@ -74,6 +74,8 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsUSBlackOpsTropic;
 
+	logisticsHelicopter = "B_CTRG_Heli_Transport_01_tropic_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsUSBlackOpsTropic.hpp"
 

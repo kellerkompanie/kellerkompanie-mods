@@ -40,6 +40,8 @@ class kekoFactionAAF: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsAAF;
 
+	logisticsHelicopter = "I_Heli_Transport_02_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsAAF.hpp"
 

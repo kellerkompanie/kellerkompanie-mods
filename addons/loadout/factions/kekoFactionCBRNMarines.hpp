@@ -42,6 +42,8 @@ class kekoFactionCBRNMarines: kekoFactionBase {
 	};
 	weaponCfg = kekoWeaponsCBRNMarines;
 
+	logisticsHelicopter = "B_Heli_Transport_03_F";
+
 	// define all weapons and mags
 	#include "kekoWeaponsCBRNMarines.hpp"
 
