@@ -18,7 +18,6 @@ if !(_isCurator || _isAdmin) exitWith {};
 
 
 // for curators and admins show FPS counter underneath players
-GVAR(showFrames) = true;
 addMissionEventHandler ["Draw3D", {
 	{
 		private _distance = (ATLToASL (positionCameraToWorld [0,0,0])) distance _x;
@@ -26,7 +25,7 @@ addMissionEventHandler ["Draw3D", {
 		if (_distance < 1200) then {
 			private _playerFPS = _x getVariable [QGVAR(PlayerFPS), 50];
 			// if the FPS is below 20 it turns red and becomes more visible for zeus/admin to see so they are aware
-			if(GVAR(showFrames)) then {
+			if(GVAR(enabled)) then {
 				drawIcon3D
 				[
 					"", // path to image displayed near text
