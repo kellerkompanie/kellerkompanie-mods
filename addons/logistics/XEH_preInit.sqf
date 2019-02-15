@@ -151,4 +151,182 @@ GVAR(currentUAVs) = 0;
 ] call cba_settings_fnc_init;
 
 
+
+
+
+
+
+
+// Fuel Consumption Settings
+
+[
+	QGVAR(enableFuelConsumption), // key/reference variable
+	"LIST", // type of setting
+	["Fuel Consumption", "Enable/Disable fuel consumption"], // name and tooltip
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"], // category
+	[
+		[true, false], // values
+		["Enabled", "Disabled"], // names
+		1 // default index
+	],
+	1
+] call cba_settings_fnc_init;
+
+
+
+[
+	QGVAR(consumptionCarLow),
+	"SLIDER",
+	["Car fuel consumption (low speed)", "Set the fuel consumption of cars on low speed (<5 km/h)."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0002, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionCarMid),
+	"SLIDER",
+	["Car fuel consumption (mid speed)", "Set the fuel consumption of cars on normal speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0004, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionCarHigh),
+	"SLIDER",
+	["Car fuel consumption (high speed)", "Set the fuel consumption of cars on high speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0006, 4],
+	1
+] call cba_settings_fnc_init;
+
+
+
+[
+	QGVAR(consumptionTruckLow),
+	"SLIDER",
+	["Truck fuel consumption (low speed)", "Set the fuel consumption of trucks on low speed (<5 km/h)."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0002, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionTruckMid),
+	"SLIDER",
+	["Truck fuel consumption (mid speed)", "Set the fuel consumption of trucks on normal speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0004, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionTruckHigh),
+	"SLIDER",
+	["Truck fuel consumption (high speed)", "Set the fuel consumption of trucks on high speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0006, 4],
+	1
+] call cba_settings_fnc_init;
+
+
+
+
+[
+	QGVAR(consumptionTankLow),
+	"SLIDER",
+	["Tank fuel consumption (low speed)", "Set the fuel consumption of tanks on low speed (<5 km/h)."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0002, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionTankMid),
+	"SLIDER",
+	["Tank fuel consumption (mid speed)", "Set the fuel consumption of tanks on normal speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0004, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionTankHigh),
+	"SLIDER",
+	["Tank fuel consumption (high speed)", "Set the fuel consumption of tanks on high speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0006, 4],
+	1
+] call cba_settings_fnc_init;
+
+
+
+
+[
+	QGVAR(consumptionHeloLow),
+	"SLIDER",
+	["Helo fuel consumption (low speed)", "Set the fuel consumption of helos on low speed (<5 km/h)."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0005, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionHeloMid),
+	"SLIDER",
+	["Helo fuel consumption (mid speed)", "Set the fuel consumption of helos on normal speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0005, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionHeloHigh),
+	"SLIDER",
+	["Helo fuel consumption (high speed)", "Set the fuel consumption of helos on high speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0005, 4],
+	1
+] call cba_settings_fnc_init;
+
+
+
+
+[
+	QGVAR(consumptionPlaneLow),
+	"SLIDER",
+	["Plane fuel consumption (low speed)", "Set the fuel consumption of plane on low speed (<5 km/h)."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0002, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionPlaneMid),
+	"SLIDER",
+	["Plane fuel consumption (mid speed)", "Set the fuel consumption of plane on normal speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0005, 4],
+	1
+] call cba_settings_fnc_init;
+
+[
+	QGVAR(consumptionPlaneHigh),
+	"SLIDER",
+	["Plane fuel consumption (high speed)", "Set the fuel consumption of plane on high speed."],
+	[localize LSTRING(cbaSettingsCategory), "Fuel Consumption"],
+	[0.0001, 1, 0.0009, 4],
+	1
+] call cba_settings_fnc_init;
+
+
+
+
+
+
+
+
+
+
 ADDON = true;
