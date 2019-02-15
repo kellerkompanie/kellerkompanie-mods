@@ -62,6 +62,7 @@ class kekoFaction
 
 	#include "kekoFactionUNSCDF.hpp"
 	#include "kekoFactionUNSCDFDesert.hpp"
+	#include "kekoFactionUNSCDFSnow.hpp"
 	#include "kekoFactionUNSCDFMarines.hpp"
 	#include "kekoFactionUNSCDFMarinesHCW.hpp"
 };
