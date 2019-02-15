@@ -17,7 +17,7 @@ GVAR(enabled) = true;
     QGVAR(enabled),
     "CHECKBOX",
     ["Enable Supress", "Enable Suppress Effect"],
-    "Kellerkompanie Suppress",
+    localize LSTRING(cbaSettingsCategory),
     true,
     nil,
     {
