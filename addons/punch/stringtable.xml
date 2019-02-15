@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="punch">
+		<Key ID="STR_keko_punch_cbaSettingsCategory">
+            <English>Kellerkompanie Punch</English>
+        </Key>
+		<Key ID="STR_keko_punch_enabled">
+            <English>Enabled</English>
+        </Key>
+		<Key ID="STR_keko_punch_disabled">
+            <English>Disabled</English>
+        </Key>
+
+		<Key ID="STR_keko_punch_knockPeopleUnconcious">
+            <English>Knock People Unconscious</English>
+        </Key>
+		<Key ID="STR_keko_punch_knockPeopleUnconciousTooltip">
+            <English>Enable/Disable Knock People Unconscious</English>
+        </Key>
+
+		<Key ID="STR_keko_punch_snapNeck">
+            <English>Snap neck</English>
+        </Key>
+		<Key ID="STR_keko_punch_snapNeckTooltip">
+            <English>Enable/Disable kill people by snapping the neck</English>
+        </Key>
+
+    </Package>
+</Project>
