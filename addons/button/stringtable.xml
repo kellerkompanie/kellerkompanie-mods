@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="button">
+        <Key ID="STR_keko_button_text">
+            <English>Kellerkompanie Server</English>
+        </Key>
+		<Key ID="STR_keko_button_actionText">
+            <English>Join server: Kellerkompanie Server</English>
+        </Key>
+		</Package>
+</Project>

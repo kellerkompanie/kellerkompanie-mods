@@ -20,13 +20,13 @@ class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
 	class Spotlight {
 		class AwesomeServer {
-			text = "Kellerkompanie Server"; // Text displayed on the square button, converted to upper-case
+			text = CSTRING(text); // Text displayed on the square button, converted to upper-case
 			textIsQuote = 0; // 1 to add quotation marks around the text
 			picture = QPATHTOF(ui\button.paa); // Square picture, ideally 512x512
 			//video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover
 			//action = "0 = [_this, 'your.domain.name', '2302', 'yourpasshere'] execVM '\amp_spotlight\joinServer.sqf';";
 			action = "0 = [_this, 'server.kellerkompanie.com', '2302', 'keko'] execVM '\x\keko\addons\button\joinServer.sqf';";
-			actionText = "Join server: Kellerkompanie Server"; // Text displayed in top left corner of on-hover white frame
+			actionText = CSTRING(actionText); // Text displayed in top left corner of on-hover white frame
 			condition = "true"; // Condition for showing the spotlight
 		};
 	};
