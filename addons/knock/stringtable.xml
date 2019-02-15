@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="knock">
+        <Key ID="STR_keko_knock_showHint">
+            <English>Show hint</English>
+        </Key>
+		<Key ID="STR_keko_knock_showHintTooltip">
+            <English>Enable/Disable showing hint to knocked on crew.</English>
+        </Key>
+		<Key ID="STR_keko_knock_cbaSettingsCategory">
+            <English>Kellerkompanie Knock</English>
+        </Key>
+		<Key ID="STR_keko_knock_enabled">
+            <English>Enabled</English>
+        </Key>
+		<Key ID="STR_keko_knock_disabled">
+            <English>Disabled</English>
+        </Key>
+    </Package>
+</Project>
