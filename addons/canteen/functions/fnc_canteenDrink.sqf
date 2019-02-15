@@ -15,7 +15,7 @@ private _consumeAnim = _consumeAnims param [_stanceIndex, "", [""]];
 [_unit, QGVAR(drink)] remoteExec ["say3D", 0, false];
 [_unit, _consumeAnim, 1] call ace_common_fnc_doAnimation;
 
-["You take a sip from your trusty canteen.", 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+[localize LSTRING(messageDrink), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 
 [_unit, QGVAR(canteen)] call FUNC(removeItemFromMag);
 

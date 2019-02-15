@@ -24,7 +24,7 @@ private _refilled = false;
 
 if(_refilled) then {
 	[_unit, QGVAR(pouring)] remoteExec ["say3D", 0, false];
-	["Canteen refilled.", 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+	[localize LSTRING(messageRefilled), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 } else {
-	["Your canteen is full.", 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+	[localize LSTRING(messageFull), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 };
