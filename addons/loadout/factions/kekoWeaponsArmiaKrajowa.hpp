@@ -1,52 +1,36 @@
-#include "script_macro.hpp"
-
-#define SMOKE_WHITE "LIB_nb39"
-#define GRENADE "LIB_m39"
-
-#define PRIMARY_MAG_THOMPSON "LIB_30Rnd_45ACP"
-#define PRIMARY_MAG_BAR "GLIB_POL_20Rnd_792x57mm"
-#define PRIMARY_MAG_MOSIN "LIB_5Rnd_762x54"
-#define PRIMARY_MAG_K98 "lib_5Rnd_792x57"
-#define PRIMARY_MAG_PPSH "LIB_71Rnd_762x25"
-#define PRIMARY_MAG_G33 "lib_5Rnd_792x57"
-
-#define SECONDARY_MAG_REV "GLIB_FRA_6Rnd_827mm"
-#define SECONDARY_MAG_P38 "lib_8Rnd_9x19"
-#define SECONDARY_MAG_MAUSER "LIB_6Rnd_763x25"
-
 class kekoWeaponsArmiaKrajowa {
 	// Primary
 	class keko_W_THOMPSON: kekoPrimaryWeapon
 	{
 		cfgName = "LIB_M1928A1_Thompson";
-		magazines[] = {PRIMARY_MAG_THOMPSON};
+		magazines[] = {"LIB_30Rnd_45ACP"};
 	};
 	class keko_W_BAR: kekoPrimaryWeapon
 	{
 		cfgName = "GLIB_POL_WZ28";
-		magazines[] = {PRIMARY_MAG_BAR};
+		magazines[] = {"GLIB_POL_20Rnd_792x57mm"};
 	};
 	class keko_W_MOSIN: kekoPrimaryWeapon
 	{
 		cfgName = "LIB_M38";
-		magazines[] = {PRIMARY_MAG_MOSIN};
+		magazines[] = {"LIB_5Rnd_762x54"};
 	};
 	class keko_W_K98: kekoPrimaryWeapon
 	{
 		cfgName = "LIB_K98";
-		magazines[] = {PRIMARY_MAG_K98};
+		magazines[] = {"lib_5Rnd_792x57"};
 	};
 
 	// Machine Guns
 	class keko_W_PPSH: kekoPrimaryWeapon
 	{
 		cfgName = "LIB_PPSh41_d";
-		magazines[] = {PRIMARY_MAG_PPSH};
+		magazines[] = {"LIB_71Rnd_762x25"};
 	};
 	class keko_W_G33: kekoPrimaryWeapon
 	{
 		cfgName = "LIB_G3340";
-		magazines[] = {PRIMARY_MAG_G33};
+		magazines[] = {"lib_5Rnd_792x57"};
 	};
 
 
@@ -55,26 +39,16 @@ class kekoWeaponsArmiaKrajowa {
 	class keko_W_REV: kekoSecondaryWeapon
 	{
 		cfgName = "GLIB_FRA_REV1982";
-		magazines[] = {SECONDARY_MAG_REV};
+		magazines[] = {"GLIB_FRA_6Rnd_827mm"};
 	};
 	class keko_W_P38: kekoSecondaryWeapon
 	{
 		cfgName = "LIB_P38";
-		magazines[] = {SECONDARY_MAG_P38};
+		magazines[] = {"lib_8Rnd_9x19"};
 	};
 	class keko_W_MAUSER: kekoSecondaryWeapon
 	{
 		cfgName = "LIB_M1896";
-		magazines[] = {SECONDARY_MAG_MAUSER};
-	};
-
-
-
-	// Throwables
-	class keko_W_GRENADE {
-		cfgName = GRENADE;
-	};
-	class keko_W_SMOKE_WHITE {
-		cfgName = SMOKE_WHITE;
+		magazines[] = {"LIB_6Rnd_763x25"};
 	};
 };

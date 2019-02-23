@@ -70,10 +70,8 @@ class kekoFactionGuerilla: kekoFactionBase {
 			{15, "ACE_fieldDressing"},
 			{1, "ACE_morphine"},
 			{2, "ACE_tourniquet"},
-			{1, "ACE_Flashlight_XL50"},
-			{1, SECONDARY_MAG},
-			{1, SMOKE_WHITE},
-			{1, SMOKE_GREEN}};
+			{1, "ACE_Flashlight_XL50"}
+		};
 
 		vest[] = {
 			"V_BandollierB_blk",
@@ -89,12 +87,6 @@ class kekoFactionGuerilla: kekoFactionBase {
 			"V_Chestrig_rgr",
 			"V_Chestrig_khk",
 			"V_Chestrig_oli"};
-
-		vestInventory[] = {
-			{3, PRIMARY_MAG},
-			{3, PRIMARY_MAG_TRACER},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}};
 
 		helmet[] = {
 			"H_Bandanna_gry",
@@ -159,12 +151,6 @@ class kekoFactionGuerilla: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}};
 		primary[] = {
 			keko_W_A3_TRG21_GL};
 	};
@@ -204,25 +190,17 @@ class kekoFactionGuerilla: kekoFactionBase {
 	class kekoGrenadier: kekoSoldierGuerilla {
 		name = "Grenadier";
 		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{4, UGL_MAG},
-			{5, "UGL_FlareWhite_F"},
-			{2, GRENADE}};
+			{5, "UGL_FlareWhite_F"}
+		};
 		primary[] = {
 			keko_W_A3_TRG21_GL};
 	};
 
 	class kekoLMG: kekoSoldierGuerilla {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{3, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{1, GRENADE}};
 		primary[] = {
 			keko_W_A3_Mk200};
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierGuerilla {
@@ -234,60 +212,45 @@ class kekoFactionGuerilla: kekoFactionBase {
 
 	class kekoMMG: kekoSoldierGuerilla {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{1, GRENADE}};
-		primary[] = {
-			keko_W_A3_MMG};
+		primary[] = {keko_W_A3_MMG};
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
 	};
 
 	class kekoMMGAsst: kekoSoldierGuerilla {
 		name = "Medium Machine Gunner Asst.";
-
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierGuerilla {
 		name = "Anti-Tank Specialist";
-
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_RPG7};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierGuerilla {
 		name = "Anti-Tank Specialist Assistant";
-
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"Rangefinder"};
 	};
 
 	class kekoAASpecialist: kekoSoldierGuerilla {
 		name = "Anti-Air Specialist";
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{1, AA_MAG}};
 		launcher[] = {keko_W_TITAN_AA};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierGuerilla {
 		name = "Anti-Air Specialist Assistant";
 		backpack[] = {"B_FieldPack_blk","B_FieldPack_cbr","B_FieldPack_khk","B_FieldPack_oli"};
-		backpackInventory[] = {{2, AA_MAG}};
 		optics[] = {"Rangefinder"};
 	};
 
 	class kekoMarksman: kekoSoldierGuerilla {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{3, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{3, PRIMARY_MAG_MARKSMAN}};
+			{1, "ACE_RangeCard"}
+		};
 		primary[] = {
 			keko_W_A3_DMR};
 	};
@@ -309,10 +272,9 @@ class kekoFactionGuerilla: kekoFactionBase {
 	class kekoDriver: kekoSoldierLight {
 		name = "Driver/Crewman";
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		optics[] = {"Binocular"};
 		engineerClass = 1;
 	};
@@ -322,22 +284,19 @@ class kekoFactionGuerilla: kekoFactionBase {
 		uniform[] = {"U_BG_Guerrilla_6_1"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		optics[] = {"Binocular"};
 		helmet[] = {"H_Cap_marshal"};
 	};
 
 	class kekoSurvivor: kekoSoldierLight {
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"};
+			"H_HeadBandage_bloody_F"
+		};
 	};
 };

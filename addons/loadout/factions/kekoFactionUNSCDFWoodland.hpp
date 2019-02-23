@@ -80,16 +80,10 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 		vestInventory[] = {
 			{4, "OPTRE_36Rnd_95x40_Mag"},
 			{4, "OPTRE_36Rnd_95x40_Mag_Tracer"},
-			{2, GRENADE},
 			{2, "OPTRE_36Rnd_95x40_Mag"}
 		};
 		primary[] = {keko_W_OPTRE_BR55HB};
 		backpack[] = {"OPTRE_UNSC_Rucksack_Lead"};
-		backpackInventory[] = {
-			{4, SMOKE_WHITE},
-			{4, SMOKE_RED},
-			{4, SMOKE_GREEN}
-		};
 		optics[] = {"OPTRE_Smartfinder"};
 		secondary[] = {
 			keko_W_OPTRE_M6G};
@@ -105,13 +99,6 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 		optics[] = {"OPTRE_Binoculars"};
 		helmet[] = {"OPTRE_UNSC_CH252_Helmet2_WDL"};
 		vest[] = {"OPTRE_UNSC_M52A_Armor_TL_WDL"};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}
-		};
 		backpack[] = {
 			"OPTRE_UNSC_Rucksack_Lead"
 		};
@@ -165,11 +152,6 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 
 	class kekoGrenadier: kekoSoldierUNSCDFWoodland {
 		name = "Grenadier";
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}};
 		primary[] = {
 			keko_W_OPTRE_MA37GL};
 	};
@@ -177,64 +159,44 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 	class kekoLMG: kekoSoldierUNSCDFWoodland {
 		name = "Light Machine Gunner";
 		vest[] = {"OPTRE_UNSC_M52A_Armor_MG_WDL"};
-		vestInventory[] = {
-			{2, PRIMARY_MAG_LMG},
-			{2, PRIMARY_MAG_LMG_TRACER},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}};
 		primary[] = {keko_W_OPTRE_M73};
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierUNSCDFWoodland {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy"};
-		backpackInventory[] = {
-			{2, PRIMARY_MAG_LMG},
-			{2, PRIMARY_MAG_LMG_TRACER}
-		};
 		optics[] = {"OPTRE_Binoculars"};
 	};
 
 	class kekoATSpecialist: kekoSoldierUNSCDFWoodland {
 		name = "Anti-Tank Specialist";
-
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy_M41G"};
-		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_OPTRE_M41_SSR};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierUNSCDFWoodland {
 		name = "Anti-Tank Specialist Assistant";
-
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy_M41G"};
-		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"OPTRE_Smartfinder"};
 	};
 
 	class kekoAASpecialist: kekoSoldierUNSCDFWoodland {
 		name = "Anti-Air Specialist";
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy_M41G"};
-		backpackInventory[] = {{1, AA_MAG}};
 		launcher[] = {keko_W_OPTRE_M41_SSR_G};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierUNSCDFWoodland {
 		name = "Anti-Air Specialist Assistant";
 		backpack[] = {"OPTRE_UNSC_Rucksack_Heavy_M41G"};
-		backpackInventory[] = {{2, AA_MAG}};
 		optics[] = {"OPTRE_Smartfinder"};
 	};
 
 	class kekoMarksman: kekoSoldierUNSCDFWoodland {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{4, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{4, PRIMARY_MAG_MARKSMAN_TRACER}
+			{1, "ACE_RangeCard"}
 		};
 		primary[] = {
 			keko_W_OPTRE_M392_DMR
@@ -260,8 +222,7 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 		helmet[] = {"H_HelmetCrew_B"};
 		vest[] = {"OPTRE_UNSC_M52A_Armor3_WDL"};
 		vestInventory[] = {
-			{6, "OPTRE_60Rnd_5x23mm_Mag"},
-			{1, SMOKE_WHITE}
+			{6, "OPTRE_60Rnd_5x23mm_Mag"}
 		};
 		primary[] = {
 			keko_W_OPTRE_M7
@@ -273,8 +234,6 @@ class kekoFactionUNSCDFWoodland: kekoFactionBase {
 		name = "UAV Operator";
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{1,"ACE_HuntIR_monitor"},
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"B_UAV_01_backpack_F"};

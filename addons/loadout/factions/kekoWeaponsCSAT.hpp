@@ -1,27 +1,3 @@
-#include "script_macro.hpp"
-
-#define SMOKE_WHITE "SmokeShell"
-#define SMOKE_GREEN "SmokeShellGreen"
-#define SMOKE_RED "SmokeShellRed"
-#define GRENADE "HandGrenade"
-
-#define PRIMARY_MAG "30Rnd_65x39_caseless_green"
-#define PRIMARY_MAG_TRACER "30Rnd_65x39_caseless_green_mag_Tracer"
-#define PRIMARY_MAG_LMG "150Rnd_762x54_Box_Tracer"
-#define PRIMARY_MAG_MMG "150Rnd_93x64_Mag"
-#define PRIMARY_MAG_MARKSMAN "10Rnd_762x54_Mag"
-#define SECONDARY_MAG "16Rnd_9x21_Mag"
-
-#define RAT_LAUNCHER "launch_RPG32_F"
-#define AT_LAUNCHER "launch_O_Titan_short_F"
-#define AA_LAUNCHER "launch_O_Titan_F"
-
-#define RAT_MAG "RPG32_F"
-#define AT_MAG "Titan_AT"
-#define AA_MAG "Titan_AA"
-#define UGL_MAG "1Rnd_HE_Grenade_shell"
-#define HUNTIR_MAG "ACE_HuntIR_M203"
-
 class kekoWeaponsCSAT {
 	// Primary
 	class keko_W_A3_KATIBA: kekoPrimaryWeapon {
@@ -29,17 +5,17 @@ class kekoWeaponsCSAT {
 		scopes[] = {"optic_Arco_blk_F"};
 		rails[] = {"acc_pointer_IR"};
 		silencers[] = {"muzzle_snds_h"};
-		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
 	};
 	class keko_W_A3_KATIBA_SHORT: keko_W_A3_KATIBA {
 		cfgName = "arifle_Katiba_C_F";
 	};
 	class keko_W_A3_KATIBA_GL: keko_W_A3_KATIBA	{
 		cfgName = "arifle_Katiba_GL_F";
-		uglMagazines[] = {UGL_MAG};
+		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_KATIBA_GL_HUNTIR: keko_W_A3_KATIBA_GL	{
-		uglMagazines[] = {HUNTIR_MAG};
+		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 	class keko_W_A3_DMR: kekoPrimaryWeapon {
 		cfgName = "srifle_DMR_01_F";
@@ -47,14 +23,14 @@ class kekoWeaponsCSAT {
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_02_F_hex"};
 		silencers[] = {"muzzle_snds_b"};
-		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		magazines[] = {"30Rnd_65x39_caseless_green"};
 	};
 	class keko_W_A3_ZAFIR: kekoPrimaryWeapon {
 		cfgName = "LMG_Zafir_F";
 		scopes[] = {"optic_aco"};
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_02_F_hex"};
-		magazines[] = {PRIMARY_MAG_LMG};
+		magazines[] = {"150Rnd_762x54_Box_Tracer"};
 	};
 	class keko_W_A3_MMG_CSAT: kekoPrimaryWeapon {
 		cfgName = "MMG_01_hex_F";
@@ -62,7 +38,7 @@ class kekoWeaponsCSAT {
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_02_F_hex"};
 		silencers[] = {"muzzle_snds_93mmg"};
-		magazines[] = {PRIMARY_MAG_MMG};
+		magazines[] = {"150Rnd_93x64_Mag"};
 	};
 
 
@@ -71,7 +47,7 @@ class kekoWeaponsCSAT {
 	class keko_W_ROOK: kekoSecondaryWeapon {
 		cfgName = "hgun_Rook40_F";
 		silencers[] = {"muzzle_snds_l"};
-		magazines[] = {SECONDARY_MAG};
+		magazines[] = {"16Rnd_9x21_Mag"};
 	};
 	class keko_W_ROOK_SILENCED: keko_W_ROOK {
 		silencers[] = {"muzzle_snds_l"};
@@ -81,31 +57,15 @@ class kekoWeaponsCSAT {
 
 	// Launcher
 	class keko_W_TITAN_AT_CSAT: kekoLauncherWeapon {
-		cfgName = AT_LAUNCHER;
-		magazines[] = {AT_MAG};
+		cfgName = "launch_O_Titan_short_F";
+		magazines[] = {"Titan_AT"};
 	};
 	class keko_W_TITAN_AA_CSAT: kekoLauncherWeapon {
-		cfgName = AA_LAUNCHER;
-		magazines[] = {AA_MAG};
+		cfgName = "launch_O_Titan_F";
+		magazines[] = {"Titan_AA"};
 	};
 	class keko_W_RPG32: kekoLauncherWeapon {
-		cfgName = RAT_LAUNCHER;
-		magazines[] = {RAT_MAG};
-	};
-
-
-
-	// Throwables
-	class keko_W_GRENADE {
-		cfgName = GRENADE;
-	};
-	class keko_W_SMOKE_WHITE {
-		cfgName = SMOKE_WHITE;
-	};
-	class keko_W_SMOKE_GREEN {
-		cfgName = SMOKE_GREEN;
-	};
-	class keko_W_SMOKE_RED {
-		cfgName = SMOKE_RED;
+		cfgName = "launch_RPG32_F";
+		magazines[] = {"RPG32_F"};
 	};
 };

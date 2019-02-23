@@ -116,12 +116,6 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
 		vest[] = {"rhs_6b23_digi_6sh92_vog_headset","rhs_6b23_6sh116_vog"};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}};
 		primary[] = {
 			keko_W_AK74M_GL};
 	};
@@ -159,11 +153,6 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 
 	class kekoGrenadier: kekoSoldierRussiaEMRSummer {
 		name = "Grenadier";
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}};
 		primary[] = {
 			keko_W_AK74M_GL};
 		vest[] = {"rhs_6b23_digi_6sh92_vog","rhs_6b23_6sh116_vog"};
@@ -171,25 +160,19 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 
 	class kekoLMG: kekoSoldierRussiaEMRSummer {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},{1, SMOKE_WHITE},{2, GRENADE}};
 		primary[] = {
 			keko_W_M84};
 		backpack[] = {"rhs_assault_umbts"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierRussiaEMRSummer {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"rhs_assault_umbts"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierRussiaEMRSummer {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},{2, GRENADE}};
 		primary[] = {
 			keko_W_PKP};
 		backpack[] = {"rhs_assault_umbts"};
@@ -199,7 +182,6 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		name = "Medium Machine Gunner Asst.";
 
 		backpack[] = {"rhs_assault_umbts"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
 		optics[] = {"Binocular"};
 	};
 
@@ -207,7 +189,6 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		name = "Anti-Tank Specialist";
 
 		backpack[] = {"rhs_rpg_empty"};
-		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_RPG7};
 	};
 
@@ -215,32 +196,26 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		name = "Anti-Tank Specialist Assistant";
 
 		backpack[] = {"rhs_rpg_empty"};
-		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"Rangefinder"};
 	};
 
 	class kekoAASpecialist: kekoSoldierLight {
 		name = "Anti-Air Specialist";
 		backpack[] = {"rhs_rpg_empty"};
-		backpackInventory[] = {{1, AA_MAG}};
 		launcher[] = {keko_W_Igla};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierRussiaEMRSummer {
 		name = "Anti-Air Specialist Assistant";
 		backpack[] = {"rhs_rpg_empty"};
-		backpackInventory[] = {{2, AA_MAG}};
 		optics[] = {"Rangefinder"};
 	};
 
 	class kekoMarksman: kekoSoldierRussiaEMRSummer {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN_TRACER}};
+			{1, "ACE_RangeCard"}
+		};
 		primary[] = {
 			keko_W_SVD};
 		vest[] = {"rhs_6b23_digi_sniper"};
@@ -266,10 +241,8 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 			{8,"ACE_fieldDressing"}};
 		vest[] = {"V_PlateCarrier2_blk"};
 		vestInventory[] = {
-			{1,SMOKE_WHITE},
-			{1,SMOKE_GREEN},
-			{8,"ACE_7Rnd_408_305gr_Mag"},
-			{2,SECONDARY_MAG}};
+			{8,"ACE_7Rnd_408_305gr_Mag"}
+		};
 		helmet[] = {"H_HelmetSpecB"};
 		primary[] = {
 			keko_W_A3_LRR};
@@ -282,8 +255,8 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 			{1,"SmokeShell"},
 			{1,"SmokeShellGreen"},
 			{2,"11Rnd_45ACP_Mag"},
-			{10,"ACE_30Rnd_65x47_Scenar_mag"},
-			{1,GRENADE}};
+			{10,"ACE_30Rnd_65x47_Scenar_mag"}
+		};
 		primary[] = {keko_W_AK74M};
 	};
 
@@ -307,10 +280,9 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		name = "Driver/Crewman";
 		vest[] = {"rhs_vest_pistol_holster"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		helmet[] = {"rhs_tsh4"};
 		optics[] = {"Binocular"};
 		primary[] = {keko_W_AKS74U};
@@ -322,10 +294,9 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		uniform[] = {"rhs_uniform_df15"};
 		vest[] = {"rhs_vest_pistol_holster"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		helmet[] = {"rhs_zsh7a_mike"};
 		optics[] = {"Binocular"};
 		primary[] = {keko_W_AKS74U};
@@ -346,8 +317,6 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		primary[] = {
 			keko_W_AK74M_GL};
 		vestInventory[] = {
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{4,"UGL_FlareGreen_F"},
 			{4,"1Rnd_SmokeRed_Grenade_shell"},
 			{4,"1Rnd_SmokeBlue_Grenade_shell"},
@@ -367,21 +336,18 @@ class kekoFactionRussiaEMRSummer: kekoFactionBase {
 		primary[] = {
 			keko_W_AK74M};
 		vestInventory[] = {
-			{2,"ACE_UAVBattery"},
-			{4,PRIMARY_MAG},
-			{4,PRIMARY_MAG_TRACER}};
+			{2,"ACE_UAVBattery"}
+		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
 	};
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"};
+			"H_HeadBandage_bloody_F"
+		};
 	};
 };
