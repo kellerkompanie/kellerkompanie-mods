@@ -82,8 +82,7 @@ class kekoFactionAAF: kekoFactionBase {
 		helmet[] = {"H_MilCap_dgtl"};
 		backpack[] = {"TFAR_anprc155"};
 		backpackInventory[] = {
-			{1,"ACE_HuntIR_monitor"},
-			{4,"ACE_HuntIR_M203"}};
+			{1,"ACE_HuntIR_monitor"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
 			keko_W_A3_F2000_UGL_HUNTIR};
@@ -102,8 +101,7 @@ class kekoFactionAAF: kekoFactionBase {
 		rank = "SERGEANT";
 		backpack[] = {"TFAR_anprc155"};
 		backpackInventory[] = {
-			{1,"ACE_HuntIR_monitor"},
-			{4,"ACE_HuntIR_M203"}};
+			{1,"ACE_HuntIR_monitor"}};
 		optics[] = {"Rangefinder"};
 		primary[] = {
 			keko_W_A3_F2000_UGL_HUNTIR};
@@ -119,12 +117,6 @@ class kekoFactionAAF: kekoFactionBase {
 		optics[] = {"Binocular"};
 		primary[] = {
 			keko_W_A3_F2000_UGL};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -167,92 +159,62 @@ class kekoFactionAAF: kekoFactionBase {
 
 	class kekoGrenadier: kekoSoldierAAF {
 		name = "Grenadier";
-		primary[] = {
-			keko_W_A3_F2000_UGL};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}};
+		primary[] = {keko_W_A3_F2000_UGL};
 	};
 
 	class kekoLMG: kekoSoldierAAF {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}};
-		primary[] = {
-			keko_W_A3_STONER};
+		primary[] = {keko_W_A3_STONER};
 
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierAAF {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierAAF {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{2, GRENADE}};
-		primary[] = {
-			keko_W_A3_MMG_AAF};
-
+		primary[] = {keko_W_A3_MMG_AAF};
 		backpack[] = {"B_FieldPack_oli"};
 	};
 
 	class kekoMMGAsst: kekoSoldierAAF {
 		name = "Medium Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierAAF {
 		name = "Anti-Tank Specialist";
-
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_TITAN_AT_AAF};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierAAF {
 		name = "Anti-Tank Specialist Assistant";
-
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{2, AT_MAG}};
 	};
 
 	class kekoAASpecialist: kekoSoldierLight {
 		name = "Anti-Air Specialist";
-
 		backpack[] = {"B_FieldPack_oli"};
-		backpackInventory[] = {{1, AA_MAG}};
 		launcher[] = {keko_W_TITAN_AA_AAF};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierAAF {
 		name = "Anti-Air Specialist Assistant";
-		backpackInventory[] = {{2, AA_MAG}};
 		backpack[] = {"B_FieldPack_oli"};
 	};
 
 	class kekoMarksman: kekoSoldierAAF {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}};
-		primary[] = {
-			keko_W_A3_EBR};
+			{1, "ACE_RangeCard"}
+		};
+		primary[] = {keko_W_A3_EBR};
 	};
 
 	class kekoSniper: kekoSoldierAAF {
@@ -287,14 +249,7 @@ class kekoFactionAAF: kekoFactionBase {
 
 	class kekoSpotter: kekoSniper {
 		name = "Spotter";
-		vestInventory[] = {
-			{1,"SmokeShell"},
-			{1,"SmokeShellGreen"},
-			{2,"9Rnd_45ACP_Mag"},
-			{10,"30Rnd_556x45_Stanag"},
-			{1,"HandGrenade"}};
-		primary[] = {
-			keko_W_A3_F2000};
+		primary[] = {keko_W_A3_F2000};
 	};
 
 	class kekoEOD: kekoSoldierLight {
@@ -315,10 +270,9 @@ class kekoFactionAAF: kekoFactionBase {
 		name = "Driver/Crewman";
 		vest[] = {"V_BandollierB_oli"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		helmet[] = {"H_HelmetCrew_I"};
 		optics[] = {"Binocular"};
 		engineerClass = 1;
@@ -329,10 +283,9 @@ class kekoFactionAAF: kekoFactionBase {
 		uniform[] = {"U_I_HeliPilotCoveralls"};
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		helmet[] = {"H_PilotHelmetHeli_I"};
 		optics[] = {"Binocular"};
 	};
@@ -355,8 +308,6 @@ class kekoFactionAAF: kekoFactionBase {
 		primary[] = {
 			keko_W_A3_F2000_UGL_HUNTIR};
 		vestInventory[] = {
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{4,"UGL_FlareGreen_F"},
 			{4,"1Rnd_SmokeRed_Grenade_shell"},
 			{4,"1Rnd_SmokeBlue_Grenade_shell"},
@@ -377,19 +328,14 @@ class kekoFactionAAF: kekoFactionBase {
 			keko_W_A3_F2000_UGL_HUNTIR};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
-			{1,"ACE_HuntIR_monitor"},
-			{8,"ACE_HuntIR_M203"}};
+			{1,"ACE_HuntIR_monitor"}
+		};
 		backpack[] = {"I_UAV_01_backpack_F"};
 		items[] = {"I_UavTerminal"};
 	};
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",

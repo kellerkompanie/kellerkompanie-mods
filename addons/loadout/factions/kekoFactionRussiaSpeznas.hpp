@@ -89,14 +89,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
             { 1,"rhs_mag_9x19_17"},
 			{ 1,"adv_aceSplint_splint"}};
 
-        vestInventory[] = {
-            { 4, PRIMARY_MAG },
-            { 4, PRIMARY_MAG_TRACER },
-            { 2, SMOKE_WHITE},
-            { 1, GRENADE },
-			{ 1, GRENADE_2 },
-			{ 1, FLASHBANG }};
-
         primary[] = {
             keko_W_AK74MR,
 			keko_W_AK74M,
@@ -107,12 +99,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
     };
 
     class kekoSoldierLight : kekoSoldierRussiaSpeznas {
-		vestInventory[] = {
-            { 8, PRIMARY_MAG_AS },
-            { 2, SMOKE_WHITE},
-            { 1, GRENADE },
-			{ 1, GRENADE_2 },
-			{ 1, FLASHBANG }};
         primary[] = {
             keko_W_ASVAL };
     };
@@ -124,8 +110,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         backpack[] = { "tfw_ilbe_gr" };
         optics[] = { "Rangefinder" };
 		backpackInventory[] = {
-            { 2, SMOKE_GREEN},
-			{ 2, SMOKE_GREEN},
 			{ 1, "ACE_HuntIR_monitor"},
 			{ 4, "ACE_HuntIR_M203"}};
 		primary[] = {
@@ -146,8 +130,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         backpack[] = { "tfw_ilbe_gr" };
         optics[] = { "Rangefinder" };
 		backpackInventory[] = {
-            { 2, SMOKE_GREEN},
-			{ 2, SMOKE_GREEN},
 			{ 1, "ACE_HuntIR_monitor"},
 			{ 4, "ACE_HuntIR_M203"}};
 		primary[] = {
@@ -162,12 +144,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         name = "Fire Team Leader";
         rank = "CORPORAL";
         optics[] = { "Binocular" };
-		vestInventory[] = {
-            { 4, PRIMARY_MAG },
-            { 4, PRIMARY_MAG_TRACER },
-            { 6, UGL_MAG },
-            { 2, GRENADE },
-		 	{ 2, PRIMARY_MAG }};
         primary[] = {
             keko_W_AK74MR_GL };
     };
@@ -200,80 +176,55 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         name = "Rifleman Anti-Tank (RPG)";
         launcher[] = { keko_W_RPG };
         backpack[] = { "rhs_assault_umbts" };
-        backpackInventory[] = {
-			{ 1, RAT_MAG_2 },
-			{ 1, RAT_MAG_2_2} };
     };
 
     class kekoRiflemanAT_MAAWS: kekoSoldierRussiaSpeznas {
         name = "Rifleman Anti-Tank (MAAWS)";
         launcher[] = { keko_W_MAAWS };
         backpack[] = { "rhs_assault_umbts" };
-        backpackInventory[] = { { 2, RAT_MAG } };
     };
 
     class kekoGrenadier : kekoSoldierRussiaSpeznas {
         name = "Grenadier";
-        vestInventory[] = {
-            { 4, PRIMARY_MAG },
-            { 4, PRIMARY_MAG_TRACER },
-            { 9, UGL_MAG },
-            { 2, GRENADE } };
         primary[] = {
             keko_W_AK74MR_GL };
     };
 
 	class kekoLMG : kekoSoldierRussiaSpeznas {
         name = "LMG";
-        vestInventory[] = {
-            { 2, PRIMARY_MAG_LMG },
-            { 2, PRIMARY_MAG_LMG_TRACER },
-            { 2, GRENADE },
-            { 1, SMOKE_WHITE }};
         backpack[] = { "rhs_assault_umbts" };
-        backpackInventory[] = { { 4, PRIMARY_MAG_LMG }, {3, PRIMARY_MAG_LMG_TRACER} };
         primary[] = {keko_W_RPK};
     };
 
     class kekoATSpecialist : kekoSoldierRussiaSpeznas {
         name = "Anti-Tank Specialist";
-
         backpack[] = { "B_Kitbag_rgr" };
-        backpackInventory[] = { { 2, AT_MAG } };
         launcher[] = { keko_W_Vorona };
     };
 
     class kekoATSpecialistAsst : kekoSoldierRussiaSpeznas {
         name = "Anti-Tank Specialist Assistant";
-
         backpack[] = { "B_Kitbag_rgr" };
-        backpackInventory[] = { { 2, AT_MAG } };
         optics[] = { "Rangefinder" };
     };
 
     class kekoAASpecialist : kekoSoldierLight {
         name = "Anti-Air Specialist";
         backpack[] = { "B_Kitbag_rgr" };
-        backpackInventory[] = { { 2, AA_MAG } };
         launcher[] = { keko_W_Igla };
     };
 
     class kekoAASpecialistAsst : kekoSoldierRussiaSpeznas {
         name = "Anti-Air Specialist Assistant";
         backpack[] = { "B_Kitbag_rgr" };
-        backpackInventory[] = { { 2, AA_MAG } };
         optics[] = { "Rangefinder" };
     };
 
     class kekoMarksman : kekoSoldierRussiaSpeznas {
         name = "Marksman";
         vestInventory[] = {
-            { 1, "ACE_RangeCard" },
-            { 5, PRIMARY_MAG_MARKSMAN },
-            { 2, SMOKE_WHITE },
-            { 1, GRENADE },
-			{ 1, GRENADE_2 },
-            { 5, PRIMARY_MAG_MARKSMAN_TRACER } };
+            { 1, "ACE_RangeCard" }
+		};
         primary[] = {
             keko_W_SVD };
     };
@@ -299,10 +250,8 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
             { 1,"ACE_surgicalKit" }};
         vest[] = { "VSM_OGA_OD_Vest_3" };
         vestInventory[] = {
-            { 2,SMOKE_WHITE },
-            { 1,SMOKE_GREEN },
-            { 12,"rhs_5Rnd_338lapua_t5000"},
-            { 3,SECONDARY_MAG } };
+            { 12,"rhs_5Rnd_338lapua_t5000"}
+		};
         helmet[] = { "VSM_Peltor_OD" };
         primary[] = {
             keko_W_T5000 };
@@ -311,11 +260,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
 
     class kekoSpotter : kekoSniper {
         name = "Spotter";
-        vestInventory[] = {
-            { 10,PRIMARY_MAG },
-			{ 2,SMOKE_WHITE },
-            { 1,SMOKE_GREEN },
-            { 1,GRENADE } };
         primary[] = { keko_W_AK74MR };
     };
 
@@ -338,8 +282,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         uniform[] = { "rhs_uniform_df15" };
         vest[] = { "rhs_vest_pistol_holster" };
         vestInventory[] = {
-            { 2, SECONDARY_MAG },
-            { 2, PRIMARY_MAG },
             { 1, "ACE_microDAGR" },
             { 10, "ACE_quikclot" } };
         helmet[] = { "rhs_zsh7a_mike" };
@@ -357,8 +299,6 @@ class kekoFactionRussiaSpeznas : kekoFactionBase {
         primary[] = {
             keko_W_AK74MR_GL };
         vestInventory[] = {
-            { 2,PRIMARY_MAG },
-            { 2,PRIMARY_MAG_TRACER },
             { 4,"UGL_FlareGreen_F" },
             { 4,"1Rnd_SmokeRed_Grenade_shell" },
             { 4,"1Rnd_SmokeBlue_Grenade_shell" },

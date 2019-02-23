@@ -178,13 +178,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 		optics[] = {
 			"Binocular"
 		};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}
-		};
 		primary[] = {
 			keko_W_BAF_L85A2_UGL
 		};
@@ -234,12 +227,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_V_Osprey_Grenadier_A",
 			"UK3CB_BAF_V_Osprey_Grenadier_B"
 		};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}
-		};
 		primary[] = {
 			keko_W_BAF_L85A2_UGL
 		};
@@ -251,11 +238,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_V_Osprey_MG_A",
 			"UK3CB_BAF_V_Osprey_MG_B"
 		};
-		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}
-		};
 		primary[] = {
 			keko_W_BAF_L110
 		};
@@ -264,9 +246,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
-		};
-		backpackInventory[] = {
-			{2, PRIMARY_MAG_LMG}
 		};
 	};
 
@@ -278,9 +257,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
 		};
-		backpackInventory[] = {
-			{4, PRIMARY_MAG_LMG}
-		};
 		optics[] = {
 			"Binocular"
 		};
@@ -291,10 +267,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 		vest[] = {
 			"UK3CB_BAF_V_Osprey_MG_A",
 			"UK3CB_BAF_V_Osprey_MG_B"
-		};
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{2, GRENADE}
 		};
 		primary[] = {
 			keko_W_BAF_L7A2
@@ -315,9 +287,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
-		};
-		backpackInventory[] = {
-			{3, PRIMARY_MAG_MMG}
 		};
 		optics[] = {
 			"Binocular"
@@ -350,9 +319,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
 		};
-		backpackInventory[] = {
-			{2, AT_MAG}
-		};
 		optics[] = {
 			"Rangefinder"
 		};
@@ -365,9 +331,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
-		};
-		backpackInventory[] = {
-			{1, AA_MAG}
 		};
 		launcher[] = {
 			keko_W_STRINGER
@@ -382,9 +345,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
 			"UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D"
 		};
-		backpackInventory[] = {
-			{2, AA_MAG}
-		};
 		optics[] = {
 			"Rangefinder"
 		};
@@ -396,11 +356,7 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_V_Osprey_Marksman_A"
 		};
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}
+			{1, "ACE_RangeCard"}
 		};
 		primary[] = {
 			keko_W_BAF_L129A1
@@ -435,8 +391,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_V_Osprey_Belt_A"
 		};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}
 		};
@@ -458,8 +412,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			"UK3CB_BAF_V_Pilot_A"
 		};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}
 		};
@@ -500,8 +452,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 			keko_W_BAF_L85A2_UGL_SMOKE
 		};
 		vestInventory[] = {
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{4,"UGL_FlareGreen_F"},
 			{4,"1Rnd_SmokeRed_Grenade_shell"},
 			{4,"1Rnd_SmokeBlue_Grenade_shell"},
@@ -530,8 +480,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 		};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{1,"ACE_HuntIR_monitor"},
 			{8,"ACE_HuntIR_M203"}
 		};
@@ -545,10 +493,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}
-		};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",

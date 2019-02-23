@@ -1,23 +1,3 @@
-#include "script_macro.hpp"
-
-#define SMOKE_WHITE "SmokeShell"
-#define SMOKE_GREEN "SmokeShellGreen"
-#define SMOKE_RED "SmokeShellRed"
-#define GRENADE "HandGrenade"
-
-#define PRIMARY_MAG "30Rnd_556x45_Stanag"
-#define PRIMARY_MAG_TRACER "30Rnd_556x45_Stanag_Tracer_Red"
-#define PRIMARY_MAG_LMG "200Rnd_65x39_cased_Box_Tracer"
-#define PRIMARY_MAG_MMG "130Rnd_338_Mag"
-#define PRIMARY_MAG_MARKSMAN "20Rnd_762x51_Mag"
-#define PRIMARY_MAG_SNIPER "5Rnd_127x108_Mag"
-#define SECONDARY_MAG "9Rnd_45ACP_Mag"
-
-#define RAT_LAUNCHER "launch_RPG32_F"
-#define RAT_MAG "RPG32_F"
-
-#define UGL_MAG "1Rnd_HE_Grenade_shell"
-
 class kekoWeaponsFIA {
 	// Primary
 	class keko_W_A3_Mk20: kekoPrimaryWeapon
@@ -26,7 +6,7 @@ class kekoWeaponsFIA {
 		scopes[] = {"optic_ACO_grn"};
 		rails[] = {"acc_flashlight"};
 		silencers[] = {"muzzle_snds_m"};
-		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
 	};
 	class keko_W_A3_TRG21: keko_W_A3_Mk20
 	{
@@ -43,7 +23,7 @@ class kekoWeaponsFIA {
 	class keko_W_A3_Mk20_GL: keko_W_A3_Mk20
 	{
 		cfgName = "arifle_Mk20_GL_F";
-		uglMagazines[] = {UGL_MAG};
+		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_TRG21_GL: keko_W_A3_Mk20_GL
 	{
@@ -57,7 +37,7 @@ class kekoWeaponsFIA {
 		scopes[] = {"optic_KHS_blk"};
 		rails[] = {"acc_flashlight"};
 		silencers[] = {"muzzle_snds_b"};
-		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		magazines[] = {"20Rnd_762x51_Mag"};
 	};
 
 	class keko_W_A3_DMR_SILENCED: kekoPrimaryWeapon
@@ -66,7 +46,7 @@ class kekoWeaponsFIA {
 		scopes[] = {"optic_KHS_blk"};
 		rails[] = {"acc_flashlight"};
 		silencers[] = {"muzzle_snds_b"};
-		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		magazines[] = {"20Rnd_762x51_Mag"};
 	};
 
 
@@ -79,7 +59,7 @@ class kekoWeaponsFIA {
 		rails[] = {"acc_flashlight"};
 		bipods[] = {"bipod_03_F_blk"};
 		silencers[] = {"muzzle_snds_h_mg"};
-		magazines[] = {PRIMARY_MAG_LMG};
+		magazines[] = {"200Rnd_65x39_cased_Box_Tracer"};
 	};
 
 	// MMG
@@ -90,14 +70,14 @@ class kekoWeaponsFIA {
 		rails[] = {"acc_flashlight"};
 		bipods[] = {"bipod_01_F_snd"};
 		silencers[] = {"muzzle_snds_338_black"};
-		magazines[] = {PRIMARY_MAG_MMG};
+		magazines[] = {"130Rnd_338_Mag"};
 	};
 
 	class keko_W_A3_GM6_CSAT: kekoPrimaryWeapon
 	{
 		cfgName = "srifle_GM6_camo_F";
 		scopes[] = {"optic_lrps"};
-		magazines[] = {PRIMARY_MAG_SNIPER};
+		magazines[] = {"5Rnd_127x108_Mag"};
 	};
 
 
@@ -107,7 +87,7 @@ class kekoWeaponsFIA {
 	{
 		cfgName = "hgun_ACPC2_F";
 		silencers[] = {"muzzle_snds_acp"};
-		magazines[] = {SECONDARY_MAG};		
+		magazines[] = {"9Rnd_45ACP_Mag"};
 	};
 
 
@@ -115,23 +95,7 @@ class kekoWeaponsFIA {
 	// Launcher
 	class keko_W_RPG32: kekoLauncherWeapon
 	{
-		cfgName = RAT_LAUNCHER;
-		magazines[] = {RAT_MAG};
-	};
-
-
-
-	// Throwables
-	class keko_W_GRENADE {
-		cfgName = GRENADE;
-	};
-	class keko_W_SMOKE_WHITE {
-		cfgName = SMOKE_WHITE;
-	};
-	class keko_W_SMOKE_GREEN {
-		cfgName = SMOKE_GREEN;
-	};
-	class keko_W_SMOKE_RED {
-		cfgName = SMOKE_RED;
+		cfgName = "launch_RPG32_F";
+		magazines[] = {"RPG32_F"};
 	};
 };

@@ -1,39 +1,3 @@
-#include "script_macro.hpp"
-
-#define SMOKE_WHITE "SmokeShell"
-#define SMOKE_GREEN "SmokeShellGreen"
-#define SMOKE_RED "SmokeShellRed"
-#define GRENADE "HandGrenade"
-
-#define PRIMARY_MAG "30Rnd_65x39_caseless_mag"
-#define PRIMARY_MAG_TRACER "30Rnd_65x39_caseless_mag_Tracer"
-#define PRIMARY_MAG_416 "30Rnd_556x45_Stanag"
-#define PRIMARY_MAG_TRACER_416 "30Rnd_556x45_Stanag_Tracer_Red"
-#define PRIMARY_MAG_LMG "100Rnd_65x39_caseless_mag_Tracer"
-#define PRIMARY_MAG_LMG_STONER "200Rnd_65x39_cased_Box_Tracer"
-#define PRIMARY_MAG_LMG_416 "150Rnd_556x45_Drum_Mag_F"
-#define PRIMARY_MAG_LMG_TRACER_416 "150Rnd_556x45_Drum_Mag_Tracer_F"
-#define PRIMARY_MAG_MMG "130Rnd_338_Mag"
-#define PRIMARY_MAG_MMG_MINIMI "200Rnd_556x45_Box_Red_F"
-#define PRIMARY_MAG_MMG_TRACER_MINIMI "200Rnd_556x45_Box_Tracer_Red_F"
-#define PRIMARY_MAG_MARKSMAN "ACE_30Rnd_65x47_Scenar_mag"
-#define PRIMARY_MAG_MARKSMAN_417 "20Rnd_762x51_Mag"
-#define PRIMARY_MAG_MARKSMAN_TRACER_417 "ACE_20Rnd_762x51_Mag_Tracer"
-#define PRIMARY_MAG_P90 "50Rnd_570x28_SMG_03"
-
-#define SECONDARY_MAG "16Rnd_9x21_Mag"
-
-#define RAT_LAUNCHER "launch_NLAW_F"
-#define AT_LAUNCHER "launch_B_Titan_short_F"
-#define AA_LAUNCHER "launch_B_Titan_F"
-#define GUSTAV_LAUNCHER "launch_MRAWS_green_F"
-
-#define AT_MAG "Titan_AT"
-#define AA_MAG "Titan_AA"
-#define UGL_MAG "1Rnd_HE_Grenade_shell"
-#define GUSTAV_MAG "MRAWS_HEAT_F"
-#define HUNTIR_MAG "ACE_HuntIR_M203"
-
 class kekoWeaponsUSBlackOpsTropic {
 	// Primary
 	class keko_W_A3_MX_TROPIC: kekoPrimaryWeapon
@@ -42,7 +6,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		scopes[] = {"optic_Hamr_khk_F"};
 		rails[] = {"acc_pointer_IR"};
 		silencers[] = {"muzzle_snds_h"};
-		magazines[] = {PRIMARY_MAG,PRIMARY_MAG_TRACER};
+		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
 	};
 	class keko_W_A3_MX_BLACK: keko_W_A3_MX_TROPIC
 	{
@@ -57,7 +21,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		scopes[] = {"optic_ERCO_blk_F"};
 		rails[] = {"acc_pointer_IR"};
 		silencers[] = {"muzzle_snds_m"};
-		magazines[] = {PRIMARY_MAG_416,PRIMARY_MAG_TRACER_416};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
 	};
 	class keko_W_A3_HK416_TROPIC: keko_W_A3_HK416
 	{
@@ -84,7 +48,7 @@ class kekoWeaponsUSBlackOpsTropic {
 	{
 		cfgName = "SMG_03C_black";
 		silencers[] = {"muzzle_snds_570"};
-		magazines[] = {PRIMARY_MAG_P90};
+		magazines[] = {"50Rnd_570x28_SMG_03"};
 	};
 	class keko_W_A3_P90_TROPIC: keko_W_A3_P90
 	{
@@ -98,10 +62,10 @@ class kekoWeaponsUSBlackOpsTropic {
 	// Grenadier
 	class keko_W_A3_MX_GL_TROPIC: keko_W_A3_MX_TROPIC {
 		cfgName = "arifle_MX_GL_khk_F";
-		uglMagazines[] = {UGL_MAG};
+		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_MX_GL_TROPIC_HUNTIR: keko_W_A3_MX_GL_TROPIC {
-		uglMagazines[] = {HUNTIR_MAG};
+		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL_TROPIC {
 		cfgName = "arifle_MX_GL_Black_F";
@@ -109,22 +73,22 @@ class kekoWeaponsUSBlackOpsTropic {
 		rails[] = {"acc_pointer_IR"};
 	};
 	class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
-		uglMagazines[] = {HUNTIR_MAG};
+		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 
 	class keko_W_A3_HK416_GL: keko_W_A3_HK416 {
 		cfgName = "arifle_SPAR_01_GL_blk_F";
-		uglMagazines[] = {UGL_MAG};
+		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_HK416_GL_HUNTIR: keko_W_A3_HK416_GL {
-		uglMagazines[] = {HUNTIR_MAG};
+		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 	class keko_W_A3_HK416_GL_TROPIC: keko_W_A3_HK416_TROPIC {
 		cfgName = "arifle_SPAR_01_GL_khk_F";
-		uglMagazines[] = {UGL_MAG};
+		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_HK416_GL_TROPIC_HUNTIR: keko_W_A3_HK416_GL_TROPIC {
-		uglMagazines[] = {HUNTIR_MAG};
+		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 
 
@@ -137,7 +101,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		scopes[] = {"optic_SOS_khk_F"};
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_01_F_khk"};
-		magazines[] = {PRIMARY_MAG_MARKSMAN};
+		magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
 	};
 	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM_TROPIC
 	{
@@ -152,7 +116,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		scopes[] = {"optic_SOS"};
 		bipods[] = {"bipod_01_F_blk"};
 		silencers[] = {"muzzle_snds_b"};
-		magazines[] = {PRIMARY_MAG_MARKSMAN_417,PRIMARY_MAG_MARKSMAN_TRACER_417};
+		magazines[] = {"20Rnd_762x51_Mag","ACE_20Rnd_762x51_Mag_Tracer"};
 	};
 	class keko_W_A3_HK417_TROPIC: keko_W_A3_HK417
 	{
@@ -167,7 +131,7 @@ class kekoWeaponsUSBlackOpsTropic {
 	class keko_W_A3_MX_SW_TROPIC: keko_W_A3_MX_TROPIC
 	{
 		cfgName = "arifle_MX_SW_khk_F";
-		magazines[] = {PRIMARY_MAG_LMG};
+		magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
 	};
 	class keko_W_A3_MX_SW_BLACK: keko_W_A3_MX_SW_TROPIC
 	{
@@ -180,7 +144,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		scopes[] = {"optic_ERCO_blk_F"};
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_01_F_blk"};
-		magazines[] = {PRIMARY_MAG_LMG_416,PRIMARY_MAG_LMG_TRACER_416};
+		magazines[] = {"150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_Tracer_F"};
 	};
 	class keko_W_A3_HK416_DRUM_TROPIC: keko_W_A3_HK416_DRUM
 	{
@@ -195,7 +159,7 @@ class kekoWeaponsUSBlackOpsTropic {
 		rails[] = {"acc_pointer_IR"};
 		bipods[] = {"bipod_03_F_blk"};
 		silencers[] = {"muzzle_snds_h_mg"};
-		magazines[] = {PRIMARY_MAG_LMG_STONER};
+		magazines[] = {"200Rnd_65x39_cased_Box_Tracer"};
 	};
 
 
@@ -206,14 +170,14 @@ class kekoWeaponsUSBlackOpsTropic {
 	{
 		cfgName = "MMG_02_black_F";
 		silencers[] = {"muzzle_snds_338_black"};
-		magazines[] = {PRIMARY_MAG_MMG};
+		magazines[] = {"130Rnd_338_Mag"};
 	};
 
 	class keko_W_A3_MINIMI: kekoPrimaryWeapon
 	{
 		cfgName = "LMG_03_F";
 		silencers[] = {"muzzle_snds_m"};
-		magazines[] = {PRIMARY_MAG_MMG_TRACER_MINIMI,PRIMARY_MAG_MMG_MINIMI};
+		magazines[] = {"200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Tracer_Red_F"};
 	};
 
 
@@ -223,7 +187,7 @@ class kekoWeaponsUSBlackOpsTropic {
 	{
 		cfgName = "hgun_P07_F";
 		silencers[] = {"muzzle_snds_L"};
-		magazines[] = {SECONDARY_MAG};
+		magazines[] = {"16Rnd_9x21_Mag"};
 	};
 	class keko_W_P99_TROPIC: keko_W_P99
 	{
@@ -235,39 +199,23 @@ class kekoWeaponsUSBlackOpsTropic {
 	// Launcher
 	class keko_W_TITAN_AT: kekoLauncherWeapon
 	{
-		cfgName = AT_LAUNCHER;
-		magazines[] = {AT_MAG};
+		cfgName = "launch_B_Titan_short_F";
+		magazines[] = {"Titan_AT"};
 	};
 	class keko_W_TITAN_AA: kekoLauncherWeapon
 	{
-		cfgName = AA_LAUNCHER;
-		magazines[] = {AA_MAG};
+		cfgName = "launch_B_Titan_F";
+		magazines[] = {"Titan_AA"};
 	};
 	class keko_W_NLAW: kekoLauncherWeapon
 	{
-		cfgName = RAT_LAUNCHER;
+		cfgName = "launch_NLAW_F";
 	};
 	class keko_W_GUSTAV: kekoLauncherWeapon
 	{
-		cfgName = GUSTAV_LAUNCHER;
+		cfgName = "launch_MRAWS_green_F";
 		rails[] = {"ACE_acc_pointer_green"};
-		magazines[] = {GUSTAV_MAG};
+		magazines[] = {"MRAWS_HEAT_F"};
 	};
 
-
-
-
-	// Throwables
-	class keko_W_GRENADE {
-		cfgName = GRENADE;
-	};
-	class keko_W_SMOKE_WHITE {
-		cfgName = SMOKE_WHITE;
-	};
-	class keko_W_SMOKE_GREEN {
-		cfgName = SMOKE_GREEN;
-	};
-	class keko_W_SMOKE_RED {
-		cfgName = SMOKE_RED;
-	};
 };

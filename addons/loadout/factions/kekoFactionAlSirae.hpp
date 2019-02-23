@@ -96,10 +96,12 @@ class kekoFactionAlSirae: kekoFactionBase {
 		optics[] = {"Binocular"};
 		primary[] = {
 			keko_W_A3_F2000_UGL,
-			keko_W_A3_TRG21_GL};
+			keko_W_A3_TRG21_GL
+		};
 		goggles[] = {
 			"GUR_Balaclava_oli",
-			"GUR_Balaclava_blk"};
+			"GUR_Balaclava_blk"
+		};
 	};
 
 	class kekoCommand: kekoLead	{
@@ -116,13 +118,15 @@ class kekoFactionAlSirae: kekoFactionBase {
 		vest[] = {"V_HarnessOGL_brn"};
 		primary[] = {
 			keko_W_A3_F2000_UGL,
-			keko_W_A3_TRG21_GL};
+			keko_W_A3_TRG21_GL
+		};
 		backpack[] = {"TFAR_rt1523g_rhs"};
 		backpackInventory[] = {};
 		optics[] = {"Binocular"};
 		goggles[] = {
 			"GUR_Balaclava_oli",
-			"GUR_Balaclava_blk"};
+			"GUR_Balaclava_blk"
+		};
 	};
 
 	class kekoSergeant: kekoSQL	{
@@ -133,15 +137,10 @@ class kekoFactionAlSirae: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}};
 		primary[] = {
 			keko_W_A3_F2000_UGL,
-			keko_W_A3_TRG21_GL};
+			keko_W_A3_TRG21_GL
+		};
 	};
 
 	class kekoDoctor: kekoSoldierLight {
@@ -177,93 +176,69 @@ class kekoFactionAlSirae: kekoFactionBase {
 
 	class kekoGrenadier: kekoSoldierAlSirae {
 		name = "Grenadier";
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}};
 		primary[] = {
 			keko_W_A3_F2000_UGL,
-			keko_W_A3_TRG21_GL};
+			keko_W_A3_TRG21_GL
+		};
 	};
 
 	class kekoLMG: kekoSoldierAlSirae {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}};
-		primary[] = {
-			keko_W_A3_STONER};
+		primary[] = {keko_W_A3_STONER};
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
+		backpackInventory[] = {
+			{2, PRIMARY_MAG_LMG}
+		};
 	};
 
 	class kekoLMGAsst: kekoSoldierAlSirae {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierAlSirae {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{2, GRENADE}};
-		primary[] = {
-			keko_W_A3_MMG_AAF};
+		primary[] = {keko_W_A3_MMG_AAF};
 		backpack[] = {"B_FieldPack_khk"};
 	};
 
 	class kekoMMGAsst: kekoSoldierAlSirae {
 		name = "Medium Machine Gunner Asst.";
-
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoATSpecialist: kekoSoldierAlSirae {
 		name = "Anti-Tank Specialist";
-
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{1, AT_MAG}};
 		launcher[] = {keko_W_TITAN_AT};
 	};
 
 	class kekoATSpecialistAsst: kekoSoldierAlSirae {
 		name = "Anti-Tank Specialist Assistant";
-
 		backpack[] = {"B_FieldPack_khk"};
-		backpackInventory[] = {{2, AT_MAG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoAASpecialist: kekoSoldierLight {
 		name = "Anti-Air Specialist";
 		backpack[] = {"B_FieldPack_ocamo"};
-		backpackInventory[] = {{1, AA_MAG}};
 		launcher[] = {keko_W_TITAN_AA};
 	};
 
 	class kekoAASpecialistAsst: kekoSoldierAlSirae {
 		name = "Anti-Air Specialist Assistant";
 		backpack[] = {"B_FieldPack_ocamo"};
-		backpackInventory[] = {{2, AA_MAG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMarksman: kekoSoldierAlSirae {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}};
-		primary[] = {
-			keko_W_A3_EBR};
+			{1, "ACE_RangeCard"}
+		};
+		primary[] = {keko_W_A3_EBR};
 	};
 
 	class kekoEOD: kekoSoldierLight {
@@ -282,12 +257,10 @@ class kekoFactionAlSirae: kekoFactionBase {
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"};
+			"H_HeadBandage_bloody_F"
+		};
 	};
 };

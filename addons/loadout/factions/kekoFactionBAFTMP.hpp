@@ -152,13 +152,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 		vest[] = {
 			"UK3CB_BAF_V_Osprey_DPMT3"
 		};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}
-		};
 		primary[] = {
 			keko_W_BAF_L85A2_UGL
 		};
@@ -202,12 +195,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 		vest[] = {
 			"UK3CB_BAF_V_Osprey_DPMT3"
 		};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{9, UGL_MAG},
-			{2, GRENADE}
-		};
 		primary[] = {
 			keko_W_BAF_L85A2_UGL
 		};
@@ -215,11 +202,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 
 	class kekoLMG: kekoSoldierBAFTMP {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{4, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}
-		};
 		primary[] = {
 			keko_W_BAF_L110
 		};
@@ -228,9 +210,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_DPMT_Rifleman_B",
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_A",
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_B"
-		};
-		backpackInventory[] = {
-			{2, PRIMARY_MAG_LMG}
 		};
 	};
 
@@ -242,9 +221,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_A",
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_B"
 		};
-		backpackInventory[] = {
-			{4, PRIMARY_MAG_LMG}
-		};
 		optics[] = {
 			"Binocular"
 		};
@@ -252,10 +228,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 
 	class kekoMMG: kekoSoldierBAFTMP {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{2, GRENADE}
-		};
 		primary[] = {
 			keko_W_BAF_L7A2
 		};
@@ -275,9 +247,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_B_Bergen_DPMT_Rifleman_B",
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_A",
 			"UK3CB_BAF_B_Bergen_OLI_Rifleman_B"
-		};
-		backpackInventory[] = {
-			{3, PRIMARY_MAG_MMG}
 		};
 		optics[] = {
 			"Binocular"
@@ -306,9 +275,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_B_Carryall_DPMT",
 			"UK3CB_BAF_B_Carryall_OLI"
 		};
-		backpackInventory[] = {
-			{2, AT_MAG}
-		};
 		optics[] = {
 			"Rangefinder"
 		};
@@ -319,9 +285,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 		backpack[] = {
 			"UK3CB_BAF_B_Carryall_DPMT",
 			"UK3CB_BAF_B_Carryall_OLI"
-		};
-		backpackInventory[] = {
-			{1, AA_MAG}
 		};
 		launcher[] = {
 			keko_W_STRINGER
@@ -334,9 +297,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_B_Carryall_DPMT",
 			"UK3CB_BAF_B_Carryall_OLI"
 		};
-		backpackInventory[] = {
-			{2, AA_MAG}
-		};
 		optics[] = {
 			"Rangefinder"
 		};
@@ -345,11 +305,7 @@ class kekoFactionBAFTMP: kekoFactionBase {
 	class kekoMarksman: kekoSoldierBAFTMP {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}
+			{1, "ACE_RangeCard"}
 		};
 		primary[] = {
 			keko_W_BAF_L129A1
@@ -382,8 +338,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_V_Osprey_DPMT1"
 		};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}
 		};
@@ -405,8 +359,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			"UK3CB_BAF_V_Pilot_DPMT"
 		};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}
 		};
@@ -447,8 +399,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 			keko_W_BAF_L85A2_UGL_SMOKE
 		};
 		vestInventory[] = {
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{4,"UGL_FlareGreen_F"},
 			{4,"1Rnd_SmokeRed_Grenade_shell"},
 			{4,"1Rnd_SmokeBlue_Grenade_shell"},
@@ -477,8 +427,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 		};
 		vestInventory[] = {
 			{2,"ACE_UAVBattery"},
-			{2,PRIMARY_MAG},
-			{2,PRIMARY_MAG_TRACER},
 			{1,"ACE_HuntIR_monitor"},
 			{8,"ACE_HuntIR_M203"}
 		};
@@ -492,10 +440,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}
-		};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",

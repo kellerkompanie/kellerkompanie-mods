@@ -18,9 +18,9 @@
 #endif
 
 
-#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
+#define KEKO_LOADOUT_MEDIC_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"}}
 #define KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"},{10, "KAT_guedel"},{1, "KAT_Pulseoximeter"}}
-#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"},{3, PRIMARY_MAG},{3, PRIMARY_MAG_TRACER}}
+#define KEKO_LOADOUT_DOCTOR_DEFAULT_VEST_INVENTORY {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"}}
 #define KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"KAT_X_AED"},{20,"adv_aceSplint_splint"},{10, "KAT_larynx"},{1, "KAT_accuvac"}}
 
 #define KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}}
@@ -41,16 +41,9 @@ class kekoSoldier
 		{1, "ACE_MapTools"},
 		{1, "ACE_Flashlight_XL50"},
 		{1, "ACE_IR_Strobe_Item"},
-		{1, SECONDARY_MAG},
-		{1, SMOKE_WHITE},
-		{1, "keko_canteen_canteen"},
-		{1, SMOKE_GREEN}};
+		{1, "keko_canteen_canteen"}
+	};
 	vest[] = {};
-	vestInventory[] = {
-		{5, PRIMARY_MAG},
-		{5, PRIMARY_MAG_TRACER},
-		{1, SMOKE_WHITE},
-		{3, GRENADE}};
 
 	helmet[] = {};
 

@@ -52,10 +52,8 @@ class kekoFactionFIA: kekoFactionBase {
 			{15, "ACE_fieldDressing"},
 			{1, "ACE_morphine"},
 			{2, "ACE_tourniquet"},
-			{1, "ACE_Flashlight_XL50"},
-			{1, SECONDARY_MAG},
-			{1, SMOKE_WHITE},
-			{1, SMOKE_GREEN}};
+			{1, "ACE_Flashlight_XL50"}
+		};
 
 		vest[] = {
 			"V_Chestrig_oli",
@@ -64,12 +62,6 @@ class kekoFactionFIA: kekoFactionBase {
 			"V_TacVest_blk",
 			"V_BandollierB_blk",
 			"V_BandollierB_khk"};
-
-		vestInventory[] = {
-			{3, PRIMARY_MAG},
-			{3, PRIMARY_MAG_TRACER},
-			{1, SMOKE_WHITE},
-			{2, GRENADE}};
 
 		helmet[] = {
 			"H_Shemag_olive",
@@ -132,12 +124,6 @@ class kekoFactionFIA: kekoFactionBase {
 		name = "Fire Team Leader";
 		rank = "CORPORAL";
 		optics[] = {"Binocular"};
-		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{6, UGL_MAG},
-			{2, GRENADE},
-			{2, PRIMARY_MAG}};
 		primary[] = {
 			keko_W_A3_Mk20_GL,
 			keko_W_A3_TRG21_GL};
@@ -177,11 +163,8 @@ class kekoFactionFIA: kekoFactionBase {
 	class kekoGrenadier: kekoSoldierFIA {
 		name = "Grenadier";
 		vestInventory[] = {
-			{4, PRIMARY_MAG},
-			{4, PRIMARY_MAG_TRACER},
-			{4, UGL_MAG},
-			{5, "UGL_FlareWhite_F"},
-			{2, GRENADE}};
+			{5, "UGL_FlareWhite_F"}
+		};
 		primary[] = {
 			keko_W_A3_Mk20_GL,
 			keko_W_A3_TRG21_GL};
@@ -189,28 +172,19 @@ class kekoFactionFIA: kekoFactionBase {
 
 	class kekoLMG: kekoSoldierFIA {
 		name = "Light Machine Gunner";
-		vestInventory[] = {
-			{3, PRIMARY_MAG_LMG},
-			{1, SMOKE_WHITE},
-			{1, GRENADE}};
 		primary[] = {
 			keko_W_A3_Mk200};
 		backpack[] = {"B_TacticalPack_blk"};
-		backpackInventory[] = {{2, PRIMARY_MAG_LMG}};
 	};
 
 	class kekoLMGAsst: kekoSoldierFIA {
 		name = "Light Machine Gunner Asst.";
 		backpack[] = {"B_TacticalPack_blk"};
-		backpackInventory[] = {{4, PRIMARY_MAG_LMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMMG: kekoSoldierFIA {
 		name = "Medium Machine Gunner";
-		vestInventory[] = {
-			{2, PRIMARY_MAG_MMG},
-			{1, GRENADE}};
 		primary[] = {
 			keko_W_A3_MMG};
 		backpack[] = {"B_TacticalPack_blk"};
@@ -220,18 +194,14 @@ class kekoFactionFIA: kekoFactionBase {
 		name = "Medium Machine Gunner Asst.";
 
 		backpack[] = {"B_TacticalPack_blk"};
-		backpackInventory[] = {{3, PRIMARY_MAG_MMG}};
 		optics[] = {"Binocular"};
 	};
 
 	class kekoMarksman: kekoSoldierFIA {
 		name = "Marksman";
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{3, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{3, PRIMARY_MAG_MARKSMAN}};
+			{1, "ACE_RangeCard"}
+		};
 		primary[] = {
 			keko_W_A3_DMR};
 	};
@@ -253,10 +223,9 @@ class kekoFactionFIA: kekoFactionBase {
 	class kekoDriver: kekoSoldierLight {
 		name = "Driver/Crewman";
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		optics[] = {"Binocular"};
 		engineerClass = 1;
 	};
@@ -265,23 +234,20 @@ class kekoFactionFIA: kekoFactionBase {
 		name = "Helicopter Pilot";
 		vest[] = {"V_TacVest_blk"};
 		vestInventory[] = {
-			{2, SECONDARY_MAG},
-			{2, PRIMARY_MAG},
 			{1, "ACE_microDAGR"},
-			{10, "ACE_quikclot"}};
+			{10, "ACE_quikclot"}
+		};
 		optics[] = {"Binocular"};
 		helmet[] = {"H_Cap_marshal"};
 	};
 
 	class kekoSurvivor: kekoSoldierLight	{
 		name = "Survivor";
-		vestInventory[] = {
-			{1,PRIMARY_MAG},
-			{1,SECONDARY_MAG}};
 		helmet[] = {
 			"H_HeadBandage_clean_F",
 			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"};
+			"H_HeadBandage_bloody_F"
+		};
 	};
 
 	class kekoSniper: kekoSoldierFIA {
@@ -289,7 +255,6 @@ class kekoFactionFIA: kekoFactionBase {
 		uniform[] = {"U_B_FullGhillie_sard"};
 		vest[] = {"V_Chestrig_khk"};
 		vestInventory[] = {
-			{8, PRIMARY_MAG_SNIPER},
 			{1, "ACE_RangeCard"}
 		};
 		helmet[] = {"H_HelmetSpecB"};
@@ -297,7 +262,6 @@ class kekoFactionFIA: kekoFactionBase {
 		secondary[] = {keko_W_M1911};
 		backpack[] = {"B_AssaultPack_cbr"};
 		backpackInventory[] = {
-			{8, PRIMARY_MAG_SNIPER},
 			{2, "ACE_salineIV_500"},
 			{6, "adv_aceSplint_splint"}
 		};
@@ -309,11 +273,7 @@ class kekoFactionFIA: kekoFactionBase {
 		uniform[] = {"U_I_FullGhillie_ard"};
 		vest[] = {"V_Chestrig_rgr"};
 		vestInventory[] = {
-			{1, "ACE_RangeCard"},
-			{5, PRIMARY_MAG_MARKSMAN},
-			{1, SMOKE_WHITE},
-			{2, GRENADE},
-			{5, PRIMARY_MAG_MARKSMAN}
+			{1, "ACE_RangeCard"}
 		};
 		helmet[] = {"H_HelmetSpecB"};
 		secondary[] = {keko_W_M1911};
