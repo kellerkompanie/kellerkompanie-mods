@@ -62,9 +62,7 @@ removeGoggles _player;
 _player setVariable ["ace_medical_medicClass", _medicClass, true];
 _player setVariable ["ACE_isEngineer", _engineerClass, true];
 
-if(rank _player isEqualTo "PRIVATE") then {
-	_player setUnitRank _rank;
-};
+_player setUnitRank _rank;
 
 if(count _uniform != 0) then {
 	private _random_uniform = selectRandom _uniform;
