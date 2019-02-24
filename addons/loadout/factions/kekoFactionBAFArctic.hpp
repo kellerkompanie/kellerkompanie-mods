@@ -1,4 +1,4 @@
-class kekoFactionBAFArctic: kekoFactionBase {
+class kekoFactionBAFArctic: Faction_base {
 
 	name = "[Event] BAF Arctic - British Armed Forces (Arctic)";
 	roles[] = {
@@ -488,15 +488,6 @@ class kekoFactionBAFArctic: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };

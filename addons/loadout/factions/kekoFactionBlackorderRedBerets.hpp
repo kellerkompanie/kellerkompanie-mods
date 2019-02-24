@@ -1,4 +1,4 @@
-class kekoFactionBlackorderRedBerets: kekoFactionBase {
+class kekoFactionBlackorderRedBerets: Faction_base {
 
 	name = "[Main] Black Order (Red Berets)";
 	roles[] = {
@@ -338,14 +338,5 @@ class kekoFactionBlackorderRedBerets: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierBlackorderRedBerets	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

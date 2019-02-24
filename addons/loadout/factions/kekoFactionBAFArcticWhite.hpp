@@ -1,4 +1,4 @@
-class kekoFactionBAFArcticWhite: kekoFactionBase {
+class kekoFactionBAFArcticWhite: Faction_base {
 
 	name = "[Event] BAF MTP Arctic White - British Armed Forces (MTP Arctic White)";
 	roles[] = {
@@ -403,15 +403,6 @@ class kekoFactionBAFArcticWhite: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };

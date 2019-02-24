@@ -1,4 +1,4 @@
-class kekoFactionBundeswehrFleck: kekoFactionBase {
+class kekoFactionBundeswehrFleck: Faction_base {
 
 	name = "[Main] Bundeswehr (Flecktarn)";
 	roles[] = {
@@ -340,14 +340,5 @@ class kekoFactionBundeswehrFleck: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Überlebender";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

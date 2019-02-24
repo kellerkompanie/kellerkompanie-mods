@@ -1,4 +1,4 @@
-class kekoFactionCSAT: kekoFactionBase {
+class kekoFactionCSAT: Faction_base {
 
 	name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
 	roles[] = {
@@ -335,14 +335,5 @@ class kekoFactionCSAT: kekoFactionBase {
 		};
 		backpack[] = {"O_UAV_01_backpack_F"};
 		items[] = {"O_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

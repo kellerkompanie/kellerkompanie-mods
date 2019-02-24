@@ -1,4 +1,4 @@
-class kekoFactionHorizonIsland: kekoFactionBase {
+class kekoFactionHorizonIsland: Faction_base {
 
 	name = "[Main] Horizon Island Defense Forces";
 	roles[] = {
@@ -232,14 +232,5 @@ class kekoFactionHorizonIsland: kekoFactionBase {
 		backpack[] = {"FRXA_tf_rt1523g_big_Ranger_Green"};
 		backpackInventory[] = {};
 		optics[] = {"Binocular"};
-	};
-
-	class kekoSurvivor: kekoSoldierHorizonIsland	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

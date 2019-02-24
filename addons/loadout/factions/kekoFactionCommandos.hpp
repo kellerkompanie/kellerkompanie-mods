@@ -1,4 +1,4 @@
-class kekoFactionCommandos: kekoFactionBase {
+class kekoFactionCommandos: Faction_base {
 
 	name = "[Ironfront] Commandos";
 	roles[] = {

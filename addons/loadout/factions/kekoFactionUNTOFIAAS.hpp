@@ -1,4 +1,4 @@
-class kekoFactionUNTOFIAAS: kekoFactionBase {
+class kekoFactionUNTOFIAAS: Faction_base {
 
 	name = "[Minimal] UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis";
 	roles[] = {
@@ -304,15 +304,6 @@ class kekoFactionUNTOFIAAS: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 
 	class kekoObserverCanada: kekoSoldierUNTOFIAAS {

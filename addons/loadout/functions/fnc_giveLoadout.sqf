@@ -14,8 +14,7 @@ if (_customLoadout) exitWith{};
 _player enableSimulation false;
 
 private _role_config = configFile >> "kekoFaction" >> _faction >> _role;
-private _weaponCfg = getText (configFile >> "kekoFaction" >> _faction >> "weaponCfg");
-private _weapon_config = configFile >> "kekoFaction" >> _faction >> _weaponCfg;
+private _weaponCfg = configFile >> "kekoFaction" >> _faction >> "Weapons";
 private _faces = getArray (configFile >> "kekoFaction" >> _faction >> "faces");
 
 private _primaryMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "Primary";
@@ -170,7 +169,7 @@ private _defaultUglMagCount = getNumber(_uglMagazinesCfg >> "default");
 
 if(count _primary != 0) then {
 	private _randomPrimaryEntry = selectRandom _primary;
-	private _primaryCfg = _weapon_config >> _randomPrimaryEntry;
+	private _primaryCfg = _weaponCfg >> _randomPrimaryEntry;
 
 	private _primary_cfgName = getText (_primaryCfg >> "cfgName");
 	private _primary_scopes = getArray (_primaryCfg >> "scopes");
@@ -248,7 +247,7 @@ private _defaultSecondaryMagCount = getNumber(_secondaryMagazinesCfg >> "default
 
 if(count _secondary != 0) then {
 	private _randomSecondaryEntry = selectRandom _secondary;
-	private _secondaryCfg = _weapon_config >> _randomSecondaryEntry;
+	private _secondaryCfg = _weaponCfg >> _randomSecondaryEntry;
 
 	private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
 	private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
@@ -321,7 +320,7 @@ private _defaultLauncherMagCount = getNumber(_launcherMagazinesCfg >> "default")
 
 if(count _launcher != 0) then {
 	private _randomLauncherEntry = selectRandom _launcher;
-	private _launcherCfg = _weapon_config >> _randomLauncherEntry;
+	private _launcherCfg = _weaponCfg >> _randomLauncherEntry;
 
 	private _launcher_cfgName = getText (_launcherCfg >> "cfgName");
 	private _launcher_scopes = getArray (_launcherCfg >> "scopes");

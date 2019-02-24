@@ -1,4 +1,4 @@
-class kekoFactionBAFTMP: kekoFactionBase {
+class kekoFactionBAFTMP: Faction_base {
 
 	name = "[Event] BAF TMP - British Armed Forces (TMP)";
 	roles[] = {
@@ -435,15 +435,6 @@ class kekoFactionBAFTMP: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };

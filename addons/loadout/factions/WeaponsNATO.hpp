@@ -1,4 +1,4 @@
-class kekoWeaponsNato {
+class Weapons {
 	// Primary
 	class keko_W_A3_MX: kekoPrimaryWeapon
 	{

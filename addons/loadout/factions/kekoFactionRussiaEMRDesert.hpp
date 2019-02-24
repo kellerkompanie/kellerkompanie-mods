@@ -1,4 +1,4 @@
-class kekoFactionRussiaEMRDesert: kekoFactionBase {
+class kekoFactionRussiaEMRDesert: Faction_base {
 
 	name = "[Main] Russia EMR (Desert)";
 	roles[] = {
@@ -335,14 +335,5 @@ class kekoFactionRussiaEMRDesert: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

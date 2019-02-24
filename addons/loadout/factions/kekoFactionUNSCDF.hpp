@@ -1,4 +1,4 @@
-class kekoFactionUNSCDF: kekoFactionBase {
+class kekoFactionUNSCDF: Faction_base {
 
 	name = "[Sci-Fi] UNSCDF (Olive) - U.N. Space Command Defense Force (Olive)";
 	roles[] = {

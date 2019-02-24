@@ -1,4 +1,4 @@
-class kekoFactionChinesePLADesert: kekoFactionBase {
+class kekoFactionChinesePLADesert: Faction_base {
 
 	name = "[Main] Chinese PLA (Desert)";
 	roles[] = {
@@ -321,14 +321,5 @@ class kekoFactionChinesePLADesert: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

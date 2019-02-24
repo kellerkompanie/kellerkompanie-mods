@@ -1,4 +1,4 @@
-class kekoFactionAlSirae: kekoFactionBase {
+class kekoFactionAlSirae: Faction_base {
 
 	name = "[Minimal] Al Sirae (Terrorists)";
 	roles[] = {
@@ -253,14 +253,5 @@ class kekoFactionAlSirae: kekoFactionBase {
 		backpack[] = {"B_Carryall_cbr"};
 		backpackInventory[] = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		engineerClass = 2;
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

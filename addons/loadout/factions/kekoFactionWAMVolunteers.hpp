@@ -1,4 +1,4 @@
-class kekoFactionWAMVolunteers: kekoFactionBase {
+class kekoFactionWAMVolunteers: Faction_base {
 
 	name = "[Minimal] WAM - West Altian Militia (Volunteers)";
 	roles[] = {
@@ -341,14 +341,5 @@ class kekoFactionWAMVolunteers: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

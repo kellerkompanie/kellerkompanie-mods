@@ -1,4 +1,4 @@
-class kekoFactionBAFMTP: kekoFactionBase {
+class kekoFactionBAFMTP: Faction_base {
 
 	name = "[Event] BAF MTP - British Armed Forces MTP";
 	roles[] = {
@@ -497,15 +497,6 @@ class kekoFactionBAFMTP: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };

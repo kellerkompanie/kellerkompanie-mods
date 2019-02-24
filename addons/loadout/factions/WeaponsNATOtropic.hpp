@@ -1,4 +1,4 @@
-class kekoWeaponsNatoTropic {
+class Weapons {
 	// Primary
 	class keko_W_A3_MX_TROPIC: kekoPrimaryWeapon
 	{
