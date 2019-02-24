@@ -1,24 +1,78 @@
 #include "kekoWeapons.hpp"
 
-class kekoFaction
-{
-	class kekoFactionBase {
-		name = objNull;
-		roles[] = {};
-		weaponCfg = objNull;
-		crates[] = {};
-		faces[] = {};
+class kekoFaction {
+	class FactionBase {
+		name = "";
+		faces[] = { };
+		logisticsHelicopter = "B_Heli_Transport_03_F";
 
-		logisticsHelicopter = "B_Heli_Transport_03_unarmed_F";
+		class Role {
+			Command = "Zeus";
+			Lead = "Lead";
+			Sergeant = "Sergeant";
+			SQL = "Squad Leader";
+			FTL = "Fire-Team Leader";
+			Doctor = "Doctor";
+			Medic = "Medic";
+			Rifleman = "Rifleman";
+			RiflemanAT = "Rifleman Anti-Tank";
+			Grenadier = "Grenadier";
+			LMG = "Light Machine Gunner";
+			LMGAsst = "Light Machine Gunner Asst.";
+			MMG = "Medium Machine Gunner";
+			MMGAsst = "Medium Machine Asst.";
+			ATSpecialist = "Anti-Tank Specialist";
+			ATSpecialistAsst = "Anti-Tank Specialist Asst.";
+			AASpecialist = "Anti-Air Specialist";
+			AASpecialistAsst = "Anti-Air Specialist Asst.";
+			Marksman = "Marksman";
+			Sniper = "Sniper";
+			Spotter = "Spotter";
+			EOD = "EOD";
+			Engineer = "Engineer";
+			Driver = "Driver";
+			HeliPilot = "Heli Pilot";
+			HeliCrew = "Heli Crew";
+			JetPilot = "Jet Pilot";
+			JTAC = "JTAC";
+			UAVOperator = "UAV Operator";
+			Survivor = "Survivor";
+		};
 
-		class kekoSoldier {
-			name = "Soldier";
-			medicClass = 0;
-			engineerClass = 0;
-			rank = "PRIVATE";
+		class Rank {
+			Default = PRIVATE;
+			Command = COLONEL;
+			Lead = LIEUTENANT;
+			Sergeant = SERGEANT;
+			SQL = SERGEANT;
+			FTL = CORPORAL;
+			Doctor = SERGEANT;
+			Medic = CORPORAL;
+		};
 
-			uniform[] = {};
-			uniformInventory[] = {
+		class EngineerClass {
+			Default = 0;
+			Command = 2;
+			Lead = 2;
+			Engineer = 2;
+			EOD = 2;
+			Driver = 1;
+		};
+
+		class MedicClass {
+			Default = 0;
+			Command = 2;
+			Lead = 2;
+			Doctor = 2;
+			Medic = 1;
+		};
+
+		class Uniform {
+			Default[] = { };
+		};
+
+		class UniformInventory {
+			Default[] = {
 				{15, "ACE_fieldDressing"},
 				{1, "KAT_Painkiller"},
 				{3, "ACE_tourniquet"},
@@ -27,129 +81,166 @@ class kekoFaction
 				{1, "ACE_IR_Strobe_Item"},
 				{1, "keko_canteen_canteen"}
 			};
-			vest[] = {};
-
-			helmet[] = {};
-
-			backpack[] = {};
-			backpackInventory[] = {};
-
-			primary[] = {};
-
-			secondary[] = {};
-
-			launcher[] = {};
-
-			items[] = {};
-
-			goggles[] = {};
-
-			optics[] = {};
 		};
 
-		class kekoSurvivor: kekoSoldier	{
-			name = "Survivor";
-			helmet[] = {
-				"H_HeadBandage_clean_F",
-				"H_HeadBandage_stained_F",
-				"H_HeadBandage_bloody_F"
-			};
+		class Vest {
+			Default[] = { };
+		};
+
+		class VestInventory {
+			Default[] = { };
+			Medic[] = {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"}};
+			Doctor[] = {{10, "ACE_epinephrine"},{10, "ACE_morphine"},{1,"ACE_surgicalKit"},{10, "ACE_quikclot"}};
+		};
+
+		class Backpack {
+			Default[] = { };
+		};
+
+		class BackpackInventory {
+			Default[] = { };
+			Medic[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"},{10, "KAT_guedel"},{1, "KAT_Pulseoximeter"}};
+			Doctor[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"KAT_X_AED"},{20,"adv_aceSplint_splint"},{10, "KAT_larynx"},{1, "KAT_accuvac"}};
+			EOD[] = {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}};
+			Engineer[] = {{1, "ToolKit"},{1, "ACE_wirecutter"},{1, "ACE_EntrenchingTool"},{1, "ACE_Fortify"}};
+		};
+
+		class Helmet {
+			Default[] = { };
+		};
+
+		class Optics {
+			Default[] = { };
+			Lead[] = { Rangefinder };
+			SQL[] = { Rangefinder };
+			FTL[] = { Binocular };
+			LMGAsst[] = { Binocular };
+			MMGAsst[] = { Binocular };
+			ATSpecialistAsst[] = { Rangefinder };
+			AASpecialistAsst[] = { Rangefinder };
+			Driver[] = { Binocular };
+			JTAC[] = { Laserdesignator };
+			HeliPilot[] = { Binocular };
+			JetPilot[] = { Binocular };
+			Sniper[] = { Laserdesignator };
+			Spotter[] = { Laserdesignator };
+		};
+
+		class Items {
+			Default[] = { };
+			UAVOperator[] = { B_UavTerminal };
+		};
+
+		class Goggles {
+			Default[] = { };
+		};
+
+		class Primary {
+			Default[] = { };
+		};
+
+		class Secondary {
+			Default[] = { };
+		};
+
+		class Launcher {
+			Default[] = { };
 		};
 
 		class Magazines {
 			class Primary {
-				default = 8;
-				kekoCommand = 8;
-				kekoLead = 8;
-				kekoSergeant = 8;
-				kekoSQL = 8;
-				kekoFTL = 10;
-				kekoDoctor = 6;
-				kekoMedic = 6;
-				kekoRifleman = 10;
-				kekoRiflemanAT = 10;
-				kekoGrenadier = 10;
-				kekoLMG = 6;
-				kekoLMGAsst = 10;
-				kekoMMG = 4;
-				kekoMMGAsst = 10;
-				kekoATSpecialist = 8;
-				kekoATSpecialistAsst = 8;
-				kekoAASpecialist = 8;
-				kekoAASpecialistAsst = 8;
-				kekoMarksman = 10;
-				kekoSniper = 10;
-				kekoSpotter = 10;
-				kekoEOD = 8;
-				kekoEngineer = 8;
-				kekoDriver = 6;
-				kekoHeliPilot = 2;
-				kekoHeliCrew = 2;
-				kekoJetPilot = 2;
-				kekoUAVOperator = 6;
-				kekoSurvivor = 1;
+				Default = 8;
+				Command = 8;
+				Lead = 8;
+				Sergeant = 8;
+				SQL = 8;
+				FTL = 10;
+				Doctor = 6;
+				Medic = 6;
+				Rifleman = 10;
+				RiflemanAT = 10;
+				Grenadier = 10;
+				LMG = 6;
+				LMGAsst = 10;
+				MMG = 4;
+				MMGAsst = 10;
+				ATSpecialist = 8;
+				ATSpecialistAsst = 8;
+				AASpecialist = 8;
+				AASpecialistAsst = 8;
+				Marksman = 10;
+				Sniper = 10;
+				Spotter = 10;
+				EOD = 8;
+				Engineer = 8;
+				Driver = 6;
+				HeliPilot = 2;
+				HeliCrew = 2;
+				JetPilot = 2;
+				UAVOperator = 6;
+				Survivor = 1;
 			};
 
 			class Secondary {
-				default = 1;
-				kekoLead = 2;
-				kekoCommand = 2;
-				kekoLMG = 2;
-				kekoMMG = 2;
-				kekoSniper = 3;
-				kekoSpotter = 3;
+				Default = 1;
+				Lead = 2;
+				Command = 2;
+				LMG = 2;
+				MMG = 2;
+				Sniper = 3;
+				Spotter = 3;
 			};
 
 			class UGL {
-				default = 4;
-				kekoGrenadier = 8;
+				Default = 4;
+				Grenadier = 8;
 			};
 
 			class Launcher {
-				default = 0;
-				kekoRiflemanAT = 1;
-				kekoATSpecialist = 1;
-				kekoATSpecialistAsst = 2;
-				kekoAASpecialist = 1;
-				kekoAASpecialistAsst = 2;
+				Default = 0;
+				RiflemanAT = 1;
+				ATSpecialist = 1;
+				ATSpecialistAsst = 2;
+				AASpecialist = 1;
+				AASpecialistAsst = 2;
 			};
 
 			class Grenade {
-				default = 0;
-				kekoFTL = 2;
-				kekoRifleman = 2;
-				kekoRiflemanAT = 2;
-				kekoGrenadier = 2;
-				kekoMarksman = 2;
-				kekoLMG = 2;
-				kekoLMGAsst = 2;
-				kekoMMG = 2;
-				kekoMMGAsst = 2;
-				kekoATSpecialist = 2;
-				kekoATSpecialistAsst = 2;
-				kekoAASpecialist = 2;
-				kekoAASpecialistAsst = 2;
+				Default = 0;
+				FTL = 2;
+				Rifleman = 2;
+				RiflemanAT = 2;
+				Grenadier = 2;
+				Marksman = 2;
+				LMG = 2;
+				LMGAsst = 2;
+				MMG = 2;
+				MMGAsst = 2;
+				ATSpecialist = 2;
+				ATSpecialistAsst = 2;
+				AASpecialist = 2;
+				AASpecialistAsst = 2;
 			};
 
 			class SmokeWhite {
-				default = 1;
+				Default = 1;
 			};
 
 			class SmokeGreen {
-				default = 1;
+				Default = 1;
 			};
 		};
 	};
 
-	#include "kekoFactionNATO.hpp"
-	#include "kekoFactionAAF.hpp"
+	#include "FactionNATO.hpp"
+	/*#include "FactionAAF.hpp"
+	#include "FactionNATOtropic.hpp"
 	#include "kekoFactionCSAT.hpp"
 	#include "kekoFactionCTRG.hpp"
 	#include "kekoFactionFIA.hpp"
 	#include "kekoFactionGuerilla.hpp"
 	#include "kekoFactionUSMarines.hpp"
 	#include "kekoFactionUSBlackOpsTropic.hpp"
-	#include "kekoFactionNATOtropic.hpp"
 	#include "kekoFactionIDAP.hpp"
 
 	#include "kekoFactionAlSirae.hpp"
@@ -199,5 +290,5 @@ class kekoFaction
 	#include "kekoFactionUNSCDFSnow.hpp"
 	#include "kekoFactionUNSCDFMarines.hpp"
 	#include "kekoFactionUNSCDFMarinesHCW.hpp"
-	#include "kekoFactionUNSCDF_ODST.hpp"
+	#include "kekoFactionUNSCDF_ODST.hpp"*/
 };

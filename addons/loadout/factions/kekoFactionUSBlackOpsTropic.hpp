@@ -1,4 +1,4 @@
-class kekoFactionUSBlackOpsTropic: kekoFactionBase {
+class kekoFactionUSBlackOpsTropic: Faction_base {
 
 	name = "[Minimal] U.S. BlackOps (Tropic)";
 	roles[] = {
@@ -69,8 +69,7 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			kekoJTAC416,
 			kekoUAVOperator,
 			kekoUAVOperator416,
-			kekoSurvivor,
-			kekoSurvivorP90}}
+			kekoSurvivor}}
 	};
 	weaponCfg = kekoWeaponsUSBlackOpsTropic;
 
@@ -960,24 +959,4 @@ class kekoFactionUSBlackOpsTropic: kekoFactionBase {
 			keko_W_A3_HK416_GL_TROPIC_HUNTIR
 		};
 	};
-
-
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor (MX)";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
-	};
-	class kekoSurvivorP90: kekoSoldierLightP90	{
-		name = "Survivor (P90)";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
-	};
-
 };

@@ -1,4 +1,4 @@
-class kekoFactionWehrmachtAfrica: kekoFactionBase {
+class kekoFactionWehrmachtAfrica: Faction_base {
 
 	name = "[Ironfront] Wehrmacht (Africa)";
 	roles[] = {

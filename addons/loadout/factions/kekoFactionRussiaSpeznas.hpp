@@ -1,4 +1,4 @@
-class kekoFactionRussiaSpeznas : kekoFactionBase {
+class kekoFactionRussiaSpeznas : Faction_base {
 
     name = "[Main] Russia - GRU Speznas";
     roles[] = {

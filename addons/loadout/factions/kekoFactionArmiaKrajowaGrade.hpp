@@ -1,4 +1,4 @@
-class kekoFactionArmiaKrajowaGrade: kekoFactionBase {
+class kekoFactionArmiaKrajowaGrade: Faction_base {
 
 	name = "[Ironfront] Polska Armia Krajowa (Grade)";
 	roles[] = {

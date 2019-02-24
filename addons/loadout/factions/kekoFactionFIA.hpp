@@ -1,4 +1,4 @@
-class kekoFactionFIA: kekoFactionBase {
+class kekoFactionFIA: Faction_base {
 
 	name = "[Minimal] FIA - Freedom and Independence Alliance";
 	roles[] = {
@@ -239,15 +239,6 @@ class kekoFactionFIA: kekoFactionBase {
 		};
 		optics[] = {"Binocular"};
 		helmet[] = {"H_Cap_marshal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 
 	class kekoSniper: kekoSoldierFIA {

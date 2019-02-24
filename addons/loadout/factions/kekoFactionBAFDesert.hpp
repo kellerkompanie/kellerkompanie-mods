@@ -1,4 +1,4 @@
-class kekoFactionBAFDesert: kekoFactionBase {
+class kekoFactionBAFDesert: Faction_base {
 
 	name = "[Event] BAF Desert - British Armed Forces (Desert)";
 	roles[] = {
@@ -436,15 +436,6 @@ class kekoFactionBAFDesert: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };

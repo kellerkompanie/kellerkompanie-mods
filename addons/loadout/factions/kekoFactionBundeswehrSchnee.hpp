@@ -1,4 +1,4 @@
-class kekoFactionBundeswehrSchnee: kekoFactionBase {
+class kekoFactionBundeswehrSchnee: Faction_base {
 
 	name = "[Main] Bundeswehr (Schneetarn)";
 	roles[] = {
@@ -343,14 +343,5 @@ class kekoFactionBundeswehrSchnee: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Überlebender";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

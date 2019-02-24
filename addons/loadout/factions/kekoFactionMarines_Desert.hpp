@@ -1,4 +1,4 @@
-class kekoFactionMarines_Desert: kekoFactionBase {
+class kekoFactionMarines_Desert: Faction_base {
 
 	name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
 	roles[] = {
@@ -358,14 +358,5 @@ class kekoFactionMarines_Desert: kekoFactionBase {
 		};
 		backpack[] = {"B_UAV_01_backpack_F"};
 		items[] = {"B_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

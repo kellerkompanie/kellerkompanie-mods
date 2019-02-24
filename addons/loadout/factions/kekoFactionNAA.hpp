@@ -1,4 +1,4 @@
-class kekoFactionNAA: kekoFactionBase {
+class kekoFactionNAA: Faction_base {
 
 	name = "[Minimal] NAA - New Altis Army";
 	roles[] = {
@@ -378,13 +378,5 @@ class kekoFactionNAA: kekoFactionBase {
 			{8,"ACE_HuntIR_M203"}};
 		backpack[] = {"NAA_UAV_darter_backpack_F"};
 		items[] = {"I_UavTerminal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"};
 	};
 };

@@ -1,4 +1,4 @@
-class kekoFactionIDAP: kekoFactionBase {
+class kekoFactionIDAP: Faction_base {
 
 	name = "[Minimal] IDAP - International Development and Aid Project";
 	roles[] = {

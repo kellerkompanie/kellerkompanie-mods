@@ -1,4 +1,4 @@
-class kekoFactionGuerilla: kekoFactionBase {
+class kekoFactionGuerilla: Faction_base {
 
 	name = "[Minimal] Guerilla";
 	roles[] = {
@@ -289,14 +289,5 @@ class kekoFactionGuerilla: kekoFactionBase {
 		};
 		optics[] = {"Binocular"};
 		helmet[] = {"H_Cap_marshal"};
-	};
-
-	class kekoSurvivor: kekoSoldierLight {
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
-		};
 	};
 };

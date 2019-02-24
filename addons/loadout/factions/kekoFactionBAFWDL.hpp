@@ -1,4 +1,4 @@
-class kekoFactionBAFWDL: kekoFactionBase {
+class kekoFactionBAFWDL: Faction_base {
 
 	name = "[Event] BAF WDL - British Armed Forces (WDL)";
 	roles[] = {
@@ -435,15 +435,6 @@ class kekoFactionBAFWDL: kekoFactionBase {
 		};
 		items[] = {
 			"B_UavTerminal"
-		};
-	};
-
-	class kekoSurvivor: kekoSoldierLight	{
-		name = "Survivor";
-		helmet[] = {
-			"H_HeadBandage_clean_F",
-			"H_HeadBandage_stained_F",
-			"H_HeadBandage_bloody_F"
 		};
 	};
 };
