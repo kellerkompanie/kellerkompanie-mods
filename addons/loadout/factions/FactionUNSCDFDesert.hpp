@@ -40,11 +40,7 @@ class FactionUNSCDFDesert: FactionBase {
 	};
 
 	class backpackInventory: backpackInventory {
-		Doctor = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
-		Medic = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 		RiflemanAT[] = { { 1, "OPTRE_M41_Twin_HEAP" }, { 1, "OPTRE_M41_Twin_HEAT" } };
-		EOD = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
-		Engineer = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 	};
 
 	class helmet: helmet {

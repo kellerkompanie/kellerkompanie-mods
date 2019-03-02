@@ -68,12 +68,8 @@ class FactionMarines_Desert: FactionBase {
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-		Doctor = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
-		Medic = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 		ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
 		ATSpecialistAsst[] = { { 4, "rhs_mag_smaw_SR" } };
-		EOD = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
-		Engineer = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
 

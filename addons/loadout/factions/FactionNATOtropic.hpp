@@ -1,4 +1,4 @@
-class FactionNatoTropic: FactionBase {
+class FactionNatoTropic: FactionNato {
 	name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
 
 	#include "WeaponsNATO.hpp"
