@@ -1,6 +1,6 @@
 class Weapons {
 	// Primary
-	class keko_W_A3_MX_TROPIC: kekoPrimaryWeapon
+	class keko_W_A3_MX_TROPIC: PrimaryWeapon
 	{
 		cfgName = "arifle_MX_khk_F";
 		scopes[] = {"optic_Hamr_khk_F"};
@@ -43,7 +43,7 @@ class Weapons {
 	};
 
 	// MMG
-	class keko_W_A3_MMG_BLACK: kekoPrimaryWeapon
+	class keko_W_A3_MMG_BLACK: PrimaryWeapon
 	{
 		cfgName = "MMG_02_black_F";
 		scopes[] = {"optic_Arco"};
@@ -53,7 +53,7 @@ class Weapons {
 	};
 
 	// Sniper
-	class keko_W_A3_LRR: kekoPrimaryWeapon
+	class keko_W_A3_LRR: PrimaryWeapon
 	{
 		cfgName = "srifle_LRR_F";
 		scopes[] = {"optic_LRPS_tna_F"};
@@ -67,13 +67,13 @@ class Weapons {
 
 
 	// Secondary
-	class keko_W_P99_TROPIC: kekoSecondaryWeapon
+	class keko_W_P99_TROPIC: SecondaryWeapon
 	{
 		cfgName = "hgun_P07_khk_F";
 		silencers[] = {"muzzle_snds_l"};
 		magazines[] = {"16Rnd_9x21_Mag"};
 	};
-	class keko_W_TACTICAL: kekoSecondaryWeapon
+	class keko_W_TACTICAL: SecondaryWeapon
 	{
 		cfgName = "hgun_Pistol_heavy_01_F";
 		silencers[] = {"muzzle_snds_acp"};
@@ -90,17 +90,17 @@ class Weapons {
 
 
 	// Launcher
-	class keko_W_TITAN_AT: kekoLauncherWeapon
+	class keko_W_TITAN_AT: LauncherWeapon
 	{
 		cfgName = "launch_B_Titan_short_tna_F";
 		magazines[] = {"Titan_AT"};
 	};
-	class keko_W_TITAN_AA: kekoLauncherWeapon
+	class keko_W_TITAN_AA: LauncherWeapon
 	{
 		cfgName = "launch_B_Titan_tna_F";
 		magazines[] = {"Titan_AA"};
 	};
-	class keko_W_NLAW: kekoLauncherWeapon
+	class keko_W_NLAW: LauncherWeapon
 	{
 		cfgName = "launch_NLAW_F";
 	};
