@@ -2,7 +2,7 @@ class FactionGuerilla: FactionBase {
 	name = "[Minimal] Guerilla";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
-	#include "WeaponsChineseGuerilla.hpp"
+	#include "WeaponsGuerilla.hpp"
 
 	class uniform: uniform {
 		Default[] = {
