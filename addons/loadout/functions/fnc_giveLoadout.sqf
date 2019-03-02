@@ -13,7 +13,7 @@ if (_customLoadout) exitWith{};
 
 _player enableSimulation false;
 
-private _factionCfg = configFile >> "kekoFaction" >> _faction;
+private _factionCfg = configFile >> "kekoFactions" >> _faction;
 private _rankCfg = _factionCfg >> "rank";
 private _engineerClassCfg = _factionCfg >> "engineerClass";
 private _medicClassCfg = _factionCfg >> "medicClass";
