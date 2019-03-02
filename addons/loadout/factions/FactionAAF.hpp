@@ -7,6 +7,7 @@ class FactionAAF: FactionBase {
 	class uniform: uniform {
 		Default[] = { "U_I_CombatUniform", "U_I_CombatUniform_shortsleeve" };
 		Lead[] = { "U_I_OfficerUniform" };
+		Command[] = { "U_I_OfficerUniform" };
 		HeliPilot[] = { "U_I_HeliPilotCoveralls" };
 		JetPilot[] = { "U_I_pilotCoveralls" };
 	};
@@ -14,15 +15,18 @@ class FactionAAF: FactionBase {
 	class vest: vest {
 		Default[] = { "V_PlateCarrierIA1_dgtl", "V_PlateCarrierIA2_dgtl" };
 		Lead[] = { "V_TacVest_oli" };
+		Command[] = { "V_TacVest_oli" };
 		Doctor[] = { "V_PlateCarrierIA2_dgtl" };
 		Medic[] = { "V_PlateCarrierIA2_dgtl" };
 		Driver[] = { "V_BandollierB_oli" };
-		HeliPilot[] = { "V_TacVest_blk" };
-		JetPilot[] = { "V_TacVest_blk" };
+		HeliPilot[] = { "V_TacVest_oli" };
+		JetPilot[] = { "V_TacVest_oli" };
 	};
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_anprc155" };
+		Command[] = { "TFAR_anprc155" };
+		Sergeant[] = { "TFAR_anprc155" };
 		SQL[] = { "TFAR_anprc155" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
