@@ -1,4 +1,4 @@
-class Weapons {
+class weapons: weapons {
 
 	// Primary
 	// SQL

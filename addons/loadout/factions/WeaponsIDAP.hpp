@@ -1,4 +1,4 @@
-class Weapons {
+class weapons: weapons {
 	// Secondary
 	class keko_W_VMH3: SecondaryWeapon
 	{

@@ -1,4 +1,4 @@
-class Weapons {
+class weapons: weapons {
 	// Primary
 	class keko_W_BAF_L85A2: PrimaryWeapon
 	{

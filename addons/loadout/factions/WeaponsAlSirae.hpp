@@ -1,4 +1,4 @@
-class Weapons {
+class weapons: weapons {
 	// Primary
 	class keko_W_A3_F2000: PrimaryWeapon {
 		cfgName = "arifle_Mk20_F";

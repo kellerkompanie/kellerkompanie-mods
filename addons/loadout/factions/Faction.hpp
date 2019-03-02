@@ -144,7 +144,7 @@ class FactionBase {
 		Default[] = { };
 	};
 
-	class Weapons {
+	class weapons {
 		class WeaponBase {
 			cfgName = objNull;
 			scopes[] = {};
