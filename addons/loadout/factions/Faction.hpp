@@ -1,5 +1,5 @@
 class FactionBase {
-	name = "";
+	name = objNull;
 	faces[] = { };
 	logisticsHelicopter = "B_Heli_Transport_03_F";
 
