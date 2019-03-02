@@ -18,10 +18,10 @@ class FactionCommandos: FactionBase {
 	};
 
 	class rank {
-		Default = "PRIVATE"
+		Default = "PRIVATE";
 		Officer = "LIEUTENANT";
 		SectionCommander = "SERGEANT";
-		TeamLeader = "CORPORAL"
+		TeamLeader = "CORPORAL";
 	};
 
 	class uniform: uniform {
