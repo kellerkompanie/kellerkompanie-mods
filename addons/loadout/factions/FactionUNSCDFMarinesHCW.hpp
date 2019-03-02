@@ -29,15 +29,6 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "OPTRE_FC_Marines_Uniform" };
 		Lead[] = { "OPTRE_FC_Marines_Uniform_L" };

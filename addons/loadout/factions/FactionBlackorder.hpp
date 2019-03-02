@@ -36,15 +36,6 @@ class FactionBlackorder: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "U_BlackOrder_Uniform_1" };
 		Doctor[] = { "U_BlackOrder_Uniform_1_Medic" };

@@ -38,13 +38,10 @@ class FactionUNTOFIAAS: FactionBase {
 	};
 
 	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
 		ObserverCanada = "COLONEL";
+		ObserverChina = "COLONEL";
+		ObserverFinland = "COLONEL";
+		ObserverRussia = "COLONEL";
 	};
 
 	class uniform: uniform {

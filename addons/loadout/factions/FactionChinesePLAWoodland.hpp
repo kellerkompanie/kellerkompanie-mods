@@ -36,15 +36,6 @@ class FactionChinesePLAWoodland: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "PLA_CombatUniform_SB", "PLA_CombatUniform_SBCB" };
 		Lead[] = { "PLA_CombatUniform_SWCB", "PLA_CombatUniform_SW" };

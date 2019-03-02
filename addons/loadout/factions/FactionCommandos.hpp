@@ -17,6 +17,12 @@ class FactionCommandos: FactionBase {
 		Sapper = "Sapper";
 	};
 
+	class rank: rank {
+		Officer = "LIEUTENANT";
+		SectionCommander = "SERGEANT";
+		TeamLeader = "CORPORAL"
+	};
+
 	class uniform: uniform {
 		Default[] = { "fow_u_uk_bd40_commando_01_private" };
 	};

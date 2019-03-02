@@ -36,15 +36,6 @@ class FactionCSAT: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "U_O_CombatUniform_ocamo" };
 		Lead[] = { "U_O_OfficerUniform_ocamo" };

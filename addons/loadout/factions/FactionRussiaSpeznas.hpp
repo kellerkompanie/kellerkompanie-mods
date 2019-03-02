@@ -31,15 +31,6 @@ class FactionRussiaSpeznas: FactionBase {
 		JTAC = "JTAC";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_gorka_r_g" };
 		Sniper[] = { "U_B_FullGhillie_sard" };

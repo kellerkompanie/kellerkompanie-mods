@@ -28,15 +28,6 @@ class FactionFIA: FactionBase {
 		Spotter = "Spotter";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"U_IG_Guerilla1_1",

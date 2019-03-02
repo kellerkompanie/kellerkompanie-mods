@@ -34,15 +34,6 @@ class FactionBAFArctic: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "UK3CB_BAF_U_Smock_MTP_Arctic" };
 		Lead[] = { "UK3CB_BAF_U_RolledUniform_MTP" };
