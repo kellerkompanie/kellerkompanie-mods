@@ -1,7 +1,7 @@
 class FactionNatoTropic: FactionNato {
 	name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
 
-	#include "WeaponsNATO.hpp"
+	#include "WeaponsNATOtropic.hpp"
 
 	class uniform: uniform {
 		Default[] = { "U_B_T_Soldier_F", "U_B_T_Soldier_AR_F" };
