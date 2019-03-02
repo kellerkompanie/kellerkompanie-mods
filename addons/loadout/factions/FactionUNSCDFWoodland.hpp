@@ -29,15 +29,6 @@ class FactionUNSCDFWoodland: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "OPTRE_UNSC_Army_Uniform_WDL" };
 		Lead[] = { "OPTRE_UNSC_Army_Uniform_S_WDL" };

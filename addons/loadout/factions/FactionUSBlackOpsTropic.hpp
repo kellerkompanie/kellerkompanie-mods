@@ -87,16 +87,10 @@ class FactionUSBlackOpsTropic: FactionBase {
 	};
 
 	class rank: rank {
-		Default = "PRIVATE";
-		Lead = "LIEUTENANT";
 		Lead416 = "LIEUTENANT";
-		Command = "COLONEL";
 		Command416 = "COLONEL";
-		SQL = "SERGEANT";
 		SQL416 = "SERGEANT";
-		Doctor = "SERGEANT";
 		DoctorP90 = "SERGEANT";
-		Medic = "CORPORAL";
 		MedicP90 = "CORPORAL";
 	};
 

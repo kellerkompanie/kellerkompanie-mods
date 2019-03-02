@@ -28,15 +28,6 @@ class FactionAlSirae: FactionBase {
 		Engineer = "Engineer";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"GUR_fat_ALSIR_32",

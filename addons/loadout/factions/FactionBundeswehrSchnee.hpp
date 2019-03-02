@@ -36,15 +36,6 @@ class FactionBundeswehrSchnee: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "PzBrig17_Uniform_Snow", "PzBrig17_Uniform_idz_Snow" };
 		Sniper[] = { "U_B_FullGhillie_sard" };

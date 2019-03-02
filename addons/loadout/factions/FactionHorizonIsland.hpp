@@ -28,15 +28,6 @@ class FactionHorizonIsland: FactionBase {
 		JTAC = "JTAC";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "rhsgref_uniform_ERDL" };
 		HeliPilot[] = { "U_B_HeliPilotCoveralls" };

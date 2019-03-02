@@ -32,14 +32,6 @@ class FactionIDAP: FactionBase {
 		DroneOperatorUGV = "Drone Operator (UGV)";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"U_C_IDAP_Man_cargo_F",

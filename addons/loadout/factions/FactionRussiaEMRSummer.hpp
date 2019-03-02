@@ -36,15 +36,6 @@ class FactionRussiaEMRSummer: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_emr_patchless" };
 		Sniper[] = { "U_B_FullGhillie_sard" };

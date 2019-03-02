@@ -28,15 +28,6 @@ class FactionSpecOpsTropic: FactionBase {
 		UAVOperator = "UAV Operator";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"VSM_G2_camo_PZJ_OD_Shirt",

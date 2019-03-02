@@ -38,15 +38,6 @@ class FactionAAF: FactionBase {
 		Survivor = "Survivor";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "U_I_CombatUniform", "U_I_CombatUniform_shortsleeve" };
 		Lead[] = { "U_I_OfficerUniform" };

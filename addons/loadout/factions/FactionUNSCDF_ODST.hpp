@@ -27,15 +27,6 @@ class FactionUNSCDF_ODST: FactionBase {
 		Engineer = "Engineer";
 	};
 
-	class rank: rank {
-		Lead = "LIEUTENANT";
-		Command = "COLONEL";
-		SQL = "SERGEANT";
-		FTL = "CORPORAL";
-		Doctor = "SERGEANT";
-		Medic = "CORPORAL";
-	};
-
 	class uniform: uniform {
 		Default[] = { "OPTRE_UNSC_ODST_Uniform" };
 	};
