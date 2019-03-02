@@ -2,7 +2,7 @@
 
 params ["_player", "_faction", "_role"];
 
-private _customLoadout = _faction isEqualTo "kekoCustom";
+private _customLoadout = _faction isEqualTo "Custom";
 
 if(_customLoadout) then {
 	[_role, _faction] call FUNC(applyCustomLoadout);
@@ -13,40 +13,53 @@ if (_customLoadout) exitWith{};
 
 _player enableSimulation false;
 
-private _role_config = configFile >> "kekoFaction" >> _faction >> _role;
-private _weaponCfg = configFile >> "kekoFaction" >> _faction >> "Weapons";
-private _faces = getArray (configFile >> "kekoFaction" >> _faction >> "faces");
+private _factionCfg = configFile >> "kekoFaction" >> _faction;
+private _rankCfg = _factionCfg >> "rank";
+private _engineerClassCfg = _factionCfg >> "engineerClass";
+private _medicClassCfg = _factionCfg >> "medicClass";
+private _weaponCfg = _factionCfg >> "Weapons";
+private _magazinesCfg = _factionCfg >> "magazines";
+private _primaryCfg = _factionCfg >> "primary";
+private _secondaryCfg = _factionCfg >> "secondary";
+private _launcherCfg = _factionCfg >> "launcher";
+private _uniformCfg = _factionCfg >> "uniform";
+private _uniformInventoryCfg = _factionCfg >> "uniformInventory";
+private _vestCfg = _factionCfg >> "vest";
+private _vestInventoryCfg = _factionCfg >> "vestInventory";
+private _backpackCfg = _factionCfg >> "backpack";
+private _backpackInventoryCfg = _factionCfg >> "backpackInventory";
+private _helmetCfg = _factionCfg >> "helmet";
+private _opticsCfg = _factionCfg >> "optics";
+private _itemsCfg = _factionCfg >> "items";
+private _gogglesCfg = _factionCfg >> "goggles";
 
-private _primaryMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "Primary";
-private _secondaryMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "Secondary";
-private _uglMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "UGL";
-private _launcherMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "Launcher";
-private _grenadeMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "Grenade";
-private _smokeWhiteMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "SmokeWhite";
-private _smokeGreenMagazinesCfg = configFile >> "kekoFaction" >> _faction >> "Magazines" >> "SmokeGreen";
+private _faces = getArray (_factionCfg >> "faces");
 
-private _uniform = getArray (_role_config >> "uniform");
-private _uniformInventory = getArray (_role_config >> "uniformInventory");
-private _vest = getArray (_role_config >> "vest");
-private _vestInventory = getArray (_role_config >> "vestInventory");
-private _backpack = getArray (_role_config >> "backpack");
-private _backpackInventory = getArray (_role_config >> "backpackInventory");
-private _helmet = getArray (_role_config >> "helmet");
+private _primaryMagazinesCfg = _magazinesCfg >> "primary";
+private _secondaryMagazinesCfg = _magazinesCfg >> "secondary";
+private _uglMagazinesCfg = _magazinesCfg >> "ugl";
+private _launcherMagazinesCfg = _magazinesCfg >> "launcher";
+private _grenadeMagazinesCfg = _magazinesCfg >> "grenade";
+private _smokeWhiteMagazinesCfg = _magazinesCfg >> "smokeWhite";
+private _smokeGreenMagazinesCfg = _magazinesCfg >> "smokeGreen";
 
-private _medicClass = getNumber (_role_config >> "medicClass");
-private _engineerClass = getNumber (_role_config >> "engineerClass");
-private _rank = getText (_role_config >> "rank");
 
-private _primary = getArray (_role_config >> "primary");
-private _secondary = getArray (_role_config >> "secondary");
-private _launcher = getArray (_role_config >> "launcher");
-
-private _items = getArray (_role_config >> "items");
-
-private _goggles = getArray (_role_config >> "goggles");
-
-private _optics = getArray (_role_config >> "optics");
-
+private _medicClass = [_medicClassCfg, _role] call FUNC(getRoleCfgNumber);
+private _engineerClass = [_engineerClassCfg, _role] call FUNC(getRoleCfgNumber);
+private _rank = [_rankCfg, _role] call FUNC(getRoleCfgString);
+private _uniform = [_uniformCfg, _role] call FUNC(getRoleCfgArray);
+private _uniformInventory = [_uniformInventoryCfg, _role] call FUNC(getRoleCfgArray);
+private _vest = [_vestCfg, _role] call FUNC(getRoleCfgArray);
+private _vestInventory = [_vestInventoryCfg, _role] call FUNC(getRoleCfgArray);
+private _backpack = [_backpackCfg, _role] call FUNC(getRoleCfgArray);
+private _backpackInventory = [_backpackInventoryCfg, _role] call FUNC(getRoleCfgArray);
+private _helmet = [_helmetCfg, _role] call FUNC(getRoleCfgArray);
+private _primary = [_primaryCfg, _role] call FUNC(getRoleCfgArray);
+private _secondary = [_secondaryCfg, _role] call FUNC(getRoleCfgArray);
+private _launcher = [_launcherCfg, _role] call FUNC(getRoleCfgArray);
+private _optics = [_opticsCfg, _role] call FUNC(getRoleCfgArray);
+private _goggles = [_gogglesCfg, _role] call FUNC(getRoleCfgArray);
+private _items = [_itemsCfg, _role] call FUNC(getRoleCfgArray);
 
 
 removeAllWeapons _player;
