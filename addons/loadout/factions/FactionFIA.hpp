@@ -14,8 +14,6 @@ class FactionFIA: FactionBase {
 				"U_IG_Guerrilla_6_1"
 			};
 		Lead[] = { "U_IG_leader" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
-		Spotter[] = { "U_I_FullGhillie_ard" };
 	};
 
 	class uniformInventory: uniformInventory {
@@ -37,8 +35,6 @@ class FactionFIA: FactionBase {
 				"V_BandollierB_khk"
 			};
 		HeliPilot[] = { "V_TacVest_blk" };
-		Sniper[] = { "V_Chestrig_khk" };
-		Spotter[] = { "V_Chestrig_rgr" };
 	};
 
 	class backpack: backpack {
@@ -53,8 +49,6 @@ class FactionFIA: FactionBase {
 		MMGAsst[] = { "B_TacticalPack_blk" };
 		EOD[] = { "B_Carryall_oli" };
 		Engineer[] = { "B_Carryall_oli" };
-		Sniper[] = { "B_AssaultPack_cbr" };
-		Spotter[] = { "B_AssaultPack_cbr" };
 	};
 
 	class backpackInventory: backpackInventory {
@@ -69,18 +63,6 @@ class FactionFIA: FactionBase {
 				{ 3, "UGL_FlareRed_F" }
 			};
 		RiflemanAT[] = { { 2, RAT_MAG } };
-		Sniper[] = { { 2, "ACE_salineIV_500" }, { 6, "adv_aceSplint_splint" } };
-		Spotter[] = {
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_EntrenchingTool" },
-				{ 2, "ACE_salineIV" },
-				{ 20, "ACE_quikclot" },
-				{ 1, "ACE_ATragMX" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_Tripod" },
-				{ 1, "ACE_SpottingScope" },
-				{ 14, "ACE_fieldDressing" }
-			};
 	};
 
 	class helmet: helmet {
@@ -93,8 +75,6 @@ class FactionFIA: FactionBase {
 				"H_Watchcap_blk"
 			};
 		HeliPilot[] = { "H_Cap_marshal" };
-		Sniper[] = { "H_HelmetSpecB" };
-		Spotter[] = { "H_HelmetSpecB" };
 	};
 
 	class primary: primary {
@@ -106,14 +86,10 @@ class FactionFIA: FactionBase {
 		LMG[] = { keko_W_A3_Mk200 };
 		MMG[] = { keko_W_A3_MMG };
 		Marksman[] = { keko_W_A3_DMR };
-		Sniper[] = { keko_W_A3_GM6_CSAT };
-		Spotter[] = { keko_W_A3_DMR_SILENCED };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_M1911 };
-		Sniper[] = { keko_W_M1911 };
-		Spotter[] = { keko_W_M1911 };
 	};
 
 	class launcher: launcher {

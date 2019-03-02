@@ -8,28 +8,8 @@ class FactionBlackorder: FactionBase {
 		Default[] = { "U_BlackOrder_Uniform_1" };
 		Doctor[] = { "U_BlackOrder_Uniform_1_Medic" };
 		Medic[] = { "U_BlackOrder_Uniform_1_Medic" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "U_BlackOrder_HeliPilotCoveralls" };
 		JetPilot[] = { "U_BlackOrder_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -37,7 +17,6 @@ class FactionBlackorder: FactionBase {
 		Lead[] = { "V_BlackOrder_Chestrig" };
 		Doctor[] = { "V_BlackOrder_PlateCarrier_medic" };
 		Medic[] = { "V_BlackOrder_PlateCarrier_medic" };
-		Sniper[] = { "V_PlateCarrier2_blk" };
 		Driver[] = { "V_BandollierB_blk" };
 		HeliPilot[] = { "V_BlackOrder_TacVest_1" };
 		JetPilot[] = { "V_BlackOrder_TacVest_1" };
@@ -76,7 +55,6 @@ class FactionBlackorder: FactionBase {
 			};
 		Lead[] = { "H_BlackOrder_MilCap" };
 		Command[] = { "H_BlackOrder_Cap_01" };
-		Sniper[] = { "H_HelmetSpecB" };
 		Driver[] = { "H_BlackOrder_cvc_helmet" };
 		HeliPilot[] = { "H_PilotHelmetHeli_B" };
 		HeliCrew[] = { "H_CrewHelmetHeli_B" };
@@ -92,15 +70,12 @@ class FactionBlackorder: FactionBase {
 		LMG[] = { keko_W_M249 };
 		MMG[] = { keko_W_MG42 };
 		Marksman[] = { keko_W_SIG556 };
-		Sniper[] = { keko_W_M40A5 };
-		Spotter[] = { keko_W_MK18_M320 };
 		JTAC[] = { keko_W_MK18_M320_HUNTIR };
 		UAVOperator[] = { keko_W_MK18_M320_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_Glock };
-		Sniper[] = { keko_W_Glock };
 	};
 
 	class launcher: launcher {

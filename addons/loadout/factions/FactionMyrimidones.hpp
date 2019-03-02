@@ -17,28 +17,8 @@ class FactionMyrimidones: FactionBase {
 			};
 		Lead[] = { "MYR_fat_9" };
 		Command[] = { "MYR_fat_9" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "MYR_fat_9" };
 		JetPilot[] = { "U_B_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -50,7 +30,6 @@ class FactionMyrimidones: FactionBase {
 				"GUR_vest_nato_mixed_1_2"
 			};
 		Lead[] = { "MYR_vest_GA_lite_blk" };
-		Sniper[] = { "V_PlateCarrier2_blk" };
 		Driver[] = { "V_BandollierB_rgr" };
 		HeliPilot[] = { "V_TacVest_blk" };
 		JetPilot[] = { "V_TacVest_blk" };
@@ -90,7 +69,6 @@ class FactionMyrimidones: FactionBase {
 			};
 		Lead[] = { "MYR_cap_headphones", "MYR_cap_hs" };
 		Command[] = { "MYR_cap" };
-		Sniper[] = { "H_HelmetSpecB" };
 		Driver[] = { "H_HelmetCrew_I" };
 		HeliPilot[] = { "MYR_hel_heli" };
 		HeliCrew[] = { "MYR_hel_heliCrew" };
@@ -106,15 +84,12 @@ class FactionMyrimidones: FactionBase {
 		LMG[] = { keko_W_A3_MX_SW };
 		MMG[] = { keko_W_A3_MMG };
 		Marksman[] = { keko_W_A3_MXM };
-		Sniper[] = { keko_W_A3_LRR };
-		Spotter[] = { keko_W_A3_MXM };
 		JTAC[] = { keko_W_A3_MX_GL_HUNTIR };
 		UAVOperator[] = { keko_W_A3_MX_GL_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_TACTICAL };
-		Sniper[] = { keko_W_TACTICAL_SPECOPS };
 	};
 
 	class launcher: launcher {

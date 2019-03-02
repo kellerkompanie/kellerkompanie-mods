@@ -7,34 +7,13 @@ class FactionCSAT: FactionBase {
 	class uniform: uniform {
 		Default[] = { "U_O_CombatUniform_ocamo" };
 		Lead[] = { "U_O_OfficerUniform_ocamo" };
-		Sniper[] = { "U_I_GhillieSuit" };
 		HeliPilot[] = { "U_O_PilotCoveralls" };
 		JetPilot[] = { "U_O_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
 		Default[] = { "V_HarnessO_brn" };
 		Lead[] = { "V_BandollierB_cbr" };
-		Sniper[] = { "V_Chestrig_oli" };
 		Driver[] = { "V_BandollierB_khk" };
 		HeliPilot[] = { "V_TacVest_blk" };
 		JetPilot[] = { "V_TacVest_blk" };
@@ -71,7 +50,6 @@ class FactionCSAT: FactionBase {
 		Default[] = { "H_HelmetB_sand" };
 		Lead[] = { "H_MilCap_ocamo" };
 		Command[] = { "H_Cap_brn_SPECOPS" };
-		Sniper[] = { "H_HelmetIA" };
 		Driver[] = { "H_HelmetCrew_O" };
 		HeliPilot[] = { "H_PilotHelmetHeli_O" };
 		HeliCrew[] = { "H_CrewHelmetHeli_O" };
@@ -87,15 +65,12 @@ class FactionCSAT: FactionBase {
 		LMG[] = { keko_W_A3_ZAFIR };
 		MMG[] = { keko_W_A3_MMG_CSAT };
 		Marksman[] = { keko_W_A3_DMR };
-		Sniper[] = { keko_W_A3_GM6 };
-		Spotter[] = { keko_W_A3_KATIBA };
 		JTAC[] = { keko_W_A3_KATIBA_GL_HUNTIR };
 		UAVOperator[] = { keko_W_A3_KATIBA_GL_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_ROOK };
-		Sniper[] = { keko_W_ROOK };
 	};
 
 	class launcher: launcher {

@@ -6,28 +6,8 @@ class FactionMarines_Desert: FactionBase {
 
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_FROG01_d" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "U_B_HeliPilotCoveralls" };
 		JetPilot[] = { "U_B_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -40,7 +20,6 @@ class FactionMarines_Desert: FactionBase {
 		LMG[] = { "rhsusf_spc_iar" };
 		MMG[] = { "rhsusf_spc_mg" };
 		Marksman[] = { "rhsusf_spc_marksman" };
-		Sniper[] = { "V_PlateCarrier2_blk" };
 		Driver[] = { "V_BandollierB_rgr" };
 		HeliPilot[] = { "rhsusf_hgu56p_visor_black" };
 		JetPilot[] = { "V_TacVest_blk" };
@@ -89,7 +68,6 @@ class FactionMarines_Desert: FactionBase {
 			};
 		Lead[] = { "rhs_8point_marpatd" };
 		Command[] = { "rhs_booniehat2_marpatd" };
-		Sniper[] = { "H_HelmetSpecB" };
 		Driver[] = { "H_HelmetCrew_B" };
 		HeliPilot[] = { "H_PilotHelmetHeli_B" };
 		HeliCrew[] = { "rhsusf_hgu56p_visor_mask_black" };
@@ -107,15 +85,12 @@ class FactionMarines_Desert: FactionBase {
 		LMG[] = { keko_W_RHS_M249 };
 		MMG[] = { keko_W_RHS_M240B };
 		Marksman[] = { keko_W_RHS_M14EBR };
-		Sniper[] = { keko_W_A3_LRR };
-		Spotter[] = { keko_W_RHS_M16A4 };
 		JTAC[] = { keko_W_RHS_M16A4_GL_HUNTIR };
 		UAVOperator[] = { keko_W_RHS_M16A4_GL_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_RHS_M9 };
-		Sniper[] = { keko_W_RHS_M9 };
 	};
 
 	class launcher: launcher {

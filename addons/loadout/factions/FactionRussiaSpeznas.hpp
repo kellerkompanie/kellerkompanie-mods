@@ -6,7 +6,6 @@ class FactionRussiaSpeznas: FactionBase {
 
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_gorka_r_g" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "rhs_uniform_df15" };
 	};
 
@@ -25,23 +24,6 @@ class FactionRussiaSpeznas: FactionBase {
 				{ 1, "rhs_mag_9x19_17" },
 				{ 1, "adv_aceSplint_splint" }
 			};
-		Sniper[] = {
-				{ 8, "ACE_fieldDressing" },
-				{ 5, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 2, "ACE_morphine" },
-				{ 1, "ACE_epinephrine" },
-				{ 2, "ACE_tourniquet" },
-				{ 1, "ACE_CableTie" },
-				{ 1, "ACE_RangeCard" },
-				{ 1, "ACE_ATragMX" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_microDAGR" },
-				{ 1, "adv_aceSplint_splint" },
-				{ 1, "ACE_surgicalKit" }
-			};
 	};
 
 	class vest: vest {
@@ -50,7 +32,6 @@ class FactionRussiaSpeznas: FactionBase {
 				"VSM_OGA_OD_Vest_2",
 				"VSM_OGA_OD_Vest_3"
 			};
-		Sniper[] = { "VSM_OGA_OD_Vest_3" };
 		HeliPilot[] = { "rhs_vest_pistol_holster" };
 	};
 
@@ -92,7 +73,6 @@ class FactionRussiaSpeznas: FactionBase {
 			};
 		Lead[] = { "rhs_beret_milp" };
 		Command[] = { "rhs_beret_milp" };
-		Sniper[] = { "VSM_Peltor_OD" };
 		HeliPilot[] = { "rhs_zsh7a_mike" };
 		HeliCrew[] = { "rhs_zsh7a_mike_alt" };
 	};
@@ -105,8 +85,6 @@ class FactionRussiaSpeznas: FactionBase {
 		Grenadier[] = { keko_W_AK74MR_GL };
 		LMG[] = { keko_W_RPK };
 		Marksman[] = { keko_W_SVD };
-		Sniper[] = { keko_W_T5000 };
-		Spotter[] = { keko_W_AK74MR };
 		HeliPilot[] = { keko_W_ASVAL };
 		JTAC[] = { keko_W_AK74MR_GL };
 	};
