@@ -102,6 +102,11 @@ class FactionBase {
 
 	class helmet {
 		Default[] = { };
+		Survivor[] = {
+			"H_HeadBandage_clean_F",
+			"H_HeadBandage_stained_F",
+			"H_HeadBandage_bloody_F"
+		};
 	};
 
 	class optics {
@@ -232,6 +237,8 @@ class FactionBase {
 			ATSpecialistAsst = 2;
 			AASpecialist = 2;
 			AASpecialistAsst = 2;
+			EOD = 2;
+			Engineer = 2;
 		};
 
 		class smokeWhite {
