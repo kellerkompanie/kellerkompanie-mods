@@ -2,41 +2,27 @@ class Weapons {
 	// Primary
 	class keko_W_A3_MX: PrimaryWeapon
 	{
-		cfgName = "arifle_MX_F";
+		cfgName = "GUR_arifle_MX_blkANDkhk_F";
 		scopes[] = {"optic_Hamr"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"acc_flashlight"};
 		silencers[] = {"muzzle_snds_h"};
 		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
-	};
-	class keko_W_A3_MX_BLACK: keko_W_A3_MX
-	{
-		cfgName = "arifle_MX_Black_F";
 	};
 
 	// Staff
 	class keko_W_A3_MXC: keko_W_A3_MX
 	{
-		cfgName = "arifle_MXC_F";
+		cfgName = "GUR_arifle_MXC_blkANDkhk_F";
 		scopes[] = {"optic_Aco"};
-		rails[] = {"acc_pointer_IR"};
-	};
-	class keko_W_A3_MXC_BLACK: keko_W_A3_MXC
-	{
-		cfgName = "arifle_MXC_Black_F";
+		rails[] = {"acc_flashlight"};
 	};
 
 	// Grenadier
 	class keko_W_A3_MX_GL: keko_W_A3_MX	{
-		cfgName = "arifle_MX_GL_F";
+		cfgName = "GUR_arifle_MX_GL_blkANDkhk_F";
 		uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
 	};
 	class keko_W_A3_MX_GL_HUNTIR: keko_W_A3_MX_GL	{
-		uglMagazines[] = {"ACE_HuntIR_M203"};
-	};
-	class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL {
-		cfgName = "arifle_MX_GL_Black_F";
-	};
-	class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
 		uglMagazines[] = {"ACE_HuntIR_M203"};
 	};
 
@@ -45,38 +31,26 @@ class Weapons {
 	{
 		cfgName = "arifle_MXM_F";
 		scopes[] = {"optic_SOS"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"acc_flashlight"};
 		magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
-	};
-	class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
-	{
-		cfgName = "arifle_MXM_Black_F";
 	};
 
 	// LMG
 	class keko_W_A3_MX_SW: keko_W_A3_MX
 	{
 		cfgName = "arifle_MX_SW_F";
-		magazines[] = {PRIMARY_MAG_LMG};
-	};
-	class keko_W_A3_MX_SW_BLACK: keko_W_A3_MX_SW
-	{
-		cfgName = "arifle_MX_SW_Black_F";
+		magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
 	};
 
 	// MMG
 	class keko_W_A3_MMG: PrimaryWeapon
 	{
-		cfgName = "MMG_02_sand_F";
+		cfgName = "GUR_navid_black_F";
 		scopes[] = {"optic_Arco"};
-		rails[] = {"acc_pointer_IR"};
+		rails[] = {"acc_flashlight"};
 		bipods[] = {"bipod_01_F_blk"};
 		silencers[] = {"muzzle_snds_338_black"};
-		magazines[] = {"130Rnd_338_Mag"};
-	};
-	class keko_W_A3_MMG_BLACK: keko_W_A3_MMG
-	{
-		cfgName = "MMG_02_black_F";
+ 		magazines[] = {"150Rnd_93x64_Mag"};
 	};
 
 	// Sniper
@@ -84,10 +58,6 @@ class Weapons {
 	{
 		cfgName = "srifle_LRR_F";
 		magazines[] = {"ACE_7Rnd_408_305gr_Mag"};
-	};
-	class keko_W_A3_LRR_CAMO: keko_W_A3_LRR
-	{
-		cfgName = "srifle_LRR_camo_F";
 	};
 
 

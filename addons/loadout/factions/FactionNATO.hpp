@@ -6,7 +6,7 @@ class FactionNato: FactionBase {
 	// define all weapons and mags
 	#include "WeaponsNATO.hpp"
 
-	class Uniform: Uniform {
+	class uniform: uniform {
 		Default[] = {
 			U_B_CombatUniform_mcam,
 			U_B_CombatUniform_mcam_tshirt,
@@ -33,7 +33,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class UniformInventory: UniformInventory {
+	class uniformInventory: uniformInventory {
 		Sniper[] = {
 			{1,"ACE_ATragMX"},
 			{10,"ACE_quikclot"},
@@ -52,7 +52,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class Vest: Vest {
+	class vest: vest {
 		Default[] = {
 			V_PlateCarrier1_rgr,
 			V_PlateCarrier2_rgr
@@ -83,7 +83,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class VestInventory: VestInventory {
+	class vestInventory: vestInventory {
 		Marksman[] = {
 			{1, "ACE_RangeCard"}
 		};
@@ -121,7 +121,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class Backpack: Backpack {
+	class backpack: backpack {
 		Default[] = { };
 		Doctor[] = { B_Kitbag_mcamo	};
 		Medic[] = { B_Kitbag_mcamo };
@@ -141,7 +141,7 @@ class FactionNato: FactionBase {
 		UAVOperator[] = { B_UAV_01_backpack_F };
 	};
 
-	class BackpackInventory: BackpackInventory {
+	class backpackInventory: backpackInventory {
 		Lead[] = {
 			{1, ACE_HuntIR_monitor},
 			{4, ACE_HuntIR_M203}
@@ -155,7 +155,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class Helmet: Helmet {
+	class helmet: helmet {
 		default[] = {
 			H_HelmetSpecB_blk,
 			H_HelmetSpecB_paint2,
@@ -196,7 +196,7 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class Primary: Primary {
+	class primary: primary {
 		Default[] = {
 			keko_W_A3_MX,
 			keko_W_A3_MX_BLACK
@@ -247,13 +247,13 @@ class FactionNato: FactionBase {
 		};
 	};
 
-	class Secondary: Secondary {
+	class secondary: secondary {
 		Default[] = { keko_W_TACTICAL };
 		Sniper[] = { keko_W_TACTICAL_SPECOPS };
 		Spotter[] = { keko_W_TACTICAL_SPECOPS };
 	};
 
-	class Launcher: Launcher {
+	class launcher: launcher {
 		RiflemanAT[] = { keko_W_NLAW };
 		ATSpecialist[] = { keko_W_TITAN_AT };
 		AASpecialist[] = { keko_W_TITAN_AA };
