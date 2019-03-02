@@ -61,6 +61,10 @@ class FactionWAM: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "200Rnd_65x39_cased_Box_Tracer" } };
+		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
+		ATSpecialistAsst[] = { {2, "RPG32_F" } };
+		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

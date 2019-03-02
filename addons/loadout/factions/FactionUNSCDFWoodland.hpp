@@ -45,6 +45,9 @@ class FactionUNSCDFWoodland: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		RiflemanAT[] = { { 1, "OPTRE_M41_Twin_HEAP" }, { 1, "OPTRE_M41_Twin_HEAT" } };
+		LMGAsst[] = { {3, "OPTRE_200Rnd_95x40_Box_Tracer" } };
+		ATSpecialistAsst[] = { {2, "OPTRE_M41_Twin_HEAT" } };
+		AASpecialistAsst[] = { {2, "OPTRE_M41_Twin_HEAT_G" } };
 	};
 
 	class helmet: helmet {

@@ -55,6 +55,10 @@ class FactionRussiaEMRSummer: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {5, "rhs_100Rnd_762x54mmR_green" } };
+		MMGAsst[] = { {4, "rhs_100Rnd_762x54mmR_green" } };
+		ATSpecialistAsst[] = { {2, "rhs_rpg26_mag" } };
+		AASpecialistAsst[] = { {2, "rhs_mag_9k38_rocket" } };
 	};
 
 	class helmet: helmet {

@@ -42,11 +42,14 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		RiflemanAT[] = { { 1, "OPTRE_M41_Twin_HEAP" }, { 1, "OPTRE_M41_Twin_HEAT" } };
+		LMGAsst[] = { {3, "OPTRE_200Rnd_95x40_Box_Tracer" } };
+		ATSpecialistAsst[] = { {2, "OPTRE_M41_Twin_HEAT" } };
+		AASpecialistAsst[] = { {2, "OPTRE_M41_Twin_HEAT_G" } };
 	};
 
 	class helmet: helmet {
 		Default[] = { "OPTRE_FC_Marines_Helmet" };
-		Lead[] = { "OPTRE_UNSC_PatrolCap_Marines" };		
+		Lead[] = { "OPTRE_UNSC_PatrolCap_Marines" };
 		Command[] = { "OPTRE_UNSC_PatrolCap_Marines" };
 		Sergeant[] = { "OPTRE_FC_Marines_Helmet" };
 		SQL[] = { "OPTRE_FC_Marines_Helmet" };

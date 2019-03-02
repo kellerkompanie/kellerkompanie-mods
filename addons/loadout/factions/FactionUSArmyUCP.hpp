@@ -60,6 +60,10 @@ class FactionUSArmyUCP: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "rhs_200rnd_556x45_M_SAW" } };
+		MMGAsst[] = { {4, "rhsusf_100Rnd_762x51_m62_tracer" } };
+		ATSpecialistAsst[] = { {2, "rhs_fgm148_magazine_AT" } };
+		AASpecialistAsst[] = { {2, "rhs_fim92_mag" } };
 	};
 
 	class helmet: helmet {

@@ -139,6 +139,10 @@ class FactionBAFArctic: FactionBase {
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 1, "UK3CB_BAF_Javelin_CLU" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "UK3CB_BAF_762_200Rnd_T" } };
+		MMGAsst[] = { {3, "UK3CB_BAF_762_100Rnd_T" } };
+		ATSpecialistAsst[] = { {1, "UK3CB_BAF_Javelin_Slung_Tube" } };
+		AASpecialistAsst[] = { {2, "rhs_fim92_mag" } };
 	};
 
 	class helmet: helmet {
