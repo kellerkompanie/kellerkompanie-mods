@@ -26,8 +26,8 @@ class FactionCSAT: FactionBase {
 		Command[] = { "TFAR_mr3000" };
 		Sergeant[] = { "TFAR_mr3000" };
 		SQL[] = { "TFAR_mr3000" };
-		Doctor[] = { "B_TacticalPack_ocamo" };
-		Medic[] = { "B_TacticalPack_ocamo" };
+		Doctor[] = { "B_Kitbag_cbr" };
+		Medic[] = { "B_Kitbag_cbr" };
 		RiflemanAT[] = { "B_AssaultPack_ocamo" };
 		LMG[] = { "B_FieldPack_ocamo" };
 		LMGAsst[] = { "B_FieldPack_ocamo" };
