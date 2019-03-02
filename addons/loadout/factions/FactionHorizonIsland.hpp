@@ -2,7 +2,7 @@ class FactionHorizonIsland: FactionBase {
 	name = "[Main] Horizon Island Defense Forces";
 	logisticsHelicopter = "rhs_uh1h_hidf_unarmed";
 
-	#include "WeaponsHorizonIslands.hpp"
+	#include "WeaponsHorizonIsland.hpp"
 
 	class uniform: uniform {
 		Default[] = { "rhsgref_uniform_ERDL" };
