@@ -4,33 +4,6 @@ class FactionRussiaSpeznas: FactionBase {
 
 	#include "WeaponsRussiaSpeznas.hpp"
 
-	class role: role {
-		Lead = "Lead";
-		Command = "Command";
-		SQL = "Squad Leader";
-		Sergeant = "Sergeant";
-		FTL = "Fire Team Leader";
-		Doctor = "Doctor";
-		Medic = "Medic";
-		Rifleman = "Rifleman";
-		RiflemanAT = "Rifleman Anti-Tank (RPG)";
-		RiflemanAT_MAAWS = "Rifleman Anti-Tank (MAAWS)";
-		Grenadier = "Grenadier";
-		LMG = "LMG";
-		ATSpecialist = "Anti-Tank Specialist";
-		ATSpecialistAsst = "Anti-Tank Specialist Assistant";
-		AASpecialist = "Anti-Air Specialist";
-		AASpecialistAsst = "Anti-Air Specialist Assistant";
-		Marksman = "Marksman";
-		Sniper = "Sniper";
-		Spotter = "Spotter";
-		EOD = "Explosive Specialist";
-		Engineer = "Engineer";
-		HeliPilot = "Helicopter Pilot";
-		HeliCrew = "Helicopter Crew";
-		JTAC = "JTAC";
-	};
-
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_gorka_r_g" };
 		Sniper[] = { "U_B_FullGhillie_sard" };

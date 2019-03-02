@@ -5,22 +5,6 @@ class FactionUSBlackOpsTropic: FactionBase {
 	#include "WeaponsUSBlackOpsTropic.hpp"
 
 	class role: role {
-		Default = "Soldier";
-		CrateBase = "Empty Crate";
-		FireTeamCrate = "Fire Team Kiste";
-		InfantryCrate = "Infanterie Kiste";
-		GrenadesCrate = "Granaten Kiste";
-		MGCrate = "MG Kiste";
-		ATCrate = "Anti-Tank Kiste";
-		ATGustavCrate = "Anti-Tank Kiste (Gustav)";
-		AACrate = "Anti-Air Kiste";
-		MedicCrate = "Medic Kiste";
-		SupportCrate = "Support Kiste";
-		EODCrate = "Sprengmittel Kiste";
-		RationsCrate = "Rationen Kiste";
-		EmptyCrate = "Leere Kiste";
-		SpareWheel = "Ersatzrad";
-		SpareTrack = "Ersatzkette";
 		Lead = "Lead (MX)";
 		Lead416 = "Lead (HK416)";
 		Command = "Command (MX)";

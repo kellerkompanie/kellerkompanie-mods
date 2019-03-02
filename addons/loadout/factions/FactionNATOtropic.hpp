@@ -3,10 +3,6 @@ class FactionNatoTropic: FactionBase {
 
 	#include "WeaponsNATO.hpp"
 
-	class role: role {
-		Spotter = "Spotter";
-	};
-
 	class uniform: uniform {
 		Default[] = { "U_B_T_Soldier_F", "U_B_T_Soldier_AR_F" };
 		Lead[] = { "U_B_T_Soldier_F" };

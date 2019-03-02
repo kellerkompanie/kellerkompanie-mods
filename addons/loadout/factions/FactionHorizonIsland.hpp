@@ -4,30 +4,6 @@ class FactionHorizonIsland: FactionBase {
 
 	#include "WeaponsHorizonIslands.hpp"
 
-	class role: role {
-		Lead = "Lead";
-		Command = "Command";
-		SQL = "Squad Leader";
-		Sergeant = "Sergeant";
-		FTL = "Fire Team Leader";
-		Doctor = "Doctor";
-		Medic = "Medic";
-		Rifleman = "Rifleman";
-		RiflemanAT = "Rifleman Anti-Tank";
-		Grenadier = "Grenadier";
-		LMG = "Light Machine Gunner";
-		LMGAsst = "Light Machine Gunner Asst.";
-		MMG = "Medium Machine Gunner";
-		MMGAsst = "Medium Machine Gunner Asst.";
-		Marksman = "Marksman";
-		EOD = "Explosive Specialist";
-		Engineer = "Engineer";
-		Driver = "Driver/Crewman";
-		HeliPilot = "Helicopter Pilot";
-		HeliCrew = "Helicopter Crew";
-		JTAC = "JTAC";
-	};
-
 	class uniform: uniform {
 		Default[] = { "rhsgref_uniform_ERDL" };
 		HeliPilot[] = { "U_B_HeliPilotCoveralls" };

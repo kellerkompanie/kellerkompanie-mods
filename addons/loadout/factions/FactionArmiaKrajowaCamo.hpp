@@ -3,7 +3,7 @@ class FactionArmiaKrajowaCamo: FactionBase {
 
 	#include "WeaponsArmiaKrajowa.hpp"
 
-	class role: role {
+	class role {
 		Porucznik = "Porucznik (Lieutenant)";
 		Sierszant = "Sierzant (Sergeant)";
 		Kapral = "Kapral (Corporal)";
@@ -15,7 +15,8 @@ class FactionArmiaKrajowaCamo: FactionBase {
 		SzeregowyK98 = "Szeregowy [K98] (Rifleman)";
 	};
 
-	class rank: rank {
+	class rank {
+		Default = "PRIVATE";
 		Porucznik = "LIEUTENANT";
 		Sierszant = "SERGEANT";
 		Kapral = "CORPORAL";
