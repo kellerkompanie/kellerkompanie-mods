@@ -1,4 +1,4 @@
-class Weapons {
+class weapons: weapons {
 	// Primary
 	class keko_W_A3_KATIBA: PrimaryWeapon {
 		cfgName = "arifle_Katiba_F";
