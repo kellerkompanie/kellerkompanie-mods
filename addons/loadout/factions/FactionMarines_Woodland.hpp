@@ -53,8 +53,11 @@ class FactionMarines_Woodland: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
-		ATSpecialistAsst[] = { { 4, "rhs_mag_smaw_SR" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "rhs_200rnd_556x45_M_SAW" } };
+		MMGAsst[] = { {4, "rhsusf_100Rnd_762x51_m62_tracer" } };		
+		ATSpecialistAsst[] = { { 4, "rhs_mag_smaw_SR" }, {4, "rhs_mag_smaw_HEDP"} };
+		AASpecialistAsst[] = { {2, "rhs_fim92_mag" } };
 	};
 
 	class helmet: helmet {

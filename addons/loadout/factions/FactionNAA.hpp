@@ -4,6 +4,10 @@ class FactionNAA: FactionBase {
 
 	#include "WeaponsNAA.hpp"
 
+	class role: role {
+		RiflemanATTanks = "Rifleman Anti-Tank (Tanks DLC)";
+	};
+
 	class uniform: uniform {
 		Default[] = {
 				"NAA_fat_alpat_ard3",
@@ -90,8 +94,12 @@ class FactionNAA: FactionBase {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-		RiflemanATTanks[] = { { 2, AT_MAG_TANKS } };
+		RiflemanATTanks[] = { { 2, "MRAWS_HEAT_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "200Rnd_556x45_Box_Red_F" } };
+		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
+		ATSpecialistAsst[] = { {2, "Titan_AT" } };
+		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

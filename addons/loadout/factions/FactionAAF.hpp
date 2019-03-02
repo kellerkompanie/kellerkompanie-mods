@@ -4,6 +4,10 @@ class FactionAAF: FactionBase {
 
 	#include "WeaponsAAF.hpp"
 
+	class role: role {
+		RiflemanATTanks = "Rifleman Anti-Tank (Tanks DLC)";
+	};
+
 	class uniform: uniform {
 		Default[] = { "U_I_CombatUniform", "U_I_CombatUniform_shortsleeve" };
 		Lead[] = { "U_I_OfficerUniform" };
@@ -48,8 +52,12 @@ class FactionAAF: FactionBase {
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" } };
-		RiflemanATTanks[] = { { 2, AT_MAG_TANKS } };
+		RiflemanATTanks[] = { { 2, "MRAWS_HEAT_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "200Rnd_65x39_cased_Box_Tracer"} };
+		MMGAsst[] = { {3, "130Rnd_338_Mag"} };
+		ATSpecialistAsst = { {2, "Titan_AT"} };
+		AASpecialistAsst = { {2, "Titan_AA"} };
 	};
 
 	class helmet: helmet {

@@ -169,10 +169,14 @@ class FactionUSBlackOpsTropic: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL416[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-		RiflemanATGustav[] = { { 1, GUSTAV_MAG } };
-		RiflemanATGustav416[] = { { 1, GUSTAV_MAG } };
+		RiflemanATGustav[] = { { 1, "MRAWS_HEAT_F" } };
+		RiflemanATGustav416[] = { { 1, "MRAWS_HEAT_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 		JTAC416[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {4, "100Rnd_65x39_caseless_mag_Tracer" } };
+		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
+		ATSpecialistAsst[] = { {2, "Titan_AT" } };
+		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

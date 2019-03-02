@@ -47,6 +47,10 @@ class FactionBlackorderRedBerets: FactionBase {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {3, "rhsusf_200rnd_556x45_mixed_box" } };
+		MMGAsst[] = { {2, "rhsgref_296Rnd_792x57_SmK_alltracers_belt" } };
+		ATSpecialistAsst[] = { {3, "rhs_mag_maaws_HEAT" } };
+		AASpecialistAsst[] = { {2, "rhs_fim92_mag" } };
 	};
 
 	class helmet: helmet {

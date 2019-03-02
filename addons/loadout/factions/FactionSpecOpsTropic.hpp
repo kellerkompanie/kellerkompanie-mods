@@ -54,6 +54,7 @@ class FactionSpecOpsTropic: FactionBase {
 		Sergeant[] = {  };
 		SQL[] = {  };
 		JTAC[] = { { 4, "Laserbatteries" } };
+		LMGAsst[] = { {4, "SMA_150Rnd_762_M80A1_Mixed" } };
 	};
 
 	class helmet: helmet {

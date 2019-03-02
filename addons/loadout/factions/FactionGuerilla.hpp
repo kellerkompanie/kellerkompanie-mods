@@ -164,7 +164,10 @@ class FactionGuerilla: FactionBase {
 				{ 3, "UGL_FlareGreen_F" },
 				{ 3, "UGL_FlareRed_F" }
 			};
-		LMGAsst[] = { { 4, PRIMARY_MAG_LMG } };
+		LMGAsst[] = { {3, "200Rnd_65x39_cased_Box_Tracer" } };
+		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
+		ATSpecialistAsst[] = { {2, "RPG7_F" } };
+		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

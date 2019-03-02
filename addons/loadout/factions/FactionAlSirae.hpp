@@ -66,7 +66,10 @@ class FactionAlSirae: FactionBase {
 		Command[] = {  };
 		Sergeant[] = {  };
 		SQL[] = {  };
-		LMG[] = { { 2, PRIMARY_MAG_LMG } };
+		LMGAsst[] = { { 2, "200Rnd_65x39_cased_Box_Tracer" } };
+		MMGAsst[] = { { 2, "130Rnd_338_Mag" } };
+		ATSpecialistAsst[] = { {2, "Titan_AT"} };
+		AASpecialistAsst[] = { {2, "Titan_AA"} };
 	};
 
 	class helmet: helmet {

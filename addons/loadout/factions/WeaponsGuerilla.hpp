@@ -34,7 +34,7 @@ class weapons: weapons {
 		rails[] = {"acc_flashlight"};
 		bipods[] = {"bipod_03_F_blk"};
 		silencers[] = {"muzzle_snds_h_mg"};
-		magazines[] = {PRIMARY_MAG_LMG};
+		magazines[] = {"200Rnd_65x39_cased_Box_Tracer"};
 	};
 
 	// MMG
