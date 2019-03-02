@@ -1,6 +1,9 @@
 class FactionUSBlackOpsTropic: FactionBase {
 	name = "[Minimal] U.S. BlackOps (Tropic)";
 	logisticsHelicopter = "B_CTRG_Heli_Transport_01_tropic_F";
+
+	#include "WeaponsUSBlackOpsTropic.hpp"
+
 	class role: role {
 		Default = "Soldier";
 		CrateBase = "Empty Crate";

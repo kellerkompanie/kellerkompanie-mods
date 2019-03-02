@@ -1,6 +1,9 @@
 class FactionHAF: FactionBase {
 	name = "[Minimal] HAF - Hellenic Armed Forces";
 	logisticsHelicopter = "B_Heli_Transport_03_F";
+
+	#include "WeaponsChineseHAF.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

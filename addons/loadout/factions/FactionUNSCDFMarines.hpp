@@ -1,6 +1,9 @@
 class FactionUNSCDFMarines: FactionBase {
 	name = "[Sci-Fi] UNSCDF Marines - U.N. Space Command Defense Force Marines";
 	logisticsHelicopter = "OPTRE_Pelican_unarmed";
+
+	#include "WeaponsUNSCDF.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

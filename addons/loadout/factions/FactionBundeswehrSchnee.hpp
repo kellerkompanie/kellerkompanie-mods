@@ -1,27 +1,30 @@
 class FactionBundeswehrSchnee: FactionBase {
 	name = "[Main] Bundeswehr (Schneetarn)";
 	logisticsHelicopter = "kyo_MH47E_base";
+
+	#include "WeaponsBundeswehr.hpp"
+
 	class role: role {
-		Lead = "Zugführer";
+		Lead = "ZugfÃ¼hrer";
 		Command = "Oberkommando";
-		SQL = "Gruppenführer";
-		Sergeant = "Stellv. Zugführer";
-		FTL = "Truppführer";
+		SQL = "GruppenfÃ¼hrer";
+		Sergeant = "Stellv. ZugfÃ¼hrer";
+		FTL = "TruppfÃ¼hrer";
 		Doctor = "Arzt";
-		Medic = "Sanitäter";
-		Rifleman = "Schütze";
-		RiflemanAT = "Schütze AT (Panzerfaust)";
+		Medic = "Sanitater";
+		Rifleman = "SchÃ¼tze";
+		RiflemanAT = "SchÃ¼tze AT (Panzerfaust)";
 		Grenadier = "Grenadier";
 		LMG = "Leichtes MG";
 		LMGAsst = "Leichtes MG Helfer";
-		MMG = "MMG Schütze";
+		MMG = "MMG SchÃ¼tze";
 		MMGAsst = "MMG Helfer";
-		ATSpecialist = "ATGM Milan Schütze (Rohr)";
+		ATSpecialist = "ATGM Milan SchÃ¼tze (Rohr)";
 		ATSpecialistAsst = "ATGM Milan Helfer (Dreibein)";
-		AASpecialist = "Fliegerfaust Schütze";
+		AASpecialist = "Fliegerfaust SchÃ¼tze";
 		AASpecialistAsst = "Fliegerfaust Helfer";
-		Marksman = "Zielfernrohrschütze";
-		Sniper = "Scharfschütze";
+		Marksman = "ZielfernrohrschÃ¼tze";
+		Sniper = "ScharfschÃ¼tze";
 		Spotter = "Spotter";
 		EOD = "Sprengmittel Spezialist";
 		Engineer = "Pionier";

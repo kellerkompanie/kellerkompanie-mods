@@ -1,6 +1,9 @@
 class FactionHorizonIsland: FactionBase {
 	name = "[Main] Horizon Island Defense Forces";
 	logisticsHelicopter = "rhs_uh1h_hidf_unarmed";
+
+	#include "WeaponsHorizonIslands.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

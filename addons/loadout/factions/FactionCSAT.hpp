@@ -1,6 +1,9 @@
 class FactionCSAT: FactionBase {
 	name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
 	logisticsHelicopter = "O_Heli_Transport_04_box_F";
+
+	#include "WeaponsCSAT.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

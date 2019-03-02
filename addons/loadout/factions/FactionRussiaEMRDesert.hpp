@@ -1,6 +1,9 @@
 class FactionRussiaEMRDesert: FactionBase {
 	name = "[Main] Russia EMR (Desert)";
 	logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
+
+	#include "WeaponsRussiaEMR.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

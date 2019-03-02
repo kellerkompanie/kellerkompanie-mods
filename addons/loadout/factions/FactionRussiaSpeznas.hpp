@@ -1,6 +1,9 @@
 class FactionRussiaSpeznas: FactionBase {
 	name = "[Main] Russia - GRU Speznas";
 	logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
+
+	#include "WeaponsRussiaSpeznas.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

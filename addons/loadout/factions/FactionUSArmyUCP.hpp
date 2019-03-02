@@ -1,6 +1,9 @@
 class FactionUSArmyUCP: FactionBase {
 	name = "[Main] U.S. Army (UCP)";
 	logisticsHelicopter = "RHS_UH60M";
+
+	#include "WeaponsUSArmy.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

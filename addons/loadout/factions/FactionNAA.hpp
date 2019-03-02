@@ -1,6 +1,9 @@
 class FactionNAA: FactionBase {
 	name = "[Minimal] NAA - New Altis Army";
 	logisticsHelicopter = "NAA_Heli_light_03_unarmed_F";
+
+	#include "WeaponsNAA.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";
