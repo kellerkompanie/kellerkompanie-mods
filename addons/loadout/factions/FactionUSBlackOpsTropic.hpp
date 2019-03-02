@@ -86,6 +86,7 @@ class FactionUSBlackOpsTropic: FactionBase {
 			};
 		Lead[] = { "U_MU_B_soldier_wdl" };
 		Lead416[] = { "U_MU_B_soldier_wdl" };
+		Command[] = { "U_MU_B_soldier_wdl" };
 		HeliPilot[] = { "U_B_HeliPilotCoveralls" };
 		HeliPilotP90[] = { "U_B_HeliPilotCoveralls" };
 		JetPilot[] = { "U_B_PilotCoveralls" };
@@ -107,6 +108,7 @@ class FactionUSBlackOpsTropic: FactionBase {
 		Default[] = { "V_PlateCarrier1_rgr", "V_PlateCarrier2_rgr" };
 		Lead[] = { "V_Chestrig_rgr" };
 		Lead416[] = { "V_Chestrig_rgr" };
+		Command[] = { "V_Chestrig_rgr" };
 		Driver[] = { "V_BandollierB_rgr" };
 		DriverP90[] = { "V_BandollierB_rgr" };
 		HeliPilot[] = { "V_TacVest_camo" };
@@ -119,6 +121,8 @@ class FactionUSBlackOpsTropic: FactionBase {
 		Default[] = {  };
 		Lead[] = { "TFAR_rt1523g_black" };
 		Lead416[] = { "TFAR_rt1523g_black" };
+		Command[] = { "TFAR_rt1523g_black" };
+		Sergeant[] = { "TFAR_rt1523g_black" };
 		SQL[] = { "TFAR_rt1523g_black" };
 		SQL416[] = { "TFAR_rt1523g_black" };
 		Doctor[] = { "B_Kitbag_rgr" };
@@ -162,6 +166,7 @@ class FactionUSBlackOpsTropic: FactionBase {
 		Default[] = {  };
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		Lead416[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL416[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanATGustav[] = { { 1, GUSTAV_MAG } };

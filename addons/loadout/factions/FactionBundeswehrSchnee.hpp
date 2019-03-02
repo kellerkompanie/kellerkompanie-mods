@@ -50,6 +50,8 @@ class FactionBundeswehrSchnee: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "FRXA_tf_rt1523g_Ranger_Green" };
+		Command[] = { "FRXA_tf_rt1523g_Ranger_Green" };
+		Sergeant[] = { "FRXA_tf_rt1523g_Ranger_Green" };
 		SQL[] = { "FRXA_tf_rt1523g_Ranger_Green" };
 		Doctor[] = { "BWA3_Kitbag_Fleck_Medic" };
 		Medic[] = { "BWA3_Kitbag_Fleck_Medic" };
@@ -70,6 +72,7 @@ class FactionBundeswehrSchnee: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanAT[] = { { 1, AT_MAG } };
 		JTAC[] = { { 4, "Laserbatteries" } };
@@ -99,6 +102,7 @@ class FactionBundeswehrSchnee: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_G36 };
 		Lead[] = { keko_W_G36_GL_HuntIR };
+		Sergeant[] = { keko_W_G36_GL_HuntIR };
 		SQL[] = { keko_W_G36_GL_HuntIR };
 		FTL[] = { keko_W_G36_GL };
 		Grenadier[] = { keko_W_G36_GL };

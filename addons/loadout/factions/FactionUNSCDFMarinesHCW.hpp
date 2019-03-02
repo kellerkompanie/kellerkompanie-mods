@@ -7,11 +7,14 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 	class uniform: uniform {
 		Default[] = { "OPTRE_FC_Marines_Uniform" };
 		Lead[] = { "OPTRE_FC_Marines_Uniform_L" };
+		Command[] = { "OPTRE_FC_Marines_Uniform_L" };
 	};
 
 	class vest: vest {
 		Default[] = { "OPTRE_FC_Marines_Vest" };
 		Lead[] = { "OPTRE_FC_Marines_Vest_L" };
+		Command[] = { "OPTRE_FC_Marines_Vest_L" };
+		Sergeant[] = { "OPTRE_FC_Marines_Vest" };
 		SQL[] = { "OPTRE_FC_Marines_Vest" };
 		LMG[] = { "OPTRE_UNSC_M52A_Armor_MG_MAR" };
 		Driver[] = { "OPTRE_UNSC_M52A_Armor3_MAR" };
@@ -19,6 +22,7 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 
 	class backpack: backpack {
 		Command[] = { "OPTRE_ANPRC_521_Black" };
+		Sergeant[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		SQL[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		FTL[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		Doctor[] = { "OPTRE_UNSC_Rucksack_Medic" };
@@ -42,7 +46,9 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 
 	class helmet: helmet {
 		Default[] = { "OPTRE_FC_Marines_Helmet" };
-		Lead[] = { "OPTRE_UNSC_PatrolCap_Marines" };
+		Lead[] = { "OPTRE_UNSC_PatrolCap_Marines" };		
+		Command[] = { "OPTRE_UNSC_PatrolCap_Marines" };
+		Sergeant[] = { "OPTRE_FC_Marines_Helmet" };
 		SQL[] = { "OPTRE_FC_Marines_Helmet" };
 		Doctor[] = { "OPTRE_FC_Marines_Helmet_Medic" };
 		Medic[] = { "OPTRE_FC_Marines_Helmet_Medic" };
@@ -52,6 +58,7 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_OPTRE_MA37 };
 		Lead[] = {  };
+		Sergeant[] = { keko_W_OPTRE_BR55HB };
 		SQL[] = { keko_W_OPTRE_BR55HB };
 		FTL[] = { keko_W_OPTRE_MA37GL };
 		Grenadier[] = { keko_W_OPTRE_MA37GL };
@@ -62,7 +69,6 @@ class FactionUNSCDFMarinesHCW: FactionBase {
 
 	class secondary: secondary {
 		Default[] = { keko_W_OPTRE_M6G };
-		SQL[] = { keko_W_OPTRE_M6G };
 	};
 
 	class launcher: launcher {

@@ -39,6 +39,7 @@ class FactionIDAP: FactionBase {
 				"U_C_IDAP_Man_Tee_F"
 			};
 		Lead[] = { "U_C_IDAP_Man_casual_F" };
+		Command[] = { "U_C_IDAP_Man_casual_F" };
 		SQL[] = { "U_C_IDAP_Man_cargo_F" };
 		FTL[] = { "U_C_IDAP_Man_cargo_F" };
 		Doctor[] = {

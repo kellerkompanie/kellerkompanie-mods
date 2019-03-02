@@ -47,6 +47,8 @@ class FactionUNTOFIAAS: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_bwmod" };
+		Command[] = { "TFAR_rt1523g_bwmod" };
+		Sergeant[] = { "TFAR_rt1523g_bwmod" };
 		SQL[] = { "TFAR_rt1523g_bwmod" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -66,6 +68,7 @@ class FactionUNTOFIAAS: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};

@@ -18,6 +18,7 @@ class FactionRussiaEMRDesert: FactionBase {
 				"rhs_6b23_digi_6sh92_spetsnaz2"
 			};
 		Lead[] = { "rhs_6b23_digi_6sh92_headset_mapcase" };
+		Command[] = { "rhs_6b23_digi_6sh92_headset_mapcase" };
 		SQL[] = { "rhs_6b23_digi_6sh92_headset" };
 		FTL[] = { "rhs_6b23_digi_6sh92_vog_headset", "rhs_6b23_6sh116_vog" };
 		Doctor[] = { "rhs_6b23_digi_medic" };
@@ -32,6 +33,8 @@ class FactionRussiaEMRDesert: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_green" };
+		Command[] = { "TFAR_rt1523g_green" };
+		Sergeant[] = { "TFAR_rt1523g_green" };
 		SQL[] = { "TFAR_rt1523g_green" };
 		Doctor[] = { "rhssaf_kitbag_smb" };
 		Medic[] = { "rhssaf_kitbag_smb" };

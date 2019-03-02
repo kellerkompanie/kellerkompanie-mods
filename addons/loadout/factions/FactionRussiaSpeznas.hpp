@@ -37,6 +37,8 @@ class FactionRussiaSpeznas: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "tfw_ilbe_gr" };
+		Command[] = { "tfw_ilbe_gr" };
+		Sergeant[] = { "tfw_ilbe_gr" };
 		SQL[] = { "tfw_ilbe_gr" };
 		Doctor[] = { "rhssaf_kitbag_smb" };
 		Medic[] = { "rhssaf_kitbag_smb" };
@@ -54,6 +56,7 @@ class FactionRussiaSpeznas: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -80,6 +83,7 @@ class FactionRussiaSpeznas: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_ASVAL };
 		Lead[] = { keko_W_AK74MR_GL };
+		Sergeant[] = { keko_W_AK74MR_GL };
 		SQL[] = { keko_W_AK74MR_GL };
 		FTL[] = { keko_W_AK74MR_GL };
 		Grenadier[] = { keko_W_AK74MR_GL };

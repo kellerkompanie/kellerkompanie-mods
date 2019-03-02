@@ -36,6 +36,8 @@ class FactionWAM: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_rhs" };
+		Command[] = { "TFAR_rt1523g_rhs" };
+		Sergeant[] = { "TFAR_rt1523g_rhs" };
 		SQL[] = { "TFAR_rt1523g_rhs" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -56,6 +58,7 @@ class FactionWAM: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -63,6 +66,7 @@ class FactionWAM: FactionBase {
 	class helmet: helmet {
 		Default[] = { "H_Cap_headphones", "GUR_beret_01" };
 		Lead[] = { "GUR_beret_01" };
+		Command[] = { "GUR_beret_01" };
 		Driver[] = { "H_HelmetCrew_I" };
 		HeliPilot[] = { "H_PilotHelmetHeli_B" };
 		HeliCrew[] = { "H_CrewHelmetHeli_B" };
@@ -71,6 +75,7 @@ class FactionWAM: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_CTARC };
 		Lead[] = { keko_W_A3_CTAR_GL_HuntIR };
+		Sergeant[] = { keko_W_A3_CTAR_GL_HuntIR };
 		SQL[] = { keko_W_A3_CTAR_GL_HuntIR };
 		FTL[] = { keko_W_A3_CTAR_GL };
 		Grenadier[] = { keko_W_A3_CTAR_GL };

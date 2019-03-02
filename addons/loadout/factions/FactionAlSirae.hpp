@@ -17,6 +17,8 @@ class FactionAlSirae: FactionBase {
 				"GUR_fat_ALSIR_7"
 			};
 		Lead[] = { "GUR_fat_Alsir_1" };
+		Command[] = { "GUR_fat_Alsir_1" };
+		Sergeant[] = { "GUR_fat_ALSIR_6" };
 		SQL[] = { "GUR_fat_ALSIR_6" };
 	};
 
@@ -34,6 +36,7 @@ class FactionAlSirae: FactionBase {
 				"V_HarnessO_gry",
 				"V_BandollierB_cbr"
 			};
+		Sergeant[] = { "V_HarnessOGL_brn" };
 		SQL[] = { "V_HarnessOGL_brn" };
 		Doctor[] = { "V_PlateCarrierIA1_dgtl" };
 		Medic[] = { "V_PlateCarrierIA1_dgtl" };
@@ -41,6 +44,8 @@ class FactionAlSirae: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_rhs" };
+		Command[] = { "TFAR_rt1523g_rhs" };
+		Sergeant[] = { "TFAR_rt1523g_rhs" };
 		SQL[] = { "TFAR_rt1523g_rhs" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -58,6 +63,8 @@ class FactionAlSirae: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {  };
+		Command[] = {  };
+		Sergeant[] = {  };
 		SQL[] = {  };
 		LMG[] = { { 2, PRIMARY_MAG_LMG } };
 	};

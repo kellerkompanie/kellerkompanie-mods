@@ -20,6 +20,8 @@ class FactionBAFTMP: FactionBase {
 				"UK3CB_BAF_V_Osprey_DPMT8"
 			};
 		Lead[] = { "UK3CB_BAF_V_Osprey_DPMT1" };
+		Command[] = { "UK3CB_BAF_V_Osprey_DPMT1" };
+		Sergeant[] = { "UK3CB_BAF_V_Osprey_DPMT2" };
 		SQL[] = { "UK3CB_BAF_V_Osprey_DPMT2" };
 		FTL[] = { "UK3CB_BAF_V_Osprey_DPMT3" };
 		Doctor[] = { "UK3CB_BAF_V_Osprey_DPMT9" };
@@ -31,6 +33,8 @@ class FactionBAFTMP: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "UK3CB_BAF_B_Bergen_DPMT_SL_A" };
+		Command[] = { "UK3CB_BAF_B_Bergen_DPMT_SL_A" };
+		Sergeant[] = { "UK3CB_BAF_B_Bergen_DPMT_SL_A", "UK3CB_BAF_B_Bergen_OLI_SL_A" };
 		SQL[] = { "UK3CB_BAF_B_Bergen_DPMT_SL_A", "UK3CB_BAF_B_Bergen_OLI_SL_A" };
 		Doctor[] = { "UK3CB_BAF_B_Kitbag_DPMT", "UK3CB_BAF_B_Kitbag_OLI" };
 		LMG[] = {
@@ -84,6 +88,7 @@ class FactionBAFTMP: FactionBase {
 				"UK3CB_BAF_H_Mk6_DPMT_F"
 			};
 		Lead[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
+		Command[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
 		Driver[] = { "UK3CB_BAF_H_CrewHelmet_B" };
 		HeliPilot[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
 		HeliCrew[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
@@ -93,6 +98,7 @@ class FactionBAFTMP: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_BAF_L85A2 };
 		Lead[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
+		Sergeant[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		SQL[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		FTL[] = { keko_W_BAF_L85A2_UGL };
 		Grenadier[] = { keko_W_BAF_L85A2_UGL };

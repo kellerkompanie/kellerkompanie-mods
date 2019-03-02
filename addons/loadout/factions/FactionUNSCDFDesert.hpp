@@ -7,11 +7,14 @@ class FactionUNSCDFDesert: FactionBase {
 	class uniform: uniform {
 		Default[] = { "OPTRE_UNSC_Army_Uniform_DES" };
 		Lead[] = { "OPTRE_UNSC_Army_Uniform_S_DES" };
+		Command[] = { "OPTRE_UNSC_Army_Uniform_S_DES" };
 	};
 
 	class vest: vest {
 		Default[] = { "OPTRE_UNSC_M52A_Armor_Rifleman_DES" };
 		Lead[] = { "OPTRE_UNSC_M52A_Armor_TL_DES" };
+		Command[] = { "OPTRE_UNSC_M52A_Armor_TL_DES" };
+		Sergeant[] = { "OPTRE_UNSC_M52A_Armor_TL_DES" };
 		SQL[] = { "OPTRE_UNSC_M52A_Armor_TL_DES" };
 		FTL[] = { "OPTRE_UNSC_M52A_Armor_TL_DES" };
 		Doctor[] = { "OPTRE_UNSC_M52A_Armor_Medic_DES" };
@@ -22,6 +25,7 @@ class FactionUNSCDFDesert: FactionBase {
 
 	class backpack: backpack {
 		Command[] = { "OPTRE_ANPRC_521_Black" };
+		Sergeant[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		SQL[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		FTL[] = { "OPTRE_UNSC_Rucksack_Lead" };
 		Doctor[] = { "OPTRE_UNSC_Rucksack_Medic" };
@@ -46,6 +50,8 @@ class FactionUNSCDFDesert: FactionBase {
 	class helmet: helmet {
 		Default[] = { "OPTRE_UNSC_CH252_Helmet_DES" };
 		Lead[] = { "OPTRE_UNSC_PatrolCap_Army" };
+		Command[] = { "OPTRE_UNSC_PatrolCap_Army" };
+		Sergeant[] = { "OPTRE_UNSC_CH252_Helmet2_DES" };
 		SQL[] = { "OPTRE_UNSC_CH252_Helmet2_DES" };
 		FTL[] = { "OPTRE_UNSC_CH252_Helmet2_DES" };
 		Doctor[] = { "OPTRE_UNSC_CH252_Helmet2_DES_MED" };
@@ -56,6 +62,7 @@ class FactionUNSCDFDesert: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_OPTRE_MA37 };
 		Lead[] = {  };
+		Sergeant[] = { keko_W_OPTRE_BR55HB };
 		SQL[] = { keko_W_OPTRE_BR55HB };
 		FTL[] = { keko_W_OPTRE_MA37GL };
 		Grenadier[] = { keko_W_OPTRE_MA37GL };
@@ -66,7 +73,6 @@ class FactionUNSCDFDesert: FactionBase {
 
 	class secondary: secondary {
 		Default[] = { keko_W_OPTRE_M6G };
-		SQL[] = { keko_W_OPTRE_M6G };
 	};
 
 	class launcher: launcher {

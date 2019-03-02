@@ -20,6 +20,8 @@ class FactionBAFDesert: FactionBase {
 				"UK3CB_BAF_V_Osprey_DDPM8"
 			};
 		Lead[] = { "UK3CB_BAF_V_Osprey_DDPM1" };
+		Command[] = { "UK3CB_BAF_V_Osprey_DDPM1" };
+		Sergeant[] = { "UK3CB_BAF_V_Osprey_DDPM2" };
 		SQL[] = { "UK3CB_BAF_V_Osprey_DDPM2" };
 		FTL[] = { "UK3CB_BAF_V_Osprey_DDPM3" };
 		Doctor[] = { "UK3CB_BAF_V_Osprey_DDPM9" };
@@ -31,6 +33,8 @@ class FactionBAFDesert: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "UK3CB_BAF_B_Bergen_DDPM_SL_A", "UK3CB_BAF_B_Bergen_TAN_SL_A" };
+		Command[] = { "UK3CB_BAF_B_Bergen_DDPM_SL_A", "UK3CB_BAF_B_Bergen_TAN_SL_A" };
+		Sergeant[] = { "UK3CB_BAF_B_Bergen_DDPM_SL_A", "UK3CB_BAF_B_Bergen_TAN_SL_A" };
 		SQL[] = { "UK3CB_BAF_B_Bergen_DDPM_SL_A", "UK3CB_BAF_B_Bergen_TAN_SL_A" };
 		Doctor[] = { "UK3CB_BAF_B_Kitbag_DDPM", "UK3CB_BAF_B_Kitbag_TAN" };
 		LMG[] = {
@@ -93,6 +97,7 @@ class FactionBAFDesert: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_BAF_L85A2 };
 		Lead[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
+		Sergeant[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		SQL[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		FTL[] = { keko_W_BAF_L85A2_UGL };
 		Grenadier[] = { keko_W_BAF_L85A2_UGL };

@@ -36,6 +36,8 @@ class FactionSpecOpsTropic: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "FRXA_tf_rt1523g_Ranger_Green" };
+		Command[] = { "FRXA_tf_rt1523g_Ranger_Green" };
+		Sergeant[] = { "FRXA_tf_rt1523g_Ranger_Green" };
 		SQL[] = { "FRXA_tf_rt1523g_Ranger_Green" };
 		Doctor[] = { "VSM_OGA_OD_Backpack_Kitbag" };
 		Medic[] = { "VSM_OGA_OD_Backpack_Kitbag" };
@@ -49,6 +51,7 @@ class FactionSpecOpsTropic: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {  };
+		Sergeant[] = {  };
 		SQL[] = {  };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -95,6 +98,11 @@ class FactionSpecOpsTropic: FactionBase {
 				keko_HK416_CustomOD
 			};
 		Lead[] = {
+				keko_HK416_GL,
+				keko_HK416_GL_PaintedOD,
+				keko_HK416_GL_CustomOD
+			};
+		Sergeant[] = {
 				keko_HK416_GL,
 				keko_HK416_GL_PaintedOD,
 				keko_HK416_GL_CustomOD

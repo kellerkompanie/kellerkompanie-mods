@@ -17,6 +17,8 @@ class FactionHorizonIsland: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "FRXA_tf_rt1523g_big_Ranger_Green" };
+		Command[] = { "FRXA_tf_rt1523g_big_Ranger_Green" };
+		Sergeant[] = { "FRXA_tf_rt1523g_big_Ranger_Green" };
 		SQL[] = { "FRXA_tf_rt1523g_big_Ranger_Green" };
 		Doctor[] = { "rhsgref_hidf_alicepack" };
 		Medic[] = { "rhsgref_hidf_alicepack" };
@@ -31,6 +33,7 @@ class FactionHorizonIsland: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {  };
+		Sergeant[] = {  };
 		SQL[] = {  };
 		JTAC[] = {  };
 	};
@@ -52,6 +55,7 @@ class FactionHorizonIsland: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_RHS_M16A4 };
 		Lead[] = { keko_W_RHS_M16A4 };
+		Sergeant[] = { keko_W_RHS_M16A4_GL };
 		SQL[] = { keko_W_RHS_M16A4_GL };
 		FTL[] = { keko_W_RHS_M16A4_GL };
 		Grenadier[] = { keko_W_RHS_M16A4_GL };
