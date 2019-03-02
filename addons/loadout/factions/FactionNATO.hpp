@@ -11,18 +11,11 @@ class FactionNato: FactionBase {
 			U_B_CombatUniform_mcam_vest,
 			U_B_CombatUniform_mcam_worn
 		};
-		Lead[] = {
-			U_B_CombatUniform_mcam
-		};
-		HeliPilot[] = {
-			U_B_HeliPilotCoveralls
-		};
-		HeliCrew[] = {
-			U_B_HeliPilotCoveralls
-		};
-		JetPilot[] = {
-			U_B_PilotCoveralls
-		};
+		Lead[] = { U_B_CombatUniform_mcam };
+		Command[] = { U_B_CombatUniform_mcam };
+		HeliPilot[] = { U_B_HeliPilotCoveralls };
+		HeliCrew[] = { U_B_HeliPilotCoveralls };
+		JetPilot[] = { U_B_PilotCoveralls };
 	};
 
 	class vest: vest {
@@ -30,24 +23,13 @@ class FactionNato: FactionBase {
 			V_PlateCarrier1_rgr,
 			V_PlateCarrier2_rgr
 		};
-		Lead[] = {
-			V_Chestrig_rgr
-		};
-		Doctor[] = {
-			V_PlateCarrierSpec_rgr
-		};
-		Medic[] = {
-			V_PlateCarrierSpec_rgr
-		};
-		Driver[] = {
-			V_BandollierB_rgr
-		};
-		HeliPilot[] = {
-			V_TacVest_blk
-		};
-		JetPilot[] = {
-			V_TacVest_blk
-		};
+		Lead[] = { V_Chestrig_rgr };
+		Command[] = { V_Chestrig_rgr };
+		Doctor[] = { V_PlateCarrierSpec_rgr	};
+		Medic[] = {	V_PlateCarrierSpec_rgr };
+		Driver[] = { V_BandollierB_rgr };
+		HeliPilot[] = { V_TacVest_blk };
+		JetPilot[] = { V_TacVest_blk };
 	};
 
 	class vestInventory: vestInventory {
@@ -86,6 +68,8 @@ class FactionNato: FactionBase {
 		LMG[] = { B_FieldPack_khk };
 		LMGAsst[] = { B_FieldPack_khk };
 		Lead[] = { TFAR_rt1523g_rhs };
+		Command[] = { TFAR_rt1523g_rhs };
+		Sergeant[] = { TFAR_rt1523g_rhs };
 		SQL[] = { TFAR_rt1523g_rhs };
 		MMG[] = { B_FieldPack_khk };
 		MMGAsst[] = { B_FieldPack_khk };
@@ -95,12 +79,16 @@ class FactionNato: FactionBase {
 		AASpecialistAsst[] = { B_FieldPack_cbr };
 		EOD[] = { B_Carryall_cbr };
 		Engineer[] = { B_Carryall_cbr };
-		JTAC[] = { TFAR_rt1523g_rhs	};
+		JTAC[] = { TFAR_rt1523g_big_rhs	};
 		UAVOperator[] = { B_UAV_01_backpack_F };
 	};
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {
+			{1, ACE_HuntIR_monitor},
+			{4, ACE_HuntIR_M203}
+		};
+		Sergeant[] = {
 			{1, ACE_HuntIR_monitor},
 			{4, ACE_HuntIR_M203}
 		};

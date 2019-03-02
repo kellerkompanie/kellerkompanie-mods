@@ -57,7 +57,7 @@ class weapons: weapons {
 	class keko_W_A3_MX_SW: keko_W_A3_MX
 	{
 		cfgName = "arifle_MX_SW_F";
-		magazines[] = {PRIMARY_MAG_LMG};
+		magazines[] = {"100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"};
 	};
 	class keko_W_A3_MX_SW_BLACK: keko_W_A3_MX_SW
 	{
