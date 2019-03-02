@@ -7,6 +7,7 @@ class FactionBAFArcticWhite: FactionBase {
 	class uniform: uniform {
 		Default[] = { "UK3CB_BAF_U_Smock_Arctic" };
 		Lead[] = { "UK3CB_BAF_U_RolledUniform_MTP" };
+		Command[] = { "UK3CB_BAF_U_RolledUniform_MTP" };
 		HeliPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
 		JetPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
 	};
@@ -24,6 +25,8 @@ class FactionBAFArcticWhite: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "UK3CB_BAF_B_Bergen_Arctic_SL_A" };
+		Command[] = { "UK3CB_BAF_B_Bergen_Arctic_SL_A" };
+		Sergeant[] = { "UK3CB_BAF_B_Bergen_Arctic_SL_A" };
 		SQL[] = { "UK3CB_BAF_B_Bergen_Arctic_SL_A" };
 		Doctor[] = { "UK3CB_BAF_B_Kitbag_Arctic" };
 		LMG[] = { "UK3CB_BAF_B_Bergen_Arctic_Rifleman_A", "UK3CB_BAF_B_Bergen_Arctic_Rifleman_B" };
@@ -42,6 +45,7 @@ class FactionBAFArcticWhite: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 1, "UK3CB_BAF_Javelin_CLU" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
@@ -50,6 +54,7 @@ class FactionBAFArcticWhite: FactionBase {
 	class helmet: helmet {
 		Default[] = { "UK3CB_BAF_H_Mk7_Win_A", "UK3CB_BAF_H_Mk7_Win_ESS_A" };
 		Lead[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
+		Command[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
 		Driver[] = { "UK3CB_BAF_H_CrewHelmet_B" };
 		HeliPilot[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
 		HeliCrew[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
@@ -59,6 +64,7 @@ class FactionBAFArcticWhite: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_BAF_L85A2 };
 		Lead[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
+		Sergeant[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		SQL[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		FTL[] = { keko_W_BAF_L85A2_UGL };
 		Grenadier[] = { keko_W_BAF_L85A2_UGL };

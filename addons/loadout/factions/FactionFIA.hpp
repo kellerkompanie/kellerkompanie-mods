@@ -39,6 +39,8 @@ class FactionFIA: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g" };
+		Command[] = { "TFAR_rt1523g" };
+		Sergeant[] = { "TFAR_rt1523g" };
 		SQL[] = { "TFAR_rt1523g" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -53,6 +55,11 @@ class FactionFIA: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {
+				{ 6, "UGL_FlareWhite_F" },
+				{ 3, "UGL_FlareGreen_F" },
+				{ 3, "UGL_FlareRed_F" }
+			};
+		Sergeant[] = {
 				{ 6, "UGL_FlareWhite_F" },
 				{ 3, "UGL_FlareGreen_F" },
 				{ 3, "UGL_FlareRed_F" }
@@ -80,6 +87,7 @@ class FactionFIA: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_Mk20C };
 		Lead[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
+		Sergeant[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
 		SQL[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
 		FTL[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
 		Grenadier[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };

@@ -7,6 +7,7 @@ class FactionCSAT: FactionBase {
 	class uniform: uniform {
 		Default[] = { "U_O_CombatUniform_ocamo" };
 		Lead[] = { "U_O_OfficerUniform_ocamo" };
+		Command[] = { "U_O_OfficerUniform_ocamo" };
 		HeliPilot[] = { "U_O_PilotCoveralls" };
 		JetPilot[] = { "U_O_PilotCoveralls" };
 	};
@@ -14,6 +15,7 @@ class FactionCSAT: FactionBase {
 	class vest: vest {
 		Default[] = { "V_HarnessO_brn" };
 		Lead[] = { "V_BandollierB_cbr" };
+		Command[] = { "V_BandollierB_cbr" };
 		Driver[] = { "V_BandollierB_khk" };
 		HeliPilot[] = { "V_TacVest_blk" };
 		JetPilot[] = { "V_TacVest_blk" };
@@ -21,6 +23,8 @@ class FactionCSAT: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_mr3000" };
+		Command[] = { "TFAR_mr3000" };
+		Sergeant[] = { "TFAR_mr3000" };
 		SQL[] = { "TFAR_mr3000" };
 		Doctor[] = { "B_TacticalPack_ocamo" };
 		Medic[] = { "B_TacticalPack_ocamo" };
@@ -41,6 +45,7 @@ class FactionCSAT: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanAT[] = { { 1, "RPG32_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
@@ -59,6 +64,7 @@ class FactionCSAT: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_KATIBA_SHORT };
 		Lead[] = { keko_W_A3_KATIBA_GL_HUNTIR };
+		Sergeant[] = { keko_W_A3_KATIBA_GL_HUNTIR };
 		SQL[] = { keko_W_A3_KATIBA_GL_HUNTIR };
 		FTL[] = { keko_W_A3_KATIBA_GL };
 		Grenadier[] = { keko_W_A3_KATIBA_GL };

@@ -19,6 +19,8 @@ class FactionUSArmyUCP: FactionBase {
 	class vest: vest {
 		Default[] = { "rhsusf_iotv_ucp_Rifleman" };
 		Lead[] = { "rhsusf_iotv_ucp_Teamleader" };
+		Command[] = { "rhsusf_iotv_ucp_Teamleader" };
+		Sergeant[] = { "rhsusf_iotv_ucp_Squadleader" };
 		SQL[] = { "rhsusf_iotv_ucp_Squadleader" };
 		Doctor[] = { "rhsusf_iotv_ucp_Medic" };
 		Medic[] = { "rhsusf_iotv_ucp_Medic" };
@@ -34,6 +36,8 @@ class FactionUSArmyUCP: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_rhs" };
+		Command[] = { "TFAR_rt1523g_rhs" };
+		Sergeant[] = { "TFAR_rt1523g_rhs" };
 		SQL[] = { "TFAR_rt1523g_rhs" };
 		Doctor[] = { "rhsusf_assault_eagleaiii_ucp" };
 		Medic[] = { "rhsusf_assault_eagleaiii_ucp" };
@@ -53,6 +57,7 @@ class FactionUSArmyUCP: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -76,6 +81,7 @@ class FactionUSArmyUCP: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_M4 };
 		Lead[] = { keko_W_M4_GL_HUNTIR };
+		Sergeant[] = { keko_W_M4_GL_HUNTIR };
 		SQL[] = { keko_W_M4_GL_HUNTIR };
 		FTL[] = { keko_W_M4_GL };
 		Grenadier[] = { keko_W_M4_GL };

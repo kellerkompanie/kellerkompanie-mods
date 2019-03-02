@@ -6,11 +6,13 @@ class FactionNatoTropic: FactionNato {
 	class uniform: uniform {
 		Default[] = { "U_B_T_Soldier_F", "U_B_T_Soldier_AR_F" };
 		Lead[] = { "U_B_T_Soldier_F" };
+		Command[] = { "U_B_T_Soldier_F" };
 	};
 
 	class vest: vest {
 		Default[] = { "V_PlateCarrier1_tna_F", "V_PlateCarrier2_tna_F" };
 		Lead[] = { "V_TacChestrig_grn_F" };
+		Command[] = { "V_TacChestrig_grn_F" };
 		Doctor[] = { "V_PlateCarrierSpec_tna_F" };
 		Medic[] = { "V_PlateCarrierSpec_tna_F" };
 		EOD[] = { "V_PlateCarrierGL_tna_F" };
@@ -19,6 +21,8 @@ class FactionNatoTropic: FactionNato {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_green" };
+		Command[] = { "TFAR_rt1523g_green" };
+		Sergeant[] = { "TFAR_rt1523g_green" };
 		SQL[] = { "TFAR_rt1523g_green" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -48,6 +52,7 @@ class FactionNatoTropic: FactionNato {
 	class primary: primary {
 		Default[] = { keko_W_A3_MX_TROPIC };
 		Lead[] = { keko_W_A3_MX_GL_TROPIC_HUNTIR };
+		Sergeant[] = { keko_W_A3_MX_GL_TROPIC_HUNTIR };
 		SQL[] = { keko_W_A3_MX_GL_TROPIC_HUNTIR };
 		FTL[] = { keko_W_A3_MX_GL_TROPIC };
 		Grenadier[] = { keko_W_A3_MX_GL_TROPIC };

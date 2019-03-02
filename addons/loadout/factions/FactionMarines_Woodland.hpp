@@ -13,6 +13,8 @@ class FactionMarines_Woodland: FactionBase {
 	class vest: vest {
 		Default[] = { "rhsusf_spc_light" };
 		Lead[] = { "rhsusf_spc_light" };
+		Command[] = { "rhsusf_spc_light" };
+		Sergeant[] = { "rhsusf_spc_squadleader" };
 		SQL[] = { "rhsusf_spc_squadleader" };
 		Doctor[] = { "rhsusf_spc_corpsman" };
 		Medic[] = { "rhsusf_spc_corpsman" };
@@ -27,6 +29,8 @@ class FactionMarines_Woodland: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "tfw_ilbe_wd" };
+		Command[] = { "tfw_ilbe_wd" };
+		Sergeant[] = { "tfw_ilbe_wd" };
 		SQL[] = { "tfw_ilbe_wd" };
 		Doctor[] = { "rhsusf_assault_eagleaiii_coy" };
 		Medic[] = { "rhsusf_assault_eagleaiii_coy" };
@@ -46,6 +50,7 @@ class FactionMarines_Woodland: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
 		ATSpecialistAsst[] = { { 4, "rhs_mag_smaw_SR" } };
@@ -77,6 +82,7 @@ class FactionMarines_Woodland: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_RHS_M16A4 };
 		Lead[] = { keko_W_RHS_M4A1_GL };
+		Sergeant[] = { keko_W_RHS_M4A1_GL };
 		SQL[] = { keko_W_RHS_M4A1_GL };
 		FTL[] = { keko_W_RHS_M16A4_GL };
 		Doctor[] = { keko_W_RHS_M4A1 };

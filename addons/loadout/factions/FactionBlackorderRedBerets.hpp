@@ -24,6 +24,8 @@ class FactionBlackorderRedBerets: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "FRXA_tf_rt1523g_Black" };
+		Command[] = { "FRXA_tf_rt1523g_Black" };
+		Sergeant[] = { "FRXA_tf_rt1523g_Black" };
 		SQL[] = { "FRXA_tf_rt1523g_Black" };
 		Doctor[] = { "B_MU_Kitbag_blk" };
 		Medic[] = { "B_MU_Kitbag_blk" };
@@ -60,6 +62,7 @@ class FactionBlackorderRedBerets: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_Tavor };
 		Lead[] = { keko_W_MK18_M320_HUNTIR };
+		Sergeant[] = { keko_W_MK18_M320_HUNTIR };
 		SQL[] = { keko_W_MK18_M320_HUNTIR };
 		FTL[] = { keko_W_MK18_M320 };
 		Grenadier[] = { keko_W_MK18_M320 };

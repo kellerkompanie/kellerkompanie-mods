@@ -15,6 +15,7 @@ class FactionBlackorder: FactionBase {
 	class vest: vest {
 		Default[] = { "V_BlackOrder_PlateCarrier" };
 		Lead[] = { "V_BlackOrder_Chestrig" };
+		Command[] = { "V_BlackOrder_Chestrig" };
 		Doctor[] = { "V_BlackOrder_PlateCarrier_medic" };
 		Medic[] = { "V_BlackOrder_PlateCarrier_medic" };
 		Driver[] = { "V_BandollierB_blk" };
@@ -24,6 +25,8 @@ class FactionBlackorder: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "FRXA_tf_rt1523g_Black" };
+		Command[] = { "FRXA_tf_rt1523g_Black" };
+		Sergeant[] = { "FRXA_tf_rt1523g_Black" };
 		SQL[] = { "FRXA_tf_rt1523g_Black" };
 		Doctor[] = { "B_MU_Kitbag_blk" };
 		Medic[] = { "B_MU_Kitbag_blk" };
@@ -43,6 +46,7 @@ class FactionBlackorder: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};

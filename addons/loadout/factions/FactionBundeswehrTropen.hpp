@@ -54,6 +54,8 @@ class FactionBundeswehrTropen: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_big_bwmod_tropen" };
+		Command[] = { "TFAR_rt1523g_big_bwmod_tropen" };
+		Sergeant[] = { "TFAR_rt1523g_big_bwmod_tropen" };
 		SQL[] = { "TFAR_rt1523g_big_bwmod_tropen" };
 		Doctor[] = { "BWA3_Kitbag_Tropen_Medic" };
 		Medic[] = { "BWA3_Kitbag_Tropen_Medic" };
@@ -74,6 +76,7 @@ class FactionBundeswehrTropen: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanAT[] = { { 1, AT_MAG } };
 		MMGAsst[] = { { 3, PRIMARY_MAG_MMG } };
@@ -104,6 +107,7 @@ class FactionBundeswehrTropen: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_G36, keko_W_G36_D };
 		Lead[] = { keko_W_G36_GL_HuntIR, keko_W_G36_GL_HuntIR_D };
+		Sergeant[] = { keko_W_G36_GL_HuntIR, keko_W_G36_GL_HuntIR_D };
 		SQL[] = { keko_W_G36_GL_HuntIR, keko_W_G36_GL_HuntIR_D };
 		FTL[] = { keko_W_G36_GL, keko_W_G36_GL_D };
 		Grenadier[] = { keko_W_G36_GL, keko_W_G36_GL_D };

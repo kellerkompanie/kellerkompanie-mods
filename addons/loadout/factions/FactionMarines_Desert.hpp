@@ -13,6 +13,8 @@ class FactionMarines_Desert: FactionBase {
 	class vest: vest {
 		Default[] = { "rhsusf_spc_light" };
 		Lead[] = { "rhsusf_spc_light" };
+		Command[] = { "rhsusf_spc_light" };
+		Sergeant[] = { "rhsusf_spc_squadleader" };
 		SQL[] = { "rhsusf_spc_squadleader" };
 		Doctor[] = { "rhsusf_spc_corpsman" };
 		Medic[] = { "rhsusf_spc_corpsman" };
@@ -27,6 +29,8 @@ class FactionMarines_Desert: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "tfw_ilbe_d" };
+		Command[] = { "tfw_ilbe_d" };
+		Sergeant[] = { "tfw_ilbe_d" };
 		SQL[] = { "tfw_ilbe_d" };
 		Doctor[] = { "rhsusf_assault_eagleaiii_coy" };
 		Medic[] = { "rhsusf_assault_eagleaiii_coy" };
@@ -46,6 +50,7 @@ class FactionMarines_Desert: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
 		ATSpecialistAsst[] = { { 4, "rhs_mag_smaw_SR" } };

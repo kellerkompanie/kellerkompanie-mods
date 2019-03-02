@@ -7,6 +7,7 @@ class FactionBAFArctic: FactionBase {
 	class uniform: uniform {
 		Default[] = { "UK3CB_BAF_U_Smock_MTP_Arctic" };
 		Lead[] = { "UK3CB_BAF_U_RolledUniform_MTP" };
+		Command[] = { "UK3CB_BAF_U_RolledUniform_MTP" };
 		HeliPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
 		JetPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
 	};
@@ -21,6 +22,12 @@ class FactionBAFArctic: FactionBase {
 				"UK3CB_BAF_V_Osprey_Rifleman_F"
 			};
 		Lead[] = { "UK3CB_BAF_V_Osprey_SL_A" };
+		Command[] = { "UK3CB_BAF_V_Osprey_SL_A" };
+		Sergeant[] = {
+				"UK3CB_BAF_V_Osprey_SL_B",
+				"UK3CB_BAF_V_Osprey_SL_C",
+				"UK3CB_BAF_V_Osprey_SL_D"
+			};
 		SQL[] = {
 				"UK3CB_BAF_V_Osprey_SL_B",
 				"UK3CB_BAF_V_Osprey_SL_C",
@@ -46,7 +53,20 @@ class FactionBAFArctic: FactionBase {
 	};
 
 	class backpack: backpack {
-		Lead[] = { "UK3CB_BAF_B_Bergen_MTP_Radio_L_A", "UK3CB_BAF_B_Bergen_MTP_Radio_L_B" };
+		Lead[] = {
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_B"
+			};
+		Command[] = {
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_B"
+			};
+		Sergeant[] = {
+				"UK3CB_BAF_B_Bergen_MTP_Radio_H_A",
+				"UK3CB_BAF_B_Bergen_MTP_Radio_H_B",
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+				"UK3CB_BAF_B_Bergen_MTP_Radio_L_B"
+			};
 		SQL[] = {
 				"UK3CB_BAF_B_Bergen_MTP_Radio_H_A",
 				"UK3CB_BAF_B_Bergen_MTP_Radio_H_B",
@@ -115,6 +135,7 @@ class FactionBAFArctic: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 1, "UK3CB_BAF_Javelin_CLU" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
@@ -152,6 +173,7 @@ class FactionBAFArctic: FactionBase {
 				"UK3CB_BAF_H_Mk7_Net_ESS_D"
 			};
 		Lead[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
+		Command[] = { "UK3CB_BAF_H_Beret_TYR_PRR" };
 		Driver[] = { "UK3CB_BAF_H_CrewHelmet_B" };
 		HeliPilot[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
 		HeliCrew[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
@@ -161,6 +183,7 @@ class FactionBAFArctic: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_BAF_L85A2 };
 		Lead[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
+		Sergeant[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		SQL[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
 		FTL[] = { keko_W_BAF_L85A2_UGL };
 		Grenadier[] = { keko_W_BAF_L85A2_UGL };

@@ -54,6 +54,8 @@ class FactionBundeswehrFleck: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "tf_rt1523g_big_bwmod" };
+		Command[] = { "tf_rt1523g_big_bwmod" };
+		Sergeant[] = { "tf_rt1523g_big_bwmod" };
 		SQL[] = { "tf_rt1523g_big_bwmod" };
 		Doctor[] = { "BWA3_Kitbag_Fleck_Medic" };
 		Medic[] = { "BWA3_Kitbag_Fleck_Medic" };
@@ -74,6 +76,7 @@ class FactionBundeswehrFleck: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};

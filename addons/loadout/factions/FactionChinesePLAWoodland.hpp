@@ -12,6 +12,8 @@ class FactionChinesePLAWoodland: FactionBase {
 	class vest: vest {
 		Default[] = { "PLA_B04_RF", "PLA_T15Vest_RF" };
 		Lead[] = { "PLA_T15Vest_RD" };
+		Command[] = { "PLA_T15Vest_RD" };
+		Sergeant[] = { "PLA_T15Vest_RD" };
 		SQL[] = { "PLA_T15Vest_RD" };
 		LMG[] = { "PLA_B04_MG" };
 		MMG[] = { "PLA_B04_MG" };
@@ -22,6 +24,8 @@ class FactionChinesePLAWoodland: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_black" };
+		Command[] = { "TFAR_rt1523g_black" };
+		Sergeant[] = { "TFAR_rt1523g_black" };
 		SQL[] = { "TFAR_rt1523g_black" };
 		Doctor[] = { "TRYK_B_Kitbag_blk" };
 		Medic[] = { "TRYK_B_Kitbag_blk" };
@@ -41,6 +45,8 @@ class FactionChinesePLAWoodland: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = {  };
+		Command[] = {  };
+		Sergeant[] = {  };
 		SQL[] = {  };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -48,6 +54,8 @@ class FactionChinesePLAWoodland: FactionBase {
 	class helmet: helmet {
 		Default[] = { "VME_PLA_Helmet", "VME_PLA_Helmet_G" };
 		Lead[] = { "VME_PLA_Hat" };
+		Command[] = { "VME_PLA_Hat" };
+		Sergeant[] = { "VME_PLA_Helmet_R_O", "VME_PLA_Helmet_R" };
 		SQL[] = { "VME_PLA_Helmet_R_O", "VME_PLA_Helmet_R" };
 		Driver[] = { "H_HelmetCrew_I" };
 		HeliPilot[] = { "H_PilotHelmetHeli_B" };

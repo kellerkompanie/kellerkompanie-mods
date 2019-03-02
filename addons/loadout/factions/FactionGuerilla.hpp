@@ -28,6 +28,7 @@ class FactionGuerilla: FactionBase {
 				"U_BG_Guerilla2_3"
 			};
 		Lead[] = { "U_IG_leader" };
+		Command[] = { "U_IG_leader" };
 		HeliPilot[] = { "U_BG_Guerrilla_6_1" };
 	};
 
@@ -63,6 +64,8 @@ class FactionGuerilla: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g" };
+		Command[] = { "TFAR_rt1523g" };
+		Sergeant[] = { "TFAR_rt1523g" };
 		SQL[] = { "TFAR_rt1523g" };
 		Doctor[] = {
 				"B_MU_Kitbag_blk",
@@ -151,6 +154,11 @@ class FactionGuerilla: FactionBase {
 				{ 3, "UGL_FlareGreen_F" },
 				{ 3, "UGL_FlareRed_F" }
 			};
+		Sergeant[] = {
+				{ 6, "UGL_FlareWhite_F" },
+				{ 3, "UGL_FlareGreen_F" },
+				{ 3, "UGL_FlareRed_F" }
+			};
 		SQL[] = {
 				{ 6, "UGL_FlareWhite_F" },
 				{ 3, "UGL_FlareGreen_F" },
@@ -173,6 +181,7 @@ class FactionGuerilla: FactionBase {
 				"H_ShemagOpen_khk"
 			};
 		Lead[] = { "H_Bandanna_khk_hs" };
+		Sergeant[] = { "H_Shemag_olive_hs" };
 		SQL[] = { "H_Shemag_olive_hs" };
 		HeliPilot[] = { "H_Cap_marshal" };
 	};
@@ -180,6 +189,7 @@ class FactionGuerilla: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_TRG21 };
 		Lead[] = { keko_W_A3_TRG21_GL };
+		Sergeant[] = { keko_W_A3_TRG21_GL };
 		SQL[] = { keko_W_A3_TRG21_GL };
 		FTL[] = { keko_W_A3_TRG21_GL };
 		Grenadier[] = { keko_W_A3_TRG21_GL };

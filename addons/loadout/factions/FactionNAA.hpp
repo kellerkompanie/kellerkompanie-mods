@@ -13,7 +13,7 @@ class FactionNAA: FactionBase {
 				"NAA_fat_alpat_rs_ard3",
 				"NAA_fat_alpat_rs_ard2"
 			};
-		Lead[] = { "U_I_OfficerUniform" };
+		Lead[] = { "NAA_unf_alpat_ard1" };
 		Command[] = { "NAA_unf_alpat_ard1" };
 		HeliPilot[] = { "NAA_coverals_NAA" };
 		JetPilot[] = { "U_I_pilotCoveralls" };
@@ -32,6 +32,7 @@ class FactionNAA: FactionBase {
 				"NAA_vst_GA_rig_alpat_ard1"
 			};
 		Lead[] = { "V_TacVest_oli" };
+		Command[] = { "V_TacVest_oli" };
 		Doctor[] = {
 				"NAA_vst_GA_heavy_alpat_ard1",
 				"NAA_vst_GA_heavy_alpat_ard3",
@@ -49,6 +50,8 @@ class FactionNAA: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_anprc155" };
+		Command[] = { "TFAR_anprc155" };
+		Sergeant[] = { "TFAR_anprc155" };
 		SQL[] = { "TFAR_anprc155" };
 		Doctor[] = {
 				"NAA_bac_kit_alpat_ard1",
@@ -85,6 +88,7 @@ class FactionNAA: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanATTanks[] = { { 2, AT_MAG_TANKS } };
 		JTAC[] = { { 4, "Laserbatteries" } };
@@ -114,6 +118,7 @@ class FactionNAA: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_F2000_SHORT };
 		Lead[] = { keko_W_A3_F2000_UGL_HUNTIR };
+		Sergeant[] = { keko_W_A3_F2000_UGL_HUNTIR };
 		SQL[] = { keko_W_A3_F2000_UGL_HUNTIR };
 		FTL[] = { keko_W_A3_F2000_UGL };
 		Grenadier[] = { keko_W_A3_F2000_UGL };

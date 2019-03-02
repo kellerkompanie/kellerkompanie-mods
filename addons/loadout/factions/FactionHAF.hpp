@@ -27,6 +27,8 @@ class FactionHAF: FactionBase {
 
 	class backpack: backpack {
 		Lead[] = { "TFAR_rt1523g_rhs" };
+		Command[] = { "TFAR_rt1523g_rhs" };
+		Sergeant[] = { "TFAR_rt1523g_rhs" };
 		SQL[] = { "TFAR_rt1523g_rhs" };
 		Doctor[] = { "B_Kitbag_rgr" };
 		Medic[] = { "B_Kitbag_rgr" };
@@ -46,6 +48,7 @@ class FactionHAF: FactionBase {
 
 	class backpackInventory: backpackInventory {
 		Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
+		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
@@ -67,6 +70,7 @@ class FactionHAF: FactionBase {
 	class primary: primary {
 		Default[] = { keko_W_A3_MXC };
 		Lead[] = { keko_W_A3_MX_GL_HUNTIR };
+		Sergeant[] = { keko_W_A3_MX_GL_HUNTIR };
 		SQL[] = { keko_W_A3_MX_GL_HUNTIR };
 		FTL[] = { keko_W_A3_MX_GL };
 		Grenadier[] = { keko_W_A3_MX_GL };
