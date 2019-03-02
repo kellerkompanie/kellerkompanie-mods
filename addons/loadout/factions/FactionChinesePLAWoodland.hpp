@@ -63,10 +63,6 @@ class FactionChinesePLAWoodland: FactionBase {
 	class backpackInventory: backpackInventory {
 		Lead[] = {  };
 		SQL[] = {  };
-		Doctor = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
-		Medic = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
-		EOD = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
-		Engineer = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		JTAC[] = { { 4, "Laserbatteries" } };
 	};
 

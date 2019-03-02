@@ -68,11 +68,7 @@ class FactionFIA: FactionBase {
 				{ 3, "UGL_FlareGreen_F" },
 				{ 3, "UGL_FlareRed_F" }
 			};
-		Doctor = KEKO_LOADOUT_DOCTOR_DEFAULT_BACKPACK_INVENTORY;
-		Medic = KEKO_LOADOUT_MEDIC_DEFAULT_BACKPACK_INVENTORY;
 		RiflemanAT[] = { { 2, RAT_MAG } };
-		EOD = KEKO_LOADOUT_EOD_DEFAULT_BACKPACK_INVENTORY;
-		Engineer = KEKO_LOADOUT_ENGINEER_DEFAULT_BACKPACK_INVENTORY;
 		Sniper[] = { { 2, "ACE_salineIV_500" }, { 6, "adv_aceSplint_splint" } };
 		Spotter[] = {
 				{ 1, "ACE_surgicalKit" },
