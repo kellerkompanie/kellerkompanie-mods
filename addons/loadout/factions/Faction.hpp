@@ -1,5 +1,3 @@
-#include "Weapons.hpp"
-
 class FactionBase {
 	name = "";
 	faces[] = { };
@@ -144,6 +142,29 @@ class FactionBase {
 
 	class launcher {
 		Default[] = { };
+	};
+
+	class Weapons {
+		class WeaponBase {
+			cfgName = objNull;
+			scopes[] = {};
+			rails[] = {};
+			silencers[] = {};
+			bipods[] = {};
+			magazines[] = {};
+		};
+
+		class PrimaryWeapon: WeaponBase {
+			uglMagazines[] = {};
+		};
+
+		class SecondaryWeapon: WeaponBase {
+
+		};
+
+		class LauncherWeapon: WeaponBase {
+
+		};
 	};
 
 	class magazines {
