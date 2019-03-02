@@ -12,28 +12,8 @@ class FactionUSArmyOCP: FactionBase {
 				"rhs_uniform_cu_ocp_1stcav",
 				"rhs_uniform_cu_ocp_82nd"
 			};
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "rhs_uniform_cu_ocp_1stcav" };
 		JetPilot[] = { "U_B_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -45,7 +25,6 @@ class FactionUSArmyOCP: FactionBase {
 		Grenadier[] = { "rhsusf_iotv_ocp_Grenadier" };
 		LMG[] = { "rhsusf_iotv_ocp_SAW" };
 		MMG[] = { "rhsusf_iotv_ocp_SAW" };
-		Sniper[] = { "V_PlateCarrier2_blk" };
 		EOD[] = { "rhsusf_iotv_ocp_Repair" };
 		Engineer[] = { "rhsusf_iotv_ocp_Repair" };
 		Driver[] = { "V_BandollierB_rgr" };
@@ -89,7 +68,6 @@ class FactionUSArmyOCP: FactionBase {
 			};
 		Lead[] = { "rhsusf_patrolcap_ocp" };
 		Command[] = { "H_Cap_tan_specops_US" };
-		Sniper[] = { "H_HelmetSpecB" };
 		Driver[] = { "H_HelmetCrew_I" };
 		HeliPilot[] = { "H_PilotHelmetHeli_B" };
 		HeliCrew[] = { "H_CrewHelmetHeli_B" };
@@ -105,15 +83,12 @@ class FactionUSArmyOCP: FactionBase {
 		LMG[] = { keko_W_M249 };
 		MMG[] = { keko_W_M240B };
 		Marksman[] = { keko_W_M14 };
-		Sniper[] = { keko_W_A3_LRR };
-		Spotter[] = { keko_W_M4_GL };
 		JTAC[] = { keko_W_M4_GL_HUNTIR };
 		UAVOperator[] = { keko_W_M4_GL_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_M9 };
-		Sniper[] = { keko_W_M9 };
 	};
 
 	class launcher: launcher {

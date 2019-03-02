@@ -15,28 +15,8 @@ class FactionNAA: FactionBase {
 			};
 		Lead[] = { "U_I_OfficerUniform" };
 		Command[] = { "NAA_unf_alpat_ard1" };
-		Sniper[] = { "U_I_GhillieSuit" };
 		HeliPilot[] = { "NAA_coverals_NAA" };
 		JetPilot[] = { "U_I_pilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -62,7 +42,6 @@ class FactionNAA: FactionBase {
 				"NAA_vst_GA_heavy_alpat_ard3",
 				"NAA_vst_GA_heavy_alpat_ard2"
 			};
-		Sniper[] = { "V_Chestrig_oli" };
 		Driver[] = { "V_BandollierB_oli" };
 		HeliPilot[] = { "V_TacVest_blk" };
 		JetPilot[] = { "V_TacVest_blk" };
@@ -126,7 +105,6 @@ class FactionNAA: FactionBase {
 				"NAA_hat_milcap_alpat_ard2"
 			};
 		Command[] = { "NAA_beret" };
-		Sniper[] = { "H_HelmetIA" };
 		Driver[] = { "H_HelmetCrew_I" };
 		HeliPilot[] = { "NAA_hel_heli" };
 		HeliCrew[] = { "NAA_hel_heli" };
@@ -142,15 +120,12 @@ class FactionNAA: FactionBase {
 		LMG[] = { keko_W_A3_STONER };
 		MMG[] = { keko_W_A3_MMG_AAF };
 		Marksman[] = { keko_W_A3_EBR };
-		Sniper[] = { keko_W_A3_GM6 };
-		Spotter[] = { keko_W_A3_F2000 };
 		JTAC[] = { keko_W_A3_F2000_UGL_HUNTIR };
 		UAVOperator[] = { keko_W_A3_F2000_UGL_HUNTIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_A3_ACP };
-		Sniper[] = { keko_W_A3_ACP_SILENCED };
 	};
 
 	class launcher: launcher {

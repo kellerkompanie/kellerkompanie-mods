@@ -6,7 +6,6 @@ class FactionNatoTropic: FactionNato {
 	class uniform: uniform {
 		Default[] = { "U_B_T_Soldier_F", "U_B_T_Soldier_AR_F" };
 		Lead[] = { "U_B_T_Soldier_F" };
-		Sniper[] = { "U_B_T_FullGhillie_tna_F" };
 	};
 
 	class vest: vest {
@@ -14,7 +13,6 @@ class FactionNatoTropic: FactionNato {
 		Lead[] = { "V_TacChestrig_grn_F" };
 		Doctor[] = { "V_PlateCarrierSpec_tna_F" };
 		Medic[] = { "V_PlateCarrierSpec_tna_F" };
-		Sniper[] = { "V_PlateCarrier2_tna_F" };
 		EOD[] = { "V_PlateCarrierGL_tna_F" };
 		Driver[] = { "V_BandollierB_oli" };
 	};
@@ -56,7 +54,6 @@ class FactionNatoTropic: FactionNato {
 		LMG[] = { keko_W_A3_MX_SW_TROPIC };
 		MMG[] = { keko_W_A3_MMG_BLACK };
 		Marksman[] = { keko_W_A3_MXM_TROPIC };
-		Spotter[] = { keko_W_A3_MXM_TROPIC };
 		JTAC[] = { keko_W_A3_MX_GL_TROPIC_HUNTIR };
 		UAVOperator[] = { keko_W_A3_MX_GL_TROPIC_HUNTIR };
 	};

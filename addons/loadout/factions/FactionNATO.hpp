@@ -23,31 +23,6 @@ class FactionNato: FactionBase {
 		JetPilot[] = {
 			U_B_PilotCoveralls
 		};
-		Sniper[] = {
-			U_B_FullGhillie_sard
-		};
-		Spotter[] = {
-			U_B_FullGhillie_sard
-		};
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-			{1,"ACE_ATragMX"},
-			{10,"ACE_quikclot"},
-			{1,"ACE_Flashlight_MX991"},
-			{1,"ACE_IR_Strobe_Item"},
-			{1,"ACE_Kestrel4500"},
-			{1,"ACE_MapTools"},
-			{1,"ACE_microDAGR"},
-			{2,"ACE_morphine"},
-			{3,"ACE_tourniquet"},
-			{1,"ACE_surgicalKit"},
-			{1,"ACE_RangeCard"},
-			{2,"ACE_epinephrine"},
-			{1,"ACE_salineIV"},
-			{8,"ACE_fieldDressing"}
-		};
 	};
 
 	class vest: vest {
@@ -72,12 +47,6 @@ class FactionNato: FactionBase {
 		};
 		JetPilot[] = {
 			V_TacVest_blk
-		};
-		Sniper[] = {
-			V_PlateCarrier2_blk
-		};
-		Spotter[] = {
-			V_PlateCarrier2_blk
 		};
 	};
 
@@ -107,15 +76,6 @@ class FactionNato: FactionBase {
 		HeliPilot[] = {
 			{1, "ACE_microDAGR"},
 			{10, "ACE_quikclot"}
-		};
-		Sniper[] = {
-			{8,"ACE_7Rnd_408_305gr_Mag"}
-		};
-		Spotter[] = {
-			{1,"SmokeShell"},
-			{1,"SmokeShellGreen"},
-			{2,"11Rnd_45ACP_Mag"},
-			{10,"ACE_30Rnd_65x47_Scenar_mag"}
 		};
 	};
 
@@ -186,12 +146,6 @@ class FactionNato: FactionBase {
 		JetPilot[] = {
 			H_PilotHelmetFighter_B
 		};
-		Sniper[] = {
-			H_HelmetSpecB
-		};
-		Spotter[] = {
-			H_HelmetSpecB
-		};
 	};
 
 	class primary: primary {
@@ -235,20 +189,10 @@ class FactionNato: FactionBase {
 			keko_W_A3_MX_GL_HUNTIR,
 			keko_W_A3_MX_GL_BLACK_HUNTIR
 		};
-		Sniper[] = {
-			keko_W_A3_LRR,
-			keko_W_A3_LRR_CAMO
-		};
-		Spotter[] = {
-			keko_W_A3_MXM,
-			keko_W_A3_MXM_BLACK
-		};
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_TACTICAL };
-		Sniper[] = { keko_W_TACTICAL_SPECOPS };
-		Spotter[] = { keko_W_TACTICAL_SPECOPS };
 	};
 
 	class launcher: launcher {

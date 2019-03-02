@@ -23,8 +23,6 @@ class FactionBase {
 		AASpecialist = "Anti-Air Specialist";
 		AASpecialistAsst = "Anti-Air Specialist Asst.";
 		Marksman = "Marksman";
-		Sniper = "Sniper";
-		Spotter = "Spotter";
 		EOD = "EOD";
 		Engineer = "Engineer";
 		Driver = "Driver";
@@ -119,8 +117,6 @@ class FactionBase {
 		JTAC[] = { Laserdesignator };
 		HeliPilot[] = { Binocular };
 		JetPilot[] = { Binocular };
-		Sniper[] = { Laserdesignator };
-		Spotter[] = { Laserdesignator };
 	};
 
 	class items {
@@ -189,8 +185,6 @@ class FactionBase {
 			AASpecialist = 8;
 			AASpecialistAsst = 8;
 			Marksman = 10;
-			Sniper = 10;
-			Spotter = 10;
 			EOD = 8;
 			Engineer = 8;
 			Driver = 6;
@@ -207,8 +201,6 @@ class FactionBase {
 			Command = 2;
 			LMG = 2;
 			MMG = 2;
-			Sniper = 3;
-			Spotter = 3;
 		};
 
 		class ugl {

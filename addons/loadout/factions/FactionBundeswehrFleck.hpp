@@ -24,8 +24,6 @@ class FactionBundeswehrFleck: FactionBase {
 		AASpecialist = "Fliegerfaust Schütze";
 		AASpecialistAsst = "Fliegerfaust Helfer";
 		Marksman = "Zielfernrohrschütze";
-		Sniper = "Scharfschütze";
-		Spotter = "Spotter";
 		EOD = "Sprengmittel Spezialist";
 		Engineer = "Pionier";
 		Driver = "Fahrer/Besatzung";
@@ -39,28 +37,8 @@ class FactionBundeswehrFleck: FactionBase {
 				"PBW_Uniform4_fleck",
 				"PBW_Uniform4K_fleck"
 			};
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "BWA3_Uniform_Helipilot" };
 		JetPilot[] = { "U_B_PilotCoveralls" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -126,15 +104,12 @@ class FactionBundeswehrFleck: FactionBase {
 		LMG[] = { keko_W_MG4 };
 		MMG[] = { keko_W_MG3 };
 		Marksman[] = { keko_W_G28 };
-		Sniper[] = { keko_W_A3_LRR, keko_W_A3_LRR_CAMO };
-		Spotter[] = { keko_W_A3_MXM, keko_W_A3_MXM_BLACK };
 		JTAC[] = { keko_W_G36_GL_JTAC };
 		UAVOperator[] = { keko_W_G36_GL_HuntIR };
 	};
 
 	class secondary: secondary {
 		Default[] = { keko_W_P8 };
-		Sniper[] = { keko_W_TACTICAL_SPECOPS };
 	};
 
 	class launcher: launcher {

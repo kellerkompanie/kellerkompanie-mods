@@ -6,27 +6,7 @@ class FactionRussiaEMRSummer: FactionBase {
 
 	class uniform: uniform {
 		Default[] = { "rhs_uniform_emr_patchless" };
-		Sniper[] = { "U_B_FullGhillie_sard" };
 		HeliPilot[] = { "rhs_uniform_df15" };
-	};
-
-	class uniformInventory: uniformInventory {
-		Sniper[] = {
-				{ 1, "ACE_ATragMX" },
-				{ 10, "ACE_quikclot" },
-				{ 1, "ACE_Flashlight_MX991" },
-				{ 1, "ACE_IR_Strobe_Item" },
-				{ 1, "ACE_Kestrel4500" },
-				{ 1, "ACE_MapTools" },
-				{ 1, "ACE_microDAGR" },
-				{ 2, "ACE_morphine" },
-				{ 3, "ACE_tourniquet" },
-				{ 1, "ACE_surgicalKit" },
-				{ 1, "ACE_RangeCard" },
-				{ 2, "ACE_epinephrine" },
-				{ 1, "ACE_salineIV" },
-				{ 8, "ACE_fieldDressing" }
-			};
 	};
 
 	class vest: vest {
@@ -44,7 +24,6 @@ class FactionRussiaEMRSummer: FactionBase {
 		Medic[] = { "rhs_6b23_digi_medic" };
 		Grenadier[] = { "rhs_6b23_digi_6sh92_vog", "rhs_6b23_6sh116_vog" };
 		Marksman[] = { "rhs_6b23_digi_sniper" };
-		Sniper[] = { "V_PlateCarrier2_blk" };
 		EOD[] = { "rhs_6b23_digi_engineer" };
 		Engineer[] = { "rhs_6b23_digi_engineer" };
 		Driver[] = { "rhs_vest_pistol_holster" };
@@ -87,7 +66,6 @@ class FactionRussiaEMRSummer: FactionBase {
 			};
 		Lead[] = { "rhs_fieldcap_digi" };
 		Command[] = { "rhs_fieldcap_digi" };
-		Sniper[] = { "H_HelmetSpecB" };
 		Driver[] = { "rhs_tsh4" };
 		HeliPilot[] = { "rhs_zsh7a_mike" };
 		HeliCrew[] = { "rhs_zsh7a_mike_alt" };
@@ -101,8 +79,6 @@ class FactionRussiaEMRSummer: FactionBase {
 		LMG[] = { keko_W_M84 };
 		MMG[] = { keko_W_PKP };
 		Marksman[] = { keko_W_SVD };
-		Sniper[] = { keko_W_A3_LRR };
-		Spotter[] = { keko_W_AK74M };
 		Driver[] = { keko_W_AKS74U };
 		HeliPilot[] = { keko_W_AKS74U };
 		JTAC[] = { keko_W_AK74M_GL };
