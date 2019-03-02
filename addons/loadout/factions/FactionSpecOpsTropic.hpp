@@ -4,30 +4,6 @@ class FactionSpecOpsTropic: FactionBase {
 
 	#include "WeaponsSpecOpsTropic.hpp"
 
-	class role: role {
-		Lead = "Lead";
-		Command = "Command";
-		SQL = "Squad Leader";
-		Sergeant = "Sergeant";
-		FTL = "Fire Team Leader";
-		Doctor = "Doctor";
-		Medic = "Medic";
-		Rifleman = "Rifleman";
-		RiflemanAT = "Rifleman Anti-Tank";
-		Grenadier = "Grenadier";
-		LMG = "Light Machine Gunner";
-		LMGAsst = "Light Machine Gunner Asst.";
-		Marksman = "Marksman";
-		EOD = "Explosive Specialist";
-		Engineer = "Engineer";
-		Driver = "Driver/Crewman";
-		HeliPilot = "Helicopter Pilot";
-		HeliCrew = "Helicopter Crew";
-		JetPilot = "Jet Pilot";
-		JTAC = "JTAC";
-		UAVOperator = "UAV Operator";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"VSM_G2_camo_PZJ_OD_Shirt",

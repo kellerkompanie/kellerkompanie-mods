@@ -3,7 +3,7 @@ class FactionCommandos: FactionBase {
 
 	#include "WeaponsCommandos.hpp"
 
-	class role: role {
+	class role {
 		Officer = "Officer";
 		SectionCommander = "Section Commander";
 		TeamLeader = "Team Leader";
@@ -17,7 +17,8 @@ class FactionCommandos: FactionBase {
 		Sapper = "Sapper";
 	};
 
-	class rank: rank {
+	class rank {
+		Default = "PRIVATE"
 		Officer = "LIEUTENANT";
 		SectionCommander = "SERGEANT";
 		TeamLeader = "CORPORAL"

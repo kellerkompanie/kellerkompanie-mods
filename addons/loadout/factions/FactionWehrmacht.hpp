@@ -1,5 +1,8 @@
 class FactionWehrmacht: FactionBase {
 	name = "[Ironfront] Wehrmacht";
+
+	#include "WeaponsWehrmacht.hpp"
+
 	class role: role {
 		GruppenFuehrerMP40 = "Gruppenführer (MP40)";
 		GruppenFuehrerSTG44 = "Gruppenführer (StG44)";

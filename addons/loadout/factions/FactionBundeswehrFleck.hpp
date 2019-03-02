@@ -31,9 +31,6 @@ class FactionBundeswehrFleck: FactionBase {
 		Driver = "Fahrer/Besatzung";
 		HeliPilot = "Helikopter Pilot";
 		HeliCrew = "Helikopter Besatzung";
-		JetPilot = "Jet Pilot";
-		JTAC = "JTAC";
-		UAVOperator = "UAV Operator";
 	};
 
 	class uniform: uniform {

@@ -4,39 +4,6 @@ class FactionNAA: FactionBase {
 
 	#include "WeaponsNAA.hpp"
 
-	class role: role {
-		Lead = "Lead";
-		Command = "Command";
-		SQL = "Squad Leader";
-		Sergeant = "Sergeant";
-		FTL = "Fire Team Leader";
-		Doctor = "Doctor";
-		Medic = "Medic";
-		Rifleman = "Rifleman";
-		RiflemanAT = "Rifleman Anti-Tank";
-		RiflemanATTanks = "Rifleman Anti-Tank (Tanks DLC)";
-		Grenadier = "Grenadier";
-		LMG = "Light Machine Gunner";
-		LMGAsst = "Light Machine Gunner Asst.";
-		MMG = "Medium Machine Gunner";
-		MMGAsst = "Medium Machine Gunner Asst.";
-		ATSpecialist = "Anti-Tank Specialist";
-		ATSpecialistAsst = "Anti-Tank Specialist Assistant";
-		AASpecialist = "Anti-Air Specialist";
-		AASpecialistAsst = "Anti-Air Specialist Assistant";
-		Marksman = "Marksman";
-		Sniper = "Sniper";
-		Spotter = "Spotter";
-		EOD = "Explosive Specialist";
-		Engineer = "Engineer";
-		Driver = "Driver/Crewman";
-		HeliPilot = "Heli Pilot";
-		HeliCrew = "Helicopter Crew";
-		JetPilot = "Jet Pilot";
-		JTAC = "JTAC";
-		UAVOperator = "UAV Operator";
-	};
-
 	class uniform: uniform {
 		Default[] = {
 				"NAA_fat_alpat_ard3",

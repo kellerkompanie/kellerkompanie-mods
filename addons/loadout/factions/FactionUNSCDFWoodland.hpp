@@ -4,31 +4,6 @@ class FactionUNSCDFWoodland: FactionBase {
 
 	#include "WeaponsUNSCDF.hpp"
 
-	class role: role {
-		Lead = "Lead";
-		Command = "Command";
-		SQL = "Squad Leader";
-		Sergeant = "Sergeant";
-		FTL = "Fire Team Leader";
-		Doctor = "Doctor";
-		Medic = "Medic";
-		Rifleman = "Rifleman";
-		RadioOperator = "Radio Operator";
-		RiflemanAT = "Rifleman Anti-Tank";
-		Grenadier = "Grenadier";
-		LMG = "Light Machine Gunner";
-		LMGAsst = "Light Machine Gunner Asst.";
-		ATSpecialist = "Anti-Tank Specialist";
-		ATSpecialistAsst = "Anti-Tank Specialist Assistant";
-		AASpecialist = "Anti-Air Specialist";
-		AASpecialistAsst = "Anti-Air Specialist Assistant";
-		Marksman = "Marksman";
-		EOD = "Explosive Specialist";
-		Engineer = "Engineer";
-		Driver = "Crewman";
-		UAVOperator = "UAV Operator";
-	};
-
 	class uniform: uniform {
 		Default[] = { "OPTRE_UNSC_Army_Uniform_WDL" };
 		Lead[] = { "OPTRE_UNSC_Army_Uniform_S_WDL" };

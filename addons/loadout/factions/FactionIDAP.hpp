@@ -4,7 +4,7 @@ class FactionIDAP: FactionBase {
 
 	#include "WeaponsIDAP.hpp"
 
-	class role: role {
+	class role {
 		Lead = "Leader";
 		SQL = "Group Leader";
 		FTL = "Team Leader";
