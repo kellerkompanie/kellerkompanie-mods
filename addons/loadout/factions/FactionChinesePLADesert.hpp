@@ -1,6 +1,9 @@
 class FactionChinesePLADesert: FactionBase {
 	name = "[Main] Chinese PLA (Desert)";
 	logisticsHelicopter = "VME_PLA_Mi17";
+
+	#include "WeaponsChinesePLA.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

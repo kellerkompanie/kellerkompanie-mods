@@ -1,5 +1,8 @@
 class FactionNatoTropic: FactionBase {
 	name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
+
+	#include "WeaponsNATO.hpp"
+
 	class role: role {
 		Spotter = "Spotter";
 	};

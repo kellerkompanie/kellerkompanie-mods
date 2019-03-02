@@ -1,9 +1,7 @@
 class FactionNato: FactionBase {
-
 	name = "[Minimal] NATO - North Atlantic Treaty Organization";
 	logisticsHelicopter = "B_Heli_Transport_03_F";
 
-	// define all weapons and mags
 	#include "WeaponsNATO.hpp"
 
 	class uniform: uniform {

@@ -1,6 +1,9 @@
 class FactionUSMarines: FactionBase {
 	name = "[Minimal] U.S. Marines - U.S. Force Recon Marines";
 	logisticsHelicopter = "B_Heli_Transport_03_F";
+
+	#include "WeaponsNATO.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

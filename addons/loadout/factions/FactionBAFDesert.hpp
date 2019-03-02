@@ -1,6 +1,9 @@
 class FactionBAFDesert: FactionBase {
 	name = "[Event] BAF Desert - British Armed Forces (Desert)";
 	logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
+
+	#include "WeaponsBAF.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

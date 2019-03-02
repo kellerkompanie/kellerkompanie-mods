@@ -1,20 +1,20 @@
 class FactionWehrmachtAfrica: FactionBase {
 	name = "[Ironfront] Wehrmacht (Africa)";
 	class role: role {
-		GruppenFuehrerMP40 = "Gruppenführer (MP40)";
-		GruppenFuehrerSTG44 = "Gruppenführer (StG44)";
-		GruppenFuehrerAsst = "Stellv. Gruppenführer";
-		TruppFuehrer = "Truppführer";
+		GruppenFuehrerMP40 = "GruppenfÃ¼hrer (MP40)";
+		GruppenFuehrerSTG44 = "GruppenfÃ¼hrer (StG44)";
+		GruppenFuehrerAsst = "Stellv. GruppenfÃ¼hrer";
+		TruppFuehrer = "TruppfÃ¼hrer";
 		Funker = "Funker";
-		Sani = "Sanitäter";
-		SchuetzeK98 = "Schütze (K98)";
-		SchuetzeG43 = "Schütze (G43)";
-		SchuetzeMP40 = "Schütze (MP40)";
-		SchuetzeMP40PzF = "Panzerfaust Schütze (MP40)";
-		Munitionstraeger = "Munitionsträger";
+		Sani = "SanitÃ¼ter";
+		SchuetzeK98 = "SchÃ¼tze (K98)";
+		SchuetzeG43 = "SchÃ¼tze (G43)";
+		SchuetzeMP40 = "SchÃ¼tze (MP40)";
+		SchuetzeMP40PzF = "Panzerfaust SchÃ¼tze (MP40)";
+		Munitionstraeger = "MunitionstrÃ¼ger";
 		Grenadier = "Grenadier";
-		MG34 = "MG Schütze (MG34)";
-		MG42 = "MG Schütze (MG42)";
+		MG34 = "MG SchÃ¼tze (MG34)";
+		MG42 = "MG SchÃ¼tze (MG42)";
 		MGAsst = "MG Asst.";
 	};
 

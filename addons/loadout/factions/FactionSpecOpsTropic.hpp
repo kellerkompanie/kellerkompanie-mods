@@ -1,6 +1,9 @@
 class FactionSpecOpsTropic: FactionBase {
 	name = "[Main] Western Special Forces (Tropic)";
 	logisticsHelicopter = "RHS_UH60M";
+
+	#include "WeaponsSpecOpsTropic.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

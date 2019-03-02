@@ -1,6 +1,9 @@
 class FactionBAFArcticWhite: FactionBase {
 	name = "[Event] BAF MTP Arctic White - British Armed Forces (MTP Arctic White)";
 	logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
+
+	#include "WeaponsBAF.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

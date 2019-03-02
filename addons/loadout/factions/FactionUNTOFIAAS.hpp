@@ -1,5 +1,8 @@
 class FactionUNTOFIAAS: FactionBase {
 	name = "[Minimal] UNTOFIAAS - United Nations Truce Observation Force In Altis And Stratis";
+
+	#include "WeaponsUNTOFIAAS.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

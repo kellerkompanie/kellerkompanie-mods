@@ -1,6 +1,9 @@
 class FactionMyrimidones: FactionBase {
 	name = "[Minimal] Myrimidones Inc. (PMC)";
 	logisticsHelicopter = "MYR_ORCA_F";
+
+	#include "WeaponsMyrimidones.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

@@ -1,6 +1,9 @@
 class FactionCTRG: FactionBase {
 	name = "[Minimal] CTRG - Combat Technology and Research Group";
 	logisticsHelicopter = "B_CTRG_Heli_Transport_01_tropic_F";
+
+	#include "WeaponsCTRG.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

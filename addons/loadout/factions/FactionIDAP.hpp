@@ -1,6 +1,9 @@
 class FactionIDAP: FactionBase {
 	name = "[Minimal] IDAP - International Development and Aid Project";
 	logisticsHelicopter = "C_IDAP_Heli_Transport_02_F";
+
+	#include "WeaponsIDAP.hpp"
+
 	class role: role {
 		Lead = "Leader";
 		SQL = "Group Leader";

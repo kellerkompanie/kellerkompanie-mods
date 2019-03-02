@@ -1,5 +1,8 @@
 class FactionCommandos: FactionBase {
 	name = "[Ironfront] Commandos";
+
+	#include "WeaponsCommandos.hpp"
+
 	class role: role {
 		Officer = "Officer";
 		SectionCommander = "Section Commander";

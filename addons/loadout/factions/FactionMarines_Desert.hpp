@@ -1,6 +1,9 @@
 class FactionMarines_Desert: FactionBase {
 	name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
 	logisticsHelicopter = "rhsusf_CH53E_USMC_D";
+
+	#include "WeaponsMarines.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

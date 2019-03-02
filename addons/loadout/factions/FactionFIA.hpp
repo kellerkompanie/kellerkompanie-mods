@@ -1,6 +1,9 @@
 class FactionFIA: FactionBase {
 	name = "[Minimal] FIA - Freedom and Independence Alliance";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
+
+	#include "WeaponsFIA.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

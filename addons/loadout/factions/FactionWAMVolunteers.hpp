@@ -1,6 +1,9 @@
 class FactionWAMVolunteers: FactionBase {
 	name = "[Minimal] WAM - West Altian Militia (Volunteers)";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
+
+	#include "WeaponsWAMVolunteers.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

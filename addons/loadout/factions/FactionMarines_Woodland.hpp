@@ -1,6 +1,9 @@
 class FactionMarines_Woodland: FactionBase {
 	name = "[Main] U.S. Marine Corps - Marine Pattern Woodland";
 	logisticsHelicopter = "rhsusf_CH53E_USMC";
+
+	#include "WeaponsMarines.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";

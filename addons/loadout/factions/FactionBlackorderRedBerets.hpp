@@ -1,6 +1,9 @@
 class FactionBlackorderRedBerets: FactionBase {
 	name = "[Main] Black Order (Red Berets)";
 	logisticsHelicopter = "O_RHS_UH60M2_BlackOrder_F";
+
+	#include "WeaponsBlackOrderRedBerets.hpp"
+
 	class role: role {
 		Lead = "Lead";
 		Command = "Command";
