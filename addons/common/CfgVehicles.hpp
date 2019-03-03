@@ -27,6 +27,73 @@ class CfgVehicles {
 	};
 
 
+	class Item_Base_F;
+	class keko_RifleMagItem: Item_Base_F {
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Rifle Mag";
+		author = "Schwaggot";
+		class TransportItems {
+			class RifleMag {
+				name = keko_RifleMag;
+				count = 1;
+			};
+		};
+	};
+
+	class keko_MGMagItem: keko_RifleMagItem {
+		displayName = "MG Mag";
+		class TransportItems {
+			class MGMag {
+				name = keko_MGMag;
+				count = 1;
+			};
+		};
+	};
+
+	class keko_PistolMagItem: keko_RifleMagItem {
+		displayName = "Pistol Mag";
+		class TransportItems {
+			class PistolMag {
+				name = keko_PistolMag;
+				count = 1;
+			};
+		};
+	};
+
+	class keko_UGLMagItem: keko_RifleMagItem {
+		displayName = "UGL Mag";
+		class TransportItems {
+			class UGLMag {
+				name = keko_UGLMag;
+				count = 1;
+			};
+		};
+	};
+
+	class keko_AntiTankMagItem: keko_RifleMagItem {
+		displayName = "Anti-Tank Mag";
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at";
+		class TransportItems {
+			class AntiTankMag {
+				name = keko_AntiTankMag;
+				count = 1;
+			};
+		};
+	};
+
+	class keko_AntiAirMagItem: keko_RifleMagItem {
+		displayName = "Anti-Air Mag";
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_atl";
+		class TransportItems {
+			class AntiAirMag {
+				name = keko_AntiAirMag;
+				count = 1;
+			};
+		};
+	};
+
+
 
 	class Logic;
 	class Module_F: Logic {
