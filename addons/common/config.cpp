@@ -21,10 +21,25 @@ class CfgPatches {
             QGVAR(moduleACEGarrison3den),
 			QGVAR(moduleCuratorCamEars),
 
+			keko_RifleMagItem,
+			keko_MGMagItem,
+			keko_PistolMagItem,
+			keko_UGLMagItem,
+			keko_AntiTankMagItem,
+			keko_AntiAirMagItem,
+
 			"keko_ModuleInitMission3den",
 			"keko_ModuleRespawnPosition3den",
 			"keko_ModuleACEGarrison3den"
         };
+		weapons[] = {
+			keko_RifleMag,
+			keko_MGMag,
+			keko_PistolMag,
+			keko_UGLMag,
+			keko_AntiTankMag,
+			keko_AntiAirMag
+		};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "keko_main",
@@ -32,7 +47,8 @@ class CfgPatches {
             "ace_ai",
             "cba_main",
             "A3_Modules_F",
-  			"A3_Modules_F_Curator" };
+  			"A3_Modules_F_Curator"
+		};
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
@@ -43,6 +59,7 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 
 #include "defines.hpp"
 

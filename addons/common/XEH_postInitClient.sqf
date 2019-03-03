@@ -72,3 +72,11 @@ player addEventHandler ["Fired", {
 		GVAR(shotsFired) = GVAR(shotsFired) + 1;
 	};
 }];
+
+
+
+["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;
+
+[{
+    _this call FUNC(itemCheck);
+}, [player], 0.5, 0.1] call CBA_fnc_waitAndExecute;

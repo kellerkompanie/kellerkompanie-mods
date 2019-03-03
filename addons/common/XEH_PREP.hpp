@@ -7,6 +7,7 @@ PREP(breakWindow);
 PREP(canBreakWindow);
 PREP(createZeus);
 PREP(getNumOpenWounds);
+PREP(itemCheck);
 PREP(lockDoors);
 PREP(lockDoorsDialogCallback);
 PREP(lockDoorsDialogInit);
