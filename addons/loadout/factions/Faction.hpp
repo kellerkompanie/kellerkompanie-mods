@@ -270,7 +270,7 @@ class FactionBase {
 			name = "Fire Team Kiste";
 			cfgName[] = {"Box_NATO_Ammo_F","Box_IND_Ammo_F","Box_East_Ammo_F"};
 			inventory[] = {
-					{20, "keko_PrimaryMag"},
+					{20, "keko_RifleMag"},
 					{6, "keko_MGMag"},
 					{2, "keko_PistolMag"},
 					{2, "keko_DisposableRocketLauncher"},
@@ -291,7 +291,7 @@ class FactionBase {
 		class InfantryCrate: FireTeamCrate {
 			name = "Infanterie Kiste";
 			inventory[] =  {
-					{60, "keko_PrimaryMag"},
+					{60, "keko_RifleMag"},
 					{10, "keko_MGMag"},
 					{6, "keko_PistolMag"},
 					{10, "keko_UGLMag"}
