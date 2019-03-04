@@ -31,7 +31,7 @@ if(GVAR(customLogistics) == 2) then {
 else {
 	params ["_position", "_faction", "_crate"];
 
-	private _crateConfig = configFile >> "kekoFaction" >> _faction >> _crate;
+	private _crateConfig = configFile >> "kekoFactions" >> _faction >> "crates" >> _crate;
 	private _cfgNames = getArray (_crateConfig >> "cfgName");
 
 	// TODO choose based on side
