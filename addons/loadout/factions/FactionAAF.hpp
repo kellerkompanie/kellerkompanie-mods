@@ -56,8 +56,8 @@ class FactionAAF: FactionBase {
 		JTAC[] = { { 4, "Laserbatteries" } };
 		LMGAsst[] = { {3, "200Rnd_65x39_cased_Box_Tracer"} };
 		MMGAsst[] = { {3, "130Rnd_338_Mag"} };
-		ATSpecialistAsst = { {2, "Titan_AT"} };
-		AASpecialistAsst = { {2, "Titan_AA"} };
+		ATSpecialistAsst[] = { {2, "Titan_AT"} };
+		AASpecialistAsst[] = { {2, "Titan_AA"} };
 	};
 
 	class helmet: helmet {

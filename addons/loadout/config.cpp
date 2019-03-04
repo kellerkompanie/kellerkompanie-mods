@@ -36,4 +36,4 @@ class CfgPatches {
 
 class kekoFactions {
 	#include "factions\Faction.hpp"
-}
+};
