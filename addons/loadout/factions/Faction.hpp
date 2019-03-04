@@ -3,9 +3,9 @@ class FactionBase {
 	faces[] = { };
 	logisticsHelicopter = "B_Heli_Transport_03_F";
 
-	ratLauncher = launch_NLAW_F;
-	atLauncher = launch_B_Titan_short_F;
-	aaLauncher = launch_B_Titan_F;
+	disposableRocketLauncher = launch_NLAW_F;
+	antiTankLauncher = launch_B_Titan_short_F;
+	antiAirLauncher = launch_B_Titan_F;
 
 	class role {
 		Command = "Zeus";
