@@ -72,7 +72,7 @@ class CfgVehicles {
 	};
 
 	class keko_AntiTankMagItem: keko_RifleMagItem {
-		displayName = "Anti-Tank Mag";
+		displayName = "Anti-Tank Missile";
 		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at";
 		class TransportItems {
 			class AntiTankMag {
@@ -83,7 +83,7 @@ class CfgVehicles {
 	};
 
 	class keko_AntiAirMagItem: keko_RifleMagItem {
-		displayName = "Anti-Air Mag";
+		displayName = "Anti-Air Missile";
 		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_atl";
 		class TransportItems {
 			class AntiAirMag {
