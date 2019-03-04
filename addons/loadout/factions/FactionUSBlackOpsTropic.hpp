@@ -173,10 +173,6 @@ class FactionUSBlackOpsTropic: FactionBase {
 		RiflemanATGustav416[] = { { 1, "MRAWS_HEAT_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
 		JTAC416[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {4, "100Rnd_65x39_caseless_mag_Tracer" } };
-		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
-		ATSpecialistAsst[] = { {2, "Titan_AT" } };
-		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {
