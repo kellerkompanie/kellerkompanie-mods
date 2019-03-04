@@ -46,22 +46,22 @@ class CfgWeapons {
 	};
 
 	class keko_AntiTankMag: keko_RifleMag {
-		displayName = "Anti-Tank Mag";
+		displayName = "Anti-Tank Missile";
 		picture="\A3\Weapons_F_beta\Launchers\titan\Data\UI\gear_titan_missile_at_CA.paa";
 		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at";
-		descriptionShort = "Anti-Tank magazine";
-		descriptionUse = "Holds ammunition for anti-tank launchers.";
+		descriptionShort = "Anti-Tank Missile";
+		descriptionUse = "Fits into anti-tank launchers.";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
 			mass = 100;
 		};
 	};
 
 	class keko_AntiAirMag: keko_RifleMag {
-		displayName = "Anti-Air Mag";
+		displayName = "Anti-Air Missile";
 		picture="\A3\Weapons_F_beta\Launchers\titan\Data\UI\gear_titan_missile_atl_CA.paa";
 		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_atl";
-		descriptionShort = "Anti-Air magazine";
-		descriptionUse = "Holds ammunition for anti-air launchers.";
+		descriptionShort = "Anti-Air Missile";
+		descriptionUse = "Fits into anti-air launchers.";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
 			mass = 100;
 		};
