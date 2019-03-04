@@ -67,4 +67,28 @@ class CfgWeapons {
 		};
 	};
 
+	class launch_NLAW_F;
+	class keko_RATLauncher: launch_NLAW_F {
+		author = "Schwaggot";
+		displayName = "Disposable Rocket Launcher";
+		descriptionShort = "Disposable Rocket Launcher";
+		descriptionUse = "A Disposable Rocket Launcher for Anti-Tank purposes.";
+	};
+
+	class launch_B_Titan_short_F;
+	class keko_ATLauncher: launch_B_Titan_short_F {
+		author = "Schwaggot";
+		displayName = "Anti-Tank Launcher";
+		descriptionShort = "Anti-Tank Launcher";
+		descriptionUse = "A Anti-Tank Launcher.";
+	};
+
+	class launch_B_Titan_F;
+	class keko_AALauncher: launch_B_Titan_F {
+		author = "Schwaggot";
+		displayName = "Anti-Air Launcher";
+		descriptionShort = "Anti-Air Launcher";
+		descriptionUse = "A Anti-Air Launcher.";
+	};
+
 };
