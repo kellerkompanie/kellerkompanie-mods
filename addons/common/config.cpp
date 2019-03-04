@@ -38,7 +38,10 @@ class CfgPatches {
 			keko_PistolMag,
 			keko_UGLMag,
 			keko_AntiTankMag,
-			keko_AntiAirMag
+			keko_AntiAirMag,
+			keko_RATLauncher,
+			keko_ATLauncher,
+			keko_AALauncher
 		};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -47,7 +50,10 @@ class CfgPatches {
             "ace_ai",
             "cba_main",
             "A3_Modules_F",
-  			"A3_Modules_F_Curator"
+  			"A3_Modules_F_Curator",
+			"A3_Weapons_F",
+			"A3_Weapons_F_Launchers_NLAW",
+			"A3_Weapons_F_Launchers_Titan"
 		};
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
