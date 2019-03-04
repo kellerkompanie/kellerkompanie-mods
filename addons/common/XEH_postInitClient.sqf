@@ -80,3 +80,6 @@ player addEventHandler ["Fired", {
 [{
     _this call FUNC(itemCheck);
 }, [player], 0.5, 0.1] call CBA_fnc_waitAndExecute;
+
+
+TFAR_pluginTimeout = 15;
