@@ -49,10 +49,6 @@ class FactionCSAT: FactionBase {
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		RiflemanAT[] = { { 1, "RPG32_F" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {4, "150Rnd_762x54_Box_Tracer" } };
-		MMGAsst[] = { {4, "150Rnd_93x64_Mag" } };
-		ATSpecialistAsst[] = { {2, "Titan_AT" } };
-		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

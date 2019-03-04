@@ -75,9 +75,6 @@ class FactionBundeswehrSchnee: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {3, "BWA3_200Rnd_556x45_Tracer" } };
-		MMGAsst[] = { {4, "BWA3_120Rnd_762x51_Tracer" } };
-		AASpecialistAsst[] = { {2, "BWA3_Fliegerfaust_Mag" } };
 	};
 
 	class helmet: helmet {

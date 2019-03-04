@@ -69,9 +69,7 @@ class FactionFIA: FactionBase {
 				{ 3, "UGL_FlareGreen_F" },
 				{ 3, "UGL_FlareRed_F" }
 			};
-		RiflemanAT[] = { { 2, "RPG32_F" } };
-		LMGAsst[] = { {4, "200Rnd_65x39_cased_Box_Tracer" } };
-		MMGAsst[] = { {3, "130Rnd_338_Mag" } };
+		RiflemanAT[] = { { 2, "keko_AntiTankMag" } };
 	};
 
 	class helmet: helmet {

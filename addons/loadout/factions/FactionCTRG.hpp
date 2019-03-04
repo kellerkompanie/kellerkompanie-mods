@@ -53,10 +53,6 @@ class FactionCTRG: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {4, "150Rnd_556x45_Drum_Mag_Tracer_F" } };
-		MMGAsst[] = { {3, "200Rnd_556x45_Box_Tracer_Red_F" } };
-		ATSpecialistAsst[] = { {2, "Titan_AT" } };
-		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

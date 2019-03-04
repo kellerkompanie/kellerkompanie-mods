@@ -59,9 +59,6 @@ class FactionRussiaSpeznas: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		JTAC[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {6, "rhs_75Rnd_762x39mm_tracer" } };
-		ATSpecialistAsst[] = { {2, "Vorona_HEAT" } };
-		AASpecialistAsst[] = { {2, "rhs_mag_9k38_rocket" } };
 	};
 
 	class helmet: helmet {

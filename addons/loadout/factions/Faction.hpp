@@ -102,6 +102,11 @@ class FactionBase {
 		Doctor[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"KAT_X_AED"},{20,"adv_aceSplint_splint"},{10, "KAT_larynx"},{1, "KAT_accuvac"}};
 		EOD[] = {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}};
 		Engineer[] = {{1, "ToolKit"},{1, "ACE_wirecutter"},{1, "ACE_EntrenchingTool"},{1, "ACE_Fortify"}};
+
+		LMGAsst[] = { {4, "keko_MGMag"} };
+		MMGAsst[] = { {3, "keko_MGMag"} };
+		ATSpecialistAsst[] = { {2, "keko_AntiTankMag"} };
+		AASpecialistAsst[] = { {2, "keko_AntiAirMag"} };
 	};
 
 	class helmet {

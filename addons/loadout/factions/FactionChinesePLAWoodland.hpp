@@ -49,10 +49,6 @@ class FactionChinesePLAWoodland: FactionBase {
 		Sergeant[] = {  };
 		SQL[] = {  };
 		JTAC[] = { { 4, "Laserbatteries" } };
-		LMGAsst[] = { {4, "VME_QJB95_1_75Rnd_DBP10" } };
-		MMGAsst[] = { {4, "150Rnd_93x64_Mag" } };
-		ATSpecialistAsst[] = { {2, "Titan_AT" } };
-		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {

@@ -99,10 +99,6 @@ class FactionNato: FactionBase {
 		JTAC[] = {
 			{4, Laserbatteries}
 		};
-		LMGAsst[] = { {5, "100Rnd_65x39_caseless_mag_Tracer" } };
-		MMGAsst[] = { {4, "130Rnd_338_Mag" } };
-		ATSpecialistAsst[] = { {2, "Titan_AT" } };
-		AASpecialistAsst[] = { {2, "Titan_AA" } };
 	};
 
 	class helmet: helmet {
