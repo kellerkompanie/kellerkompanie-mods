@@ -138,7 +138,8 @@ GVAR(machineGuns) = [
 	"BWA3_MG5_tan",
 	"BWAdd_MG3",
 	"BWAdd_MG4",
-	"BWAdd_MG5"
+	"BWAdd_MG5",
+	"OPTRE_M73"
 ];
 
 GVAR(atLaunchers) = [
@@ -172,7 +173,8 @@ GVAR(atLaunchers) = [
 	"launch_MRAWS_olive_F",
 	"launch_MRAWS_sand_F",
 	"launch_O_Vorona_brown_F",
-	"launch_O_Vorona_green_F"
+	"launch_O_Vorona_green_F",
+	"OPTRE_M41_SSR"
 ];
 
 GVAR(aaLaunchers) = [
@@ -185,7 +187,8 @@ GVAR(aaLaunchers) = [
 	"rhs_weap_fim92",
 	"rhs_weap_igla",
 	"PSZ_Grom",
-	"BWA3_Fliegerfaust"
+	"BWA3_Fliegerfaust",
+	"OPTRE_M41_SSR_G"
 ];
 
 
