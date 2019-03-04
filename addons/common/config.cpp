@@ -39,9 +39,9 @@ class CfgPatches {
 			keko_UGLMag,
 			keko_AntiTankMag,
 			keko_AntiAirMag,
-			keko_RATLauncher,
-			keko_ATLauncher,
-			keko_AALauncher
+			keko_DisposableRocketLauncher,
+			keko_AntiTankLauncher,
+			keko_AntiAirLauncher
 		};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

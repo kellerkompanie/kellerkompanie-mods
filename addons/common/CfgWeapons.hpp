@@ -68,7 +68,7 @@ class CfgWeapons {
 	};
 
 	class launch_NLAW_F;
-	class keko_RATLauncher: launch_NLAW_F {
+	class keko_DisposableRocketLauncher: launch_NLAW_F {
 		author = "Schwaggot";
 		displayName = "Disposable Rocket Launcher";
 		descriptionShort = "Disposable Rocket Launcher";
@@ -76,7 +76,7 @@ class CfgWeapons {
 	};
 
 	class launch_B_Titan_short_F;
-	class keko_ATLauncher: launch_B_Titan_short_F {
+	class keko_AntiTankLauncher: launch_B_Titan_short_F {
 		author = "Schwaggot";
 		displayName = "Anti-Tank Launcher";
 		descriptionShort = "Anti-Tank Launcher";
@@ -84,7 +84,7 @@ class CfgWeapons {
 	};
 
 	class launch_B_Titan_F;
-	class keko_AALauncher: launch_B_Titan_F {
+	class keko_AntiAirLauncher: launch_B_Titan_F {
 		author = "Schwaggot";
 		displayName = "Anti-Air Launcher";
 		descriptionShort = "Anti-Air Launcher";
