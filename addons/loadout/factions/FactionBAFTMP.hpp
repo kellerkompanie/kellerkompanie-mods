@@ -2,6 +2,10 @@ class FactionBAFTMP: FactionBase {
 	name = "[Event] BAF TMP - British Armed Forces (TMP)";
 	logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
 
+	disposableRocketLauncher = UK3CB_BAF_AT4_CS_AP_Launcher;
+	antiTankLauncher = UK3CB_BAF_Javelin_Slung_Tube;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsBAF.hpp"
 
 	class uniform: uniform {

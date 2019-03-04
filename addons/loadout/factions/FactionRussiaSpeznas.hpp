@@ -2,6 +2,10 @@ class FactionRussiaSpeznas: FactionBase {
 	name = "[Main] Russia - GRU Speznas";
 	logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
 
+	disposableRocketLauncher = rhs_weap_rpg7;
+	antiTankLauncher = launch_O_Vorona_green_F;
+	antiAirLauncher = rhs_weap_igla;
+
 	#include "WeaponsRussiaSpeznas.hpp"
 
 	class uniform: uniform {

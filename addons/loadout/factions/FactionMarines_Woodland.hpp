@@ -2,6 +2,10 @@ class FactionMarines_Woodland: FactionBase {
 	name = "[Main] U.S. Marine Corps - Marine Pattern Woodland";
 	logisticsHelicopter = "rhsusf_CH53E_USMC";
 
+	disposableRocketLauncher = rhs_weap_M136;
+	antiTankLauncher = rhs_weap_smaw;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsMarines.hpp"
 
 	class uniform: uniform {
@@ -53,7 +57,7 @@ class FactionMarines_Woodland: FactionBase {
 		Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
 		ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
-		JTAC[] = { { 4, "Laserbatteries" } };	
+		JTAC[] = { { 4, "Laserbatteries" } };
 		ATSpecialistAsst[] += { { 4, "rhs_mag_smaw_SR" } };
 	};
 

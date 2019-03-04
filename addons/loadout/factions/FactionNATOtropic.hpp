@@ -1,6 +1,9 @@
 class FactionNatoTropic: FactionNato {
 	name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
 
+	antiTankLauncher = launch_B_Titan_short_tna_F;
+	antiAirLauncher = launch_B_Titan_tna_F;
+
 	#include "WeaponsNATOtropic.hpp"
 
 	class uniform: uniform {

@@ -2,6 +2,10 @@ class FactionCSAT: FactionBase {
 	name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
 	logisticsHelicopter = "O_Heli_Transport_04_box_F";
 
+	disposableRocketLauncher = keko_W_RPG32;
+	antiTankLauncher = launch_O_Titan_short_F;
+	antiAirLauncher = launch_O_Titan_F;
+
 	#include "WeaponsCSAT.hpp"
 
 	class uniform: uniform {

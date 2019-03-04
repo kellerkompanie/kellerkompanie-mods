@@ -4,6 +4,10 @@ class FactionBAFArctic: FactionBase {
 
 	#include "WeaponsBAF.hpp"
 
+	disposableRocketLauncher = UK3CB_BAF_AT4_CS_AP_Launcher;
+	antiTankLauncher = UK3CB_BAF_Javelin_Slung_Tube;
+	antiAirLauncher = rhs_weap_fim92;
+
 	class uniform: uniform {
 		Default[] = { "UK3CB_BAF_U_Smock_MTP_Arctic" };
 		Lead[] = { "UK3CB_BAF_U_RolledUniform_MTP" };

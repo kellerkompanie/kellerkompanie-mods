@@ -2,6 +2,10 @@ class FactionHorizonIsland: FactionBase {
 	name = "[Main] Horizon Island Defense Forces";
 	logisticsHelicopter = "rhs_uh1h_hidf_unarmed";
 
+	disposableRocketLauncher = rhs_weap_M136;
+	antiTankLauncher = rhs_weap_smaw;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsHorizonIsland.hpp"
 
 	class uniform: uniform {

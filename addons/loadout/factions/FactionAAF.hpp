@@ -2,6 +2,9 @@ class FactionAAF: FactionBase {
 	name = "[Minimal] AAF - Altis Armed Forces";
 	logisticsHelicopter = "I_Heli_Transport_02_F";
 
+	antiTankLauncher = launch_I_Titan_short_F;
+	antiAirLauncher = launch_I_Titan_F;
+
 	#include "WeaponsAAF.hpp"
 
 	class role: role {

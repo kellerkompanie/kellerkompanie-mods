@@ -2,6 +2,9 @@ class FactionGuerilla: FactionBase {
 	name = "[Minimal] Guerilla";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
+	antiTankLauncher = launch_RPG7_F;
+	antiAirLauncher = launch_I_Titan_F;
+
 	#include "WeaponsGuerilla.hpp"
 
 	class uniform: uniform {

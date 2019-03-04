@@ -2,6 +2,10 @@ class FactionFIA: FactionBase {
 	name = "[Minimal] FIA - Freedom and Independence Alliance";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
+	disposableRocketLauncher = keko_W_RPG32;
+	antiTankLauncher = launch_RPG32_F;
+	antiAirLauncher = launch_B_Titan_F;
+
 	#include "WeaponsFIA.hpp"
 
 	class uniform: uniform {
