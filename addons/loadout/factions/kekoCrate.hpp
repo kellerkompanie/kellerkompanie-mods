@@ -1,84 +1,79 @@
-#define KEKO_LOGISTICS_FT_CRATE_DEFAULT {\
-		{10, PRIMARY_MAG},\
-		{10, PRIMARY_MAG_TRACER},\
-		{6, PRIMARY_MAG_LMG},\
-		{2, SECONDARY_MAG},\
-		{2, RAT_LAUNCHER},\
-		{6, UGL_MAG},\
-		{6, GRENADE},\
-		{4, SMOKE_WHITE},\
-		{4, SMOKE_GREEN},\
-		{20, "ACE_fieldDressing"},\
-		{4, "ACE_morphine"},\
-		{4, "ACE_epinephrine"},\
-		{8, "ACE_tourniquet"},\
-		{10, "adv_aceSplint_splint"},\
-		{2, "ACE_CableTie"},\
-		{2, "KAT_Painkillers"}}
 
-#define KEKO_LOGISTICS_INF_CRATE_DEFAULT {\
-		{30, PRIMARY_MAG},\
-		{30, PRIMARY_MAG_TRACER},\
-		{10, PRIMARY_MAG_LMG},\
-		{10, PRIMARY_MAG_MARKSMAN},\
-		{6, SECONDARY_MAG},\
-		{10, UGL_MAG}}
-
-#define KEKO_LOGISTICS_GRE_CRATE_DEFAULT {\
-		{20, UGL_MAG},\
-		{10, GRENADE},\
-		{10, SMOKE_WHITE},\
-		{10, SMOKE_GREEN},\
-		{10, SMOKE_RED}}
-
-#define KEKO_LOGISTICS_MG_CRATE_DEFAULT {\
-		{10, PRIMARY_MAG_LMG},\
-		{10, PRIMARY_MAG_MMG},\
-		{1, "B_Carryall_cbr"},\
-		{2, "ACE_SpareBarrel"}}
-
-#define KEKO_LOGISTICS_AT_CRATE_DEFAULT {\
-		{1, AT_LAUNCHER},\
-		{3, AT_MAG},\
-		{1, "B_FieldPack_cbr"},\
-		{2, RAT_LAUNCHER}}
-
-#define KEKO_LOGISTICS_AA_CRATE_DEFAULT {\
-		{1, AA_LAUNCHER},\
-		{3, AA_MAG},\
-		{1, "B_FieldPack_cbr"}}
-
-class CrateBase {
-	name = "Empty Crate";
-	cfgName[] = {};
+class EmptyCrate {
+	name = "Leere Kiste";
+	cfgName[] = {"B_CargoNet_01_ammo_F","I_CargoNet_01_ammo_F","O_CargoNet_01_ammo_F"};
 	inventory[] = {};
 };
 
-class FireTeamCrate: CrateBase {
+class FireTeamCrate: EmptyCrate {
 	name = "Fire Team Kiste";
 	cfgName[] = {"Box_NATO_Ammo_F","Box_IND_Ammo_F","Box_East_Ammo_F"};
-	inventory[] = KEKO_LOGISTICS_FT_CRATE_DEFAULT;
+	inventory[] = {
+			{20, "keko_PrimaryMag"},
+			{6, "keko_MGMag"},
+			{2, "keko_PistolMag"},
+			{2, "keko_RATLauncher"},
+			{6, "keko_UGLMag"},
+			{6, "HandGrenade"},
+			{4, "SmokeShell"},
+			{4, "SmokeShellGreen"},
+			{20, "ACE_fieldDressing"},
+			{4, "ACE_morphine"},
+			{4, "ACE_epinephrine"},
+			{8, "ACE_tourniquet"},
+			{10, "adv_aceSplint_splint"},
+			{2, "ACE_CableTie"},
+			{2, "KAT_Painkillers"}
+		};
 };
+
 class InfantryCrate: FireTeamCrate {
 	name = "Infanterie Kiste";
-	inventory[] = KEKO_LOGISTICS_INF_CRATE_DEFAULT;
+	inventory[] =  {
+			{60, "keko_PrimaryMag"},
+			{10, "keko_MGMag"},
+			{6, "keko_PistolMag"},
+			{10, "keko_UGLMag"}
+		};
 };
-class GrenadesCrate: CrateBase {
+
+class GrenadesCrate: EmptyCrate {
 	name = "Granaten Kiste";
 	cfgName[] = {"Box_NATO_Grenades_F","Box_Ind_Grenades_F","Box_East_Grenades_F"};
-	inventory[] = KEKO_LOGISTICS_GRE_CRATE_DEFAULT;
+	inventory[] = {
+			{20, "keko_UGLMag"},
+			{10, "HandGrenade"},
+			{10, "SmokeShell"},
+			{10, "SmokeShellGreen"},
+			{10, "SmokeShellRed"},
+			{5, "SmokeShellPurple"},
+			{5, "SmokeShellOrange"},
+			{5, "SmokeShellBlue"}
+		};
 };
-class MGCrate: CrateBase {
+
+class MGCrate: EmptyCrate {
 	name = "MG Kiste";
 	cfgName[] = {"Box_NATO_WpsSpecial_F","Box_IND_WpsSpecial_F","Box_EAST_WpsSpecial_F"};
-	inventory[] = KEKO_LOGISTICS_MG_CRATE_DEFAULT;
+	inventory[] = {
+			{20, "keko_MGMag"},
+			{1, "B_Carryall_cbr"},
+			{2, "ACE_SpareBarrel"}
+		};
 };
-class ATCrate: CrateBase {
+
+class ATCrate: EmptyCrate {
 	name = "Anti-Tank Kiste";
 	cfgName[] = {"Box_NATO_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_East_WpsLaunch_F"};
-	inventory[] = KEKO_LOGISTICS_AT_CRATE_DEFAULT;
+	inventory[] = {
+			{1, "keko_ATLauncher"},
+			{3, "keko_ATMag"},
+			{1, "B_FieldPack_cbr"},
+			{2, "keko_RATLauncher"}
+		};
 };
-class ATGustavCrate: CrateBase {
+
+class ATGustavCrate: EmptyCrate {
 	name = "Anti-Tank Kiste (Gustav)";
 	cfgName[] = {"Box_NATO_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_East_WpsLaunch_F"};
 	inventory[] = {
@@ -88,11 +83,17 @@ class ATGustavCrate: CrateBase {
 			{1, "B_FieldPack_cbr"}
 		};
 };
+
 class AACrate: ATCrate {
 	name = "Anti-Air Kiste";
-	inventory[] = KEKO_LOGISTICS_AA_CRATE_DEFAULT;
+	inventory[] = {
+			{1, "keko_AALauncher"},
+			{3, "keko_AAMag"},
+			{1, "B_FieldPack_cbr"}
+		};
 };
-class MedicCrate: CrateBase {
+
+class MedicCrate: EmptyCrate {
 	name = "Medic Kiste";
 	cfgName[] = {"ACE_medicalSupplyCrate_advanced","ACE_medicalSupplyCrate_advanced","ACE_medicalSupplyCrate_advanced"};
 	inventory[] = {
@@ -113,7 +114,8 @@ class MedicCrate: CrateBase {
 			{5, "KAT_Painkillers"}
 		};
 };
-class SupportCrate: CrateBase {
+
+class SupportCrate: EmptyCrate {
 	name = "Support Kiste";
 	cfgName[] = {"Box_NATO_Support_F","Box_IND_Support_F","Box_East_Support_F"};
 	inventory[] = {
@@ -140,7 +142,8 @@ class SupportCrate: CrateBase {
 			{5, "KAT_Painkillers"}
 		};
 };
-class EODCrate: CrateBase {
+
+class EODCrate: EmptyCrate {
 	name = "Sprengmittel Kiste";
 	cfgName[] = {"Box_NATO_AmmoOrd_F","Box_IND_AmmoOrd_F","Box_East_AmmoOrd_F"};
 	inventory[] = {
@@ -160,6 +163,7 @@ class EODCrate: CrateBase {
 			{10, "DemoCharge_Remote_Mag"}
 		};
 };
+
 class RationsCrate: SupportCrate {
 	name = "Rationen Kiste";
 	inventory[] = {
@@ -170,6 +174,7 @@ class RationsCrate: SupportCrate {
 			{10, "KAT_Painkillers"}
 		};
 };
+
 class CQBCrate: GrenadesCrate {
 	name = "OHK/CQB Kiste";
 	inventory[] =  {
@@ -179,20 +184,13 @@ class CQBCrate: GrenadesCrate {
 			{10, "ACE_SpraypaintRed"}
 		};
 };
-class EmptyCrate: CrateBase {
-	name = "Leere Kiste";
-	cfgName[] = {"B_CargoNet_01_ammo_F","I_CargoNet_01_ammo_F","O_CargoNet_01_ammo_F"};
-};
-class SpareWheel: CrateBase {
+
+class SpareWheel: EmptyCrate {
 	name = "Ersatzrad";
 	cfgName[] = {"ACE_Wheel","ACE_Wheel","ACE_Wheel"};
 };
-class SpareTrack: CrateBase {
+
+class SpareTrack: EmptyCrate {
 	name = "Ersatzkette";
 	cfgName[] = {"ACE_Track","ACE_Track","ACE_Track"};
 };
-
-#define KEKO_LOGISTICS_DEFAULT_CRATE_LIST {\
-	{"Munition", {FireTeamCrate,InfantryCrate,GrenadesCrate,MGCrate,ATCrate,ATGustavCrate,AACrate}},\
-	{"Support", {MedicCrate,SupportCrate,EODCrate,CQBCrate,RationsCrate,EmptyCrate}},\
-	{"Andere", {SpareWheel,SpareTrack}}}
