@@ -34,4 +34,6 @@ class CfgPatches {
 #include "ui\dialog_loadoutMenu.hpp"
 #include "ui\dialog_applyLoadout.hpp"
 
-#include "factions\kekoFaction.hpp"
+class kekoFactions {
+	#include "factions\Faction.hpp"
+}
