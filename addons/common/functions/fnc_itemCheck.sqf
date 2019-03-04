@@ -56,7 +56,7 @@ if (_hasSecondaryWeapon) then {
 	};
 };
 
-if (_hasLauncherWeapon) then {
+if (_hasLauncherWeapon && !(secondaryWeapon _unit in ["keko_RATLauncher", "keko_ATLauncher", "keko_AALauncher"])) then {
 	if (secondaryWeapon _unit in GVAR(atLaunchers)) then {
 		while {({_x == "keko_AntiTankMag"} count items _unit) > 0} do {
 			_unit removeItem "keko_AntiTankMag";
