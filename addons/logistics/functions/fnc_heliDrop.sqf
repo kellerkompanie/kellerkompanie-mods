@@ -26,7 +26,7 @@ else
 
 private _helicopterCfgClass = "B_Heli_Transport_03_unarmed_F";
 if (EGVAR(loadout,loadoutFaction) != "kekoCustom") then {
-	private _factionCfg = configFile >> "kekoFaction" >> EGVAR(loadout,loadoutFaction);
+	private _factionCfg = configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction);
 	_helicopterCfgClass = getText (_factionCfg >> "logisticsHelicopter");
 };
 

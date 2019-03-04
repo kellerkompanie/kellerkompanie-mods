@@ -36,7 +36,7 @@ else {
 	_spawnPos = _spawn;
 	_targetPos = _target;
 
-	private _crateConfig = configFile >> "kekoFaction" >> _faction >> _crate;
+	private _crateConfig = configFile >> "kekoFactions" >> _faction >> "crates" >> _crate;
 	_droneInventory = getArray (_crateConfig >> "inventory");
 };
 
