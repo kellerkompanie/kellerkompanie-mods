@@ -2,6 +2,10 @@ class FactionChinesePLAWoodland: FactionBase {
 	name = "[Main] Chinese PLA (Woodland)";
 	logisticsHelicopter = "VME_PLA_Mi17";
 
+	disposableRocketLauncher = vme_pla_PF89;
+	antiTankLauncher = launch_O_Titan_short_F;
+	antiAirLauncher = launch_O_Titan_F;
+
 	#include "WeaponsChinesePLA.hpp"
 
 	class uniform: uniform {

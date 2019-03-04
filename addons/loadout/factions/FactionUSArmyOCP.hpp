@@ -2,6 +2,10 @@ class FactionUSArmyOCP: FactionBase {
 	name = "[Main] U.S. Army (OCP)";
 	logisticsHelicopter = "RHS_UH60M";
 
+	disposableRocketLauncher = rhs_weap_M136;
+	antiTankLauncher = rhs_weap_fgm148;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsUSArmy.hpp"
 
 	class uniform: uniform {

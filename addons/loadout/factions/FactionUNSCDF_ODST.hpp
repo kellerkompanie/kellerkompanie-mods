@@ -2,6 +2,10 @@ class FactionUNSCDF_ODST: FactionBase {
 	name = "[Sci-Fi] UNSCDF (ODST) - U.N. Space Command Defense Force (ODST)";
 	logisticsHelicopter = "OPTRE_Pelican_unarmed";
 
+	disposableRocketLauncher = OPTRE_M41_SSR;
+	antiTankLauncher = OPTRE_M41_SSR;
+	antiAirLauncher = OPTRE_M41_SSR_G;
+
 	#include "WeaponsUNSCDF.hpp"
 
 	class uniform: uniform {

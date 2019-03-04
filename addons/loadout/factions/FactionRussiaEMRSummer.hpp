@@ -2,6 +2,10 @@ class FactionRussiaEMRSummer: FactionBase {
 	name = "[Main] Russia EMR (Summer)";
 	logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
 
+	disposableRocketLauncher = rhs_weap_rpg26;
+	antiTankLauncher = rhs_weap_rpg7;
+	antiAirLauncher = rhs_weap_igla;
+
 	#include "WeaponsRussiaEMR.hpp"
 
 	class uniform: uniform {

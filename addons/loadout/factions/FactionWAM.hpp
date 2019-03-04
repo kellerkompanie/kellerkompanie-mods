@@ -2,6 +2,9 @@ class FactionWAM: FactionBase {
 	name = "[Minimal] WAM - West Altian Militia (Paramilitary)";
 	logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
+	disposableRocketLauncher = launch_RPG7_F;
+	antiTankLauncher = RPG32_Brown;
+
 	#include "WeaponsWAM.hpp"
 
 	class uniform: uniform {

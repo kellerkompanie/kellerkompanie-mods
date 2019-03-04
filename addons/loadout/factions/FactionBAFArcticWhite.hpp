@@ -2,6 +2,10 @@ class FactionBAFArcticWhite: FactionBase {
 	name = "[Event] BAF MTP Arctic White - British Armed Forces (MTP Arctic White)";
 	logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
 
+	disposableRocketLauncher = UK3CB_BAF_AT4_CS_AP_Launcher;
+	antiTankLauncher = UK3CB_BAF_Javelin_Slung_Tube;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsBAF.hpp"
 
 	class uniform: uniform {

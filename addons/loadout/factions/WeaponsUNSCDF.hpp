@@ -66,15 +66,15 @@ class weapons: weapons {
 
 
 	// Launcher
-	class keko_W_OPTRE_M41_SSR_G: LauncherWeapon
-	{
-		cfgName = "OPTRE_M41_SSR_G";
-		magazines[] = {"OPTRE_M41_Twin_HEAT_G"};
-	};
-
 	class keko_W_OPTRE_M41_SSR: LauncherWeapon
-	{
+	{ // AT Specialist
 		cfgName = "OPTRE_M41_SSR";
 		magazines[] = {"OPTRE_M41_Twin_HEAT"};
+	};
+
+	class keko_W_OPTRE_M41_SSR_G: LauncherWeapon
+	{ // AA Specialist
+		cfgName = "OPTRE_M41_SSR_G";
+		magazines[] = {"OPTRE_M41_Twin_HEAT_G"};
 	};
 };

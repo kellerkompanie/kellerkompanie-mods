@@ -2,6 +2,10 @@ class FactionBundeswehrFleck: FactionBase {
 	name = "[Main] Bundeswehr (Flecktarn)";
 	logisticsHelicopter = "kyo_MH47E_base";
 
+	disposableRocketLauncher = BWA3_Pzf3;
+	antiTankLauncher = BWA3_Pzf3;
+	antiAirLauncher = BWA3_Fliegerfaust;
+
 	#include "WeaponsBundeswehr.hpp"
 
 	class role: role {

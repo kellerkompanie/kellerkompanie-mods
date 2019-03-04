@@ -2,6 +2,9 @@ class FactionAlSirae: FactionBase {
 	name = "[Minimal] Al Sirae (Terrorists)";
 	logisticsHelicopter = "MU_CIV_Orca";
 
+	antiTankLauncher = launch_I_Titan_short_F;
+	antiAirLauncher = launch_I_Titan_F;
+
 	#include "WeaponsAlSirae.hpp"
 
 	class uniform: uniform {

@@ -2,6 +2,10 @@ class FactionBlackorder: FactionBase {
 	name = "[Main] Black Order";
 	logisticsHelicopter = "O_RHS_UH60M2_BlackOrder_F";
 
+	disposableRocketLauncher = rhs_weap_M136;
+	antiTankLauncher = rhs_weap_maaws;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsBlackorder.hpp"
 
 	class uniform: uniform {

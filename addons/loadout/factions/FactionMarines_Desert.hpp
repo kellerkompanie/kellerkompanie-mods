@@ -2,6 +2,10 @@ class FactionMarines_Desert: FactionBase {
 	name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
 	logisticsHelicopter = "rhsusf_CH53E_USMC_D";
 
+	disposableRocketLauncher = rhs_weap_M136;
+	antiTankLauncher = rhs_weap_smaw;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsMarines.hpp"
 
 	class uniform: uniform {

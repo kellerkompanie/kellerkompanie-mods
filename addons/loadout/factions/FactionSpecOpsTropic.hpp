@@ -2,6 +2,10 @@ class FactionSpecOpsTropic: FactionBase {
 	name = "[Main] Western Special Forces (Tropic)";
 	logisticsHelicopter = "RHS_UH60M";
 
+	disposableRocketLauncher = rhs_weap_m72a7;
+	antiTankLauncher = rhs_weap_smaw;
+	antiAirLauncher = rhs_weap_fim92;
+
 	#include "WeaponsSpecOpsTropic.hpp"
 
 	class uniform: uniform {
