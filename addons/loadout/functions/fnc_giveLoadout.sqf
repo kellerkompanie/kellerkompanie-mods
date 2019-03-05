@@ -11,6 +11,22 @@ if(_customLoadout) then {
 if (_customLoadout) exitWith{};
 
 
+private _specialLoadout = [];
+{
+	_x params ["_loadoutDummyClass", "", "_loadout"];
+	diag_log format ["[KEKO] (loadout) _loadoutDummyClass = %1 | _role", _loadoutDummyClass, _role];
+	if (_role ==  _loadoutDummyClass) then {
+		_specialLoadout = _loadout;
+	};
+} forEach GVAR(addLoadouts);
+
+diag_log format ["[KEKO] (loadout) _specialLoadout = %1", _specialLoadout];
+
+if ( count _specialLoadout > 0 ) exitWith {
+	_player setUnitLoadout _specialLoadout;
+};
+
+
 _player enableSimulation false;
 
 private _factionCfg = configFile >> "kekoFactions" >> _faction;
