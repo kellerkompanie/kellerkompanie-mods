@@ -6,7 +6,7 @@ class FactionBlackorderRedBerets: FactionBase {
     antiTankLauncher = rhs_weap_maaws;
     antiAirLauncher = rhs_weap_fim92;
 
-    #include "WeaponsBlackOrderRedBerets.hpp"
+    #include "WeaponsBlackorderRedBerets.hpp"
 
     class uniform: uniform {
         Default[] = { "U_BlackOrder_Uniform_1" };
