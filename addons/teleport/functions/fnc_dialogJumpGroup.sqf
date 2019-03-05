@@ -14,7 +14,7 @@ private _groupLeader = leader _playerGroup;
 if(_groupLeader == _player) then {
   {
     [_teleporterName] remoteExec [QFUNC(dialogJump), _x, false];
-		sleep 3;
+        sleep 3;
   } forEach units _playerGroup;
 } else {
   hintC "Only group leader may parachute the group.";

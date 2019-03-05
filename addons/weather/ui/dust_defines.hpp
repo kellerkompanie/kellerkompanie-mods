@@ -121,21 +121,21 @@
 #define KEY_XBOX_RightThumbYDown  KEY_XINPUT + 23
 
 // Fonts
-#define GUI_FONT_NORMAL			PuristaMedium
-#define GUI_FONT_BOLD			PuristaSemibold
-#define GUI_FONT_THIN			PuristaLight
-#define GUI_FONT_MONO			EtelkaMonospacePro
-#define GUI_FONT_NARROW			EtelkaNarrowMediumPro
-#define GUI_FONT_CODE			LucidaConsoleB
-#define GUI_FONT_SYSTEM			TahomaB
+#define GUI_FONT_NORMAL            PuristaMedium
+#define GUI_FONT_BOLD            PuristaSemibold
+#define GUI_FONT_THIN            PuristaLight
+#define GUI_FONT_MONO            EtelkaMonospacePro
+#define GUI_FONT_NARROW            EtelkaNarrowMediumPro
+#define GUI_FONT_CODE            LucidaConsoleB
+#define GUI_FONT_SYSTEM            TahomaB
 
 // Grids
-#define GUI_GRID_CENTER_WAbs		((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_CENTER_HAbs		(GUI_GRID_CENTER_WAbs / 1.2)
-#define GUI_GRID_CENTER_W		(GUI_GRID_CENTER_WAbs / 40)
-#define GUI_GRID_CENTER_H		(GUI_GRID_CENTER_HAbs / 25)
-#define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+#define GUI_GRID_CENTER_WAbs        ((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_CENTER_HAbs        (GUI_GRID_CENTER_WAbs / 1.2)
+#define GUI_GRID_CENTER_W        (GUI_GRID_CENTER_WAbs / 40)
+#define GUI_GRID_CENTER_H        (GUI_GRID_CENTER_HAbs / 25)
+#define GUI_GRID_CENTER_X        (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y        (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
 class RscText //Text Resource Class
 {
@@ -151,103 +151,103 @@ class RscText //Text Resource Class
     w = 0.3;
     style = 2;
     shadow = 2;
-	tooltip = ""; // Tooltip text
-	tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
-	tooltipColorText[] = {1,1,1,1}; // Tooltip text color
-	tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
+    tooltip = ""; // Tooltip text
+    tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
+    tooltipColorText[] = {1,1,1,1}; // Tooltip text color
+    tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
     font = GUI_FONT_NORMAL;
     sizeEx = "0.02/ (getResolution select 5)";
 };
 
 class RscPicture
 {
-	type = CT_STATIC;
-	idc = -1;
-	style = 48;//ST_PICTURE
-	colorBackground[] = {0,0,0,0};
-	colorText[] = {1,1,1,1};
-	font = "TahomaB";
-	sizeEx = 0;
-	lineSpacing = 0;
-	text = "";
-	fixedWidth = 0;
-	shadow = 0;
+    type = CT_STATIC;
+    idc = -1;
+    style = 48;//ST_PICTURE
+    colorBackground[] = {0,0,0,0};
+    colorText[] = {1,1,1,1};
+    font = "TahomaB";
+    sizeEx = 0;
+    lineSpacing = 0;
+    text = "";
+    fixedWidth = 0;
+    shadow = 0;
 };
 
 class RscCombo //Combo Resource Class
 {
-	type = CT_COMBO;
-	style = ST_CENTER + LB_TEXTURES;
-	h = 0.05;
-	default = 0; // Control selected by default (only one within a display can be used)
-	blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
-	wholeHeight = 0.25;
-	colorSelect[] = {1,1,1,1};
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0.09,0.45,0.8,1};
-	colorDisabled[] = {1,1,1,0.5}; // Disabled text color
-	colorScrollbar[] = {1,1,1,1};
-	colorSelectBackground[] = {0.09,0.45,0.8,1}; // Selected item fill color
-	font = GUI_FONT_NORMAL; // Font from CfgFontFamilies
-	sizeEx = 0.02/ (getResolution select 5);
-	pictureColor[] = {1,0.5,0,1}; // Picture color
-	pictureColorSelect[] = {1,1,1,1}; // Selected picture color
-	pictureColorDisabled[] = {1,1,1,0.5}; // Disabled picture color
-	tooltip = ""; // Tooltip text
-	tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
-	tooltipColorText[] = {1,1,1,1}; // Tooltip text color
-	tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
-	soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1}; // Sound played when the list is expanded
-	soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1}; // Sound played when the list is collapsed
-	soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1}; // Sound played when an item is selected
-	maxHistoryDelay = 1.0;
-	shadow = 0;
-	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa"; // Expand arrow
-	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa"; // Collapse arrow
-	class ComboScrollBar
-	{
-		width = 0; // width of ComboScrollBar
-		height = 0; // height of ComboScrollBar
-		scrollSpeed = 0.01; // scrollSpeed of ComboScrollBar
+    type = CT_COMBO;
+    style = ST_CENTER + LB_TEXTURES;
+    h = 0.05;
+    default = 0; // Control selected by default (only one within a display can be used)
+    blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
+    wholeHeight = 0.25;
+    colorSelect[] = {1,1,1,1};
+    colorText[] = {1,1,1,1};
+    colorBackground[] = {0.09,0.45,0.8,1};
+    colorDisabled[] = {1,1,1,0.5}; // Disabled text color
+    colorScrollbar[] = {1,1,1,1};
+    colorSelectBackground[] = {0.09,0.45,0.8,1}; // Selected item fill color
+    font = GUI_FONT_NORMAL; // Font from CfgFontFamilies
+    sizeEx = 0.02/ (getResolution select 5);
+    pictureColor[] = {1,0.5,0,1}; // Picture color
+    pictureColorSelect[] = {1,1,1,1}; // Selected picture color
+    pictureColorDisabled[] = {1,1,1,0.5}; // Disabled picture color
+    tooltip = ""; // Tooltip text
+    tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
+    tooltipColorText[] = {1,1,1,1}; // Tooltip text color
+    tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
+    soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1}; // Sound played when the list is expanded
+    soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1}; // Sound played when the list is collapsed
+    soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1}; // Sound played when an item is selected
+    maxHistoryDelay = 1.0;
+    shadow = 0;
+    arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa"; // Expand arrow
+    arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa"; // Collapse arrow
+    class ComboScrollBar
+    {
+        width = 0; // width of ComboScrollBar
+        height = 0; // height of ComboScrollBar
+        scrollSpeed = 0.01; // scrollSpeed of ComboScrollBar
 
-		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa"; // Arrow
-		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa"; // Arrow when clicked on
-		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa"; // Dragging element (stretched vertically)
+        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa"; // Arrow
+        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa"; // Arrow when clicked on
+        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
+        thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa"; // Dragging element (stretched vertically)
 
-		color[] = {1,1,1,1}; // Scrollbar color
-	};
+        color[] = {1,1,1,1}; // Scrollbar color
+    };
 };
 
 class RscSlider //Slider Resource Class
 {
-	type = CT_XSLIDER; // Type
-	style = SL_HORZ; // Style
-	default = 0; // Control selected by default (only one within a display can be used)
-	blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
-	color[] = {1,1,1,1}; // Text and arrow color
-	colorDisabled[] = {1,1,1,0.5}; // Disabled text and arrow color
-	colorActive[] = {1,0.5,0,1}; // Text selection color
-	tooltip = ""; // Tooltip text
-	tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
-	tooltipColorText[] = {1,1,1,1}; // Tooltip text color
-	tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
-	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa"; // Arrow
-	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa"; // Arrow when clicked on
-	border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa"; // Fill texture
-	thumb = "#(argb,8,8,3)color(1,1,1,1)"; // Dragging element (stretched vertically)
-	class Title // Link to a title (obsolete?)
-	{
-		idc = -1; // Control IDC (has to be defined ABOVE the slider control)
-		colorBase[] = {1,1,1,1}; // Text color
-		colorActive[] = {1,0.5,0,1}; // Text color when the slider is active
-	};
-	class Value // Link to a control which will show slider value
-	{
-		idc = -1; // Control IDC (has to be defined ABOVE the slider control)
-		format = "%.f"; // Text format, value is represented by variable %g (float) or %.f (integer)
-		type = SPTPlain; // Format, can be SPTPlain or SPTPercents (multiplies the value by 100)
-		colorBase[] = {1,1,1,1}; // Text color
-		colorActive[] = {1,0.5,0,1}; // Text color when the slider is active
-	};
+    type = CT_XSLIDER; // Type
+    style = SL_HORZ; // Style
+    default = 0; // Control selected by default (only one within a display can be used)
+    blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
+    color[] = {1,1,1,1}; // Text and arrow color
+    colorDisabled[] = {1,1,1,0.5}; // Disabled text and arrow color
+    colorActive[] = {1,0.5,0,1}; // Text selection color
+    tooltip = ""; // Tooltip text
+    tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
+    tooltipColorText[] = {1,1,1,1}; // Tooltip text color
+    tooltipColorBox[] = {0.15,0.25,0.55,1}; // Tooltip frame color
+    arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa"; // Arrow
+    arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa"; // Arrow when clicked on
+    border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa"; // Fill texture
+    thumb = "#(argb,8,8,3)color(1,1,1,1)"; // Dragging element (stretched vertically)
+    class Title // Link to a title (obsolete?)
+    {
+        idc = -1; // Control IDC (has to be defined ABOVE the slider control)
+        colorBase[] = {1,1,1,1}; // Text color
+        colorActive[] = {1,0.5,0,1}; // Text color when the slider is active
+    };
+    class Value // Link to a control which will show slider value
+    {
+        idc = -1; // Control IDC (has to be defined ABOVE the slider control)
+        format = "%.f"; // Text format, value is represented by variable %g (float) or %.f (integer)
+        type = SPTPlain; // Format, can be SPTPlain or SPTPercents (multiplies the value by 100)
+        colorBase[] = {1,1,1,1}; // Text color
+        colorActive[] = {1,0.5,0,1}; // Text color when the slider is active
+    };
 };

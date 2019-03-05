@@ -25,124 +25,124 @@ Parameters:
 */
 
 [
-	QEGVAR(persistency,enabled), // key/reference variable
-	"LIST", // type of setting
-	["Persistency", "Enable/Disable Persistency"], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[true,false], // values
-		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
-		1 // default index
-	],
-	1
+    QEGVAR(persistency,enabled), // key/reference variable
+    "LIST", // type of setting
+    ["Persistency", "Enable/Disable Persistency"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        1 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 
 [
-	QEGVAR(persistency,key),
-	"EDITBOX",
-	["Key", "Database storage key"],
-	localize LSTRING(cbaSettingsCategory),
-	"",
-	1
+    QEGVAR(persistency,key),
+    "EDITBOX",
+    ["Key", "Database storage key"],
+    localize LSTRING(cbaSettingsCategory),
+    "",
+    1
 ] call cba_settings_fnc_init;
 
 
 [
-	QEGVAR(persistency,autosaveInterval),
-	"LIST",
-	["Autosave", "Interval for Autosave"],
-	localize LSTRING(cbaSettingsCategory),
-	[
-		[0,60,300,600],
-		["Disabled","1 Minute","5 Minutes","10 Minutes"],
-		0
-	],
-	1
+    QEGVAR(persistency,autosaveInterval),
+    "LIST",
+    ["Autosave", "Interval for Autosave"],
+    localize LSTRING(cbaSettingsCategory),
+    [
+        [0,60,300,600],
+        ["Disabled","1 Minute","5 Minutes","10 Minutes"],
+        0
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 
 [
-	QEGVAR(persistency,vehiclesEnabled), // key/reference variable
-	"LIST", // type of setting
-	["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
-		["Disabled", "Enabled (for all)", "Selective"], // names
-		0 // default index
-	],
-	1
+    QEGVAR(persistency,vehiclesEnabled), // key/reference variable
+    "LIST", // type of setting
+    ["Vehicle Persistency", "Enable/Disable vehicle persistency"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+        ["Disabled", "Enabled (for all)", "Selective"], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,cratesEnabled), // key/reference variable
-	"LIST", // type of setting
-	["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
-		["Disabled", "Enabled (for all)", "Selective"], // names
-		0 // default index
-	],
-	1
+    QEGVAR(persistency,cratesEnabled), // key/reference variable
+    "LIST", // type of setting
+    ["Crate Persistency", "Enable/Disable crate persistency"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+        ["Disabled", "Enabled (for all)", "Selective"], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,playersEnabled), // key/reference variable
-	"LIST", // type of setting
-	["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
-		["Disabled", "Enabled (for all)", "Selective"], // names
-		0 // default index
-	],
-	1
+    QEGVAR(persistency,playersEnabled), // key/reference variable
+    "LIST", // type of setting
+    ["Player Persistency", "Enable/Disable player persistency"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [PERSISTENCY_DISABLED,PERSISTENCY_ENABLED,PERSISTENCY_SELECTIVE], // values
+        ["Disabled", "Enabled (for all)", "Selective"], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,synchronizePlayerPosition), // key/reference variable
-	"LIST", // type of setting
-	["Synchronize Player Position", "Enable/Disable synchronization of player position."], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[false,true], // values
-		[localize LSTRING(disabled), localize LSTRING(enabled)], // names
-		0 // default index
-	],
-	1
+    QEGVAR(persistency,synchronizePlayerPosition), // key/reference variable
+    "LIST", // type of setting
+    ["Synchronize Player Position", "Enable/Disable synchronization of player position."], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [false,true], // values
+        [localize LSTRING(disabled), localize LSTRING(enabled)], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,moneyEnabled), // key/reference variable
-	"LIST", // type of setting
-	["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[true,false], // values
-		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
-		0 // default index
-	],
-	1
+    QEGVAR(persistency,moneyEnabled), // key/reference variable
+    "LIST", // type of setting
+    ["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,defaultMoney),
-	"EDITBOX",
-	["Default Cash", "Default cash given to new players"],
-	localize LSTRING(cbaSettingsCategory),
-	"100",
-	1
+    QEGVAR(persistency,defaultMoney),
+    "EDITBOX",
+    ["Default Cash", "Default cash given to new players"],
+    localize LSTRING(cbaSettingsCategory),
+    "100",
+    1
 ] call cba_settings_fnc_init;
 
 [
-	QEGVAR(persistency,defaultMoneyBank),
-	"EDITBOX",
-	["Default Bank Account", "Default account amount given to new players"],
-	localize LSTRING(cbaSettingsCategory),
-	"1000",
-	1
+    QEGVAR(persistency,defaultMoneyBank),
+    "EDITBOX",
+    ["Default Bank Account", "Default account amount given to new players"],
+    localize LSTRING(cbaSettingsCategory),
+    "1000",
+    1
 ] call cba_settings_fnc_init;
 
 ADDON = true;

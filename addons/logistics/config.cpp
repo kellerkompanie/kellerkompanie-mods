@@ -7,16 +7,16 @@ class CfgPatches {
             QGVAR(moduleAddLogisticsMenu3den),
             QGVAR(moduleSpawnCrate),
             QGVAR(moduleSupplyDrop),
-			QGVAR(moduleHeliDrop),
+            QGVAR(moduleHeliDrop),
             QGVAR(moduleCustomLogistics3den),
-			QGVAR(moduleUAVBase3den),
-			"keko_ModuleAddLogisticsMenu3den",
-			"keko_ModuleCustomLogistics3den"
+            QGVAR(moduleUAVBase3den),
+            "keko_ModuleAddLogisticsMenu3den",
+            "keko_ModuleCustomLogistics3den"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-        	"3den",
+            "3den",
             "keko_loadout",
             "ace_main",
             "ace_modules"};

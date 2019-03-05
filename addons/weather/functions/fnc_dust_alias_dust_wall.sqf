@@ -8,8 +8,8 @@ private ["_sursa_storm"];
 
 if (!hasInterface) exitWith {};
 
-_sursa_storm			= _this select 0;//source
-duration_duststorm_w	= _this select 1;//duration
+_sursa_storm            = _this select 0;//source
+duration_duststorm_w    = _this select 1;//duration
 publicVariable "duration_duststorm_w";
 
 private _dir_xx = 0;
@@ -23,8 +23,8 @@ _fum_negru setParticleParams [["\A3\data_f\cl_basic.p3d", 1, 0, 1], "", "Billboa
 _fum_negru setDropInterval 0.01;
 
 check = [] spawn {
-	sleep duration_duststorm_w;
-	//hint "check done";
+    sleep duration_duststorm_w;
+    //hint "check done";
 };
 waitUntil {if((scriptDone check) || (!al_duststorm_on)) then {true} else {uiSleep 1;false};};
 deleteVehicle _fum_negru;

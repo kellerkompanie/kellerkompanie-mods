@@ -121,18 +121,18 @@
 #define KEY_XBOX_RightThumbYDown  KEY_XINPUT + 23
 
 // Fonts
-#define GUI_FONT_NORMAL			PuristaMedium
-#define GUI_FONT_BOLD			PuristaSemibold
-#define GUI_FONT_THIN			PuristaLight
-#define GUI_FONT_MONO			EtelkaMonospacePro
-#define GUI_FONT_NARROW			EtelkaNarrowMediumPro
-#define GUI_FONT_CODE			LucidaConsoleB
-#define GUI_FONT_SYSTEM			TahomaB
+#define GUI_FONT_NORMAL            PuristaMedium
+#define GUI_FONT_BOLD            PuristaSemibold
+#define GUI_FONT_THIN            PuristaLight
+#define GUI_FONT_MONO            EtelkaMonospacePro
+#define GUI_FONT_NARROW            EtelkaNarrowMediumPro
+#define GUI_FONT_CODE            LucidaConsoleB
+#define GUI_FONT_SYSTEM            TahomaB
 
 // Grids
-#define GUI_GRID_CENTER_WAbs		((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_CENTER_HAbs		(GUI_GRID_CENTER_WAbs / 1.2)
-#define GUI_GRID_CENTER_W		(GUI_GRID_CENTER_WAbs / 40)
-#define GUI_GRID_CENTER_H		(GUI_GRID_CENTER_HAbs / 25)
-#define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+#define GUI_GRID_CENTER_WAbs        ((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_CENTER_HAbs        (GUI_GRID_CENTER_WAbs / 1.2)
+#define GUI_GRID_CENTER_W        (GUI_GRID_CENTER_WAbs / 40)
+#define GUI_GRID_CENTER_H        (GUI_GRID_CENTER_HAbs / 25)
+#define GUI_GRID_CENTER_X        (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y        (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)

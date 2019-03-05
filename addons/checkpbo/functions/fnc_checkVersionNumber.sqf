@@ -18,7 +18,7 @@ if (isServer) then {
     keko_Version_ServerVersions = [_files, _versions];
     publicVariable "keko_Version_ServerVersions";
 } else {
-	keko_Version_ClientVersions = [_files, _versions];
+    keko_Version_ClientVersions = [_files, _versions];
 };
 
 // Begin client version check

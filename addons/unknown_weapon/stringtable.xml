@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="unknown_weapon">
-		<Key ID="STR_keko_unknown_weapon_cbaSettingsCategory">
+        <Key ID="STR_keko_unknown_weapon_cbaSettingsCategory">
             <English>Kellerkompanie Unknown Weapon</English>
         </Key>
     </Package>

@@ -15,5 +15,5 @@ private _pain = _target getVariable "ACE_medical_pain";
 private _blood = _target getVariable "ACE_medical_bloodvolume";
 if(_pulse > 70 && _pain < 0.3 && _blood > 95) then
 {
-	[_target, false] call ace_medical_fnc_setUnconscious;
+    [_target, false] call ace_medical_fnc_setUnconscious;
 };

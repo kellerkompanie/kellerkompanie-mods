@@ -5,7 +5,7 @@ if (!isServer) exitWith {WARNING("function affectRadios needs to be run on serve
 params ["_origin", "_range"];
 
 {
-	if(isPlayer _x) then {
-		_x setVariable ["tf_unable_to_use_radio", true];
-	};
+    if(isPlayer _x) then {
+        _x setVariable ["tf_unable_to_use_radio", true];
+    };
 } forEach nearestObjects [_origin, ["CAManBase"], _range];

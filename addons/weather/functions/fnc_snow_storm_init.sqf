@@ -20,29 +20,29 @@ BoolBreath = _BoolArray select _Breath_I;
 BoolChangeFog = _BoolArray select _ChangeFog_I;
 
 if(_SnowBurstServer_I == 2) then{
-	BoolSnowBurstServer = false;
-	BoolSnowBurstClient = false;
+    BoolSnowBurstServer = false;
+    BoolSnowBurstClient = false;
 }else{
-	if(_SnowBurstServer_I == 1) then {
-		BoolSnowBurstServer = true;
-		BoolSnowBurstClient = false;
-	}else{
-		BoolSnowBurstClient = true;
-		BoolSnowBurstServer = false;
-	};
+    if(_SnowBurstServer_I == 1) then {
+        BoolSnowBurstServer = true;
+        BoolSnowBurstClient = false;
+    }else{
+        BoolSnowBurstClient = true;
+        BoolSnowBurstServer = false;
+    };
 };
 
 if(_EffectOnObjects_I == 0) then{
-	BoolEffectOnObjects = false;
-	BoolHoverUnit = false;
+    BoolEffectOnObjects = false;
+    BoolHoverUnit = false;
 }else{
-	if(_EffectOnObjects_I == 1) then {
-		BoolEffectOnObjects = true;
-		BoolHoverUnit = false;
-	}else{
-		BoolEffectOnObjects = true;
-		BoolHoverUnit = true;
-	};
+    if(_EffectOnObjects_I == 1) then {
+        BoolEffectOnObjects = true;
+        BoolHoverUnit = false;
+    }else{
+        BoolEffectOnObjects = true;
+        BoolHoverUnit = true;
+    };
 };
 
 _IntSnowWindDir = [_IntSnowWindDir,0] call BIS_fnc_cutDecimals;

@@ -4,35 +4,35 @@
         <Key ID="STR_keko_canteen_messageDrink">
             <English>You take a sip from your trusty canteen.</English>
         </Key>
-		<Key ID="STR_keko_canteen_messageRefilled">
+        <Key ID="STR_keko_canteen_messageRefilled">
             <English>Canteen refilled.</English>
         </Key>
-		<Key ID="STR_keko_canteen_messageFull">
+        <Key ID="STR_keko_canteen_messageFull">
             <English>Your canteen is full.</English>
         </Key>
-		<Key ID="STR_keko_canteen_messagePour">
+        <Key ID="STR_keko_canteen_messagePour">
             <English>You pour some water on your comrade's face.</English>
         </Key>
-		<Key ID="STR_keko_canteen_displayName">
+        <Key ID="STR_keko_canteen_displayName">
             <English>Canteen</English>
         </Key>
-		<Key ID="STR_keko_canteen_descriptionShort">
+        <Key ID="STR_keko_canteen_descriptionShort">
             <English>A water canteen.</English>
         </Key>
-		<Key ID="STR_keko_canteen_actionDrink">
+        <Key ID="STR_keko_canteen_actionDrink">
             <English>Drink from canteen</English>
         </Key>
-		<Key ID="STR_keko_canteen_actionPour">
+        <Key ID="STR_keko_canteen_actionPour">
             <English>Pour some water</English>
         </Key>
-		<Key ID="STR_keko_canteen_actionRefill">
+        <Key ID="STR_keko_canteen_actionRefill">
             <English>Refill Canteen</English>
         </Key>
-		<Key ID="STR_keko_canteen_displayNameEmpty">
+        <Key ID="STR_keko_canteen_displayNameEmpty">
             <English>Canteen (empty)</English>
         </Key>
-		<Key ID="STR_keko_canteen_descriptionShortEmpty">
+        <Key ID="STR_keko_canteen_descriptionShortEmpty">
             <English>An empty water canteen.</English>
         </Key>
-		</Package>
+        </Package>
 </Project>

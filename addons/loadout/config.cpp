@@ -1,29 +1,29 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON {
+    class ADDON {
         name = COMPONENT_NAME;
-		units[] = {
+        units[] = {
             QGVAR(moduleAddLoadoutMenu),
             QGVAR(moduleAddLoadoutMenu3den),
             QGVAR(moduleCustomLoadouts3den),
-			QGVAR(moduleApplyLoadout),
-			"keko_ModuleAddLoadoutMenu3den",
-			"keko_ModuleCustomLoadouts3den",
-			QGVAR(moduleAddLoadouts3den),
-			QGVAR(moduleModifyLoadout3den)
+            QGVAR(moduleApplyLoadout),
+            "keko_ModuleAddLoadoutMenu3den",
+            "keko_ModuleCustomLoadouts3den",
+            QGVAR(moduleAddLoadouts3den),
+            QGVAR(moduleModifyLoadout3den)
         };
         weapons[] = {};
-		requiredVersion = REQUIRED_VERSION;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"ace_main",
-			"ace_modules",
-			"keko_faction_generic"};
+            "ace_main",
+            "ace_modules",
+            "keko_faction_generic"};
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-	};
+    };
 };
 
 #include "CfgEventHandlers.hpp"
@@ -35,5 +35,5 @@ class CfgPatches {
 #include "ui\dialog_applyLoadout.hpp"
 
 class kekoFactions {
-	#include "factions\Faction.hpp"
+    #include "factions\Faction.hpp"
 };

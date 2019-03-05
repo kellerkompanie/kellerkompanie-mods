@@ -17,30 +17,30 @@ player setPos _destination;
 
 paraLandSafe =
 {
-	private ["_unit"];
-	_unit = _this select 0;
-	_chuteheight = _this select 1;
-	if (isPlayer _unit) then {[_unit,_chuteheight] spawn OpenPlayerchute};
-	waitUntil { isTouchingGround _unit || (position _unit select 2) < 1 };
-	disableUserInput true;
-	_unit action ["eject", vehicle _unit];
-	sleep 1;
-	private _inv = name _unit;
-	[_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;// Reload Loadout.
-	_unit allowdamage true;// Now you can take damage.
-
-	disableUserInput false;
+    private ["_unit"];
+    _unit = _this select 0;
+    _chuteheight = _this select 1;
+    if (isPlayer _unit) then {[_unit,_chuteheight] spawn OpenPlayerchute};
+    waitUntil { isTouchingGround _unit || (position _unit select 2) < 1 };
     disableUserInput true;
-	disableUserInput false;
+    _unit action ["eject", vehicle _unit];
+    sleep 1;
+    private _inv = name _unit;
+    [_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;// Reload Loadout.
+    _unit allowdamage true;// Now you can take damage.
+
+    disableUserInput false;
+    disableUserInput true;
+    disableUserInput false;
 };
 
 OpenPlayerChute =
 {
-	private ["_paraPlayer"];
-	_paraPlayer = _this select 0;
-	_chuteheight = _this select 1;
-	waitUntil {(position _paraPlayer select 2) <= _chuteheight};
-	_paraPlayer action ["openParachute", _paraPlayer];
+    private ["_paraPlayer"];
+    _paraPlayer = _this select 0;
+    _chuteheight = _this select 1;
+    waitUntil {(position _paraPlayer select 2) <= _chuteheight};
+    _paraPlayer action ["openParachute", _paraPlayer];
 };
 
 private _inv = name player;// Get Unique name for Unit's loadout.

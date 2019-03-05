@@ -5,7 +5,7 @@ params ["_player", "_faction", "_role"];
 private _customLoadout = _faction isEqualTo "Custom";
 
 if(_customLoadout) then {
-	[_role, _faction] call FUNC(applyCustomLoadout);
+    [_role, _faction] call FUNC(applyCustomLoadout);
 };
 
 if (_customLoadout) exitWith{};
@@ -77,74 +77,74 @@ _player setVariable ["ACE_isEngineer", _engineerClass, true];
 _player setUnitRank _rank;
 
 if(count _uniform != 0) then {
-	private _random_uniform = selectRandom _uniform;
-	_player forceAddUniform _random_uniform;
+    private _random_uniform = selectRandom _uniform;
+    _player forceAddUniform _random_uniform;
 };
 
 if(count _vest != 0) then {
-	private _random_vest = selectRandom _vest;
-	_player addVest _random_vest;
+    private _random_vest = selectRandom _vest;
+    _player addVest _random_vest;
 };
 
 if(count _backpack != 0) then {
-	private _random_backpack = selectRandom _backpack;
-	_player addBackpack _random_backpack;
+    private _random_backpack = selectRandom _backpack;
+    _player addBackpack _random_backpack;
 };
 
 /* Workaround for Mods adding Medikits and Firstaidkits to Uniforms, Backpacks etc.*/
 clearAllItemsFromBackpack _player;
 
 if(count _uniform != 0) then {
-	if(count _uniformInventory != 0) then {
-		{
-			for "_i" from 1 to (_x select 0) do {
-				private _item = _x select 1;
-				if (_item call FUNC(isItemRequired)) then {
-					_item = _item call FUNC(replaceItem);
-					_player addItemToUniform _item;
-				};
-			};
-		} forEach _uniformInventory;
-	};
+    if(count _uniformInventory != 0) then {
+        {
+            for "_i" from 1 to (_x select 0) do {
+                private _item = _x select 1;
+                if (_item call FUNC(isItemRequired)) then {
+                    _item = _item call FUNC(replaceItem);
+                    _player addItemToUniform _item;
+                };
+            };
+        } forEach _uniformInventory;
+    };
 };
 
 if(count _vest != 0) then {
-	if(count _vestInventory != 0) then {
-		{
-			for "_i" from 1 to (_x select 0) do {
-				private _item = _x select 1;
-				if (_item call FUNC(isItemRequired)) then {
-					_item = _item call FUNC(replaceItem);
-					_player addItemToVest _item;
-				};
-			};
-		} forEach _vestInventory;
+    if(count _vestInventory != 0) then {
+        {
+            for "_i" from 1 to (_x select 0) do {
+                private _item = _x select 1;
+                if (_item call FUNC(isItemRequired)) then {
+                    _item = _item call FUNC(replaceItem);
+                    _player addItemToVest _item;
+                };
+            };
+        } forEach _vestInventory;
 
-		if(GVAR(giveGps) == 3) then {
-			_player addItemToVest "ACE_microDAGR";
-		};
-	};
+        if(GVAR(giveGps) == 3) then {
+            _player addItemToVest "ACE_microDAGR";
+        };
+    };
 };
 
 if(count _backpack != 0) then {
-	if(count _backpackInventory != 0) then {
-		{
-			for "_i" from 1 to (_x select 0) do {
-				private _item = _x select 1;
-				if (_item call FUNC(isItemRequired)) then {
-					_item = _item call FUNC(replaceItem);
-					_player addItemToBackpack _item;
-				};
-			};
-		} forEach _backpackInventory;
-	};
+    if(count _backpackInventory != 0) then {
+        {
+            for "_i" from 1 to (_x select 0) do {
+                private _item = _x select 1;
+                if (_item call FUNC(isItemRequired)) then {
+                    _item = _item call FUNC(replaceItem);
+                    _player addItemToBackpack _item;
+                };
+            };
+        } forEach _backpackInventory;
+    };
 };
 
 
 
 if(count _helmet != 0) then {
-	private _random_helmet = selectRandom _helmet;
-	_player addHeadgear _random_helmet;
+    private _random_helmet = selectRandom _helmet;
+    _player addHeadgear _random_helmet;
 };
 
 
@@ -156,22 +156,22 @@ private _defaultSmokeGreenMagCount = getNumber(_smokeGreenMagazinesCfg >> "defau
 
 private _smokeWhiteMagCount = _defaultSmokeWhiteMagCount;
 if(isNumber (_smokeWhiteMagazinesCfg >> _role) ) then {
-	_smokeWhiteMagCount = getNumber (_smokeWhiteMagazinesCfg  >> _role);
+    _smokeWhiteMagCount = getNumber (_smokeWhiteMagazinesCfg  >> _role);
 };
 private _smokeGreenMagCount = _defaultSmokeGreenMagCount;
 if(isNumber (_smokeGreenMagazinesCfg >> _role) ) then {
-	_smokeGreenMagCount = getNumber (_smokeGreenMagazinesCfg  >> _role);
+    _smokeGreenMagCount = getNumber (_smokeGreenMagazinesCfg  >> _role);
 };
 
 private _i = 0;
 for [{_i = 0}, {_i < _smokeWhiteMagCount}, {_i = _i + 1}] do {
-	// TODO replace this with faction specific variant
-	[_player, "SmokeShell"] call CBA_fnc_addMagazine;
+    // TODO replace this with faction specific variant
+    [_player, "SmokeShell"] call CBA_fnc_addMagazine;
 };
 
 for [{_i = 0}, {_i < _smokeGreenMagCount}, {_i = _i + 1}] do {
-	// TODO replace this with faction specific variant
-	[_player, "SmokeShellGreen"] call CBA_fnc_addMagazine;
+    // TODO replace this with faction specific variant
+    [_player, "SmokeShellGreen"] call CBA_fnc_addMagazine;
 };
 
 
@@ -181,150 +181,150 @@ private _defaultPrimaryMagCount = getNumber(_primaryMagazinesCfg >> "default");
 private _defaultUglMagCount = getNumber(_uglMagazinesCfg >> "default");
 
 if(count _primary != 0) then {
-	private _randomPrimaryEntry = selectRandom _primary;
-	private _primaryCfg = _weaponCfg >> _randomPrimaryEntry;
+    private _randomPrimaryEntry = selectRandom _primary;
+    private _primaryCfg = _weaponCfg >> _randomPrimaryEntry;
 
-	private _primary_cfgName = getText (_primaryCfg >> "cfgName");
-	private _primary_scopes = getArray (_primaryCfg >> "scopes");
-	private _primary_rails = getArray (_primaryCfg >> "rails");
-	private _primary_bipods = getArray (_primaryCfg >> "bipods");
-	private _primary_silencers = getArray (_primaryCfg >> "silencers");
-	private _primary_magazines = getArray (_primaryCfg >> "magazines");
-	private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
+    private _primary_cfgName = getText (_primaryCfg >> "cfgName");
+    private _primary_scopes = getArray (_primaryCfg >> "scopes");
+    private _primary_rails = getArray (_primaryCfg >> "rails");
+    private _primary_bipods = getArray (_primaryCfg >> "bipods");
+    private _primary_silencers = getArray (_primaryCfg >> "silencers");
+    private _primary_magazines = getArray (_primaryCfg >> "magazines");
+    private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
 
-	private _primaryMagCount = _defaultPrimaryMagCount;
-	if(isNumber (_primaryMagazinesCfg >> _role) ) then {
-		_primaryMagCount = getNumber (_primaryMagazinesCfg  >> _role);
-	};
+    private _primaryMagCount = _defaultPrimaryMagCount;
+    if(isNumber (_primaryMagazinesCfg >> _role) ) then {
+        _primaryMagCount = getNumber (_primaryMagazinesCfg  >> _role);
+    };
 
-	if(_primaryMagCount > 0) then {
-		_primaryMagCount = _primaryMagCount - 1;
-		[_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
-	};
+    if(_primaryMagCount > 0) then {
+        _primaryMagCount = _primaryMagCount - 1;
+        [_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
+    };
 
-	private _uglMagCount = _defaultUglMagCount;
-	if(isNumber (_uglMagazinesCfg >> _role) ) then {
-		_uglMagCount = getNumber (_uglMagazinesCfg  >> _role);
-	};
+    private _uglMagCount = _defaultUglMagCount;
+    if(isNumber (_uglMagazinesCfg >> _role) ) then {
+        _uglMagCount = getNumber (_uglMagazinesCfg  >> _role);
+    };
 
-	if(_uglMagCount > 0) then {
-		_uglMagCount = _uglMagCount - 1;
-		[_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
-	};
+    if(_uglMagCount > 0) then {
+        _uglMagCount = _uglMagCount - 1;
+        [_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
+    };
 
-	_player addWeapon _primary_cfgName;
+    _player addWeapon _primary_cfgName;
 
-	if(count _primary_scopes != 0 && GVAR(giveScope)) then {
-		private _item = selectRandom _primary_scopes;
-		_player addPrimaryWeaponItem _item;
-	};
+    if(count _primary_scopes != 0 && GVAR(giveScope)) then {
+        private _item = selectRandom _primary_scopes;
+        _player addPrimaryWeaponItem _item;
+    };
 
-	if(count _primary_rails != 0) then {
-		private _item = selectRandom _primary_rails;
-		_player addPrimaryWeaponItem _item;
-	};
+    if(count _primary_rails != 0) then {
+        private _item = selectRandom _primary_rails;
+        _player addPrimaryWeaponItem _item;
+    };
 
-	if(count _primary_bipods != 0) then {
-		private _item = selectRandom _primary_bipods;
-		_player addPrimaryWeaponItem _item;
-	};
+    if(count _primary_bipods != 0) then {
+        private _item = selectRandom _primary_bipods;
+        _player addPrimaryWeaponItem _item;
+    };
 
-	if (GVAR(giveSilencer)) then {
-		if(count _primary_silencers != 0) then {
-			private _item = selectRandom _primary_silencers;
-			_player addPrimaryWeaponItem _item;
-		};
-	};
+    if (GVAR(giveSilencer)) then {
+        if(count _primary_silencers != 0) then {
+            private _item = selectRandom _primary_silencers;
+            _player addPrimaryWeaponItem _item;
+        };
+    };
 
-	if(count _primary_magazines != 0) then {
-		private _item = _primary_magazines select 0;
-		[_player, _item] call CBA_fnc_addMagazine;
-	};
+    if(count _primary_magazines != 0) then {
+        private _item = _primary_magazines select 0;
+        [_player, _item] call CBA_fnc_addMagazine;
+    };
 
-	if(count _primary_uglMagazines != 0) then {
-		private _item = _primary_uglMagazines select 0;
-		[_player, _item] call CBA_fnc_addMagazine;
-	};
+    if(count _primary_uglMagazines != 0) then {
+        private _item = _primary_uglMagazines select 0;
+        [_player, _item] call CBA_fnc_addMagazine;
+    };
 
-	private _i = 0;
-	for [{_i = 0}, {_i < _primaryMagCount}, {_i = _i + 1}] do {
-		[_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
-	};
+    private _i = 0;
+    for [{_i = 0}, {_i < _primaryMagCount}, {_i = _i + 1}] do {
+        [_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
+    };
 
-	for [{_i = 0}, {_i < _uglMagCount}, {_i = _i + 1}] do {
-		[_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
-	};
+    for [{_i = 0}, {_i < _uglMagCount}, {_i = _i + 1}] do {
+        [_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
+    };
 };
 
 private _defaultSecondaryMagCount = getNumber(_secondaryMagazinesCfg >> "default");
 
 if(count _secondary != 0) then {
-	private _randomSecondaryEntry = selectRandom _secondary;
-	private _secondaryCfg = _weaponCfg >> _randomSecondaryEntry;
+    private _randomSecondaryEntry = selectRandom _secondary;
+    private _secondaryCfg = _weaponCfg >> _randomSecondaryEntry;
 
-	private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
-	private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
-	private _secondary_rails = getArray (_secondaryCfg >> "rails");
-	private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
-	private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
-	private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
+    private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
+    private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
+    private _secondary_rails = getArray (_secondaryCfg >> "rails");
+    private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
+    private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
+    private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
 
-	private _secondaryMagCount = _defaultSecondaryMagCount;
-	if(isNumber (_secondaryMagazinesCfg >> _role) ) then {
-		_secondaryMagCount = getNumber (_secondaryMagazinesCfg  >> _role);
-	};
+    private _secondaryMagCount = _defaultSecondaryMagCount;
+    if(isNumber (_secondaryMagazinesCfg >> _role) ) then {
+        _secondaryMagCount = getNumber (_secondaryMagazinesCfg  >> _role);
+    };
 
-	if(_secondaryMagCount > 0) then {
-		_secondaryMagCount = _secondaryMagCount - 1;
-		[_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
-	};
+    if(_secondaryMagCount > 0) then {
+        _secondaryMagCount = _secondaryMagCount - 1;
+        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
+    };
 
-	_player addWeapon _secondary_cfgName;
+    _player addWeapon _secondary_cfgName;
 
-	if(count _secondary_scopes != 0 && GVAR(giveScope)) then {
-		private _item = selectRandom _secondary_scopes;
-		_player addHandgunItem _item;
-	};
+    if(count _secondary_scopes != 0 && GVAR(giveScope)) then {
+        private _item = selectRandom _secondary_scopes;
+        _player addHandgunItem _item;
+    };
 
-	if(count _secondary_rails != 0) then {
-		private _item = selectRandom _secondary_rails;
-		_player addHandgunItem _item;
-	};
+    if(count _secondary_rails != 0) then {
+        private _item = selectRandom _secondary_rails;
+        _player addHandgunItem _item;
+    };
 
-	if(count _secondary_bipods != 0) then {
-		private _item = selectRandom _secondary_bipods;
-		_player addHandgunItem _item;
-	};
+    if(count _secondary_bipods != 0) then {
+        private _item = selectRandom _secondary_bipods;
+        _player addHandgunItem _item;
+    };
 
-	if (GVAR(giveSilencer)) then {
-		if(count _secondary_silencers != 0) then {
-			private _item = selectRandom _secondary_silencers;
-			_player addHandgunItem _item;
-		};
-	};
+    if (GVAR(giveSilencer)) then {
+        if(count _secondary_silencers != 0) then {
+            private _item = selectRandom _secondary_silencers;
+            _player addHandgunItem _item;
+        };
+    };
 
-	if(count _secondary_magazines != 0) then {
-		private _item = _secondary_magazines select 0;
-		[_player, _item] call CBA_fnc_addMagazine;
-	};
+    if(count _secondary_magazines != 0) then {
+        private _item = _secondary_magazines select 0;
+        [_player, _item] call CBA_fnc_addMagazine;
+    };
 
-	private _i = 0;
-	for [{_i = 0}, {_i < _secondaryMagCount}, {_i = _i + 1}] do {
-		[_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
-	};
+    private _i = 0;
+    for [{_i = 0}, {_i < _secondaryMagCount}, {_i = _i + 1}] do {
+        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
+    };
 };
 
 private _defaultGrenadeMagCount = getNumber(_grenadeMagazinesCfg >> "default");
 
 private _grenadeMagCount = _defaultGrenadeMagCount;
 if(isNumber (_grenadeMagazinesCfg >> _role) ) then {
-	_grenadeMagCount = getNumber (_grenadeMagazinesCfg  >> _role);
+    _grenadeMagCount = getNumber (_grenadeMagazinesCfg  >> _role);
 };
 
 private _i = 0;
 for [{_i = 0}, {_i < _grenadeMagCount}, {_i = _i + 1}] do {
-	// TODO replace this with faction specific variant
-	[_player, "HandGrenade"] call CBA_fnc_addMagazine;
+    // TODO replace this with faction specific variant
+    [_player, "HandGrenade"] call CBA_fnc_addMagazine;
 };
 
 
@@ -332,51 +332,51 @@ for [{_i = 0}, {_i < _grenadeMagCount}, {_i = _i + 1}] do {
 private _defaultLauncherMagCount = getNumber(_launcherMagazinesCfg >> "default");
 
 if(count _launcher != 0) then {
-	private _randomLauncherEntry = selectRandom _launcher;
-	private _launcherCfg = _weaponCfg >> _randomLauncherEntry;
+    private _randomLauncherEntry = selectRandom _launcher;
+    private _launcherCfg = _weaponCfg >> _randomLauncherEntry;
 
-	private _launcher_cfgName = getText (_launcherCfg >> "cfgName");
-	private _launcher_scopes = getArray (_launcherCfg >> "scopes");
-	private _launcher_rails = getArray (_launcherCfg >> "rails");
-	private _launcher_bipods = getArray (_launcherCfg >> "bipods");
-	private _launcher_magazines = getArray (_launcherCfg >> "magazines");
+    private _launcher_cfgName = getText (_launcherCfg >> "cfgName");
+    private _launcher_scopes = getArray (_launcherCfg >> "scopes");
+    private _launcher_rails = getArray (_launcherCfg >> "rails");
+    private _launcher_bipods = getArray (_launcherCfg >> "bipods");
+    private _launcher_magazines = getArray (_launcherCfg >> "magazines");
 
-	private _launcherMagCount = _defaultLauncherMagCount;
-	if(isNumber (_launcherMagazinesCfg >> _role) ) then {
-		_launcherMagCount = getNumber (_launcherMagazinesCfg  >> _role);
-	};
+    private _launcherMagCount = _defaultLauncherMagCount;
+    if(isNumber (_launcherMagazinesCfg >> _role) ) then {
+        _launcherMagCount = getNumber (_launcherMagazinesCfg  >> _role);
+    };
 
-	if(_launcherMagCount > 0) then {
-		_launcherMagCount = _launcherMagCount - 1;
-		[_player, selectRandom _launcher_magazines] call CBA_fnc_addMagazine;
-	};
+    if(_launcherMagCount > 0) then {
+        _launcherMagCount = _launcherMagCount - 1;
+        [_player, selectRandom _launcher_magazines] call CBA_fnc_addMagazine;
+    };
 
-	_player addWeapon _launcher_cfgName;
+    _player addWeapon _launcher_cfgName;
 
-	if(count _launcher_scopes != 0 && GVAR(giveScope)) then {
-		private _item = selectRandom _launcher_scopes;
-		_player addSecondaryWeaponItem _item;
-	};
+    if(count _launcher_scopes != 0 && GVAR(giveScope)) then {
+        private _item = selectRandom _launcher_scopes;
+        _player addSecondaryWeaponItem _item;
+    };
 
-	if(count _launcher_rails != 0) then {
-		private _item = selectRandom _launcher_rails;
-		_player addSecondaryWeaponItem _item;
-	};
+    if(count _launcher_rails != 0) then {
+        private _item = selectRandom _launcher_rails;
+        _player addSecondaryWeaponItem _item;
+    };
 
-	if(count _launcher_bipods != 0) then {
-		private _item = selectRandom _launcher_bipods;
-		_player addSecondaryWeaponItem _item;
-	};
+    if(count _launcher_bipods != 0) then {
+        private _item = selectRandom _launcher_bipods;
+        _player addSecondaryWeaponItem _item;
+    };
 
-	if(count _launcher_magazines != 0) then {
-		private _item = _launcher_magazines select 0;
-		[_player, _item] call CBA_fnc_addMagazine;
+    if(count _launcher_magazines != 0) then {
+        private _item = _launcher_magazines select 0;
+        [_player, _item] call CBA_fnc_addMagazine;
 
-		private _i = 0;
-		for [{_i = 0}, {_i < _launcherMagCount}, {_i = _i + 1}] do {
-			[_player, _item] call CBA_fnc_addMagazine;
-		};
-	};
+        private _i = 0;
+        for [{_i = 0}, {_i < _launcherMagCount}, {_i = _i + 1}] do {
+            [_player, _item] call CBA_fnc_addMagazine;
+        };
+    };
 };
 
 
@@ -386,27 +386,27 @@ if(count _launcher != 0) then {
 
 
 if(count _goggles != 0) then {
-	private _random_goggles = selectRandom _goggles;
-	_player addGoggles _random_goggles;
+    private _random_goggles = selectRandom _goggles;
+    _player addGoggles _random_goggles;
 };
 
 if(count _optics != 0) then {
-	private _random_optics = selectRandom _optics;
-	_player addWeapon _random_optics;
+    private _random_optics = selectRandom _optics;
+    _player addWeapon _random_optics;
 };
 
 // add compass/map, nvg etc. based on mission's preset
 call FUNC(addPresetItems);
 
 if(count _items != 0) then {
-	{
-		_player linkItem _x;
-	} forEach _items;
+    {
+        _player linkItem _x;
+    } forEach _items;
 };
 
 if (!(_faces isEqualTo [])) then {
-	private _face = selectRandom _faces;
-	[_player, _face] remoteExec ["setFace", 0, true];
+    private _face = selectRandom _faces;
+    [_player, _face] remoteExec ["setFace", 0, true];
 };
 
 
@@ -419,71 +419,71 @@ _player enableSimulation true;
 
 // give radio
 if (GVAR(giveRadio) > 0) then {
-	switch (GVAR(giveRadio)) do {
-		case 1: {
-			//Verstellbare für alle
-			switch (side _player) do {
-				case west: {
-					_player linkItem "TFAR_anprc152";
-				};
-				case east: {
-					_player linkItem "TFAR_fadak";
-				};
-				case independent: {
-					_player linkItem "TFAR_anprc148jem";
-				};
-				default {};
-			};
-		};
-		case 2: {
-			//Verstellbare für Führungspos, sonst Personal
-			if ( (rank _player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
-				switch (side _player) do {
-					case west: {
-						_player linkItem "TFAR_anprc152";
-					};
-					case east: {
-						_player linkItem "TFAR_fadak";
-					};
-					case independent: {
-						_player linkItem "TFAR_anprc148jem";
-					};
-					default {};
-				};
-			} else {
-				switch (side _player) do {
-					case west: {
-						_player linkItem "TFAR_rf7800str";
-					};
-					case east: {
-						_player linkItem "TFAR_pnr1000a";
-					};
-					case independent: {
-						_player linkItem "TFAR_anprc154";
-					};
-					default {};
-				};
-			};
-		};
-		case 3: {
-			//Nur für Führungspos
-			if ( (rank _player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
-				switch (side _player) do {
-					case west: {
-						_player linkItem "TFAR_anprc152";
-					};
-					case east: {
-						_player linkItem "TFAR_fadak";
-					};
-					case independent: {
-						_player linkItem "TFAR_anprc148jem";
-					};
-					default {};
-				};
-			};
-		};
-		default {};
-	};
+    switch (GVAR(giveRadio)) do {
+        case 1: {
+            //Verstellbare für alle
+            switch (side _player) do {
+                case west: {
+                    _player linkItem "TFAR_anprc152";
+                };
+                case east: {
+                    _player linkItem "TFAR_fadak";
+                };
+                case independent: {
+                    _player linkItem "TFAR_anprc148jem";
+                };
+                default {};
+            };
+        };
+        case 2: {
+            //Verstellbare für Führungspos, sonst Personal
+            if ( (rank _player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
+                switch (side _player) do {
+                    case west: {
+                        _player linkItem "TFAR_anprc152";
+                    };
+                    case east: {
+                        _player linkItem "TFAR_fadak";
+                    };
+                    case independent: {
+                        _player linkItem "TFAR_anprc148jem";
+                    };
+                    default {};
+                };
+            } else {
+                switch (side _player) do {
+                    case west: {
+                        _player linkItem "TFAR_rf7800str";
+                    };
+                    case east: {
+                        _player linkItem "TFAR_pnr1000a";
+                    };
+                    case independent: {
+                        _player linkItem "TFAR_anprc154";
+                    };
+                    default {};
+                };
+            };
+        };
+        case 3: {
+            //Nur für Führungspos
+            if ( (rank _player) in ["SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"] ) then {
+                switch (side _player) do {
+                    case west: {
+                        _player linkItem "TFAR_anprc152";
+                    };
+                    case east: {
+                        _player linkItem "TFAR_fadak";
+                    };
+                    case independent: {
+                        _player linkItem "TFAR_anprc148jem";
+                    };
+                    default {};
+                };
+            };
+        };
+        default {};
+    };
 };
 
 _player call FUNC(modifyLoadout);
@@ -492,14 +492,14 @@ _player call FUNC(modifyLoadout);
 
 // lower weapon if player already had a weapon before
 if !(weaponLowered _player) then {
-	_player action ["WeaponOnBack", _player];
+    _player action ["WeaponOnBack", _player];
 };
 
 // lower weapon after initial spawn
 [_player] spawn {
-	params ["_player"];
-	sleep 3;
-	if !(weaponLowered _player) then {
-		_player action ["WeaponOnBack", _player];
-	};
+    params ["_player"];
+    sleep 3;
+    if !(weaponLowered _player) then {
+        _player action ["WeaponOnBack", _player];
+    };
 };

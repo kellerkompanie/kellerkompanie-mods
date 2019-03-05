@@ -4,17 +4,17 @@
         <Key ID="STR_keko_building_cleaner_cbaSettingsCategory">
             <English>Kellerkompanie Building Cleaner</English>
         </Key>
-		<Key ID="STR_keko_building_cleaner_name">
+        <Key ID="STR_keko_building_cleaner_name">
             <English>Building Cleaner</English>
         </Key>
-		<Key ID="STR_keko_building_cleaner_tooltip">
+        <Key ID="STR_keko_building_cleaner_tooltip">
             <English>Enable/Disable Building Cleaner</English>
         </Key>
-		<Key ID="STR_keko_building_cleaner_enabled">
+        <Key ID="STR_keko_building_cleaner_enabled">
             <English>Enabled</English>
         </Key>
-		<Key ID="STR_keko_building_cleaner_disabled">
+        <Key ID="STR_keko_building_cleaner_disabled">
             <English>Disabled</English>
         </Key>
-		</Package>
+        </Package>
 </Project>

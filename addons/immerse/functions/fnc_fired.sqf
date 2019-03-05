@@ -11,13 +11,13 @@
  */
 
 params [
-	"_shooter",
-	"_weapon",
-	"",
-	"",
-	"_ammo",
-	"",
-	"_projectile"
+    "_shooter",
+    "_weapon",
+    "",
+    "",
+    "_ammo",
+    "",
+    "_projectile"
 ];
 
 if (toLower(_weapon) isEqualTo "put") exitWith {};

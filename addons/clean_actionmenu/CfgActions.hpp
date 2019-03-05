@@ -1,9 +1,9 @@
 class CfgActions {
     // to pistol
     class None;
-	class HandGunOn: None {
+    class HandGunOn: None {
         show = 0;
-	};
+    };
     // to rifle
     class HandGunOff: None {
         show = 0;
@@ -22,13 +22,13 @@ class CfgActions {
     };
 
 
-	/*class LoadMagazine: None {
+    /*class LoadMagazine: None {
         show = 0;
-	};
-	class LoadEmptyMagazine: LoadMagazine {
-		show = 0;
-	};
-	class LoadOtherMagazine: LoadMagazine {
-		show = 0;
-	};*/
+    };
+    class LoadEmptyMagazine: LoadMagazine {
+        show = 0;
+    };
+    class LoadOtherMagazine: LoadMagazine {
+        show = 0;
+    };*/
 };

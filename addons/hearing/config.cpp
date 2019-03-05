@@ -2,18 +2,18 @@
 
 class CfgPatches
 {
-	class ADDON
-	{
+    class ADDON
+    {
         name = COMPONENT_NAME;
-		units[]= {};
+        units[]= {};
         weapons[] = {};
-		requiredVersion= REQUIRED_VERSION;
-		requiredAddons[]= {"ace_hearing"};
-		author = ECSTRING(common,Schwaggot);
+        requiredVersion= REQUIRED_VERSION;
+        requiredAddons[]= {"ace_hearing"};
+        author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-	};
+    };
 };
 
 #include "CfgWeapons.hpp"

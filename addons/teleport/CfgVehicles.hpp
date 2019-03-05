@@ -63,10 +63,10 @@ class CfgVehicles {
             };
         };
     };
-	class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportDestination3den) {
-		displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Destination";
-		category           = QEGVAR(common,Deprecated);
-	};
+    class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportDestination3den) {
+        displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Destination";
+        category           = QEGVAR(common,Deprecated);
+    };
     class GVAR(moduleAddTeleportMenu3den): GVAR(moduleBase3den) {
         displayName        = "Add Fast-Travel Menu";
         category           = QGVAR(Teleport);
@@ -100,10 +100,10 @@ class CfgVehicles {
             };
         };
     };
-	class keko_ModuleAddTeleportMenu3den: GVAR(moduleAddTeleportMenu3den) {
-		displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Menu";
-		category           = QEGVAR(common,Deprecated);
-	};
+    class keko_ModuleAddTeleportMenu3den: GVAR(moduleAddTeleportMenu3den) {
+        displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Menu";
+        category           = QEGVAR(common,Deprecated);
+    };
     class GVAR(moduleAddTeleportDestination): GVAR(moduleBase) {
         displayName        = "Add Fast-Travel Destination";
         category           = QGVAR(Teleport);

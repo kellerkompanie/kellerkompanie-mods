@@ -3,23 +3,23 @@
 class CfgPatches {
     class ADDON {
         units[] = {
-			QGVAR(autoKitItem),
-			QGVAR(manualKitItem),
-			QGVAR(FAKItem)
-		};
+            QGVAR(autoKitItem),
+            QGVAR(manualKitItem),
+            QGVAR(FAKItem)
+        };
         weapons[] = {
-			QGVAR(autoKit),
-			QGVAR(manualKit),
-			QGVAR(FAK)
-		};
+            QGVAR(autoKit),
+            QGVAR(manualKit),
+            QGVAR(FAK)
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_main",
             "ace_medical",
-			"adv_aceCPR",
-			"adv_aceSplint",
-			"kat_aceAirway"
-		};
+            "adv_aceCPR",
+            "adv_aceSplint",
+            "kat_aceAirway"
+        };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

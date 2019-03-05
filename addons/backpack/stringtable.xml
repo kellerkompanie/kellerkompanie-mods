@@ -7,17 +7,17 @@
         <Key ID="STR_keko_backpack_messageLocked">
             <English>Backpack is locked</English>
         </Key>
-		<Key ID="STR_keko_backpack_locked">
+        <Key ID="STR_keko_backpack_locked">
             <English>Backpack locked</English>
         </Key>
-		<Key ID="STR_keko_backpack_unlocked">
+        <Key ID="STR_keko_backpack_unlocked">
             <English>Backpack unlocked</English>
         </Key>
-		<Key ID="STR_keko_backpack_actionLock">
+        <Key ID="STR_keko_backpack_actionLock">
             <English>Lock backpack</English>
         </Key>
-		<Key ID="STR_keko_backpack_actionUnlock">
+        <Key ID="STR_keko_backpack_actionUnlock">
             <English>Unlock backpack</English>
         </Key>
-		</Package>
+        </Package>
 </Project>
