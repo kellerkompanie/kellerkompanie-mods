@@ -1,76 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="loadout">
-		<Key ID="STR_keko_loadout_cbaSettingsCategory">
+        <Key ID="STR_keko_loadout_cbaSettingsCategory">
             <English>Kellerkompanie Loadout</English>
         </Key>
-		<Key ID="STR_keko_loadout_enabled">
+        <Key ID="STR_keko_loadout_enabled">
             <English>Enabled</English>
         </Key>
-		<Key ID="STR_keko_loadout_disabled">
+        <Key ID="STR_keko_loadout_disabled">
             <English>Disabled</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_loadoutOnSpawn">
+        <Key ID="STR_keko_loadout_loadoutOnSpawn">
             <English>Loadout on spawn</English>
         </Key>
-		<Key ID="STR_keko_loadout_loadoutOnSpawnTooltip">
+        <Key ID="STR_keko_loadout_loadoutOnSpawnTooltip">
             <English>Enable/Disable loadout on spawn</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_defaultFaction">
+        <Key ID="STR_keko_loadout_defaultFaction">
             <English>Default faction</English>
         </Key>
-		<Key ID="STR_keko_loadout_defaultFactionTooltip">
+        <Key ID="STR_keko_loadout_defaultFactionTooltip">
             <English>Choose default faction</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveMap">
+        <Key ID="STR_keko_loadout_giveMap">
             <English>Give map</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveMapTooltip">
+        <Key ID="STR_keko_loadout_giveMapTooltip">
             <English>Enable/Disable giving map to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveCompass">
+        <Key ID="STR_keko_loadout_giveCompass">
             <English>Give compass</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveCompassTooltip">
+        <Key ID="STR_keko_loadout_giveCompassTooltip">
             <English>Enable/Disable giving compass to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveGPS">
+        <Key ID="STR_keko_loadout_giveGPS">
             <English>Give GPS</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveGPSTooltip">
+        <Key ID="STR_keko_loadout_giveGPSTooltip">
             <English>Enable/Disable giving GPS to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveNVG">
+        <Key ID="STR_keko_loadout_giveNVG">
             <English>Give NVG</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveNVGTooltip">
+        <Key ID="STR_keko_loadout_giveNVGTooltip">
             <English>Enable/Disable giving NVG to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveRadio">
+        <Key ID="STR_keko_loadout_giveRadio">
             <English>Give Radio</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveRadioTooltip">
+        <Key ID="STR_keko_loadout_giveRadioTooltip">
             <English>Enable/Disable giving radio to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveSilencer">
+        <Key ID="STR_keko_loadout_giveSilencer">
             <English>Give Silencer</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveSilencerTooltip">
+        <Key ID="STR_keko_loadout_giveSilencerTooltip">
             <English>Enable/Disable giving silencer to player</English>
         </Key>
 
-		<Key ID="STR_keko_loadout_giveScope">
+        <Key ID="STR_keko_loadout_giveScope">
             <English>Give Scope</English>
         </Key>
-		<Key ID="STR_keko_loadout_giveScopeTooltip">
+        <Key ID="STR_keko_loadout_giveScopeTooltip">
             <English>Enable/Disable giving scope to player</English>
         </Key>
 

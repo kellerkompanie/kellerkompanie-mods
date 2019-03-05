@@ -4,7 +4,7 @@
 
 if (isServer or (serverCommandAvailable "#exec")) then
 {
-	createDialog "DustMenu";
+    createDialog "DustMenu";
 } else {
-	hint "You are not an admin!";
+    hint "You are not an admin!";
 };

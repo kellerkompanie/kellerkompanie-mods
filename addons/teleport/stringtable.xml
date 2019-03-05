@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="teleport">
-		<Key ID="STR_keko_teleport_cbaSettingsCategory">
+        <Key ID="STR_keko_teleport_cbaSettingsCategory">
             <English>Kellerkompanie Teleport</English>
         </Key>
     </Package>

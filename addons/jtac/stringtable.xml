@@ -4,16 +4,16 @@
         <Key ID="STR_keko_jtac_cbaSettingsCategory">
             <English>Kellerkompanie JTAC</English>
         </Key>
-		<Key ID="STR_keko_jtac_virtaulJTAC">
+        <Key ID="STR_keko_jtac_virtaulJTAC">
             <English>Virtual JTAC</English>
         </Key>
-		<Key ID="STR_keko_jtac_virtaulJTACtooltip">
+        <Key ID="STR_keko_jtac_virtaulJTACtooltip">
             <English>Enable/Disable virtual JTAC</English>
         </Key>
-		<Key ID="STR_keko_jtac_enabled">
+        <Key ID="STR_keko_jtac_enabled">
             <English>Enabled</English>
         </Key>
-		<Key ID="STR_keko_jtac_disabled">
+        <Key ID="STR_keko_jtac_disabled">
             <English>Disabled</English>
         </Key>
 

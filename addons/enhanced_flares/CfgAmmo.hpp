@@ -11,6 +11,6 @@ class CfgAmmo {
 
     class Flare_82mm_AMOS_White: FlareCore {
         intensity = 1500000; // vanilla: 10000
-		timeToLive = 120;
+        timeToLive = 120;
     };
 };

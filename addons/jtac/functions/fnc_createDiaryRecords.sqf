@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if(! (player diarySubjectExists QGVAR(JTAC))) then {
-	player createDiarySubject [QGVAR(JTAC), "EPD JTAC"];
+    player createDiarySubject [QGVAR(JTAC), "EPD JTAC"];
 };
 
 player createDiaryRecord [QGVAR(JTAC), ["JTAC Non Lethal", "

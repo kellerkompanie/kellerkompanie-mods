@@ -7,17 +7,17 @@ class CfgVehicles
         class ModuleDescription;
 
         class AttributesBase
-    		{
-    			class Default;
-    			class Edit;
-    			class Combo;
-    			class Checkbox;
-    			class CheckboxNumber;
-    			class ModuleDescription;
-    			class Units;
+            {
+                class Default;
+                class Edit;
+                class Combo;
+                class Checkbox;
+                class CheckboxNumber;
+                class ModuleDescription;
+                class Units;
 
-    			expression = "_this setVariable ['%s',_value];";
-    		};
+                expression = "_this setVariable ['%s',_value];";
+            };
     };
 
     class GVAR(moduleEMP): Module_F

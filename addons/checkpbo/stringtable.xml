@@ -4,11 +4,11 @@
         <Key ID="STR_keko_checkpbo_errorAddonsOnServer">
             <German>FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2</German>
         </Key>
-		<Key ID="STR_keko_checkpbo_errorAddonsNotOnServer">
+        <Key ID="STR_keko_checkpbo_errorAddonsNotOnServer">
             <German>FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2</German>
         </Key>
-		<Key ID="STR_keko_checkpbo_errorDifferentVersions">
+        <Key ID="STR_keko_checkpbo_errorDifferentVersions">
             <German>FEHLER: Unterschiedliche Versionen - Server: [%1, %2] | %3 [%4, %5]</German>
         </Key>
-		</Package>
+        </Package>
 </Project>

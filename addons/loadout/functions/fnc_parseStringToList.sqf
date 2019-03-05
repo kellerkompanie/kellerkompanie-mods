@@ -8,7 +8,7 @@ private _returnVal = [];
 private _split = _str splitString ",";
 
 {
-	_returnVal pushBack _x;
+    _returnVal pushBack _x;
 } forEach _split;
 
 _returnVal

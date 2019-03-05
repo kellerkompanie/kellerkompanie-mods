@@ -20,23 +20,23 @@ private _scantei_spark = "#particlesource" createVehicleLocal (getPosATL _objSrc
 _scantei_spark setParticleCircle [0, [0, 0, 0]];
 
 if (_spark_type == "orange") then {
-	_scantei_spark setParticleRandom [1, [0.1, 0.1, 0.1], [0, 0, 0], 0, 0.25, [0, 0, 0, 0], 0, 0];
+    _scantei_spark setParticleRandom [1, [0.1, 0.1, 0.1], [0, 0, 0], 0, 0.25, [0, 0, 0, 0], 0, 0];
 } else {
-	_scantei_spark setParticleRandom [1, [0.05, 0.05, 0.1], [5, 5, 3], 0, 0.0025, [0, 0, 0, 0], 0, 0];
+    _scantei_spark setParticleRandom [1, [0.05, 0.05, 0.1], [5, 5, 3], 0, 0.0025, [0, 0, 0, 0], 0, 0];
 };
 
 _scantei_spark setParticleParams [
-	["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1],
-	"",
-	"SpaceObject",
-	1, 1,
-	[0, 0,_spark_poz_rel],
-	[0, 0, 0],
-	0, 15, 7.9, 0,
-	[0.5,0.5,0.05],
-	[[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]],
-	[0.08], 1, 0, "", "",
-	_objSrc,0,true,0.3,[[0,0,0,0]]
+    ["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1],
+    "",
+    "SpaceObject",
+    1, 1,
+    [0, 0,_spark_poz_rel],
+    [0, 0, 0],
+    0, 15, 7.9, 0,
+    [0.5,0.5,0.05],
+    [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]],
+    [0.08], 1, 0, "", "",
+    _objSrc,0,true,0.3,[[0,0,0,0]]
 ];
 _scantei_spark setDropInterval _drop;
 

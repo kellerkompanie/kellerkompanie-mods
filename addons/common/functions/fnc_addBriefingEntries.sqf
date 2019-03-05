@@ -12,5 +12,5 @@ Medical:
     Revive Timer: %1 seconds<br/>
     Surgical Kit needed: %2<br/>
     Splints needed: %3<br/>
-	Airway-Management needed: %4",
-	ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]];
+    Airway-Management needed: %4",
+    ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]];

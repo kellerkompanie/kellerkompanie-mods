@@ -5,15 +5,15 @@ class CfgVehicles {
         class ModuleDescription;
 
         class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
-		};
+        {
+            class Default;
+            class Edit;
+            class Combo;
+            class Checkbox;
+            class CheckboxNumber;
+            class ModuleDescription;
+            class Units;
+        };
     };
     class GVAR(moduleAddIntel3den): Module_F {
         scope              = 2;
@@ -27,21 +27,21 @@ class CfgVehicles {
         isDisposable       = 0;
         icon = QPATHTOF(ui\icon_intel.paa);
 
-		class Attributes: AttributesBase {
+        class Attributes: AttributesBase {
             class Action: Edit {
                 property = QGVAR(Action);
                 displayName = CSTRING(action);
                 typeName = "STRING";
                 defaultValue = CSTRING(pickupDocuments);
             };
-			class Title: Edit {
-				property = QGVAR(Title);
-				displayName = CSTRING(title);
-				typeName = "STRING";
-				defaultValue = CSTRING(foundDocuments);
-			};
-			class Content: Edit {
-				property = QGVAR(Content);
+            class Title: Edit {
+                property = QGVAR(Title);
+                displayName = CSTRING(title);
+                typeName = "STRING";
+                defaultValue = CSTRING(foundDocuments);
+            };
+            class Content: Edit {
+                property = QGVAR(Content);
                 displayName = CSTRING(content);
                 typeName = "STRING";
                 defaultValue = CSTRING(contentStr);
@@ -52,12 +52,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = false;
             };
-		};
+        };
     };
-	class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
-		displayName        = "(DEPRECATED - DO NOT USE) Add Intel";
-		category           = QEGVAR(common,Deprecated);
-	};
+    class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
+        displayName        = "(DEPRECATED - DO NOT USE) Add Intel";
+        category           = QEGVAR(common,Deprecated);
+    };
     class GVAR(moduleAddIntel): Module_F {
         displayName        = CSTRING(addIntel);
         icon               = QPATHTOF(ui\icon_intel.paa);

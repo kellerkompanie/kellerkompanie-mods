@@ -11,7 +11,7 @@ private _action = [
         } params [["_nearestVehicle", objNull]];
 
         if !(isNull _nearestVehicle) then {
-			[_target, _nearestVehicle] call FUNC(transferToVehicle);
+            [_target, _nearestVehicle] call FUNC(transferToVehicle);
         };
     },
     {
@@ -45,11 +45,11 @@ private _action = [
 
 
 if (isServer && GVAR(preventCorpseLooting)) then {
-	[missionNamespace, "EntityKilled", {
-		params ["_unit"];
+    [missionNamespace, "EntityKilled", {
+        params ["_unit"];
 
-		if (_unit isKindOf "CAManBase") then {
-			[{(_this select 0) call FUNC(onEntityKilled)}, [_this], 5] call CBA_fnc_waitAndExecute;
-		};
-	}, diag_frameno + 300] call CBA_fnc_addBISEventHandler;
+        if (_unit isKindOf "CAManBase") then {
+            [{(_this select 0) call FUNC(onEntityKilled)}, [_this], 5] call CBA_fnc_waitAndExecute;
+        };
+    }, diag_frameno + 300] call CBA_fnc_addBISEventHandler;
 };

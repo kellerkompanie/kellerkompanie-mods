@@ -5,17 +5,17 @@ class CfgVehicles {
         class ModuleDescription;
 
         class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
+        {
+            class Default;
+            class Edit;
+            class Combo;
+            class Checkbox;
+            class CheckboxNumber;
+            class ModuleDescription;
+            class Units;
 
-			expression = "_this setVariable ['%s',_value];";
-		};
+            expression = "_this setVariable ['%s',_value];";
+        };
     };
     class GVAR(moduleBase): Module_F {
         category = "KEKO";
@@ -49,10 +49,10 @@ class CfgVehicles {
         function           = QFUNC(moduleAddLogisticsMenu3den);
         icon               = QPATHTOF(ui\icon_logistics.paa);
     };
-	class keko_ModuleAddLogisticsMenu3den: GVAR(moduleAddLogisticsMenu3den) {
-		displayName        = "(DEPRECATED - DO NOT USE) Add Logistics Menu";
+    class keko_ModuleAddLogisticsMenu3den: GVAR(moduleAddLogisticsMenu3den) {
+        displayName        = "(DEPRECATED - DO NOT USE) Add Logistics Menu";
         category           = QEGVAR(common,Deprecated);
-	};
+    };
     class GVAR(moduleSpawnCrate): GVAR(moduleBase) {
         displayName        = "Spawn Crate";
         category           = QGVAR(Logistics);
@@ -65,7 +65,7 @@ class CfgVehicles {
         function           = QFUNC(moduleSupplyDrop);
         icon               = QPATHTOF(ui\icon_paradrop.paa);
     };
-	class GVAR(moduleHeliDrop): GVAR(moduleBase) {
+    class GVAR(moduleHeliDrop): GVAR(moduleBase) {
         displayName        = "Heli Drop";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleHeliDrop);
@@ -75,26 +75,26 @@ class CfgVehicles {
         displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleCustomLogistics3den);
-        icon 			   = QPATHTOF(ui\icon_crate.paa);
+        icon                = QPATHTOF(ui\icon_crate.paa);
     };
-	class GVAR(moduleUAVBase3den): GVAR(moduleBase3den) {
+    class GVAR(moduleUAVBase3den): GVAR(moduleBase3den) {
         displayName        = "UAV Supply Base";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleUAVBase3den);
-        icon 			   = QPATHTOF(ui\icon_uav.paa);
+        icon                = QPATHTOF(ui\icon_uav.paa);
     };
-	class GVAR(moduleHeliEntry3den): GVAR(moduleBase3den) {
+    class GVAR(moduleHeliEntry3den): GVAR(moduleBase3den) {
         displayName        = "Heli Entry";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleHeliEntry3den);
     };
-	class GVAR(moduleHeliExit3den): GVAR(moduleBase3den) {
+    class GVAR(moduleHeliExit3den): GVAR(moduleBase3den) {
         displayName        = "Heli Exit";
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleHeliExit3den);
     };
-	class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
-		displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
+    class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
+        displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
         category           = QEGVAR(common,Deprecated);
-	};
+    };
 };

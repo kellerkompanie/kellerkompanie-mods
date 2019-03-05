@@ -9,16 +9,16 @@ PREP_RECOMPILE_END;
 #define CBA_SETTINGS_CATEGORY "Kellerkompanie Carryable Weapon Holders"
 
 [
-	QGVAR(Enabled), // key/reference variable
-	"LIST", // type of setting
-	[localize LSTRING(enabled), localize LSTRING(tooltipEnable)], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
-	[
-		[true,false], // values
-		[localize LSTRING(enabled),localize LSTRING(disabled)], // names
-		0 // default index
-	],
-	1
+    QGVAR(Enabled), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(enabled), localize LSTRING(tooltipEnable)], // name and tooltip
+    CBA_SETTINGS_CATEGORY, // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled),localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [

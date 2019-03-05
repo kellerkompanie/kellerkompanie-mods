@@ -10,13 +10,13 @@
  * None
  */
 params [
-	"",
-	"_weapon",
-	"",
-	"",
-	"_ammo",
-	"",
-	"_projectile"
+    "",
+    "_weapon",
+    "",
+    "",
+    "_ammo",
+    "",
+    "_projectile"
 ];
 
 private _fncName = [configFile >> "CfgAmmo" >> _ammo >> "L_exShake_func", QGVAR(exShake_) + _ammo, ""] call FUNC(readCacheValues);

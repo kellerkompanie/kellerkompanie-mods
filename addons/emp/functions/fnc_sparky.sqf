@@ -11,8 +11,8 @@ private _sparksCount = 1 + floor (random 5);
 
 for "_i" from 0 to _sparksCount do
 {
-	private "_pauseBetweenSparks";
-	_pauseBetweenSparks = 0.1 + (random 2);
-	[_objSrc, _pauseBetweenSparks] call FUNC(sparkEffect);
-	sleep _pauseBetweenSparks;
+    private "_pauseBetweenSparks";
+    _pauseBetweenSparks = 0.1 + (random 2);
+    [_objSrc, _pauseBetweenSparks] call FUNC(sparkEffect);
+    sleep _pauseBetweenSparks;
 };

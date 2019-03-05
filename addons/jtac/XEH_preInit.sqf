@@ -7,16 +7,16 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [
-	QGVAR(enabled), // key/reference variable
-	"LIST", // type of setting
-	[localize LSTRING(virtaulJTAC), localize LSTRING(virtaulJTACtooltip)], // name and tooltip
-	localize LSTRING(cbaSettingsCategory), // category
-	[
-		[true,false], // values
-		[localize LSTRING(enabled), localize LSTRING(disabled)], // names
-		0 // default index
-	],
-	1
+    QGVAR(enabled), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(virtaulJTAC), localize LSTRING(virtaulJTACtooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 

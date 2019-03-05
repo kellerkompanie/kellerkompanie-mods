@@ -16,12 +16,12 @@ waitUntil {sleep 1; (player distance _tsource < 3000)};
 enableCamShake true;
 
 [_tsource] spawn {
-	_torsouce = _this select 0;
-	while {!isNull _torsouce} do {
-		if ((player distance _torsouce) < 500) then {
-			addCamShake [0.3,7,11];sleep 10 + random 60;
-		};
-	};
+    _torsouce = _this select 0;
+    while {!isNull _torsouce} do {
+        if ((player distance _torsouce) < 500) then {
+            addCamShake [0.3,7,11];sleep 10 + random 60;
+        };
+    };
 };
 
 // vartej alb
@@ -57,11 +57,11 @@ _palarie setDropInterval 0.002;
 
 private _effect_screen = "";
 While { tornadosino != "goof" } do {
-	_effect_screen = ppEffectCreate ["FilmGrain", 2000];
-	_effect_screen ppEffectEnable true;
-	_effect_screen ppEffectAdjust [0.1,0.1,0.5,0.1,0.1,true];
-	_effect_screen ppEffectCommit 0;
-	sleep 0.5;
+    _effect_screen = ppEffectCreate ["FilmGrain", 2000];
+    _effect_screen ppEffectEnable true;
+    _effect_screen ppEffectAdjust [0.1,0.1,0.5,0.1,0.1,true];
+    _effect_screen ppEffectCommit 0;
+    sleep 0.5;
 };
 
 _source_end_part = "#particlesource" createVehicle (getpos _tsource);

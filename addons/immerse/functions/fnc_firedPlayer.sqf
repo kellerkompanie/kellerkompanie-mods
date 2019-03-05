@@ -11,13 +11,13 @@
  */
 
 params [
-	"_shooter",
-	"_weapon",
-	"",
-	"",
-	"_ammo",
-	"",
-	"_projectile"
+    "_shooter",
+    "_weapon",
+    "",
+    "",
+    "_ammo",
+    "",
+    "_projectile"
 ];
 
 if (toLower(_weapon) isEqualTo "put") exitWith {};
@@ -28,11 +28,11 @@ if (isNull _projectile) then {
 };
 
 if (GVAR(recoilEnabled)) then {
-	if (isNil "L_align_active") then {
-		if ((_weapon != (toLower "throw")) && (_weapon != (toLower "put"))) then {
-			addCamshake [1.3,0.4,15];
-		};
-	};
+    if (isNil "L_align_active") then {
+        if ((_weapon != (toLower "throw")) && (_weapon != (toLower "put"))) then {
+            addCamshake [1.3,0.4,15];
+        };
+    };
 };
 
 if (GVAR(forceEnabled)) then {

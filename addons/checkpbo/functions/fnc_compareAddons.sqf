@@ -21,33 +21,33 @@ private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 //INFO_1("compareAddons _missingAddonsOnServer", _missingAddonsOnServer);
 
 if(count _missingAddonsOnClient > 0) then {
-	//INFO("compareAddons error count _missingAddonsOnClient > 0");
-	systemChat format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient];
+    //INFO("compareAddons error count _missingAddonsOnClient > 0");
+    systemChat format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient];
 };
 
 //INFO("compareAddons 1");
 
 if(count _missingAddonsOnServer > 0) then {
-	//INFO("compareAddons error count _missingAddonsOnServer > 0");
-	systemChat format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient];
+    //INFO("compareAddons error count _missingAddonsOnServer > 0");
+    systemChat format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient];
 };
 
 //INFO("compareAddons 2");
 
 if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0) ) then {
-	// there is no obvious difference in loaded addons, now check versions
-	//INFO("compareAddons error ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0)");
-	private _i = 0;
-	for [{_i = 0}, {_i < (count _clientAddonVersions)}, {_i = _i + 1}] do	{
-	    private _serverAddonVersion = _serverAddonVersions select _i;
-		private _clientAddonVersion = _clientAddonVersions select _i;
+    // there is no obvious difference in loaded addons, now check versions
+    //INFO("compareAddons error ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0)");
+    private _i = 0;
+    for [{_i = 0}, {_i < (count _clientAddonVersions)}, {_i = _i + 1}] do    {
+        private _serverAddonVersion = _serverAddonVersions select _i;
+        private _clientAddonVersion = _clientAddonVersions select _i;
 
-		if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
-			private _serverAddonName = _serverAddonNames select _i;
-			private _clientAddonName = _clientAddonNames select _i;
-			systemChat format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion];
-		};
-	};
+        if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
+            private _serverAddonName = _serverAddonNames select _i;
+            private _clientAddonName = _clientAddonNames select _i;
+            systemChat format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion];
+        };
+    };
 };
 
 //INFO("compareAddons finish");

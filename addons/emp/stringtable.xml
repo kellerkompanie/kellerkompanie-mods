@@ -4,19 +4,19 @@
         <Key ID="STR_keko_emp_cbaSettingsCategory">
             <English>Kellerkompanie EMP</English>
         </Key>
-		<Key ID="STR_keko_emp_affectRadios">
+        <Key ID="STR_keko_emp_affectRadios">
             <English>EMP affects radios</English>
         </Key>
-		<Key ID="STR_keko_emp_affectRadiosTooltip">
+        <Key ID="STR_keko_emp_affectRadiosTooltip">
             <English>Enable/Disable radios breaking after EMP pulse.</English>
         </Key>
-		<Key ID="STR_keko_emp_enabled">
+        <Key ID="STR_keko_emp_enabled">
             <English>Enabled</English>
         </Key>
-		<Key ID="STR_keko_emp_disabled">
+        <Key ID="STR_keko_emp_disabled">
             <English>Disabled</English>
         </Key>
-		<Key ID="STR_keko_emp_curatorCategory">
+        <Key ID="STR_keko_emp_curatorCategory">
             <English>Kellerkompanie Effects</English>
         </Key>
     </Package>

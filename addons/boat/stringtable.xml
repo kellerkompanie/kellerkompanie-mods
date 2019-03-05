@@ -4,8 +4,8 @@
         <Key ID="STR_keko_boat_displayName">
             <English>Boat crate</English>
         </Key>
-		<Key ID="STR_keko_boat_actionInflate">
+        <Key ID="STR_keko_boat_actionInflate">
             <English>Inflate Boat</English>
         </Key>
-		</Package>
+        </Package>
 </Project>

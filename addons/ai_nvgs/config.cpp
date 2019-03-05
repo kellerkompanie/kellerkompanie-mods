@@ -5,7 +5,7 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {
-			"NVGoggles_AI"};
+            "NVGoggles_AI"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
           "cba_main"};

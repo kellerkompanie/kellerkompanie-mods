@@ -6,12 +6,12 @@ class CfgPatches {
         units[] = {
             QGVAR(moduleAddIntel),
             QGVAR(moduleAddIntel3den),
-			"keko_ModuleAddIntel3den"
+            "keko_ModuleAddIntel3den"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-        	"3den",
+            "3den",
             "ace_main",
             "ace_modules",
             "cba_main" };

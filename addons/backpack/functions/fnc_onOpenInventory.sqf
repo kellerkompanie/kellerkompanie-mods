@@ -24,20 +24,20 @@ private _target = objectParent _backpack;
 if (isNull _target) exitWith {false};
 
 if (alive _target && {!(_target getVariable ["ACE_isUnconscious",false]) && {_target getVariable [QGVAR(backpackIsLocked),false]}}) exitWith {
-	[
-		{
-			!isNull (findDisplay 602)
-		},
-		{
-			(findDisplay 602) closeDisplay 0;
-			if !(isNil "ace_common_fnc_displayTextStructured") then {
-				[localize LSTRING(messageLocked)] call ace_common_fnc_displayTextStructured;
-			} else {
-				hint localize LSTRING(messageLocked);
-			};
-		},
-		[]
-	] call CBA_fnc_waitUntilAndExecute;
+    [
+        {
+            !isNull (findDisplay 602)
+        },
+        {
+            (findDisplay 602) closeDisplay 0;
+            if !(isNil "ace_common_fnc_displayTextStructured") then {
+                [localize LSTRING(messageLocked)] call ace_common_fnc_displayTextStructured;
+            } else {
+                hint localize LSTRING(messageLocked);
+            };
+        },
+        []
+    ] call CBA_fnc_waitUntilAndExecute;
 };
 
 // return false to open inventory as usual

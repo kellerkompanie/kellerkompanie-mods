@@ -25,11 +25,11 @@ TRACE_1("dialogIntelCallback", _object);
 
 switch (true) do {
     case (isNull _object): {
-    	ERROR("_object is null");
+        ERROR("_object is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-		[_object, _action, _title, _content, _remove] call FUNC(addIntel);
+        [_object, _action, _title, _content, _remove] call FUNC(addIntel);
     };
 };
 

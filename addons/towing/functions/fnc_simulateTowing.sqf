@@ -7,22 +7,22 @@ _surfaceIntersectEndASL = [_positionAGL select 0, _positionAGL select 1, (_objec
 _surfaces = lineIntersectsSurfaces [_surfaceIntersectStartASL, _surfaceIntersectEndASL, _object, objNull, true, 5];\
 _returnSurfaceASL = AGLToASL _positionAGL;\
 { \
-	scopeName "surfaceLoop"; \
-	if( isNull (_x select 2) ) then { \
-		_returnSurfaceASL = _x select 0; \
-		breakOut "surfaceLoop"; \
-	} else { \
-		if!((_x select 2) isKindOf "RopeSegment") then { \
-			_objectFileName = str (_x select 2); \
-			if((_objectFileName find " t_") == -1 && (_objectFileName find " b_") == -1) then { \
-				_returnSurfaceASL = _x select 0; \
-				breakOut "surfaceLoop"; \
-			}; \
-		}; \
-	}; \
+    scopeName "surfaceLoop"; \
+    if( isNull (_x select 2) ) then { \
+        _returnSurfaceASL = _x select 0; \
+        breakOut "surfaceLoop"; \
+    } else { \
+        if!((_x select 2) isKindOf "RopeSegment") then { \
+            _objectFileName = str (_x select 2); \
+            if((_objectFileName find " t_") == -1 && (_objectFileName find " b_") == -1) then { \
+                _returnSurfaceASL = _x select 0; \
+                breakOut "surfaceLoop"; \
+            }; \
+        }; \
+    }; \
 } forEach _surfaces; \
 if(_canFloat && (_returnSurfaceASL select 2) < 0) then {\
-	_returnSurfaceASL set [2,0];\
+    _returnSurfaceASL set [2,0];\
 };\
 
 #define keko_Find_Surface_ASL_Under_Model(_object,_modelOffset,_returnSurfaceASL,_canFloat)\
@@ -63,7 +63,7 @@ private _corner4 = _cargoCornerPoints select 3;
 
 // Try to set cargo owner if the towing client doesn't own the cargo
 if(local _vehicle && !local _cargo) then {
-	[_cargo, clientOwner] remoteExec ["setOwner", [0, 2] select isDedicated];
+    [_cargo, clientOwner] remoteExec ["setOwner", [0, 2] select isDedicated];
 };
 
 _vehicleHitchModelPos set [2,0];
@@ -79,7 +79,7 @@ _cargoLength = (_cargoHitchPoints select 0) distance (_cargoHitchPoints select 1
 _vehicleMass = 1 max (getMass _vehicle);
 _cargoMass = getMass _cargo;
 if(_cargoMass == 0) then {
-	_cargoMass = _vehicleMass;
+    _cargoMass = _vehicleMass;
 };
 
 _maxDistanceToCargo = _ropeLength;
@@ -91,87 +91,87 @@ private _towingSpeedSimulationHandle = [_vehicle] spawn FUNC(simulateTowingSpeed
 
 while {!_doExit} do {
 
-	_vehicleHitchPosition = _vehicle modelToWorld _vehicleHitchModelPos;
-	_vehicleHitchPosition set [2,0];
-	_cargoHitchPosition = _lastCargoHitchPosition;
-	_cargoHitchPosition set [2,0];
+    _vehicleHitchPosition = _vehicle modelToWorld _vehicleHitchModelPos;
+    _vehicleHitchPosition set [2,0];
+    _cargoHitchPosition = _lastCargoHitchPosition;
+    _cargoHitchPosition set [2,0];
 
-	_cargoPosition = getPos _cargo;
+    _cargoPosition = getPos _cargo;
 
-	if(_vehicleHitchPosition distance _cargoHitchPosition > _maxDistanceToCargo) then {
+    if(_vehicleHitchPosition distance _cargoHitchPosition > _maxDistanceToCargo) then {
 
-		// Calculated simulated towing position + direction
-		_newCargoHitchPosition = _vehicleHitchPosition vectorAdd ((_vehicleHitchPosition vectorFromTo _cargoHitchPosition) vectorMultiply _ropeLength);
-		_cargoVector = _lastCargoVectorDir vectorMultiply _cargoLength;
-		_movedCargoVector = _newCargoHitchPosition vectorDiff _lastCargoHitchPosition;
-		_newCargoDir = vectorNormalized (_cargoVector vectorAdd _movedCargoVector);
-		//if(_isRearCargoHitch) then {
-		//	_newCargoDir = _newCargoDir vectorMultiply -1;
-		//};
-		_lastCargoVectorDir = _newCargoDir;
-		_newCargoPosition = _newCargoHitchPosition vectorAdd (_newCargoDir vectorMultiply -(vectorMagnitude (_cargoHitchModelPos)));
+        // Calculated simulated towing position + direction
+        _newCargoHitchPosition = _vehicleHitchPosition vectorAdd ((_vehicleHitchPosition vectorFromTo _cargoHitchPosition) vectorMultiply _ropeLength);
+        _cargoVector = _lastCargoVectorDir vectorMultiply _cargoLength;
+        _movedCargoVector = _newCargoHitchPosition vectorDiff _lastCargoHitchPosition;
+        _newCargoDir = vectorNormalized (_cargoVector vectorAdd _movedCargoVector);
+        //if(_isRearCargoHitch) then {
+        //    _newCargoDir = _newCargoDir vectorMultiply -1;
+        //};
+        _lastCargoVectorDir = _newCargoDir;
+        _newCargoPosition = _newCargoHitchPosition vectorAdd (_newCargoDir vectorMultiply -(vectorMagnitude (_cargoHitchModelPos)));
 
-		keko_Find_Surface_ASL_Under_Position(_cargo,_newCargoPosition,_newCargoPosition,_cargoCanFloat);
+        keko_Find_Surface_ASL_Under_Position(_cargo,_newCargoPosition,_newCargoPosition,_cargoCanFloat);
 
-		// Calculate surface normal (up) (more realistic than surfaceNormal function)
-		keko_Find_Surface_ASL_Under_Model(_cargo,_corner1,_cargoCorner1ASL,_cargoCanFloat);
-		keko_Find_Surface_ASL_Under_Model(_cargo,_corner2,_cargoCorner2ASL,_cargoCanFloat);
-		keko_Find_Surface_ASL_Under_Model(_cargo,_corner3,_cargoCorner3ASL,_cargoCanFloat);
-		keko_Find_Surface_ASL_Under_Model(_cargo,_corner4,_cargoCorner4ASL,_cargoCanFloat);
-		_surfaceNormal1 = (_cargoCorner1ASL vectorFromTo _cargoCorner3ASL) vectorCrossProduct (_cargoCorner1ASL vectorFromTo _cargoCorner2ASL);
-		_surfaceNormal2 = (_cargoCorner4ASL vectorFromTo _cargoCorner2ASL) vectorCrossProduct (_cargoCorner4ASL vectorFromTo _cargoCorner3ASL);
-		_surfaceNormal = _surfaceNormal1 vectorAdd _surfaceNormal2;
+        // Calculate surface normal (up) (more realistic than surfaceNormal function)
+        keko_Find_Surface_ASL_Under_Model(_cargo,_corner1,_cargoCorner1ASL,_cargoCanFloat);
+        keko_Find_Surface_ASL_Under_Model(_cargo,_corner2,_cargoCorner2ASL,_cargoCanFloat);
+        keko_Find_Surface_ASL_Under_Model(_cargo,_corner3,_cargoCorner3ASL,_cargoCanFloat);
+        keko_Find_Surface_ASL_Under_Model(_cargo,_corner4,_cargoCorner4ASL,_cargoCanFloat);
+        _surfaceNormal1 = (_cargoCorner1ASL vectorFromTo _cargoCorner3ASL) vectorCrossProduct (_cargoCorner1ASL vectorFromTo _cargoCorner2ASL);
+        _surfaceNormal2 = (_cargoCorner4ASL vectorFromTo _cargoCorner2ASL) vectorCrossProduct (_cargoCorner4ASL vectorFromTo _cargoCorner3ASL);
+        _surfaceNormal = _surfaceNormal1 vectorAdd _surfaceNormal2;
 
-		// Calculate adjusted surface height based on surface normal (prevents vehicle from clipping into ground)
-		_cargoCenterASL = AGLtoASL (_cargo modelToWorldVisual [0,0,0]);
-		_cargoCenterASL set [2,0];
-		_surfaceHeight = ((_cargoCorner1ASL vectorAdd ( _cargoCenterASL vectorMultiply -1)) vectorDotProduct _surfaceNormal1) /  ([0,0,1] vectorDotProduct _surfaceNormal1);
-		_surfaceHeight2 = ((_cargoCorner1ASL vectorAdd ( _cargoCenterASL vectorMultiply -1)) vectorDotProduct _surfaceNormal2) /  ([0,0,1] vectorDotProduct _surfaceNormal2);
-		_maxSurfaceHeight = (_newCargoPosition select 2) max _surfaceHeight max _surfaceHeight2;
-		_newCargoPosition set [2, _maxSurfaceHeight ];
+        // Calculate adjusted surface height based on surface normal (prevents vehicle from clipping into ground)
+        _cargoCenterASL = AGLtoASL (_cargo modelToWorldVisual [0,0,0]);
+        _cargoCenterASL set [2,0];
+        _surfaceHeight = ((_cargoCorner1ASL vectorAdd ( _cargoCenterASL vectorMultiply -1)) vectorDotProduct _surfaceNormal1) /  ([0,0,1] vectorDotProduct _surfaceNormal1);
+        _surfaceHeight2 = ((_cargoCorner1ASL vectorAdd ( _cargoCenterASL vectorMultiply -1)) vectorDotProduct _surfaceNormal2) /  ([0,0,1] vectorDotProduct _surfaceNormal2);
+        _maxSurfaceHeight = (_newCargoPosition select 2) max _surfaceHeight max _surfaceHeight2;
+        _newCargoPosition set [2, _maxSurfaceHeight ];
 
-		_newCargoPosition = _newCargoPosition vectorAdd ( _cargoModelCenterGroundPosition vectorMultiply -1 );
+        _newCargoPosition = _newCargoPosition vectorAdd ( _cargoModelCenterGroundPosition vectorMultiply -1 );
 
-		_cargo setVectorDir _newCargoDir;
-		_cargo setVectorUp _surfaceNormal;
-		_cargo setPosWorld _newCargoPosition;
+        _cargo setVectorDir _newCargoDir;
+        _cargo setVectorUp _surfaceNormal;
+        _cargo setPosWorld _newCargoPosition;
 
-		_lastCargoHitchPosition = _newCargoHitchPosition;
-		_maxDistanceToCargo = _vehicleHitchPosition distance _newCargoHitchPosition;
-		_lastMovedCargoPosition = _cargoPosition;
+        _lastCargoHitchPosition = _newCargoHitchPosition;
+        _maxDistanceToCargo = _vehicleHitchPosition distance _newCargoHitchPosition;
+        _lastMovedCargoPosition = _cargoPosition;
 
-		private _massAdjustedMaxSpeed = _vehicle getVariable [QGVAR(maxTowSpeed), _maxVehicleSpeed];
-		if(speed _vehicle > (_massAdjustedMaxSpeed)+0.1) then {
-			_vehicle setVelocity ((vectorNormalized (velocity _vehicle)) vectorMultiply (_massAdjustedMaxSpeed/3.6));
-		};
+        private _massAdjustedMaxSpeed = _vehicle getVariable [QGVAR(maxTowSpeed), _maxVehicleSpeed];
+        if(speed _vehicle > (_massAdjustedMaxSpeed)+0.1) then {
+            _vehicle setVelocity ((vectorNormalized (velocity _vehicle)) vectorMultiply (_massAdjustedMaxSpeed/3.6));
+        };
 
-	} else {
+    } else {
 
-		if(_lastMovedCargoPosition distance _cargoPosition > 2) then {
-			_lastCargoHitchPosition = _cargo modelToWorld _cargoHitchModelPos;
-			_lastCargoVectorDir = vectorDir _cargo;
-		};
+        if(_lastMovedCargoPosition distance _cargoPosition > 2) then {
+            _lastCargoHitchPosition = _cargo modelToWorld _cargoHitchModelPos;
+            _lastCargoVectorDir = vectorDir _cargo;
+        };
 
-	};
+    };
 
-	// If vehicle isn't local to the client, switch client running towing simulation
-	if(!local _vehicle) then {
-		_this remoteExec [QFUNC(simulateTowing), _vehicle];
-		_doExit = true;
-	};
+    // If vehicle isn't local to the client, switch client running towing simulation
+    if(!local _vehicle) then {
+        _this remoteExec [QFUNC(simulateTowing), _vehicle];
+        _doExit = true;
+    };
 
-	// If the vehicle isn't towing anything, stop the towing simulation
-	if( count (ropeAttachedObjects _vehicle) == 0 ) then {
-		_currentCargo = objNull;
-	} else {
-		_currentCargo = ((ropeAttachedObjects _vehicle) select 0) getVariable [QGVAR(cargo), objNull];
-	};
+    // If the vehicle isn't towing anything, stop the towing simulation
+    if( count (ropeAttachedObjects _vehicle) == 0 ) then {
+        _currentCargo = objNull;
+    } else {
+        _currentCargo = ((ropeAttachedObjects _vehicle) select 0) getVariable [QGVAR(cargo), objNull];
+    };
 
-	if(isNull _currentCargo) then {
-		_doExit = true;
-	};
+    if(isNull _currentCargo) then {
+        _doExit = true;
+    };
 
-	sleep 0.01;
+    sleep 0.01;
 
 };
 

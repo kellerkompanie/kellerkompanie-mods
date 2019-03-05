@@ -4,16 +4,16 @@
         <Key ID="STR_keko_knock_showHint">
             <English>Show hint</English>
         </Key>
-		<Key ID="STR_keko_knock_showHintTooltip">
+        <Key ID="STR_keko_knock_showHintTooltip">
             <English>Enable/Disable showing hint to knocked on crew.</English>
         </Key>
-		<Key ID="STR_keko_knock_cbaSettingsCategory">
+        <Key ID="STR_keko_knock_cbaSettingsCategory">
             <English>Kellerkompanie Knock</English>
         </Key>
-		<Key ID="STR_keko_knock_enabled">
+        <Key ID="STR_keko_knock_enabled">
             <English>Enabled</English>
         </Key>
-		<Key ID="STR_keko_knock_disabled">
+        <Key ID="STR_keko_knock_disabled">
             <English>Disabled</English>
         </Key>
     </Package>

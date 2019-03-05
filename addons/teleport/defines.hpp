@@ -1,6 +1,6 @@
 // close dialog values
-#define IDC_OK				1
-#define IDC_CANCLE			2
+#define IDC_OK                1
+#define IDC_CANCLE            2
 
 // Control types
 #define CT_STATIC           0
@@ -98,12 +98,12 @@
 #define MB_BUTTON_USER    4
 
 // Import from editor defines
-#define GUI_GRID_X	(0)
-#define GUI_GRID_Y	(0)
-#define GUI_GRID_W	(0.025)
-#define GUI_GRID_H	(0.04)
-#define GUI_GRID_WAbs	(1)
-#define GUI_GRID_HAbs	(1)
+#define GUI_GRID_X    (0)
+#define GUI_GRID_Y    (0)
+#define GUI_GRID_W    (0.025)
+#define GUI_GRID_H    (0.04)
+#define GUI_GRID_WAbs    (1)
+#define GUI_GRID_HAbs    (1)
 
 // Forward declare some default base classes.
 class IGUIBack;

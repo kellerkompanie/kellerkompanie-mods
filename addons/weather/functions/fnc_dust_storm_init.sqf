@@ -27,16 +27,16 @@ publicVariable "desertVegetation";
 
 
 if(_EffectOnObjects_I == 0) then{
-	BoolEffectOnObjects = false;
-	BoolHoverUnit = false;
+    BoolEffectOnObjects = false;
+    BoolHoverUnit = false;
 }else{
-	if(_EffectOnObjects_I == 1) then {
-		BoolEffectOnObjects = true;
-		BoolHoverUnit = false;
-	}else{
-		BoolEffectOnObjects = true;
-		BoolHoverUnit = true;
-	};
+    if(_EffectOnObjects_I == 1) then {
+        BoolEffectOnObjects = true;
+        BoolHoverUnit = false;
+    }else{
+        BoolEffectOnObjects = true;
+        BoolHoverUnit = true;
+    };
 };
 
 BoolWall = _BoolArray select _Wall_I;

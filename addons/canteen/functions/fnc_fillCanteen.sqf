@@ -9,22 +9,22 @@ private _canteenItems = items _unit select {_x == QGVAR(canteenEmpty)};
 
 private _refilled = false;
 {
-	if ((_x select 1) < 6) then {
-		_unit removeMagazineGlobal QGVAR(canteen);
-	    _unit addMagazine [QGVAR(canteen), 5];
-		_refilled = true;
-	}
+    if ((_x select 1) < 6) then {
+        _unit removeMagazineGlobal QGVAR(canteen);
+        _unit addMagazine [QGVAR(canteen), 5];
+        _refilled = true;
+    }
 } forEach _canteenMags;
 
 {
-	_unit removeItem _x;
-	_unit addMagazine [QGVAR(canteen), 5];
-	_refilled = true;
+    _unit removeItem _x;
+    _unit addMagazine [QGVAR(canteen), 5];
+    _refilled = true;
 } forEach _canteenItems;
 
 if(_refilled) then {
-	[_unit, QGVAR(pouring)] remoteExec ["say3D", 0, false];
-	[localize LSTRING(messageRefilled), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+    [_unit, QGVAR(pouring)] remoteExec ["say3D", 0, false];
+    [localize LSTRING(messageRefilled), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 } else {
-	[localize LSTRING(messageFull), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
+    [localize LSTRING(messageFull), 2.5, _unit] spawn ace_common_fnc_displayTextStructured;
 };

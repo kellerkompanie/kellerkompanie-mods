@@ -9,7 +9,7 @@ private _curatorCamEarsEnabled = player getVariable ["TFAR_CuratorCamEars", fals
 
 private _msg = "Curator Cam ears now ENABLED";
 if (_curatorCamEarsEnabled) then {
-	_msg = "Curator Cam ears now DISABLED";
+    _msg = "Curator Cam ears now DISABLED";
 };
 
 player setVariable ["TFAR_CuratorCamEars", !_curatorCamEarsEnabled];

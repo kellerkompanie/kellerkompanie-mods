@@ -6,14 +6,14 @@ class ACE_Medical_Actions {
         class Tourniquet: fieldDressing {
             treatmentTime = 2; // 4
         };
-		class RemoveTourniquet: Tourniquet {
-			treatmentTime = 2; // 2.5
-		};
+        class RemoveTourniquet: Tourniquet {
+            treatmentTime = 2; // 2.5
+        };
         class Morphine: fieldDressing {
             treatmentTime = 2; // 3
-        };		
+        };
         class BloodIV: fieldDressing {
-			allowSelfTreatment = 1;
+            allowSelfTreatment = 1;
             treatmentTime = 4; // 7
         };
         class SurgicalKit: fieldDressing {
@@ -33,11 +33,11 @@ class ACE_Medical_Actions {
         class BodyBag: fieldDressing {
             treatmentTime = 6; // 15
         };
-		class splint: fieldDressing {
-			treatmentTime = 4; // 8
-		};
-		class CheckLimbs: fieldDressing {
-			treatmentTime = 2; // 3
-		};
+        class splint: fieldDressing {
+            treatmentTime = 4; // 8
+        };
+        class CheckLimbs: fieldDressing {
+            treatmentTime = 2; // 3
+        };
     };
 };
