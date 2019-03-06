@@ -9,7 +9,7 @@ enableRadio false;
 //failsafe for missing curator interface:
 if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
     if (TFAR_pluginTimeout < 15) then {
-        systemChat "WARNING: Your TFAR plugin timeout setting is set to less than 15 seconds. As Zeus this will move you out of the TFAR channel regularily. Change your setting in the TFAR clientside addon settings!";
+        ["TFAR_pluginTimeout", 15] call CBA_settings_fnc_set;
     };
 
     [] spawn {
