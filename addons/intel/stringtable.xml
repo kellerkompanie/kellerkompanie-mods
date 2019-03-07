@@ -3,28 +3,36 @@
     <Package name="intel">
         <Key ID="STR_keko_intel_addIntel">
             <English>Add Intel</English>
+            <German>Intel hinzufügen</German>
         </Key>
         <Key ID="STR_keko_intel_action">
             <English>Action</English>
+            <German>Aktion</German>
         </Key>
         <Key ID="STR_keko_intel_pickupDocuments">
             <English>'Pick up documents'</English>
+            <German>'Dokumente aufheben'</German>
         </Key>
         <Key ID="STR_keko_intel_foundDocuments">
             <English>'Found Documents'</English>
+            <German>'Dokumente gefunden'</German>
         </Key>
         <Key ID="STR_keko_intel_title">
             <English>Title</English>
+            <German>Titel</German>
         </Key>
         <Key ID="STR_keko_intel_content">
             <English>Content</English>
+            <German>Inhalt</German>
         </Key>
         <Key ID="STR_keko_intel_contentStr">
-            <English>'In den Dokumenten steht etwas.'</English>
+            <English>'There is something written in these documents.'</English>
+            <German>'In den Dokumenten steht etwas.'</German>
         </Key>
 
         <Key ID="STR_keko_intel_removeAfter">
             <English>Remove after</English>
+            <German>Danach entfernen</German>
         </Key>
     </Package>
 </Project>

@@ -3,6 +3,7 @@
     <Package name="slingloading">
         <Key ID="STR_keko_slingloading_cbaSettingsCategory">
             <English>Kellerkompanie Slingloading</English>
+            <German>Kellerkompanie Hebegurtverladung</German>
         </Key>
     </Package>
 </Project>

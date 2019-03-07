@@ -3,18 +3,23 @@
     <Package name="knock">
         <Key ID="STR_keko_knock_showHint">
             <English>Show hint</English>
+            <German>Hinweis anzeigen</German>
         </Key>
         <Key ID="STR_keko_knock_showHintTooltip">
             <English>Enable/Disable showing hint to knocked on crew.</English>
+            <German>Anzeigen von Hinweisen für die Besatzung beim Klopfen aktivieren/deaktivieren.</German>
         </Key>
         <Key ID="STR_keko_knock_cbaSettingsCategory">
             <English>Kellerkompanie Knock</English>
+            <German>Kellerkompanie Klopfen</German>
         </Key>
         <Key ID="STR_keko_knock_enabled">
             <English>Enabled</English>
+            <German>Aktiviert</German>
         </Key>
         <Key ID="STR_keko_knock_disabled">
             <English>Disabled</English>
+            <German>Deaktiviert</German>
         </Key>
     </Package>
 </Project>

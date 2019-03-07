@@ -2,12 +2,15 @@
 <Project name="keko">
     <Package name="checkpbo">
         <Key ID="STR_keko_checkpbo_errorAddonsOnServer">
+            <English>ERROR: The following addons are on the server, but not on %1's machine: %2</English>
             <German>FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2</German>
         </Key>
         <Key ID="STR_keko_checkpbo_errorAddonsNotOnServer">
+            <English>ERROR: The following addons are on %1's machine, but not on the server: %2</English>
             <German>FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2</German>
         </Key>
         <Key ID="STR_keko_checkpbo_errorDifferentVersions">
+            <English>ERROR: Different versions - Server: [%1, %2] | %3 [%4, %5]</English>
             <German>FEHLER: Unterschiedliche Versionen - Server: [%1, %2] | %3 [%4, %5]</German>
         </Key>
         </Package>

@@ -3,6 +3,7 @@
     <Package name="suppress">
         <Key ID="STR_keko_suppress_cbaSettingsCategory">
             <English>Kellerkompanie Suppress</English>
+            <German>Kellerkompanie Unterdrückung</German>
         </Key>
     </Package>
 </Project>

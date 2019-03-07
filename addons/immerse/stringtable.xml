@@ -3,34 +3,43 @@
     <Package name="immerse">
         <Key ID="STR_keko_immerse_cbaSettingsCategory">
             <English>Kellerkompanie Immerse</English>
+            <German>Kellerkompanie Immersion</German>
         </Key>
 
         <Key ID="STR_keko_immerse_enableTwitch">
             <English>Enable Twitch</English>
+            <German>Zucken aktivieren</German>
         </Key>
         <Key ID="STR_keko_immerse_enableTwitchTooltip">
-            <English>CamShake for explosions, even distant ones!</English>
+            <English>TODO</English>
+            <German>TODO</German>
         </Key>
 
         <Key ID="STR_keko_immerse_enableExShake">
             <English>Enable exShake</English>
+            <German>Kameraschütteln aktivieren</German>
         </Key>
         <Key ID="STR_keko_immerse_enableExShakeTooltip">
             <English>CamShake for explosions, even distant ones!</English>
+            <German>Kameraschütteln bei Explosionen, sogar entfernten!</German>
         </Key>
 
         <Key ID="STR_keko_immerse_enableRecoil">
             <English>Enable recoil</English>
+            <German>Rückstoß aktivieren</German>
         </Key>
         <Key ID="STR_keko_immerse_enableRecoilTooltip">
             <English>Adds a slight CamShake when shooting, should make shooting the guns feel more satisfying</English>
+            <German>Fügt einen leichten Rückstoß hinzu, sollte mehr Freude bringen beim Schießen</German>
         </Key>
 
         <Key ID="STR_keko_immerse_enableForce">
             <English>Enable force</English>
+            <German>Wucht aktivieren</German>
         </Key>
         <Key ID="STR_keko_immerse_enableForceTooltip">
             <English>Adds a slight radial blur and darkens the screen a bit for a split second when firing</English>
+            <German>Fügt eine leichte kreisförmige Unschärfe ein, die den Bildschirm für den Bruchteil einer Sekunde verdunkelt beim Feuern</German>
         </Key>
     </Package>
 </Project>

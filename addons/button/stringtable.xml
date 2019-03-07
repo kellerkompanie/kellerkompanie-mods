@@ -3,9 +3,11 @@
     <Package name="button">
         <Key ID="STR_keko_button_text">
             <English>Kellerkompanie Server</English>
+            <German>Kellerkompanie Server</German>
         </Key>
         <Key ID="STR_keko_button_actionText">
             <English>Join server: Kellerkompanie Server</English>
+            <German>Server beitreten: Kellerkompanie Server</German>
         </Key>
         </Package>
 </Project>

@@ -3,9 +3,11 @@
     <Package name="ai_nvgs">
         <Key ID="STR_keko_ai_nvgs_descriptionShort">
             <English>Night Vision Goggles - AI Only</English>
+            <German>Restlichtverstärker - Nur KI</German>
         </Key>
         <Key ID="STR_keko_ai_nvgs_displayName">
             <English>NV Goggles (AI Only)</English>
+            <German>Restlichtverstärker (nur KI)</German>
         </Key>
         </Package>
 </Project>
