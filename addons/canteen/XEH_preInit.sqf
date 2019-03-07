@@ -14,18 +14,22 @@ PREP_RECOMPILE_END;
  * 3: Statement <CODE>
  * 4: Condition <CODE>
  */
- private _action = [QGVAR(refill), localize LSTRING(actionRefill), QPATHTOF(ui\icon_canteen_action), {_player call FUNC(fillCanteen)}, {_player call FUNC(hasCanteen)}] call ace_interact_menu_fnc_createAction;
+ private _action = [
+    QGVAR(refill),
+    localize LSTRING(actionRefill),
+    QPATHTOF(ui\icon_canteen_action),
+    { _player call FUNC(fillCanteen) },
+    { _player call FUNC(hasCanteen) }
+] call ace_interact_menu_fnc_createAction;
 
 {
-    /*
-     * Argument:
-     * 0: TypeOf of the class <STRING>
-     * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
-     * 2: Parent path of the new action <ARRAY>
-     * 3: Action <ARRAY>
-     * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
-     */
-    [_x, 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+    [
+        _x,                     // TypeOf of the class <STRING>
+        0,                      // Type of action, 0 for actions, 1 for self-actions <NUMBER>
+        ["ACE_MainActions"],    // Parent path of the new action <ARRAY>
+        _action,                // Action <ARRAY>
+        true                    // Use Inheritance (Default: False) <BOOL><OPTIONAL>
+    ] call ace_interact_menu_fnc_addActionToClass;
 } forEach [
     "Land_Water_source_F",
     "StorageBladder_02_water_forest_F",
