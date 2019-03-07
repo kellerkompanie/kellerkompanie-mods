@@ -25,12 +25,11 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    hintC acex_killTracker_outputText;
-
     [] spawn {
         playMusic "LeadTrack01_F_Tank";
         sleep 2;
         ["<t color='#00ff00'>Mission erfolgreich</t>", 1, 0.8] spawn BIS_fnc_dynamicText;
+        hintC GVAR(outputText);
         sleep 3;
         [
             [(format ["%1 Spieler", playersNumber playerSide]), 1, 2],

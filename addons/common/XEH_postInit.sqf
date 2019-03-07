@@ -20,25 +20,47 @@
 INFO("Running Kill Tracking");
 
 // Variables:
-acex_killtrackereventsArray = [];
-acex_killtrackeroutputText = "Total Kills: 0";
-acex_killtrackerkillCount = 0;
+#include "script_component.hpp"
+/*
+ * Author: PabstMirror
+ * Tracks deaths/kills and logs to the end mission disaplay
+ * Attemps to log kills from ace_medical by using ace_medical_lastDamageSource
+ *
+ * Note: Requires config setup in a mission's description.ext
+ * Has no effect if mission is not setup correctly
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Public: No
+ */
+// #define DEBUG_MODE_FULL
+
+INFO("Running Kill Tracking");
+
+// Variables:
+GVAR(eventsArray) = [];
+GVAR(outputText) = "Total Kills: 0";
+GVAR(killCount) = 0;
 
 // Add Event Handlers:
-["acex_killtrackerkill", {
+[QGVAR(kill), {
     params ["_name", "_killInfo"];
     TRACE_2("kill eh",_name,_killInfo);
     // Increment kill counter
-    acex_killtrackerkillCount = acex_killtrackerkillCount + 1;
-    acex_killtrackereventsArray pushBack format ["Killed: %1 %2", _name, _killInfo];
-    acex_killtrackeroutputText = (format ["Total Kills: %1<br/>", acex_killtrackerkillCount]) + (acex_killtrackereventsArray joinString "<br/>");
+    GVAR(killCount) = GVAR(killCount) + 1;
+    GVAR(eventsArray) pushBack format ["Killed: %1 %2", _name, _killInfo];
+    GVAR(outputText) = (format ["Total Kills: %1<br/>", GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
 }] call CBA_fnc_addEventHandler;
 
-["acex_killtrackerdeath", {
+[QGVAR(death), {
     params ["_name", "_killInfo"];
     TRACE_2("death eh",_name,_killInfo);
-    acex_killtrackereventsArray pushBack format ["Died: %1 %2", _name, _killInfo];
-    acex_killtrackeroutputText = (format ["Total Kills: %1<br/>", acex_killtrackerkillCount]) + (acex_killtrackereventsArray joinString "<br/>");
+    GVAR(eventsArray) pushBack format ["Died: %1 %2", _name, _killInfo];
+    GVAR(outputText) = (format ["Total Kills: %1<br/>", GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
 }] call CBA_fnc_addEventHandler;
 
 // Add Killed Event Handler - killed EH and lastDamageSource var are local only
@@ -111,8 +133,7 @@ acex_killtrackerkillCount = 0;
                 _killerName = format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _killer) >> "displayName")];
             };
         };
-
-        ["acex_killtrackerdeath", [_killerName, _killInfo]] call CBA_fnc_localEvent;
+        [QGVAR(death), [_killerName, _killInfo]] call CBA_fnc_localEvent;
     };
 
     // If killer was player then send event to killer
@@ -122,7 +143,6 @@ acex_killtrackerkillCount = 0;
         } else {
             format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _unit) >> "displayName")];
         };
-
-        ["acex_killtrackerkill", [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
+        [QGVAR(kill), [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addClassEventHandler;
