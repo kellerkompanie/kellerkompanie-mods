@@ -10,4 +10,4 @@ GVAR(ShowSelectRopesMenuArray) = [[_title,false]];
 GVAR(ShowSelectRopesMenuArray) pushBack ["All " + _ropesLabel, [0], "", -5, [["expression", "{ [_x] call " + _functionName + " } forEach [0,1,2];"]], "1", "1"];
 
 showCommandingMenu "";
-showCommandingMenu "#USER:" + GVAR(ShowSelectRopesMenuArray);
+showCommandingMenu ("#USER:" + GVAR(ShowSelectRopesMenuArray));

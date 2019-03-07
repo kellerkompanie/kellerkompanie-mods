@@ -4,18 +4,17 @@
 
 if (!isServer) exitWith {};
 
-_tornado_start    = _this select 0;
-_tornado_dest    = _this select 1;
+params ["_tornado_start", "_tornado_dest"];
 
-_tornadasource = "Land_HelipadEmpty_F" createVehicle getMarkerPos _tornado_start;
-_tornadamid     = "Land_HelipadEmpty_F" createVehicle getMarkerPos _tornado_start;
+private _tornadasource = "Land_HelipadEmpty_F" createVehicle getMarkerPos _tornado_start;
+private _tornadamid     = "Land_HelipadEmpty_F" createVehicle getMarkerPos _tornado_start;
 _tornadamid setPosATL [getPosATL _tornadasource select 0,getPosATL _tornadasource select 1,100];
 [_tornadasource,_tornadamid] remoteExec [QFUNC(tornado_effect),0,true];
 [_tornadamid] remoteExec [QFUNC(tornado_sound),0,true];
 [_tornadasource] spawn {
-    _tuner_tor = _this select 0;
-    while {!isNull _tuner_tor} do {
-        [_tuner_tor] remoteExec [QFUNC(tornado_tunet),0,true];
+    params ["_tornadasource"];
+    while {!isNull _tornadasource} do {
+        [_tornadasource] remoteExec [QFUNC(tornado_tunet),0,true];
         sleep 3;
     };
 };
@@ -32,7 +31,7 @@ publicVariable "al_thundlevel";
 publicVariable "al_windlevel";
 sleep 0.1;
 [] spawn {
-    _ifog = 0;
+    private _ifog = 0;
     while { _ifog < 0.3 } do {
         _ifog = _ifog + 0.001;
         0 setFog _ifog;
@@ -40,7 +39,7 @@ sleep 0.1;
     };
 };
 [] spawn {
-    _irain = 0;
+    private _irain = 0;
     while { _irain < 1 } do {
         _irain = _irain + 0.01;
         0 setrain _irain;
@@ -49,17 +48,17 @@ sleep 0.1;
 };
 
 while {tornadosino == "goon"} do {
-    _reldir = getpos _tornadasource getDir (getMarkerPos _tornado_dest);
-    _fct = selectRandom [90,-90];
-    _op_dir = _reldir+random _fct;
-    _dist = 3+(random 3);
-    _new_poz = [getpos _tornadasource,_dist, _op_dir] call BIS_fnc_relPos;
+    private _reldir = getpos _tornadasource getDir (getMarkerPos _tornado_dest);
+    private _fct = selectRandom [90,-90];
+    private _op_dir = _reldir+random _fct;
+    private _dist = 3+(random 3);
+    private _new_poz = [getpos _tornadasource,_dist, _op_dir] call BIS_fnc_relPos;
     _tornadasource setpos _new_poz;
-    _nearobjects = nearestObjects[_tornadasource,[],50];
+    private _nearobjects = nearestObjects[_tornadasource,[],50];
     {
         if(_x != _tornadasource) then {
             if((_x isKindOf "LandVehicle") or (_x isKindOf "Man") or (_x isKindOf "Air")) then {
-                _f= selectRandom [-1,1];
+                private _f= selectRandom [-1,1];
                 _x setvelocity [(random 10) * _f,(random 10) * _f,20+(random 10)* _f];
                 _x setdamage 0.5; sleep 0.5;
             } else {

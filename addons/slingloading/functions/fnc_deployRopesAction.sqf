@@ -42,7 +42,7 @@ if(_canDeployRopes) then {
                 GVAR(DeployRopesCountMenu) pushBack ["For Triple Cargo", [0], "", -5, [["expression", QUOTE([3] call FUNC(deployRopesCountAction))]], "1", "1"];
             };
             showCommandingMenu "";
-            showCommandingMenu "#USER:" + GVAR(DeployRopesCountMenu);
+            showCommandingMenu ("#USER:" + GVAR(DeployRopesCountMenu));
         } else {
             [_player, _vehicle] call FUNC(deployRopes);
         };

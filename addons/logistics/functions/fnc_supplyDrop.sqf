@@ -34,12 +34,14 @@ private _IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE
 } forEach [_light,_IRlight];
 
 [_crate,"G_40mm_SmokeGreen"] spawn {
-    waitUntil {sleep 1; ((getPos (_this select 0)) select 2) < 30};
+    params ["_crate", "_smoke"];
 
-    private _smoke = createVehicle [(_this select 1), (getPos (_this select 0)), [], 0, "NONE"];
-    _smoke attachTo [(_this select 0), [0, 0, -1]];
+    waitUntil {sleep 1; ((getPos _crate) select 2) < 30};
 
-    waitUntil {sleep 1; ((getPos (_this select 0)) select 2) < 4};
+    private _smoke = createVehicle [_smoke, (getPos (_this select 0)), [], 0, "NONE"];
+    _smoke attachTo [_crate, [0, 0, -1]];
 
-    detach (_this select 0);
+    waitUntil {sleep 1; ((getPos _crate) select 2) < 4};
+
+    detach _crate;
 };
