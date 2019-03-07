@@ -31,11 +31,13 @@ class cTab_Android_dlg {
 			onDraw = "nop = _this call cTabOnDrawbftAndroid;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
+            widthRailWay = 4;
 		};
 		class screenTopo: screen
 		{
 			idc = IDC_CTAB_SCREEN_TOPO;
 			maxSatelliteAlpha = 0;
+            widthRailWay = 4;
 		};
 	};
 
