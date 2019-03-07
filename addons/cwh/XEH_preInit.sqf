@@ -14,12 +14,12 @@ PREP_RECOMPILE_END;
     [localize LSTRING(enabled), localize LSTRING(tooltipEnable)], // name and tooltip
     CBA_SETTINGS_CATEGORY, // category
     [
-        [true,false], // values
-        [localize LSTRING(enabled),localize LSTRING(disabled)], // names
+        [true, false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
         0 // default index
     ],
     1
-] call cba_settings_fnc_init;
+] call CBA_Settings_fnc_init;
 
 [
     QGVAR(AllowedNumberOfItems),

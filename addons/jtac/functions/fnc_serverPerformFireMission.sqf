@@ -8,8 +8,9 @@ if (GVAR(JtacCanFireSalvo)) then {
     GVAR(JtacCanFireSalvo) = false;
     GVAR(JtacReloadTimer) = _reloadDelay;
     sleep (5 + (random 15));
-     call compile _fireMission;
-    0 = [] spawn {
+    private _code = compile _fireMission;
+    call _code;
+    [] spawn {
         if(!GVAR(EPDJtacDebug)) then {
             while { GVAR(JtacReloadTimer) > 0 } do {
                 GVAR(JtacReloadTimer) = GVAR(JtacReloadTimer) - 1;

@@ -17,9 +17,9 @@ if (_viz_eff) then
     _ripple setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d",1,0,1], "", "Billboard", 1, 0.5, [0, 0, 0], [0, 0, 0],0,10,7.9,0, [30,1000], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _obj_emp];
     _ripple setDropInterval 0.1;
     [_ripple] spawn {
-        private _de_sters = _this select 0;
+        params ["_ripple"];
         sleep 1;
-        deleteVehicle _de_sters
+        deleteVehicle _ripple;
     };
 
     private _blast = "#particlesource" createVehicleLocal getPosATL _obj_emp;
@@ -28,9 +28,9 @@ if (_viz_eff) then
     _blast setParticleParams [["\A3\data_f\koule", 1, 0, 1], "", "SpaceObject", 1,1,[0,0,0],[0,0,1],3,10,7.9,0,[50,1000],[[1, 1, 1, 0.1], [1, 1, 1, 0]], [1], 1, 0, "", "", _obj_emp];
     _blast setDropInterval 50;
     [_blast] spawn {
-        private _de_sters = _this select 0;
+        params ["_blast"];
         sleep 1;
-        deleteVehicle _de_sters
+        deleteVehicle _blast;
     };
 
     private _light_emp = "#lightpoint" createVehiclelocal getPosATL _obj_emp;
@@ -41,7 +41,7 @@ if (_viz_eff) then
     //_light_emp setLightUseFlare false;_light_emp setLightFlareSize 0.1;    _light_emp setLightFlareMaxDistance 2000;
     _light_emp setLightDayLight true;
     _light_emp setLightAttenuation [10,10,50,0,50,2000];
-    
+
     private _brit =0;
     while {_brit < 50} do
     {

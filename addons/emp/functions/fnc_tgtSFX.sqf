@@ -21,9 +21,9 @@ if (_unit_afect isKindOf "MAN") then {
     _e_static setParticleParams [["\A3\data_f\blesk1",1,0,1],"","SpaceObject",1,0.2,[0,0,0],[0,0,0],0,10,7.9,0,[0.002,0.002],[[1,1,0.1,1],[1,1,1,1]],[0.08], 1, 0, "", "", _unit_afect];
     _e_static setDropInterval 0.01;
     [_e_static] spawn {
-        private _de_sters = _this select 0;
+        params ["_e_static"];
         sleep 1;
-        deleteVehicle _de_sters;
+        deleteVehicle _e_static;
     };
 };
 
@@ -34,8 +34,8 @@ if (_unit_afect isKindOf "LandVehicle") then {
     _e_car setParticleParams [["\A3\data_f\blesk1",1,0,1],"","SpaceObject",1,0.2,[0,0,0],[0,0,0],0,10,7.9,0,[0.003,0.003],[[1,1,0.1,1],[1,1,1,1]],[0.08], 1, 0, "", "", _unit_afect];
     _e_car setDropInterval 0.01;
     [_e_car] spawn {
-        private _de_sters = _this select 0;
+        params ["_e_car"];
         sleep 1;
-        deleteVehicle _de_sters;
+        deleteVehicle _e_car;
     };
 };
