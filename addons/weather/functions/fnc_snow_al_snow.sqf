@@ -17,27 +17,23 @@ if (_name_terr=="Altis" or _name_terr=="Stratis" or _name_terr=="Tanoa") then {
 };
 //hint str _name_terr;
 
-private _direction_snowstorm    = _this select 0;
-private _duration_snowstorm        = _this select 1;
-private _effect_on_objects        = _this select 2;
+params ["_direction_snowstorm", "_duration_snowstorm", "_effect_on_objects", "_ambient_sounds_al", "_breath_vapors_units", "_snow_burst_server_side", "_snow_burst_client_side", "_al_fog_snow", "_hoverUnit"];
 
 
-ambient_sounds_al =_this select 3;
+ambient_sounds_al = _ambient_sounds_al;
 publicVariable "ambient_sounds_al";
 
-breath_vapors_units = _this select 4;
+breath_vapors_units = _breath_vapors_units;
 publicVariable "breath_vapors_units";
 
-snow_burst_server_side    = _this select 5;
+snow_burst_server_side = _snow_burst_server_side;
 publicVariable "snow_burst_server_side";
 
-snow_burst_client_side    = _this select 6;
+snow_burst_client_side = _snow_burst_client_side;
 publicVariable "snow_burst_client_side";
 
-al_fog_snow    = _this select 7;
+al_fog_snow = _al_fog_snow;
 publicVariable "al_fog_snow";
-
-private _hoverUnit                = _this select 8;
 
 //null = [] execVM "AL_snowstorm\alias_hunt.sqf";
 //null = [] execvm "AL_snowstorm\umblator.sqf";
@@ -57,7 +53,9 @@ publicVariable "al_windlevel";
 sleep 0.1;
 
 [_duration_snowstorm] spawn {
-    x_duration_snowstorm = _this select 0;
+    params ["_duration_snowstorm"];
+
+    x_duration_snowstorm = _duration_snowstorm;
     if (x_duration_snowstorm<0) then {al_snowstorm_om = true;publicVariable "al_snowstorm_om";}
     else {
     sleep x_duration_snowstorm;
@@ -75,29 +73,29 @@ sleep 0.1;
 };
 
 [] spawn {
-if (snow_burst_server_side) then {
-    while {al_snowstorm_om} do {
-    //["bcg_wind","playSound"] call BIS_fnc_MP;
-    ["bcg_wind"] remoteExec ["playSound"];
-    sleep 42;
-    };
+    if (snow_burst_server_side) then {
+        while {al_snowstorm_om} do {
+            //["bcg_wind","playSound"] call BIS_fnc_MP;
+            ["bcg_wind"] remoteExec ["playSound"];
+            sleep 42;
+        };
     } else {
-    while {al_snowstorm_om} do {
-    //["bcg_wind_mild","playSound"] call BIS_fnc_MP;
-    ["bcg_wind_mild"] remoteExec ["playSound"];
-    sleep 42;
-    };
+        while {al_snowstorm_om} do {
+            //["bcg_wind_mild","playSound"] call BIS_fnc_MP;
+            ["bcg_wind_mild"] remoteExec ["playSound"];
+            sleep 42;
+        };
     };
 };
 
 [] spawn {
     sleep 10;
     while {al_snowstorm_om} do {
-    private _tuse = ["tuse_1","tuse_2","tuse_3","tuse_4","tuse_5","tuse_6"] call BIS_fnc_selectRandom;
-    //[[hunt_alias, _tuse], "say3d", true] call BIS_fnc_MP;
-    [hunt_alias,[_tuse,100]] remoteExec ["say3d"];
-// >> you can tweak sleep value if you want to hear playable units coughing more or less often
-    sleep (60 + random ambient_sounds_al);//60+random 180;
+        private _tuse = ["tuse_1","tuse_2","tuse_3","tuse_4","tuse_5","tuse_6"] call BIS_fnc_selectRandom;
+        //[[hunt_alias, _tuse], "say3d", true] call BIS_fnc_MP;
+        [hunt_alias,[_tuse,100]] remoteExec ["say3d"];
+        // >> you can tweak sleep value if you want to hear playable units coughing more or less often
+        sleep (60 + random ambient_sounds_al);//60+random 180;
     };
 };
 
@@ -111,7 +109,7 @@ if (snow_burst_server_side) then {
         treecrack setpos [pos_tree select 0,pos_tree select 1,3 + random 20];
         //[[treecrack, _treesu], "say3d", true] call BIS_fnc_MP;
         [treecrack,[_treesu,100]] remoteExec ["say3d"];
-// >> you can tweak sleep value if you want to hear trees cracking more or less often
+        // >> you can tweak sleep value if you want to hear trees cracking more or less often
         sleep (31 + random ambient_sounds_al);
     };
 
@@ -196,7 +194,7 @@ if (snow_burst_server_side) then {
         //publicVariable "fulg_p_drop";
         finishRotocol = false;
         publicVariable "finishRotocol";
-// >> you can tweak sleep value if you want to have gusts more or less often
+        // >> you can tweak sleep value if you want to have gusts more or less often
         sleep (60 + random ambient_sounds_al);
     };
     deleteVehicle _rotocol;
@@ -210,19 +208,19 @@ if (snow_burst_client_side) then {
         publicVariable "finishRotocol";
 
     if (terrain_type_vanilla) then {
-            drop_int_rot = 0.001 + random 0.01;
-            publicVariable "drop_int_rot";
-            life_part_rot = 1+random 3;
-            publicVariable "life_part_rot";
-            //fulg_p_drop    = 0.01;
-            //publicVariable "fulg_p_drop";
+        drop_int_rot = 0.001 + random 0.01;
+        publicVariable "drop_int_rot";
+        life_part_rot = 1+random 3;
+        publicVariable "life_part_rot";
+        //fulg_p_drop    = 0.01;
+        //publicVariable "fulg_p_drop";
     } else {
-            //fulg_p_drop    = 0.001;
-            //publicVariable "fulg_p_drop";
-            life_part_rot = 5+random 5;
-            publicVariable "life_part_rot";
-            drop_int_rot = 0.001;
-            publicVariable "drop_int_rot";
+        //fulg_p_drop    = 0.001;
+        //publicVariable "fulg_p_drop";
+        life_part_rot = 5+random 5;
+        publicVariable "life_part_rot";
+        drop_int_rot = 0.001;
+        publicVariable "drop_int_rot";
     };
 
         private _fct = [1,-1] call BIS_fnc_selectRandom;
@@ -302,16 +300,31 @@ raport = 360/_direction_snowstorm;
 raport = round (raport * (10 ^ 2)) / (10 ^ 2);
 //hint str raport;
 
-if (raport >= 4) then {fctx = 1; fcty = 1}
-    else {if (raport >= 2) then {fctx = 1; fcty = -1}
-                        else { if (raport >=1.33) then {fctx = -1; fcty = -1}
-                                                else {fctx = -1; fcty = 1};
-                        };
+if (raport >= 4) then {
+    fctx = 1;
+    fcty = 1
+} else {
+    if (raport >= 2) then {
+        fctx = 1;
+        fcty = -1
+    } else {
+        if (raport >=1.33) then {
+            fctx = -1;
+            fcty = -1
+        } else {
+            fctx = -1;
+            fcty = 1
+        };
     };
-if ((raport <= 2) and (raport >= 1.33)) then {fctx = -1; fcty = -1};
+};
+
+if ((raport <= 2) and (raport >= 1.33)) then {
+    fctx = -1;
+    fcty = -1
+};
 //hint str fcty;sleep 2;hint str fctx;
 
-private _unx    = ((_direction_snowstorm - floor (_direction_snowstorm/90)*90))*fctx;
+private _unx = ((_direction_snowstorm - floor (_direction_snowstorm/90)*90))*fctx;
 //hint str _unx;
 //_uny    = 90-_unx;
 
@@ -337,7 +350,7 @@ while {incr} do {
     setWind [winx/4,winy/4,true];
 };
 
-    alias_drop_fog_factor    = 0.01+random 0.1;
+    alias_drop_fog_factor = 0.01+random 0.1;
     publicVariable "alias_drop_fog_factor";
 
 //[[[],"AL_snowstorm\alias_snowstorm_effect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;

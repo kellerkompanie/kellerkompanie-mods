@@ -3,20 +3,16 @@
 // by ALIAS
 // Dust Storm SCRIPT
 // Tutorial: https://www.youtube.com/user/aliascartoons
-//                                                                                                            ------MAIN FILE------
+//
 if (!isServer) exitWith {};
 
-private _direction_duststorm    = _this select 0;
-private _duration_duststorm        = _this select 1;
-private _effect_on_objects        = _this select 2;
-private _dust_wall                = _this select 3;
-private _lethal_wall            = _this select 4;
-AmbientSoundDelay        = _this select 5;
-private _hoverUnit                = _this select 6;
+params ["_direction_duststorm", "_duration_duststorm", "_effect_on_objects", "_dust_wall", "_lethal_wall", "_ambientSoundDelay", "_hoverUnit"];
+
+AmbientSoundDelay = _ambientSoundDelay;
 
 //hint str _direction_duststorm;
 
-al_duststorm_on = true;//                                                                                                        <-- ABORT by setting to false
+al_duststorm_on = true;// <-- ABORT by setting to false
 publicVariable "al_duststorm_on";
 
 al_foglevel        = fog;
@@ -34,24 +30,26 @@ publicVariable "al_overforecast";
 sleep 0.1;
 
 [_duration_duststorm] spawn {
-    x_duration_storm = _this select 0;
+    params ["_duration_duststorm"];
+
+    x_duration_storm = _duration_duststorm;
     sleep x_duration_storm;
 
     al_duststorm_on = false;
     publicVariable "al_duststorm_on";
 
-// restaureaza parametri vreme
+    // restaureaza parametri vreme
     60 setFog al_foglevel;
     60 setRain al_rainlevel;
     60 setLightnings al_thundlevel;
-//    180 setOvercast al_overforecast;
+    // 180 setOvercast al_overforecast;
     setWind [al_windlevel select 0, al_windlevel select 1, true];
     //forceWeatherChange;
 };
 
 [] spawn {
     while {al_duststorm_on} do {
-        ["bcg_wind"] remoteExec ["playSound"];//                                                                                <-- while dust storm alive play wind sound
+        ["bcg_wind"] remoteExec ["playSound"];// <-- while dust storm alive play wind sound
         sleep 67;
     };
 };
@@ -59,15 +57,15 @@ sleep 0.1;
 [] spawn {
     private _ifog=0;
     while {_ifog <0.3} do {
-        _ifog=_ifog+0.001; 0 setFog _ifog; sleep 0.01;//                                                                        <-- add fog until fog > 0.3
+        _ifog=_ifog+0.001; 0 setFog _ifog; sleep 0.01;// <-- add fog until fog > 0.3
     };
 };
 
-//[[],"AL_dust_storm\alias_duststorm_effect.sqf"] remoteExec ["BIS_fnc_execVM"];//                                                    <-- CALL DUST EFFECTS
+//[[],"AL_dust_storm\alias_duststorm_effect.sqf"] remoteExec ["BIS_fnc_execVM"];// <-- CALL DUST EFFECTS
 
 [[FUNC(dust_alias_duststorm_effect)],"BIS_fnc_spawn",true,true,false] call BIS_fnc_MP;
 
-if (_dust_wall) then {//                                                                                                        <-- DUST WALL CODE
+if (_dust_wall) then {// <-- DUST WALL CODE
     // perete de praf (dust wall)
     //_rand_pl = [] execVM "AL_dust_storm\alias_hunt.sqf";
     private _rand_pl = [] spawn FUNC(dust_alias_hunt);
@@ -113,17 +111,18 @@ if (_dust_wall) then {//                                                        
     private _stormsource_6 = "Land_HelipadEmpty_F" createVehicle [(_pozobcj select 0)+3*_xadd,(_pozobcj select 1)+3*_yadd,0];
 
     [_stormsource,_stormsource_1,_stormsource_2,_stormsource_3,_stormsource_4,_stormsource_5,_stormsource_6] spawn {
-        private ["_xadv","_yadv","_storm","_storm_1","_storm_2","_storm_3","_storm_4","_storm_5","_storm_6"];
-        _storm = _this select 0;
-        _storm_1 = _this select 1;
-        _storm_2 = _this select 2;
-        _storm_3 = _this select 3;
-        _storm_4 = _this select 4;
-        _storm_5 = _this select 5;
-        _storm_6 = _this select 6;
+        params ["_stormsource","_stormsource_1","_stormsource_2","_stormsource_3","_stormsource_4","_stormsource_5","_stormsource_6"];
 
-        _xadv = 0;
-        _yadv = 0;
+        private _storm = _stormsource;
+        private _storm_1 = _stormsource_1;
+        private _storm_2 = _stormsource_2;
+        private _storm_3 = _stormsource_3;
+        private _storm_4 = _stormsource_4;
+        private _storm_5 = _stormsource_5;
+        private _storm_6 = _stormsource_6;
+
+        private _xadv = 0;
+        private _yadv = 0;
 
         // depl vert
         if (((getPos _storm select 1)-(getPos hunt_alias select 1)) > 0) then {
@@ -153,9 +152,9 @@ if (_dust_wall) then {//                                                        
     sleep 0.1;
 
     [_stormsource] spawn {
-        private _stormsource_s = _this select 0;
+        params ["_stormsource"];
         while {al_duststorm_on} do {
-            [_stormsource_s,["uragan_1",2000]] remoteExec ["say3d"];//                                                            <-- dust wall sound
+            [_stormsource,["uragan_1",2000]] remoteExec ["say3d"];//                                                            <-- dust wall sound
             sleep 40;
         };
     };
@@ -163,13 +162,15 @@ if (_dust_wall) then {//                                                        
 // >> wall of dust distrugator
     if (_lethal_wall) then {//                                                                                                    <-- LETHAL DUST WALL CODE
         [_stormsource,_stormsource_1,_stormsource_2,_stormsource_3,_stormsource_4,_stormsource_5,_stormsource_6] spawn {
-            private _storm = _this select 0;
-            private _storm_1 = _this select 1;
-            private _storm_2 = _this select 2;
-            private _storm_3 = _this select 3;
-            private _storm_4 = _this select 4;
-            private _storm_5 = _this select 5;
-            private _storm_6 = _this select 6;
+            params ["_stormsource","_stormsource_1","_stormsource_2","_stormsource_3","_stormsource_4","_stormsource_5","_stormsource_6"];
+
+            private _storm = _stormsource;
+            private _storm_1 = _stormsource_1;
+            private _storm_2 = _stormsource_2;
+            private _storm_3 = _stormsource_3;
+            private _storm_4 = _stormsource_4;
+            private _storm_5 = _stormsource_5;
+            private _storm_6 = _stormsource_6;
 
             while {al_duststorm_on} do {
                 private _dir_blow_wall = wind;

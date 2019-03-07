@@ -2,7 +2,7 @@
 
 if (canSuspend) exitWith {[FUNC(moduleTornado), _this] call CBA_fnc_directCall;};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic", "", "_activated"];
 if !(_activated && {local _logic}) exitWith {};
 
 private _tornadoStartMarker = createMarker ["tornado_start", getPos _logic];
