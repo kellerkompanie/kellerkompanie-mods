@@ -2,24 +2,24 @@
 
 if (!hasInterface) exitWith {};
 
-_tsource = _this select 0;
-_tornadamid = _this select 1;
+params ["_tsource", "_tornadamid"];
 
-_vartej_alb = "#particlesource" createVehicle getPos _tsource;
-_urcet = "#particlesource" createVehicle getPos _tsource;
-_rotitor = "#particlesource" createVehicle getPos _tsource;
-_leaves  = "#particlesource" createVehicle getPos _tsource;
-_palarie = "#particlesource" createVehicle getPos _tornadamid;
+private _vartej_alb = "#particlesource" createVehicle getPos _tsource;
+private _urcet = "#particlesource" createVehicle getPos _tsource;
+private _rotitor = "#particlesource" createVehicle getPos _tsource;
+private _leaves  = "#particlesource" createVehicle getPos _tsource;
+private _palarie = "#particlesource" createVehicle getPos _tornadamid;
 
 waitUntil {sleep 1; (player distance _tsource < 3000)};
 
 enableCamShake true;
 
 [_tsource] spawn {
-    _torsouce = _this select 0;
+    private _torsouce = _this select 0;
     while {!isNull _torsouce} do {
         if ((player distance _torsouce) < 500) then {
-            addCamShake [0.3,7,11];sleep 10 + random 60;
+            addCamShake [0.3,7,11];
+            sleep (10 + random 60);
         };
     };
 };
@@ -64,7 +64,7 @@ While { tornadosino != "goof" } do {
     sleep 0.5;
 };
 
-_source_end_part = "#particlesource" createVehicle (getpos _tsource);
+private _source_end_part = "#particlesource" createVehicle (getpos _tsource);
 _source_end_part setParticleCircle [50, [0.2, 0.5, 0.9]];
 _source_end_part setParticleRandom [0, [0.25, 0.25, 0], [0.175, 0.175, 0.3], 0, 1, [0, 0, 0, 0.1], 0, 0];
 _source_end_part setParticleParams [["\A3\data_f\cl_basic.p3d", 1, 0, 1], "", "Billboard", 1, 10, [0, 0, 0], [0, 0, 0.75], 15, 17, 13, 0.7, [15, 17, 19], [[0.5, 0.5, 0.5, 0.3], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 0.1, 3, "", "", _tsource];

@@ -35,13 +35,13 @@ private _baseClasses = [];
 private _nl = toString [13, 10];
 private _output = "class CfgVehicles {" + _nl;
 {
-    ADD(_output,format [ARR_3("    class %1;%2",configName _x,_nl)]);
+    _output = _output + format ["    class %1;%2", configName _x, _nl];
     false
 } count _baseClasses;
-ADD(_output,_nl);
+_output = _output + _nl;
 {
     _x params ["_class", "_parent"];
-    ADD(_output,format [ARR_4("    class %1: %2 {%3        modelSides[] = {6};%3    };%3",configName _class,configName _parent,_nl)]);
+    _output = _output + format ["    class %1: %2 {%3        modelSides[] = {6};%3    };%3", configName _class, configName _parent, _nl];
     false
 } count _modifyClasses;
 ADD(_output,"};");
