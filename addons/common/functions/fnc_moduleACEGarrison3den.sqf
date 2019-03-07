@@ -2,12 +2,13 @@
 
 if !(isServer) exitWith{};
 
+params ["_logic"];
+
 private _handle = _this spawn {
+    params ["_logic"];
 
     // give enough time for headless clients to take over AI
     waitUntil{time > 45};
-
-    private _logic = _this select 0;
 
     INFO("running moduleACEGarrison3den");
 
