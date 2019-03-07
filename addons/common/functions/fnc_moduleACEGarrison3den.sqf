@@ -8,7 +8,7 @@ private _handle = _this spawn {
     params ["_logic"];
 
     // give enough time for headless clients to take over AI
-    waitUntil{time > 45};
+    waitUntil{time > 30};
 
     INFO("running moduleACEGarrison3den");
 
