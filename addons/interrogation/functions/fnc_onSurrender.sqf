@@ -4,8 +4,6 @@ params ["_unit", "_state", "_reason"];
 
 if (_reason != "SetSurrendered" || !_state) exitWith {};
 
-//(format ["%1 onSurrender", _unit]) remoteExec ["systemChat", [0, -2] select isDedicated];
-
 [
     _unit,                                            // Object the action is attached to
     "Interrogate",                                        // Title of the action
@@ -24,9 +22,22 @@ if (_reason != "SetSurrendered" || !_state) exitWith {};
     false                                                // Show in unconscious state
 ] remoteExec ["BIS_fnc_holdActionAdd", [0, -2] select isDedicated];
 
+// make unit throw away its weapon visibly
+private _weapon = currentWeapon _unit;
+_unit removeWeapon (_weapon);
+private _weaponHolder = "WeaponHolderSimulated" createVehicle [0,0,0];
+_weaponHolder addWeaponCargoGlobal [_weapon, 1];
+_weaponHolder setPos (_unit modelToWorld [0,.2,1.2]);
+_weaponHolder disableCollisionWith _unit;
+private _dir = random(360);
+private _speed = 1.5;
+_weaponHolder setVelocity [_speed * sin(_dir), _speed * cos(_dir), 4];
+
+// execute the custom code provided for onSurrender inside the 3den module
 private _group = group _unit;
 private _onSurrenderCodeString = _group getVariable [QGVAR(onSurrenderCode), ""];
 
 if (count _onSurrenderCodeString == 0) exitWith {};
+
 
 call compile _onSurrenderCodeString;
