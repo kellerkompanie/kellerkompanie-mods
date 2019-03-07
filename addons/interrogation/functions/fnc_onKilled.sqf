@@ -8,6 +8,7 @@ private _onKilledCodeString = _group getVariable [QGVAR(onKilledCode), ""];
 if (count _onKilledCodeString == 0) exitWith {};
 
 //(format ["%1 died", _unit]) remoteExec ["systemChat", [0, -2] select isDedicated];
+(format ["_onKilledCodeString = %1", _onKilledCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
 call compile _onKilledCodeString;
 
 private _initialUnitCount = _group getVariable [QGVAR(initialUnitCount), -1];
@@ -22,7 +23,9 @@ private _surrenderChance = _group getVariable [QGVAR(surrenderChance), -1];
 
 if ( (_deadThreshold == -1) || (_surrenderChance == -1) ) exitWith {};
 
-private _survivorRate = ({alive _x && !(_x getVariable ["ace_captives_isSurrendering", false]) } count (units _group)) / _initialUnitCount;
+private _survivorCount = {alive _x && _x != _unit && !(_x getVariable ["ace_captives_isSurrendering", false]) } count (units _group);
+private _survivorRate = _survivorCount / _initialUnitCount;
+(format ["_surivorCount = %1", _survivorCount]) remoteExec ["systemChat", [0, -2] select isDedicated];
 (format ["_survivorRate = %1", _survivorRate]) remoteExec ["systemChat", [0, -2] select isDedicated];
 if ( _survivorRate < _deadThreshold ) then {
     {

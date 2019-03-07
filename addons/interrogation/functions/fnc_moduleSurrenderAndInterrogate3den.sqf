@@ -24,10 +24,8 @@ private _syncedUnits = synchronizedObjects _logic;
     _group setVariable [QGVAR(onSurrenderCode), _onSurrenderCodeString];
     _group setVariable [QGVAR(onInterrogateCode), _onInterrogatedCodeString];
     {
-        _x params ["_unit"];
-        [_unit, "killed", {_thisArgs params ["_unit"]; _unit call FUNC(onKilled); _unit removeEventHandler ["killed", _thisID]}, [_unit]] call CBA_fnc_addBISEventHandler;
-        _unit setVariable [QGVAR(isObserved), true];
-    } forEach units _group;
+        _x setVariable [QGVAR(isObserved), true];
+    } forEach _units;
 } forEach _syncedUnits;
 
 deleteVehicle _logic;
