@@ -50,7 +50,7 @@ class CfgPatches {
             "ace_ai",
             "cba_main",
             "A3_Modules_F",
-              "A3_Modules_F_Curator",
+            "A3_Modules_F_Curator",
             "A3_Weapons_F",
             "A3_Weapons_F_Launchers_NLAW",
             "A3_Weapons_F_Launchers_Titan"
@@ -66,6 +66,7 @@ class CfgPatches {
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
 
 #include "defines.hpp"
 
