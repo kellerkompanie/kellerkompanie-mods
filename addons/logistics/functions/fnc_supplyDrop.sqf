@@ -38,7 +38,7 @@ private _IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE
 
     waitUntil {sleep 1; ((getPos _crate) select 2) < 30};
 
-    private _smoke = createVehicle [_smoke, (getPos (_this select 0)), [], 0, "NONE"];
+    private _smoke = createVehicle [_smoke, (getPos _crate), [], 0, "NONE"];
     _smoke attachTo [_crate, [0, 0, -1]];
 
     waitUntil {sleep 1; ((getPos _crate) select 2) < 4};
