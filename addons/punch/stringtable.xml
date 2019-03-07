@@ -3,26 +3,33 @@
     <Package name="punch">
         <Key ID="STR_keko_punch_cbaSettingsCategory">
             <English>Kellerkompanie Punch</English>
+            <German>Kellerkompanie Boxen</German>
         </Key>
         <Key ID="STR_keko_punch_enabled">
             <English>Enabled</English>
+            <German>Aktiviert</German>
         </Key>
         <Key ID="STR_keko_punch_disabled">
             <English>Disabled</English>
+            <German>Deaktiviert</German>
         </Key>
 
         <Key ID="STR_keko_punch_knockPeopleUnconcious">
             <English>Knock People Unconscious</English>
+            <German>Leute ohnmächtig boxen</German>
         </Key>
         <Key ID="STR_keko_punch_knockPeopleUnconciousTooltip">
             <English>Enable/Disable Knock People Unconscious</English>
+            <German>Leute ohnmächtig boxen aktivieren/deaktivieren</German>
         </Key>
 
         <Key ID="STR_keko_punch_snapNeck">
             <English>Snap neck</English>
+            <German>Genick brechen</German>
         </Key>
         <Key ID="STR_keko_punch_snapNeckTooltip">
             <English>Enable/Disable kill people by snapping the neck</English>
+            <German>Genick brechen aktivieren/deaktivieren</German>
         </Key>
 
     </Package>

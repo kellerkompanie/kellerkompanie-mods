@@ -3,21 +3,27 @@
     <Package name="backpack">
         <Key ID="STR_keko_backpack_messageLockRemoved">
             <English>Backpack lock removed</English>
+            <German>Rucksackschloss entfernt</German>
         </Key>
         <Key ID="STR_keko_backpack_messageLocked">
             <English>Backpack is locked</English>
+            <German>Rucksack ist verschlossen</German>
         </Key>
         <Key ID="STR_keko_backpack_locked">
             <English>Backpack locked</English>
+            <German>Rucksack verschlossen</German>
         </Key>
         <Key ID="STR_keko_backpack_unlocked">
             <English>Backpack unlocked</English>
+            <German>Rucksack aufgeschlossen</German>
         </Key>
         <Key ID="STR_keko_backpack_actionLock">
             <English>Lock backpack</English>
+            <German>Rucksack verschließen</German>
         </Key>
         <Key ID="STR_keko_backpack_actionUnlock">
             <English>Unlock backpack</English>
+            <German>Rucksack aufschließen</German>
         </Key>
         </Package>
 </Project>

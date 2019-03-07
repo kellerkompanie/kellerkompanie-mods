@@ -3,9 +3,11 @@
     <Package name="logistics">
         <Key ID="STR_keko_logistics_cbaSettingsCategory">
             <English>Kellerkompanie Logistics</English>
+            <German>Kellerkompanie Logistik</German>
         </Key>
         <Key ID="STR_keko_logistics_cbaSettingsCategoryFuel">
             <English>Kellerkompanie Fuel Consumption</English>
+            <German>Kellerkompanie Kraftstoffverbrauch</German>
         </Key>
     </Package>
 </Project>

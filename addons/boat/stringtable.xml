@@ -3,9 +3,11 @@
     <Package name="boat">
         <Key ID="STR_keko_boat_displayName">
             <English>Boat crate</English>
+            <German>Boot Kiste</German>
         </Key>
         <Key ID="STR_keko_boat_actionInflate">
             <English>Inflate Boat</English>
+            <German>Boot aufblasen</German>
         </Key>
         </Package>
 </Project>

@@ -3,12 +3,15 @@
     <Package name="persistency_settings">
         <Key ID="STR_keko_persistency_settings_cbaSettingsCategory">
             <English>Kellerkompanie Persistency</English>
+            <German>Kellerkompanie Persistenz</German>
         </Key>
         <Key ID="STR_keko_persistency_settings_enabled">
             <English>Enabled</English>
+            <German>Aktiviert</German>
         </Key>
         <Key ID="STR_keko_persistency_settings_disabled">
             <English>Disabled</English>
+            <German>Deaktiviert</German>
         </Key>
     </Package>
 </Project>

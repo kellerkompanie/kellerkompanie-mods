@@ -7,12 +7,15 @@
         </Key>
         <Key ID="STR_keko_common_customFacesNotAllowed">
             <English>Custom Faces are not allowed on this server!</English>
+            <German>Benutzerdefinierte Gesichter sind nicht erlaubt!</German>
         </Key>
         <Key ID="STR_keko_common_actionBreakWindow">
             <English>Break Window</English>
+            <German>Fenster einschlagen</German>
         </Key>
         <Key ID="STR_keko_common_actionBreakWindowTooltip">
             <English>Press to smash a window</English>
+            <German>Drücke um Fenster einzuschlagen</German>
         </Key>
     </Package>
 </Project>
