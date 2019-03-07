@@ -25,6 +25,8 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
+    hintC acex_killTracker_outputText;
+
     [] spawn {
         playMusic "LeadTrack01_F_Tank";
         sleep 2;
