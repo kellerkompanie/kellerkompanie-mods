@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_ctrl", "_key", "_shiftKey", "_ctrlKey", "_altKey"];
 private _handled = false;
 

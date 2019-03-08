@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 // zeus, opfor, bluefor, greenfor, civilian
 #define IDC_SIDE_ICONS [12000,12010,12020,12030,12040]
 

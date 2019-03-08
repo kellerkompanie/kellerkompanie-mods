@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 private _handled = false;
 
 curatorMouseOver params ["_typeName","_clickedObject"];

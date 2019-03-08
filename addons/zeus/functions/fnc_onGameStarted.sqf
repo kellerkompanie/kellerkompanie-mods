@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 
 disableSerialization;
 private _display = _this;
