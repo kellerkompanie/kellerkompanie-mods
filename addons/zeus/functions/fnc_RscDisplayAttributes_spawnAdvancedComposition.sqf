@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 
 #define IDD_COMPOSITION_GUI        133799
 #define IDC_TREE_CTRL            1400
@@ -35,11 +36,11 @@ switch (_mode) do
             _button = _dialog displayCtrl _x;
             _button ctrlShow false;
         } forEach [IDC_EDIT_BUTTON,IDC_DEL_BUTTON,IDC_ADD_BUTTON];
-        
+
         _tree_ctrl = _dialog displayCtrl IDC_TREE_CTRL;
-        
+
         _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call Achilles_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
-        
+
         _tvPath_ares = [_tree_ctrl tvAdd [[], "Ares"]];
         {
             _tvPath_category = [_tree_ctrl tvAdd [_tvPath_ares, _x select 0]];
@@ -50,9 +51,9 @@ switch (_mode) do
             _tree_ctrl tvSort [_tvPath_ares + _tvPath_category, false];
         } forEach Achilles_var_compositions;
         _tree_ctrl tvSort [_tvPath_ares, false];
-        
+
         _custom_compositions = profileNamespace getVariable ["Achilles_var_compositions",[]];
-        
+
         if (count _custom_compositions > 0) then
         {
             _tvPath_custom = [_tree_ctrl tvAdd [[], "Custom"]];

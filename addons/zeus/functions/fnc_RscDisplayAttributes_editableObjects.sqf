@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 #define IDD_DYNAMIC_GUI        133798
 #define IDC_COMBO_BASE        20000
 #define IDC_RADIUS_COMBO    20002

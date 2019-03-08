@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    AUTHOR: Kex (based on Anton Struyk's version)
 //    DATE: 14/11/16
@@ -82,7 +84,7 @@ for "_i" from 0 to ((_moduleTreeCtrl tvCount []) - 1) do
     _moduleTreeCtrl tvSort [[_i], false];
 };
 
-// Set module category list for 
+// Set module category list for
 _categoryList sort true;
 Ares_category_list = _categoryList;
 

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 #define IDD_DIALOG                    133798
 #define IDC_COMBO_SIDE                20000
 #define IDC_COMBO_VEHICLE_FACTION    20001
@@ -23,8 +25,8 @@ switch (_mode) do
     };
     case "SIDE":
     {
-        private _ctrlVehFac = _dialog displayCtrl IDC_COMBO_VEHICLE_FACTION; 
-                
+        private _ctrlVehFac = _dialog displayCtrl IDC_COMBO_VEHICLE_FACTION;
+
         lbClear _ctrlVehFac;
         {
             _ctrlVehFac lbAdd _x;
@@ -39,9 +41,9 @@ switch (_mode) do
         private _ctrlSide = _dialog displayCtrl IDC_COMBO_SIDE;
         private _sideId = lbCurSel _ctrlSide;
         private _ctrlVehCat = _dialog displayCtrl IDC_COMBO_VEHICLE_CATEGORY;
-        private _ctrlVehFac = _dialog displayCtrl IDC_COMBO_VEHICLE_FACTION; 
+        private _ctrlVehFac = _dialog displayCtrl IDC_COMBO_VEHICLE_FACTION;
         private _ctrlGrpFac = _dialog displayCtrl IDC_COMBO_GROUP_FACTION;
-        
+
         lbClear _ctrlVehCat;
         {
             _ctrlVehCat lbAdd _x;
@@ -50,7 +52,7 @@ switch (_mode) do
         _lastChoice = [(lbSize _ctrlVehCat) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVehCat);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVehCat lbSetCurSel _lastChoice;
-        
+
         if (_ctrlGrpFac getVariable ["first_time", true]) then
         {
             _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_7", ""];
@@ -59,7 +61,7 @@ switch (_mode) do
         {
             _lastChoice = "";
         };
-        
+
         lbClear _ctrlGrpFac;
         if (_lastChoice isEqualTo "") then
         {
@@ -88,7 +90,7 @@ switch (_mode) do
         private _sideId = lbCurSel _ctrlSide;
         private _ctrlVehFac = _dialog displayCtrl IDC_COMBO_VEHICLE_FACTION;
         private _faction_id = lbCurSel _ctrlVehFac;
-        
+
         private _ctrlVeh = _dialog displayCtrl IDC_COMBO_VEHICLE;
         lbClear _ctrlVeh;
         {
@@ -109,12 +111,12 @@ switch (_mode) do
             private _ctrlWpTypeLabel = _dialog displayCtrl IDC_COMBO_WP_TYPE_LABEL;
             _ctrlWpTypeLabel ctrlSetFade 0;
             _ctrlWpTypeLabel ctrlCommit 0;
-        
+
             private _ctrlWpType = _dialog displayCtrl IDC_COMBO_WP_TYPE;
             _ctrlWpType ctrlSetFade 0;
             _ctrlWpType ctrlEnable true;
             _ctrlWpType ctrlCommit 0;
-            
+
             // Add/remove HALO option
             if (_vehicleClass isKindOf "Plane") then
             {
@@ -144,7 +146,7 @@ switch (_mode) do
         private _ctrlSide = _dialog displayCtrl IDC_COMBO_SIDE;
         private _sideId = lbCurSel _ctrlSide;
         private _ctrlGrp = _dialog displayCtrl IDC_COMBO_GROUP;
-                
+
         lbClear _ctrlGrp;
         {
             private _lb_id = _ctrlGrp lbAdd getText (_x >> "Name");

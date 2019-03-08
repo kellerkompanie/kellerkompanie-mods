@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 #define CHAT_CTRL_IDC        20000
 #define EDIT_CTRL_IDC        20001
 #define IDD_DYNAMIC_GUI        133798

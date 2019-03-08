@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 #define IDD_DYNAMIC_GUI        133798
 #define IDC_MODE_COMBO        20000
 #define IDC_SELECTION_COMBO    20001

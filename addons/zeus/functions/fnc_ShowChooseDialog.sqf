@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 /*
     by Anton Struyk (extended by Kex)
     Displays a dialog that prompts the user to choose an option from a set of combo boxes.

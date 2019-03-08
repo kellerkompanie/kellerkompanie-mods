@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 #define BASE_CTRL_IDC        20000
 #define IDD_DYNAMIC_GUI        133798
 #define LABEL_IDCs            [10001]

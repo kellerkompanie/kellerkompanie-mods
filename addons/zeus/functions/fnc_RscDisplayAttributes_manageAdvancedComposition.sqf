@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 
 #define IDD_COMPOSITION_GUI        133799
 #define IDC_TREE_CTRL            1400
@@ -38,14 +39,14 @@ switch (_mode) do
         _cancle_ctrl ctrlRemoveAllEventHandlers "ButtonClick";
         _cancle_ctrl ctrlAddEventHandler ["ButtonClick", "saveProfileNamespace; hint localize ""STR_CHANGES_SAVED""; closeDialog 2;"];
         _dialog displayAddEventHandler ["KeyDown", "if (_this select 1 == 1) then {saveProfileNamespace; hint localize ""STR_CHANGES_SAVED"";}"];
-        
+
         _button = _dialog displayCtrl IDC_OK_BUTTON;
         _button ctrlShow false;
-        
+
         _tree_ctrl = _dialog displayCtrl IDC_TREE_CTRL;
-        
+
         _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call Achilles_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
-        
+
         _tvPath_ares = [_tree_ctrl tvAdd [[], "Ares"]];
         {
             _tvPath_category = [_tree_ctrl tvAdd [_tvPath_ares, _x select 0]];
@@ -58,7 +59,7 @@ switch (_mode) do
         _tree_ctrl tvSort [_tvPath_ares, false];
 
         _custom_compositions = profileNamespace getVariable ["Achilles_var_compositions",[]];
-        
+
         if (count _custom_compositions > 0) then
         {
             _tvPath_custom = [_tree_ctrl tvAdd [[], "Custom"]];
@@ -72,7 +73,7 @@ switch (_mode) do
             } forEach (_custom_compositions);
             _tree_ctrl tvSort [_tvPath_custom, false];
         };
-        
+
         _last_choice = uiNamespace getVariable ["Ares_composition_last_choice", []];
         if (count _last_choice == 3) then
         {
@@ -93,9 +94,9 @@ switch (_mode) do
     };
     case "NEW_BUTTON":
     {
-        [] spawn 
+        [] spawn
         {
-            if (true) then 
+            if (true) then
             {
                 closeDialog 0;
                 _center_object = ([localize "STR_BASIS_OBJECT"] call Achilles_fnc_SelectUnits) select 0;
@@ -104,9 +105,9 @@ switch (_mode) do
 
                 _objects = [localize "STR_OBJECTS"] call Achilles_fnc_SelectUnits;
                 if (isNil "_objects") exitWith {};
-                if (count _objects == 0) exitWith {[localize "STR_NO_OBJECT_SELECTED"] call Ares_fnc_ShowZeusMessage; playSound "FD_Start_F"};    
+                if (count _objects == 0) exitWith {[localize "STR_NO_OBJECT_SELECTED"] call Ares_fnc_ShowZeusMessage; playSound "FD_Start_F"};
 
-                
+
                 _center_pos = getPosWorld _center_object;
                 _dir = direction _center_object;
                 _type = typeOf _center_object;
@@ -120,8 +121,8 @@ switch (_mode) do
                         _enableSimulation = _x getVariable ["enabledSimulation", _enableSimulation];
                         _composition_details pushBack [_type, _pos_diff, _dir, _enableSimulation];
                 } forEach (_objects - [_center_object]);
-                
-                _dialogResult = 
+
+                _dialogResult =
                 [
                     localize "STR_ADVANCED_COMPOSITION",
                     [
@@ -131,9 +132,9 @@ switch (_mode) do
                     ],
                     "Achilles_fnc_RscDisplayAttributes_createAdvancedComposition"
                 ] call Ares_fnc_ShowChooseDialog;
-                
+
                 if (count _dialogResult > 0) then
-                {                    
+                {
                     if (_dialogResult select 0 == 0) then
                     {
                         ["ADD",controlNull,[],_dialogResult select 2,_composition_details,_dialogResult select 1] call Achilles_fnc_RscDisplayAttributes_manageAdvancedComposition;
@@ -163,8 +164,8 @@ switch (_mode) do
                 _item_details = call compile (_tree_ctrl tvData _tvPath);
                 _category_name = _tree_ctrl tvText [_tvPath select 0, _tvPath select 1];
                 closeDialog 0;
-                
-                _dialogResult = 
+
+                _dialogResult =
                 [
                     localize "STR_ADVANCED_COMPOSITION",
                     [
@@ -174,7 +175,7 @@ switch (_mode) do
                     ],
                     "Achilles_fnc_RscDisplayAttributes_editAdvancedComposition"
                 ] call Ares_fnc_ShowChooseDialog;
-                
+
                 if (count _dialogResult == 0) exitWith {};
                 if (_dialogResult select 0 == 1) then
                 {
@@ -188,7 +189,7 @@ switch (_mode) do
             waitUntil {!dialog};
             createDialog "Ares_composition_Dialog";
             ["LOADED"] spawn Achilles_fnc_RscDisplayAttributes_manageAdvancedComposition;
-        };    
+        };
     };
     case "DELETE_BUTTON":
     {
@@ -206,12 +207,12 @@ switch (_mode) do
                 _item = [_item_name, call compile (_tree_ctrl tvData _tvPath)];
                 _category_name = _tree_ctrl tvText [_tvPath select 0, _tvPath select 1];
                 closeDialog 0;
-                
+
                 createDialog "RscDisplayCommonMessage";
                 _dialog = findDisplay IDD_MESSAGE;
                 (_dialog displayCtrl IDC_TITLE) ctrlSetText (localize "STR_AMAE_DELETE_COMPOSITION");
                 (_dialog displayCtrl IDC_TEXT_WARNING) ctrlSetText (format [localize "STR_AMAE_DO_YOU_WANT_TO_DELETE_X", _item_name]);
-                
+
                 (_dialog displayCtrl IDC_CONFIRM_WARNING) ctrlAddEventHandler ["ButtonClick","([""REMOVE"",controlNull,[]," + str _category_name + "," + str _item_name  + "]) call Achilles_fnc_RscDisplayAttributes_manageAdvancedComposition; closeDialog 1;"];
                 (_dialog displayCtrl IDC_CANCLE_WARNING) ctrlAddEventHandler ["ButtonClick", "closeDialog 2;"];
             };
@@ -225,9 +226,9 @@ switch (_mode) do
         _item_name = _this select 3;
         _item_details = _this select 4;
         _categoryName = param [5,"",[""]];
-        
+
         _custom_compositions = profileNamespace getVariable ["Achilles_var_compositions",[]];
-        
+
         if (_categoryName != "") then
         {
             _custom_compositions pushBack [_categoryName, [[_item_name, _item_details]]];
@@ -240,13 +241,13 @@ switch (_mode) do
             _custom_categories set [_category_index,_category_details];
         };
         profileNamespace setVariable ["Achilles_var_compositions",_custom_compositions];
-        
+
     };
     case "REMOVE":
     {
         _category_name = _this select 3;
         _item_name = _this select 4;
-        
+
         _custom_compositions = profileNamespace getVariable ["Achilles_var_compositions",[]];
         _category_names = _custom_compositions apply {_x select 0};
         _categoryIndex = _category_names find _category_name;
@@ -269,7 +270,7 @@ switch (_mode) do
             _category_items = _category_items - [-1];
             _custom_compositions set [_categoryIndex, [_category_name,_category_items]];
         };
-        profileNamespace setVariable ["Achilles_var_compositions",_custom_compositions];        
+        profileNamespace setVariable ["Achilles_var_compositions",_custom_compositions];
     };
     case "UNLOAD" : {};
 };
