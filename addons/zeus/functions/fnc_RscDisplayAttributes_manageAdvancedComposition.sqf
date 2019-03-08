@@ -47,16 +47,16 @@ switch (_mode) do
 
         _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call keko_zeus_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
 
-        _tvPath_ares = [_tree_ctrl tvAdd [[], "Ares"]];
+        _tvPath_keko_zeus = [_tree_ctrl tvAdd [[], "keko_zeus"]];
         {
-            _tvPath_category = [_tree_ctrl tvAdd [_tvPath_ares, _x select 0]];
+            _tvPath_category = [_tree_ctrl tvAdd [_tvPath_keko_zeus, _x select 0]];
             {
-                _tvPath_item = [_tree_ctrl tvAdd [_tvPath_ares + _tvPath_category, _x select 0]];
-                _tree_ctrl tvSetData [_tvPath_ares + _tvPath_category + _tvPath_item,str (_x select 1)];
+                _tvPath_item = [_tree_ctrl tvAdd [_tvPath_keko_zeus + _tvPath_category, _x select 0]];
+                _tree_ctrl tvSetData [_tvPath_keko_zeus + _tvPath_category + _tvPath_item,str (_x select 1)];
             } forEach (_x select 1);
-            _tree_ctrl tvSort [_tvPath_ares + _tvPath_category, false];
+            _tree_ctrl tvSort [_tvPath_keko_zeus + _tvPath_category, false];
         } forEach GVAR(compositions);
-        _tree_ctrl tvSort [_tvPath_ares, false];
+        _tree_ctrl tvSort [_tvPath_keko_zeus, false];
 
         _custom_compositions = profileNamespace getVariable [QGVAR(compositions),[]];
 
@@ -210,14 +210,14 @@ switch (_mode) do
 
                 createDialog "RscDisplayCommonMessage";
                 _dialog = findDisplay IDD_MESSAGE;
-                (_dialog displayCtrl IDC_TITLE) ctrlSetText (localize "STR_AMAE_DELETE_COMPOSITION");
-                (_dialog displayCtrl IDC_TEXT_WARNING) ctrlSetText (format [localize "STR_AMAE_DO_YOU_WANT_TO_DELETE_X", _item_name]);
+                (_dialog displayCtrl IDC_TITLE) ctrlSetText (localize "STR_keko_zeus_DELETE_COMPOSITION");
+                (_dialog displayCtrl IDC_TEXT_WARNING) ctrlSetText (format [localize "STR_keko_zeus_DO_YOU_WANT_TO_DELETE_X", _item_name]);
 
                 (_dialog displayCtrl IDC_CONFIRM_WARNING) ctrlAddEventHandler ["ButtonClick","([""REMOVE"",controlNull,[]," + str _category_name + "," + str _item_name  + "]) call keko_zeus_fnc_RscDisplayAttributes_manageAdvancedComposition; closeDialog 1;"];
                 (_dialog displayCtrl IDC_CANCLE_WARNING) ctrlAddEventHandler ["ButtonClick", "closeDialog 2;"];
             };
             waitUntil {!dialog};
-            createDialog "Ares_composition_Dialog";
+            createDialog QGVAR(composition_Dialog);
             ["LOADED"] spawn FUNC(RscDisplayAttributes_manageAdvancedComposition);
         };
     };

@@ -463,7 +463,7 @@ switch _mode do {
 
         _ctrlList setVariable ["WeaponSpecific", _cursel];
         private _ctrlLable = _display displayCtrl IDC_RSCATTRIBUTEINVENTORY_FILTER13;
-        _ctrlLable ctrlSetText (localize "STR_AMAE_WEAPON_SPECIFIC");
+        _ctrlLable ctrlSetText (localize "STR_keko_zeus_WEAPON_SPECIFIC");
 
         private _reducedClasses = [_weapon];
         private _index = _classes find _weapon;

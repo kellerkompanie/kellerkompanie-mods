@@ -27,7 +27,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 
 #include "ui\dialogs\RscBaseClasses.hpp"
-
 #include "ui\dialogs\RscDialogCompositions.hpp"
 #include "ui\dialogs\RscDialogCopyPaste.hpp"
 #include "ui\dialogs\RscDialogDynamic.hpp"

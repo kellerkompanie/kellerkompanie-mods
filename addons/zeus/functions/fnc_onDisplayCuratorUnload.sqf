@@ -13,7 +13,7 @@
 //    nothing (procedure)
 //
 //    Example:
-//    [_curatorDisplay] call Achilles_fnc_onDisplayCuratorunload;
+//    [_curatorDisplay] call keko_zeus_fnc_onDisplayCuratorunload;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"

@@ -36,7 +36,7 @@ switch (_mode) do
         _category_ctrl = _dialog displayCtrl IDC_CATEGORIES;
         _old_category = _category_ctrl lbText 0;
 
-        _categories = [localize "STR_AMAE_NEW_CATEGORY"];
+        _categories = [localize "STR_keko_zeus_NEW_CATEGORY"];
         _custom_compositions = profileNamespace getVariable [QGVAR(compositions),[]];
         if (count _custom_compositions > 0) then
         {
@@ -106,7 +106,7 @@ switch (_mode) do
             uiNamespace setVariable [QGVAR(ChooseDialog_Result), 1];
             closeDialog 1;
         };
-        [localize "STR_AMAE_ENTRY_ALREADY_EXISTS"] call FUNC(ShowZeusMessage);
+        [localize "STR_keko_zeus_ENTRY_ALREADY_EXISTS"] call FUNC(ShowZeusMessage);
         playSound "FD_Start_F";
     };
     case "UNLOAD" : {};

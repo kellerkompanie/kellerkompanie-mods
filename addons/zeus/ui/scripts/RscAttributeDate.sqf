@@ -31,7 +31,7 @@ switch _mode do
 
         private _display = _params select 0;
         private _ctrlTitle = _display displayCtrl IDC_RSCATTRIBUTEDIALOGTITLE_VALUE;
-        _ctrlTitle ctrlSetText localize "STR_AMAE_SET_DATE";
+        _ctrlTitle ctrlSetText localize "STR_keko_zeus_SET_DATE";
 
         // set year
         private _ctrlYear = _display displayctrl IDC_RSCATTRIBUTEYEAR_VALUE;

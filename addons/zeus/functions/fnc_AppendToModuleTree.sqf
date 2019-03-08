@@ -4,7 +4,6 @@
 //    AUTHOR: Kex (based on Anton Struyk's version)
 //    DATE: 6/4/16
 //    VERSION: 1.0
-//    FILE: Achilles\functions\fn_AppendToModuleTree.sqf
 //  DESCRIPTION: Appends a module to the module tree
 //
 //    ARGUMENTS:
@@ -21,10 +20,10 @@
 //    _this                ARRAY    - updated list of all category display names
 //
 //    Example:
-//    _categoryList = [_ctrl,_categoryList,_categoryName,_moduleDisplayName,_moduleClassName,_forEachIndex,_moduleIcon,_addonIcon] call Achilles_fnc_AppendToModuleTree;
+//    _categoryList = [_ctrl,_categoryList,_categoryName,_moduleDisplayName,_moduleClassName,_forEachIndex,_moduleIcon,_addonIcon] call keko_zeus_fnc_AppendToModuleTree;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#define CATEGORY_ICON QPATHTOF(ui\icons\icon_achilles_small.paa)
+#define CATEGORY_ICON QPATHTOF(ui\icons\icon_keko_zeus_small.paa)
 
 params
 [
@@ -34,8 +33,8 @@ params
     "_moduleDisplayName",
     "_moduleClassName",
     ["_value", 0, [0]],
-    ["_moduleIcon", "\achilles\data_f_ares\icons\icon_default.paa", [""]],
-    ["_addonIcon", "\achilles\data_f_achilles\icons\icon_achilles_small.paa", [""]]
+    ["_moduleIcon", QPATHTOF(ui\icons\icon_default.paa), [""]],
+    ["_addonIcon", QPATHTOF(ui\icons\icon_keko_zeus_small.paa), [""]]
 ];
 
 private _categoryIndex = _categoryList find _categoryName;
@@ -47,7 +46,7 @@ if (_categoryIndex == -1) then
     private _tvData = QGVAR(Module_Empty); // All of the categories use the 'Empty' module. There's no logic associated with them.
     private _tvBranch = _ctrl tvAdd [[], _categoryName];
     _ctrl tvSetData [[_tvBranch], _tvData];
-    if (Achilles_var_moduleTreeHelmet) then
+    if (GVAR(moduleTreeHelmet)) then
     {
         _ctrl tvSetPicture [[_tvBranch], CATEGORY_ICON];
     };
@@ -61,7 +60,7 @@ _ctrl tvSetData [_newPath, _moduleClassName];
 _ctrl tvSetPicture [_newPath, _moduleIcon];
 _ctrl tvSetValue [_newPath, _value];
 
-if (Achilles_var_moduleTreeDLC) then
+if (GVAR(moduleTreeDLC)) then
 {
     _ctrl tvSetPictureRight [_newPath, _addonIcon];
 };

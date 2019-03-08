@@ -1,4 +1,4 @@
-// Achilles GUI grids
+// custom GUI grids
 #define GUI_GRID_X		(0.294 * safeZoneW + safeZoneX)
 #define GUI_GRID_Y		(0.177 * safeZoneH + safeZoneY)
 #define GUI_GRID_W		(0.010 * safeZoneW)
@@ -8,7 +8,7 @@
 #define TITLE_FONT_SIZE			(1.2 * GUI_GRID_H_FIX)
 #define DEFAULT_FONT_SIZE		(1.0 * GUI_GRID_H_FIX)
 
-//converts Achilles GUI grid to GUI coordinates
+// converts custom GUI grid to GUI coordinates
 #define GtC_X(GRID)				((GRID) * GUI_GRID_W + GUI_GRID_X)
 #define GtC_Y(GRID)				((GRID) * GUI_GRID_H + GUI_GRID_Y)
 #define GtC_W(GRID)				((GRID) * GUI_GRID_W)

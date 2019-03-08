@@ -1,6 +1,6 @@
 class RscAttributeInventory: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this, ""RscAttributeInventory"", 'AresDisplays'] call (uinamespace getvariable ""keko_zeus_fnc_initCuratorAttribute"")";
+    onSetFocus = "[_this, ""RscAttributeInventory"", 'keko_zeus_Displays'] call (uinamespace getvariable ""keko_zeus_fnc_initCuratorAttribute"")";
     h = 29 * BIGUI_GRID_H_DYN;
     class controls
     {
@@ -90,7 +90,7 @@ class RscAttributeInventory: RscControlsGroupNoScrollbars
 class RscDisplayAttributesInventory : RscDisplayAttributes
 {
     scriptName = "RscDisplayAttributesInventory";
-    scriptPath = "AresDisplays";
-    onLoad = "[""onLoad"",_this,""RscDisplayAttributesInventory"",'AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "[""onUnload"",_this,""RscDisplayAttributesInventory"",'AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "[""onLoad"",_this,""RscDisplayAttributesInventory"",'keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "[""onUnload"",_this,""RscDisplayAttributesInventory"",'keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
 };

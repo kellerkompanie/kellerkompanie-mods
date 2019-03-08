@@ -41,16 +41,16 @@ switch (_mode) do
 
         _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call keko_zeus_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
 
-        _tvPath_ares = [_tree_ctrl tvAdd [[], "keko_zeus"]];
+        _tvPath_keko_zeus = [_tree_ctrl tvAdd [[], "keko_zeus"]];
         {
-            _tvPath_category = [_tree_ctrl tvAdd [_tvPath_ares, _x select 0]];
+            _tvPath_category = [_tree_ctrl tvAdd [_tvPath_keko_zeus, _x select 0]];
             {
-                _tvPath_item = [_tree_ctrl tvAdd [_tvPath_ares + _tvPath_category, _x select 0]];
-                _tree_ctrl tvSetData [_tvPath_ares + _tvPath_category + _tvPath_item,str (_x select 1)];
+                _tvPath_item = [_tree_ctrl tvAdd [_tvPath_keko_zeus + _tvPath_category, _x select 0]];
+                _tree_ctrl tvSetData [_tvPath_keko_zeus + _tvPath_category + _tvPath_item,str (_x select 1)];
             } forEach (_x select 1);
-            _tree_ctrl tvSort [_tvPath_ares + _tvPath_category, false];
+            _tree_ctrl tvSort [_tvPath_keko_zeus + _tvPath_category, false];
         } forEach GVAR(compositions);
-        _tree_ctrl tvSort [_tvPath_ares, false];
+        _tree_ctrl tvSort [_tvPath_keko_zeus, false];
 
         _custom_compositions = profileNamespace getVariable [QGVAR(compositions),[]];
 

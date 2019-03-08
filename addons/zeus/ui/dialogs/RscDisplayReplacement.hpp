@@ -9,34 +9,20 @@
 //  define script path for script replacement
 class CfgScriptPaths
 {
-	AresDisplays = \achilles\ui_f\scripts\;
+	keko_zeus_Displays = x\keko\addons\zeus\ui\scripts\;
 };
 
-class RscDisplayCurator 
+class RscDisplayCurator
 {
-	// couple achilles init with curator display
-	onLoad = "[_this select 0] call Achilles_fnc_onDisplayCuratorLoad;";
-	onUnload = "[_this select 0] call Achilles_fnc_onDisplayCuratorUnload;";
-	class Controls 
+	// couple custom init with curator display
+	onLoad = "[_this select 0] call keko_zeus_fnc_onDisplayCuratorLoad;";
+	onUnload = "[_this select 0] call keko_zeus_fnc_onDisplayCuratorUnload;";
+	class Controls
 	{
 		#include "Replacement\RscDisplayAttributesModuleTree.hpp"
 	};
 };
 
-/*
-class RscStandardDisplay;
-class RscDisplayMain: RscStandardDisplay
-{
-	//onLoad = "createDisplay ""Ares_Welcome_Dialog"";";
-	class Controls 
-	{
-		class AchillesIntroMessage : RscText
-		{
-			onLoad = "(ctrlparent (_this select 0)) createDisplay ""Ares_Welcome_Dialog"";";
-		};
-	};
-};
-*/
 // load external attributes
 class RscAttributeGroupID: RscControlsGroupNoScrollbars {};
 
@@ -56,7 +42,7 @@ class RscAttributeGroupID: RscControlsGroupNoScrollbars {};
 #include "Replacement\RscDisplayAttributesSetDate.hpp"
 
 // include music from description.ext
-class RscAttributeMusic : RscControlsGroupNoScrollbars 
+class RscAttributeMusic : RscControlsGroupNoScrollbars
 {
-	onSetFocus = "[_this,""RscAttributeMusic"",""AresDisplays""] call (uinamespace getvariable ""Achilles_fnc_initCuratorAttribute"")";	
+	onSetFocus = "[_this,""RscAttributeMusic"",""keko_zeus_Displays""] call (uinamespace getvariable ""keko_zeus_fnc_initCuratorAttribute"")";
 };

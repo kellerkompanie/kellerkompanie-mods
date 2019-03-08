@@ -4,8 +4,6 @@
 //    AUTHOR: Kex (based on Anton Struyk's version)
 //    DATE: 14/11/16
 //    VERSION: 3.0
-//    FILE: achilles\ui_f\functions\displayCurator\fn_OnModuleTreeLoad.sqf
-//  DESCRIPTION: Integrates Ares Modules in Curator Interface Tree
 //
 //    ARGUMENTS:
 //    _this select 0:        BOOL    - load custom modules only (true: append new custom module; false: load entire tree)
@@ -14,7 +12,7 @@
 //    nothing (procedure)
 //
 //    Example:
-//    [] call Achilles_fnc_onModuleTreeLoad;
+//    [] call keko_zeus_fnc_onModuleTreeLoad;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
@@ -32,7 +30,7 @@ for "_i" from 0 to ((_moduleTreeCtrl tvCount []) - 1) do
     _categoryList pushBack (_moduleTreeCtrl tvText [_i]);
 };
 
-// Add achilles modules
+// Add modules
 {
     private _moduleClass = _x;
     private _moduleCfg = configFile >> "cfgVehicles" >> _moduleClass;
@@ -56,7 +54,7 @@ for "_i" from 0 to ((_moduleTreeCtrl tvCount []) - 1) do
 } forEach GVAR(availableModuleClasses);
 
 // Add custom modules
-if (!isNil "Ares_Custom_Modules") then
+if (!isNil "keko_zeus_Custom_Modules") then
 {
     {
         _x params
@@ -64,7 +62,7 @@ if (!isNil "Ares_Custom_Modules") then
             "_categoryName",
             "_moduleDisplayName"
         ];
-        private _moduleClassName = format ["Ares_Module_User_Defined_%1", _forEachIndex];
+        private _moduleClassName = format [QGVAR(Module_User_Defined_) + "%1", _forEachIndex];
 
         _categoryList =
         [

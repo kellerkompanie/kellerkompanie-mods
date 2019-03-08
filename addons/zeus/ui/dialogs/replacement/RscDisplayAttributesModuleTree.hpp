@@ -51,7 +51,7 @@ class Add: RscControlsGroupNoScrollbars {
         class keko_zeus_Icon_Attr: RscPicture {
             idc = 2030;
 
-            text = QPATHTOF(ui\icons\icon_achilles_dialog.paa);
+            text = QPATHTOF(ui\icons\icon_keko_zeus_dialog.paa);
             x = 0.0 * BIGUI_GRID_W_FIX;
             //y = safezoneH - 10.2 * BIGUI_GRID_H_FIX;
             y = safezoneH - 6.5 * BIGUI_GRID_H_FIX;

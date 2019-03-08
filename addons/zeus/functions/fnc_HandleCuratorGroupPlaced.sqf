@@ -5,7 +5,7 @@
 disableSerialization;
 params ["_curator","_placedGroup"];
 
-if (!isNil "Achilles_var_specifyPositionBeforeSpawn") then
+if (!isNil QGVAR(specifyPositionBeforeSpawn)) then
 {
     private _curatorDisplay = findDisplay IDD_RSCDISPLAYCURATOR;
     private _ctrlModeGroups = _curatorDisplay displayCtrl IDC_RSCDISPLAYCURATOR_MODEGROUPS;
