@@ -35,7 +35,7 @@ switch (_mode) do
             _ctrl = _dialog displayCtrl (IDC_COMBO_BASE + _x);
             if (not isNull _ctrl) then
             {
-                _last_choice = uiNamespace getVariable [format ["Ares_ChooseDialog_ReturnValue_%1", _x], 0];
+                _last_choice = uiNamespace getVariable [format [QGVAR(ChooseDialog_ReturnValue_) + "%1", _x], 0];
                 _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
                 _last_choice = [(lbSize _ctrl) - 1, _last_choice] select (_last_choice < lbSize _ctrl);
                 _ctrl lbSetCurSel _last_choice;
@@ -63,7 +63,7 @@ switch (_mode) do
                 _ctrl ctrlCommit 0;
             } forEach [IDC_RADIUS_COMBO,IDC_RADIUS_LABLE];
         };
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_1", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_1), _comboIndex];
     };
     case "3":
     {
@@ -82,7 +82,7 @@ switch (_mode) do
             } forEach ([IDC_MODE_LABLE] + IDC_SIDE_LABLE);
 
             _mode_ctrl = _dialog displayCtrl IDC_MODE_COMBO;
-            _last_choice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_4", 0];
+            _last_choice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_4), 0];
             _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
             _last_choice = [(lbSize _mode_ctrl) - 1, _last_choice] select (_last_choice < lbSize _mode_ctrl);
             _mode_ctrl lbSetCurSel _last_choice;
@@ -96,7 +96,7 @@ switch (_mode) do
             } forEach ([IDC_MODE_COMBO,IDC_MODE_LABLE] + IDC_SIDE_LABLE + IDC_SIDE_ICONS);
         };
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_3", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_3), _comboIndex];
     };
     case "4":
     {
@@ -123,11 +123,11 @@ switch (_mode) do
             } forEach (IDC_SIDE_LABLE + IDC_SIDE_ICONS);
         };
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_4", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_4), _comboIndex];
     };
     case "UNLOAD": {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

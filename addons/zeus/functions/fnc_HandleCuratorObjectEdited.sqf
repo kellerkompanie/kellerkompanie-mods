@@ -36,10 +36,10 @@ switch (true) do
         };
     };
 
-    case (!isNil {_handled_object getVariable "Achilles_var_groupAttributes"}):
+    case (!isNil {_handled_object getVariable QGVAR(groupAttributes)}):
     {
         // if object is a center object of a group => correct position and orientation for other objects of the group
-        private _group_attributes = _handled_object getVariable "Achilles_var_groupAttributes";
+        private _group_attributes = _handled_object getVariable QGVAR(groupAttributes);
         private _center_pos = getPosWorld _handled_object;
 
         // define internal basis
@@ -65,7 +65,7 @@ switch (true) do
 
         } forEach _group_attributes;
     };
-    case (_handled_object isKindOf "Man" && ((group _handled_object) getVariable ["Achilles_var_inGarrison", false])):
+    case (_handled_object isKindOf "Man" && ((group _handled_object) getVariable [QGVAR(inGarrison), false])):
     {
         // enables rotation of individual units in garrisons
         _handled_object doWatch (ASLtoATL eyePos _handled_object vectorAdd vectorDir _handled_object);

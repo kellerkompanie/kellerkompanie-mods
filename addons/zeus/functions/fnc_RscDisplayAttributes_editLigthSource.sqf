@@ -18,10 +18,10 @@ switch (_mode) do
     {
         {
             _ctrl = _dialog displayCtrl (IDC_CTRL_BASE + _x);
-            _ctrl ctrlAddEventHandler ["onSliderPosChanged", {["UPDATE"] call Achilles_fnc_RscDisplayAttributes_editLigthSource}];
+            _ctrl ctrlAddEventHandler ["onSliderPosChanged", {["UPDATE"] call FUNC(RscDisplayAttributes_editLigthSource)}];
         } forEach [0,1,2,4,5,6];
         _ctrl = _dialog displayCtrl IDC_CTRL_RANGE;
-        _ctrl ctrlAddEventHandler ["KillFocus", {["UPDATE"] call Achilles_fnc_RscDisplayAttributes_editLigthSource}];
+        _ctrl ctrlAddEventHandler ["KillFocus", {["UPDATE"] call FUNC(RscDisplayAttributes_editLigthSource)}];
     };
     case "UPDATE":
     {
@@ -42,14 +42,14 @@ switch (_mode) do
             _color = 100 * (sliderPosition _ctrl);
             _attenuation pushBack _color;
         };
-        Achilles_var_AttributeWindowTargetObject setLightBrightness 1.0;
-        Achilles_var_AttributeWindowTargetObject setLightAmbient  _rgb_color;
-        Achilles_var_AttributeWindowTargetObject setLightColor  _rgb_color;
-        Achilles_var_AttributeWindowTargetObject setLightColor  _rgb_color;
+        GVAR(AttributeWindowTargetObject) setLightBrightness 1.0;
+        GVAR(AttributeWindowTargetObject) setLightAmbient  _rgb_color;
+        GVAR(AttributeWindowTargetObject) setLightColor  _rgb_color;
+        GVAR(AttributeWindowTargetObject) setLightColor  _rgb_color;
     };
     case "UNLOAD" : {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

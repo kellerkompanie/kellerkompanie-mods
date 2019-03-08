@@ -75,7 +75,7 @@ if ((count _this) == 2 && (_choicesArray select 0) isEqualType "") then
 #define SIDE_BASE_IDC            (12000)
 
 // Bring up the dialog frame we are going to add things to.
-createDialog "Ares_Dynamic_Dialog";
+createDialog QGVAR(Dynamic_Dialog);
 private _dialog = findDisplay DYNAMIC_GUI_IDD;
 
 // translate the bottom line of the dialog
@@ -89,7 +89,7 @@ private _row_heights = _choicesArray apply
         default {TOTAL_ROW_HEIGHT};
     };
 };
-private _tot_height = _row_heights call Achilles_fnc_sum;
+private _tot_height = _row_heights call FUNC(sum);
 if (_tot_height > MAX_ALL_ROWS_H) then {_tot_height = MAX_ALL_ROWS_H};
 
 // Resize ctrl group
@@ -129,12 +129,12 @@ if (_titleText != "") then
 _yCoord = START_ROW_Y;
 
 // Get the ID for use when looking up previously selected values.
-private _titleText_varName = _titleText call Achilles_fnc_TextToVariableName;
-private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1", _titleText_varName];
+private _titleText_varName = _titleText call FUNC(TextToVariableName);
+private _titleVariableIdentifier = format [QGVAR(ChooseDialog_DefaultValues_) + "%1", _titleText_varName];
 {
     _x params ["_choiceName", "_choices", ["_defaultChoice", 0], ["_force_default", false, [false]]];
 
-    private _choiceName_varName = _choiceName call Achilles_fnc_TextToVariableName;
+    private _choiceName_varName = _choiceName call FUNC(TextToVariableName);
 
     // If this dialog is named, attempt to get the default value from a previously displayed version
     if (_titleText != "" &&  !_force_default) then
@@ -173,7 +173,7 @@ private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1",
         if (_ResourceScript != "") then
         {
             // combo boxes handled with custom scripts
-            uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1",_forEachIndex], _defaultChoice];
+            uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1",_forEachIndex], _defaultChoice];
             _comboScript = format["([""%1""] + _this) call %2;",_forEachIndex,_ResourceScript]
         } else
         {
@@ -181,9 +181,9 @@ private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1",
             _defaultChoice = [0, _defaultChoice] select (_defaultChoice isEqualType 0);
             _defaultChoice = [(lbSize _choiceCombo) - 1, _defaultChoice] select (_defaultChoice < lbSize _choiceCombo);
             _choiceCombo lbSetCurSel _defaultChoice;
-            uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1",_forEachIndex], _defaultChoice];
+            uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1",_forEachIndex], _defaultChoice];
 
-            _comboScript = "uiNamespace setVariable [format['Ares_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], _this select 1];"
+            _comboScript = "uiNamespace setVariable [format['keko_zeus_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], _this select 1];"
         };
         _choiceCombo ctrlSetEventHandler ["LBSelChanged", _comboScript];
 
@@ -234,7 +234,7 @@ private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1",
                 _defaultChoice = [1, _defaultChoice] select (_defaultChoice isEqualType 0 and _defaultChoice != -1);
             };
 
-            ["onLoad",_dialog,_forEachIndex,_defaultChoice] call Achilles_fnc_sideTab;
+            ["onLoad",_dialog,_forEachIndex,_defaultChoice] call FUNC(sideTab);
 
             _yCoord = _yCoord + GtC_H_FIX(3.1);
         } else
@@ -263,8 +263,8 @@ private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1",
                 _ctrl sliderSetRange [0,1];
                 _ctrl ctrlSetBackgroundColor [0, 0, 0, 1];
                 _ctrl sliderSetPosition _defaultChoice;
-                _ctrl ctrlSetEventHandler ["KeyUp", "uiNamespace setVariable [format['Ares_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], sliderPosition (_this select 0)];"];
-                _ctrl ctrlSetEventHandler ["MouseButtonUp", "uiNamespace setVariable [format['Ares_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], sliderPosition (_this select 0)];"];
+                _ctrl ctrlSetEventHandler ["KeyUp", "uiNamespace setVariable [format['keko_zeus_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], sliderPosition (_this select 0)];"];
+                _ctrl ctrlSetEventHandler ["MouseButtonUp", "uiNamespace setVariable [format['keko_zeus_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], sliderPosition (_this select 0)];"];
 
             } else
             {
@@ -274,33 +274,33 @@ private _titleVariableIdentifier = format ["Ares_ChooseDialog_DefaultValues_%1",
                 _ctrl ctrlSetText _defaultChoice;
                 _ctrl ctrlSetFontHeight DEFAULT_FONT_SIZE;
                 _ctrl ctrlSetBackgroundColor [0, 0, 0, 0];
-                _ctrl ctrlSetEventHandler ["KeyUp", "uiNamespace setVariable [format['Ares_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], ctrlText (_this select 0)];"];
+                _ctrl ctrlSetEventHandler ["KeyUp", "uiNamespace setVariable [format['keko_zeus_ChooseDialog_ReturnValue_%1'," + str (_forEachIndex) + "], ctrlText (_this select 0)];"];
             };
             _ctrl ctrlCommit 0;
 
-            uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1",_forEachIndex], _defaultChoice];
+            uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1",_forEachIndex], _defaultChoice];
             // Move onto the next row
             _yCoord = _yCoord + TOTAL_ROW_HEIGHT + _add_height;
         };
     };
 } forEach _choicesArray;
 
-uiNamespace setVariable ["Ares_ChooseDialog_Result", -1];
+uiNamespace setVariable [QGVAR(ChooseDialog_Result), -1];
 
 if (_ResourceScript != "") then {call compile format["[""LOADED""] call %1;",_ResourceScript]};
 
-Ares_var_showChooseDialog = true;
-_dialog displayAddEventHandler ["unload",{Ares_var_showChooseDialog = nil}];
-waitUntil { isNil "Ares_var_showChooseDialog" };
+GVAR(showChooseDialog) = true;
+_dialog displayAddEventHandler ["unload",{GVAR(showChooseDialog) = nil}];
+waitUntil { isNil QGVAR(showChooseDialog) };
 
 if (_ResourceScript != "") then {call compile format["[""UNLOAD""] call %1;",_ResourceScript]};
 
 // Check whether the user confirmed the selection or not, and return the appropriate values.
-if (uiNamespace getVariable "Ares_ChooseDialog_Result" == 1) exitWith
+if (uiNamespace getVariable QGVAR(ChooseDialog_Result) == 1) exitWith
 {
     private _returnValue = [];
     {
-        _returnValue pushBack (uiNamespace getVariable (format["Ares_ChooseDialog_ReturnValue_%1",_forEachIndex]));
+        _returnValue pushBack (uiNamespace getVariable (format[QGVAR(ChooseDialog_ReturnValue_) + "%1",_forEachIndex]));
     }forEach _choicesArray;
 
     // Save the selections as defaults for next time

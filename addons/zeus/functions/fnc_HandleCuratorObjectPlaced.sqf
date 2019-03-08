@@ -3,7 +3,7 @@
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
 
 disableSerialization;
-params ["_curator","_placedObject"];
+params ["_curator", "_placedObject"];
 
 // fix module activation bug for copy/paste
 if (_placedObject isKindOf "Module_f") then
@@ -13,16 +13,16 @@ if (_placedObject isKindOf "Module_f") then
 
 if (local _placedObject) then
 {
-    Ares_CuratorObjectPlaced_UnitUnderCursor = curatorMouseOver;
-    Ares_CuratorObjectPlaces_LastPlacedObjectPosition = position _placedObject;
-    [format ["Placed Object %1 (%2) on %3 at position %4, %5", _placedObject, typeOf _placedObject, str(Ares_CuratorObjectPlaced_UnitUnderCursor), str(Ares_CuratorObjectPlaces_LastPlacedObjectPosition), (nearestLocation [Ares_CuratorObjectPlaces_LastPlacedObjectPosition, "nameCity"]) call BIS_fnc_locationDescription]] call Achilles_fnc_log;
+    GVAR(CuratorObjectPlaced_UnitUnderCursor) = curatorMouseOver;
+    GVAR(CuratorObjectPlaces_LastPlacedObjectPosition) = position _placedObject;
+    [format ["Placed Object %1 (%2) on %3 at position %4, %5", _placedObject, typeOf _placedObject, str(GVAR(CuratorObjectPlaced_UnitUnderCursor)), str(GVAR(CuratorObjectPlaces_LastPlacedObjectPosition)), (nearestLocation [GVAR(CuratorObjectPlaces_LastPlacedObjectPosition), "nameCity"]) call BIS_fnc_locationDescription]] call FUNC(log);
 }
 else
 {
-    [format ["NON-LOCAL Placed Object %1 with %2 under mouse at position %3", _placedObject, str(Ares_CuratorObjectPlaced_UnitUnderCursor), str(Ares_CuratorObjectPlaces_LastPlacedObjectPosition)]] call Achilles_fnc_log;
+    [format ["NON-LOCAL Placed Object %1 with %2 under mouse at position %3", _placedObject, str(GVAR(CuratorObjectPlaced_UnitUnderCursor)), str(GVAR(CuratorObjectPlaces_LastPlacedObjectPosition))]] call FUNC(log);
 };
 
-if (({missionNamespace getVariable [_x, false]} count ["Achilles_var_deleteCrewOnSpawn", "Achilles_var_toggleCrewOnSpawn"]) isEqualTo 1) then
+if (({missionNamespace getVariable [_x, false]} count [QGVAR(deleteCrewOnSpawn), QGVAR(toggleCrewOnSpawn)]) isEqualTo 1) then
 {
     private _curatorDisplay = findDisplay IDD_RSCDISPLAYCURATOR;
     private _ctrlModeGroups = _curatorDisplay displayCtrl IDC_RSCDISPLAYCURATOR_MODEGROUPS;
@@ -33,7 +33,7 @@ if (({missionNamespace getVariable [_x, false]} count ["Achilles_var_deleteCrewO
     };
 };
 
-if (!isNil "Achilles_var_specifyPositionBeforeSpawn") then
+if (!isNil QGVAR(specifyPositionBeforeSpawn)) then
 {
     private _curatorDisplay = findDisplay IDD_RSCDISPLAYCURATOR;
     private _ctrlModeUnits = _curatorDisplay displayCtrl IDC_RSCDISPLAYCURATOR_MODEUNITS;
@@ -43,7 +43,7 @@ if (!isNil "Achilles_var_specifyPositionBeforeSpawn") then
         if (!(_placedObject isKindOf "module_f") and {count units group _placedObject - count crew _placedObject <= 0}) then
         {
             // if not a module or a group
-            [_placedObject] call Achilles_fnc_PreplaceMode;
+            [_placedObject] call FUNC(PreplaceMode);
         }
     };
 };

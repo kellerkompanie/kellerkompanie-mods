@@ -31,7 +31,7 @@ switch (_mode) do
     {
         _ok_ctrl = _dialog displayCtrl IDC_OK_BUTTON;
         _ok_ctrl ctrlRemoveAllEventHandlers "ButtonClick";
-        _ok_ctrl ctrlAddEventHandler ["ButtonClick", "if (count (uiNamespace getVariable [""Ares_composition_last_choice"",[]]) == 3) then {uiNamespace setVariable ['Ares_Dialog_Result', 1]; closeDialog 1;}" ];
+        _ok_ctrl ctrlAddEventHandler ["ButtonClick", "if (count (uiNamespace getVariable [""keko_zeus_composition_last_choice"",[]]) == 3) then {uiNamespace setVariable ['keko_zeus_Dialog_Result', 1]; closeDialog 1;}" ];
         {
             _button = _dialog displayCtrl _x;
             _button ctrlShow false;
@@ -39,9 +39,9 @@ switch (_mode) do
 
         _tree_ctrl = _dialog displayCtrl IDC_TREE_CTRL;
 
-        _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call Achilles_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
+        _tree_ctrl ctrlAddEventHandler ["TreeSelChanged", "([""SELECTION_CHANGED""] + _this) call keko_zeus_fnc_RscDisplayAttributes_spawnAdvancedComposition;"];
 
-        _tvPath_ares = [_tree_ctrl tvAdd [[], "Ares"]];
+        _tvPath_ares = [_tree_ctrl tvAdd [[], "keko_zeus"]];
         {
             _tvPath_category = [_tree_ctrl tvAdd [_tvPath_ares, _x select 0]];
             {
@@ -49,10 +49,10 @@ switch (_mode) do
                 _tree_ctrl tvSetData [_tvPath_ares + _tvPath_category + _tvPath_item,str (_x select 1)];
             } forEach (_x select 1);
             _tree_ctrl tvSort [_tvPath_ares + _tvPath_category, false];
-        } forEach Achilles_var_compositions;
+        } forEach GVAR(compositions);
         _tree_ctrl tvSort [_tvPath_ares, false];
 
-        _custom_compositions = profileNamespace getVariable ["Achilles_var_compositions",[]];
+        _custom_compositions = profileNamespace getVariable [QGVAR(compositions),[]];
 
         if (count _custom_compositions > 0) then
         {
@@ -67,7 +67,7 @@ switch (_mode) do
             } forEach (_custom_compositions);
             _tree_ctrl tvSort [_tvPath_custom, false];
         };
-        _last_choice = uiNamespace getVariable ["Ares_composition_last_choice", []];
+        _last_choice = uiNamespace getVariable [QGVAR(composition_last_choice), []];
         if (count _last_choice == 3) then
         {
             _categoryCount = _tree_ctrl tvCount [_last_choice select 0];
@@ -82,8 +82,8 @@ switch (_mode) do
     case "SELECTION_CHANGED":
     {
         _tree_ctrl = _ctrl;
-        Ares_var_current_composition = (_tree_ctrl tvData _treePathSelection);
-        uiNamespace setVariable ["Ares_composition_last_choice", _treePathSelection];
+        GVAR(current_composition) = (_tree_ctrl tvData _treePathSelection);
+        uiNamespace setVariable [QGVAR(composition_last_choice), _treePathSelection];
     };
     case "UNLOAD" : {};
 };

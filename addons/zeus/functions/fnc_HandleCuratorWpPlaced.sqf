@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_", "_group", "_id"];
+params ["", "_group", "_id"];
 switch (true) do
 {
     case (_id == 1):
