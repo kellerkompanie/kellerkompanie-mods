@@ -33,14 +33,14 @@ class RscDisplayAttributesMan: RscDisplayAttributes {
         class ButtonCargo : ButtonCustomLeft {
             text = "$STR_keko_zeus_ARSENAL";
             onMouseButtonClick = "(findDisplay -1) closeDisplay 1; \
-                                ['Open',[true,nil,BIS_fnc_initCuratorAttributes_target]] call bis_fnc_arsenal; \
-                                [BIS_fnc_initCuratorAttributes_target] spawn { \
-                                    waitUntil { sleep 1; isnull ( uinamespace getvariable 'RSCDisplayArsenal' ) }; \
-                                    params ['_template_unit']; \
+                                [BIS_fnc_initCuratorAttributes_target, BIS_fnc_initCuratorAttributes_target, true] call ace_arsenal_fnc_openBox;\
+                                ['ace_arsenal_displayClosed', {\
+                                    _thisArgs params ['_template_unit'];\
                                     _loadout = getUnitLoadout _template_unit; \
                                     _curatorSelected = ['man'] call keko_zeus_fnc_getCuratorSelected; \
                                     {_x setUnitLoadout _loadout} forEach _curatorSelected; \
-                                }";
+                                    ['ace_arsenal_displayClosed', _thisId] call CBA_fnc_removeEventHandler;\
+                                }, BIS_fnc_initCuratorAttributes_target] call CBA_fnc_addEventHandlerArgs;";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonFlag : ButtonCustomLeft2 {
