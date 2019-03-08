@@ -1,5 +1,5 @@
 class FactionUNSCDFBlack: FactionUNSCDFUrban {
-    name = "[Sci-Fi] UNSCDF (Black) - U.N. Space Command Defense Force (Urban)";
+    name = "[Sci-Fi] UNSCDF (Black) - U.N. Space Command Defense Force (Black)";
 
     grenade = OPTRE_M9_Frag;
     smokeWhite = OPTRE_M2_Smoke;
