@@ -6,6 +6,9 @@ class FactionBase {
     disposableRocketLauncher = launch_NLAW_F;
     antiTankLauncher = launch_B_Titan_short_F;
     antiAirLauncher = launch_B_Titan_F;
+    grenade = HandGrenade;
+    smokeWhite = SmokeShell;
+    smokeGreen = SmokeShellGreen;
 
     class role {
         Command = "Zeus";
@@ -512,6 +515,7 @@ class FactionBase {
 #include "FactionUNSCDFTropical.hpp"
 #include "FactionUNSCDFDesert.hpp"
 #include "FactionUNSCDFUrban.hpp"
+#include "FactionUNSCDFBlack.hpp"
 #include "FactionUNSCDFSnow.hpp"
 #include "FactionUNSCDFMarines.hpp"
 #include "FactionUNSCDFMarinesHCW.hpp"
