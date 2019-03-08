@@ -25,13 +25,13 @@ switch (_mode) do
     {
         {
             _ctrl = _dialog displayCtrl (IDC_CATEGORY + _x);
-            _last_choice = uiNamespace getVariable [format ["Ares_ChooseDialog_ReturnValue_%1", _x], 0];
+            _last_choice = uiNamespace getVariable [format [QGVAR(ChooseDialog_ReturnValue_) + "%1", _x], 0];
             _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
             _last_choice = [(lbSize _ctrl) - 1, _last_choice] select (_last_choice < lbSize _ctrl);
             _ctrl lbSetCurSel _last_choice;
             if (_x == 0) then
             {
-                [0,_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_SpawnExplosives;
+                [0,_ctrl,_last_choice] call FUNC(RscDisplayAttributes_SpawnExplosives);
             };
         } forEach [0,4];
     };
@@ -40,7 +40,7 @@ switch (_mode) do
         _category_ctrl = _ctrl;
         _type_ctrl = _dialog displayCtrl IDC_TYPE;
 
-        _explosive_types = (configfile >> "CfgVehicles" >> "ModuleMine_F") call Achilles_fnc_ClassNamesWhichInheritsFromCfgClass;
+        _explosive_types = (configfile >> "CfgVehicles" >> "ModuleMine_F") call FUNC(ClassNamesWhichInheritsFromCfgClass);
         _explosive_types = _explosive_types - ["ModuleExplosive_F"];
 
         if (_comboIndex == 0) then
@@ -71,24 +71,24 @@ switch (_mode) do
             {_type_ctrl lbAdd (getText (configfile >> "CfgVehicles" >> _x >> "displayName"))} forEach _explosive_types;
             _dialog setVariable ["type_list", _explosive_types];
         };
-        _last_choice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_1", 0];
+        _last_choice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_1), 0];
         _last_choice = [(lbSize _type_ctrl) - 1, _last_choice] select (_last_choice < lbSize _type_ctrl);
         _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
         _type_ctrl lbSetCurSel _last_choice;
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
-        [1,_type_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_SpawnExplosives;
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_0), _comboIndex];
+        [1,_type_ctrl,_last_choice] call FUNC(RscDisplayAttributes_SpawnExplosives);
     };
     case "1":
     {
         _type_list = _dialog getVariable ["type_list",[]];
-        Ares_var_explosive_type = _type_list select _comboIndex;
+        GVAR(explosive_type) = _type_list select _comboIndex;
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_1", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_1), _comboIndex];
     };
     case "UNLOAD" : {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

@@ -20,12 +20,12 @@ switch (_mode) do
         private _dialog = findDisplay IDD_DYNAMIC_GUI;
         {
             _ctrl = _dialog displayCtrl (BASE_CTRL_IDC + _x);
-            private _last_choice = uiNamespace getVariable [format ["Ares_ChooseDialog_ReturnValue_%1", _x], 0];
+            private _last_choice = uiNamespace getVariable [format [QGVAR(ChooseDialog_ReturnValue_)+"%1", _x], 0];
             _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
             _ctrl lbSetCurSel _last_choice;
             if (_x == 0) then
             {
-                [0,_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_BuildingsDestroy;
+                [0,_ctrl,_last_choice] call FUNC(RscDisplayAttributes_BuildingsDestroy);
             };
         } forEach [0,1,2,4];
     };
@@ -53,11 +53,11 @@ switch (_mode) do
                 _ctrl ctrlCommit 0;
             } forEach (LABEL_IDCs + CTRL_IDCs);
         };
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_0), _comboIndex];
     };
     case "UNLOAD" : {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_)+"%1", _mode], _comboIndex];
     };
 };

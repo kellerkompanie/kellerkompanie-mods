@@ -39,7 +39,7 @@ if (isNil "Achilles_curator_init_done") then
 {
     // key event handler for remote controlled unit
     private _mainDisplay = findDisplay 46;
-    _mainDisplay displayAddEventHandler ["KeyDown", { _this call Achilles_fnc_handleRemoteKeyPressed; }];
+    _mainDisplay displayAddEventHandler ["KeyDown", { _this call FUNC(handleRemoteKeyPressed); }];
 
     // send warning to player if both mods are running
     if (isClass (configfile >> "CfgPatches" >> "Ares")) then
@@ -53,23 +53,15 @@ if (isNil "Achilles_curator_init_done") then
     };
 
     // execute init
-    [_moduleTreeCtrl] call Achilles_fnc_onCuratorStart;
+    [_moduleTreeCtrl] call FUNC(onCuratorStart);
 
-    // display advanced hints
-    private _hasHintBeenShown = profileNamespace getVariable ["Achilles_var_advHint_showIntro", false];
-    if (!_hasHintBeenShown) then
-    {
-        [["Ares", "AresFieldManual"],15,"",35,"",true] call BIS_fnc_advHint;
-        profileNamespace setVariable ["Achilles_var_advHint_showIntro", true];
-    };
-
-    Achilles_curator_init_done = true;
+    GVAR(curator_init_done) = true;
 };
 
 // Add mouse click event handlers
-_display displayAddEventHandler ["KeyDown",{_this call Achilles_fnc_handleCuratorKeyPressed;}];
-(_display displayCtrl IDC_RSCDISPLAYCURATOR_MOUSEAREA) ctrlAddEventHandler ["MouseButtonDblClick",{_this call Achilles_fnc_handleMouseDoubleClicked;}];
-(_display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP) ctrlAddEventHandler ["MouseButtonDblClick",{_this call Achilles_fnc_handleMouseDoubleClicked;}];
+_display displayAddEventHandler ["KeyDown",{_this call FUNC(handleCuratorKeyPressed);}];
+(_display displayCtrl IDC_RSCDISPLAYCURATOR_MOUSEAREA) ctrlAddEventHandler ["MouseButtonDblClick",{_this call FUNC(handleMouseDoubleClicked);}];
+(_display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP) ctrlAddEventHandler ["MouseButtonDblClick",{_this call FUNC(handleMouseDoubleClicked);}];
 
 // Fixes the loss of sides in the module tree caused by an ongoing search
 {
@@ -95,25 +87,12 @@ _display displayAddEventHandler ["KeyDown",{_this call Achilles_fnc_handleCurato
 } forEach (ADD_MODE_TO_SIDE_IDCS select _curMode);
 
 // Handle DZN search patch
-(_display displayCtrl 283) ctrlShow !Achilles_var_moduleTreeSearchPatch;
-(_display displayCtrl 284) ctrlShow Achilles_var_moduleTreeSearchPatch;
-if (Achilles_var_moduleTreeSearchPatch) then
+(_display displayCtrl 283) ctrlShow !GVAR(moduleTreeSearchPatch);
+(_display displayCtrl 284) ctrlShow GVAR(moduleTreeSearchPatch);
+if (GVAR(moduleTreeSearchPatch)) then
 {
     (_display displayCtrl 285) ctrlAddEventHandler ["ButtonClick", {(((findDisplay IDD_RSCDISPLAYCURATOR) displayCtrl 283) ctrlSetText (ctrlText ((findDisplay IDD_RSCDISPLAYCURATOR) displayCtrl 284)))}];
 };
-
-// Add custom Zeus logo when pressing backspace
-private _zeusLogo = _display displayCtrl 15717;
-private _addLogo = true;
-switch (Achilles_var_iconSelection) do
-{
-    case "Achilles_var_iconSelection_Ares": {_zeusLogo ctrlSetText "\achilles\data_f_achilles\pictures\ZeusEyeAres.paa"};
-    case "Achilles_var_iconSelection_Achilles": {_zeusLogo ctrlSetText "\achilles\data_f_achilles\pictures\Achilles_Icon_005.paa"};
-    case "Achilles_var_iconSelection_Enyo": {_zeusLogo ctrlSetText "\achilles\data_f_achilles\icons\icon_enyo_large.paa"};
-    case "Achilles_var_iconSelection_Default": {_addLogo = false};
-    default {_zeusLogo ctrlSetText "\achilles\data_f_achilles\pictures\ZeusEyeAres.paa"};
-};
-if (_addLogo) then {_zeusLogo ctrlCommit 0};
 
 // handle module tree loading
 [_moduleTreeCtrl] spawn
@@ -130,5 +109,5 @@ if (_addLogo) then {_zeusLogo ctrlCommit 0};
 
     // wait for the next frame
     sleep 0.001;
-    [Achilles_fnc_onModuleTreeLoad, []] call CBA_fnc_directCall;
+    [FUNC(onModuleTreeLoad), []] call CBA_fnc_directCall;
 };

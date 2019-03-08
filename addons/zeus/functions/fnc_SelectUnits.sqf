@@ -26,11 +26,11 @@ disableSerialization;
 private _display = finddisplay IDD_RSCDISPLAYCURATOR;
 private _ctrlMessage = _display displayctrl IDC_RSCDISPLAYCURATOR_FEEDBACKMESSAGE;
 
-Achilles_var_submit_selection = nil;
+GVAR(submit_selection) = nil;
 
 // Inform curator what he has to do
 playSound "FD_Finish_F";
-[["Ares","SelectionOption"],15,"not isNil ""Achilles_var_submit_selection""",35,"not isNil ""Achilles_var_submit_selection""",true,true] call BIS_fnc_advHint;
+[["keko_zeus","SelectionOption"],15,"not isNil ""keko_zeus_submit_selection""",35,"not isNil ""keko_zeus_submit_selection""",true,true] call BIS_fnc_advHint;
 
 _ctrlMessage ctrlsettext toupper (format [localize "STR_AMAE_SELECT_X_APPLIED_TO_MODULE",_type]);
 _ctrlMessage ctrlsetfade 1;
@@ -42,8 +42,8 @@ _ctrlMessage ctrlcommit 0.1;
 private _handler_id = _display displayAddEventHandler ["KeyDown",
 {
     private _key = _this select 1;
-    if (_key == 28) then {Achilles_var_submit_selection = true; true} else {false};
-    if (_key == 1) then {Achilles_var_submit_selection = false; true} else {false};
+    if (_key == 28) then {GVAR(submit_selection) = true; true} else {false};
+    if (_key == 1) then {GVAR(submit_selection) = false; true} else {false};
 }];
 
 // executed when the choice is submitted or cancled
@@ -55,10 +55,10 @@ _ctrlMessage ctrlsetfade 1;
 _ctrlMessage ctrlcommit 0.5;
 
 // if escape was pressed
-if (!isNil "Achilles_var_submit_selection" && {!Achilles_var_submit_selection}) exitWith {[localize "STR_AMAE_SELECTION_CANCLLED"] call Achilles_fnc_ShowZeusErrorMessage; nil};
+if (!isNil QGVAR(submit_selection) && {!GVAR(submit_selection)}) exitWith {[localize "STR_AMAE_SELECTION_CANCLLED"] call FUNC(ShowZeusErrorMessage); nil};
 
 // if enter was pressed
-[localize "STR_AMAE_SELECTION_SUBMITTED"] call Ares_fnc_ShowZeusMessage;
+[localize "STR_AMAE_SELECTION_SUBMITTED"] call FUNC(ShowZeusMessage);
 
 if (_single) exitWith
 {

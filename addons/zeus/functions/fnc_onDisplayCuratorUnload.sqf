@@ -19,7 +19,7 @@
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
 
 // custom stacked curator display event handler
-["Achilles_onUnloadCuratorInterface", _this, player] call CBA_fnc_targetEvent;
+[QGVAR(onUnloadCuratorInterface), _this, player] call CBA_fnc_targetEvent;
 
 // execute vanilla display curator function
 ["onUnload",_this,"RscDisplayCurator","CuratorDisplays"] call (uinamespace getvariable "BIS_fnc_initDisplay");

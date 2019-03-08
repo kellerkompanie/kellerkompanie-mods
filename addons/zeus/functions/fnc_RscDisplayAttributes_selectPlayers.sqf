@@ -28,13 +28,13 @@ switch (_mode) do
             _ctrl = _dialog displayCtrl (IDC_MODE_COMBO + _x);
             if (!isNull _ctrl) then
             {
-                _last_choice = uiNamespace getVariable [format ["Ares_ChooseDialog_ReturnValue_%1", _x], 0];
+                _last_choice = uiNamespace getVariable [format [QGVAR(ChooseDialog_ReturnValue_) + "%1", _x], 0];
                 _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
                 _last_choice = [(lbSize _ctrl) - 1, _last_choice] select (_last_choice < lbSize _ctrl);
                 _ctrl lbSetCurSel _last_choice;
                 if (_x == 0) then
                 {
-                    [0,_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_selectPlayers;
+                    [0,_ctrl,_last_choice] call FUNC(RscDisplayAttributes_selectPlayers);
                 };
             };
         } forEach [0,3];
@@ -106,7 +106,7 @@ switch (_mode) do
 
                 _selection_ctrl lbSetCurSel 0;
 
-                [1,_selection_ctrl,0] call Achilles_fnc_RscDisplayAttributes_selectPlayers;
+                [1,_selection_ctrl,0] call FUNC(RscDisplayAttributes_selectPlayers);
             };
         };
 
@@ -116,16 +116,16 @@ switch (_mode) do
     {
         _selection_list = _dialog getVariable ["selection_list",[]];
         _selection_mode = _dialog getVariable ["selection_mode",""];
-        if (_selection_mode == "" or _selection_list isEqualTo []) exitWith {Ares_var_selectPlayers = nil};
+        if (_selection_mode == "" or _selection_list isEqualTo []) exitWith {GVAR(selectPlayers) = nil};
 
         _selection = _selection_list select _comboIndex;
 
-        Ares_var_selectPlayers = [units _selection, [_selection]] select (_selection_mode == "player");
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_1", _comboIndex];
+        GVAR(selectPlayers) = [units _selection, [_selection]] select (_selection_mode == "player");
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_1), _comboIndex];
     };
     case "UNLOAD": {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

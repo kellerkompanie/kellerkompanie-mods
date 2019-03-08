@@ -21,7 +21,7 @@ switch (_mode) do
 {
     case "LOADED":
     {
-        if (isNil "Achilles_var_emptyObjects_allCategoryNames") then
+        if (isNil QGVAR(emptyObjects_allCategoryNames)) then
         {
             _unsorted_categoryNames = [];
             _unsorted_subcategoryNames = [];
@@ -51,51 +51,51 @@ switch (_mode) do
                     if (_subcategoryIndex == -1) then
                     {
                         _subcategoryIndex = count _subcategory_list;
-                        _unsorted_subcategoryNames = [_unsorted_subcategoryNames,[_categoryIndex],_subcategoryName] call Achilles_fnc_pushBack;
-                        _unsorted_objectNames = [_unsorted_objectNames,[_categoryIndex],[_object_name]] call Achilles_fnc_pushBack;
-                        _unsorted_objectClasses = [_unsorted_objectClasses,[_categoryIndex],[_object_class]] call Achilles_fnc_pushBack;
+                        _unsorted_subcategoryNames = [_unsorted_subcategoryNames,[_categoryIndex],_subcategoryName] call FUNC(pushBack);
+                        _unsorted_objectNames = [_unsorted_objectNames,[_categoryIndex],[_object_name]] call FUNC(pushBack);
+                        _unsorted_objectClasses = [_unsorted_objectClasses,[_categoryIndex],[_object_class]] call FUNC(pushBack);
                     } else
                     {
-                        _unsorted_objectNames = [_unsorted_objectNames,[_categoryIndex,_subcategoryIndex],_object_name] call Achilles_fnc_pushBack;
-                        _unsorted_objectClasses = [_unsorted_objectClasses,[_categoryIndex,_subcategoryIndex],_object_class] call Achilles_fnc_pushBack;
+                        _unsorted_objectNames = [_unsorted_objectNames,[_categoryIndex,_subcategoryIndex],_object_name] call FUNC(pushBack);
+                        _unsorted_objectClasses = [_unsorted_objectClasses,[_categoryIndex,_subcategoryIndex],_object_class] call FUNC(pushBack);
                     };
                 };
-            } forEach ((configfile >> "CfgVehicles" >> "Static") call Achilles_fnc_ClassNamesWhichInheritsFromCfgClass);
+            } forEach ((configfile >> "CfgVehicles" >> "Static") call FUNC(ClassNamesWhichInheritsFromCfgClass));
 
-            Achilles_var_emptyObjects_categoryNames = [];
-            Achilles_var_emptyObjects_subcategoryNames = [];
-            Achilles_var_emptyObjects_objectNames = [];
-            Achilles_var_emptyObjects_objectClasses = [];
+            GVAR(emptyObjects_categoryNames) = [];
+            GVAR(emptyObjects_subcategoryNames) = [];
+            GVAR(emptyObjects_objectNames) = [];
+            GVAR(emptyObjects_objectClasses) = [];
 
-            Achilles_var_emptyObjects_categoryNames = [_unsorted_categoryNames,[],{_x},"ASCEND"] call BIS_fnc_sortBy;
+            GVAR(emptyObjects_categoryNames) = [_unsorted_categoryNames,[],{_x},"ASCEND"] call BIS_fnc_sortBy;
             {
                 _old_index = _unsorted_categoryNames find _x;
 
 
-            } forEach Achilles_var_emptyObjects_categoryNames;
+            } forEach GVAR(emptyObjects_categoryNames);
         };
 
         _ctrl = _dialog displayCtrl IDC_CATEGORY;
         lbClear _ctrl;
-        {_ctrl lbAdd _x} forEach Achilles_var_emptyObjects_allCategoryNames;
+        {_ctrl lbAdd _x} forEach GVAR(emptyObjects_allCategoryNames);
         _last_choice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_0", 0];
         _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
         _last_choice = [(lbSize _ctrl) - 1, _last_choice] select (_last_choice < lbSize _ctrl);
         _ctrl lbSetCurSel _last_choice;
-        [0,_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_SpawnEmptyObject;
+        [0,_ctrl,_last_choice] call FUNC(RscDisplayAttributes_SpawnEmptyObject);
     };
     case "0":
     {
         _subcategory_ctrl = _dialog displayCtrl IDC_SUBCATEGORY;
         lbClear _subcategory_ctrl;
-        {_subcategory_ctrl lbAdd _x} forEach (Achilles_var_emptyObjects_subcategoryNames select _comboIndex);
+        {_subcategory_ctrl lbAdd _x} forEach (GVAR(emptyObjects_subcategoryNames) select _comboIndex);
         _last_choice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_1", 0];
         _last_choice = [(lbSize _subcategory_ctrl) - 1, _last_choice] select (_last_choice < lbSize _subcategory_ctrl);
         _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
         _subcategory_ctrl lbSetCurSel _last_choice;
 
         uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
-        [1,_subcategory_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_SpawnEmptyObject;
+        [1,_subcategory_ctrl,_last_choice] call FUNC(RscDisplayAttributes_SpawnEmptyObject);
     };
     case "1":
     {
@@ -106,14 +106,14 @@ switch (_mode) do
         _currentCategory = lbCurSel _category_ctrl;
 
 
-        {_object_ctrl lbAdd _x} forEach (Achilles_var_emptyObjects_objectNames select _currentCategory select _comboIndex);
+        {_object_ctrl lbAdd _x} forEach (FUNC(emptyObjects_objectNames) select _currentCategory select _comboIndex);
         _last_choice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_1", 0];
         _last_choice = [(lbSize _object_ctrl) - 1, _lat_choice] select (_last_choice < lbSize _object_ctrl);
         _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
         _object_ctrl lbSetCurSel _last_choice;
 
         uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_1", _comboIndex];
-        [2,_object_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_SpawnEmptyObject;
+        [2,_object_ctrl,_last_choice] call FUNC(RscDisplayAttributes_SpawnEmptyObject);
     };
     case "2":
     {
@@ -123,12 +123,12 @@ switch (_mode) do
         _subcategory_ctrl = _dialog displayCtrl IDC_SUBCATEGORY;
         _currentSubcategory = lbCurSel _subcategory_ctrl;
 
-        Achilles_var_emptyObject = (Achilles_var_emptyObjects_objectClasses select _currentCategory select _currentSubcategory select _comboIndex);
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_2", _comboIndex];
+        GVAR(emptyObject) = (GVAR(emptyObjects_objectClasses) select _currentCategory select _currentSubcategory select _comboIndex);
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_2), _comboIndex];
     };
     case "UNLOAD" : {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

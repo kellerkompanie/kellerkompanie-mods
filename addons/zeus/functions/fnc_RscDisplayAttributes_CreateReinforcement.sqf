@@ -30,8 +30,8 @@ switch (_mode) do
         lbClear _ctrlVehFac;
         {
             _ctrlVehFac lbAdd _x;
-        } forEach (Achilles_var_nestedList_vehicleFactions select _comboIndex);
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_1", 0];
+        } forEach (GVAR(nestedList_vehicleFactions) select _comboIndex);
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_1), 0];
         _lastChoice = [(lbSize _ctrlVehFac) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVehFac);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVehFac lbSetCurSel _lastChoice;
@@ -47,15 +47,15 @@ switch (_mode) do
         lbClear _ctrlVehCat;
         {
             _ctrlVehCat lbAdd _x;
-        } forEach (Achilles_var_nestedList_vehicleCategories select _sideId select _comboIndex);
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_2", 0];
+        } forEach (GVAR(nestedList_vehicleCategories) select _sideId select _comboIndex);
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_2), 0];
         _lastChoice = [(lbSize _ctrlVehCat) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVehCat);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVehCat lbSetCurSel _lastChoice;
 
         if (_ctrlGrpFac getVariable ["first_time", true]) then
         {
-            _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_7", ""];
+            _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_7), ""];
             _ctrlGrpFac setVariable ["first_time", false];
         } else
         {
@@ -73,12 +73,12 @@ switch (_mode) do
                 {
                     _lastChoice = _forEachIndex;
                 };
-            } forEach (Achilles_var_nestedList_groupFactions select _sideId);
+            } forEach (GVAR(nestedList_groupFactions) select _sideId);
         } else
         {
             {
                 _ctrlGrpFac lbAdd _x;
-            } forEach (Achilles_var_nestedList_groupFactions select _sideId);
+            } forEach (GVAR(nestedList_groupFactions) select _sideId);
             _lastChoice = [(lbSize _ctrlGrpFac) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlGrpFac);
             _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         };
@@ -97,8 +97,8 @@ switch (_mode) do
             private _lb_id = _ctrlVeh lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayName");
             _ctrlVeh lbSetData [_lb_id, _x];
             _ctrlVeh lbSetTextRight [_lb_id, ["(", (([_x, true] call BIS_fnc_crewCount) - ([_x, false] call BIS_fnc_crewCount)), ") "] joinString ""];
-        } forEach (Achilles_var_nestedList_vehicles select _sideId select _faction_id select _comboIndex);
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_3", ""];
+        } forEach (GVAR(nestedList_vehicles) select _sideId select _faction_id select _comboIndex);
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_3), ""];
         _lastChoice = [(lbSize _ctrlVeh) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVeh);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVeh lbSetCurSel _lastChoice;
@@ -127,7 +127,7 @@ switch (_mode) do
                 if (lbSize _ctrlWpType == 4) then {_ctrlWpType lbDelete 3};
             };
 
-            _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_6", 0];
+            _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_6), 0];
             _lastChoice = [0, _lastChoice] select (_lastChoice isEqualType 0);
             _lastChoice = [(lbSize _ctrlWpType) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlWpType);
             _ctrlWpType lbSetCurSel _lastChoice;
@@ -150,9 +150,9 @@ switch (_mode) do
         lbClear _ctrlGrp;
         {
             private _lb_id = _ctrlGrp lbAdd getText (_x >> "Name");
-            _ctrlGrp lbSetTextRight [_lb_id, "(" + str count (_x call Achilles_fnc_returnChildren) + ") "];
-        } forEach (Achilles_var_nestedList_groups select _sideId select _comboIndex);
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_8", 0];
+            _ctrlGrp lbSetTextRight [_lb_id, "(" + str count (_x call FUNC(returnChildren)) + ") "];
+        } forEach (GVAR(nestedList_groups) select _sideId select _comboIndex);
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_8), 0];
         _lastChoice = [(lbSize _ctrlGrp) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlGrp);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlGrp lbSetCurSel _lastChoice;

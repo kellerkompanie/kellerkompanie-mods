@@ -32,7 +32,7 @@ switch (_mode) do
                 _ctrl lbSetCurSel _last_choice;
                 if (_x == 0) then
                 {
-                    [0,_ctrl,_last_choice] call Achilles_fnc_RscDisplayAttributes_selectAIUnits;
+                    [0,_ctrl,_last_choice] call FUNC(RscDisplayAttributes_selectAIUnits);
                 };
             };
         } forEach [0,2,3];
@@ -61,11 +61,11 @@ switch (_mode) do
             };
         };
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_0), _comboIndex];
     };
     case "UNLOAD": {};
     default
     {
-        uiNamespace setVariable [format["Ares_ChooseDialog_ReturnValue_%1", _mode], _comboIndex];
+        uiNamespace setVariable [format[QGVAR(ChooseDialog_ReturnValue_) + "%1", _mode], _comboIndex];
     };
 };

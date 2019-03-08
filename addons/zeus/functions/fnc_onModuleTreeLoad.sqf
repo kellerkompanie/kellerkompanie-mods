@@ -52,8 +52,8 @@ for "_i" from 0 to ((_moduleTreeCtrl tvCount []) - 1) do
         0,
         _moduleIcon,
         _addonIcon
-    ] call Achilles_fnc_appendToModuleTree;
-} forEach Achilles_var_availableModuleClasses;
+    ] call FUNC(appendToModuleTree);
+} forEach GVAR(availableModuleClasses);
 
 // Add custom modules
 if (!isNil "Ares_Custom_Modules") then
@@ -73,8 +73,8 @@ if (!isNil "Ares_Custom_Modules") then
             _categoryName,
             _moduleDisplayName,
             _moduleClassName
-        ] call Achilles_fnc_appendToModuleTree;
-    } forEach Ares_Custom_Modules;
+        ] call FUNC(appendToModuleTree);
+    } forEach GVAR(Custom_Modules);
 };
 
 //Sort category and module list
@@ -86,10 +86,10 @@ for "_i" from 0 to ((_moduleTreeCtrl tvCount []) - 1) do
 
 // Set module category list for
 _categoryList sort true;
-Ares_category_list = _categoryList;
+GVAR(category_list) = _categoryList;
 
 // Create unit trees: Filter and collapse
-if (count Achilles_var_excludedFactions > 0 or Achilles_var_moduleTreeCollapse) then
+if (count GVAR(excludedFactions) > 0 or GVAR(moduleTreeCollapse)) then
 {
     {
         private _treeCtrl = _display displayCtrl _x;
@@ -97,12 +97,12 @@ if (count Achilles_var_excludedFactions > 0 or Achilles_var_moduleTreeCollapse) 
         {
             private _path = [_i];
             private _factionName = _treeCtrl tvText _path;
-            if (format ["%1%2", _factionName, _forEachIndex] in Achilles_var_excludedFactions) then
+            if (format ["%1%2", _factionName, _forEachIndex] in GVAR(excludedFactions)) then
             {
                 _treeCtrl tvDelete _path;
             } else
             {
-                if (Achilles_var_moduleTreeCollapse) then
+                if (GVAR(moduleTreeCollapse)) then
                 {
                     _treeCtrl tvCollapse _path;
                 };
@@ -118,7 +118,7 @@ if (count Achilles_var_excludedFactions > 0 or Achilles_var_moduleTreeCollapse) 
 };
 
 // Create empty unit tree: Collapse
-if (Achilles_var_moduleTreeCollapse) then
+if (GVAR(moduleTreeCollapse)) then
 {
     {
         private _treeCtrl = _display displayCtrl _x;
@@ -139,7 +139,7 @@ if (Achilles_var_moduleTreeCollapse) then
     {
         private _path = [0,_i];
         private _factionName = _treeCtrl tvText _path;
-        if (format ["%1%2", _factionName, _forEachIndex] in Achilles_var_excludedFactions) then
+        if (format ["%1%2", _factionName, _forEachIndex] in GVAR(excludedFactions)) then
         {
             _treeCtrl tvDelete _path;
         } else
@@ -168,7 +168,7 @@ if (Achilles_var_moduleTreeCollapse) then
 ];
 
 // Add DLC icons to empty objects to remind player which he can place for non-apex users.
-if (Achilles_var_moduleTreeDLC) then
+if (GVAR(moduleTreeDLC)) then
 {
     private _treeCtrl = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY;
     for "_i" from 0 to ((_treeCtrl tvCount []) - 1) do

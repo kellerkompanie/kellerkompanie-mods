@@ -13,13 +13,13 @@ if (_typeName == "OBJECT") then
         case (_ctrlKeyPressed):
         {
             missionnamespace setVariable ["bis_fnc_curatorObjectPlaced_mouseOver",[_typeName, _clickedObject]];
-            _logic = [getPos _clickedObject, "LOGIC"] call Ares_fnc_CreateLogic;
-            [_logic, [], true] call Achilles_fnc_moduleRemoteControl;
+            _logic = [getPos _clickedObject, "LOGIC"] call FUNC(CreateLogic);
+            [_logic, [], true] call FUNC(moduleRemoteControl);
             _handled = true;
         };
         case (_altKeyPressed):
         {
-            [_clickedObject] call Achilles_fnc_switchUnit_start;
+            [_clickedObject] call FUNC(switchUnit_start);
             _handled = true;
         };
         case (_clickedObject isKindOf "Land_ClutterCutter_small_F"):
@@ -28,7 +28,7 @@ if (_typeName == "OBJECT") then
             {
                 case (!isNil {_clickedObject getVariable "source"}):
                 {
-                    [_clickedObject] spawn Achilles_fnc_lightSourceAttributes;
+                    [_clickedObject] spawn FUNC(lightSourceAttributes);
                     _handled = true;
                 };
             };

@@ -8,7 +8,7 @@ private _display = _this;
 /*if (_currentVersion != profileNamespace getVariable ["Achilles_var_lastVersion", ""]) then*/
 if (true) then
 {
-    _display createDisplay "Ares_Welcome_Dialog";
+    _display createDisplay QGVAR(Welcome_Dialog);
     //profileNamespace setVariable ["Achilles_var_lastVersion", _currentVersion];
     //saveProfileNamespace;
 };

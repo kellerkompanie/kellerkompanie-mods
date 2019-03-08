@@ -33,7 +33,7 @@
 #define IDC_SPAWN_SUPPLYDROP_CARGO_VEHICLE_LABEL 10011
 #define IDC_SPAWN_SUPPLYDROP_CARGO_VEHICLE        20011
 
-#define CURATOR_IDCs                             [IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_GUER]
+#define CURATOR_IDCs [IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_GUER]
 
 disableSerialization;
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
@@ -57,10 +57,10 @@ switch (_mode) do
         lbClear _ctrlFaction;
         {
             _ctrlFaction lbAdd _x;
-        } forEach (Achilles_var_supplyDrop_factions select _comboIndex);
+        } forEach (GVAR(supplyDrop_factions) select _comboIndex);
 
         // Last choice
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_1", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_1), 0];
         _lastChoice = [(lbSize _ctrlFaction) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlFaction);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlFaction lbSetCurSel _lastChoice;
@@ -73,9 +73,9 @@ switch (_mode) do
         lbClear _ctrlCategory;
         {
             _ctrlCategory lbAdd _x;
-        } forEach (Achilles_var_supplyDrop_categories select _sideId select _comboIndex);
+        } forEach (GVAR(supplyDrop_categories) select _sideId select _comboIndex);
 
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_2", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_2), 0];
         _lastChoice = [(lbSize _ctrlCategory) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlCategory);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlCategory lbSetCurSel _lastChoice;
@@ -89,9 +89,9 @@ switch (_mode) do
         lbClear _ctrlVehicle;
         {
             _ctrlVehicle lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayName");
-        } forEach (Achilles_var_supplyDrop_vehicles select _sideId select _factionId select _comboIndex);
+        } forEach (GVAR(supplyDrop_vehicles) select _sideId select _factionId select _comboIndex);
 
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_3", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_3), 0];
         _lastChoice = [(lbSize _ctrlVehicle) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVehicle);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVehicle lbSetCurSel _lastChoice;
@@ -130,9 +130,9 @@ switch (_mode) do
             lbClear _ctrlCategory;
             {
                 _ctrlCategory lbAdd _x;
-            } forEach Achilles_var_supplyDrop_supplySubCategories;
+            } forEach GVAR(supplyDrop_supplySubCategories);
 
-            private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_10", 0];
+            private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_10), 0];
             _lastChoice = [(lbSize _ctrlCategory) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlCategory);
             _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
             _ctrlCategory lbSetCurSel _lastChoice;
@@ -166,9 +166,9 @@ switch (_mode) do
         lbClear _ctrlFaction;
         {
             _ctrlFaction lbAdd _x;
-        } forEach (Achilles_var_supplyDrop_cargoFactions select _comboIndex);
+        } forEach (GVAR(supplyDrop_cargoFactions) select _comboIndex);
 
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_9", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_9), 0];
         _lastChoice = [(lbSize _ctrlFaction) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlFaction);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlFaction lbSetCurSel _lastChoice;
@@ -182,9 +182,9 @@ switch (_mode) do
         lbClear _ctrlCategory;
         {
             _ctrlCategory lbAdd _x;
-        } forEach (Achilles_var_supplyDrop_cargoCategories select _sideId select _comboIndex);
+        } forEach (GVAR(supplyDrop_cargoCategories) select _sideId select _comboIndex);
 
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_10", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_10), 0];
         _lastChoice = [(lbSize _ctrlCategory) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlCategory);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlCategory lbSetCurSel _lastChoice;
@@ -201,14 +201,14 @@ switch (_mode) do
         {
             {
                 _ctrlVehicle lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayName");
-            } forEach (Achilles_var_supplyDrop_cargoVehicles select _sideId select _factionId select _comboIndex);
+            } forEach (GVAR(supplyDrop_cargoVehicles) select _sideId select _factionId select _comboIndex);
         } else
         {
             {
                 _ctrlVehicle lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayName");
-            } forEach (Achilles_var_supplyDrop_supplies select _comboIndex);
+            } forEach (GVAR(supplyDrop_supplies) select _comboIndex);
         };
-        private _lastChoice = uiNamespace getVariable ["Ares_ChooseDialog_ReturnValue_11", 0];
+        private _lastChoice = uiNamespace getVariable [QGVAR(ChooseDialog_ReturnValue_11), 0];
         _lastChoice = [(lbSize _ctrlVehicle) - 1, _lastChoice] select (_lastChoice < lbSize _ctrlVehicle);
         _lastChoice = [0,_lastChoice] select (_lastChoice isEqualType 0);
         _ctrlVehicle lbSetCurSel _lastChoice;
