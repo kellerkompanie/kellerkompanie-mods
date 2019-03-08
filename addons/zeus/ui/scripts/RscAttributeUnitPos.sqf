@@ -46,12 +46,12 @@ switch _mode do {
         private _display = _params select 0;
         private _selected = uinamespace getvariable ["RscAttributeUnitPos_selected",0];
         if (_entity isEqualType grpnull) then {
-            private _selectedGroups = ["group"] call Achilles_fnc_getCuratorSelected;
+            private _selectedGroups = ["group"] call FUNC(getCuratorSelected);
             _entities = [];
             {_entities append units _x} forEach _selectedGroups;
             _previousStanceId = _stances find (tolower unitpos leader _entity);
         } else {
-            _entities = ["man"] call Achilles_fnc_getCuratorSelected;
+            _entities = ["man"] call FUNC(getCuratorSelected);
             _previousStanceId = _stances find (tolower unitpos _entity);
         };
         if (_previousStanceId == _selected) exitWith {};
