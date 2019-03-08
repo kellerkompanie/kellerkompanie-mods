@@ -83,7 +83,7 @@ switch _mode do {
         if (_entity isEqualType []) then
         {
             if (waypointbehaviour _entity == _selected) exitWith {};
-            _curatorSelectedWPs = ["wp"] call Achilles_fnc_getCuratorSelected;
+            _curatorSelectedWPs = ["wp"] call FUNC(getCuratorSelected);
             {
                 _group = _x select 0;
                 _wp_id = _x select 1;
@@ -96,7 +96,7 @@ switch _mode do {
         } else
         {
             if (behaviour leader _entity == _selected) exitWith {};
-            _curatorSelectedGrps = ["group"] call Achilles_fnc_getCuratorSelected;
+            _curatorSelectedGrps = ["group"] call FUNC(getCuratorSelected);
             {
                 _leader = leader _x;
                 if (local _leader) then {_x setbehaviour _selected} else {[_x, _selected] remoteExec ["setbehaviour", _leader]};
