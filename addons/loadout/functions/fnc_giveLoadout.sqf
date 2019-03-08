@@ -59,6 +59,10 @@ private _grenadeMagazinesCfg = _magazinesCfg >> "grenade";
 private _smokeWhiteMagazinesCfg = _magazinesCfg >> "smokeWhite";
 private _smokeGreenMagazinesCfg = _magazinesCfg >> "smokeGreen";
 
+private _grenade = getText (_factionCfg >> "grenade");
+private _smokeWhite = getText (_factionCfg >> "smokeWhite");
+private _smokeGreen = getText (_factionCfg >> "smokeGreen");
+
 
 private _medicClass = [_medicClassCfg, _role] call FUNC(getRoleCfgNumber);
 private _engineerClass = [_engineerClassCfg, _role] call FUNC(getRoleCfgNumber);
@@ -182,12 +186,12 @@ if(isNumber (_smokeGreenMagazinesCfg >> _role) ) then {
 private _i = 0;
 for [{_i = 0}, {_i < _smokeWhiteMagCount}, {_i = _i + 1}] do {
     // TODO replace this with faction specific variant
-    [_player, "SmokeShell"] call CBA_fnc_addMagazine;
+    [_player, _smokeWhite] call CBA_fnc_addMagazine;
 };
 
 for [{_i = 0}, {_i < _smokeGreenMagCount}, {_i = _i + 1}] do {
     // TODO replace this with faction specific variant
-    [_player, "SmokeShellGreen"] call CBA_fnc_addMagazine;
+    [_player, _smokeGreen] call CBA_fnc_addMagazine;
 };
 
 
@@ -340,7 +344,7 @@ if(isNumber (_grenadeMagazinesCfg >> _role) ) then {
 private _i = 0;
 for [{_i = 0}, {_i < _grenadeMagCount}, {_i = _i + 1}] do {
     // TODO replace this with faction specific variant
-    [_player, "HandGrenade"] call CBA_fnc_addMagazine;
+    [_player, _grenade] call CBA_fnc_addMagazine;
 };
 
 
