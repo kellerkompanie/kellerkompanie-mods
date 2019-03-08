@@ -9,7 +9,14 @@ class CfgPatches {
         requiredAddons[] = {
             "ace_main",
             "ace_modules",
-            "keko_faction_generic"};
+            "keko_faction_generic",
+            "A3_UI_F",
+            "A3_UI_F_Curator",
+            "A3_Functions_F",
+            "A3_Functions_F_Curator",
+            "A3_Modules_F",
+            "A3_Modules_F_Curator"
+        };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
@@ -18,3 +25,11 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+#include "ui\dialogs\RscBaseClasses.hpp"
+
+#include "ui\dialogs\RscDialogCompositions.hpp"
+#include "ui\dialogs\RscDialogCopyPaste.hpp"
+#include "ui\dialogs\RscDialogDynamic.hpp"
+#include "ui\dialogs\RscDialogExecuteCode.hpp"
+#include "ui\dialogs\RscDisplayReplacement.hpp"
