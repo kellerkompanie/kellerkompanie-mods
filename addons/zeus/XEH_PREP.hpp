@@ -1,4 +1,5 @@
 PREP(AppendToModuleTree);
+PREP(getCuratorSelected);
 PREP(HandleCuratorGroupPlaced);
 PREP(HandleCuratorKeyPressed);
 PREP(HandleCuratorObjectDeleted);

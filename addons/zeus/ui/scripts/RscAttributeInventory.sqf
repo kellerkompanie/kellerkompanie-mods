@@ -3,7 +3,7 @@
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-#define VALUE_NUMBER    "#(argb, 1, 1, 1)color(0, 0, 0, 0)"
+#define VALUE_NUMBER "#(argb, 1, 1, 1)color(0, 0, 0, 0)"
 
 #define IDC_RSCATTRIBUTEINVENTORY_FILTER13        24081
 #define IDC_RSCATTRIBUTEINVENTORY_BUTTON_VA        24470
