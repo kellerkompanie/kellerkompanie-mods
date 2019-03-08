@@ -64,7 +64,7 @@ class RscDisplayAttributes
 // define class ammo for vehicles and units
 class RscAttributeAmmo: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this, 'RscAttributeAmmo', 'AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this, 'RscAttributeAmmo', 'keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 14775;
     x = 7 * BIGUI_GRID_W_FIX + (safezoneX);
     y = 10 * BIGUI_GRID_H_FIX + safezoneY + (safezoneH - 25 * BIGUI_GRID_H_FIX);
@@ -77,7 +77,7 @@ class RscAttributeAmmo: RscControlsGroupNoScrollbars
         class Title: RscText
         {
             idc = 13475;
-            text = "$STR_AMAE_AMMO";
+            text = "$STR_keko_zeus_AMMO";
             x = 0 * BIGUI_GRID_W_FIX;
             y = 0 * BIGUI_GRID_H_FIX;
             w = 10 * BIGUI_GRID_W_FIX;
@@ -100,57 +100,57 @@ class RscAttributeAmmo: RscControlsGroupNoScrollbars
 
 class RscAttributeRank: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeRank','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeRank','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeSkill: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeSkill','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeSkill','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeFuel: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeFuel','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeFuel','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeDamage: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeDamage','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeDamage','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeLock: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeLock','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeLock','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeUnitPos: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeUnitPos','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeUnitPos','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeFormation: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeFormation','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeFormation','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeSpeedMode: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeSpeedMode','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeSpeedMode','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeRespawnVehicle : RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeRespawnVehicle','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeRespawnVehicle','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeGroupID2 : RscAttributeGroupID
 {
-    onSetFocus = "[_this,'RscAttributeGroupID2','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeGroupID2','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeRespawnPosition: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeRespawnPosition','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeRespawnPosition','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 
     class controls
     {
@@ -168,7 +168,7 @@ class RscAttributeRespawnPosition: RscControlsGroupNoScrollbars
 
 class RscAttributeName: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeName','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeName','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 119279;
     x = 7 * BIGUI_GRID_W_FIX + (safezoneX);
     y = 10 * BIGUI_GRID_H_FIX + safezoneY + (safezoneH - 25 * BIGUI_GRID_H_FIX);
@@ -181,7 +181,7 @@ class RscAttributeName: RscControlsGroupNoScrollbars
         class Title: RscText
         {
             idc = 117979;
-            text = "$STR_AMAE_NAME";
+            text = "$STR_keko_zeus_NAME";
             x = 0 * BIGUI_GRID_W_FIX;
             y = 0 * BIGUI_GRID_H_FIX;
             w = 10 * BIGUI_GRID_W_FIX;
@@ -205,7 +205,7 @@ class RscAttributeName: RscControlsGroupNoScrollbars
 
 class RscAttributeHeadlight: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeHeadlight','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeHeadlight','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 114725;
     x = 7 * BIGUI_GRID_W_FIX + safezoneX + (safezoneW - 40 * BIGUI_GRID_W_FIX) / 2;
     y = 10 * BIGUI_GRID_H_FIX + safezoneY + (safezoneH - 25 * BIGUI_GRID_H_FIX) / 2;
@@ -218,7 +218,7 @@ class RscAttributeHeadlight: RscControlsGroupNoScrollbars
         class Title: RscText
         {
             idc = 113427;
-            text = "$STR_AMAE_HEADLIGHT_SEARCHLIGHT";
+            text = "$STR_keko_zeus_HEADLIGHT_SEARCHLIGHT";
             x = 0 * BIGUI_GRID_W_FIX;
             y = 0 * BIGUI_GRID_H_FIX;
             w = 10 * BIGUI_GRID_W_FIX;
@@ -241,23 +241,23 @@ class RscAttributeHeadlight: RscControlsGroupNoScrollbars
         class HeadlightOn: RscActivePicture
         {
             idc = 113627;
-            text = "achilles\data_f_achilles\icons\icon_headlightOn.paa";
+            text = QPATHTOF(ui\icons\icon_headlightOn.paa);
             x = 16 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_SWITCH_ON";
+            tooltip = "$STR_keko_zeus_SWITCH_ON";
         };
 
         class HeadlightOff: HeadlightOn
         {
             idc = 113630;
-            text = "achilles\data_f_achilles\icons\icon_headlightOff.paa";
+            text = QPATHTOF(ui\icons\icon_headlightOff.paa);
             x = 19.5 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_SWITCH_OFF";
+            tooltip = "$STR_keko_zeus_SWITCH_OFF";
         };
 
         class Default: HeadlightOn
@@ -275,7 +275,7 @@ class RscAttributeHeadlight: RscControlsGroupNoScrollbars
 
 class RscAttributeEngine: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeEngine','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeEngine','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 114726;
     x = 7 * BIGUI_GRID_W_FIX + safezoneX + (safezoneW - 40 * BIGUI_GRID_W_FIX) / 2;
     y = 10 * BIGUI_GRID_H_FIX + safezoneY + (safezoneH - 25 * BIGUI_GRID_H_FIX) / 2;
@@ -288,7 +288,7 @@ class RscAttributeEngine: RscControlsGroupNoScrollbars
         class Title: RscText
         {
             idc = 113427;
-            text = "$STR_AMAE_ENGINE";
+            text = "$STR_keko_zeus_ENGINE";
             x = 0 * BIGUI_GRID_W_FIX;
             y = 0 * BIGUI_GRID_H_FIX;
             w = 10 * BIGUI_GRID_W_FIX;
@@ -311,23 +311,23 @@ class RscAttributeEngine: RscControlsGroupNoScrollbars
         class EngineOn: RscActivePicture
         {
             idc = 113628;
-            text = "achilles\data_f_achilles\icons\icon_engineOn.paa";
+            text = QPATHTOF(ui\icons\icon_engineOn.paa);
             x = 16 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_SWITCH_ON";
+            tooltip = "$STR_keko_zeus_SWITCH_ON";
         };
 
         class EngineOff: EngineOn
         {
             idc = 113631;
-            text = "achilles\data_f_achilles\icons\icon_engineOff.paa";
+            text = QPATHTOF(ui\icons\icon_engineOff.paa);
             x = 19.5 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_SWITCH_OFF";
+            tooltip = "$STR_keko_zeus_SWITCH_OFF";
         };
 
         class Default: EngineOn
@@ -346,7 +346,7 @@ class RscAttributeEngine: RscControlsGroupNoScrollbars
 // define combat modes for groups and waypoints
 class RscAttributeCombatMode : RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeCombatMode','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeCombatMode','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 124569;
     x = 7 * BIGUI_GRID_W_FIX + safezoneX + (safezoneW - 40 * BIGUI_GRID_W_FIX) / 2;
     y = 10 * BIGUI_GRID_H_FIX + safezoneY + (safezoneH - 25 * BIGUI_GRID_H_FIX) / 2;
@@ -379,55 +379,55 @@ class RscAttributeCombatMode : RscControlsGroupNoScrollbars
         class HoldFire: RscActivePicture
         {
             idc = 123472;
-            text = "achilles\data_f_achilles\icons\icon_hold_fire.paa";
+            text = QPATHTOF(ui\icons\icon_hold_fire.paa);
             x = 11 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_HOLD_FIRE";
+            tooltip = "$STR_keko_zeus_HOLD_FIRE";
         };
         class HoldFireDefend : HoldFire
         {
             idc = 123471;
-            text = "achilles\data_f_achilles\icons\icon_hold_fire_defend.paa";
+            text = QPATHTOF(ui\icons\icon_hold_fire_defend.paa);
             x = 13.5 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_HOLD_FIRE_DEFEND";
+            tooltip = "$STR_keko_zeus_HOLD_FIRE_DEFEND";
         };
 
         class HoldFireEngage: HoldFire
         {
             idc = 123474;
-            text = "achilles\data_f_achilles\icons\icon_hold_fire_engage.paa";
+            text = QPATHTOF(ui\icons\icon_hold_fire_engage.paa);
             x = 16 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_HOLD_FIRE_ENGAGE";
+            tooltip = "$STR_keko_zeus_HOLD_FIRE_ENGAGE";
         };
 
         class Fire: HoldFire
         {
             idc = 123475;
-            text = "achilles\data_f_achilles\icons\icon_hold_fire.paa";
+            text = QPATHTOF(ui\icons\icon_hold_fire.paa);
             x = 18.5 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_FIRE_AT_WILL";
+            tooltip = "$STR_keko_zeus_FIRE_AT_WILL";
         };
 
         class FireEngage: HoldFire
         {
             idc = 123469;
-            text = "achilles\data_f_achilles\icons\icon_hold_fire_engage.paa";
+            text = QPATHTOF(ui\icons\icon_hold_fire_engage.paa);
             x = 21 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_FIRE_ENGAGE";
+            tooltip = "$STR_keko_zeus_FIRE_ENGAGE";
         };
 
         class Default: HoldFire
@@ -446,40 +446,40 @@ class RscAttributeCombatMode : RscControlsGroupNoScrollbars
 // implement careless option for groups and waypoints
 class RscAttributeBehaviour: RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeBehaviour','AresDisplays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeBehaviour','keko_zeus_Displays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
     class controls
     {
         class Title: RscText
         {
             // correction: behaviour was named combat mode in vanilla
-            text = "$STR_AMAE_GROUP_BEHAVIOUR";
+            text = "$STR_keko_zeus_GROUP_BEHAVIOUR";
         };
         class Careless: RscActivePicture
         {
             idc = 23472;
-            text = "achilles\data_f_achilles\icons\icon_careless.paa";
+            text = QPATHTOF(ui\icons\icon_careless.paa);
             x = 11 * BIGUI_GRID_W_FIX;
             y = 0.5 * BIGUI_GRID_H_FIX;
             w = 1.5 * BIGUI_GRID_W_FIX;
             h = 1.5 * BIGUI_GRID_H_FIX;
-            tooltip = "$STR_AMAE_CARELESS";
+            tooltip = "$STR_keko_zeus_CARELESS";
         };
     };
 };
 
 class RscAttributeOwners : RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeOwners','AresDisplays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeOwners','keko_zeus_Displays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeOwners2 : RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeOwners2','AresDisplays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeOwners2','keko_zeus_Displays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 class RscAttributeExec : RscControlsGroupNoScrollbars
 {
-    onSetFocus = "[_this,'RscAttributeExec','AresDisplays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeExec','keko_zeus_Displays'] call (uiNamespace getVariable 'keko_zeus_fnc_initCuratorAttribute')";
     adminOnly = 0;
     codeExecution = 1;
     class controls

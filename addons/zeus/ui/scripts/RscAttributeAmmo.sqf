@@ -37,7 +37,7 @@ switch _mode do {
             private _curatorSelected = ["vehicle"] call FUNC(getCuratorSelected);
             {
                 if (local _x) then {
-                    [_x, _ammo] call FUNC(setVehicleAmmoDef;
+                    [_x, _ammo] call FUNC(setVehicleAmmoDef);
                 } else {
                     [_x, _ammo] remoteExecCall [QFUNC(setVehicleAmmoDef), _x];
                 };

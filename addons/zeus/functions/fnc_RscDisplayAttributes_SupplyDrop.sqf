@@ -125,7 +125,7 @@ switch (_mode) do
                 _x ctrlCommit 0;
             } forEach [_cargoVehicleSide, _cargoVehicleFaction];
 
-            _ctrlCargoVehicleLabel ctrlSetText (localize "STR_AMAE_AMMUNITION_CRATE");
+            _ctrlCargoVehicleLabel ctrlSetText (localize "STR_keko_zeus_AMMUNITION_CRATE");
 
             lbClear _ctrlCategory;
             {
@@ -155,7 +155,7 @@ switch (_mode) do
                 _x ctrlCommit 0;
             } forEach [_cargoBoxInventoryCtrl];
 
-            _ctrlCargoVehicleLabel ctrlSetText (localize "STR_AMAE_VEHICLE");
+            _ctrlCargoVehicleLabel ctrlSetText (localize "STR_keko_zeus_VEHICLE");
             _cargoVehicleSide lbSetCurSel lbCurSel _cargoVehicleSide;
         };
     };

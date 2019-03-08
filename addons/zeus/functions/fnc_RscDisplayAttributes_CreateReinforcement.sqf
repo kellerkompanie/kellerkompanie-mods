@@ -120,7 +120,7 @@ switch (_mode) do
             // Add/remove HALO option
             if (_vehicleClass isKindOf "Plane") then
             {
-                if (lbSize _ctrlWpType == 3) then {_ctrlWpType lbAdd localize "STR_AMAE_HALO"};
+                if (lbSize _ctrlWpType == 3) then {_ctrlWpType lbAdd localize "STR_keko_zeus_HALO"};
             }
             else
             {

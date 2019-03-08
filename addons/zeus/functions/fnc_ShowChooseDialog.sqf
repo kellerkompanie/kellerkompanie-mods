@@ -249,8 +249,8 @@ private _titleVariableIdentifier = format [QGVAR(ChooseDialog_DefaultValues_) + 
             private _ctrl_type = switch (_choices) do
             {
                 case "SLIDER": {"RscXSliderH"};
-                case "MESSAGE": {"RscAchillesMessageEdit"};
-                default {"RscAchillesEdit"};
+                case "MESSAGE": {"RscKekoZeusMessageEdit"};
+                default {"RscKekoZeusEdit"};
             };
             private _ctrl = _dialog ctrlCreate [_ctrl_type, BASE_IDC_CTRL + _forEachIndex, _ctrl_group];
             _ctrl ctrlSetPosition [COMBO_COLUMN_X, _yCoord+LABEL_COMBO_H, COMBO_WIDTH, COMBO_HEIGHT + _add_height];

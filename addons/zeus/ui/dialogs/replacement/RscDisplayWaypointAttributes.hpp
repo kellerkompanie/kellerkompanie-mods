@@ -18,7 +18,7 @@ class CfgCurator {
 
 // Change aviable waypoints in corresponding resource
 class RscAttributeWaypointType: RscControlsGroupNoScrollbars {
-    onSetFocus = "[_this,'RscAttributeWaypointType','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeWaypointType','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     h = 8.5 * BIGUI_GRID_H_FIX;
     class controls {
         class Background: RscText {
@@ -27,23 +27,23 @@ class RscAttributeWaypointType: RscControlsGroupNoScrollbars {
         class Value: RscToolbox {
             rows = 6;
             columns = 3;
-            names[] = {"MOVE","CYCLE","SAD","HOLD","SENTRY","configFile >> 'cfgWaypoints' >> 'Achilles' >> 'SearchBuilding'","GETOUT","UNLOAD","TR UNLOAD","configFile >> 'cfgWaypoints' >> 'Achilles' >> 'Land'","configFile >> 'cfgWaypoints' >> 'Achilles' >> 'Fastroping'","configFile >> 'cfgWaypoints' >> 'Achilles' >> 'Paradrop'","HOOK","UNHOOK","configFile >> 'cfgWaypoints' >> 'Achilles' >> 'Repair'","configFile >> 'cfgWaypoints' >> 'A3' >> 'Demine'"};
-            strings[] = {"$STR_ac_move","$STR_ac_cycle","$STR_ac_seekanddestroy","$STR_ac_hold","$STR_ac_sentry","$STR_AMAE_WP_SEARCH_BUILDING","$STR_ac_getout","$STR_ac_unload","$STR_ac_transportunload","$STR_A3_CfgWaypoints_Land","$STR_AMAE_FASTROPING","$STR_AMAE_PARADROP","$STR_AMAE_LIFT_CLOSEST","$STR_ac_unhook","$STR_AMAE_WP_REPAIR","$STR_A3_Functions_F_Orange_Demine"};
+            names[] = {"MOVE","CYCLE","SAD","HOLD","SENTRY","configFile >> 'cfgWaypoints' >> 'keko_zeus' >> 'SearchBuilding'","GETOUT","UNLOAD","TR UNLOAD","configFile >> 'cfgWaypoints' >> 'keko_zeus' >> 'Land'","configFile >> 'cfgWaypoints' >> 'keko_zeus' >> 'Fastroping'","configFile >> 'cfgWaypoints' >> 'keko_zeus' >> 'Paradrop'","HOOK","UNHOOK","configFile >> 'cfgWaypoints' >> 'keko_zeus' >> 'Repair'","configFile >> 'cfgWaypoints' >> 'A3' >> 'Demine'"};
+            strings[] = {"$STR_ac_move","$STR_ac_cycle","$STR_ac_seekanddestroy","$STR_ac_hold","$STR_ac_sentry","$STR_keko_zeus_WP_SEARCH_BUILDING","$STR_ac_getout","$STR_ac_unload","$STR_ac_transportunload","$STR_A3_CfgWaypoints_Land","$STR_keko_zeus_FASTROPING","$STR_keko_zeus_PARADROP","$STR_keko_zeus_LIFT_CLOSEST","$STR_ac_unhook","$STR_keko_zeus_WP_REPAIR","$STR_A3_Functions_F_Orange_Demine"};
             h = 7.5 * BIGUI_GRID_H_FIX;
         };
     };
 };
 
 class RscAttributeWaypointTimeout: RscControlsGroupNoScrollbars {
-    onSetFocus = "[_this,'RscAttributeWaypointTimeout','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeWaypointTimeout','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
 };
 
 // include combat modes attribute
 class RscDisplayAttributesWaypoint: RscDisplayAttributes {
     scriptName = "RscDisplayAttributesWaypoint";
-    scriptPath = "AresDisplays";
-    onLoad = "['onLoad',_this,'RscDisplayAttributesWaypoint','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "['onUnload',_this,'RscDisplayAttributesWaypoint','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "['onLoad',_this,'RscDisplayAttributesWaypoint','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "['onUnload',_this,'RscDisplayAttributesWaypoint','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
 
     class Controls: Controls {
         class Content: Content {

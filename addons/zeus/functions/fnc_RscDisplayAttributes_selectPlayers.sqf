@@ -100,7 +100,7 @@ switch (_mode) do
                     _selection_list = [_selection_list,[],{groupId _x},"ASCEND"] call BIS_fnc_sortBy;
                     {_selection_ctrl lbAdd groupId _x} forEach _selection_list;
                     _dialog setVariable ["selection_mode","group"];
-                    _selection_lable ctrlSetText (localize "STR_AMAE_GROUP");
+                    _selection_lable ctrlSetText (localize "STR_keko_zeus_GROUP");
                 };
                 _dialog setVariable ["selection_list",_selection_list];
 
@@ -110,7 +110,7 @@ switch (_mode) do
             };
         };
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_0), _comboIndex];
     };
     case "1":
     {

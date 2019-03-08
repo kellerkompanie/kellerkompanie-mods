@@ -1,9 +1,9 @@
 class RscDisplayAttributesGroup: RscDisplayAttributes
 {
     scriptName = "RscDisplayAttributesGroup";
-    scriptPath = "AresDisplays";
-    onLoad = "['onLoad',_this,'RscDisplayAttributesGroup','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "['onUnload',_this,'RscDisplayAttributesGroup','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "['onLoad',_this,'RscDisplayAttributesGroup','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "['onUnload',_this,'RscDisplayAttributesGroup','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
 
     class Controls : Controls
     {
@@ -48,14 +48,14 @@ class RscDisplayAttributesGroup: RscDisplayAttributes
 
         class ButtonBehaviour : ButtonCustom
         {
-            text = "$STR_AMAE_SKILL";
+            text = "$STR_keko_zeus_SKILL";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changeSkills";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
 
         class ButtonSide : ButtonCustomLeft
         {
-            text = "$STR_AMAE_SIDE";
+            text = "$STR_keko_zeus_SIDE";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changeSideAttribute";
             colorBackground[] = {0.518,0.016,0,0.8};
         };

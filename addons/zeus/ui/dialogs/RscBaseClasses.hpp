@@ -82,7 +82,7 @@
 
 #define SL_TEXTURES       0x10
 
-// progress bar 
+// progress bar
 #define ST_VERTICAL       0x01
 #define ST_HORIZONTAL     0
 
@@ -142,29 +142,29 @@ class ctrlXSliderH: ctrlXSliderV {};
 class ctrlControlsGroup: ctrlDefault {};
 class ctrlControlsGroupNoScrollbars: ctrlControlsGroup {};
 
-// Achilles base classes
-class RscAchillesXSliderH: RscXSliderH
+// custom base classes
+class RscKekoZeusXSliderH: RscXSliderH
 {
 	colorBackground[] = {0,0,0,1};
 };
-class RscAchillesCombo : RscCombo
+class RscKekoZeusCombo : RscCombo
 {
 	h = 1 * GUI_GRID_H_FIX;
 	rowHeight = 1.1 * GUI_GRID_H_FIX;
 	wholeHeight = 6.5 * GUI_GRID_H_FIX;
 };
-class RscAchillesEdit: RscEdit
-{		
+class RscKekoZeusEdit: RscEdit
+{
 	autocomplete = "general";
 	colorBackground[] = {0,0,0,0};
 };
-class RscAchillesMessageEdit: RscAchillesEdit
+class RscKekoZeusMessageEdit: RscKekoZeusEdit
 {
 	style = 16;
 	linespacing = 1;
 	default = 1;
 };
-class RscAchillesScriptEdit: RscAchillesMessageEdit
-{		
+class RscKekoZeusScriptEdit: RscKekoZeusMessageEdit
+{
 	autocomplete = "scripting";
 };

@@ -1,5 +1,5 @@
 class RscAttributeDate: RscControlsGroupNoScrollbars {
-    onSetFocus = "[_this,'RscAttributeDate','AresDisplays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
+    onSetFocus = "[_this,'RscAttributeDate','keko_zeus_Displays'] call (uinamespace getvariable 'keko_zeus_fnc_initCuratorAttribute')";
     idc = 122438;
     x = 7 * BIGUI_GRID_W_FIX + (safezoneX);
     y = 10 * BIGUI_GRID_H_FIX + (safezoneY + safezoneH - 25* BIGUI_GRID_H_FIX);
@@ -226,9 +226,9 @@ class RscAttributeDate: RscControlsGroupNoScrollbars {
 class RscDisplayAttributesModuleSetDate: RscDisplayAttributes
 {
     scriptName = "RscDisplayAttributesModuleSetDate";
-    scriptPath = "AresDisplays";
-    onLoad = "['onLoad',_this,'RscDisplayAttributesModuleSetDate','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "['onUnload',_this,'RscDisplayAttributesModuleSetDate','AresDisplays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "['onLoad',_this,'RscDisplayAttributesModuleSetDate','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "['onUnload',_this,'RscDisplayAttributesModuleSetDate','keko_zeus_Displays'] call     (uinamespace getvariable 'BIS_fnc_initDisplay')";
 
     class Controls : Controls {
         class Background : Background {};
@@ -247,7 +247,7 @@ class RscDisplayAttributesModuleSetDate: RscDisplayAttributes
 
         class ButtonBehaviour : ButtonCustom
         {
-            text = "$STR_AMAE_PREVIEW";
+            text = "$STR_keko_zeus_PREVIEW";
             onMouseButtonClick = "with uiNamespace do {['preview',[ctrlParent (_this select 0)],objnull] call RscAttributeDate};";
             colorBackground[] = {0.518,0.016,0,0.8};
         };

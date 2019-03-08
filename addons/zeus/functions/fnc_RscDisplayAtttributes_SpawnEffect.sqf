@@ -58,7 +58,7 @@ switch (_mode) do
         _last_choice = [0, _last_choice] select (_last_choice isEqualType 0);
         _type_ctrl lbSetCurSel _last_choice;
 
-        uiNamespace setVariable ["Ares_ChooseDialog_ReturnValue_0", _comboIndex];
+        uiNamespace setVariable [QGVAR(ChooseDialog_ReturnValue_0), _comboIndex];
         [1,_type_ctrl,_last_choice] call FUNC(RscDisplayAtttributes_SpawnEffect);
     };
     case "UNLOAD" : {};

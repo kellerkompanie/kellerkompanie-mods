@@ -5,7 +5,7 @@
 
     Description:
     Initialize entity attribute. Called from UI using:
-    onSetFocus = [_this,"RscAttributeTest","AresDisplays"] call (uinamespace getvariable "Achilles_fnc_initCuratorAttribute");
+    onSetFocus = [_this,"RscAttributeTest","keko_zeus_Displays"] call (uinamespace getvariable "keko_zeus_fnc_initCuratorAttribute");
 
     Parameter(s):
         0: ARRAY - onSetFocus handler params - contains only DISPLAY

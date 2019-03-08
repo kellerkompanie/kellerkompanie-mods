@@ -17,7 +17,7 @@ switch (true) do
     case (_key in actionKeys "CuratorInterface"):
     {
         // if remote control unit and open chat => open controlled unit's chat
-        if (!isNil "bis_fnc_moduleRemoteControl_unit" and {not isNil {bis_fnc_moduleRemoteControl_unit getVariable "Achilles_var_switchUnit_data"}}) then
+        if (!isNil "bis_fnc_moduleRemoteControl_unit" and {not isNil {bis_fnc_moduleRemoteControl_unit getVariable QGVAR(switchUnit_data)}}) then
         {
             [] call FUNC(switchUnit_exit);
             _handled = true;

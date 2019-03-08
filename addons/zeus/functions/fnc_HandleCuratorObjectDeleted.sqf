@@ -39,7 +39,6 @@ switch (true) do
     };
     case (_handled_object isKindOf "Land_Carrier_01_base_F"):
     {
-        // {deleteVehicle _x} forEach (nearestObjects [position _handled_object, ["Land_Carrier_01_hull_GEO_Base_F","Land_Carrier_01_hull_base_F","DynamicAirport_01_F"], 200, true]);
         private _carrierPartsArray = _handled_object getVariable ["bis_carrierParts", []];
         {
             deleteVehicle (_x param [0,objNull]);

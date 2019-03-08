@@ -1,8 +1,8 @@
 class RscDisplayAttributesVehicle : RscDisplayAttributes {
     scriptName = "RscDisplayAttributesVehicle";
-    scriptPath = "AresDisplays";
-    onLoad = "['onLoad',_this,'RscDisplayAttributesVehicle','AresDisplays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "['onUnload',_this,'RscDisplayAttributesVehicle','AresDisplays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "['onLoad',_this,'RscDisplayAttributesVehicle','keko_zeus_Displays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "['onUnload',_this,'RscDisplayAttributesVehicle','keko_zeus_Displays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
 
     class Controls : Controls {
         class Content: Content {
@@ -25,33 +25,33 @@ class RscDisplayAttributesVehicle : RscDisplayAttributes {
             };
         };
         class ButtonBehaviour : ButtonCustom {
-            text = "$STR_AMAE_GARAGE";
+            text = "$STR_keko_zeus_GARAGE";
             onMouseButtonClick = "(findDisplay -1) closeDisplay 1; \
                                  ['Open', [false, BIS_fnc_initCuratorAttributes_target]] call BIS_fnc_garage";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonCargo : ButtonCustomLeft {
-            text = "$STR_AMAE_CARGO";
+            text = "$STR_keko_zeus_CARGO";
             onMouseButtonClick = "createdialog 'RscDisplayAttributesInventory'";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonAmmo : ButtonCustomLeftBelow {
-            text = "$STR_AMAE_LOADOUT";
+            text = "$STR_keko_zeus_LOADOUT";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changePylonAmmo;";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonDamage : ButtonCustomBelow {
-            text = "$STR_AMAE_DAMAGE";
+            text = "$STR_keko_zeus_DAMAGE";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_damageComponents";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonSensors : ButtonCustomLeft2 {
-            text = "$STR_AMAE_SENSORS";
+            text = "$STR_keko_zeus_SENSORS";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_setSensors";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonFlag : ButtonCustomLeftBelow2 {
-            text = "$STR_AMAE_ACCESSORY";
+            text = "$STR_keko_zeus_ACCESSORY";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changeAccessoires";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
@@ -61,9 +61,9 @@ class RscDisplayAttributesVehicle : RscDisplayAttributes {
 // assign custom buttons in empty vehicle edit interface
 class RscDisplayAttributesVehicleEmpty : RscDisplayAttributes {
     scriptName = "RscDisplayAttributesVehicle";
-    scriptPath = "AresDisplays";
-    onLoad = "['onLoad',_this,'RscDisplayAttributesVehicle','AresDisplays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    onUnload = "['onUnload',_this,'RscDisplayAttributesVehicle','AresDisplays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    scriptPath = "keko_zeus_Displays";
+    onLoad = "['onLoad',_this,'RscDisplayAttributesVehicle','keko_zeus_Displays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+    onUnload = "['onUnload',_this,'RscDisplayAttributesVehicle','keko_zeus_Displays'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
 
     class Controls : Controls {
         class Content: Content {
@@ -84,33 +84,33 @@ class RscDisplayAttributesVehicleEmpty : RscDisplayAttributes {
             };
         };
         class ButtonBehaviour : ButtonCustom {
-            text = "$STR_AMAE_GARAGE";
+            text = "$STR_keko_zeus_GARAGE";
             onMouseButtonClick = "(findDisplay -1) closeDisplay 1; \
                                  ['Open', [false, BIS_fnc_initCuratorAttributes_target]] call BIS_fnc_garage";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonCargo : ButtonCustomLeft {
-            text = "$STR_AMAE_CARGO";
+            text = "$STR_keko_zeus_CARGO";
             onMouseButtonClick = "createDialog 'RscDisplayAttributesInventory'";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonAmmo : ButtonCustomLeftBelow {
-            text = "$STR_AMAE_LOADOUT";
+            text = "$STR_keko_zeus_LOADOUT";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changePylonAmmo;";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonDamage : ButtonCustomBelow {
-            text = "$STR_AMAE_DAMAGE";
+            text = "$STR_keko_zeus_DAMAGE";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_damageComponents";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonSensors : ButtonCustomLeft2 {
-            text = "$STR_AMAE_SENSORS";
+            text = "$STR_keko_zeus_SENSORS";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_setSensors";
             colorBackground[] = {0.518,0.016,0,0.8};
         };
         class ButtonFlag : ButtonCustomLeftBelow2 {
-            text = "$STR_AMAE_ACCESSORY";
+            text = "$STR_keko_zeus_ACCESSORY";
             onMouseButtonClick = "[BIS_fnc_initCuratorAttributes_target] spawn keko_zeus_fnc_changeAccessoires";
             colorBackground[] = {0.518,0.016,0,0.8};
         };

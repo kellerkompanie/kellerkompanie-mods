@@ -4,23 +4,22 @@
 //    AUTHOR: Kex
 //    DATE: 5/1/16
 //    VERSION: 1.0
-//    FILE: Achilles\functions\fn_SelectUnits.sqf
 //  DESCRIPTION: Let the curator select units and submit the selection
 //
 //    ARGUMENTS:
-//    _this select 0:        STRING    - (Default: localize "STR_AMAE_OBJECTS") Tells what has to be selected
+//    _this select 0:        STRING    - (Default: localize "STR_keko_zeus_OBJECTS") Tells what has to be selected
 //    _this select 1:        BOOL    - (Default: false) If true only one object is returned. Otherwise the array of all groups / objects is returned.
 //
 //    RETURNS:
 //    _this:                OBJECT or GROUP or ARRAY of objects or groups or NIL if the selection was cancled
 //
 //    Example:
-//    _selected_units_array = ["units"] call Achilles_fnc_SelectUnits;
+//    _selected_units_array = ["units"] call keko_zeus_fnc_SelectUnits;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
 
-params[["_type", localize "STR_AMAE_OBJECTS", [""]], ["_single", false, [false]]];
+params[["_type", localize "STR_keko_zeus_OBJECTS", [""]], ["_single", false, [false]]];
 
 disableSerialization;
 private _display = finddisplay IDD_RSCDISPLAYCURATOR;
@@ -32,7 +31,7 @@ GVAR(submit_selection) = nil;
 playSound "FD_Finish_F";
 [["keko_zeus","SelectionOption"],15,"not isNil ""keko_zeus_submit_selection""",35,"not isNil ""keko_zeus_submit_selection""",true,true] call BIS_fnc_advHint;
 
-_ctrlMessage ctrlsettext toupper (format [localize "STR_AMAE_SELECT_X_APPLIED_TO_MODULE",_type]);
+_ctrlMessage ctrlsettext toupper (format [localize "STR_keko_zeus_SELECT_X_APPLIED_TO_MODULE",_type]);
 _ctrlMessage ctrlsetfade 1;
 _ctrlMessage ctrlcommit 0;
 _ctrlMessage ctrlsetfade 0;
@@ -47,7 +46,7 @@ private _handler_id = _display displayAddEventHandler ["KeyDown",
 }];
 
 // executed when the choice is submitted or cancled
-WaitUntil {!isNil "Achilles_var_submit_selection" or {isNull findDisplay 312}};
+WaitUntil {!isNil QGVAR(submit_selection) or {isNull findDisplay 312}};
 
 // remove the key handler and the message
 _display displayRemoveEventHandler ["KeyDown", _handler_id];
@@ -55,10 +54,10 @@ _ctrlMessage ctrlsetfade 1;
 _ctrlMessage ctrlcommit 0.5;
 
 // if escape was pressed
-if (!isNil QGVAR(submit_selection) && {!GVAR(submit_selection)}) exitWith {[localize "STR_AMAE_SELECTION_CANCLLED"] call FUNC(ShowZeusErrorMessage); nil};
+if (!isNil QGVAR(submit_selection) && {!GVAR(submit_selection)}) exitWith {[localize "STR_keko_zeus_SELECTION_CANCLLED"] call FUNC(ShowZeusErrorMessage); nil};
 
 // if enter was pressed
-[localize "STR_AMAE_SELECTION_SUBMITTED"] call FUNC(ShowZeusMessage);
+[localize "STR_keko_zeus_SELECTION_SUBMITTED"] call FUNC(ShowZeusMessage);
 
 if (_single) exitWith
 {
