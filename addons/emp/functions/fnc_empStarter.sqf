@@ -17,4 +17,7 @@ if (GVAR(affectRadio)) then {
     [_empSourceObject, _empRange] call FUNC(affectRadios);
 };
 
-[{!isNil "special_launchers_emp"}, {[] call FUNC(empEffect)}, []] call CBA_fnc_waitUntilAndExecute;
+[] spawn {
+    waitUntil {sleep 0.1; !isNil "special_launchers_emp"};
+    [] call FUNC(empEffect);
+};
