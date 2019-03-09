@@ -520,3 +520,4 @@ class FactionBase {
 #include "FactionUNSCDFMarines.hpp"
 #include "FactionUNSCDFMarinesHCW.hpp"
 #include "FactionUNSCDF_ODST.hpp"
+#include "FactionSystemsAlliance.hpp"
