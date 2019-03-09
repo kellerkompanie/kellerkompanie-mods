@@ -44,17 +44,17 @@ switch _mode do {
             _ctrl ctrlsetactivecolor (_colors select _foreachindex);
         } foreach _idcs;
 
-		//--- Select the current state
+        //--- Select the current state
         _selected = if (_entity isEqualType []) then {
             waypointbehaviour _entity
         } else {
             (_display displayctrl IDC_RSCATTRIBUTEBEHAVIOUR_DEFAULT) ctrlshow false;
             behaviour leader _entity
-		};
+        };
         _selectedIndex = _states find _selected;
         _selectedIDC = _idcs select _selectedIndex;
         ['onButtonClick',[_display displayctrl _selectedIDC,0]] call RscAttributeBehaviour;
-	};
+    };
     case "onButtonClick":
     {
         _ctrlSelected = _params select 0;
