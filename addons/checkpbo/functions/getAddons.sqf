@@ -22,10 +22,10 @@ private _loadedVersions = [];
     };
 } forEach _allPatches;
 
-private _i = 0;
+/*private _i = 0;
 for [{_i = 0}, {_i < (count _loadedAddons)}, {_i = _i + 1}] do    {
     private _addon = _loadedAddons select _i;
     private _version = _loadedVersions select _i;
 
     INFO_2("loaded %1 (%2)", _addon, _version);
-};
+};*/
