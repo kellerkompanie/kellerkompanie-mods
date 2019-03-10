@@ -1,8 +1,8 @@
 #include "defineResGrids.inc.sqf"
 
 // close dialog values
-#define IDC_OK				1
-#define IDC_CANCLE			2
+#define IDC_OK                1
+#define IDC_CANCLE            2
 
 // Control types
 #define CT_STATIC           0
@@ -145,26 +145,26 @@ class ctrlControlsGroupNoScrollbars: ctrlControlsGroup {};
 // custom base classes
 class RscKekoZeusXSliderH: RscXSliderH
 {
-	colorBackground[] = {0,0,0,1};
+    colorBackground[] = {0,0,0,1};
 };
 class RscKekoZeusCombo : RscCombo
 {
-	h = 1 * GUI_GRID_H_FIX;
-	rowHeight = 1.1 * GUI_GRID_H_FIX;
-	wholeHeight = 6.5 * GUI_GRID_H_FIX;
+    h = 1 * GUI_GRID_H_FIX;
+    rowHeight = 1.1 * GUI_GRID_H_FIX;
+    wholeHeight = 6.5 * GUI_GRID_H_FIX;
 };
 class RscKekoZeusEdit: RscEdit
 {
-	autocomplete = "general";
-	colorBackground[] = {0,0,0,0};
+    autocomplete = "general";
+    colorBackground[] = {0,0,0,0};
 };
 class RscKekoZeusMessageEdit: RscKekoZeusEdit
 {
-	style = 16;
-	linespacing = 1;
-	default = 1;
+    style = 16;
+    linespacing = 1;
+    default = 1;
 };
 class RscKekoZeusScriptEdit: RscKekoZeusMessageEdit
 {
-	autocomplete = "scripting";
+    autocomplete = "scripting";
 };
