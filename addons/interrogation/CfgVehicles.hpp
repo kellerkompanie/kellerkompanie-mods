@@ -41,9 +41,9 @@ class CfgVehicles {
             class DeadThreshold: Edit {
                 property = "DeadThreshold";
                 displayName = "Remaining strength threshold";
-                tooltip = "If the strength of the group (remaining survivors) falls below this threshold, the remaining survivors start thinking about surrender (value in percent).";
+                tooltip = "If the strength of the group (remaining survivors) is below or equal this number, the remaining survivors start thinking about surrender.";
                 typeName = "STRING";
-                defaultValue = "0.25";
+                defaultValue = "2";
             };
             class SurrenderChance: Edit {
                 property = "SurrenderChance";
