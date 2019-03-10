@@ -316,4 +316,11 @@ class CfgVehicles {
         category           = QGVAR(Default);
         function           = QFUNC(moduleCuratorCamEars);
     };
+    class GVAR(moduleUnflipVehicle): GVAR(moduleBase) {
+        displayName        = "Unflip Vehicle";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleUnflipVehicle);
+        icon = QPATHTOF(ui\icon_unflip_vehicle.paa);
+        curatorCanAttach   = 1;
+    };
 };

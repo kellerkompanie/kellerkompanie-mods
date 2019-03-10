@@ -8,7 +8,7 @@
 
 private _whitelist = ace_common_checkPBOsWhitelist;
 
-//TRACE_1("params", _whitelist);
+INFO_1("_whitelist = %1", _whitelist);
 
 //lowercase and convert whiteList String into array of strings:
 _whitelist = toLower _whitelist;
