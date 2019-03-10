@@ -15,7 +15,11 @@ if (isServer) then {
 
         if(_name == "__SERVER__" ) exitWith {};
 
-        remoteExec [QFUNC(onPlayerConnected), _owner];
+        {
+            #include "functions\getAddons.sqf"
+
+            [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
+        } remoteExec ["call", _owner];
     }];
 };
 
