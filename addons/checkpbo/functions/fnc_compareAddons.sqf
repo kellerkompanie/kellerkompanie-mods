@@ -42,6 +42,6 @@ if (count _errorMessages > 0) then {
     _errorMessages = ["<t color='#ff0000' align='center'>You have to fix your addon errors before you can continue playing on this server</t>", "", "<t align='center'>Info: This message is also copied to your clipboard</t>", ""] + _errorMessages;
     private _errorMessage = parseText (_errorMessages joinString "<br/>");
     private _br = toString [13,10];
-    copyToClipboard str (_errorMessages joinString _br);
-    ["Addon Erros Detected", _errorMessage, {findDisplay 46 closeDisplay 0}] call ace_common_fnc_errorMessage;
+    (str (_errorMessages joinString _br)) remoteExec ["copyToClipboard", _player];
+    ["Addon Erros Detected", _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
 };
