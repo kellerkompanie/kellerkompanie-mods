@@ -5,7 +5,7 @@ if !(isServer) exitWith {ERROR("comparing addons can only be executed on server"
 params ["_clientAddons", "_player"];
 
 private _playerName = name _player;
-private _serverAddons = parsingNamespace getVariable [QGVAR(loadedAddons), []];
+private _serverAddons = call FUNC(determineAddons);
 
 _serverAddons params ["_serverAddonNames", "_serverAddonVersions"];
 _clientAddons params ["_clientAddonNames", "_clientAddonVersions"];
