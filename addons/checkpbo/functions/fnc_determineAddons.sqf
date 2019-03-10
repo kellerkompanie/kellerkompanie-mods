@@ -4,18 +4,13 @@ private _addonsWhitelist = [
     "extdb3",
     "keko_logging",
     "keko_persistency",
-    "stui_core",
-    "stui_grouphud",
-    "stui_groupindicators",
-    "stui_nametags",
-    "stui_stamina",
     "warfxpe",
     "blastcore_maincore",
+    "blastcore_vep",
     "jsrs_soundmod_bullethits",
     "jsrs_soundmod_environment",
     "jsrs_soundmod_framework",
     "jsrs_soundmod_sonic_cracks",
-    "blastcore_vep",
     "jsrs_soundmod_helicopters",
     "jsrs_soundmod_landvehicles",
     "jsrs_soundmod_movement",
@@ -42,8 +37,6 @@ private _addonsWhitelist = [
     "jsrs_rhs_t72",
     "jsrs_rhs_t80",
     "jsrs_soundmod_specialist_military_arms_weapons",
-    "compositions_a3",
-    "zeccup",
     "jsrs_soundmod_rhs_gref_weapons",
     "jsrs_soundmod_rhs_saf_weapons"
 ];
@@ -55,11 +48,19 @@ private _loadedAddons = [];
 private _loadedVersions = [];
 {
     private _addonName = toLower (configName _x);
-    if(_addonName find "a3_" != 0 && !(_addonName in _addonsWhitelist) ) then {
+    if(_addonName find "a3_" != 0 && _addonName find "curatoronly_" != 0 && !(_addonName in _addonsWhitelist) ) then {
         private _addonVersion = getText (_x >> "version");
         _loadedAddons pushBack _addonName;
         _loadedVersions pushBack _addonVersion;
     };
 } forEach _allPatches;
+
+private _i = 0;
+for [{_i = 0}, {_i < (count _loadedAddons)}, {_i = _i + 1}] do    {
+    private _addon = _loadedAddons select _i;
+    private _version = _loadedVersions select _i;
+
+    INFO_2("loaded %1 (%2)", _addon, _version);
+};
 
 parsingNamespace setVariable [QGVAR(loadedAddons), [_loadedAddons, _loadedVersions]];

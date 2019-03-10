@@ -1,42 +1,30 @@
 #include "script_component.hpp"
 
-//INFO("compareAddons");
+if !(isServer) exitWith {ERROR("comparing addons can only be executed on server")};
 
-params ["_clientAddons", "_playerName"];
+params ["_clientAddons", "_player"];
 
-//INFO_1("compareAddons _playerName", _playerName);
-//INFO_1("compareAddons _clientAddons", _clientAddons);
-
-//diag_log text format ["[KEKO] (checkpbo) _clientAddons = %1", _clientAddons];
-
+private _playerName = name _player;
 private _serverAddons = parsingNamespace getVariable [QGVAR(loadedAddons), []];
-//diag_log text format ["[KEKO] (checkpbo) _serverAddons = %1", _serverAddons];
+
 _serverAddons params ["_serverAddonNames", "_serverAddonVersions"];
 _clientAddons params ["_clientAddonNames", "_clientAddonVersions"];
 
 private _missingAddonsOnClient = _serverAddonNames - _clientAddonNames;
 private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 
-//INFO_1("compareAddons _missingAddonsOnClient", _missingAddonsOnClient);
-//INFO_1("compareAddons _missingAddonsOnServer", _missingAddonsOnServer);
+private _errorMessages = [];
 
 if(count _missingAddonsOnClient > 0) then {
-    //INFO("compareAddons error count _missingAddonsOnClient > 0");
-    systemChat format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient];
+    _errorMessages pushBack (format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient]);
 };
-
-//INFO("compareAddons 1");
 
 if(count _missingAddonsOnServer > 0) then {
-    //INFO("compareAddons error count _missingAddonsOnServer > 0");
-    systemChat format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient];
+    _errorMessages pushBack (format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient]);
 };
-
-//INFO("compareAddons 2");
 
 if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0) ) then {
     // there is no obvious difference in loaded addons, now check versions
-    //INFO("compareAddons error ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0)");
     private _i = 0;
     for [{_i = 0}, {_i < (count _clientAddonVersions)}, {_i = _i + 1}] do    {
         private _serverAddonVersion = _serverAddonVersions select _i;
@@ -45,9 +33,15 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
         if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
             private _serverAddonName = _serverAddonNames select _i;
             private _clientAddonName = _clientAddonNames select _i;
-            systemChat format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion];
+            _errorMessages pushBack (format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion]);
         };
     };
 };
 
-//INFO("compareAddons finish");
+if (count _errorMessages > 0) then {
+    _errorMessages = ["<t color='#ff0000' align='center'>You have to fix your addon errors before you can continue playing on this server</t>", "", "<t align='center'>Info: This message is also copied to your clipboard</t>", ""] + _errorMessages;
+    private _errorMessage = parseText (_errorMessages joinString "<br/>");
+    private _br = toString [13,10];
+    copyToClipboard str (_errorMessages joinString _br);
+    ["Addon Erros Detected", _errorMessage, {findDisplay 46 closeDisplay 0}] call ace_common_fnc_errorMessage;
+};

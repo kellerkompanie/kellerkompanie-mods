@@ -1,4 +1,3 @@
-// original version by commy2 from ACE3
 #include "script_component.hpp"
 
 private _files = [];
