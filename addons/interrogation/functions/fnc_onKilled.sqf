@@ -17,8 +17,19 @@ if (_initialUnitCount == -1) exitWith {};
 
 private _deadThreshold = _group getVariable [QGVAR(deathThreshold), -1];
 private _surrenderChance = _group getVariable [QGVAR(surrenderChance), -1];
+private _enemyNearbyInfluence = _group getVariable ["EnemyNearbyInfluence", -1];
+private _enemyNearbyRadius = _group getVariable ["EnemyNearbyRadius", -1];
+private _enemyNearbyFactor = _group getVariable ["EnemyNearbyFactor", -1];
 
 if ( (_deadThreshold == -1) || (_surrenderChance == -1) ) exitWith {};
+
+if(_enemyNearbyInfluence > 0) then {
+    private _nearbyMen = _unit nearEntities ["Man", _enemyNearbyRadius];
+    private _enemyCount = _unit countEnemy _nearbyMen;
+    if (_enemyCount >= _enemyNearbyInfluence) then {
+        _surrenderChance = _surrenderChance + _enemyNearbyFactor;
+    };
+};
 
 private _survivorCount = {alive _x && _x != _unit && !(_x getVariable ["ace_captives_isSurrendering", false]) } count (units _group);
 private _survivorRate = _survivorCount / _initialUnitCount;
