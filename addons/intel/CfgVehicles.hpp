@@ -70,4 +70,18 @@ class CfgVehicles {
         scopeCurator       = 2;
         curatorCanAttach   = 1;
     };
+
+    // Remove Bohemia Default Intel Interactions
+    class Land_File1_F;
+    class Land_File2_F;
+    class Land_Photos_V3_F;
+    class Intel_File1_F: Land_File1_F {
+        delete EventHandlers;
+    };
+    class Intel_File2_F: Land_File2_F {
+        delete EventHandlers;
+    };
+    class Intel_Photos_F: Land_Photos_V3_F {
+        delete EventHandlers;
+    };
 };
