@@ -52,6 +52,27 @@ class CfgVehicles {
                 typeName = "SCALAR";
                 defaultValue = 0.6;
             };
+            class EnemyNearbyInfluence: Edit {
+                property = "EnemyNearbyInfluence";
+                displayName = "Enemies nearby count";
+                tooltip = "Decides how many enemies have to be near the target in order to increase the surrender chance. Value is the number of enemies.";
+                typeName = "SCALAR";
+                defaultValue = 2;
+            };
+            class EnemyNearbyRadius: Edit {
+                property = "EnemyNearbyRadius";
+                displayName = "Enemies nearby radius";
+                tooltip = "In which radius enemies are considered nearby and influencing the decision to surrender. Value in meters.";
+                typeName = "SCALAR";
+                defaultValue = 10;
+            };
+            class EnemyNearbyFactor: Edit {
+                property = "EnemyNearbyFactor";
+                displayName = "Enemies nearby factor";
+                tooltip = "By how much is the surrender chance influenced by enemies nearby. Value in percent, is added to the existing surrender chance.";
+                typeName = "SCALAR";
+                defaultValue = 0.25;
+            };
             class OnSurrenderCode: Edit {
                 property = "OnSurrenderCode";
                 displayName = "Server execute onSurrender";
