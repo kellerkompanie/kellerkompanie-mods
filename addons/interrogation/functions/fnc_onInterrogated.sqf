@@ -7,7 +7,6 @@ params ["_unit", "_interrogator", "_actionId"];
 private _group = group _unit;
 private _onInterrogatedCodeString = _group getVariable [QGVAR(onInterrogateCode), ""];
 
-if (count _onInterrogatedCodeString == 0) exitWith {};
-
-//(format ["%1 was interrogated by %2", _unit, _interrogator]) remoteExec ["systemChat", [0, -2] select isDedicated];
-call compile _onInterrogatedCodeString;
+if (count _onInterrogatedCodeString == 0) then {
+    call compile _onInterrogatedCodeString;
+};

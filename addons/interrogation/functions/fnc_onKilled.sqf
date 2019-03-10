@@ -5,11 +5,9 @@ params ["_unit"];
 private _group = group _unit;
 private _onKilledCodeString = _group getVariable [QGVAR(onKilledCode), ""];
 
-if (count _onKilledCodeString == 0) exitWith {};
-
-//(format ["%1 died", _unit]) remoteExec ["systemChat", [0, -2] select isDedicated];
-//(format ["_onKilledCodeString = %1", _onKilledCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
-call compile _onKilledCodeString;
+if (count _onKilledCodeString == 0) then {
+    call compile _onKilledCodeString;
+};
 
 private _initialUnitCount = _group getVariable [QGVAR(initialUnitCount), -1];
 
