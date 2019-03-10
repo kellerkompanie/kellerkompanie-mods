@@ -14,7 +14,9 @@ class CfgPatches {
             "3den",
             "ace_main",
             "ace_modules",
-            "cba_main" };
+            "cba_main",
+            "A3_Data_F_Curator_Intel"
+        };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
