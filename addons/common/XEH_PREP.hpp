@@ -26,3 +26,4 @@ PREP(moduleRespawnPosition);
 PREP(moduleRespawnPosition3den);
 PREP(replaceString);
 PREP(setRespawnPosition);
+PREP(unflipVehicle);
