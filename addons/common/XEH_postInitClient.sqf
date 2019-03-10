@@ -84,3 +84,9 @@ player addEventHandler ["Fired", {
 [{
     _this call FUNC(itemCheck);
 }, [player], 0.5, 0.1] call CBA_fnc_waitAndExecute;
+
+
+
+// add option to unflip vehicles
+private _unflipAction = ["UnflipVehicle", "Unflip Vehicle", "", {_target remoteExec [QFUNC(unflipVehicle), _target]}, {true}] call ace_interact_menu_fnc_createAction;
+["LandVehicle", 0, ["ACE_MainActions"], _unflipAction, true] call ace_interact_menu_fnc_addActionToClass;
