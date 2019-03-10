@@ -76,12 +76,15 @@ class CfgVehicles {
     class Land_File2_F;
     class Land_Photos_V3_F;
     class Intel_File1_F: Land_File1_F {
-        delete EventHandlers;
+        scope = 0;
+        scopeCurator = 0;
     };
     class Intel_File2_F: Land_File2_F {
-        delete EventHandlers;
+        scope = 0;
+        scopeCurator = 0;
     };
     class Intel_Photos_F: Land_Photos_V3_F {
-        delete EventHandlers;
+        scope = 0;
+        scopeCurator = 0;
     };
 };
