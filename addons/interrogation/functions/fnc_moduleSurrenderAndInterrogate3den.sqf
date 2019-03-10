@@ -5,7 +5,7 @@ private _logic = _this select 0;
 if !(isServer) exitWith {};
 
 // get variables set in module
-private _deathThreshold = parseNumber (_logic getVariable ["DeadThreshold", "0.8"]);
+private _deathThreshold = parseNumber (_logic getVariable ["DeadThreshold", "2"]);
 private _surrenderChance = parseNumber (_logic getVariable ["SurrenderChance", "0.6"]);
 
 private _enemyNearbyInfluence = parseNumber (_logic getVariable ["EnemyNearbyInfluence", "2"]);

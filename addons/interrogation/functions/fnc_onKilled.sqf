@@ -32,9 +32,8 @@ if(_enemyNearbyInfluence > 0) then {
 };
 
 private _survivorCount = {alive _x && _x != _unit && !(_x getVariable ["ace_captives_isSurrendering", false]) } count (units _group);
-private _survivorRate = _survivorCount / _initialUnitCount;
 
-if ( _survivorRate < _deadThreshold ) then {
+if ( _survivorCount <= _deadThreshold ) then {
     {
         private _isSurrendering = _x getVariable ["ace_captives_isSurrendering", false];
         if (alive _x && _x != _unit && !_isSurrendering) then {
