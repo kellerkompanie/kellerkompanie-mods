@@ -40,7 +40,7 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
 };
 
 if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissingAddonsOnServer > 0 || count _errorMessagesVersionMismatch > 0) then {
-    private _errorMessages = ["<t color='#ff0000' align='center'>You have to fix your addon errors before you can continue playing on this server</t>", "", "<t align='center'>Info: A more detailed message was copied to your clipboard</t>", ""];
+    private _errorMessages = [localize LSTRING(errorMessage), "", localize LSTRING(errorMessageClipboard), ""];
 
     if(count _errorMessagesMissingAddonsOnClient > 0) then {
         _errorMessages pushBack (localize LSTRING(errorMessageAddonsOnServer));
@@ -58,8 +58,8 @@ if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissing
     private _br = toString [13,10];
     private _allErrors = _errorMessages + _errorMessagesMissingAddonsOnClient + _errorMessagesMissingAddonsOnServer + _errorMessagesVersionMismatch;
     private _comprehensiveErrorMessage = _allErrors joinString _br;
-    _comprehensiveErrorMessage remoteExec ["copyToClipboard", _player];
+    (str _comprehensiveErrorMessage) remoteExec ["copyToClipboard", _player];
 
     private _errorMessage = parseText (_errorMessages joinString "<br/>");
-    ["Addon Erros Detected", _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
+    [localize LSTRING(errorTitle), _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
 };

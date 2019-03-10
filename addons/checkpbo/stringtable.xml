@@ -27,5 +27,17 @@
             <German>Einige Addons haben unterschiedliche Versionen auf deinem PC und auf dem Server.</German>
         </Key>
 
-        </Package>
+        <Key ID="STR_keko_checkpbo_errorTitle">
+            <English>Addon Errors Detected</English>
+            <German>Addon Fehler entdeckt</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessage">
+            <English>&lt;t color='#ff0000' align='center'&gt;You have to fix your addon errors before you can continue playing on this server!&lt;/t&gt;</English>
+            <German>&lt;t color='#ff0000' align='center'&gt;Du musst deine Addon Fehler reparieren bevor du auf diesem Server spielen kannst!&lt;/t&gt;</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorClipboard">
+            <English>&lt;t align='center'&gt;Info: A more detailed message was copied to your clipboard&lt;/t&gt;</English>
+            <German>&lt;t align='center'&gt;Info: Eine detaillierte Nachricht wurde in deine Zwischenablage kopiert&lt;/t&gt;</German>
+        </Key>
+    </Package>
 </Project>
