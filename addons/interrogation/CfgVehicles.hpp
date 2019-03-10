@@ -42,36 +42,36 @@ class CfgVehicles {
                 property = "DeadThreshold";
                 displayName = "Remaining strength threshold";
                 tooltip = "If the strength of the group (remaining survivors) falls below this threshold, the remaining survivors start thinking about surrender (value in percent).";
-                typeName = "SCALAR";
-                defaultValue = 0.25;
+                typeName = "STRING";
+                defaultValue = "0.25";
             };
             class SurrenderChance: Edit {
                 property = "SurrenderChance";
                 displayName = "Surrender chance";
                 tooltip = "If the strength threshold is met, how high is the chance that one of the survivors surrenders (value in percent).";
-                typeName = "SCALAR";
-                defaultValue = 0.6;
+                typeName = "STRING";
+                defaultValue = "0.6";
             };
             class EnemyNearbyInfluence: Edit {
                 property = "EnemyNearbyInfluence";
                 displayName = "Enemies nearby count";
                 tooltip = "Decides how many enemies have to be near the target in order to increase the surrender chance. Value is the number of enemies.";
-                typeName = "SCALAR";
-                defaultValue = 2;
+                typeName = "STRING";
+                defaultValue = "2";
             };
             class EnemyNearbyRadius: Edit {
                 property = "EnemyNearbyRadius";
                 displayName = "Enemies nearby radius";
                 tooltip = "In which radius enemies are considered nearby and influencing the decision to surrender. Value in meters.";
-                typeName = "SCALAR";
-                defaultValue = 10;
+                typeName = "STRING";
+                defaultValue = "10";
             };
             class EnemyNearbyFactor: Edit {
                 property = "EnemyNearbyFactor";
                 displayName = "Enemies nearby factor";
                 tooltip = "By how much is the surrender chance influenced by enemies nearby. Value in percent, is added to the existing surrender chance.";
-                typeName = "SCALAR";
-                defaultValue = 0.25;
+                typeName = "STRING";
+                defaultValue = "0.25";
             };
             class OnSurrenderCode: Edit {
                 property = "OnSurrenderCode";
