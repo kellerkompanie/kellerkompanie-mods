@@ -13,16 +13,17 @@ _clientAddons params ["_clientAddonNames", "_clientAddonVersions"];
 private _missingAddonsOnClient = _serverAddonNames - _clientAddonNames;
 private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 
-private _errorMessages = [];
-
+private _errorMessagesMissingAddonsOnClient = [];
 if(count _missingAddonsOnClient > 0) then {
-    _errorMessages pushBack (format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient]);
+    _errorMessagesMissingAddonsOnClient pushBack (format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient]);
 };
 
+private _errorMessagesMissingAddonsOnServer = [];
 if(count _missingAddonsOnServer > 0) then {
-    _errorMessages pushBack (format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient]);
+    _errorMessagesMissingAddonsOnServer pushBack (format [localize LSTRING(errorAddonsNotOnServer), _playerName, _missingAddonsOnClient]);
 };
 
+private _errorMessagesVersionMismatch = [];
 if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 0) ) then {
     // there is no obvious difference in loaded addons, now check versions
     private _i = 0;
@@ -33,15 +34,32 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
         if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
             private _serverAddonName = _serverAddonNames select _i;
             private _clientAddonName = _clientAddonNames select _i;
-            _errorMessages pushBack (format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion]);
+            _errorMessagesVersionMismatch pushBack (format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion]);
         };
     };
 };
 
-if (count _errorMessages > 0) then {
-    _errorMessages = ["<t color='#ff0000' align='center'>You have to fix your addon errors before you can continue playing on this server</t>", "", "<t align='center'>Info: This message is also copied to your clipboard</t>", ""] + _errorMessages;
-    private _errorMessage = parseText (_errorMessages joinString "<br/>");
+if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissingAddonsOnServer > 0 || count _errorMessagesVersionMismatch > 0) then {
+    private _errorMessages = ["<t color='#ff0000' align='center'>You have to fix your addon errors before you can continue playing on this server</t>", "", "<t align='center'>Info: A more detailed message was copied to your clipboard</t>", ""];
+
+    if(count _errorMessagesMissingAddonsOnClient > 0) then {
+        _errorMessages pushBack (localize LSTRING(errorMessageAddonsOnServer));
+        _errorMessages pushBack "";
+    };
+    if (count _errorMessagesMissingAddonsOnServer > 0) then {
+        _errorMessages pushBack (localize LSTRING(errorMessageAddonsNotOnServer));
+        _errorMessages pushBack "";
+    };
+    if (count _errorMessagesVersionMismatch > 0) then {
+        _errorMessages pushBack (localize LSTRING(errorMessageDifferentVersions));
+        _errorMessages pushBack "";
+    };
+
     private _br = toString [13,10];
-    (str (_errorMessages joinString _br)) remoteExec ["copyToClipboard", _player];
+    private _allErrors = _errorMessages + _errorMessagesMissingAddonsOnClient + _errorMessagesMissingAddonsOnServer + _errorMessagesVersionMismatch;
+    private _comprehensiveErrorMessage = _allErrors joinString _br;
+    _comprehensiveErrorMessage remoteExec ["copyToClipboard", _player];
+
+    private _errorMessage = parseText (_errorMessages joinString "<br/>");
     ["Addon Erros Detected", _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
 };

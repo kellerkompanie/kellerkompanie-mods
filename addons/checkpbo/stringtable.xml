@@ -2,16 +2,30 @@
 <Project name="keko">
     <Package name="checkpbo">
         <Key ID="STR_keko_checkpbo_errorAddonsOnServer">
-            <English>&lt;t color='#ff0000'&gt;ERROR: The following addons are on the server, but not on %1's machine: %2&lt;/t&gt;</English>
-            <German>&lt;t color='#ff0000'&gt;FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2&lt;/t&gt;</German>
+            <English>ERROR: The following addons are on the server, but not on %1's machine: %2</English>
+            <German>FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2</German>
         </Key>
         <Key ID="STR_keko_checkpbo_errorAddonsNotOnServer">
-            <English>&lt;t color='#ff0000'&gt;ERROR: The following addons are on %1's machine, but not on the server: %2&lt;/t&gt;</English>
-            <German>&lt;t color='#ff0000'&gt;FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2&lt;/t&gt;</German>
+            <English>ERROR: The following addons are on %1's machine, but not on the server: %2</English>
+            <German>FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2</German>
         </Key>
         <Key ID="STR_keko_checkpbo_errorDifferentVersions">
-            <English>&lt;t color='#ff0000'&gt;ERROR: Different versions - Server: [%1, %2] | %3 [%4, %5]&lt;/t&gt;</English>
-            <German>&lt;t color='#ff0000'&gt;FEHLER: Unterschiedliche Versionen - Server: [%1, %2] | %3 [%4, %5]&lt;/t&gt;</German>
+            <English>ERROR: Different versions - Server: %1 (%2) | %3: %4 (%5)</English>
+            <German>FEHLER: Unterschiedliche Versionen - Server: %1 (%2) | %3: %4 (%5)</German>
         </Key>
+
+        <Key ID="STR_keko_checkpbo_errorMessageAddonsOnServer">
+            <English>There are addons active on the server, but not on your machine.</English>
+            <German>Es gibt Addons die auf dem Server geladen sind, aber nicht auf deinem PC.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageAddonsNotOnServer">
+            <English>There are addons active on your machine, which are not active on the server.</English>
+            <German>Es gibt Addons die auf deinem PC geladen sind, aber nicht auf dem Server.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageDifferentVersions">
+            <English>Some addons have different version on your machine and on the server</English>
+            <German>Einige Addons haben unterschiedliche Versionen auf deinem PC und auf dem Server.</German>
+        </Key>
+
         </Package>
 </Project>
