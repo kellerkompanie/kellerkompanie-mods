@@ -5,9 +5,59 @@
             <English>Add Intel</English>
             <German>Intel hinzufügen</German>
         </Key>
+        <Key ID="STR_keko_intel_type">
+            <English>Intel type</English>
+            <German>Intel Typ</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeTooltip">
+            <English>The type of intel, used for the background image.</English>
+            <German>Die Art des Intels, genutzt für das Hintergrundbild.</German>
+        </Key>
+
+        <Key ID="STR_keko_intel_typeNotes">
+            <English>Notes</English>
+            <German>Notizen</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeFile">
+            <English>File</English>
+            <German>Akte</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeFileSecret">
+            <English>File (top secret)</English>
+            <German>Akte (top secret)</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeDocuments">
+            <English>Documents</English>
+            <German>Dokumente</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeMap">
+            <English>Map</English>
+            <German>Karte</German>
+        </Key>
+
         <Key ID="STR_keko_intel_action">
             <English>Action</English>
             <German>Aktion</German>
+        </Key>
+        <Key ID="STR_keko_intel_actionTooltip">
+            <English>Text of the action to be displayed.</English>
+            <German>Der Text, der Aktion, die angezeigt wird.</German>
+        </Key>
+        <Key ID="STR_keko_intel_actionDuration">
+            <English>Action duration</English>
+            <German>Aktionsdauer</German>
+        </Key>
+        <Key ID="STR_keko_intel_actionDurationTooltip">
+            <English>The duration of the action in seconds.</English>
+            <German>Die Dauer der Interaktion in Sekunden.</German>
+        </Key>
+        <Key ID="STR_keko_intel_removeActionAfter">
+            <English>Remove action afterwards</English>
+            <German>Aktion danach entfernen</German>
+        </Key>
+        <Key ID="STR_keko_intel_removeActionAfterTooltip">
+            <English>Should the action be removed for all players after first activation?</English>
+            <German>Soll die Aktion nach der ersten Interaktion für alle Spieler entfernt werden?</German>
         </Key>
         <Key ID="STR_keko_intel_pickupDocuments">
             <English>'Pick up documents'</English>
@@ -21,18 +71,43 @@
             <English>Title</English>
             <German>Titel</German>
         </Key>
+        <Key ID="STR_keko_intel_titleTooltip">
+            <English>The title that will be displayed in the briefing subject.</English>
+            <German>Der Titel, der im Briefing angezeigt wird.</German>
+        </Key>
         <Key ID="STR_keko_intel_content">
             <English>Content</English>
             <German>Inhalt</German>
+        </Key>
+        <Key ID="STR_keko_intel_contentTooltip">
+            <English>The actual content of the intel. May contain HTML tags.</English>
+            <German>Der Inhalt des Intels. Kann auch HTML Tags enthalten.</German>
         </Key>
         <Key ID="STR_keko_intel_contentStr">
             <English>'There is something written in these documents.'</English>
             <German>'In den Dokumenten steht etwas.'</German>
         </Key>
+        <Key ID="STR_keko_intel_removeObjectAfter">
+            <English>Remove object afterwards</English>
+            <German>Objeckt danach entfernen</German>
+        </Key>
+        <Key ID="STR_keko_intel_removeObjectAfterTooltip">
+            <English>Should the object be removed after first interaction?</English>
+            <German>Soll das Objekt nach der ersten Interaktion gelöscht werden?</German>
+        </Key>
+        <Key ID="STR_keko_intel_codeOnInteraction">
+            <English>Player execute onInteraction</English>
+            <German>Player execute onInteraction</German>
+        </Key>
+        <Key ID="STR_keko_intel_codeOnInteractionTooltip">
+            <English>The code to be execute after player has interacted. Code will be executed on client machine. The intel can be referenced as _object.</English>
+            <German>Der Code, der ausgeführt werden soll, sobald der Spieler mit dem Intel interagiert. Das Objekt kann als referenziert werden als _object.</German>
+        </Key>
 
-        <Key ID="STR_keko_intel_removeAfter">
-            <English>Remove after</English>
-            <German>Danach entfernen</German>
+
+        <Key ID="STR_keko_intel_found">
+            <English>Intel found</English>
+            <German>Intel gefunden</German>
         </Key>
     </Package>
 </Project>
