@@ -58,7 +58,9 @@ if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissing
     private _br = toString [13,10];
     private _allErrors = _errorMessages + _errorMessagesMissingAddonsOnClient + _errorMessagesMissingAddonsOnServer + _errorMessagesVersionMismatch;
     private _comprehensiveErrorMessage = _allErrors joinString _br;
-    (str _comprehensiveErrorMessage) remoteExec ["copyToClipboard", _player];
+    {
+        copyToClipboard (str _comprehensiveErrorMessage);
+    } remoteExec ["call", _player];
 
     private _errorMessage = parseText (_errorMessages joinString "<br/>");
     [localize LSTRING(errorTitle), _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
