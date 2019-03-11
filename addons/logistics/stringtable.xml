@@ -9,5 +9,9 @@
             <English>Kellerkompanie Fuel Consumption</English>
             <German>Kellerkompanie Kraftstoffverbrauch</German>
         </Key>
+        <Key ID="STR_keko_logistics_deleteCrate">
+            <English>Delete crate</English>
+            <German>Kiste löschen</German>
+        </Key>
     </Package>
 </Project>

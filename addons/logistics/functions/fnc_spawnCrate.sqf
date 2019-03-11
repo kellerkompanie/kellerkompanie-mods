@@ -21,8 +21,8 @@ if(GVAR(customLogistics) == 2) then {
 
             [_crate, _entryContents] call FUNC(fillCrate);
 
-            private _actionDelete = ["DeleteCrate", "Delete Crate", "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
-            [_crate, 0, ["ACE_MainActions"], _actionDelete] call ace_interact_menu_fnc_addActionToObject;
+            private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
+            [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated, _crate];
 
             if(true) exitWith{_returnCrate = _crate;};
         };
@@ -46,8 +46,8 @@ else {
 
     [_crate, _inventory] call FUNC(fillCrate);
 
-    private _actionDelete = ["DeleteCrate", "Delete Crate", "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
-    [_crate, 0, ["ACE_MainActions"], _actionDelete] call ace_interact_menu_fnc_addActionToObject;
+    private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
+    [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated, _crate];
 
     if(true) exitWith{_returnCrate = _crate;};
 };
