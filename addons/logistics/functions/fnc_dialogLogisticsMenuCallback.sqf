@@ -6,11 +6,11 @@ private _arr = _this splitString " ";
 
 if(GVAR(customLogistics) == 2) then {
     private _crateName = _arr select 0;
-    
+
     [getPosATL player, _crateName] spawn {
         params ["_pos", "_crateName"];
         private _crateObject = [_pos, _crateName] call FUNC(spawnCrate);
-        _crateObject disableCollisionWith player;
+        [_crateObject, player] remoteExecCall ["disableCollisionWith", 0, _crateObject];
     };
 }
 else {
@@ -20,7 +20,7 @@ else {
     [getPosATL player, _faction, _crate] spawn {
         params ["_pos", "_faction", "_crate"];
         private _crateObject = [_pos, _faction, _crate] call FUNC(spawnCrate);
-        _crateObject disableCollisionWith player;
+        [_crateObject, player] remoteExecCall ["disableCollisionWith", 0, _crateObject];
     };
 };
 
