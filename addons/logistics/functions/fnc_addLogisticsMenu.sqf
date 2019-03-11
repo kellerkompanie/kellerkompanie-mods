@@ -2,4 +2,33 @@
 
 params ["_object"];
 
-[_object, [("<t color='#42DCF4' size='2' align='center'>" + ("Logistik") + "</t>"), {if ([player,GVAR(accessLevel)] call FUNC(hasAccess) ) then { createDialog QGVAR(menuDialog); } }, _object]] remoteExec ["addAction", 0, true];
+[_object,
+    [
+        // title
+        ("<t color='#42DCF4' size='2' align='center'>" + ("Logistik") + "</t>"),
+
+        // script
+        {if ([player,GVAR(accessLevel)] call FUNC(hasAccess) ) then { createDialog QGVAR(menuDialog); } },
+
+        // arguments
+        _object,
+
+        // priority
+        1.5,
+
+        // showWindow,
+        true,
+
+        // hideOnUse
+        true,
+
+        // shortcut
+        "",
+
+        // condition
+        "true",
+
+        // radius
+        5
+    ]
+] remoteExec ["addAction", 0, true];
