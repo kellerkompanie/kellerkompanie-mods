@@ -3,13 +3,21 @@
 params ["_logic"];
 
 if(isServer) then {
-    private _action = _logic getVariable ["Action",""];
+    private _type = _logic getVariable ["IntelType", 0];
+    private _action = _logic getVariable ["Action", localize LSTRING(pickupDocuments)];
+    private _actionDuration = _logic getVariable ["Duration", 0.5];
+    private _removeAction = _logic getVariable ["RemoveAction", false];
     private _title = _logic getVariable ["Title",""];
     private _content = _logic getVariable ["Content",""];
-    private _remove = _logic getVariable ["Remove",false];
+    private _removeObject = _logic getVariable ["RemoveObject",false];
+    private _codeOnInteraction = _logic getVariable ["CodeOnInteraction", ""];
+
+    if (typeName _actionDuration == "STRING") then {
+        _actionDuration = parseNumber _actionDuration;
+    };
 
     private _objects = synchronizedObjects _logic;
     {
-        [_x, _action, _title, _content, _remove] call FUNC(addIntel);
+        [_x, _type, _action, _actionDuration, _removeAction, _title, _content, _removeObject, _codeOnInteraction] call FUNC(addIntel);
     } forEach _objects;
 };

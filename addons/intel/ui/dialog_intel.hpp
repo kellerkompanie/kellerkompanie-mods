@@ -1,4 +1,4 @@
-class keko_intel_mainDialog {
+class GVAR(mainDialog) {
 
     idd = -1;
     movingEnable = true;
@@ -6,8 +6,8 @@ class keko_intel_mainDialog {
 
     onLoad = "uiNamespace setVariable ['keko_intel_mainDialog', _this select 0]; (_this) spawn keko_intel_fnc_dialogIntelInit;";
 
-    controls[] = { 
-        KEKO_INTEL_UI_BACK,    
+    controls[] = {
+        KEKO_INTEL_UI_BACK,
         KEKO_INTEL_UI_TEXT_TITLE,
         KEKO_INTEL_UI_EDIT_TITLE,
         KEKO_INTEL_UI_TEXT_HEADING,
@@ -33,7 +33,7 @@ class keko_intel_mainDialog {
     class KEKO_INTEL_UI_TEXT_TITLE: RscText
     {
         idc = 1000;
-        text = "Titel:"; 
+        text = "Titel:";
         x = 4 * GUI_GRID_W + GUI_GRID_X;
         y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
         w = 3.5 * GUI_GRID_W;

@@ -28,29 +28,83 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_intel.paa);
 
         class Attributes: AttributesBase {
+            class IntelType: Combo {
+                property = QGVAR(IntelType);
+                displayName = CSTRING(type);
+                tooltip = CSTRING(typeTooltip);
+                typeName = "NUMBER";
+                defaultValue = 0;
+                class Values {
+                    class typeNotes {
+                        name = CSTRING(typeNotes);
+                        value = 0;
+                    };
+                    class typeFile {
+                        name = CSTRING(typeFile);
+                        value = 1;
+                    };
+                    class typeFileSecret {
+                        name = CSTRING(typeFileSecret);
+                        value = 2;
+                    };
+                    class typeDocuments {
+                        name = CSTRING(typeDocuments);
+                        value = 3;
+                    };
+                    class typeMap {
+                        name = CSTRING(typeMap);
+                        value = 4;
+                    };
+                };
+            };
             class Action: Edit {
                 property = QGVAR(Action);
                 displayName = CSTRING(action);
+                tooltip = CSTRING(actionTooltip);
                 typeName = "STRING";
                 defaultValue = CSTRING(pickupDocuments);
+            };
+            class Duration: Edit {
+                property = QGVAR(Duration);
+                displayName = CSTRING(actionDuration);
+                tooltip = CSTRING(actionDurationTooltip);
+                typeName = "SCALAR";
+                defaultValue = 0.5;
+            };
+            class RemoveAction: Checkbox {
+                property = QGVAR(RemoveAction);
+                displayName = CSTRING(removeActionAfter);
+                tooltip = CSTRING(removeActionAfterTooltip);
+                typeName = "BOOL";
+                defaultValue = false;
             };
             class Title: Edit {
                 property = QGVAR(Title);
                 displayName = CSTRING(title);
+                tooltip = CSTRING(titleTooltip);
                 typeName = "STRING";
                 defaultValue = CSTRING(foundDocuments);
             };
             class Content: Edit {
                 property = QGVAR(Content);
                 displayName = CSTRING(content);
+                tooltip = CSTRING(contentTooltip);
                 typeName = "STRING";
                 defaultValue = CSTRING(contentStr);
             };
-            class Remove: Checkbox {
-                property = QGVAR(Remove);
-                displayName = CSTRING(removeAfter);
+            class RemoveObject: Checkbox {
+                property = QGVAR(RemoveObject);
+                displayName = CSTRING(removeObjectAfter);
+                tooltip = CSTRING(removeObjectAfterTooltip);
                 typeName = "BOOL";
                 defaultValue = false;
+            };
+            class CodeOnInteraction: Edit {
+                property = QGVAR(CodeOnInteraction);
+                displayName = CSTRING(codeOnInteraction);
+                tooltip = CSTRING(codeOnInteractionTooltip);
+                typeName = "STRING";
+                defaultValue = "''";
             };
         };
     };
@@ -67,11 +121,11 @@ class CfgVehicles {
         isGlobal           = 1;
         isTriggerActivated = 0;
         scope              = 1;
-        scopeCurator       = 2;
+        scopeCurator       = 1; // default: 2
         curatorCanAttach   = 1;
     };
 
-    // Remove Bohemia Default Intel Interactions
+    // Remove Bohemia's default intel objects
     class Land_File1_F;
     class Land_File2_F;
     class Land_Photos_V3_F;
