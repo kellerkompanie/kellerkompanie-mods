@@ -17,5 +17,21 @@
             <English>Press to smash a window</English>
             <German>Drücke um Fenster einzuschlagen</German>
         </Key>
+        <Key ID="STR_keko_common_changeGroupName">
+            <English>Change groupname</English>
+            <German>Gruppennamen ändern</German>
+        </Key>
+        <Key ID="STR_keko_common_cancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+        </Key>
+        <Key ID="STR_keko_common_name">
+            <English>Name:</English>
+            <German>Name:</German>
+        </Key>
+        <Key ID="STR_keko_common_ok">
+            <English>OK</English>
+            <German>OK</German>
+        </Key>
     </Package>
 </Project>

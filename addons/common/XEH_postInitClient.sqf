@@ -84,3 +84,15 @@ player addEventHandler ["Fired", {
 [{
     _this call FUNC(itemCheck);
 }, [player], 0.5, 0.1] call CBA_fnc_waitAndExecute;
+
+
+
+// add action to allow group leader to change the name of his group
+private _action = [
+    QGVAR(changeGroupName),
+    localize LSTRING(changeGroupName),
+    "",
+    { createDialog QGVAR(changeGroupName) },
+    { leader group player == player }
+] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions", "ACE_TeamManagement"], _action] call ace_interact_menu_fnc_addActionToObject;
