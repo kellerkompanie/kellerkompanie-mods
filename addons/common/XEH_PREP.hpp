@@ -5,6 +5,8 @@ PREP(applyTourniquets);
 PREP(bandageRandomWound);
 PREP(breakWindow);
 PREP(canBreakWindow);
+PREP(changeGroupNameDialogCallback);
+PREP(changeGroupNameDialogInit);
 PREP(createZeus);
 PREP(getNumOpenWounds);
 PREP(itemCheck);

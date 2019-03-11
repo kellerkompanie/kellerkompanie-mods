@@ -191,5 +191,4 @@ GVAR(aaLaunchers) = [
     "OPTRE_M41_SSR_G"
 ];
 
-
 ADDON = true;

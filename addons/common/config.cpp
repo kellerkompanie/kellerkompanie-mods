@@ -72,6 +72,7 @@ class CfgPatches {
 #include "defines.hpp"
 
 #include "ui\dialog_lockDoors.hpp"
+#include "ui\dialog_changeGroupName.hpp"
 
 #include "CfgEventHandlers.hpp"
 
