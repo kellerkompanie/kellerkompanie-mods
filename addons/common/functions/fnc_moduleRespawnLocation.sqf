@@ -1,8 +1,23 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Zeus module callback for setting the respawn position.
+ *
+ * Arguments:
+ * 0: Placed module <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleRespawnLocation
+ *
+ */
 
-params["_logic","_units","_activated"];
+params["_logic","","_activated"];
 
-if !(_activated && local _logic) exitWith {};
+if !(_activated) exitWith {};
+if !(local _logic) exitWith {};
 
 if(!("respawn" in allMapMarkers)) then
 {

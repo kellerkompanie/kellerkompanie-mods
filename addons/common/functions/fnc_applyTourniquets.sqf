@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * If available applies tourniquets to all bleeding extremeties. Primarly used
+ * as part of the limit wounds module.
+ *
+ * Arguments:
+ * 0: Unit to be tourniqueted <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _unit call keko_common_fnc_applyTourniquets
+ *
+ */
 
 params ["_unit"];
 

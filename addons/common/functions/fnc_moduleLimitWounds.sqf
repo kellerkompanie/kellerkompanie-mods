@@ -1,7 +1,23 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Zeus module callback for limiting wounds of unit, e.g., applying tourniquets
+ * and bandaging wounds.
+ *
+ * Arguments:
+ * 0: Placed module <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleLimitWounds
+ *
+ */
 
 params ["_logic"];
-if (!local _logic) exitWith {};
+
+if !(local _logic) exitWith {};
 
 private _target = attachedTo _logic;
 TRACE_3("moduleLimitWounds",_logic,_target,typeOf _target);

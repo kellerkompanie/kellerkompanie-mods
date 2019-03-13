@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Makes a player curator.
+ *
+ * Arguments:
+ * 0: The player to become curator <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _player call keko_common_fnc_createZeus
+ *
+ */
 
 #define IDD_DISPLAY3DEN 313
 

@@ -1,14 +1,30 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Changes 3den mission attributes based on input in the Kellerkompanie initialize
+ * mission module, e.g., changing mission name and setting parameters. Also adds
+ * HC entities and default admin curator entitiy if not already present.
+ *
+ * Arguments:
+ * 0: Kellerkompanie initialize mission module <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call keko_common_fnc_3denAttributesChanged
+ *
+ */
 
-//systemChat str "InitModule 3denAttributesChanged";
+params ["_module"];
 
-private _module = _this select 0;
 private _initModuleExists = false;
 private _existingInitModule = objNull;
 private _gameMasterModuleExists = false;
 private _hc1Exists = false;
 private _hc2Exists = false;
 private _hc3Exists = false;
+
 {
     private _logicName = (_x get3DENAttribute "name") select 0;
     //systemChat _logicName;
@@ -35,7 +51,6 @@ private _hc3Exists = false;
             break;
         };
     };
-
 } forEach (all3DENEntities select 3);
 
 if (_initModuleExists) then {

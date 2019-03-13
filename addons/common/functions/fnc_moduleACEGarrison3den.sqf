@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Module that garrisons units based on ACE garrison a few seconds after mission
+ * start in order to allow first headless clients taking over.
+ *
+ * Arguments:
+ * 0: Garrison 3den module <OBJECT>
+ *
+ * Return Value:
+ * handle
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleACEGarrison3den
+ *
+ */
 
 if !(isServer) exitWith{};
 
