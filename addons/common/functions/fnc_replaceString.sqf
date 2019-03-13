@@ -1,6 +1,25 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Replaces the occurence of one string in another.
+ *
+ * Arguments:
+ * 0: Source string <STRING>
+ * 1: String to be looked for <STRING>
+ * 2: Replacement string <STRING>
+ * 3: Number of occurences to replace (optional) default is 1
+ * 4: Limit the number of replacements (optional) default is true
+ *
+ * Return Value:
+ * The new string including replacements <STRING>
+ *
+ * Example:
+ * ["ABCCEF", "CC", "CD"] call keko_common_fnc_replaceString
+ *
+ */
 
 params ["_str", "_toFind", "_subsitution", ["_numLimit",10,[1]], ["_limit",true,[true]]];
+
 if (typeName _toFind != typeName []) then {_toFind = [_toFind]};
 {
     private _char = count _x;

@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Zeus module callback for removing all actions from an object.
+ *
+ * Arguments:
+ * 0: Placed module <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleRemoveAllActions
+ *
+ */
 
 params ["_logic"];
 if (!local _logic) exitWith {};
@@ -21,7 +35,7 @@ switch (true) do {
     };
     default {
         removeAllActions _object;
-        _object remoteExec ["removeAllActions", 0, true];
+        _object remoteExec ["removeAllActions", [0, -2] select isDedicated, true];
     };
 };
 
