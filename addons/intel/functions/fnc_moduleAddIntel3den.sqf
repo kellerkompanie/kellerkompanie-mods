@@ -11,6 +11,7 @@ if(isServer) then {
     private _content = _logic getVariable ["Content",""];
     private _removeObject = _logic getVariable ["RemoveObject",false];
     private _codeOnInteraction = _logic getVariable ["CodeOnInteraction", ""];
+    private _openMap = _logic getVariable ["OpenMap", false];
 
     if (typeName _actionDuration == "STRING") then {
         _actionDuration = parseNumber _actionDuration;
@@ -18,6 +19,6 @@ if(isServer) then {
 
     private _objects = synchronizedObjects _logic;
     {
-        [_x, _type, _action, _actionDuration, _removeAction, _title, _content, _removeObject, _codeOnInteraction] call FUNC(addIntel);
+        [_x, _type, _action, _actionDuration, _removeAction, _title, _content, _removeObject, _codeOnInteraction, _openMap] call FUNC(addIntel);
     } forEach _objects;
 };

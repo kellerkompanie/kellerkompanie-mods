@@ -139,7 +139,14 @@
             <English>The code to be execute after player has interacted. Code will be executed on client machine. The intel can be referenced as _object.</English>
             <German>Der Code, der ausgeführt werden soll, sobald der Spieler mit dem Intel interagiert. Das Objekt kann als referenziert werden als _object.</German>
         </Key>
-
+        <Key ID="STR_keko_intel_openMap">
+            <English>Open map</English>
+            <German>Karte öffnen</German>
+        </Key>
+        <Key ID="STR_keko_intel_openMapTooltip">
+            <English>Decide if the map should be opened after picking up the intel.</English>
+            <German>Soll die Karte geöffnet werden nachdem das Intel aufgehoben wurde.</German>
+        </Key>
 
         <Key ID="STR_keko_intel_found">
             <English>Intel found</English>

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction"];
+params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap"];
 
 private _textures = [
     QPATHTOF(ui\background_notes.paa),
@@ -54,7 +54,7 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
     // Code executed on completion
     {
         params ["_object", "", "_actionId", "_arguments"];
-        _arguments params ["_typeTexture", "_title", "_content", "_removeObject", "_removeAction", "_codeOnInteraction"];
+        _arguments params ["_typeTexture", "_title", "_content", "_removeObject", "_removeAction", "_codeOnInteraction", "_openMap"];
 
         private _texture = _typeTexture;
         private _text = _content;
@@ -88,14 +88,16 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
         if (_removeObject) then {deleteVehicle _object};
         if (_removeAction) then {[ _object, _actionId ] remoteExec ["BIS_fnc_holdActionRemove", [0, -2] select isDedicated];};
 
-        openMap true;
+        if(_openMap) then {
+            openMap true;
+        };
     },
 
     // Code executed on interrupted
     {},
 
     // Arguments passed to the scripts
-    [_typeTexture, _title, _content, _removeObject, _removeAction, _codeOnInteraction],
+    [_typeTexture, _title, _content, _removeObject, _removeAction, _codeOnInteraction, _openMap],
 
     // Action duration
     _actionDuration,
