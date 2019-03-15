@@ -7,7 +7,16 @@ private _textures = [
     QPATHTOF(ui\background_file.paa),
     QPATHTOF(ui\background_file_secret.paa),
     QPATHTOF(ui\background_documents.paa),
-    QPATHTOF(ui\background_map.paa)
+    QPATHTOF(ui\background_map.paa),
+    QPATHTOF(ui\background_files_secret.paa),
+    QPATHTOF(ui\background_laptop.paa),
+    QPATHTOF(ui\background_money.paa),
+    QPATHTOF(ui\background_notepad.paa),
+    QPATHTOF(ui\background_phone.paa),
+    QPATHTOF(ui\background_phone_old.paa),
+    QPATHTOF(ui\background_tablet.paa),
+    QPATHTOF(ui\background_rugged_tablet.paa),
+    QPATHTOF(ui\background_wallet.paa)
 ];
 private _typeTexture = _textures select _type;
 

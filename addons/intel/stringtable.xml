@@ -34,6 +34,42 @@
             <English>Map</English>
             <German>Karte</German>
         </Key>
+        <Key ID="STR_keko_intel_typeFilesSecret">
+            <English>Secret Files</English>
+            <German>Geheime Akten</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeLaptop">
+            <English>Notebook</English>
+            <German>Laptop</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeMoney">
+            <English>Money</English>
+            <German>Geld</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeNotepad">
+            <English>Notepad</English>
+            <German>Notizblock</German>
+        </Key>
+        <Key ID="STR_keko_intel_typePhone">
+            <English>Phone</English>
+            <German>Telefon</German>
+        </Key>
+        <Key ID="STR_keko_intel_typePhoneOld">
+            <English>Phone (old)</English>
+            <German>Telefon (alt)</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeTablet">
+            <English>Tablet</English>
+            <German>Tablet</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeTabletRugged">
+            <English>Rugged Tablet</English>
+            <German>Outdoor Tablet</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeWallet">
+            <English>Wallet</English>
+            <German>Brieftasche</German>
+        </Key>
 
         <Key ID="STR_keko_intel_action">
             <English>Action</English>

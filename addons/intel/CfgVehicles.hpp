@@ -55,6 +55,42 @@ class CfgVehicles {
                         name = CSTRING(typeMap);
                         value = 4;
                     };
+                    class typeFilesSecret {
+                        name = CSTRING(typeFilesSecret);
+                        value = 5;
+                    };
+                    class typeLaptop {
+                        name = CSTRING(typeLaptop);
+                        value = 6;
+                    };
+                    class typeMoney {
+                        name = CSTRING(typeMoney);
+                        value = 7;
+                    };
+                    class typeNotepad {
+                        name = CSTRING(typeNotepad);
+                        value = 8;
+                    };
+                    class typePhone {
+                        name = CSTRING(typePhone);
+                        value = 9;
+                    };
+                    class typePhoneOld {
+                        name = CSTRING(typePhoneOld);
+                        value = 10;
+                    };
+                    class typeTablet {
+                        name = CSTRING(typeTablet);
+                        value = 11;
+                    };
+                    class typeTabletRugged {
+                        name = CSTRING(typeTabletRugged);
+                        value = 12;
+                    };
+                    class typeWallet {
+                        name = CSTRING(typeWallet);
+                        value = 13;
+                    };
                 };
             };
             class Action: Edit {
