@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Unflips a vehicle, e.g., if got stuck or flipped.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _vechile call keko_common_fnc_unflipVehicle
+ *
+ */
 
 params ["_vehicle"];
 

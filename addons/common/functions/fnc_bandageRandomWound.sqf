@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Bandages one random wound, prioritizes head and torso wounds. Primarly used
+ * as part of the limit wounds module.
+ *
+ * Arguments:
+ * 0: Unit to be bandaged <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _unit call keko_common_fnc_bandageRandomWound
+ *
+ */
 
 params ["_unit"];
 

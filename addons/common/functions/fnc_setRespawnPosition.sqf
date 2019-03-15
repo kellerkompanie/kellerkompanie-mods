@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Sets the respawn position for a specific side.
+ *
+ * Arguments:
+ * 0: New respawn position <ARRAY>
+ * 1: Side of respawn 1 = WEST, 2 = INDEPENDENT, 3 = EAST, 4 = CIVILIAN <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [[0,0,0], 1] call keko_common_fnc_setRespawnPosition
+ *
+ */
 
 params ["_position", "_respawnSide"];
 

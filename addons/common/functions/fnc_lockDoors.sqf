@@ -1,4 +1,20 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Locks/unlocks all doors in a radius around the position.
+ *
+ * Arguments:
+ * 0: Center position <ARRAY>
+ * 1: Distance from center that doors should be locked <NUMBER>
+ * 2: State of doors, true = lock, false = unlock <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [[0,0,0], 10, true] call keko_common_fnc_lockDoors
+ *
+ */
 
 params ["_centerPos", "_distance", "_isLocked"];
 

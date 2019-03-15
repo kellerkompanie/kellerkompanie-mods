@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Returns the number of open wounds for a unit.
+ *
+ * Arguments:
+ * 0: The bleeding unit <OBJECT>
+ *
+ * Return Value:
+ * Number of open/bleeding wounds <NUMBER>
+ *
+ * Example:
+ * _unit call keko_common_fnc_getNumOpenWounds
+ *
+ */
 
 params ["_unit"];
 

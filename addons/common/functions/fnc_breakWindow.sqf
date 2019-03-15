@@ -1,5 +1,18 @@
 #include "script_component.hpp"
-// Original version by Axebeard https://steamcommunity.com/sharedfiles/filedetails/?id=1578884800
+/*
+ * Author: Axebeard, Schwaggot
+ * Breaks the window of a building that is nearest to the player.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call keko_common_fnc_breakWindow
+ *
+ */
 
 [] spawn {
     private _window_pos_arr = [];

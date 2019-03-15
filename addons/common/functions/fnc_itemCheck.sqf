@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Replaces generic inventory items with the correct instances.
+ *
+ * Arguments:
+ * 0: The unit with the inventory <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _unit call keko_common_fnc_itemCheck
+ *
+ */
 
 params ["_unit"];
 

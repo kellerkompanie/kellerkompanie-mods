@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Zeus module callback for ending a mission with a sucess. Displays statistics
+ * and stuff. Also notifies server to write into database.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleMissionEndSuccess
+ *
+ */
 
 if (isServer) then {
 

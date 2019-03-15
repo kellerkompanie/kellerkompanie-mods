@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Axebeard, Schwaggot
+ * Checks if there is a window near the player that can be broken.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * True if there is a window to break, False otherwise <BOOL>
+ *
+ * Example:
+ * call keko_common_fnc_canBreakWindow
+ *
+ */
 
 INFO("canBreakWindow");
 
