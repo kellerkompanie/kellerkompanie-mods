@@ -142,6 +142,13 @@ class CfgVehicles {
                 typeName = "STRING";
                 defaultValue = "''";
             };
+            class OpenMap: Checkbox {
+                property = QGVAR(OpenMap);
+                displayName = CSTRING(openMap);
+                tooltip = CSTRING(openMapTooltip);
+                typeName = "BOOL";
+                defaultValue = false;
+            };
         };
     };
     class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
