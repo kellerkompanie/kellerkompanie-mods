@@ -33,5 +33,62 @@
             <English>OK</English>
             <German>OK</German>
         </Key>
+
+        <Key ID="STR_keko_common_statsMissionWin">
+            <English>&lt;t color='#00ff00'&gt;Mission accomplished&lt;/t&gt;</English>
+            <German>&lt;t color='#00ff00'&gt;Mission erfolgreich&lt;/t&gt;</German>
+        </Key>
+        <Key ID="STR_keko_common_statsMissionFail">
+            <English>&lt;t color='#00ff00'&gt;Mission failed&lt;/t&gt;</English>
+            <German>&lt;t color='#00ff00'&gt;Mission fehlgeschlagen&lt;/t&gt;</German>
+        </Key>
+        <Key ID="STR_keko_common_statsKills">
+            <English>Your kill statistics</English>
+            <German>Deine Kill Statistik</German>
+        </Key>
+        <Key ID="STR_keko_common_statsPlayers">
+            <English>%1 players</English>
+            <German>%1 Spieler</German>
+        </Key>
+        <Key ID="STR_keko_common_statsMinutes">
+            <English>%1 min in battle</English>
+            <German>%1 min im Kampf</German>
+        </Key>
+        <Key ID="STR_keko_common_statsBullets">
+            <English>%1 bullets shot</English>
+            <German>%1 Kugeln abgegeben</German>
+        </Key>
+        <Key ID="STR_keko_common_statsGrenades">
+            <English>%1 grenades thrown</English>
+            <German>%1 Granaten geworfen</German>
+        </Key>
+        <Key ID="STR_keko_common_statsEnemies">
+            <English>%1 enemies killed</English>
+            <German>%1 Feinde bekämpft</German>
+        </Key>
+        <Key ID="STR_keko_common_statsPunches">
+            <English>%1 people punched</English>
+            <German>%1 Leute geschlagen</German>
+        </Key>
+        <Key ID="STR_keko_common_statsCivilians">
+            <English>%1 civilians killed</English>
+            <German>%1 Zivilisten gemeuchelt</German>
+        </Key>
+        <Key ID="STR_keko_common_statsHidden">
+            <English>%1 corpses hidden</English>
+            <German>%1 Leichen versteckt</German>
+        </Key>
+        <Key ID="STR_keko_common_statsPulse">
+            <English>measured pulse %1 times</English>
+            <German>%1 mal Puls gemessen</German>
+        </Key>
+        <Key ID="STR_keko_common_statsBandages">
+            <English>%1 bandages applied</English>
+            <German>%1 Bandagen angelegt</German>
+        </Key>
+        <Key ID="STR_keko_common_statsCPR">
+            <English>%1 CPR </English>
+            <German>%1 map CPR durchgeführt</German>
+        </Key>
     </Package>
 </Project>

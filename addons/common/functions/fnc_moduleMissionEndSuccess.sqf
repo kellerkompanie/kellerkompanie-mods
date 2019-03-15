@@ -16,7 +16,6 @@
  */
 
 if (isServer) then {
-
     ["CAManBase", "Fired", {
         params ["_unit", "", "", "", "", "", "_projectile"];
 
@@ -43,30 +42,30 @@ if (hasInterface) then {
     [] spawn {
         playMusic "LeadTrack01_F_Tank";
         sleep 2;
-        ["<t color='#00ff00'>Mission erfolgreich</t>", 1, 0.8] spawn BIS_fnc_dynamicText;
-        "Your Kill Statistics" hintC parseText GVAR(outputText);
+        [localize LSTRING(statsMissionWin), 1, 0.8] spawn BIS_fnc_dynamicText;
+        (localize LSTRING(statsKills)) hintC parseText GVAR(outputText);
         sleep 3;
         [
-            [(format ["%1 Spieler", playersNumber playerSide]), 1, 2],
-            [(format ["%1 min im Kampf", floor (time / 60)]), 1, 2]
+            [format [localize LSTRING(statsPlayers), playersNumber playerSide], 1, 2],
+            [format [localize LSTRING(statsMinutes), floor (time / 60)], 1, 2]
         ] spawn BIS_fnc_EXP_camp_SITREP;
         sleep 5;
         [
-            [format ["%1 Kugeln abgegeben", GVAR(shotsFired)], 1, 2],
-            [format ["%1 Granaten geworfen", GVAR(fragsOut)], 1, 2],
-            [format ["%1 Feinde bekämpft", GVAR(aiKilled)], 1, 2]
+            [format [localize LSTRING(statsBullets), GVAR(shotsFired)], 1, 2],
+            [format [localize LSTRING(statsGrenades), GVAR(fragsOut)], 1, 2],
+            [format [localize LSTRING(statsEnemies), GVAR(aiKilled)], 1, 2]
         ] spawn BIS_fnc_EXP_camp_SITREP;
         sleep 5;
         [
-            [format ["%1 Leute geschlagen", GVAR(peoplePunched)], 1, 2],
-            [format ["%1 Zivilisten gemeuchelt", GVAR(civsKilled)], 1, 2],
-            [format ["%1 Leichen versteckt", GVAR(corpsesHidden)], 1, 2]
+            [format [localize LSTRING(statsPunches), GVAR(peoplePunched)], 1, 2],
+            [format [localize LSTRING(statsCivilians), GVAR(civsKilled)], 1, 2],
+            [format [localize LSTRING(statsHidden), GVAR(corpsesHidden)], 1, 2]
         ] spawn BIS_fnc_EXP_camp_SITREP;
         sleep 5;
         [
-            [format ["%1 mal Puls gemessen", GVAR(pulseChecked)], 1, 2],
-            [format ["%1 Bandagen angelegt", GVAR(bandagesApplied)], 1, 2],
-            [format ["%1 mal CPR durchgeführt", GVAR(cprPerformed)], 1, 2]
+            [format [localize LSTRING(statsPulse), GVAR(pulseChecked)], 1, 2],
+            [format [localize LSTRING(statsBandages), GVAR(bandagesApplied)], 1, 2],
+            [format [localize LSTRING(statsCPR), GVAR(cprPerformed)], 1, 2]
         ] spawn BIS_fnc_EXP_camp_SITREP;
         sleep 5;
         5 fadeMusic 0;
