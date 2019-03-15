@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Add items to players map briefing section, informing them about common mission settings.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call keko_common_fnc_addBriefingEntries
+ *
+ */
 
 private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
