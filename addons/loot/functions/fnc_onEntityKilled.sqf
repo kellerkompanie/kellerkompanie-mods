@@ -28,10 +28,10 @@ for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
         if ( !(isNull _x) ) then {
             if ( _x canAdd [_medicalItem, 1] ) exitWith {
                 if (_medicalItem call EFUNC(loadout,isItemRequired)) then {
-                    _x addItemCargoGlobal [_medicalItem, 1];
+                    [_x, _medicalItem] call CBA_fnc_addItem;
                 };
                 if (_bandage call EFUNC(loadout,isItemRequired)) then {
-                    _x addItemCargoGlobal [_bandage, 1];
+                    [_x, _bandage] call CBA_fnc_addItem;
                 };
                 _itemAdded = true;
             };
