@@ -64,6 +64,7 @@ class CfgPatches {
 };
 
 #include "CfgFactionClasses.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
