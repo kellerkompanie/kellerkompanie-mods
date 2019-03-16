@@ -27,4 +27,5 @@ PREP(moduleRespawnPosition3den);
 PREP(moduleUnflipVehicle);
 PREP(replaceString);
 PREP(setRespawnPosition);
+PREP(transferGroups);
 PREP(unflipVehicle);

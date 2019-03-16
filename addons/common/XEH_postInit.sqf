@@ -1,45 +1,4 @@
 #include "script_component.hpp"
-/*
- * Author: PabstMirror, modified by Schwaggot
- * Tracks deaths/kills and logs to the end mission disaplay
- * Attemps to log kills from ace_medical by using ace_medical_lastDamageSource
- *
- * Note: Requires config setup in a mission's description.ext
- * Has no effect if mission is not setup correctly
- *
- * Arguments:
- * Nothing
- *
- * Return Value:
- * Nothing
- *
- * Public: No
- */
-// #define DEBUG_MODE_FULL
-
-INFO("Running Kill Tracking");
-
-// Variables:
-#include "script_component.hpp"
-/*
- * Author: PabstMirror
- * Tracks deaths/kills and logs to the end mission disaplay
- * Attemps to log kills from ace_medical by using ace_medical_lastDamageSource
- *
- * Note: Requires config setup in a mission's description.ext
- * Has no effect if mission is not setup correctly
- *
- * Arguments:
- * Nothing
- *
- * Return Value:
- * Nothing
- *
- * Public: No
- */
-// #define DEBUG_MODE_FULL
-
-INFO("Running Kill Tracking");
 
 // Variables:
 GVAR(eventsArray) = [];
@@ -62,6 +21,16 @@ GVAR(killCount) = 0;
     GVAR(eventsArray) pushBack format ["Died: %1 %2", _name, _killInfo];
     GVAR(outputText) = (format ["Total Kills: %1<br/>", GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
 }] call CBA_fnc_addEventHandler;
+
+// Workaround for garrisonned units
+["CAManBase", "Local", {
+    params ["_unit", "_local"];
+
+    // check if unit had path disabled before being transferred
+    if (_local && _unit getVariable [QGVAR(disablePath), false]) then {
+        _unit disableAI "PATH";
+    };
+}] call CBA_fnc_addClassEventHandler;
 
 // Add Killed Event Handler - killed EH and lastDamageSource var are local only
 ["CAManBase", "killed", {
