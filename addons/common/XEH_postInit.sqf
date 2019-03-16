@@ -28,8 +28,7 @@ GVAR(killCount) = 0;
 
     // check if unit had path disabled before being transferred
     if (_local && _unit getVariable [QGVAR(disablePath), false]) then {
-        INFO_1("diabling AI PATH because variable %1 is set", QGVAR(disablePath));
-        doStop _unit; 
+        doStop _unit;
         _unit disableAI "PATH";
     };
 }] call CBA_fnc_addClassEventHandler;
