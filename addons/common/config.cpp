@@ -54,7 +54,8 @@ class CfgPatches {
             "A3_Modules_F_Curator",
             "A3_Weapons_F",
             "A3_Weapons_F_Launchers_NLAW",
-            "A3_Weapons_F_Launchers_Titan"
+            "A3_Weapons_F_Launchers_Titan",
+            "acex_headless"
         };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
