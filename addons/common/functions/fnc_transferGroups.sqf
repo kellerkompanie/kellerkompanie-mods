@@ -98,7 +98,6 @@
 
              // Save garrison status
              if (_x getVariable ["ace_ai_garrisonned", false]) then {
-                 INFO_1("unit is ace ai garrisonned, setting %1", QGVAR(disablePath));
                  _x setVariable [QGVAR(disablePath), true, true];
              };
          } forEach (units _x);
