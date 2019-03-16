@@ -1,21 +1,20 @@
+#include "script_component.hpp"
 /*
- * Author: Schwaggot
  * Original Author: diwako https://github.com/diwako/lockBackpack
- * Check if unit can have backpack locked status after inventory change
+ * Author: Schwaggot
+ * Check if unit can have backpack locked status after inventory change.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: The unit with the backpack <OBJECT>
  * 1: Backpack <OBJECT>
  *
  * Return Value:
- * boolean if inventory should be closed
+ * True if inventory should be closed, false otherwise
  *
  * Example:
  * [bob, unitBackpack bob] call keko_backpack_fnc_onOpenInventory
  *
- * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_backpack"];
 
