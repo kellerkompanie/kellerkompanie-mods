@@ -7,4 +7,13 @@ class CfgFunctions {
             };
         };
     };
+
+    class 3denEnhanced {
+        tag = "Enh";
+        class Placement {
+            class garrisonNearest {
+                file = QPATHTOF(functions\fnc_garrisonNearest.sqf);
+            };
+        };
+    };
 };

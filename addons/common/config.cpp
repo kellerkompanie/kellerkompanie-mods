@@ -55,7 +55,8 @@ class CfgPatches {
             "A3_Weapons_F",
             "A3_Weapons_F_Launchers_NLAW",
             "A3_Weapons_F_Launchers_Titan",
-            "acex_headless"
+            "acex_headless",
+            "3denEnhanced"
         };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
@@ -70,6 +71,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
+#include "Cfg3DEN.hpp"
 
 #include "defines.hpp"
 

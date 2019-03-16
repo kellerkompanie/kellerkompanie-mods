@@ -8,6 +8,7 @@ PREP(canBreakWindow);
 PREP(changeGroupNameDialogCallback);
 PREP(changeGroupNameDialogInit);
 PREP(createZeus);
+PREP(garrisonNearest);
 PREP(getNumOpenWounds);
 PREP(itemCheck);
 PREP(lockDoors);

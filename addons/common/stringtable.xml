@@ -90,5 +90,18 @@
             <English>%1 CPR </English>
             <German>%1 map CPR durchgeführt</German>
         </Key>
+
+        <Key ID="STR_keko_common_3denCategoryACE">
+            <English>Kellerkompanie ACE</English>
+            <German>Kellerkompanie ACE</German>
+        </Key>
+        <Key ID="STR_keko_common_aceGarrison">
+            <English>ACE garrison</English>
+            <German>ACE garrison</German>
+        </Key>
+        <Key ID="STR_keko_common_aceGarrisonTooltip">
+            <English>Decide if unit should be garrisonned via ACE.</English>
+            <German>Entscheidet ob für die Einheit ACE garrison aktiv ist.</German>
+        </Key>
     </Package>
 </Project>
