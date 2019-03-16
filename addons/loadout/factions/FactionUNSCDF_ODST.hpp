@@ -1,12 +1,5 @@
-class FactionUNSCDF_ODST: FactionBase {
+class FactionUNSCDF_ODST: FactionUNSCDF {
     name = "[Sci-Fi] UNSCDF (ODST) - U.N. Space Command Defense Force (ODST)";
-    logisticsHelicopter = "OPTRE_Pelican_unarmed";
-
-    disposableRocketLauncher = OPTRE_M41_SSR;
-    antiTankLauncher = OPTRE_M41_SSR;
-    antiAirLauncher = OPTRE_M41_SSR_G;
-
-    #include "WeaponsUNSCDF.hpp"
 
     class uniform: uniform {
         Default[] = { "OPTRE_UNSC_ODST_Uniform" };
@@ -42,10 +35,6 @@ class FactionUNSCDF_ODST: FactionBase {
         Engineer[] = { "OPTRE_ILCS_Rucksack_Heavy" };
     };
 
-    class backpackInventory: backpackInventory {
-        RiflemanAT[] = { { 2, "keko_AntiTankMag" } };
-    };
-
     class helmet: helmet {
         Default[] = { "OPTRE_UNSC_CH252D_Helmet" };
     };
@@ -63,11 +52,4 @@ class FactionUNSCDF_ODST: FactionBase {
     class secondary: secondary {
         Default[] = { keko_W_OPTRE_M6G };
     };
-
-    class launcher: launcher {
-        RiflemanAT[] = { keko_W_OPTRE_M41_SSR };
-        ATSpecialist[] = { keko_W_OPTRE_M41_SSR };
-        AASpecialist[] = { keko_W_OPTRE_M41_SSR_G };
-    };
-
 };

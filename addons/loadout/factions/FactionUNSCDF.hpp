@@ -6,11 +6,23 @@ class FactionUNSCDF: FactionBase {
     antiTankLauncher = OPTRE_M41_SSR;
     antiAirLauncher = OPTRE_M41_SSR_G;
 
+    grenade = OPTRE_M9_Frag;
+    smokeWhite = OPTRE_M2_Smoke;
+    smokeGreen = OPTRE_M2_Smoke_Green;
+
     #include "WeaponsUNSCDF.hpp"
 
     class uniform: uniform {
         Default[] = { "OPTRE_UNSC_Army_Uniform_OLI" };
         Lead[] = { "OPTRE_UNSC_Army_Uniform_S_OLI" };
+    };
+
+    class uniformInventory: uniformInventory {
+        Default[] = {
+            {20, "ACE_fieldDressing"},
+            {2, "ACE_morphine"},
+            {3, "ACE_tourniquet"}
+        };
     };
 
     class vest: vest {

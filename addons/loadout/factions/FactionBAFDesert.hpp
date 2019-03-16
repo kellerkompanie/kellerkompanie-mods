@@ -1,12 +1,5 @@
-class FactionBAFDesert: FactionBase {
+class FactionBAFDesert: FactionBAFMTP {
     name = "[Event] BAF Desert - British Armed Forces (Desert)";
-    logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
-
-    disposableRocketLauncher = UK3CB_BAF_AT4_CS_AP_Launcher;
-    antiTankLauncher = UK3CB_BAF_Javelin_Slung_Tube;
-    antiAirLauncher = rhs_weap_fim92;
-
-    #include "WeaponsBAF.hpp"
 
     class uniform: uniform {
         Default[] = { "UK3CB_BAF_U_CombatUniform_DDPM", "UK3CB_BAF_U_CombatUniform_DDPM_ShortSleeve" };
@@ -75,14 +68,6 @@ class FactionBAFDesert: FactionBase {
         UAVOperator[] = { "B_UAV_01_backpack_F" };
     };
 
-    class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        ATSpecialist[] = { { 1, "UK3CB_BAF_Javelin_CLU" } };
-        JTAC[] = { { 4, "Laserbatteries" } };
-        ATSpecialistAsst[] = { {1, "UK3CB_BAF_Javelin_Slung_Tube" } };
-    };
-
     class helmet: helmet {
         Default[] = {
                 "UK3CB_BAF_H_Mk6_DDPM_A",
@@ -98,29 +83,4 @@ class FactionBAFDesert: FactionBase {
         HeliCrew[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
         JetPilot[] = { "UK3CB_BAF_H_PilotHelmetHeli_A" };
     };
-
-    class primary: primary {
-        Default[] = { keko_W_BAF_L85A2 };
-        Lead[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
-        Sergeant[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
-        SQL[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
-        FTL[] = { keko_W_BAF_L85A2_UGL };
-        Grenadier[] = { keko_W_BAF_L85A2_UGL };
-        LMG[] = { keko_W_BAF_L110 };
-        MMG[] = { keko_W_BAF_L7A2 };
-        Marksman[] = { keko_W_BAF_L129A1 };
-        JTAC[] = { keko_W_BAF_L85A2_UGL_SMOKE };
-        UAVOperator[] = { keko_W_BAF_L85A2_UGL_HUNTIR };
-    };
-
-    class secondary: secondary {
-        Default[] = { keko_W_BAF_L131A1 };
-    };
-
-    class launcher: launcher {
-        RiflemanAT[] = { keko_W_AT4 };
-        ATSpecialist[] = { keko_W_BAF_JAVELIN };
-        AASpecialist[] = { keko_W_STRINGER };
-    };
-
 };
