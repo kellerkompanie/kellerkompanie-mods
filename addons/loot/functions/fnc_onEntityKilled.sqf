@@ -10,6 +10,12 @@ removeAllAssignedItems _unit;
 removeAllItems _unit;
 clearMagazineCargo _unit;
 
+private _uniform = uniformContainer _unit;
+private _vest = vestContainer _unit;
+private _backpack = backpackContainer _unit;
+
+private _possiblecontainers = [_uniform, _vest, _backpack];
+
 for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
     private _bandage = selectRandom ["ACE_fieldDressing","ACE_quikclot","ACE_elasticBandage","ACE_packingBandage"];
     private _medicalItem = selectRandom ["ACE_fieldDressing","KAT_Painkillers","ACE_tourniquet","ACE_quikclot","adv_aceSplint_splint","ACE_elasticBandage","ACE_packingBandage"];
@@ -17,12 +23,22 @@ for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
     _bandage = _bandage call EFUNC(loadout,replaceItem);
     _medicalItem = _medicalItem call EFUNC(loadout,replaceItem);
 
-    if (_medicalItem call EFUNC(loadout,isItemRequired)) then {
-        [_unit, _medicalItem] call CBA_fnc_addItem;
-    };
-    if (_bandage call EFUNC(loadout,isItemRequired)) then {
-        [_unit, _bandage] call CBA_fnc_addItem;
-    };
+    {
+        private _itemAdded = false;
+        if ( !(isNull _x) ) then {
+            if ( _x canAdd [_medicalItem, 1] ) exitWith {
+                if (_medicalItem call EFUNC(loadout,isItemRequired)) then {
+                    _x addItemCargoGlobal [_medicalItem, 1];
+                };
+                if (_bandage call EFUNC(loadout,isItemRequired)) then {
+                    _x addItemCargoGlobal [_bandage, 1];
+                };
+                _itemAdded = true;
+            };
+        };
+
+        if(_itemAdded) exitWith {};
+    } foreach _possiblecontainers;
 };
 
 private _weaponHolders = nearestObjects [_unit, ["WeaponHolderSimulated"], 5];
