@@ -147,6 +147,31 @@
             <English>Decide if the map should be opened after picking up the intel.</English>
             <German>Soll die Karte geöffnet werden nachdem das Intel aufgehoben wurde.</German>
         </Key>
+        <Key ID="STR_keko_intel_shareWith">
+            <English>Share with</English>
+            <German>Teilen mit</German>
+        </Key>
+        <Key ID="STR_keko_intel_shareWithTooltip">
+            <English>Decide if the intel should be shared with others automatically.</English>
+            <German>Entscheidet ob das Intel mit anderen geteilt werden soll.</German>
+        </Key>
+
+        <Key ID="STR_keko_intel_onlyPlayer">
+            <English>Only player</English>
+            <German>Nur Spieler</German>
+        </Key>
+        <Key ID="STR_keko_intel_group">
+            <English>Group</English>
+            <German>Gruppe</German>
+        </Key>
+        <Key ID="STR_keko_intel_side">
+            <English>Side</English>
+            <German>Fraktion</German>
+        </Key>
+        <Key ID="STR_keko_intel_all">
+            <English>All</English>
+            <German>Alle</German>
+        </Key>
 
         <Key ID="STR_keko_intel_found">
             <English>Intel found</English>

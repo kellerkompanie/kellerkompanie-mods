@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap"];
+params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap", "_shareWith"];
 
 private _textures = [
     QPATHTOF(ui\background_notes.paa),
@@ -54,7 +54,7 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
     // Code executed on completion
     {
         params ["_object", "", "_actionId", "_arguments"];
-        _arguments params ["_typeTexture", "_title", "_content", "_removeObject", "_removeAction", "_codeOnInteraction", "_openMap"];
+        _arguments params ["_typeTexture", "_title", "_content", "_removeObject", "_removeAction", "_codeOnInteraction", "_openMap", "_shareWith"];
 
         private _texture = _typeTexture;
         private _text = _content;
@@ -77,13 +77,33 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
             };
         };
 
-        ["intelAdded", [format [localize LSTRING(found), player, _title], "\A3\ui_f\data\map\markers\military\warning_ca.paa"]] call bis_fnc_showNotification;
-
-        if !(player diarySubjectExists QGVAR(briefingIntel)) then {
-            player createDiarySubject [QGVAR(briefingIntel), "Intel"];
+        switch (_shareWith) do {
+            case 1: {
+                // share with group
+                {
+                    [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];
+                } forEach (units (group player));
+            };
+            case 2: {
+                // share with side
+                {
+                    if ((side _x) == (side player)) then
+                    {
+                        [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];
+                    };
+                } forEach allUnits;
+            };
+            case 3: {
+                // share with all
+                {
+                    [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];                    
+                } forEach allUnits;
+            };
+            default {
+                // only on player who interacted with intel
+                [_title, _content] call FUNC(addIntelBriefingEntry);
+            };
         };
-
-        player createDiaryRecord [QGVAR(briefingIntel), [_title, _content]];
 
         if (_removeObject) then {deleteVehicle _object};
         if (_removeAction) then {[ _object, _actionId ] remoteExec ["BIS_fnc_holdActionRemove", [0, -2] select isDedicated];};
@@ -97,7 +117,7 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
     {},
 
     // Arguments passed to the scripts
-    [_typeTexture, _title, _content, _removeObject, _removeAction, _codeOnInteraction, _openMap],
+    [_typeTexture, _title, _content, _removeObject, _removeAction, _codeOnInteraction, _openMap, _shareWith],
 
     // Action duration
     _actionDuration,

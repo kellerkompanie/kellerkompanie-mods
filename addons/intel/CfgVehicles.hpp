@@ -149,6 +149,31 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = false;
             };
+            class ShareWith: Combo {
+                property = QGVAR(ShareWith);
+                displayName = CSTRING(shareWith);
+                tooltip = CSTRING(shareWithTooltip);
+                typeName = "NUMBER";
+                defaultValue = 0;
+                class Values {
+                    class onlyPlayer {
+                        name = CSTRING(onlyPlayer);
+                        value = 0;
+                    };
+                    class group {
+                        name = CSTRING(group);
+                        value = 1;
+                    };
+                    class side {
+                        name = CSTRING(side);
+                        value = 2;
+                    };
+                    class all {
+                        name = CSTRING(all);
+                        value = 3;
+                    };
+                };
+            };
         };
     };
     class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
