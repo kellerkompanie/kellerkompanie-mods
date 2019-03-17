@@ -18,7 +18,7 @@ class ACE_Medical_Actions {
         };
         class SurgicalKit: fieldDressing {
             allowSelfTreatment = 1;
-            treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 2)"; // * 5
+            treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 3)"; // * 5
         };
         class PersonalAidKit: fieldDressing {
             allowSelfTreatment = 1;
