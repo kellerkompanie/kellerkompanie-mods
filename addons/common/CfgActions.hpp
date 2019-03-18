@@ -1,4 +1,3 @@
-
 class CfgActions {
     // to pistol
     class None;
