@@ -1,6 +1,6 @@
 class CfgWeapons {
     class NVGoggles;
-    class GVAR(NVGoggles_AI) : NVGoggles {
+    class GVAR(NVGoggles) : NVGoggles {
         author = "Schwaggot";
         descriptionShort = CSTRING(descriptionShort);
         displayName = CSTRING(displayName);

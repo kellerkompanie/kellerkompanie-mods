@@ -6,7 +6,8 @@ class CfgPatches {
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"};
+            "keko_main"
+        };
         author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
@@ -18,3 +19,4 @@ class CfgPatches {
 #include "CfgDifficulty.hpp"
 #include "CfgAISkill.hpp"
 #include "CfgSurfaces.hpp"
+#include "CfgWeapons.hpp"
