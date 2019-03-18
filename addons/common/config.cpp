@@ -49,6 +49,7 @@ class CfgPatches {
             "keko_main",
             "3den",
             "ace_ai",
+            "ace_hearing",
             "cba_main",
             "A3_Modules_F",
             "A3_Modules_F_Curator",
