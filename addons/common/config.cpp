@@ -73,6 +73,7 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgActions.hpp"
+#include "CfgInGameUI.hpp"
 
 #include "defines.hpp"
 
