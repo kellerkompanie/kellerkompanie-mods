@@ -36,8 +36,8 @@
             <German>&lt;t color='#ff0000' align='center'&gt;Du musst deine Addon Fehler reparieren bevor du auf diesem Server spielen kannst!&lt;/t&gt;</German>
         </Key>
         <Key ID="STR_keko_checkpbo_errorMessageClipboard">
-            <English>&lt;t align='center'&gt;Info: A more detailed message was copied to your clipboard&lt;/t&gt;</English>
-            <German>&lt;t align='center'&gt;Info: Eine detaillierte Nachricht wurde in deine Zwischenablage kopiert&lt;/t&gt;</German>
+            <English>&lt;t align='center'&gt;Info: A more detailed message was copied to your clipboard and written to your RPT&lt;/t&gt;</English>
+            <German>&lt;t align='center'&gt;Info: Eine detaillierte Nachricht wurde in deine Zwischenablage kopiert und in deine RPT geschrieben&lt;/t&gt;</German>
         </Key>
     </Package>
 </Project>
