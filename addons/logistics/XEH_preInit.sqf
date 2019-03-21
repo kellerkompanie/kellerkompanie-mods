@@ -75,7 +75,7 @@ PREP_RECOMPILE_END;
             "JTACs only",
             "Zeus only"
         ], // names
-        3 // default index
+        0 // default index
     ],
     1
 ] call cba_settings_fnc_init;
@@ -115,7 +115,7 @@ PREP_RECOMPILE_END;
             "JTACs only",
             "Zeus only"
         ], // names
-        3 // default index
+        0 // default index
     ],
     1
 ] call cba_settings_fnc_init;
