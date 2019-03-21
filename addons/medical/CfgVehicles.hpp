@@ -4,8 +4,8 @@ class cfgVehicles {
     class GVAR(manualKitItem): Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_KEKO_REFILL_NAME";
-        author = "[SeL] Belbo";
+        displayName = CSTRING(refillName);
+        author = "Schwaggot";
         vehicleClass = "Items";
         model = "\A3\Weapons_F\Items\Medikit";
         editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_FirstAidKit_01_open_F.jpg";
@@ -18,7 +18,7 @@ class cfgVehicles {
     };
 
     class GVAR(autoKitItem): GVAR(manualKitItem) {
-        displayName = "$STR_KEKO_REFILL_NAME_AUTO";
+        displayName = CSTRING(refillNameAuto);
         class TransportItems {
             class autoKit {
                 name = GVAR(autoKit);
@@ -28,7 +28,7 @@ class cfgVehicles {
     };
 
     class GVAR(FAKItem): GVAR(manualKitItem) {
-        displayName = "$STR_KEKO_REFILL_NAME_FAK";
+        displayName = CSTRING(refillNameFAK);
         model = "\A3\Weapons_F\Items\FirstAidkit";
         editorPreview = QPATHTOF(ui\FAK.jpg);
         class TransportItems {

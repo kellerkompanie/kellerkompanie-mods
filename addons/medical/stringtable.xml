@@ -1,57 +1,100 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
-    <Package name="aceRefill">
-        <Key ID="STR_KEKO_REFILL_OPEN">
+    <Package name="medical">
+        <Key ID="STR_keko_medical_cbaSettingsCategory">
+            <English>Kellerkompanie Medical</English>
+            <German>Kellerkompanie Medical</German>
+        </Key>
+        <Key ID="STR_keko_medical_refillOpen">
             <English>Open Medical Refill Kit</English>
             <German>Öffne Sanitätsnachfüllpack</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_OPEN_FAK">
+        <Key ID="STR_keko_medical_refillOpenFAK">
             <English>Open Individual First Aid Kit</English>
             <German>Öffne Persönliche Sanitätsausstattung</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_NAME">
+        <Key ID="STR_keko_medical_refillName">
             <English>Medical Refill Kit</English>
             <German>Sanitätsnachfüllpack</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_NAME_EMPTY">
+        <Key ID="STR_keko_medical_refillNameEmpty">
             <English>Medical Refill Kit (empty)</English>
             <German>Sanitätsnachfüllpack (leer)</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_NAME_AUTO">
+        <Key ID="STR_keko_medical_refillNameAuto">
             <English>Medical Refill Kit (automatic)</English>
             <German>Sanitätsnachfüllpack (automatic)</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_NAME_FAK">
+        <Key ID="STR_keko_medical_refillNameFAK">
             <English>Individual First Aid Kit</English>
             <German>Persönliche Sanitätsausstattung</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_DESCRIPTION">
+        <Key ID="STR_keko_medical_refillDescription">
             <English>Open to refill your medical items &lt;br/&gt;- only for medics</English>
             <German>Öffnen, um Sanitätsmaterial aufzufrischen &lt;br/&gt;- Nur von Sanitätern nutzbar</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_DESCRIPTION_AUTO">
+        <Key ID="STR_keko_medical_refillDescriptionAuto">
             <English>Will refill your medical items automatically &lt;br/&gt;- Only for medics</English>
             <German>Füllt Sanitätsmaterial wieder auf &lt;br/&gt;- Nur von Sanitätern nutzbar</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_DESCRIPTION_FAK">
+        <Key ID="STR_keko_medical_refillDescriptionFAK">
             <English>Will refill your medical items &lt;br/&gt;- Contains medical items for one soldier</English>
             <German>Füllt Sanitätsmaterial wieder auf &lt;br/&gt;- Enthält Sanitätsausstattung für einen Soldaten</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_DESCRIPTIONUSE">
+        <Key ID="STR_keko_medical_refillDescriptionUse">
             <English>Refill medical items</English>
             <German>Fülle Sanitätsmaterial auf</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_REFILLED">
+        <Key ID="STR_keko_medical_refillRefilled">
             <English>Medical items have been refilled.</English>
             <German>Sanitätsmaterial wurde aufgefüllt.</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_REFILLED_NEW">
+        <Key ID="STR_keko_medical_refillRefilledNew">
             <English>Medical items have been refilled. Refill item has not been consumed.</English>
             <German>Sanitätsmaterial wurde aufgefüllt. Das Nachfüllpack wurde nicht verbraucht.</German>
         </Key>
-        <Key ID="STR_KEKO_REFILL_REFILLED_NOT">
+        <Key ID="STR_keko_medical_refillRefilledNot">
             <English>Medical items have not been refilled. Refill item has not been consumed.</English>
             <German>Sanitätsmaterial wurde nicht aufgefüllt. Das Nachfüllpack wurde nicht verbraucht.</German>
         </Key>
-        </Package>
+        <Key ID="STR_keko_medical_noTourniquetOnBodyPart">
+            <English>There is no tourniquet on this body part!</English>
+            <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
+        </Key>
+
+        <Key ID="STR_keko_medical_settingFAKMinAmount">
+            <English>FAK - min amount for removal</English>
+            <German>FAK - min Menge zum Entfernen</German>
+        </Key>
+        <Key ID="STR_keko_medical_settingFAKMinAmountTooltip">
+            <English>How many items can a player take from Individual First Aid Kit before it will be removed upon refill?</English>
+            <German>Wie viele Items kann der Spieler aus dem FAK nehmen bevor es verschwindet?</German>
+        </Key>
+
+        <Key ID="STR_keko_medical_settingManualKitMinAmount">
+            <English>Medical Refill Kit - min amount for removal</English>
+            <German>Medical Nachfüllpack - min Menge zum Entfernen</German>
+        </Key>
+        <Key ID="STR_keko_medical_settingManualKitMinAmountTooltip">
+            <English>How many items can a player take from Medical Refill Kit before it will be removed upon refill?</English>
+            <German>Wie viele items kann der Spieler aus dem Nachfüllpack nehmen bevor es verschwindet?</German>
+        </Key>
+
+        <Key ID="STR_keko_medical_settingEnableLitter">
+            <English>Drop Litter</English>
+            <German>Verpackungsmüll</German>
+        </Key>
+        <Key ID="STR_keko_medical_settingEnableLitterTooltip">
+            <English>Drop Litter after consuming medical items</English>
+            <German>Lass Verpackungsmüll fallen nachdem Medicmaterial verbraucht wurde</German>
+        </Key>
+        <Key ID="STR_keko_medical_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_medical_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+    </Package>
 </Project>

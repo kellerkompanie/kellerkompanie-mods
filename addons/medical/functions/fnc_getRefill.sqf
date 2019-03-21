@@ -1,14 +1,10 @@
 #include "script_component.hpp"
 
-/*
-Based on ADV-aceRefill by Belbo - modified by Schwaggot
-*/
-
 params ["_unit","_param"];
 
-private _airway = missionnamespace getVariable ["kat_aceAirway_enable", true];
-private _hHPAAB = missionnamespace getVariable ["ace_medical_healHitPointAfterAdvBandage", true];
-private _splint = isClass(configFile >> "CfgWeapons" >> "adv_aceSplint_splint");
+private _airwaysRequired = kat_aceAirway_enable;
+private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
+private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
 
 private _return = [["",0]];
@@ -24,14 +20,15 @@ private _turnToArray = {
     };
     _array2
 };
-private _FAK_var = (missionNamespace getVariable [QGVAR(FAK_var),[]]) call _turnToArray;
-private _CLS_var = (missionNamespace getVariable [QGVAR(CLS_var),[]]) call _turnToArray;
-private _SAN_var = (missionNamespace getVariable [QGVAR(SAN_var),[]]) call _turnToArray;
+
+private _FAK_var = GVAR(FAK_var) call _turnToArray;
+private _CLS_var = GVAR(CLS_var) call _turnToArray;
+private _SAN_var = GVAR(SAN_var) call _turnToArray;
 
 if (_param isEqualTo 1) exitWith {
     _return =  [
-            ["ACE_fieldDressing",15],
-            ["ACE_tourniquet",4],
+            ["ACE_fieldDressing", 15],
+            ["ACE_tourniquet", 3],
             ["KAT_Painkiller", 1]
         ];
     if ( (count _FAK_var) > 0 && { (_FAK_var select 0) isEqualType [] }) then {
@@ -41,23 +38,24 @@ if (_param isEqualTo 1) exitWith {
 };
 
 call {
-    if ( _isMedic > 1 && (count _SAN_var) > 0 && { (_SAN_var select 0) isEqualType [] } ) exitWith {
+    if ( (_isMedic == 2) && (count _SAN_var) > 0 && { (_SAN_var select 0) isEqualType [] } ) exitWith {
         _return = _SAN_var;
     };
-    if ( _isMedic isEqualTo 1 && (count _CLS_var) > 0 && { (_CLS_var select 0) isEqualType [] } ) exitWith {
+
+    if ( (_isMedic == 1) && (count _CLS_var) > 0 && { (_CLS_var select 0) isEqualType [] } ) exitWith {
         _return = _CLS_var;
     };
+
     if (_isMedic > 0) exitWith {
         _return = [
             ["ACE_fieldDressing", 20],
             ["ACE_elasticBandage", 50],
             ["ACE_epinephrine", 8],
             ["ACE_morphine", 8],
-            ["ACE_tourniquet", 6],
+            ["ACE_tourniquet", 8],
             ["ACE_salineIV", 6],
             ["ACE_salineIV_500", 6],
-            ["KAT_Painkiller", 1],
-            ["ACE_surgicalKit", 1]
+            ["KAT_Painkiller", 1]
         ];
 
         if ( _isMedic == 1) then {
@@ -66,11 +64,15 @@ call {
             _return pushBack ["KAT_X_AED", 1];
         };
 
-        if ( _splint && !_hHPAAB ) then {
+        if ( _surgicalKitRequired ) then {
+            _return pushBack ["ACE_surgicalKit", 1];
+        };
+
+        if ( _splintsRequired ) then {
             _return pushBack ["adv_aceSplint_splint", 12];
         };
 
-        if ( _airway ) then {
+        if ( _airwaysRequired ) then {
             if ( _isMedic == 1) then {
                 _return pushBack ["KAT_guedel", 10];
             } else {
