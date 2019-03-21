@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-
 /*
  * Author: KoffeinFlummi - modified by Belbo - again modified by Schwaggot
  * Replaces vanilla items with ACE ones.
@@ -11,18 +10,16 @@
  * None
  *
  * Example:
- * [bob] call ace_medical_fnc_itemCheck
- *
- * Public: Yes
+ * [bob] call keko_medical_fnc_itemCheck
  */
 
 if (GVAR(convertItems) == 2) exitWith {};
 
 params ["_unit"];
 
-private _airway = missionnamespace getVariable ["kat_aceAirway_enable", true];
-private _hHPAAB = missionnamespace getVariable ["ace_medical_healHitPointAfterAdvBandage",true];
-private _splint = isClass(configFile >> "CfgWeapons" >> "adv_aceSplint_splint");
+private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
+private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
+private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
 
 private _addToBackpack = {
@@ -70,11 +67,10 @@ if ( _isMedic > 0) then {
         [_unit, "ACE_elasticBandage", 50] call _addToBackpack;
         [_unit, "ACE_epinephrine", 8] call _addToBackpack;
         [_unit, "ACE_morphine", 8] call _addToBackpack;
-        [_unit, "ACE_tourniquet", 4] call _addToBackpack;
+        [_unit, "ACE_tourniquet", 6] call _addToBackpack;
         [_unit, "ACE_salineIV", 6] call _addToBackpack;
         [_unit, "ACE_salineIV_500", 6] call _addToBackpack;
         [_unit, "KAT_Painkiller", 1] call _addToBackpack;
-        [_unit, "ACE_surgicalKit", 1] call _addToBackpack;
 
         if ( _isMedic == 1) then {
             [_unit, "KAT_Pulseoximeter", 1] call _addToBackpack;
@@ -82,11 +78,15 @@ if ( _isMedic > 0) then {
             [_unit, "KAT_X_AED", 1] call _addToBackpack;
         };
 
-        if ( _splint && !_hHPAAB ) then {
-            [_unit, "adv_aceSplint_splint", 8] call _addToBackpack;
+        if ( _surgicalKitRequired ) then {
+            [_unit, "ACE_surgicalKit", 1] call _addToBackpack;
         };
 
-        if ( _airway ) then {
+        if ( _splintsRequired ) then {
+            [_unit, "adv_aceSplint_splint", 12] call _addToBackpack;
+        };
+
+        if ( _airwaysRequired ) then {
             if ( _isMedic == 1) then {
                 [_unit, "KAT_guedel", 10] call _addToBackpack;
             } else {

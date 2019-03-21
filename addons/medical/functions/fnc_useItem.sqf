@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-
 /*
  * Author: Glowbal - edited by Belbo - modified by Schwaggot
  * Use Equipment if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
@@ -14,14 +13,12 @@
  * 1: Unit <OBJECT>
  *
  * Example:
- * [unit, patient, "bandage"] call ace_repair_fnc_useItem
- *
- * Public: Yes
+ * [unit, patient, "bandage"] call keko_medical_fnc_useItem
  */
 
 params ["_medic", "_patient", "_item"];
 
-private _aSE = missionNamespace getVariable ["ace_medical_setting_allowSharedEquipment",true];
+private _allowSharedEquipment = ace_medical_setting_allowSharedEquipment;
 private _isMedic = _medic getVariable ["ACE_medical_medicClass",0];
 private _return = [false, objNull];
 private _crew = [objNull];
@@ -34,7 +31,7 @@ private _useItem = {
 };
 
 //if the unit is medic > 1 unless it's a tourniquet:
-if (_aSE && _isMedic > 1 && {!(_item == "ACE_tourniquet")}) exitWith {
+if (_allowSharedEquipment && _isMedic > 1 && {!(_item == "ACE_tourniquet")}) exitWith {
     //if medic has item:
     if ([_medic, _item] call ace_common_fnc_hasItem) exitWith {
         [_medic,_item] call _useItem;
@@ -60,7 +57,7 @@ if (_aSE && _isMedic > 1 && {!(_item == "ACE_tourniquet")}) exitWith {
 };
 
 //if unit is not a medic, but patient has item:
-if (_aSE && [_patient, _item] call ace_common_fnc_hasItem) exitWith {
+if (_allowSharedEquipment && [_patient, _item] call ace_common_fnc_hasItem) exitWith {
     [_patient,_item] call _useItem;
     [true, _patient];
 };
