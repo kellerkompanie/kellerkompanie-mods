@@ -7,9 +7,7 @@ private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_ace
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 
-INFO_1("_splintsRequired=%1", _splintsRequired);
-INFO_1("_surgicalKitRequired=%1", _surgicalKitRequired);
-INFO_1("_airwaysRequired=%1", _airwaysRequired);
+INFO_3("isItemRequired _splintsRequired=%1, _surgicalKitRequired=%2, _airwaysRequired=%3", _splintsRequired, _surgicalKitRequired, _airwaysRequired);
 
 if ( (!_surgicalKitRequired) && (_item == "ace_surgicalkit") ) exitWith {false};
 if ( (!_splintsRequired) && (_item == "adv_acesplint_splint") ) exitWith {false};

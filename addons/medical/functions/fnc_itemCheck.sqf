@@ -17,7 +17,7 @@ if (GVAR(convertItems) == 2) exitWith {};
 
 params ["_unit"];
 
-private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
+private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_aceSplint_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
