@@ -1,5 +1,5 @@
 class CfgFunctions {
-    class ace_medical {
+    class ADDON {
         tag = "ace_medical";
         class ace_medical {
             class actionRemoveTourniquet {
