@@ -15,4 +15,13 @@
 #endif
 
 #include "\x\keko\addons\main\script_macros.hpp"
-#include "\x\keko\addons\logistics\script_macros.hpp"
+
+#define ACCESS_DISABLED 0
+#define ACCESS_EVERYONE 1
+#define ACCESS_CORPORAL 2
+#define ACCESS_SERGEANT 3
+#define ACCESS_LIEUTENANT 4
+#define ACCESS_ENGINEERS 5
+#define ACCESS_ZEUS 6
+#define ACCESS_JTAC 7
+#define ACCESS_UAVOPERATOR 8
