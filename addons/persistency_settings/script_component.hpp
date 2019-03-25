@@ -15,4 +15,7 @@
 #endif
 
 #include "\x\keko\addons\main\script_macros.hpp"
-#include "\x\keko\addons\persistency_settings\script_macros.hpp"
+
+#define PERSISTENCY_DISABLED 0
+#define PERSISTENCY_ENABLED 1
+#define PERSISTENCY_SELECTIVE 2
