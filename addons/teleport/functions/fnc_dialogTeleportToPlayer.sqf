@@ -2,10 +2,6 @@
 
 params ["_player", "_destinationPlayer"];
 
-TRACE_2("dialogTeleportToPlayer", _player, _destinationPlayer);
-
-if (!isServer) exitWith {WARNING("dialogTeleportToPlayer only permitted on server"); false};
-
 player allowDamage false;
 titleText ["", "BLACK OUT", 2];
 sleep 2;
