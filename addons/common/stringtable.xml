@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="common">
-        <Key ID="STR_keko_common_Schwaggot">
-            <English>Schwaggot</English>
-            <German>Schwaggot</German>
-        </Key>
         <Key ID="STR_keko_common_customFacesNotAllowed">
             <English>Custom Faces are not allowed on this server!</English>
             <German>Benutzerdefinierte Gesichter sind nicht erlaubt!</German>

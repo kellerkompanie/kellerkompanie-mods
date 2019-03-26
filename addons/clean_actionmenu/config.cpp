@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

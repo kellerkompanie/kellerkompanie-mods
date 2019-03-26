@@ -19,7 +19,7 @@ class CfgPatches {
             "ace_main",
             "ace_modules",
             "keko_faction_generic"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

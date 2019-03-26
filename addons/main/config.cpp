@@ -11,7 +11,7 @@ class CfgPatches {
             "cba_main",
             "ace_main"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         url = CSTRING(URL);
         VERSION_CONFIG;
     };

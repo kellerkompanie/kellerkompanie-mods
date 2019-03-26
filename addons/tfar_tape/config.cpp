@@ -10,7 +10,7 @@ class CfgPatches {
             "cba_main",
             "tfar_core",
             "tfar_handhelds"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
