@@ -10,7 +10,7 @@ class CfgPatches {
         requiredAddons[] = {
             "ace_interaction",
             "ace_common"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG; 

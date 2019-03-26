@@ -12,7 +12,7 @@ class CfgPatches {
             "cba_main",
             "ace_main",
             "A3_Props_F_Exp_Commercial_Market"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

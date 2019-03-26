@@ -20,7 +20,7 @@ class CfgVehicles {
     };
 
     class GVAR(moduleBase3den): Module_F {
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         category = "KEKO";
         function = QEFUNC(common,dummy);
         scope              = 2;

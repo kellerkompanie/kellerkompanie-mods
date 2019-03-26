@@ -17,7 +17,7 @@ class CfgPatches {
             "cba_main",
             "A3_Data_F_Curator_Intel"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

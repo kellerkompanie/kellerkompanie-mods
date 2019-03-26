@@ -16,7 +16,7 @@ class CfgPatches {
             "ace_medical",
             "a3_structures_f",
             "a3_weapons_f"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
