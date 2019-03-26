@@ -7,8 +7,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Data_F_Tank_Loadorder",
-            "cba_main",
+            "A3_Data_F_Sams_Loadorder",
+            "A3_Data_F_Mod_Loadorder",
+            "cba_ui",
+            "cba_xeh",
+            "cba_jr",
             "ace_main"
         };
         author = "Schwaggot";

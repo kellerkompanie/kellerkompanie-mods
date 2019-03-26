@@ -5,14 +5,15 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleSnowStorm),
-              QGVAR(moduleDustStorm),
+            QGVAR(moduleDustStorm),
             QGVAR(moduleTornado),
-              QGVAR(moduleDisableStorm)
+            QGVAR(moduleDisableStorm)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main",
-            "ace_zeus"};
+            "keko_common",
+            "ace_zeus"
+        };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

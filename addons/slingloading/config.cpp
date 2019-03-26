@@ -7,11 +7,10 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main",
-            "A3_Modules_F",
+            "keko_common",
             "ace_interaction",
-            "ace_common",
-            "ace_refuel"};
+            "ace_refuel"
+        };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

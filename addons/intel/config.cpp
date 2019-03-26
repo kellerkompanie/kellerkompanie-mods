@@ -11,11 +11,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "3den",
+            "keko_common",
             "ace_main",
-            "ace_modules",
-            "cba_main",
-            "A3_Data_F_Curator_Intel"
+            "ace_modules"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};

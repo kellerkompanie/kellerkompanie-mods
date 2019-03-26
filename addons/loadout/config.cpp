@@ -16,9 +16,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "keko_common",
             "ace_main",
             "ace_modules",
-            "keko_faction_generic"};
+            "keko_faction_generic"
+        };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

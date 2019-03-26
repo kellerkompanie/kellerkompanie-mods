@@ -6,8 +6,7 @@ class CfgPatches {
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "keko_main",
-            "ace_common"
+            "keko_common"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};

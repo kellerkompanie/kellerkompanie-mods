@@ -8,8 +8,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Modules_F_Curator",
-            "A3_Modules_F_Events"
+            "keko_common"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};

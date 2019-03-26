@@ -14,6 +14,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "keko_common",
             "ace_main",
             "ace_medical",
             "adv_aceCPR",

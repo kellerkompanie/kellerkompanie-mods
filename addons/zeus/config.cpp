@@ -7,15 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_main",
+            "keko_common",
             "ace_modules",
-            "keko_faction_generic",
-            "A3_UI_F",
-            "A3_UI_F_Curator",
-            "A3_Functions_F",
-            "A3_Functions_F_Curator",
-            "A3_Modules_F",
-            "A3_Modules_F_Curator"
+            "keko_faction_generic"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
