@@ -8,11 +8,12 @@ class CfgPatches {
         requiredAddons[] = {
             "keko_common",
             "keko_loadout",
-            "keko_logistics"};
+            "keko_logistics"
+        };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG;    
+        VERSION_CONFIG;
     };
 };
 

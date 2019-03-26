@@ -12,10 +12,9 @@ class CfgPatches {
             QGVAR(canteen)
         };
         requiredAddons[] = {
-            "cba_main",
-            "ace_medical",
-            "a3_structures_f",
-            "a3_weapons_f"};
+            "keko_common",
+            "ace_medical"
+        };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

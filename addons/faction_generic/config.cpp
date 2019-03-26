@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {
             /* BLUFOR units */
             QGVAR(blufor_soldier),
@@ -297,10 +295,7 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Characters_F_BLUFOR",
-            "A3_Characters_F_INDEP",
-            "A3_Characters_F_OPFOR",
-            "A3_Characters_F"
+            "keko_common"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
