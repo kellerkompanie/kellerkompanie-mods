@@ -494,6 +494,7 @@ class FactionBase {
 #include "FactionChinesePLADesert.hpp"
 #include "FactionBlackorder.hpp"
 #include "FactionBlackorderRedBerets.hpp"
+#include "FactionSpecOpsMulticam.hpp"
 #include "FactionSpecOpsTropic.hpp"
 #include "FactionHorizonIsland.hpp"
 
