@@ -26,7 +26,7 @@ if(GVAR(customLogistics) == 2) then {
 
             if(true) exitWith{_returnCrate = _crate;};
         };
-    } forEach GVAR(customCrates) select 0;
+    } forEach GVAR(customCrates);
 }
 else {
     params ["_position", "_faction", "_crate"];

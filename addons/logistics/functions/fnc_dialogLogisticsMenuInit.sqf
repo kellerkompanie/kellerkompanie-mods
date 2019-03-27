@@ -10,7 +10,7 @@ lbClear _listBox;
 private _crates = [];
 
 if(GVAR(customLogistics) == 2) then {
-    _crates = [GVAR(customCrates)];
+    _crates = GVAR(customCrates);
 }
 else {
     private _cratesCfgs = "true" configClasses (configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction) >> "crates");
