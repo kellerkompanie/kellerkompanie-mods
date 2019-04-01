@@ -2,6 +2,7 @@
 
 params ["_weapon"];
 
+if !(GVAR(enabled)) exitWith {};
 if(!(primaryWeapon ace_player == _weapon)) exitWith {};
 if(isNil QGVAR(whitelist)) exitWith {};
 
