@@ -2,6 +2,8 @@
 
 params["_unit","_weapon"];
 
+if !(GVAR(enabled)) exitWith {};
+
 if(_unit == ace_player) then {
     if(!(primaryWeapon ace_player == _weapon)) exitWith {};
     if(isNil QGVAR(whitelist)) exitWith {};
