@@ -1,5 +1,4 @@
-class CfgAmmo
-{
+class CfgAmmo {
     class Default;
     class BulletCore;
     class BulletBase: Bulletcore{};
