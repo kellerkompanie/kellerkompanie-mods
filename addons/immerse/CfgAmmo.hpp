@@ -21,9 +21,6 @@ class CfgAmmo {
     class BombCore {
         L_exShake_func = "L_fnc_ExShake_BigRocket";
     };
-    class ammo_Bomb_LaserGuidedBase {
-        L_exShake_func = "L_fnc_ExShake_BigBomb";
-    };
     class LaserBombCore {
         L_exShake_func = "L_fnc_ExShake_BigBomb";
     };
