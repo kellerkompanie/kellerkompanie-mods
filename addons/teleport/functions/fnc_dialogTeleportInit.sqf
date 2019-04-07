@@ -16,7 +16,7 @@ ctrlEnable [1606, false];
 {
     if(side _x == side player) then {
         lbAdd [1501, name _x];
-        lbSetData [1501, _forEachIndex, _x];
+        lbSetData [1501, _forEachIndex, getPlayerUID _x];
         lbSetCurSel [1501, 0];
         ctrlEnable [1606, true];
     };
