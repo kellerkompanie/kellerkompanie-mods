@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "keko_common"
+            "keko_main"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
