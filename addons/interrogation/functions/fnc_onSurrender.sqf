@@ -37,7 +37,6 @@ _weaponHolder setVelocity [_speed * sin(_dir), _speed * cos(_dir), 4];
 private _group = group _unit;
 private _onSurrenderCodeString = _group getVariable [QGVAR(onSurrenderCode), ""];
 
-if (count _onSurrenderCodeString == 0) then {
-    (format ["executing onSurrender code:%1", _onSurrenderCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
+if !(count _onSurrenderCodeString == 0) then {
     call compile _onSurrenderCodeString;
 };

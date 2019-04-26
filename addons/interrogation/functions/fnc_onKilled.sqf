@@ -5,8 +5,7 @@ params ["_unit"];
 private _group = group _unit;
 private _onKilledCodeString = _group getVariable [QGVAR(onKilledCode), ""];
 
-if (count _onKilledCodeString == 0) then {
-    (format ["executing onKilled code:%1", _onKilledCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
+if !(count _onKilledCodeString == 0) then {
     call compile _onKilledCodeString;
 };
 
