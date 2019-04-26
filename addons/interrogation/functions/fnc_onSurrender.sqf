@@ -38,5 +38,6 @@ private _group = group _unit;
 private _onSurrenderCodeString = _group getVariable [QGVAR(onSurrenderCode), ""];
 
 if (count _onSurrenderCodeString == 0) then {
+    (format ["executing onSurrender code:%1", _onSurrenderCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
     call compile _onSurrenderCodeString;
 };

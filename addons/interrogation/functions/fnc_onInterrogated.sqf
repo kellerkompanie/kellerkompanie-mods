@@ -8,5 +8,6 @@ private _group = group _unit;
 private _onInterrogatedCodeString = _group getVariable [QGVAR(onInterrogateCode), ""];
 
 if (count _onInterrogatedCodeString == 0) then {
+    (format ["executing onInterrogated code:%1", _onInterrogatedCodeString]) remoteExec ["systemChat", [0, -2] select isDedicated];
     call compile _onInterrogatedCodeString;
 };
