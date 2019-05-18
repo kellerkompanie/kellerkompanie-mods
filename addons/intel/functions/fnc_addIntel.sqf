@@ -86,18 +86,24 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
             };
             case 2: {
                 // share with side
+                private _allHCs = entities "HeadlessClient_F";
+                private _allHumans = allPlayers - _allHCs;
+
                 {
                     if ((side _x) == (side player)) then
                     {
                         [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];
                     };
-                } forEach allUnits;
+                } forEach _allHumans;
             };
             case 3: {
                 // share with all
+                private _allHCs = entities "HeadlessClient_F";
+                private _allHumans = allPlayers - _allHCs;
+
                 {
-                    [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];                    
-                } forEach allUnits;
+                    [_title, _content] remoteExec [QFUNC(addIntelBriefingEntry), _x];
+                } forEach _allHumans;
             };
             default {
                 // only on player who interacted with intel
