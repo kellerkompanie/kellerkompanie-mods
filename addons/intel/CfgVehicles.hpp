@@ -91,6 +91,14 @@ class CfgVehicles {
                         name = CSTRING(typeWallet);
                         value = 13;
                     };
+                    class typeNomad1 {
+                        name = "Nomad Spezial 1";
+                        value = 14;
+                    };
+                    class typeNomad2 {
+                        name = "Nomad Spezial 2";
+                        value = 15;
+                    };
                 };
             };
             class Action: Edit {
