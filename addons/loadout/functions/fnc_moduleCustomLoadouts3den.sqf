@@ -9,16 +9,16 @@ private _objects = synchronizedObjects _logic;
 TRACE_1("synchronizedObjects", _objects);
 
 {
-	TRACE_1("converting to loadout", _x);
+    TRACE_1("converting to loadout", _x);
 
-	private _loadout = getUnitLoadout _x;
-	private _type = typeOf _x;
-	private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _type >> "loadoutDummy");
-	private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
+    private _loadout = getUnitLoadout _x;
+    private _type = typeOf _x;
+    private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _type >> "loadoutDummy");
+    private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
 
-	GVAR(customLoadouts) pushBack [_loadoutDummyClass, _name, _loadout];
+    GVAR(customLoadouts) pushBack [_loadoutDummyClass, _name, _loadout];
 
-	deleteVehicle _x;
+    deleteVehicle _x;
 
 } forEach _objects;
 

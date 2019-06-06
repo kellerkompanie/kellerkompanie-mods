@@ -23,16 +23,16 @@ Parameters:
 */
 
 [
-	QGVAR(enabled), // key/reference variable
-	"LIST", // type of setting
-	["Building Cleaner", "Enable/Disable Building Cleaner"], // name and tooltip
-	"Kellerkompanie Building Cleaner", // category
-	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
-		0 // default index
-	],
-	1
+    QGVAR(enabled), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(name), localize LSTRING(tooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true, false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 ADDON = true;

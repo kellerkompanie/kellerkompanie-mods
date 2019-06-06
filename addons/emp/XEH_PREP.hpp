@@ -1,4 +1,5 @@
 PREP(affectLight);
+PREP(affectRadios);
 PREP(affectStaticTurret);
 PREP(affectVehicle);
 PREP(configObj);

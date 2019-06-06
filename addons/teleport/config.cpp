@@ -7,16 +7,16 @@ class CfgPatches {
             QGVAR(moduleAddTeleportMenu),
             QGVAR(moduleAddTeleportDestination3den),
             QGVAR(moduleAddTeleportMenu3den),
-			"keko_ModuleAddTeleportDestination3den",
-			"keko_ModuleAddTeleportMenu3den"			
+            "keko_ModuleAddTeleportDestination3den",
+            "keko_ModuleAddTeleportMenu3den"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "keko_common",
-            "ace_main",
-            "ace_modules"};
-        author = ECSTRING(common,KEKOTeam);
+            "ace_modules"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

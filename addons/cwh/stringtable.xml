@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="cwh">
+        <Key ID="STR_keko_cwh_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_cwh_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+        <Key ID="STR_keko_cwh_tooltipEnable">
+            <English>Enable/Disable Carryable Weapon Holders</English>
+            <German>Tragbare Waffenhalter Aktivieren/Deaktivieren</German>
+        </Key>
+        <Key ID="STR_keko_cwh_maxItems">
+            <English>Max. items to carry</English>
+            <German>Max. Anzahl an tragbaren Items</German>
+        </Key>
+        <Key ID="STR_keko_cwh_maxItemsTooltip">
+            <English>Limit of items in weapon holder to allow carrying/dragging. Average man has 2 hands to keep at least 2 items, but don't be too transhuman and use backpacks to carry all extra stuff.</English>
+            <German>Limitiert die Anzahl an Items, die getragen werden können. Der durchschnittliche Mensch hat 2 Hände, kann also mindestens 2 Items tragen.</German>
+        </Key>
+        <Key ID="STR_keko_cwh_checkTimeout">
+            <English>Check timeout (in seconds)</English>
+            <German>Prüfinterval (in Sekunden)</German>
+        </Key>
+        <Key ID="STR_keko_cwh_checkTimeoutTooltip">
+            <English>Timeout between revealing weapon holders near the player.</English>
+            <German>Zeit zwischen Umwandlung von Waffenhaltern in der Nähe des Spielers.</German>
+        </Key>
+        <Key ID="STR_keko_cwh_checkRadius">
+            <English>Check radius (in meters)</English>
+            <German>Prüfradius (in Metern)</German>
+        </Key>
+        <Key ID="STR_keko_cwh_checkRadiusTooltip">
+            <English>Radius to check for weapon holders. Big values may affect performance.</English>
+            <German>Radius in dem auf Waffenhalter geprüft wird. Große Werte können die Performance negativ beeinflussen.</German>
+        </Key>
+    </Package>
+</Project>

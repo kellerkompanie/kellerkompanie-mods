@@ -13,27 +13,6 @@ if (isNil QGVAR(fuelUptake)) then {
 
    GVAR(fuelUptake) = [] spawn {
 
-      // initialize variables if not set already
-      if (isNil QGVAR(fuelConsumption_car)) then {
-         GVAR(fuelConsumption_car) = [0.0002, 0.0004, 0.0006];
-      };
-
-      if (isNil QGVAR(fuelConsumption_truck)) then {
-         GVAR(fuelConsumption_truck) = [0.0002, 0.0004, 0.0006];
-      };
-
-      if (isNil QGVAR(fuelConsumption_tank)) then {
-         GVAR(fuelConsumption_tank) = [0.0002, 0.0004, 0.0006];
-      };
-
-      if (isNil QGVAR(fuelConsumption_helo)) then {
-         GVAR(fuelConsumption_helo) = [0.0005, 0.0005, 0.0005];
-      };
-
-      if (isNil QGVAR(fuelConsumption_plane)) then {
-         GVAR(fuelConsumption_plane) = [0.0002, 0.0005, 0.0009];
-      };
-
       while {alive player} do   {
          TRACE_1("fuelConsumption THREAD STARTED @ ", diag_tickTime);
          waitUntil {
@@ -55,12 +34,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Car") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 0));
+                        _vh setFuel (_fuel - GVAR(consumptionCarLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 1));
+                           _vh setFuel (_fuel - GVAR(consumptionCarMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_car) select 2));
+                           _vh setFuel (_fuel - GVAR(consumptionCarHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -68,12 +47,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Truck") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 0));
+                        _vh setFuel (_fuel - GVAR(consumptionTruckLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 1));
+                           _vh setFuel (_fuel - GVAR(consumptionTruckMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_truck) select 2));
+                           _vh setFuel (_fuel - GVAR(consumptionTruckHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -81,12 +60,12 @@ if (isNil QGVAR(fuelUptake)) then {
 
                   if (_vh isKindOf "Tank") Then {
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 0));
+                        _vh setFuel (_fuel - GVAR(consumptionTankLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 1));
+                           _vh setFuel (_fuel - GVAR(consumptionTankMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_tank) select 2));
+                           _vh setFuel (_fuel - GVAR(consumptionTankHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -97,12 +76,12 @@ if (isNil QGVAR(fuelUptake)) then {
                      // TODO calculate based on throttle
 
                      if(_speed <= 5) then {
-                        _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 0));
+                        _vh setFuel (_fuel - GVAR(consumptionHeloLow) / 100);
                      } else {
                         if(_speed < _maxSpeedThreshold) then {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 1));
+                           _vh setFuel (_fuel - GVAR(consumptionHeloMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_helo) select 2));
+                           _vh setFuel (_fuel - GVAR(consumptionHeloHigh) / 100);
                         };
                      };
                      sleep .20;
@@ -114,12 +93,12 @@ if (isNil QGVAR(fuelUptake)) then {
                      private _throttle = airplaneThrottle _vh;
 
                      if(_throttle < 0.25) then {
-                        _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 0));
+                        _vh setFuel (_fuel - GVAR(consumptionPlaneLow) / 100);
                      } else {
                         if(_throttle < 0.75) then {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 1));
+                           _vh setFuel (_fuel - GVAR(consumptionPlaneMid) / 100);
                         } else {
-                           _vh setFuel (_fuel - (GVAR(fuelConsumption_plane) select 2));
+                           _vh setFuel (_fuel - GVAR(consumptionPlaneHigh) / 100);
                         };
                      };
                      sleep .20;

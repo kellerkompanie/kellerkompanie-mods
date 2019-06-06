@@ -19,7 +19,6 @@ PREP(heliDrop);
 PREP(moduleAddLogisticsMenu);
 PREP(moduleAddLogisticsMenu3den);
 PREP(moduleCustomLogistics3den);
-PREP(moduleFuelConsumption3den);
 PREP(moduleUAVBase3den);
 PREP(moduleHeliDrop);
 PREP(moduleHeliEntry3den);

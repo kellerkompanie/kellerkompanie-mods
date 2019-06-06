@@ -10,32 +10,32 @@ TRACE_3("spawning effect", _logic, _object, typeOf _object);
 
 switch (true) do {
     case (isNull _object): {
-    	ERROR("_object is null");
+        ERROR("_object is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (isPlayer _object): {
-    	ERROR("_object is player");
+        ERROR("_object is player");
         [objNull, "place on object"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (!alive _object): {
-    	ERROR("_object is not alive");
+        ERROR("_object is not alive");
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
         /*
         [obj_name,emp_range,visible_emp,affect_perception,damage_unit] execvm "AL_emp\emp_starter.sqf";
 
-        obj_name			- string, name of the object used as source for EMP
-        emp_range			- number, radius in meters of area affected by EMP
-        visible_emp			- boolean, if true the EMP will be visible
-        affect_perception	- boolean, if is true players vision will be affected for a half a minute or so
-        damage_unit			- number, if is higher than zero will be applied as damage on all units in range
+        obj_name            - string, name of the object used as source for EMP
+        emp_range            - number, radius in meters of area affected by EMP
+        visible_emp            - boolean, if true the EMP will be visible
+        affect_perception    - boolean, if is true players vision will be affected for a half a minute or so
+        damage_unit            - number, if is higher than zero will be applied as damage on all units in range
 
         ============ EXAMPLE
         [emp_me,500,true,true,0.1] execvm "AL_emp\emp_starter.sqf";
         */
 
-        [_object,1000,true,true,0] remoteExec [QFUNC(empStarter), 2, false];
+        [_object, 1000, true, true] remoteExec [QFUNC(empStarter), 2, false];
     };
 };
 

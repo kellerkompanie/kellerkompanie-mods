@@ -1,18 +1,19 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON {
+    class ADDON {
         name = COMPONENT_NAME;
-		units[] = {};
+        units[] = {};
         weapons[] = {};
-		requiredVersion = REQUIRED_VERSION;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"keko_main"};
-        author = ECSTRING(common,KEKOTeam);
+            "keko_common"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-	};
+    };
 };
 
 #include "CfgEventHandlers.hpp"

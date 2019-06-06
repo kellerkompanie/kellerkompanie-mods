@@ -9,11 +9,11 @@ private ["_maxWidth","_widthOffset","_maxLength","_lengthOffset","_widthFactor",
 _widthFactor = 0.75;
 _lengthFactor = 0.75;
 if(_vehicle isKindOf "Air") then {
-	_widthFactor = 0.3;
+    _widthFactor = 0.3;
 };
 if(_vehicle isKindOf "Helicopter") then {
-	_widthFactor = 0.2;
-	_lengthFactor = 0.45;
+    _widthFactor = 0.2;
+    _lengthFactor = 0.45;
 };
 
 _centerOfMass = getCenterOfMass _vehicle;

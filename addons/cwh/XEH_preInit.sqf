@@ -9,22 +9,22 @@ PREP_RECOMPILE_END;
 #define CBA_SETTINGS_CATEGORY "Kellerkompanie Carryable Weapon Holders"
 
 [
-	QGVAR(Enabled), // key/reference variable
-	"LIST", // type of setting
-	["Enabled", "Enable/Disable Carryable Weapon Holders"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
-	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
-		0 // default index
-	],
-	1
-] call cba_settings_fnc_init;
+    QGVAR(Enabled), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(enabled), localize LSTRING(tooltipEnable)], // name and tooltip
+    CBA_SETTINGS_CATEGORY, // category
+    [
+        [true, false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
+] call CBA_Settings_fnc_init;
 
 [
     QGVAR(AllowedNumberOfItems),
     "SLIDER",
-    ["Max. items to carry","Limit of items in weapon holder to allow carrying/dragging. Average man has 2 hands to keep at least 2 items, but don't be too transhuman and use backpacks to carry all extra stuff."],
+    [localize LSTRING(maxItems), localize LSTRING(maxItemsTooltip)],
     CBA_SETTINGS_CATEGORY,
     [1, 6, 2, 0],
     true
@@ -33,7 +33,7 @@ PREP_RECOMPILE_END;
 [
     QGVAR(CheckTimeout),
     "SLIDER",
-    ["Check timeout (in seconds)","Timeout between revealing weapon holders near the player."],
+    [localize LSTRING(checkTimeout), localize LSTRING(checkTimeoutTooltip)],
     CBA_SETTINGS_CATEGORY,
     [1, 6, 2, 0],
     true
@@ -42,7 +42,7 @@ PREP_RECOMPILE_END;
 [
     QGVAR(CheckRadius),
     "SLIDER",
-    ["Check radius (in meters)","Radius to check for weapon holders. Big values may affect performance."],
+    [localize LSTRING(checkRadius), localize LSTRING(checkRadiusTooltip)],
     CBA_SETTINGS_CATEGORY,
     [5, 50, 15, 0],
     true

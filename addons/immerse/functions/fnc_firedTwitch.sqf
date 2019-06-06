@@ -55,15 +55,15 @@ if (_frequency < 0) then {_frequency = 0;};
 addCamShake [_force, _length, _frequency];
 
 if (_caliber > 2.1) then {
-	if (_intensity > 0.6) then {
-		private _blurStrength = (0.45 + (_caliber * 0.03)) * _intensity;
-		private _dBlur = ppEffectCreate ["DynamicBlur", 500];
-		_dBlur ppEffectEnable true;
-		_dBlur ppEffectAdjust [_blurStrength];
-		_dBlur ppEffectCommit 0;
-		_dBlur ppEffectAdjust [0];
-		_dBlur ppEffectCommit 0.8;
+    if (_intensity > 0.6) then {
+        private _blurStrength = (0.45 + (_caliber * 0.03)) * _intensity;
+        private _dBlur = ppEffectCreate ["DynamicBlur", 500];
+        _dBlur ppEffectEnable true;
+        _dBlur ppEffectAdjust [_blurStrength];
+        _dBlur ppEffectCommit 0;
+        _dBlur ppEffectAdjust [0];
+        _dBlur ppEffectCommit 0.8;
 
-		[{ppEffectDestroy _this;}, _dBlur, 0.8] call CBA_fnc_waitAndExecute;
-	};
+        [{ppEffectDestroy _this;}, _dBlur, 0.8] call CBA_fnc_waitAndExecute;
+    };
 };

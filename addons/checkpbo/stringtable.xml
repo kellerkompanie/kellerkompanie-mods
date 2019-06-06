@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="checkpbo">
+        <Key ID="STR_keko_checkpbo_errorAddonsOnServer">
+            <English>ERROR: The following addons are on the server, but not on %1's machine: %2</English>
+            <German>FEHLER: Folgende Addons laufen auf dem Server, aber nicht bei %1: %2</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorAddonsNotOnServer">
+            <English>ERROR: The following addons are on %1's machine, but not on the server: %2</English>
+            <German>FEHLER: Folgende Addons laufen bei %1, aber nicht auf dem Server: %2</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorDifferentVersions">
+            <English>ERROR: Different versions - Server: %1 (%2) | %3: %4 (%5)</English>
+            <German>FEHLER: Unterschiedliche Versionen - Server: %1 (%2) | %3: %4 (%5)</German>
+        </Key>
+
+        <Key ID="STR_keko_checkpbo_errorMessageAddonsOnServer">
+            <English>There are addons active on the server, but not on your machine.</English>
+            <German>Es gibt Addons die auf dem Server geladen sind, aber nicht auf deinem PC.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageAddonsNotOnServer">
+            <English>There are addons active on your machine, which are not active on the server.</English>
+            <German>Es gibt Addons die auf deinem PC geladen sind, aber nicht auf dem Server.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageDifferentVersions">
+            <English>Some addons have different version on your machine and on the server</English>
+            <German>Einige Addons haben unterschiedliche Versionen auf deinem PC und auf dem Server.</German>
+        </Key>
+
+        <Key ID="STR_keko_checkpbo_errorTitle">
+            <English>Addon Errors Detected</English>
+            <German>Addon Fehler entdeckt</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessage">
+            <English>&lt;t color='#ff0000' align='center'&gt;You have to fix your addon errors before you can continue playing on this server!&lt;/t&gt;</English>
+            <German>&lt;t color='#ff0000' align='center'&gt;Du musst deine Addon Fehler reparieren bevor du auf diesem Server spielen kannst!&lt;/t&gt;</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageClipboard">
+            <English>&lt;t align='center'&gt;Info: A more detailed message was copied to your clipboard and written to your RPT&lt;/t&gt;</English>
+            <German>&lt;t align='center'&gt;Info: Eine detaillierte Nachricht wurde in deine Zwischenablage kopiert und in deine RPT geschrieben&lt;/t&gt;</German>
+        </Key>
+    </Package>
+</Project>

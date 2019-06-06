@@ -47,7 +47,7 @@ class CfgPatches {
           	"A3_Static_F",
           	"A3_boat_F"
         };
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
 		authors[] = {"Schwaggot"};
 		url = ECSTRING(main,URL);
 		VERSION_CONFIG;

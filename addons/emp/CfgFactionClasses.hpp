@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class GVAR(Effects) {
-        displayName = "Kellerkompanie Effects";
+        displayName = CSTRING(curatorCategory);
         priority = 2;
         side = 7;
     };

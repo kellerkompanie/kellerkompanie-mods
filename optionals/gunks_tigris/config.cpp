@@ -11,7 +11,7 @@ class CfgPatches {
 		requiredAddons[]= {
             "A3_Weapons_F"
 		};
-		author = ECSTRING(common,KEKOTeam);
+		author = ECSTRING(common,Schwaggot);
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

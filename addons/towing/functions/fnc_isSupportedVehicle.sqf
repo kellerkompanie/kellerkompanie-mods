@@ -4,8 +4,8 @@ params ["_vehicle","_isSupported"];
 
 _isSupported = false;
 if(not isNull _vehicle) then {
-	{
-		if(_vehicle isKindOf _x) exitWith {_isSupported = true;};
-	} forEach ["Tank", "Car", "Ship"];
+    {
+        if(_vehicle isKindOf _x) exitWith {_isSupported = true;};
+    } forEach ["Tank", "Car", "Ship"];
 };
 _isSupported;

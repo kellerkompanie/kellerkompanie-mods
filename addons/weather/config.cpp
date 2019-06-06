@@ -2,18 +2,19 @@
 
 class CfgPatches {
     class ADDON {
-		name = COMPONENT_NAME;
+        name = COMPONENT_NAME;
         units[] = {
-        	QGVAR(moduleSnowStorm),
-          	QGVAR(moduleDustStorm),
-			QGVAR(moduleTornado),
-          	QGVAR(moduleDisableStorm)
+            QGVAR(moduleSnowStorm),
+            QGVAR(moduleDustStorm),
+            QGVAR(moduleTornado),
+            QGVAR(moduleDisableStorm)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main",
-			"ace_zeus"};
-		author = ECSTRING(common,KEKOTeam);
+            "keko_common",
+            "ace_zeus"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

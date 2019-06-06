@@ -4,14 +4,13 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-			"ModulePostprocess_F"
-		};
+            "ModulePostprocess_F"
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"A3_Modules_F_Curator",
-			"A3_Modules_F_Events"
-		};
-        author = ECSTRING(common,KEKOTeam);
+            "keko_common"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

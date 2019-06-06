@@ -7,14 +7,14 @@ if !(isServer) exitWith {};
 private _objects = synchronizedObjects _logic;
 
 {
-	private _loadout = getUnitLoadout _x;
-	private _type = typeOf _x;
-	private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _type >> "loadoutDummy");
-	private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
+    private _loadout = getUnitLoadout _x;
+    private _type = typeOf _x;
+    private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _type >> "loadoutDummy");
+    private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
 
-	GVAR(addLoadouts) pushBack [_loadoutDummyClass, _name, _loadout];
+    GVAR(addLoadouts) pushBack [_loadoutDummyClass, _name, _loadout];
 
-	deleteVehicle _x;
+    deleteVehicle _x;
 
 } forEach _objects;
 

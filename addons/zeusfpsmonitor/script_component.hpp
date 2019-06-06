@@ -1,5 +1,5 @@
 #define COMPONENT zeusfpsmonitor
-#define COMPONENT_BEAUTIFIED ZeusFPSMonitor
+#define COMPONENT_BEAUTIFIED Zeus FPS Monitor
 #include "\x\keko\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

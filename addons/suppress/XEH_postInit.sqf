@@ -40,17 +40,17 @@ GVAR(impactBlur) ppEffectEnable true;
 ["unit", {
 
     // Resets PinnedDown PP Effects
-	GVAR(Suppressed) = false;
-	GVAR(cc) ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
-	GVAR(cc) ppEffectCommit 0;
+    GVAR(Suppressed) = false;
+    GVAR(cc) ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
+    GVAR(cc) ppEffectCommit 0;
 
-	// Blur
-	GVAR(blur) ppEffectAdjust [0];
-	GVAR(blur) ppEffectCommit 0;
+    // Blur
+    GVAR(blur) ppEffectAdjust [0];
+    GVAR(blur) ppEffectCommit 0;
 
-	// RBlur
-	GVAR(rBlur) ppEffectAdjust [0, 0, 0, 0];
-	GVAR(rBlur) ppEffectCommit 0;
+    // RBlur
+    GVAR(rBlur) ppEffectAdjust [0, 0, 0, 0];
+    GVAR(rBlur) ppEffectCommit 0;
 
     // reset Variables that PPEffects dont get reactivated
     GVAR(Threshold) = 0;

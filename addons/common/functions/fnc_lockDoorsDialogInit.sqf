@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Initializer for the lock doors dialog. Sets input defaults according to last
+ * selection.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * true
+ *
+ * Example:
+ * call keko_common_fnc_lockDoorsDialogInit
+ *
+ */
 
 disableSerialization;
 

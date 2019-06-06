@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="canteen">
+        <Key ID="STR_keko_canteen_messageDrink">
+            <English>You take a sip from your trusty canteen.</English>
+            <German>Du nimmst einen Schluck aus deiner Trinkflasche.</German>
+        </Key>
+        <Key ID="STR_keko_canteen_messageRefilled">
+            <English>Canteen refilled.</English>
+            <German>Trinkflasche aufgefüllt.</German>
+        </Key>
+        <Key ID="STR_keko_canteen_messageFull">
+            <English>Your canteen is full.</English>
+            <German>Deine Trinkflasche ist voll.</German>
+        </Key>
+        <Key ID="STR_keko_canteen_messagePour">
+            <English>You pour some water on your comrade's face.</English>
+            <German>Du schüttest Wasser über das Gesicht deines Kameraden.</German>
+        </Key>
+        <Key ID="STR_keko_canteen_displayName">
+            <English>Canteen</English>
+            <German>Trinkflasche</German>
+        </Key>
+        <Key ID="STR_keko_canteen_descriptionShort">
+            <English>A water canteen.</English>
+            <German>Eine Trinkflasche voll Wasser.</German>
+        </Key>
+        <Key ID="STR_keko_canteen_actionDrink">
+            <English>Drink from canteen</English>
+            <German>Aus der Trinkflasche trinken</German>
+        </Key>
+        <Key ID="STR_keko_canteen_actionPour">
+            <English>Pour some water</English>
+            <German>Wasser ins Gesicht schütten</German>
+        </Key>
+        <Key ID="STR_keko_canteen_actionRefill">
+            <English>Refill Canteen</English>
+            <German>Trinkflasche auffüllen</German>
+        </Key>
+        <Key ID="STR_keko_canteen_displayNameEmpty">
+            <English>Canteen (empty)</English>
+            <German>Trinkflasche (leer)</German>
+        </Key>
+        <Key ID="STR_keko_canteen_descriptionShortEmpty">
+            <English>An empty water canteen.</English>
+            <German>Eine leere Trinkflasche.</German>
+        </Key>
+        </Package>
+</Project>

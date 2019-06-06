@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Zeus module callback for setting the respawn position.
+ *
+ * Arguments:
+ * 0: Placed module <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _logic call keko_common_fnc_moduleRespawnPosition3den
+ *
+ */
 
 params["_logic"];
 
@@ -8,12 +22,12 @@ private _respawnSide = _logic getVariable [QGVAR(RespawnSide), 0];
 
 private _objects = synchronizedObjects _logic;
 if ((count _objects) > 0) then {
-	{
-		private _objectPosAGL = ASLToAGL getPosASL _x;
-		TRACE_2("setting respawn to position of: %1 @ %2", _x, _objectPosAGL);
+    {
+        private _objectPosAGL = ASLToAGL getPosASL _x;
+        TRACE_2("setting respawn to position of: %1 @ %2", _x, _objectPosAGL);
 
-		[_objectPosAGL, _respawnSide] call FUNC(setRespawnPosition);
-	} forEach _objects;
+        [_objectPosAGL, _respawnSide] call FUNC(setRespawnPosition);
+    } forEach _objects;
 } else {
-	[getPos _logic, _respawnSide] call FUNC(setRespawnPosition);
+    [getPos _logic, _respawnSide] call FUNC(setRespawnPosition);
 };

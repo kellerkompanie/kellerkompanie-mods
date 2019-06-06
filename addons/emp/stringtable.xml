@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="emp">
+        <Key ID="STR_keko_emp_cbaSettingsCategory">
+            <English>Kellerkompanie EMP</English>
+            <German>Kellerkompanie EMP</German>
+        </Key>
+        <Key ID="STR_keko_emp_affectRadios">
+            <English>EMP affects radios</English>
+            <German>EMP zerstört Funkgeräte</German>
+        </Key>
+        <Key ID="STR_keko_emp_affectRadiosTooltip">
+            <English>Enable/Disable radios breaking after EMP pulse.</English>
+            <German>Aktiviert/Deaktiviert zerstörte Funkgeräte nach dem EMP Impuls.</German>
+        </Key>
+        <Key ID="STR_keko_emp_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_emp_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+        <Key ID="STR_keko_emp_curatorCategory">
+            <English>Kellerkompanie Effects</English>
+            <German>Kellerkompanie Effekte</German>
+        </Key>
+    </Package>
+</Project>

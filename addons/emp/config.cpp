@@ -2,13 +2,14 @@
 
 class CfgPatches {
     class ADDON {
-    	name = COMPONENT_NAME;
+        name = COMPONENT_NAME;
         units[] = { GVAR(moduleEMP) };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"};
-        author = ECSTRING(common,KEKOTeam);
+            "keko_common"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

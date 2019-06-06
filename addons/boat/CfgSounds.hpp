@@ -1,9 +1,9 @@
 class CfgSounds {
-	sounds[] = {QGVAR(InflateSound)};
+    sounds[] = {QGVAR(InflateSound)};
 
-	class GVAR(InflateSound) {
-		name = QGVAR(InflateSound);
-		sound[] = {QPATHTOF(sounds\inflate.ogg), 3, 1};
-		titles[] = {};
-	};
+    class GVAR(InflateSound) {
+        name = QGVAR(InflateSound);
+        sound[] = {QPATHTOF(sounds\inflate.ogg), 3, 1};
+        titles[] = {};
+    };
 };

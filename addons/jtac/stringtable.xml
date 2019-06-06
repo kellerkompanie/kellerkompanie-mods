@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="jtac">
+        <Key ID="STR_keko_jtac_cbaSettingsCategory">
+            <English>Kellerkompanie JTAC</English>
+            <German>Kellerkompanie JTAC</German>
+        </Key>
+        <Key ID="STR_keko_jtac_virtaulJTAC">
+            <English>Virtual JTAC</English>
+            <German>Vritueller JTAC</German>
+        </Key>
+        <Key ID="STR_keko_jtac_virtaulJTACtooltip">
+            <English>Enable/Disable virtual JTAC</English>
+            <German>Virtuellen JTAC aktivieren/deaktivieren</German>
+        </Key>
+        <Key ID="STR_keko_jtac_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_jtac_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+
+    </Package>
+</Project>

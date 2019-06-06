@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="post_processing">
+        <Key ID="STR_keko_post_processing">
+            <English>Kellerkompanie Persistency</English>
+            <German>Kellerkompanie Persistenz</German>
+        </Key>
+        <Key ID="STR_keko_post_processing_middleEast">
+            <English>Middle East</English>
+            <German>Mittlerer Osten</German>
+        </Key>
+        <Key ID="STR_keko_post_processing_realIsBrown2">
+            <English>Real Is Brown 2</English>
+            <German>Braun ist geil 2</German>
+        </Key>
+        <Key ID="STR_keko_post_processing_nightstalkers">
+            <English>Nightstalkers</English>
+            <German>Nachtpirscher</German>
+        </Key>
+    </Package>
+</Project>

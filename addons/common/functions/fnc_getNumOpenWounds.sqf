@@ -1,4 +1,18 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Returns the number of open wounds for a unit.
+ *
+ * Arguments:
+ * 0: The bleeding unit <OBJECT>
+ *
+ * Return Value:
+ * Number of open/bleeding wounds <NUMBER>
+ *
+ * Example:
+ * _unit call keko_common_fnc_getNumOpenWounds
+ *
+ */
 
 params ["_unit"];
 
@@ -16,41 +30,41 @@ private _rightLegWounds = 0;
 
 // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
 {
-	_x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+    _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
 
-	if(_bloodLoss > 0) then {
-		switch (_bodyPart) do {
-			// Head
-			case 0: {
-				_headWounds = _headWounds + _numOpenWounds;
-			};
+    if(_bloodLoss > 0) then {
+        switch (_bodyPart) do {
+            // Head
+            case 0: {
+                _headWounds = _headWounds + _numOpenWounds;
+            };
 
-			// Body
-			case 1: {
-				_bodyWounds = _bodyWounds + _numOpenWounds;
-			};
+            // Body
+            case 1: {
+                _bodyWounds = _bodyWounds + _numOpenWounds;
+            };
 
-			// Left Arm
-			case 2: {
-				_leftArmWounds = _leftArmWounds + _numOpenWounds;
-			};
+            // Left Arm
+            case 2: {
+                _leftArmWounds = _leftArmWounds + _numOpenWounds;
+            };
 
-			// Right Arm
-			case 3: {
-				_rightArmWounds = _rightArmWounds + _numOpenWounds;
-			};
+            // Right Arm
+            case 3: {
+                _rightArmWounds = _rightArmWounds + _numOpenWounds;
+            };
 
-			// Left Leg
-			case 4: {
-				_leftLegWounds = _leftLegWounds + _numOpenWounds;
-			};
+            // Left Leg
+            case 4: {
+                _leftLegWounds = _leftLegWounds + _numOpenWounds;
+            };
 
-			// Right Leg
-			case 5: {
-				_rightLegWounds = _rightLegWounds + _numOpenWounds;
-			};
-		};
-	};
+            // Right Leg
+            case 5: {
+                _rightLegWounds = _rightLegWounds + _numOpenWounds;
+            };
+        };
+    };
 } forEach _openWounds;
 
 INFO_1("# of _openWounds = %1", _headWounds + _bodyWounds + _leftArmWounds + _leftLegWounds + _rightArmWounds + _rightLegWounds);

@@ -4,15 +4,14 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-			QGVAR(boatCrate)
-		};
-		weapons[] = {};
+            QGVAR(boatCrate)
+        };
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main",
-			"ace_main",
-			"A3_Props_F_Exp_Commercial_Market"};
-        author = ECSTRING(common,KEKOTeam);
+            "keko_common"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

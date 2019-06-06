@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Schwaggot
+ * Callback for the lock doors dialog. Checks input and locks/unlocks doors
+ * accordingly. Closes dialog afterwards.
+ *
+ * Arguments:
+ * 0: Lock state, true = lock, false = unlock <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _lockedState call keko_common_fnc_lockDoorsDialogCallback
+ *
+ */
 
 params ["_lockedState"];
 

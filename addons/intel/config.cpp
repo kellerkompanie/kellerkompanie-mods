@@ -6,16 +6,16 @@ class CfgPatches {
         units[] = {
             QGVAR(moduleAddIntel),
             QGVAR(moduleAddIntel3den),
-			"keko_ModuleAddIntel3den"
+            "keko_ModuleAddIntel3den"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-        	"3den",
+            "keko_common",
             "ace_main",
-            "ace_modules",
-            "cba_main" };
-        author = ECSTRING(common,KEKOTeam);
+            "ace_modules"
+        };
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

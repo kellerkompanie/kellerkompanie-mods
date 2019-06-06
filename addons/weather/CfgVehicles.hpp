@@ -6,17 +6,17 @@ class CfgVehicles {
         class ModuleDescription;
 
         class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
+        {
+            class Default;
+            class Edit;
+            class Combo;
+            class Checkbox;
+            class CheckboxNumber;
+            class ModuleDescription;
+            class Units;
 
-			expression = "_this setVariable ['%s',_value];";
-		};
+            expression = "_this setVariable ['%s',_value];";
+        };
     };
 
     class GVAR(moduleSnowStorm): Module_F
@@ -45,7 +45,7 @@ class CfgVehicles {
         isDisposable       = 0;
         icon = QPATHTOF(ui\icon_weather_on.paa);
     };
-	class GVAR(moduleTornado): Module_F
+    class GVAR(moduleTornado): Module_F
     {
         scope              = 1;
         scopeCurator       = 2;
