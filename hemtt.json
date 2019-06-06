@@ -1,0 +1,10 @@
+{
+  "name": "kellerkompanie-mods",
+  "prefix": "keko",
+  "author": "Schwaggot",
+  "files": [
+    "mod.cpp",
+    "logo_keko_ca.paa"
+  ],
+  "sigversion": 3
+}
