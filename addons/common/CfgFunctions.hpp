@@ -15,5 +15,10 @@ class CfgFunctions {
                 file = QPATHTOF(functions\fnc_garrisonNearest.sqf);
             };
         };
+        class PlacementTools {
+            class placementTools_garrison {
+                file = QPATHTOF(functions\fnc_placementTools_garrison.sqf);
+            };
+        };
     };
 };
