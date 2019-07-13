@@ -39,5 +39,45 @@
             <English>&lt;t align='center'&gt;Info: A more detailed message was copied to your clipboard and written to your RPT&lt;/t&gt;</English>
             <German>&lt;t align='center'&gt;Info: Eine detaillierte Nachricht wurde in deine Zwischenablage kopiert und in deine RPT geschrieben&lt;/t&gt;</German>
         </Key>
+        <Key ID="STR_keko_checkpbo_cbaSettingsCategory">
+            <English>Kellerkompanie Check PBO</English>
+            <German>Kellerkompanie Check PBO</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_checkAddons">
+            <English>Check addons</English>
+            <German>Addons prüfen</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_checkAddonsTooltip">
+            <English>Enable/Disable checking of player addons on connect.</English>
+            <German>Überprüfung der Addons beim Connecten aktivieren/deaktivieren.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_reaction">
+            <English>Action</English>
+            <German>Aktion</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_reactionTooltip">
+            <English>Action that is performed on addon mismatch.</English>
+            <German>Aktion die durchgeführt bei fehlerhaften Addons.</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_kick">
+            <English>Warn + Kick</English>
+            <German>Warnung + Kick</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_warning">
+            <English>Warn only</English>
+            <German>Nur Warnung</German>
+        </Key>
+        <Key ID="STR_keko_checkpbo_nothing">
+            <English>Do nothing</English>
+            <German>Nichts unternehmen</German>
+        </Key>
     </Package>
 </Project>

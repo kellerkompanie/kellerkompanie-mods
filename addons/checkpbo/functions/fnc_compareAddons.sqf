@@ -59,10 +59,17 @@ if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissing
     private _allErrors = _errorMessages + _errorMessagesMissingAddonsOnClient + _errorMessagesMissingAddonsOnServer + _errorMessagesVersionMismatch;
     private _comprehensiveErrorMessage = (_allErrors joinString _br) + _br;
 
-    _comprehensiveErrorMessage remoteExec ["diag_log", _player];
-    ["ace_clipboard", _comprehensiveErrorMessage] remoteExec ["callExtension", _player];
-    ["ace_clipboard", "--COMPLETE--"] remoteExec ["callExtension", _player];
+    if(GVAR(reaction) isEqualTo "KICK" || GVAR(reaction) isEqualTo "WARN") then {
+        _comprehensiveErrorMessage remoteExec ["diag_log", _player];
+        ["ace_clipboard", _comprehensiveErrorMessage] remoteExec ["callExtension", _player];
+        ["ace_clipboard", "--COMPLETE--"] remoteExec ["callExtension", _player];
 
-    private _errorMessage = parseText (_errorMessages joinString "<br/>");
-    [localize LSTRING(errorTitle), _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
+        private _errorMessage = parseText (_errorMessages joinString "<br/>");
+
+        if(GVAR(reaction) isEqualTo "KICK") then {
+            [localize LSTRING(errorTitle), _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
+        } else {
+            [localize LSTRING(errorTitle), _errorMessage, {}] remoteExec ["ace_common_fnc_errorMessage", _player];
+        }
+    }
 };
