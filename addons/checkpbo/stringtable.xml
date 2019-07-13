@@ -26,6 +26,10 @@
             <English>Some addons have different version on your machine and on the server</English>
             <German>Einige Addons haben unterschiedliche Versionen auf deinem PC und auf dem Server.</German>
         </Key>
+        <Key ID="STR_keko_checkpbo_errorMessageChat">
+            <English>Please update your modpack!</English>
+            <German>Bitte update dein Modpack!</German>
+        </Key>
 
         <Key ID="STR_keko_checkpbo_errorTitle">
             <English>Addon Errors Detected</English>
