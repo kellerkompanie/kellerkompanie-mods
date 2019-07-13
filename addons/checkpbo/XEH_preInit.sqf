@@ -18,9 +18,37 @@ if (isServer) then {
         {
             #include "functions\getAddons.sqf"
 
-            [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
+            if!(GVAR(reaction) isEqualTo "NOTHING") then {
+                [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
+            }
         } remoteExec ["call", _owner];
     }];
 };
+
+[
+    QGVAR(checkAddons), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(checkAddons), localize LSTRING(checkAddonsTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(reaction), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(reaction), localize LSTRING(reactionTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        ["KICK","WARN","NOTHING"], // values
+        [localize LSTRING(kick), localize LSTRING(warning), localize LSTRING(nothing)], // names
+        0 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
 
 ADDON = true;
