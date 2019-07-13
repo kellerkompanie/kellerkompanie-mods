@@ -4,6 +4,7 @@ BIN = @keko
 ZIP = keko
 FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
 VERSION_FILES = README.md mod.cpp
+COPY_FILES = *.dll mod.cpp README.md meta.cpp
 
 MAJOR = $(word 1, $(subst ., ,$(VERSION)))
 MINOR = $(word 2, $(subst ., ,$(VERSION)))
@@ -13,9 +14,9 @@ VERSION_S = $(MAJOR).$(MINOR).$(PATCH)
 GIT_HASH = $(shell git log -1 --pretty=format:"%H" | head -c 8)
 
 ifeq ($(OS), Windows_NT)
-	ARMAKE = ./tools/armake.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
+	ARMAKE = ./tools/armake2.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
 else
-	ARMAKE = armake
+	ARMAKE = armake2
 endif
 
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
@@ -34,6 +35,7 @@ $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 
 all: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo, $(wildcard optionals/*))
+	@cp -ru $(COPY_FILES) $(BIN)
 
 filepatching:
 	"$(MAKE)" $(MAKEFLAGS) FLAGS="-w unquoted-string -p"
@@ -82,7 +84,8 @@ push: commit
 release: clean version commit
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  $(ZIP)_$(VERSION_S).zip"
-	@cp mod.cpp README.md logo_keko_ca.paa $(BIN)
+	#@cp mod.cpp README.md logo_keko_ca.paa $(BIN)
+	@cp $(COPY_FILES) $(BIN)
 	@zip -qr $(ZIP)_$(VERSION_S).zip $(BIN)
 
 clean:
