@@ -52,6 +52,8 @@ class CfgVehicles {
     class keko_ModuleAddLogisticsMenu3den: GVAR(moduleAddLogisticsMenu3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Add Logistics Menu";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleSpawnCrate): GVAR(moduleBase) {
         displayName        = "Spawn Crate";
@@ -70,7 +72,7 @@ class CfgVehicles {
         category           = QGVAR(Logistics);
         function           = QFUNC(moduleHeliDrop);
         icon               = QPATHTOF(ui\icon_paradrop.paa);
-    };    
+    };
     class GVAR(moduleCustomLogistics3den): GVAR(moduleBase3den) {
         displayName        = "Custom Crates";
         category           = QGVAR(Logistics);
@@ -96,5 +98,7 @@ class CfgVehicles {
     class keko_ModuleCustomLogistics3den: GVAR(moduleCustomLogistics3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Custom Crates";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
 };

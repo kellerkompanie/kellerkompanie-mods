@@ -2,8 +2,8 @@
 
     class keko_blufor_soldier : B_Soldier_base_F {
         author = "Schwaggot";
-        scope = 2;
-        curatorScope = 1;
+        scope = 1;
+        scopeCurator = 0;
         side = 1;
         faction = "keko_faction_generic_blufor_legacy";
         vehicleClass = "Men";
@@ -260,8 +260,8 @@
 
     class keko_indfor_soldier : I_Soldier_base_F {
         author = "Schwaggot";
-        scope = 2;
-        curatorScope = 1;
+        scope = 1;
+        scopeCurator = 0;
         side = 2;
         faction = "keko_faction_generic_indfor_legacy";
         vehicleClass = "Men";
@@ -519,8 +519,8 @@
 
     class keko_opfor_soldier : O_Soldier_base_F {
         author = "Schwaggot";
-        scope = 2;
-        curatorScope = 1;
+        scope = 1;
+        scopeCurator = 0;
         side = 0;
         faction = "keko_faction_generic_opfor_legacy";
         vehicleClass = "Men";

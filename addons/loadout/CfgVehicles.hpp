@@ -47,6 +47,8 @@ class CfgVehicles {
     class keko_ModuleAddLoadoutMenu3den: GVAR(moduleAddLoadoutMenu3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Add Loadout Menu";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleAddLoadoutMenu): GVAR(moduleBase) {
         displayName        = "Add Loadout Menu";
@@ -64,6 +66,8 @@ class CfgVehicles {
     class keko_ModuleCustomLoadouts3den: GVAR(moduleCustomLoadouts3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Custom Loadouts";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleAddLoadouts3den): GVAR(moduleBase3den) {
         displayName        = "Add Loadouts";
