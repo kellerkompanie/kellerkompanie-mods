@@ -91,12 +91,12 @@ class CfgVehicles {
                         name = CSTRING(typeWallet);
                         value = 13;
                     };
-                    class typeNomad1 {
-                        name = "Nomad Spezial 1";
+                    class typeChineseCockpit {
+                        name = CSTRING(typeChineseCockpit);
                         value = 14;
                     };
-                    class typeNomad2 {
-                        name = "Nomad Spezial 2";
+                    class typeChineseFile {
+                        name = CSTRING(typeChineseFile);
                         value = 15;
                     };
                 };

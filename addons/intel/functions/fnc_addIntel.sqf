@@ -17,8 +17,8 @@ private _textures = [
     QPATHTOF(ui\background_tablet.paa),
     QPATHTOF(ui\background_rugged_tablet.paa),
     QPATHTOF(ui\background_wallet.paa),
-    QPATHTOF(ui\background_nomad1.paa),
-    QPATHTOF(ui\background_nomad2.paa)
+    QPATHTOF(ui\background_chinese_cockpit.paa),
+    QPATHTOF(ui\background_chinese_file.paa)
 ];
 private _typeTexture = _textures select _type;
 
