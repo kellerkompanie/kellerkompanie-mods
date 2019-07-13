@@ -70,6 +70,14 @@
             <English>Wallet</English>
             <German>Brieftasche</German>
         </Key>
+        <Key ID="STR_keko_intel_typeChineseCockpit">
+            <English>Chinese cockpit instructions</English>
+            <German>Chinesische Cockpit Instruktionen</German>
+        </Key>
+        <Key ID="STR_keko_intel_typeChineseFile">
+            <English>Chinese file</English>
+            <German>Chinesische Akte</German>
+        </Key>
 
         <Key ID="STR_keko_intel_action">
             <English>Action</English>
