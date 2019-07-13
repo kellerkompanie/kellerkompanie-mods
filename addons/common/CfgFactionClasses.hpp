@@ -17,5 +17,7 @@ class CfgFactionClasses
         displayName = "(DEPRECATED - DO NOT USE) Kellerkompanie";
         priority = 2;
         side = 7;
+        scope = 1;
+        scopeCurator = 0;
     };
 };

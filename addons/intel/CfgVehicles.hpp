@@ -187,6 +187,8 @@ class CfgVehicles {
     class keko_ModuleAddIntel3den: GVAR(moduleAddIntel3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Add Intel";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleAddIntel): Module_F {
         displayName        = CSTRING(addIntel);

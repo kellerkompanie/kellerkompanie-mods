@@ -66,6 +66,8 @@ class CfgVehicles {
     class keko_ModuleAddTeleportDestination3den: GVAR(moduleAddTeleportDestination3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Destination";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleAddTeleportMenu3den): GVAR(moduleBase3den) {
         displayName        = "Add Fast-Travel Menu";
@@ -103,6 +105,8 @@ class CfgVehicles {
     class keko_ModuleAddTeleportMenu3den: GVAR(moduleAddTeleportMenu3den) {
         displayName        = "(DEPRECATED - DO NOT USE) Add Fast-Travel Menu";
         category           = QEGVAR(common,Deprecated);
+        scope = 1;
+        scopeCurator = 0;
     };
     class GVAR(moduleAddTeleportDestination): GVAR(moduleBase) {
         displayName        = "Add Fast-Travel Destination";
