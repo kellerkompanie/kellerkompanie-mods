@@ -69,7 +69,7 @@ if (count _errorMessagesMissingAddonsOnClient > 0 || count _errorMessagesMissing
         if(GVAR(reaction) isEqualTo "KICK") then {
             [localize LSTRING(errorTitle), _errorMessage, {findDisplay 46 closeDisplay 0}] remoteExec ["ace_common_fnc_errorMessage", _player];
         } else {
-            [localize LSTRING(errorTitle), _errorMessage, {}] remoteExec ["ace_common_fnc_errorMessage", _player];
+            [localize LSTRING(errorTitle), _errorMessage, {systemChat "Please update your modpack!"}] remoteExec ["ace_common_fnc_errorMessage", _player];
         }
     }
 };
