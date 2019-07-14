@@ -96,5 +96,13 @@
             <English>Disabled</English>
             <German>Deaktiviert</German>
         </Key>
+        <Key ID="STR_keko_medical_convertItems">
+            <English>Convert Vanilla Items</English>
+            <German>Vanilla Items konvertieren</German>
+        </Key>
+        <Key ID="STR_keko_medical_convertItemsTooltip">
+            <English>Enable/disable conversion of vanilla items such as Medkit</English>
+            <German>Aktiviere/deaktiviere Konvertierung von Vanilla Items wie bspw. Medkit</German>
+        </Key>
     </Package>
 </Project>

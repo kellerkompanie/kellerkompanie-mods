@@ -13,7 +13,7 @@
  * [bob] call keko_medical_fnc_itemCheck
  */
 
-if (GVAR(convertItems) == 2) exitWith {};
+if !(GVAR(convertItems)) exitWith {};
 
 params ["_unit"];
 
