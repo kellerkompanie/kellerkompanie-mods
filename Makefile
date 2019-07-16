@@ -4,7 +4,7 @@ BIN = @keko
 ZIP = keko
 FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
 VERSION_FILES = README.md mod.cpp
-COPY_FILES = *.dll mod.cpp README.md meta.cpp
+COPY_FILES = mod.cpp README.md
 
 MAJOR = $(word 1, $(subst ., ,$(VERSION)))
 MINOR = $(word 2, $(subst ., ,$(VERSION)))
