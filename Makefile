@@ -14,9 +14,9 @@ VERSION_S = $(MAJOR).$(MINOR).$(PATCH)
 GIT_HASH = $(shell git log -1 --pretty=format:"%H" | head -c 8)
 
 ifeq ($(OS), Windows_NT)
-	ARMAKE = ./tools/armake2.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
+	ARMAKE = ./tools/armake.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
 else
-	ARMAKE = armake2
+	ARMAKE = armake
 endif
 
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
