@@ -20,7 +20,7 @@ if (isServer) then {
 
             if!(GVAR(reaction) isEqualTo "NOTHING") then {
                 [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
-            }
+            };
         } remoteExec ["call", _owner];
     }];
 };
