@@ -18,7 +18,7 @@ if (isServer) then {
         {
             #include "functions\getAddons.sqf"
 
-            if!(GVAR(reaction) isEqualTo "NOTHING") then {
+            if !(GVAR(reaction) isEqualTo "NOTHING") then {
                 [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
             };
         } remoteExec ["call", _owner];
