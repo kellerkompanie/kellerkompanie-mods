@@ -238,10 +238,12 @@ class CfgVehicles {
         scopeCurator = 0;
     };
     class GVAR(moduleACEGarrison3den): GVAR(moduleBase3den)    {
-        displayName        = "ACE AI Garrison";
+        displayName        = "(DEPRECATED - DO NOT USE) ACE AI Garrison";
         category           = QGVAR(Default);
         function           = QFUNC(moduleACEGarrison3den);
         icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Garrison_ca.paa";
+        scope = 1;
+        scopeCurator = 0;
 
         class Attributes: AttributesBase {
               class Radius: Edit {
