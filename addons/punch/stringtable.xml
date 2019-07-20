@@ -23,6 +23,15 @@
             <German>Leute ohnmächtig boxen aktivieren/deaktivieren</German>
         </Key>
 
+        <Key ID="STR_keko_punch_canPunchHigherRank">
+            <English>Allow punching higher ranks</English>
+            <German>Höhere Dienstgrade boxen</German>
+        </Key>
+        <Key ID="STR_keko_punch_canPunchHigherRankTooltip">
+            <English>Activate/Deactivate punching players with a higher rank than yourself (AI does not count)</English>
+            <German>Aktiviert/Deaktiviert das boxen von Spielern mit höherem Rang als man selbst (KI zählt nicht)</German>
+        </Key>
+
         <Key ID="STR_keko_punch_snapNeck">
             <English>Snap neck</English>
             <German>Genick brechen</German>
@@ -31,6 +40,5 @@
             <English>Enable/Disable kill people by snapping the neck</English>
             <German>Genick brechen aktivieren/deaktivieren</German>
         </Key>
-
     </Package>
 </Project>

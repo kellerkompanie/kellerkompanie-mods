@@ -5,14 +5,13 @@ class CfgVehicles {
             class ACE_Head {
                 class GVAR(punch) {
                     displayName = "Punch";
-                    condition = "alive _target && !(_target getVariable ['ACE_isUnconscious', false])";
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPunch));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(punchHead));
                     showDisabled = 0;
                     priority = 1;
                     distance = 4.5;
                     icon = QPATHTOF(ui\icon_knock.paa);
                 };
-
                 class GVAR(inhale) {
                     displayName = "Use smelling salt";
                     condition = "alive _target && (_target getVariable ['ACE_isUnconscious', false]) && !([_target] call ace_medical_fnc_getUnconsciousCondition)";
@@ -22,7 +21,6 @@ class CfgVehicles {
                     distance = 4.5;
                     icon = QPATHTOF(ui\icon_nose.paa);
                 };
-
                 class GVAR(Kill) {
                     displayName = "Kill";
                     condition = "(alive _target) && (_target getVariable ['ACE_isUnconscious', false])";

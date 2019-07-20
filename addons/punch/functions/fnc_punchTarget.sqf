@@ -10,8 +10,8 @@ params ["_player"];
 
     if (_dist <= 3) then {
         if (_target isKindOf "Man") then {
-            if (alive _target && !(_target getVariable ['ACE_isUnconscious', false])) then {
-
+            if ([_player, _target] call FUNC(canPunch)) then {
+                
                 _player playActionNow "PutDown";
 
                 sleep 0.5;
