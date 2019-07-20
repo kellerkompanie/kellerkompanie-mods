@@ -11,7 +11,7 @@ _vehicle setVariable ["ace_cargo_loaded", _loaded, true];
 
 TRACE_1("added to loaded array",_loaded);
 
-private _space = [_vehicle] call ace_cargo_getCargoSpaceLeft;
+private _space = (_vehicle getVariable ["ace_cargo_space", getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_cargo_space")]) max 0;
 private _itemSize = [_item] call ace_cargo_getSizeItem;
 _vehicle setVariable ["ace_cargo_space", _space - _itemSize, true];
 

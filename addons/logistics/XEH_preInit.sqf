@@ -7,20 +7,6 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [
-    QGVAR(customLogistics), // key/reference variable
-    "LIST", // type of setting
-    ["Logistics", "Enable/Disable logistics"], // name and tooltip
-    localize LSTRING(cbaSettingsCategory), // category
-    [
-        [0,1,2], // values
-        ["Disabled","Default","Custom"], // names
-        1 // default index
-    ],
-    1
-] call cba_settings_fnc_init;
-
-
-[
     QGVAR(accessLevel), // key/reference variable
     "LIST", // type of setting
     ["Access Level: Logistics Menu", "Who may spawn crates? Zeus may always."], // name and tooltip
@@ -45,6 +31,19 @@ PREP_RECOMPILE_END;
             "Zeus only"
         ], // names
         2 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addConfigCrates), // key/reference variable
+    "LIST", // type of setting
+    ["Add Faction crates", "Add default crates that belong to the faction."], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true, false], // values
+        ["Enabled", "Disabled"], // names
+        0 // default index
     ],
     1
 ] call cba_settings_fnc_init;
@@ -320,13 +319,8 @@ GVAR(currentUAVs) = 0;
     1
 ] call cba_settings_fnc_init;
 
-
-
-
-
-
-
-
-
+if (GVAR(addConfigCrates)) then {
+    call FUNC(addConfigCrates);
+};
 
 ADDON = true;

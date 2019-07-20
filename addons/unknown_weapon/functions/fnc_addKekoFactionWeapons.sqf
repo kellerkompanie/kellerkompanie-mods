@@ -21,20 +21,7 @@ if !(isNil QEGVAR(loadout,customLoadouts)) then {
 };
 
 // weapons from crates
-private _crates = [];
-
-if(EGVAR(logistics,customLogistics) == 2) then {
-    if !(isNil QGVAR(customCrates)) then {
-        _crates = [["Kisten", EGVAR(logistics,customCrates)]];
-        TRACE_1("_crates loaded from customCrates", _crates);
-    };
-}
-else {
-    private _cratesCfgs = "true" configClasses (configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction) >> "crates");
-    {
-        _crates pushBack (configName _x);
-    } forEach _cratesCfgs;
-};
+private _crates = [["Kisten", EGVAR(logistics,customCrates)]];
 
 if(isNil "_crates") then {
     INFO("_crates isNil");
@@ -42,42 +29,24 @@ if(isNil "_crates") then {
 };
 
 {
-    private _crate_name = "";
-    if(EGVAR(logistics,customLogistics) == 2) then {
-        _crate_name = _x select 0;
+    private _crate_name = _x select 0;
 
-        {
-            private _entryName = _x select 0;
-            private _entryContents = _x select 2;
+    {
+        private _entryName = _x select 0;
+        private _entryContents = _x select 2;
 
-            if(_entryName isEqualTo _crate_name) then {
-                {
-                    private _item = _x select 1;
+        if(_entryName isEqualTo _crate_name) then {
+            {
+                private _item = _x select 1;
 
-                    if (isClass (configFile >> "CfgWeapons" >> _item)) then {
-                        if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-                            GVAR(whitelist) pushBackUnique toUpper(_item);
-                        };
-                    }
-                } forEach _entryContents;
-            };
-        } forEach EGVAR(logistics,customCrates) select 0;
-
-    }
-    else {
-        private _crateConfig = configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction) >> "crates" >> _x;
-        private _inventory = getArray (_crateConfig >> "inventory");
-
-        {
-            private _item = _x select 1;
-
-            if (isClass (configFile >> "CfgWeapons" >> _item)) then {
-                if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-                    GVAR(whitelist) pushBackUnique toUpper(_item);
-                };
-            }
-        } forEach _inventory;
-    };
+                if (isClass (configFile >> "CfgWeapons" >> _item)) then {
+                    if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
+                        GVAR(whitelist) pushBackUnique toUpper(_item);
+                    };
+                }
+            } forEach _entryContents;
+        };
+    } forEach EGVAR(logistics,customCrates) select 0;
 } forEach _crates;
 
 TRACE_1("addKekoFactionWeapons, whitelist after", GVAR(whitelist));
