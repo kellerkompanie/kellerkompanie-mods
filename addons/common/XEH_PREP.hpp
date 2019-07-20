@@ -20,6 +20,7 @@ PREP(moduleInitMission3den);
 PREP(moduleLightning);
 PREP(moduleLimitWounds);
 PREP(moduleLockDoors);
+PREP(moduleMakeSpectator);
 PREP(moduleMissionEndFail);
 PREP(moduleMissionEndSuccess);
 PREP(moduleRemoveAllActions);

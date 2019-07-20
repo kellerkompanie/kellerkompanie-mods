@@ -21,6 +21,7 @@ class CfgPatches {
             QGVAR(moduleACEGarrison3den),
             QGVAR(moduleCuratorCamEars),
             QGVAR(moduleUnflipVehicle),
+            QGVAR(moduleMakeSpectator),
 
             keko_RifleMagItem,
             keko_MGMagItem,
