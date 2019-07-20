@@ -69,6 +69,7 @@ class CfgPatches {
 #include "Cfg3DEN.hpp"
 #include "CfgActions.hpp"
 #include "CfgInGameUI.hpp"
+#include "CfgMoves.hpp"
 #include "Display3den.hpp"
 
 #include "defines.hpp"
