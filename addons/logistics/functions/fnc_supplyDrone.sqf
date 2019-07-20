@@ -14,31 +14,20 @@ private _spawnPos = [];
 private _targetPos = [];
 private _droneInventory = [];
 
-if(GVAR(customLogistics) == 2) then {
-    params ["_spawn", "_target", "_crate_name"];
+params ["_spawn", "_target", "_crate_name"];
 
-    _spawnPos = _spawn;
-    _targetPos = _target;
+_spawnPos = _spawn;
+_targetPos = _target;
 
-    private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceString);
+private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceString);
 
-    {
-        private _entryName = _x select 0;
+{
+    private _entryName = _x select 0;
 
-        if(_entryName isEqualTo _descapedString) then {
-            _droneInventory = _x select 2;
-        };
-    } forEach GVAR(customCrates) select 0;
-}
-else {
-    params ["_spawn", "_target", "_faction", "_crate"];
-
-    _spawnPos = _spawn;
-    _targetPos = _target;
-
-    private _crateConfig = configFile >> "kekoFactions" >> _faction >> "crates" >> _crate;
-    _droneInventory = getArray (_crateConfig >> "inventory");
-};
+    if(_entryName isEqualTo _descapedString) then {
+        _droneInventory = _x select 2;
+    };
+} forEach GVAR(customCrates) select 0;
 
 private _uav = createVehicle ["B_UAV_06_F", _spawnPos, [], 0,""];
 createVehicleCrew _uav;

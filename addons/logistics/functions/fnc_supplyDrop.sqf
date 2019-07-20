@@ -3,17 +3,10 @@
 //[_targetPos select 0, _targetPos select 1, 300]
 private _pos = [];
 private _crate = "";
-if(GVAR(customLogistics) == 2) then {
-    params ["_position", "_crate_name"];
-    _pos = _position;
-    _crate = [_position, _crate_name] call FUNC(spawnCrate);
-}
-else
-{
-    params ["_position", "_faction", "_crateCfg"];
-    _pos = _position;
-    _crate = [_position, _faction, _crateCfg] call FUNC(spawnCrate);
-};
+
+params ["_position", "_crate_name"];
+_pos = _position;
+_crate = [_position, _crate_name] call FUNC(spawnCrate);
 
 
 private _targetPos = [_pos select 0, _pos select 1, 200];

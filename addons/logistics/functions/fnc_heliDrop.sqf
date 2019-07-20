@@ -9,19 +9,11 @@ if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) <= 0) exitWith {
 //[_targetPos select 0, _targetPos select 1, 300]
 private _targetPos = [];
 private _crate = "";
-if(GVAR(customLogistics) == 2) then {
-    params ["_position", "_crate_name"];
-    _targetPos = _position;
-    _targetPos set [2, 100];
-    _crate = [GVAR(heliEntryPoint), _crate_name] call FUNC(spawnCrate);
-}
-else
-{
-    params ["_position", "_faction", "_crateCfg"];
-    _targetPos = _position;
-    _targetPos set [2, 100];
-    _crate = [GVAR(heliEntryPoint), _faction, _crateCfg] call FUNC(spawnCrate);
-};
+
+params ["_position", "_crate_name"];
+_targetPos = _position;
+_targetPos set [2, 100];
+_crate = [GVAR(heliEntryPoint), _crate_name] call FUNC(spawnCrate);
 
 
 private _helicopterCfgClass = "B_Heli_Transport_03_unarmed_F";

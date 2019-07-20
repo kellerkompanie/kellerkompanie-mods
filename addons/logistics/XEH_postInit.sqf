@@ -1,13 +1,5 @@
 #include "script_component.hpp"
 
-// if logistics is set to custom warn in case no custom crates module was placed
-if ( GVAR(customLogistics) == 2 ) then {
-    private _allCustomCrateModules = allMissionObjects QGVAR(moduleCustomLogistics3den);
-    if (count _allCustomCrateModules == 0) then {
-        systemChat "[KEKO] (Logistics) WARNING: Logistics set to custom but no custom crates module placed!";
-    };
-};
-
 if(hasInterface) then {
     if(GVAR(virtualHeliLogistics) > ACCESS_DISABLED) then {
         if (isNil QGVAR(heliEntryPoint)) then {
@@ -19,7 +11,9 @@ if(hasInterface) then {
 
         private _isJTAC = player isKindOf QEGVAR(faction_generic,blufor_jtac) || player isKindOf QEGVAR(faction_generic,indfor_jtac) || player isKindOf QEGVAR(faction_generic,opfor_jtac);
         if ([player,GVAR(virtualHeliLogistics)] call FUNC(hasAccess) || _isJTAC) then {
-            player call FUNC(addVirtualHeliLogisticActions);
+            [{time > 0}, {
+                player call FUNC(addVirtualHeliLogisticActions);
+            }] call CBA_fnc_waitUntilAndExecute;
         };
     };
 
@@ -28,7 +22,9 @@ if(hasInterface) then {
             systemChat "[KEKO] (Logistics) WARNING: Virtual UAV Logistics enabled but no supply base set! UAV supply not available.";
         } else {
             if ([player,GVAR(virtualUAVLogistics)] call FUNC(hasAccess)) then {
-                player call FUNC(addVirtualUAVLogisticActions);
+                [{time > 0}, {
+                    player call FUNC(addVirtualUAVLogisticActions);
+                }] call CBA_fnc_waitUntilAndExecute;
             };
         };
     };
