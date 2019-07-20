@@ -30,6 +30,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
+#include "Cfg3DEN.hpp"
 
 #include "defines.hpp"
 #include "ui\dialog_logisticsMenu.hpp"

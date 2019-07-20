@@ -13,5 +13,36 @@
             <English>Delete crate</English>
             <German>Kiste löschen</German>
         </Key>
+        <Key ID="STR_keko_logistics_3denCategory">
+            <English>Kellerkompanie Logistics</English>
+            <German>Kellerkompanie Logistik</German>
+        </Key>
+
+        <Key ID="STR_keko_logistics_addFullAceArsenal">
+            <English>ACE arsenal</English>
+            <German>ACE Arsenal</German>
+        </Key>
+        <Key ID="STR_keko_logistics_addFullAceArsenalTooltip">
+            <English>Adds a full ACE arsenal to this object</English>
+            <German>Fügt ein komplettes ACE Arsenal zu diesem Objekt hinzu</German>
+        </Key>
+
+        <Key ID="STR_keko_logistics_makeCustomCrate">
+            <English>Custom crate</English>
+            <German>Custom Kiste</German>
+        </Key>
+        <Key ID="STR_keko_logistics_makeCustomCrateTooltip">
+            <English>Converts this object to a custom crate</English>
+            <German>Konvertiert dieses Objekt zu einer Custom Kiste</German>
+        </Key>
+
+        <Key ID="STR_keko_logistics_nameCustomCrate">
+            <English>Custom crate name</English>
+            <German>Name der Custom Kiste</German>
+        </Key>
+        <Key ID="STR_keko_logistics_nameCustomCrateTooltip">
+            <English>Sets a specified name for this type of custom crate that will be visible in the logistics menu</English>
+            <German>Bestimmt den Namen dieses Typs von Custom Kiste, wie er nachher im Logistik Menü auftaucht</German>
+        </Key>
     </Package>
 </Project>
