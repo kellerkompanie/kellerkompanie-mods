@@ -14,6 +14,10 @@
             <German>Die Art des Intels, genutzt für das Hintergrundbild.</German>
         </Key>
 
+        <Key ID="STR_keko_intel_typeMisc">
+            <English>Misc</English>
+            <German>Misc</German>
+        </Key>
         <Key ID="STR_keko_intel_typeNotes">
             <English>Notes</English>
             <German>Notizen</German>
@@ -39,7 +43,7 @@
             <German>Geheime Akten</German>
         </Key>
         <Key ID="STR_keko_intel_typeLaptop">
-            <English>Notebook</English>
+            <English>Laptop</English>
             <German>Laptop</German>
         </Key>
         <Key ID="STR_keko_intel_typeMoney">
