@@ -1,3 +1,5 @@
+PREP(canPunch);
+PREP(getRankIndex);
 PREP(hideCorpse);
 PREP(killHead);
 PREP(killTarget);

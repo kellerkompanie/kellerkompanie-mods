@@ -21,7 +21,20 @@ PREP_RECOMPILE_END;
 ] call cba_settings_fnc_init;
 
 [
-    QGVAR(enabled), // key/reference variable
+    QGVAR(canPunchHigherRank), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(canPunchHigherRank), localize LSTRING(canPunchHigherRankTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(enabledSnapNeck), // key/reference variable
     "LIST", // type of setting
     [localize LSTRING(snapNeck), localize LSTRING(snapNeckTooltip)], // name and tooltip
     localize LSTRING(cbaSettingsCategory), // category
