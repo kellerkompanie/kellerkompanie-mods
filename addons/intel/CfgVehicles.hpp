@@ -35,8 +35,8 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0;
                 class Values {
-                    class typeNotes {
-                        name = CSTRING(typeNotes);
+                    class typeMisc {
+                        name = CSTRING(typeMisc);
                         value = 0;
                     };
                     class typeFile {
@@ -98,6 +98,10 @@ class CfgVehicles {
                     class typeChineseFile {
                         name = CSTRING(typeChineseFile);
                         value = 15;
+                    };
+                    class typeNotes {
+                        name = CSTRING(typeNotes);
+                        value = 16;
                     };
                 };
             };

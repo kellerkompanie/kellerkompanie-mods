@@ -3,7 +3,7 @@
 params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap", "_shareWith"];
 
 private _textures = [
-    QPATHTOF(ui\background_notes.paa),
+    QPATHTOF(ui\background_misc.paa),
     QPATHTOF(ui\background_file.paa),
     QPATHTOF(ui\background_file_secret.paa),
     QPATHTOF(ui\background_documents.paa),
@@ -18,7 +18,8 @@ private _textures = [
     QPATHTOF(ui\background_rugged_tablet.paa),
     QPATHTOF(ui\background_wallet.paa),
     QPATHTOF(ui\background_chinese_cockpit.paa),
-    QPATHTOF(ui\background_chinese_file.paa)
+    QPATHTOF(ui\background_chinese_file.paa),
+    QPATHTOF(ui\background_notes.paa)
 ];
 private _typeTexture = _textures select _type;
 
