@@ -341,4 +341,11 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_unflip_vehicle.paa);
         curatorCanAttach   = 1;
     };
+    class GVAR(moduleMakeSpectator): GVAR(moduleBase) {
+        displayName        = "Make Spectator";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleMakeSpectator);
+        icon = QPATHTOF(ui\icon_make_spectator.paa);
+        curatorCanAttach   = 1;
+    };
 };
