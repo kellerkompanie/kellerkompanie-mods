@@ -2,6 +2,8 @@
 
 params ["_player", "_faction", "_role"];
 
+player setVariable [QGVAR(role), _role, true];
+
 private _customLoadout = _faction isEqualTo "Custom";
 
 if(_customLoadout) then {
