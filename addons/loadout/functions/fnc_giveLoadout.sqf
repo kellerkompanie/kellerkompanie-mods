@@ -10,7 +10,9 @@ if(_customLoadout) then {
     [_role, _faction] call FUNC(applyCustomLoadout);
 };
 
-if (_customLoadout) exitWith{};
+if (_customLoadout) exitWith {
+    [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
+};
 
 
 private _specialLoadout = [];
