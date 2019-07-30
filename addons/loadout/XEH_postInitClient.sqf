@@ -14,6 +14,7 @@ if (GVAR(loadoutOnSpawn)) then {
         private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _playerObjectClass >> "loadoutDummy");
         [player, GVAR(loadoutFaction), _loadoutDummyClass] call FUNC(giveLoadout);
     };
-} else {
-    [QGVAR(onLoadoutFinished), [player]] call CBA_fnc_globalEvent;
 };
+
+[QGVAR(onLoadoutFinished), [player]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutFinished), [player]] call CBA_fnc_serverEvent;
