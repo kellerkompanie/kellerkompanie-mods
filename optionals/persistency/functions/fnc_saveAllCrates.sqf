@@ -10,15 +10,15 @@ INFO_1("saveAllCrates: saving crates", count _allPossibleCrates);
 
 private _successfulSaves = 0;
 {
-	private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
-	private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
+    private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
+    private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
 
-	if(!_isBlacklisted && ( GVAR(cratesEnabled) == PERSISTENCY_ENABLED || (GVAR(cratesEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
-		private _retVal = _x call FUNC(saveCrate);
-		if(_retVal) then {
-			_successfulSaves = _successfulSaves + 1;
-		};
-	};
+    if(!_isBlacklisted && ( GVAR(cratesEnabled) == PERSISTENCY_ENABLED || (GVAR(cratesEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
+        private _retVal = _x call FUNC(saveCrate);
+        if(_retVal) then {
+            _successfulSaves = _successfulSaves + 1;
+        };
+    };
 } forEach _allPossibleCrates;
 
 INFO_2("saveAllCrates: saved %1/%2 crates successfully", _successfulSaves, count _allPossibleCrates);

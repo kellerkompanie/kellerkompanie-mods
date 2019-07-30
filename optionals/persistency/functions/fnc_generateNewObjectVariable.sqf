@@ -7,22 +7,22 @@ private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency
 
 private _existingVariables = allVariables missionNamespace;
 if ((_ret select 0) == 1) then {
-	INFO("generateNewObjectVariable: loading from db sucessful");
+    INFO("generateNewObjectVariable: loading from db sucessful");
 
-	{
-		private _objectVariable = _x select 0;
-		_existingVariables pushBack _objectVariable;
-	} forEach (_ret select 1);
+    {
+        private _objectVariable = _x select 0;
+        _existingVariables pushBack _objectVariable;
+    } forEach (_ret select 1);
 } else {
-	ERROR("generateNewObjectVariable: loading unsucessful %1", _ret);
+    ERROR("generateNewObjectVariable: loading unsucessful %1", _ret);
 };
 
 private _objectVariable = format ["keko_persistency_%1", 0];
 private _counter = 1;
 
 while {_objectVariable in _existingVariables} do {
-	_objectVariable = format ["keko_persistency_%1", _counter];
-	_counter = _counter + 1;
+    _objectVariable = format ["keko_persistency_%1", _counter];
+    _counter = _counter + 1;
 };
 
 _objectVariable

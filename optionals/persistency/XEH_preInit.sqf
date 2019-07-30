@@ -13,20 +13,20 @@ INFO("running XEH_preInit");
 
 addMissionEventHandler ["HandleDisconnect",
 {
-	TRACE_1("HandleDisconnect", _this);
+    TRACE_1("HandleDisconnect", _this);
 
-	// params ["_unit,", "_id", "_uid", "_name"];
-	private _unit = _this select 0;
-	private _name = _this select 3;
+    // params ["_unit,", "_id", "_uid", "_name"];
+    private _unit = _this select 0;
+    private _name = _this select 3;
 
-	if(_name == "__SERVER__" ) exitWith {};
+    if(_name == "__SERVER__" ) exitWith {};
 
-	_unit call FUNC(savePlayerLoadout);
+    _unit call FUNC(savePlayerLoadout);
 }];
 
 ["keko_loadout_onLoadoutFinished", {
-	params ["_player"];
-	_player call FUNC(loadPlayerLoadout);
+    params ["_player"];
+    _player call FUNC(loadPlayerLoadout);
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

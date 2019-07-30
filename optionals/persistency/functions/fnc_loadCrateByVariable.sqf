@@ -23,13 +23,13 @@ INFO_1("loadCrate: loading sucessful %1", _ret);
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [
-	"_class",
-	"_position",
-	"_orientation",
-	"_items",
-	"_magazines",
-	"_weapons",
-	"_containers"];
+    "_class",
+    "_position",
+    "_orientation",
+    "_items",
+    "_magazines",
+    "_weapons",
+    "_containers"];
 
 INFO_5("loadCrate %1 %2 %3 %4 %5", _objectVariable, _class, _position, _orientation, _items);
 
@@ -38,16 +38,16 @@ private _crate = objNull;
 
 // check if crate already exists as an object on the map
 {
-	if (_x getVariable [QGVAR(objectVariable), ""] == _objectVariable) exitWith {_crate = _x;};
+    if (_x getVariable [QGVAR(objectVariable), ""] == _objectVariable) exitWith {_crate = _x;};
 } forEach allMissionObjects _class;
 
 // create a new object if there is none yet, otherwise update position
 if(isNull _crate) then {
-	_crate = createVehicle [_class, _position, [], 0, "CAN_COLLIDE"];
-	_crate setVariable [QGVAR(objectVariable), _objectVariable];
-	missionNamespace setVariable [_objectVariable, _crate];
+    _crate = createVehicle [_class, _position, [], 0, "CAN_COLLIDE"];
+    _crate setVariable [QGVAR(objectVariable), _objectVariable];
+    missionNamespace setVariable [_objectVariable, _crate];
 } else {
-	_crate setPos _position;
+    _crate setPos _position;
 };
 
 _crate setDir _orientation;

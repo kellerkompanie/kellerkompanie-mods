@@ -10,8 +10,8 @@ private _allHPs = allPlayers - _allHCs;
 
 private _count = 0;
 {
-	_x call FUNC(loadPlayerLoadout);
-	_count = _count + 1;
+    _x call FUNC(loadPlayerLoadout);
+    _count = _count + 1;
 } forEach _allHPs;
 
 _count

@@ -9,15 +9,15 @@ private _allPlayers = allPlayers - _allHCs;
 
 private _successfulSaves = 0;
 {
-	private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
-	private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
+    private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
+    private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
 
-	if(!_isBlacklisted && ( GVAR(playersEnabled) == PERSISTENCY_ENABLED || (GVAR(playersEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
-		private _retVal = _x call FUNC(savePlayerLoadout);
-		if(_retVal) then {
-			_successfulSaves = _successfulSaves + 1;
-		};
-	};
+    if(!_isBlacklisted && ( GVAR(playersEnabled) == PERSISTENCY_ENABLED || (GVAR(playersEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
+        private _retVal = _x call FUNC(savePlayerLoadout);
+        if(_retVal) then {
+            _successfulSaves = _successfulSaves + 1;
+        };
+    };
 } forEach _allPlayers;
 
 INFO_2("saveAllPlayers: saved %1/%2 crates successfully", _successfulSaves, count _allPlayers);

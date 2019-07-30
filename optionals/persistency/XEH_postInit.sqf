@@ -6,32 +6,32 @@ if (GVAR(key) == "") exitWith{WARNING("preInit: persistency key not set, exiting
 INFO("running XEH_postInit");
 
 if(GVAR(autosaveInterval) > 0) then {
-	[] spawn {
-		[
-			{
-				if ( GVAR(playersEnabled) > 0 ) then {
-					call FUNC(saveAllPlayers);
-				};
+    [] spawn {
+        [
+            {
+                if ( GVAR(playersEnabled) > 0 ) then {
+                    call FUNC(saveAllPlayers);
+                };
 
-				if ( GVAR(vehiclesEnabled) > 0 ) then {
-					call FUNC(saveAllVehicles);
-				};
+                if ( GVAR(vehiclesEnabled) > 0 ) then {
+                    call FUNC(saveAllVehicles);
+                };
 
-				if ( GVAR(cratesEnabled) > 0 ) then {
-					call FUNC(saveAllCrates);
-				};
+                if ( GVAR(cratesEnabled) > 0 ) then {
+                    call FUNC(saveAllCrates);
+                };
 
-			}, [], GVAR(autosaveInterval)] call CBA_fnc_waitAndExecute;
-	};
+            }, [], GVAR(autosaveInterval)] call CBA_fnc_waitAndExecute;
+    };
 };
 
 // TODO optimize: do only if enabled or only on selective
 // initalize crates
 {
-	private _objectVariable = _x call FUNC(initObject);
-	if (_objectVariable call FUNC(dbCrateExists)) then {
-		_x call FUNC(loadCrateObject);
-	};
+    private _objectVariable = _x call FUNC(initObject);
+    if (_objectVariable call FUNC(dbCrateExists)) then {
+        _x call FUNC(loadCrateObject);
+    };
 } forEach allMissionObjects "ReammoBox_F";
 
 private _allPlaneObjects = allMissionObjects "Plane";
@@ -49,8 +49,8 @@ _allPossibleVehicles = _allPossibleVehicles + _allTankObjects;
 
 // TODO optimize: do only if enabled or only on selective
 {
-	private _objectVariable = _x call FUNC(initObject);
-	if (_objectVariable call FUNC(dbCrateExists)) then {
-		_x call FUNC(loadVehicleObject);
-	};
+    private _objectVariable = _x call FUNC(initObject);
+    if (_objectVariable call FUNC(dbCrateExists)) then {
+        _x call FUNC(loadVehicleObject);
+    };
 } forEach _allPossibleVehicles;

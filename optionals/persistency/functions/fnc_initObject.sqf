@@ -11,9 +11,9 @@ if (count (_object getVariable [QGVAR(objectVariable), ""]) > 0) exitWith {_obje
 private _objectVariable = format ["%1", _object];
 
 if (_objectVariable find " " != -1 ) then {
-	_objectVariable = call FUNC(generateNewObjectVariable);
-	missionNamespace setVariable [_objectVariable, _object];
-	//(format ["[KEKO] (Persistency) WARNING: object %1 has no set variable name!", _object]) remoteExec ["systemChat", [0,-2] select isDedicated];
+    _objectVariable = call FUNC(generateNewObjectVariable);
+    missionNamespace setVariable [_objectVariable, _object];
+    //(format ["[KEKO] (Persistency) WARNING: object %1 has no set variable name!", _object]) remoteExec ["systemChat", [0,-2] select isDedicated];
 };
 
 _object setVariable [QGVAR(objectVariable), _objectVariable];

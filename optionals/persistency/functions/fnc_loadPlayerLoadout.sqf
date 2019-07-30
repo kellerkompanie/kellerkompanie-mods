@@ -7,16 +7,16 @@ if (GVAR(playersEnabled) == 0) exitWith{WARNING("loadPlayerLoadout: persistency 
 params ["_playerUnit"];
 
 if !(isPlayer _playerUnit) exitWith {
-	ERROR("loadPlayerLoadout: not a player, exiting!");
-	false
+    ERROR("loadPlayerLoadout: not a player, exiting!");
+    false
 };
 
 private _playerUID = getPlayerUID _playerUnit;
 private _playerName = name _playerUnit;
 
 if (_playerUID find "HC" >= 0) exitWith{
-	ERROR("loadPlayerLoadout: not a player!");
-	false
+    ERROR("loadPlayerLoadout: not a player!");
+    false
 };
 
 TRACE_3("loadPlayerLoadout", _playerUID, _playerName, GVAR(key));
@@ -29,11 +29,11 @@ TRACE_1("loadPlayerLoadout: loading sucessful %1", _ret);
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [
-	"_loadout",
-	"_medicClass",
-	"_engineerClass",
-	"_rank",
-	"_position"];
+    "_loadout",
+    "_medicClass",
+    "_engineerClass",
+    "_rank",
+    "_position"];
 
 TRACE_5("loadPlayerLoadout", _loadout, _medicClass, _engineerClass, _rank, _position);
 
@@ -43,11 +43,11 @@ _playerUnit setVariable ["ACE_isEngineer", _engineerClass, true];
 _playerUnit setRank _rank;
 
 if (GVAR(synchronizePlayerPosition)) then {
-	_playerUnit setPos _position;
+    _playerUnit setPos _position;
 };
 
 if (GVAR(moneyEnabled)) then {
-	_playerUnit call FUNC(loadMoney);
+    _playerUnit call FUNC(loadMoney);
 };
 
 true

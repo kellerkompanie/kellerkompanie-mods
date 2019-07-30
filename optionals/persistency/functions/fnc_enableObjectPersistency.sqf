@@ -13,9 +13,9 @@ if (!alive _object) exitWith {ERROR("enableObjectPersistency object is destroyed
 _object setVariable [QGVAR(persistencyEnabled), true, true];
 
 if(_object isKindOf "ReammoBox_F") then {
-	_object call FUNC(initObject);
+    _object call FUNC(initObject);
 };
 
 if(_object isKindOf "Plane" || _object isKindOf "Helicopter" || _object isKindOf "Ship" || _object isKindOf "Car" || _object isKindOf "Tank") then {
-	_object call FUNC(initObject);
+    _object call FUNC(initObject);
 };
