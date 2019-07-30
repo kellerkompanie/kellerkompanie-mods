@@ -12,7 +12,6 @@ if !(isPlayer _playerUnit) exitWith {
 };
 
 private _playerUID = getPlayerUID _playerUnit;
-private _playerName = name _playerUnit;
 
 if (_playerUID find "HC" >= 0) exitWith{
     ERROR("loadPlayerLoadout: not a player!");
@@ -23,9 +22,12 @@ TRACE_3("loadPlayerLoadout", _playerUID, _playerName, GVAR(key));
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", GVAR(key), _playerUID]);
 
-if ((_ret select 0) != 1) exitWith {ERROR("loadPlayerLoadout: loading unsucessful", _ret); false};
+if ((_ret select 0) != 1) exitWith {
+    ERROR("loadPlayerLoadout: loading unsucessful", _ret);
+    false
+};
 
-TRACE_1("loadPlayerLoadout: loading sucessful %1", _ret);
+INFO_1("loadPlayerLoadout: loading sucessful %1", _ret);
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [
@@ -49,5 +51,10 @@ if (GVAR(synchronizePlayerPosition)) then {
 if (GVAR(moneyEnabled)) then {
     _playerUnit call FUNC(loadMoney);
 };
+
+_playerUnit setVariable [QGVAR(loadoutLoaded), true, true];
+
+[QGVAR(onLoadoutLoaded), [_playerUnit]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutLoaded), [_playerUnit]] call CBA_fnc_serverEvent;
 
 true

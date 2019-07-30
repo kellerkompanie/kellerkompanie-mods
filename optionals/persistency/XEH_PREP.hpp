@@ -1,4 +1,5 @@
 PREP(dbCrateExists);
+PREP(dbLoadoutExists);
 PREP(dbVehicleExists);
 PREP(enableObjectPersistency);
 PREP(generateNewObjectVariable);

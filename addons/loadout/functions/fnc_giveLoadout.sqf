@@ -10,9 +10,7 @@ if(_customLoadout) then {
     [_role, _faction] call FUNC(applyCustomLoadout);
 };
 
-if (_customLoadout) exitWith {
-    [QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
-};
+if (_customLoadout) exitWith {};
 
 
 private _specialLoadout = [];
@@ -511,8 +509,6 @@ if (GVAR(giveRadio) > 0) then {
 };
 
 _player call FUNC(modifyLoadout);
-
-[QGVAR(onLoadoutFinished), [_player]] call CBA_fnc_globalEvent;
 
 // lower weapon if player already had a weapon before
 if !(weaponLowered _player) then {

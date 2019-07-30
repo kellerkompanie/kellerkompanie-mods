@@ -11,6 +11,20 @@ if !(isPlayer _playerUnit) exitWith {
     false
 };
 
+private _hasReceivedDefaultLoadout = _playerUnit getVariable [QGVAR(hasReceivedLoadout), false];
+private _hasDBLoadoutEntry = _playerUnit call FUNC(dbLoadoutExists);
+private _hasReceivedDBLoadout = _playerUnit getVariable [QGVAR(loadoutLoaded), false];
+
+if !(_hasReceivedDefaultLoadout) exitWith {
+    ERROR_1("player %1 was not fully initalized, not going to save to DB", name _playerUnit);
+    false
+};
+
+if (_hasDBLoadoutEntry && !_hasReceivedDBLoadout) exitWith {
+    ERROR_1("player %1 has a DB loadout, which was not loaded yet, not going to save to DB", name _playerUnit);
+    false
+};
+
 private _playerUID = getPlayerUID _playerUnit;
 private _playerName = name _playerUnit;
 

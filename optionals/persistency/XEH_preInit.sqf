@@ -28,6 +28,7 @@ addMissionEventHandler ["HandleDisconnect",
     params ["_player"];
 
     if (_player == player) then {
+        _player setVariable [QGVAR(hasReceivedLoadout), true, true];
         _player call FUNC(loadPlayerLoadout);
     };
 }] call CBA_fnc_addEventHandler;
