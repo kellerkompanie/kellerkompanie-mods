@@ -24,9 +24,12 @@ addMissionEventHandler ["HandleDisconnect",
     _unit call FUNC(savePlayerLoadout);
 }];
 
-["keko_loadout_onLoadoutFinished", {
+[QEGVAR(loadout,onLoadoutFinished), {
     params ["_player"];
-    _player call FUNC(loadPlayerLoadout);
+
+    if (_player == player) then {
+        _player call FUNC(loadPlayerLoadout);
+    };
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;
