@@ -11,10 +11,10 @@ private _objectVariable = _vehicle getVariable [QGVAR(objectVariable), ""];
 if !(_objectVariable call FUNC(dbVehicleExists)) exitWith {ERROR("vehicle %1 does not exist in DB!", _objectVariable); false};
 
 if(count _objectVariable == 0) exitWith {
-	_vehicle call FUNC(initObject);
-	_vehicle call FUNC(saveVehicle);
-	ERROR("vehicle was not initialized and therefore cannot be loaded");
-	false
+    _vehicle call FUNC(initObject);
+    _vehicle call FUNC(saveVehicle);
+    ERROR("vehicle was not initialized and therefore cannot be loaded");
+    false
 };
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getVehicle:%1:%2", GVAR(key), _objectVariable]);
@@ -25,15 +25,15 @@ TRACE_1("loadVehicle: loading sucessful", _ret);
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [
-	"", // _class
-	"_position",
-	"_orientation",
-	"_items",
-	"_magazines",
-	"_weapons",
-	"_containers",
-	"_fuel",
-	"_damage"];
+    "", // _class
+    "_position",
+    "_orientation",
+    "_items",
+    "_magazines",
+    "_weapons",
+    "_containers",
+    "_fuel",
+    "_damage"];
 
 TRACE_6("loadVehicle", _class, _position, _orientation, _fuel, _damage, _items);
 
@@ -47,8 +47,8 @@ private _serializedData = [_items, _magazines, _weapons, _containers];
 
 _damage params ["_hitpointsNamesArray", "", "_damageValuesArray"];
 {
-	private _damagePart = _damageValuesArray select _forEachIndex;
-	_vehicle setHitIndex  [_forEachIndex, _damagePart];
+    private _damagePart = _damageValuesArray select _forEachIndex;
+    _vehicle setHitIndex  [_forEachIndex, _damagePart];
 } forEach _hitpointsNamesArray;
 
 true

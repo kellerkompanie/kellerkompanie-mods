@@ -21,15 +21,15 @@ INFO_1("saveAllVehicles: saving vehicles", count _allPossibleVehicles);
 
 private _successfulSaves = 0;
 {
-	private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
-	private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
+    private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
+    private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
 
-	if( (!_isBlacklisted) && ( (GVAR(vehiclesEnabled) == PERSISTENCY_ENABLED) || ( (GVAR(vehiclesEnabled) == PERSISTENCY_SELECTIVE) && _selectivePersistencyEnabled ) ) ) then {
-		private _retVal = _x call FUNC(saveVehicle);
-		if(_retVal) then {
-			_successfulSaves = _successfulSaves + 1;
-		};
-	};
+    if( (!_isBlacklisted) && ( (GVAR(vehiclesEnabled) == PERSISTENCY_ENABLED) || ( (GVAR(vehiclesEnabled) == PERSISTENCY_SELECTIVE) && _selectivePersistencyEnabled ) ) ) then {
+        private _retVal = _x call FUNC(saveVehicle);
+        if(_retVal) then {
+            _successfulSaves = _successfulSaves + 1;
+        };
+    };
 } forEach _allPossibleVehicles;
 
 INFO_2("saveAllVehicles: saved %1/%2 vehicles successfully", _successfulSaves, count _allPossibleVehicles);
