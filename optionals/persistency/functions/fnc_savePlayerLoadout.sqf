@@ -4,23 +4,30 @@ EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
 if (GVAR(playersEnabled) == 0) exitWith{WARNING("savePlayerLoadout: persistency for players is disabled, exiting!"); false};
 
-params ["_playerUnit"];
+params [
+    ["_playerUnit", nil],
+    ["_forceSave", false]
+];
 
 if !(isPlayer _playerUnit) exitWith {
     WARNING("savePlayerLoadout: not a player, exiting!");
     false
 };
 
+if (_forceSave) then {
+    INFO_1("savePlayerLoadout: performing force save on player %1", name _playerUnit);
+};
+
 private _hasReceivedDefaultLoadout = _playerUnit getVariable [QGVAR(hasReceivedLoadout), false];
 private _hasDBLoadoutEntry = _playerUnit call FUNC(dbLoadoutExists);
 private _hasReceivedDBLoadout = _playerUnit getVariable [QGVAR(loadoutLoaded), false];
 
-if !(_hasReceivedDefaultLoadout) exitWith {
+if (!_forceSave && (!_hasReceivedDefaultLoadout)) exitWith {
     ERROR_1("player %1 was not fully initalized, not going to save to DB", name _playerUnit);
     false
 };
 
-if (_hasDBLoadoutEntry && !_hasReceivedDBLoadout) exitWith {
+if (!_forceSave && (_hasDBLoadoutEntry && !_hasReceivedDBLoadout)) exitWith {
     ERROR_1("player %1 has a DB loadout, which was not loaded yet, not going to save to DB", name _playerUnit);
     false
 };
