@@ -62,6 +62,8 @@ if (GVAR(moneyEnabled)) then {
     _playerUnit call FUNC(saveMoney);
 };
 
-TRACE_1("savePlayerLoadout", _ret);
+if (_playerUnit == player) then {
+    hintC "Dein Loadout wurde gespeichert.";
+};
 
 true

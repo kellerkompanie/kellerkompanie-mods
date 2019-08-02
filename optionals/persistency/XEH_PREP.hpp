@@ -1,3 +1,4 @@
+PREP(addPersistencyMenu);
 PREP(dbCrateExists);
 PREP(dbLoadoutExists);
 PREP(dbVehicleExists);

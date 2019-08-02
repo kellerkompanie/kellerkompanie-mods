@@ -1,3 +1,5 @@
+PREP(moduleAddPersistencyMenu);
+PREP(moduleAddPersistencyMenu3den);
 PREP(moduleEnablePersistency);
 PREP(moduleManualLoad);
 PREP(moduleManualSave);
