@@ -39,18 +39,28 @@ class CfgVehicles {
         scopeCurator = 1;
     };
 
-
-    class GVAR(ModulePersistencyBlacklist3den): GVAR(moduleBase3den) {
+    class GVAR(moduleAddPersistencyMenu3den): GVAR(moduleBase3den) {
+        displayName        = "Add Persistency Menu";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleAddPersistencyMenu3den);
+    };
+    class GVAR(modulePersistencyBlacklist3den): GVAR(moduleBase3den) {
         displayName        = "Blacklist Object";
         category           = QGVAR(Persistency);
         function           = QFUNC(modulePersistencyBlacklist3den);
     };
-    class GVAR(ModuleSelectivePersistency3den): GVAR(moduleBase3den) {
+    class GVAR(moduleSelectivePersistency3den): GVAR(moduleBase3den) {
         displayName        = "Enable Selective Persistency";
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleSelectivePersistency3den);
     };
 
+    class GVAR(moduleAddPersistencyMenu): GVAR(moduleBase3den) {
+        displayName        = "Add Persistency Menu";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleAddPersistencyMenu);
+        curatorCanAttach   = 1;
+    };
     class GVAR(moduleManualSave): GVAR(moduleBase) {
         displayName        = "Manual Save";
         category           = QGVAR(Persistency);

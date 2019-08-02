@@ -4,8 +4,10 @@ class CfgPatches {
     class ADDON    {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(moduleAddPersistencyMenu3den),
             QGVAR(modulePersistencyBlacklist3den),
             QGVAR(moduleSelectivePersistency3den),
+            QGVAR(moduleAddPersistencyMenu),
             QGVAR(moduleManualLoad),
             QGVAR(moduleManualSave),
             QGVAR(moduleEnablePersistency)
