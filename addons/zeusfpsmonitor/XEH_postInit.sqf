@@ -8,4 +8,4 @@ if (!hasInterface)  exitWith { };
     player setVariable [QGVAR(PlayerFPS), floor diag_fps, true];
 }, GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
 
-call FUNC(initalizeUI);
+call FUNC(initializeUI);
