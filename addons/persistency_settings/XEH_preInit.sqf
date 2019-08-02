@@ -145,4 +145,32 @@ Parameters:
     1
 ] call cba_settings_fnc_init;
 
+[
+    QEGVAR(persistency,showUI), // key/reference variable
+    "LIST", // type of setting
+    ["UI overlay", "Show or hide UI overlay for Zeus."], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true, false], // values
+        ["Enabled", "Disabled"], // names
+        0 // default index
+    ],
+    2,
+    { call FUNC(initalizeUI) }
+] call cba_settings_fnc_init;
+
+[
+    QEGVAR(persistency,uiUpdateInterval), // key/reference variable
+    "SLIDER", // type of setting
+    ["UI update interval", "Set the FPS update interval in seconds"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        60,  // min value
+        360, // max value
+        60, // default value
+        0   // number of trailing decimals
+    ],
+    1
+] call cba_settings_fnc_init;
+
 ADDON = true;

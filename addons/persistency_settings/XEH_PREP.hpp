@@ -1,3 +1,4 @@
+PREP(initializeUI);
 PREP(moduleAddPersistencyMenu);
 PREP(moduleAddPersistencyMenu3den);
 PREP(moduleEnablePersistency);
