@@ -5,6 +5,8 @@ private _isAdmin = (call BIS_fnc_admin) == 2;
 private _isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf QEGVAR(faction_generic,blufor_command) || (player isKindOf QEGVAR(faction_generic,indfor_command)) || (player isKindOf QEGVAR(faction_generic,opfor_command)));
 if !(_isCurator || _isAdmin) exitWith {};
 
+keko_zeusfpsmonitor_players = allPlayers;
+
 // for curators and admins show FPS counter underneath players
 addMissionEventHandler ["Draw3D", {
     {
@@ -32,5 +34,10 @@ addMissionEventHandler ["Draw3D", {
                 ];
             };
         };
-    } forEach allPlayers;
+    } forEach keko_zeusfpsmonitor_players;
 }];
+
+[
+    {keko_zeusfpsmonitor_players = allPlayers;},
+    60
+] call CBA_fnc_addPerFrameHandler;
