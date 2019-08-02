@@ -6,7 +6,7 @@ EXIT_IF_KEY_INVALID;
 params ["_player"];
 
 if (GVAR(playersEnabled) > 0) then {
-    private _savedPlayers = call FUNC(saveAllPlayers);
+    private _savedPlayers = true call FUNC(saveAllPlayers);
     (format ["[KEKO] (Peristency) saved %1 players", _savedPlayers]) remoteExec ["systemChat", _player];
 };
 
