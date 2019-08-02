@@ -8,6 +8,8 @@ if !(_isCurator || _isAdmin) exitWith {};
 // for curators and admins show FPS counter underneath players
 addMissionEventHandler ["Draw3D", {
     {
+        if (isnull(findDisplay 312)) exitWith {};
+
         private _distance = (ATLToASL (positionCameraToWorld [0,0,0])) distance _x;
         // if camera is farther than 1200 meters away from the targets the text will not display
         if (_distance < 1000) then {
