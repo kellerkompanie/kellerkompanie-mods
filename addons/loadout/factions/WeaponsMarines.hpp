@@ -52,7 +52,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG3"};
         rails[] = {"rhsusf_acc_anpeq15_bk_light"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_200rnd_556x45_M_SAW"};
+        magazines[] = {"rhsusf_200rnd_556x45_mixed_box"};
     };
 
     // MMG
