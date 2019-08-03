@@ -98,7 +98,7 @@ class weapons: weapons {
     class keko_W_P8: SecondaryWeapon
     {
         cfgName = "BWA3_P8";
-        magazines[] = {SECONDARY_MAG};
+        magazines[] = {"BWA3_15Rnd_9x19_P8"};
     };
 
 
