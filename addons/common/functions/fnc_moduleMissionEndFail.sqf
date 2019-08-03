@@ -15,7 +15,7 @@
  */
 
  if (isServer) then {
-     ["CAManBase", "Fired", {
+     ["All", "Fired", {
          params ["_unit", "", "", "", "", "", "_projectile"];
 
          deleteVehicle _projectile;
