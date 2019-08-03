@@ -3,7 +3,7 @@ class weapons: weapons {
     class keko_W_G36: PrimaryWeapon
     {
         cfgName = "BWA3_G36A2";
-        scopes[] = {"bwa3_optic_rsas"};
+        scopes[] = {"bwa3_optic_eotech"};
         rails[] = {"bwa3_acc_varioray_irlaser"};
         silencers[] = {"bwa3_muzzle_snds_rotex_iiic"};
         magazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36_Tracer"};
@@ -58,7 +58,7 @@ class weapons: weapons {
     class keko_W_MG4: PrimaryWeapon
     {
         cfgName = "BWA3_MG4";
-        scopes[] = {"BWA3_optic_ZO4x30_MicroT2"};
+        scopes[] = {"bwa3_optic_zo4x30"};
         silencers[] = {"bwa3_muzzle_snds_rotex_iiic"};
         magazines[] = {"BWA3_200Rnd_556x45_Tracer"};
     };
@@ -106,8 +106,8 @@ class weapons: weapons {
     // Launcher
     class keko_W_PZF3: LauncherWeapon
     {
-        cfgName = "BWA3_Pzf3";
-        magazines[] = {"BWA3_Pzf3_IT"};
+        cfgName = "BWA3_PzF3_Tandem_Loaded";
+        magazines[] = {"BWA3_PzF3_Tandem"};
     };
     class keko_W_RGW90: LauncherWeapon
     {
