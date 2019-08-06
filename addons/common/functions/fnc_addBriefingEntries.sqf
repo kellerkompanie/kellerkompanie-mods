@@ -21,7 +21,7 @@ private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 INFO_3("addBriefingEntries _splintsRequired=%1, _surgicalKitRequired=%2, _airwaysRequired=%3", _splintsRequired, _surgicalKitRequired, _airwaysRequired);
 
 player createDiarySubject ["missionSettings", "Mission Settings"];
-player createDiaryRecord ["missionSettings", ["Medical", format ["
+/* player createDiaryRecord ["missionSettings", ["Medical", format ["
 <br/>
 Medical:
 <br/>
@@ -29,4 +29,14 @@ Medical:
     Surgical Kit needed: %2<br/>
     Splints needed: %3<br/>
     Airway-Management needed: %4",
-    ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]];
+    ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]]; */
+player createDiaryRecord ["missionSettings", ["Medical", format ["
+<br/>
+Medical:
+<br/>
+    ace_medical_maxReviveTime: %1 seconds<br/>
+    ace_medical_healHitPointAfterAdvBandage: %2<br/>
+    ace_medical_enableAdvancedWounds: %3<br/>
+    kat_aceAirway_enable: %4<br/>
+    kat_aceBreathing_enable: %5",
+    ace_medical_maxReviveTime, ace_medical_healHitPointAfterAdvBandage, ace_medical_enableAdvancedWounds, kat_aceAirway_enable, kat_aceBreathing_enable]]];
