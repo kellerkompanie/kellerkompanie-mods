@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-params ["_role",""];
+params ["_role"];
 
-TRACE_1("applyCustomLoadout", _role);
+INFO_1("applying custom role: %1", _role);
 
 player enableSimulation false;
 
