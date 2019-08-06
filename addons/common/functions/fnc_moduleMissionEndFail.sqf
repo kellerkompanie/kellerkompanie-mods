@@ -39,7 +39,7 @@
 
  if (hasInterface) then {
      [] spawn {
-         playMusic "EventTrack02_F_Curator";
+         playMusic "BackgroundTrack03_F_EPC";
          sleep 2;
          [localize LSTRING(statsMissionFail), 1, 0.8] spawn BIS_fnc_dynamicText;
          (localize LSTRING(statsKills)) hintC parseText GVAR(outputText);
