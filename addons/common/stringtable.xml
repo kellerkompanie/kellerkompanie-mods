@@ -35,8 +35,8 @@
             <German>&lt;t color='#00ff00'&gt;Mission erfolgreich&lt;/t&gt;</German>
         </Key>
         <Key ID="STR_keko_common_statsMissionFail">
-            <English>&lt;t color='#00ff00'&gt;Mission failed&lt;/t&gt;</English>
-            <German>&lt;t color='#00ff00'&gt;Mission fehlgeschlagen&lt;/t&gt;</German>
+            <English>&lt;t color='#ff0000'&gt;Mission failed&lt;/t&gt;</English>
+            <German>&lt;t color='#ff0000'&gt;Mission fehlgeschlagen&lt;/t&gt;</German>
         </Key>
         <Key ID="STR_keko_common_statsKills">
             <English>Your kill statistics</English>
