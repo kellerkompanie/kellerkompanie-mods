@@ -350,4 +350,11 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_make_spectator.paa);
         curatorCanAttach   = 1;
     };
+    class GVAR(moduleDance): GVAR(moduleBase) {
+        displayName        = "Dance";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleDance);
+        icon = QPATHTOF(ui\icon_dance.paa);
+        curatorCanAttach   = 1;
+    };
 };

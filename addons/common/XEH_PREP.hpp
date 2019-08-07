@@ -16,6 +16,7 @@ PREP(lockDoorsDialogCallback);
 PREP(lockDoorsDialogInit);
 PREP(moduleACEGarrison3den);
 PREP(moduleCuratorCamEars);
+PREP(moduleDance);
 PREP(moduleInitMission3den);
 PREP(moduleLightning);
 PREP(moduleLimitWounds);
