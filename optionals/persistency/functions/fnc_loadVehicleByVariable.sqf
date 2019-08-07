@@ -44,7 +44,7 @@ private _z = _position select 2;
 _position set [2, _z + 0.3];
 
 if(isNull _vehicle) then {
-    _vehicle = createVehicle [_class, _position, [], 0, "CAN_COLLIDE"];
+    _vehicle = createVehicle [_class, _position, [], 0, "NONE"];
     _vehicle setVariable [QGVAR(objectVariable), _objectVariable];
     missionNamespace setVariable [_objectVariable, _vehicle];
 } else {
