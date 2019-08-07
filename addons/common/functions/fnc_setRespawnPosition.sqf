@@ -17,7 +17,7 @@
 
 params ["_position", "_respawnSide"];
 
-TRACE_2("setting respawn position", _position, _respawnSide);
+INFO_2("setting respawn position %1 for side %2", _position, _respawnSide);
 
 private _respawnSuffix = "";
 
@@ -56,3 +56,5 @@ private _searchString = "respawn" + _respawnSuffix;
 
 private _marker = createMarker [_searchString, _position];
 _marker setMarkerAlpha 0;
+
+[_searchString, _position] remoteExec ["setMarkerPosLocal", [0, -2] select isDedicated, true];

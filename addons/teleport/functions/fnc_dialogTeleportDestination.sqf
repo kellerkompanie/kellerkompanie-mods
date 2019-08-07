@@ -15,7 +15,7 @@ profileNamespace setVariable [QGVAR(lastINDFOR), _allowINDFOR];
 profileNamespace setVariable [QGVAR(lastOPFOR), _allowOPFOR];
 profileNamespace setVariable [QGVAR(lastCIV), _allowCIV];
 
-[_object, _text, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call FUNC(addTeleportDestination);
+[getPos _object, _text, [_allowBLUFOR, _allowINDFOR, _allowOPFOR, _allowCIV]] call FUNC(addTeleportDestination);
 
 deleteVehicle _object;
 

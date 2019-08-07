@@ -16,3 +16,4 @@ PREP(moduleAddTeleportDestination);
 PREP(moduleAddTeleportDestination3den);
 PREP(moduleAddTeleportMenu);
 PREP(moduleAddTeleportMenu3den);
+PREP(setPosAGSL);
