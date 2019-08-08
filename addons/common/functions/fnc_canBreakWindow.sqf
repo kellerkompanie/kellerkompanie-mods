@@ -14,8 +14,6 @@
  *
  */
 
-INFO("canBreakWindow");
-
 private _window_pos_arr = [];
 private _house = nearestObject [player , "House"];
 private _hitPoints = "isClass _x" configClasses (configFile >> "CfgVehicles" >> (typeOf _house) >> "HitPoints");
