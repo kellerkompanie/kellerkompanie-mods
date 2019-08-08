@@ -26,6 +26,7 @@
      publicVariable QGVAR(peoplePunched);
      publicVariable QGVAR(civsKilled);
      publicVariable QGVAR(corpsesHidden);
+     publicVariable QGVAR(windowsBroken);
      [{
          publicVariable QGVAR(pulseChecked);
          publicVariable QGVAR(bandagesApplied);
@@ -58,7 +59,8 @@
          [
              [format [localize LSTRING(statsPunches), GVAR(peoplePunched)], 1, 2],
              [format [localize LSTRING(statsCivilians), GVAR(civsKilled)], 1, 2],
-             [format [localize LSTRING(statsHidden), GVAR(corpsesHidden)], 1, 2]
+             [format [localize LSTRING(statsHidden), GVAR(corpsesHidden)], 1, 2],
+             [format [localize LSTRING(statsWindows), GVAR(windowsBroken)], 1, 2]
          ] spawn BIS_fnc_EXP_camp_SITREP;
          sleep 5;
          [

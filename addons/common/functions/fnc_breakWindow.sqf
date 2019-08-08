@@ -59,6 +59,7 @@
                         sleep _recoverspeed;
                         player setAnimSpeedCoef 1;
                         [player, ""] remoteExec ["switchMove", 0];
+                        [QGVAR(onWindowBroken), []] call CBA_fnc_serverEvent;
                         _brokenwindows = 1;
                     };
                 };

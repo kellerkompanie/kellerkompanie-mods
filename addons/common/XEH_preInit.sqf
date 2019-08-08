@@ -21,6 +21,7 @@ if(isServer) then {
     GVAR(peoplePunched) = 0;
     GVAR(civsKilled) = 0;
     GVAR(corpsesHidden) = 0;
+    GVAR(windowsBroken) = 0;
 
     addMissionEventHandler ["EntityKilled", {
         params ["_unit"];
@@ -38,6 +39,7 @@ if(isServer) then {
 
     [QEGVAR(punch,onPunched), { GVAR(peoplePunched) = GVAR(peoplePunched) + 1; }] call CBA_fnc_addEventHandler;
     [QEGVAR(punch,onCorpseHidden), { GVAR(corpsesHidden) = GVAR(corpsesHidden) + 1; }] call CBA_fnc_addEventHandler;
+    [QGVAR(onWindowBroken), { GVAR(windowsBroken) = GVAR(windowsBroken) + 1; }] call CBA_fnc_addEventHandler;
 };
 
 if(hasInterface) then {
