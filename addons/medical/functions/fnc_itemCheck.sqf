@@ -1,29 +1,18 @@
 #include "script_component.hpp"
-/*
- * Author: KoffeinFlummi - modified by Belbo - again modified by Schwaggot
- * Replaces vanilla items with ACE ones.
- *
- * Arguments:
- * 0: The unit <OBJECT>
- *
- * Return Value:
- * None
- *
- * Example:
- * [bob] call keko_medical_fnc_itemCheck
- */
 
 if !(GVAR(convertItems)) exitWith {};
 
 params ["_unit"];
+
+[_unit, 3, QGVAR(manualKit)] call FUNC(refill);
 
 private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_aceSplint_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
 
-INFO_5("ace_medical_healHitPointAfterAdvBandage: %1, ace_medical_enableAdvancedWounds: %2, adv_aceSplint_enable: %3, kat_aceAirway_enable: %4, kat_aceBreathing_enable: %5", ace_medical_healHitPointAfterAdvBandage, ace_medical_enableAdvancedWounds, adv_aceSplint_enable, kat_aceAirway_enable, kat_aceBreathing_enable);
-INFO_4("_splintsRequired: %1, _surgicalKitRequired: %2, _airwaysRequired: %3, _isMedic: %4", _splintsRequired, _surgicalKitRequired, _airwaysRequired, _isMedic);
+INFO_5("keko_medical_fnc_itemCheck: ace_medical_healHitPointAfterAdvBandage: %1, ace_medical_enableAdvancedWounds: %2, adv_aceSplint_enable: %3, kat_aceAirway_enable: %4, kat_aceBreathing_enable: %5", ace_medical_healHitPointAfterAdvBandage, ace_medical_enableAdvancedWounds, adv_aceSplint_enable, kat_aceAirway_enable, kat_aceBreathing_enable);
+INFO_4("keko_medical_fnc_itemCheck: _splintsRequired: %1, _surgicalKitRequired: %2, _airwaysRequired: %3, _isMedic: %4", _splintsRequired, _surgicalKitRequired, _airwaysRequired, _isMedic);
 
 private _addToBackpack = {
     params ["_unit","_type","_amount"];
