@@ -74,6 +74,10 @@
             <English>%1 corpses hidden</English>
             <German>%1 Leichen versteckt</German>
         </Key>
+        <Key ID="STR_keko_common_statsWindows">
+            <English>%1 windows broken</English>
+            <German>%1 Fenster zerbrochen</German>
+        </Key>
         <Key ID="STR_keko_common_statsPulse">
             <English>measured pulse %1 times</English>
             <German>%1 mal Puls gemessen</German>
