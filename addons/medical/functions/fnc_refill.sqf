@@ -1,6 +1,10 @@
 #include "script_component.hpp"
 
-params [["_unit",player],["_param",2],["_item", QGVAR(manualKit)]];
+params [
+    ["_unit",player],
+    ["_param",2],
+    ["_item", QGVAR(manualKit)]
+];
 
 if ( _param > 2 && ( _unit getVariable ["ACE_medical_medicClass", 0] isEqualTo 0 || ({_x == QGVAR(autoKit)} count items _unit) isEqualTo 0 ) ) exitWith {nil};
 
