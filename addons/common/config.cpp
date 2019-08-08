@@ -25,7 +25,9 @@ class CfgPatches {
             QGVAR(moduleDance),
 
             keko_RifleMagItem,
+            keko_RifleMagTracerItem,
             keko_MGMagItem,
+            keko_MGMagTracerItem,
             keko_PistolMagItem,
             keko_UGLMagItem,
             keko_AntiTankMagItem,
@@ -37,7 +39,9 @@ class CfgPatches {
         };
         weapons[] = {
             keko_RifleMag,
+            keko_RifleMag_Tracer,
             keko_MGMag,
+            keko_MGMag_Tracer,
             keko_PistolMag,
             keko_UGLMag,
             keko_AntiTankMag,

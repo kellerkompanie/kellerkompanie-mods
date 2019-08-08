@@ -14,6 +14,12 @@ class CfgWeapons {
             mass = 10;
         };
     };
+    class keko_RifleMag_Tracer: keko_RifleMag {
+        displayName = "Rifle Mag (Tracer)";
+        picture="\A3\weapons_F\data\UI\m_30stanag_red_CA.paa";
+        descriptionShort = "Rifle magazine (tracer)";
+        descriptionUse = "Holds tracer ammunition for rifles";
+    };
 
     class keko_MGMag: keko_RifleMag {
         displayName = "MG Mag";
@@ -23,6 +29,12 @@ class CfgWeapons {
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;
         };
+    };
+    class keko_MGMag_Tracer: keko_MGMag {
+        displayName = "MG Mag (Tracer)";
+        picture="\A3\Weapons_F_Beta\Data\UI\m_150Rnd_762x51_tracer_CA.paa";
+        descriptionShort = "MG magazine (tracer)";
+        descriptionUse = "Holds tracer ammunition for machine guns.";
     };
 
     class keko_PistolMag: keko_RifleMag {

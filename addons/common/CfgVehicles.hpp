@@ -40,12 +40,30 @@ class CfgVehicles {
             };
         };
     };
+    class keko_RifleMagTracerItem: keko_RifleMagItem {
+        displayName = "Rifle Mag (Tracer)";
+        class TransportItems {
+            class RifleMagTracer {
+                name = keko_RifleMag_Tracer;
+                count = 1;
+            };
+        };
+    };
 
     class keko_MGMagItem: keko_RifleMagItem {
         displayName = "MG Mag";
         class TransportItems {
             class MGMag {
                 name = keko_MGMag;
+                count = 1;
+            };
+        };
+    };
+    class keko_MGMagTracerItem: keko_MGMagItem {
+        displayName = "MG Mag (Tracer)";
+        class TransportItems {
+            class MGMagTracer {
+                name = keko_MGMag_Tracer;
                 count = 1;
             };
         };
