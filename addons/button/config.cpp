@@ -42,4 +42,5 @@ class CfgMainMenuSpotlight {
     delete Tacops_Campaign_03;
     delete Tanks_Campaign_01;
     delete gm_campaign_01;
+    delete Contact_Campaign;
 };
