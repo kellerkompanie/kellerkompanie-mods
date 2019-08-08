@@ -106,8 +106,8 @@ class FactionBase {
         EOD[] = {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}};
         Engineer[] = {{1, "ToolKit"},{1, "ACE_wirecutter"},{1, "ACE_EntrenchingTool"},{1, "ACE_Fortify"}};
 
-        LMGAsst[] = { {4, "keko_MGMag"} };
-        MMGAsst[] = { {3, "keko_MGMag"} };
+        LMGAsst[] = { {2, "keko_MGMag"}, {2, "keko_MGMag_Tracer"} };
+        MMGAsst[] = { {1, "keko_MGMag"}, {2, "keko_MGMag_Tracer"} };
         ATSpecialistAsst[] = { {2, "keko_AntiTankMag"} };
         AASpecialistAsst[] = { {2, "keko_AntiAirMag"} };
     };
@@ -273,8 +273,10 @@ class FactionBase {
             name = "Fire Team Kiste";
             cfgName[] = {"Box_NATO_Ammo_F","Box_IND_Ammo_F","Box_East_Ammo_F"};
             inventory[] = {
-                    {20, "keko_RifleMag"},
-                    {6, "keko_MGMag"},
+                    {10, "keko_RifleMag"},
+                    {10, "keko_RifleMag_Tracer"},
+                    {3, "keko_MGMag"},
+                    {3, "keko_MGMag_Tracer"},
                     {2, "keko_PistolMag"},
                     {2, "keko_DisposableRocketLauncher"},
                     {6, "keko_UGLMag"},
@@ -294,8 +296,10 @@ class FactionBase {
         class InfantryCrate: FireTeamCrate {
             name = "Infanterie Kiste";
             inventory[] =  {
-                    {60, "keko_RifleMag"},
-                    {10, "keko_MGMag"},
+                    {30, "keko_RifleMag"},
+                    {30, "keko_RifleMag_Tracer"},
+                    {5, "keko_MGMag"},
+                    {5, "keko_MGMag_Tracer"},
                     {6, "keko_PistolMag"},
                     {10, "keko_UGLMag"}
                 };
@@ -320,7 +324,8 @@ class FactionBase {
             name = "MG Kiste";
             cfgName[] = {"Box_NATO_WpsSpecial_F","Box_IND_WpsSpecial_F","Box_EAST_WpsSpecial_F"};
             inventory[] = {
-                    {20, "keko_MGMag"},
+                    {10, "keko_MGMag"},
+                    {10, "keko_MGMag_Tracer"},
                     {1, "B_Carryall_cbr"},
                     {2, "ACE_SpareBarrel"}
                 };

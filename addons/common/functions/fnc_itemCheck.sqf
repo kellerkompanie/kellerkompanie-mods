@@ -50,10 +50,34 @@ if (_hasPrimaryWeapon) then {
             _unit removeItem "keko_MGMag";
             [_unit, _primaryMagazines select 0] call CBA_fnc_addItem;
         };
+        while {({_x == "keko_MGMag_Tracer"} count items _unit) > 0} do {
+            _unit removeItem "keko_MGMag_Tracer";
+            private _tracerMag = _primaryMagazines select 0;
+            {
+                private _cfg = configFile >> "CfgMagazines" >> _x;
+                private _tracersEvery = getNumber(_cfg >> "tracersEvery");
+                if(_tracersEvery == 1) exitWith {
+                    _tracerMag = _x;
+                };
+            } forEach _primaryMagazines;
+            [_unit, _tracerMag] call CBA_fnc_addItem;
+        };
     } else {
         while {({_x == "keko_RifleMag"} count items _unit) > 0} do {
             _unit removeItem "keko_RifleMag";
             [_unit, _primaryMagazines select 0] call CBA_fnc_addItem;
+        };
+        while {({_x == "keko_RifleMag_Tracer"} count items _unit) > 0} do {
+            _unit removeItem "keko_RifleMag_Tracer";
+            private _tracerMag = _primaryMagazines select 0;
+            {
+                private _cfg = configFile >> "CfgMagazines" >> _x;
+                private _tracersEvery = getNumber(_cfg >> "tracersEvery");
+                if(_tracersEvery == 1) exitWith {
+                    _tracerMag = _x;
+                };
+            } forEach _primaryMagazines;
+            [_unit, _tracerMag] call CBA_fnc_addItem;
         };
     };
 
