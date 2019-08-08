@@ -18,10 +18,11 @@ private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_ace
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 
-INFO_3("addBriefingEntries _splintsRequired=%1, _surgicalKitRequired=%2, _airwaysRequired=%3", _splintsRequired, _surgicalKitRequired, _airwaysRequired);
+INFO_5("keko_common_fnc_addBriefingEntries: ace_medical_healHitPointAfterAdvBandage: %1, ace_medical_enableAdvancedWounds: %2, adv_aceSplint_enable: %3, kat_aceAirway_enable: %4, kat_aceBreathing_enable: %5", ace_medical_healHitPointAfterAdvBandage, ace_medical_enableAdvancedWounds, adv_aceSplint_enable, kat_aceAirway_enable, kat_aceBreathing_enable);
+INFO_3("keko_common_fnc_addBriefingEntries: _splintsRequired=%1, _surgicalKitRequired=%2, _airwaysRequired=%3", _splintsRequired, _surgicalKitRequired, _airwaysRequired);
 
 player createDiarySubject ["missionSettings", "Mission Settings"];
-/* player createDiaryRecord ["missionSettings", ["Medical", format ["
+player createDiaryRecord ["missionSettings", ["Medical", format ["
 <br/>
 Medical:
 <br/>
@@ -29,7 +30,7 @@ Medical:
     Surgical Kit needed: %2<br/>
     Splints needed: %3<br/>
     Airway-Management needed: %4",
-    ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]]; */
+    ace_medical_maxReviveTime, _surgicalKitRequired, _splintsRequired, _airwaysRequired]]];
 player createDiaryRecord ["missionSettings", ["Medical", format ["
 <br/>
 Medical:
