@@ -103,7 +103,7 @@ private _factionNames = ["Custom"];
     [localize LSTRING(giveNVG), localize LSTRING(giveNVGTooltip)], // name and tooltip
     localize LSTRING(cbaSettingsCategory), // category
     [
-        [0,1,2,3,4,5,6,7,8,13,14,15,16,9,10,11,12], // values
+        [0,1,2,3,4,5,6,7,8,13,14,15,16,9,10,11,12,17], // values
         [
       "None", //0
       "Headlamp white", //1
@@ -121,7 +121,8 @@ private _factionNames = ["Custom"];
       "[Main] Ami Mono", //9
       "[Main] Ami Dual", //10
       "[Main] BAF Mono", //11
-      "[Main] Sovjet Mono" //12
+      "[Main] Sovjet Mono", //12
+      "[Main] BW Lucie" //17
     ], // names
         0 // default index
     ],
