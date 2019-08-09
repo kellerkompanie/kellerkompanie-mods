@@ -41,8 +41,7 @@ private _hasPrimaryWeapon = primaryWeapon _unit != "";
 private _hasSecondaryWeapon = handgunWeapon _unit != "";
 private _hasLauncherWeapon = secondaryWeapon _unit != "";
 
-
-
+_primaryMagazines = [_primaryMagazines] call FUNC(sortMagazinesByCount);
 
 if (_hasPrimaryWeapon) then {
     if (primaryWeapon _unit in GVAR(machineGuns)) then {
