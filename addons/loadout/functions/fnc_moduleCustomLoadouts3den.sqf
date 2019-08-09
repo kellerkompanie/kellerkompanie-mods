@@ -3,24 +3,22 @@
 private _logic = _this select 0;
 
 if (!isServer) exitWith {};
-INFO("running moduleCustomLoadouts3den");
 
 private _objects = synchronizedObjects _logic;
-TRACE_1("synchronizedObjects", _objects);
 
 {
-    TRACE_1("converting to loadout", _x);
-
     private _loadout = getUnitLoadout _x;
     private _type = typeOf _x;
     private _loadoutDummyClass = getText (configFile >> "CfgVehicles" >> _type >> "loadoutDummy");
     private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
 
-    GVAR(customLoadouts) pushBack [_loadoutDummyClass, _name, _loadout];
+    private _medicClass = _x getVariable ["ace_medical_medicClass", 0];
+    private _engineerClass = _x getVariable ["ACE_isEngineer", 0];
+
+    GVAR(customLoadouts) pushBack [_loadoutDummyClass, _name, _loadout, _medicClass, _engineerClass];
 
     deleteVehicle _x;
 
 } forEach _objects;
 
 publicVariable QGVAR(customLoadouts);
-INFO_1("customLoadouts %1", GVAR(customLoadouts));
