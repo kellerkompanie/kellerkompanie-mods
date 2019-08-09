@@ -14,13 +14,11 @@ if(_customLoadout) exitWith {
 private _specialLoadout = [];
 {
     _x params ["_loadoutDummyClass", "", "_loadout"];
-    diag_log format ["[KEKO] (loadout) _loadoutDummyClass = %1 | _role", _loadoutDummyClass, _role];
+    INFO_2("_loadoutDummyClass = %1 | _role = %2", _loadoutDummyClass, _role);
     if (_role ==  _loadoutDummyClass) then {
         _specialLoadout = _loadout;
     };
 } forEach GVAR(addLoadouts);
-
-diag_log format ["[KEKO] (loadout) _specialLoadout = %1", _specialLoadout];
 
 if ( count _specialLoadout > 0 ) exitWith {
     _player setUnitLoadout _specialLoadout;
@@ -516,7 +514,7 @@ if !(weaponLowered _player) then {
 // lower weapon after initial spawn
 [_player] spawn {
     params ["_player"];
-    sleep 3;
+    sleep 2;
     if !(weaponLowered _player) then {
         _player action ["WeaponOnBack", _player];
     };
