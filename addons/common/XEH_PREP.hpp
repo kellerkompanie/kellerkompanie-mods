@@ -30,5 +30,6 @@ PREP(moduleRespawnPosition3den);
 PREP(moduleUnflipVehicle);
 PREP(replaceString);
 PREP(setRespawnPosition);
+PREP(sortMagazinesByCount);
 PREP(transferGroups);
 PREP(unflipVehicle);
