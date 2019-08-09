@@ -2,6 +2,7 @@ class FactionBAFDesert: FactionBAFMTP {
     name = "[Event] BAF Desert - British Armed Forces (Desert)";
 
     class uniform: uniform {
+        Lead[] = { "UK3CB_BAF_U_CombatUniform_DDPM" };
         Default[] = { "UK3CB_BAF_U_CombatUniform_DDPM", "UK3CB_BAF_U_CombatUniform_DDPM_ShortSleeve" };
         HeliPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
         JetPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
