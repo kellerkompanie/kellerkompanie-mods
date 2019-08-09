@@ -30,8 +30,8 @@ if (hasInterface) then {
 
 
 private _factionClassConfigs = "getText (_x >> 'name') != 'objNull'" configClasses (configFile >> "kekoFactions");
-private _factionClasses = [];
-private _factionNames = [];
+private _factionClasses = ["Custom"];
+private _factionNames = ["Custom"];
 
 {
     private _name = getText(_x >> 'name');
@@ -40,10 +40,6 @@ private _factionNames = [];
     _factionClasses pushBack _class;
     _factionNames pushBack _name;
 } forEach _factionClassConfigs;
-
-_factionNames pushBack "Custom";
-_factionClasses pushBack "Custom";
-
 
 [
     QGVAR(loadoutFaction), // key/reference variable
