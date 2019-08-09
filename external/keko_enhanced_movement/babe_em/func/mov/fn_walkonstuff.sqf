@@ -1,4 +1,4 @@
-if (!(vehicle player isEqualTo player) or {!isNil {player getvariable "acex_sitting_issitting"}}) exitWith {babe_em_help setpos [0,0,0]};
+if (!(vehicle player isEqualTo player) or {!isNil {player getvariable "acex_sitting_sittingStatus"}}) exitWith {babe_em_help setpos [0,0,0]};
 
 _ins = lineIntersectsSurfaces [
 	AGLToASL (player modelToWorld [0, 0, 1]), 
