@@ -75,6 +75,10 @@ switch(GVAR(giveNvg)) do {
         // GPNVG-18 recon black
         player linkItem "A3_GPNVG18_REC_BLK_F";
     };
+    case 17: {
+        // BW Lucie
+        player linkItem "dsk_nsv";
+    };
 };
 
 if(GVAR(giveGps) > 0) then {
