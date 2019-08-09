@@ -49,7 +49,7 @@ private _factionNames = ["Custom"];
     [
         _factionClasses, // values
         _factionNames, // names
-        0 // default index
+        1 // default index
     ],
     1
 ] call cba_settings_fnc_init;
