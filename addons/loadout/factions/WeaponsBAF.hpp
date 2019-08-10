@@ -33,8 +33,8 @@ class weapons: weapons {
     // LMG
     class keko_W_BAF_L110: PrimaryWeapon
     {
-        cfgName = "UK3CB_BAF_L110_762";
-        magazines[] = {"UK3CB_BAF_762_200Rnd_T"};
+        cfgName = "UK3CB_BAF_L110A3";
+        magazines[] = {"UK3CB_BAF_556_200Rnd_T"};
     };
 
     // MMG
