@@ -27,6 +27,8 @@ class FactionBAFDesert: FactionBAFMTP {
         Driver[] = { "UK3CB_BAF_V_Osprey_DDPM1" };
         HeliPilot[] = { "UK3CB_BAF_V_Pilot_DDPM" };
         JetPilot[] = { "UK3CB_BAF_V_Pilot_DDPM" };
+        LMG[] = { "UK3CB_BAF_V_Osprey_DDPM1" };
+        MMG[] = { "UK3CB_BAF_V_Osprey_DDPM1" };
     };
 
     class backpack: backpack {
