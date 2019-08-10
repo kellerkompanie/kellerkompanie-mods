@@ -16,6 +16,11 @@ class Cfg3DEN {
                     };
                 };
             };
+            class StateSpecial {
+                class Attributes {
+                    delete Enh_DoStop; /* delete buggy 3den function */
+                };
+            };
         };
     };
 };
