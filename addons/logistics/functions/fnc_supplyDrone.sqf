@@ -34,8 +34,8 @@ createVehicleCrew _uav;
 
 GVAR(currentUAVs) = GVAR(currentUAVs) + 1;
 if(GVAR(virtualUAVAmount) != -1 && GVAR(virtualUAVAmount) > 0) then {
-        GVAR(virtualUAVAmount) = GVAR(virtualUAVAmount) - 1;
-        (format ["[KEKO] (logistics) Number of remaining UAVs: %1", GVAR(virtualUAVAmount)])  remoteExec ["systemChat", 0];
+    GVAR(virtualUAVAmount) = GVAR(virtualUAVAmount) - 1;
+    (format ["[KEKO] (logistics) Number of remaining UAVs: %1", GVAR(virtualUAVAmount)])  remoteExec ["systemChat"];
 };
 
 private _uavCrew = crew _uav;

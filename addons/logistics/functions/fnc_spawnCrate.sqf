@@ -19,11 +19,13 @@ private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceStr
         _crate allowDamage false;
         [_crate] call FUNC(clearCargo);
 
+        {
+            _x addCuratorEditableObjects [[_crate], false];
+        } forEach allCurators;
+
         [_crate, _entryContents] call FUNC(fillCrate);
 
         private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
-        INFO_1("_actionDelete: %1", _crate);
-        INFO_1("_crate: %1", _actionDelete);
         [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
 
         if(true) exitWith{_returnCrate = _crate;};
