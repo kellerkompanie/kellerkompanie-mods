@@ -96,3 +96,6 @@ private _action = [
     { leader group player == player }
 ] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "ACE_TeamManagement"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+// check if player runs 32bit ArmA
+[{ time > 15 }, {call FUNC(check64bit);}, []] call CBA_fnc_waitUntilAndExecute;

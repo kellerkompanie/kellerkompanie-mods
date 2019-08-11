@@ -7,6 +7,7 @@ PREP(breakWindow);
 PREP(canBreakWindow);
 PREP(changeGroupNameDialogCallback);
 PREP(changeGroupNameDialogInit);
+PREP(check64bit);
 PREP(createZeus);
 PREP(garrisonNearest);
 PREP(getNumOpenWounds);
