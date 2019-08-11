@@ -30,9 +30,10 @@ if (face player == "Custom") then {
     }, [_text]] call CBA_fnc_waitUntilAndExecute;
 };
 
-if(hasInterface) then {
-    call FUNC(addBriefingEntries);
-};
+
+// fix for settings not yet being propagated properly
+[{call FUNC(addBriefingEntries);}, []] call CBA_fnc_execNextFrame;
+
 
 // event handlers for the statistics at mission end
 GVAR(bandagesApplied) = 0;
@@ -78,14 +79,8 @@ player addEventHandler ["Fired", {
 }];
 
 
-
-["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;
-
-[{
-    _this call FUNC(itemCheck);
-}, [player], 0.5, 0.1] call CBA_fnc_waitAndExecute;
-
-
+// replace items in loadout, but postpone until settings are propagated
+[{player call FUNC(itemCheck); ["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;}, []] call CBA_fnc_execNextFrame;
 
 // add action to allow group leader to change the name of his group
 private _action = [
