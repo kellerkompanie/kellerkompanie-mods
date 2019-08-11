@@ -4,7 +4,7 @@ INFO_1("_this %1", _this);
 
 private _returnCrate = "";
 
-params ["_position", "_crate_name"];
+params ["_position", "_crate_name", ["_isDeletable", true, [true]]];
 
 private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceString);
 
@@ -25,8 +25,10 @@ private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceStr
 
         [_crate, _entryContents] call FUNC(fillCrate);
 
-        private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
-        [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
+        if (_isDeletable) then {
+            private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
+            [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
+        };
 
         if(true) exitWith{_returnCrate = _crate;};
     };
