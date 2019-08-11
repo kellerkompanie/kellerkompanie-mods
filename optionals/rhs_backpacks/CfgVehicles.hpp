@@ -22,6 +22,14 @@ class CfgVehicles {
     class rhs_medic_bag: B_AssaultPack_Base {
         maximumLoad = 280;
     };
+    class keko_rhs_bag: rhs_medic_bag {
+        author = "Schwaggot";
+        displayName = "Bag";
+        maximumLoad = 280;
+        picture = "\x\keko\addons\rhs_backpacks\data\inventory\gear_icon_medic_bag_ca.paa";
+        hiddenSelectionsTextures[] = {"x\keko\addons\rhs_backpacks\data\gearpack3_ranets_co.paa"};
+        hiddenSelectionsMaterials[] = {"x\keko\addons\rhs_backpacks\data\gearpack3_ranets.rvmat"};
+    };
 
     class rhs_sidor: B_AssaultPack_Base {
         maximumLoad = 280;
