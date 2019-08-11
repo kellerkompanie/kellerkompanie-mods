@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// do not run on HC clients
+if !(hasInterface) exitWith {};
+
 productVersion params ["", "", "", "", "", "", "", "_architecture"];
 
 if (_architecture != "x64") then {
