@@ -89,6 +89,8 @@ private _missionAuthor = _module getVariable "MissionAuthor";
 private _missionPicture = _module getVariable "MissionPicture";
 private _missionPictureSubtitle = _module getVariable "MissionPictureSubtitle";
 private _sideRelations = _module getVariable "SideRelations";
+private _garbageCollectionCorpses = _module getVariable ["GarbageCollectionCorpses", true];
+private _gargabeCollectionWrecks = _module getVariable ["GarbageCollectionWrecks", true];
 
 "Scenario" set3DENMissionAttribute ["Author", _missionAuthor];
 "Scenario" set3DENMissionAttribute ["IntelBriefingName", _missionTitle];
@@ -111,16 +113,28 @@ switch(_sideRelations) do {
 };
 
 
+
 // set garbage collection by default
 "Multiplayer" set3DENMissionAttribute ["minPlayerDistance", 50];
-"Multiplayer" set3DENMissionAttribute ["WreckManagerMode", 1];
-"Multiplayer" set3DENMissionAttribute ["WreckLimit", 10];
-"Multiplayer" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
-"Multiplayer" set3DENMissionAttribute ["WreckRemovalMaxTime", 36000];
-"Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 1];
-"Multiplayer" set3DENMissionAttribute ["CorpseLimit", 20];
-"Multiplayer" set3DENMissionAttribute ["CorpseRemovalMinTime", 300];
-"Multiplayer" set3DENMissionAttribute ["CorpseRemovalMaxTime", 3600];
+
+if (_garbageCollectionCorpses) then {
+    "Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 1];
+    "Multiplayer" set3DENMissionAttribute ["CorpseLimit", 20];
+    "Multiplayer" set3DENMissionAttribute ["CorpseRemovalMinTime", 300];
+    "Multiplayer" set3DENMissionAttribute ["CorpseRemovalMaxTime", 3600];
+} else {
+    "Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 0];
+};
+
+if (_gargabeCollectionWrecks) then {
+    "Multiplayer" set3DENMissionAttribute ["WreckManagerMode", 1];
+    "Multiplayer" set3DENMissionAttribute ["WreckLimit", 10];
+    "Multiplayer" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
+    "Multiplayer" set3DENMissionAttribute ["WreckRemovalMaxTime", 36000];
+} else {
+    "Multiplayer" set3DENMissionAttribute ["WreckManagerMode", 0];
+};
+
 
 
 // create additional logics on first create

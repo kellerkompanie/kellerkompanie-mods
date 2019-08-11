@@ -216,6 +216,18 @@ class CfgVehicles {
                     class none {name = "keiner"; value = 0;};
                 };
             };
+            class GarbageCollectionCorpses: Checkbox {
+                property = "keko_common_ModuleInit_GarbageCollectionCorpses";
+                displayName="Garbage Collection (Corpses)";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+            class GarbageCollectionWrecks: Checkbox {
+                property = "keko_common_ModuleInit_GarbageCollectionWrecks";
+                displayName="Garbage Collection (Wrecks)";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
             class ModuleDescription: ModuleDescription{};
         };
     };
