@@ -45,14 +45,9 @@ _targetPos = _targetPos vectorAdd (_normVec vectorMultiply 100);
 createVehicleCrew _vehicle;
 
 if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) > 0) then {
-        GVAR(virtualHeliAmount) = GVAR(virtualHeliAmount) - 1;
-        (format ["[KEKO] (logistics) Number of remaining helos: %1", GVAR(virtualHeliAmount)])  remoteExec ["systemChat", 0];
+    GVAR(virtualHeliAmount) = GVAR(virtualHeliAmount) - 1;
+    (format ["[KEKO] (logistics) Number of remaining helos: %1", GVAR(virtualHeliAmount)])  remoteExec ["systemChat"];
 };
-
-//_crate = [[0, 0, 100], 'kekoFactionNATO', 'kekoInfantryCrate'] call FUNC(spawnCrate);
-{
-    _x addCuratorEditableObjects [[_crate], false];
-} forEach allCurators;
 
 [_crate, _vehicle, true] call FUNC(aceForceLoadItem);
 

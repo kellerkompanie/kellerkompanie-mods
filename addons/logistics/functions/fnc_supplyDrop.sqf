@@ -12,11 +12,6 @@ _crate = [_position, _crate_name] call FUNC(spawnCrate);
 private _targetPos = [_pos select 0, _pos select 1, 200];
 private _chute = createVehicle ["B_Parachute_02_F", _targetPos, [], 0, "NONE"];
 _crate setPos _targetPos;
-
-{
-    _x addCuratorEditableObjects [[_crate], false];
-} forEach allCurators;
-
 _crate attachTo [_chute, [0, 0, -0.2]];
 _chute setVelocity [0,0,-50];
 
