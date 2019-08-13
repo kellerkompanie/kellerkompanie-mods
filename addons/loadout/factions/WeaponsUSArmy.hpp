@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_compm4"};
         rails[] = {"rhsusf_acc_anpeq15"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
+        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
     };
 
     // Grenadier
