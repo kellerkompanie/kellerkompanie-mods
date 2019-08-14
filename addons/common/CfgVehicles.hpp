@@ -219,14 +219,14 @@ class CfgVehicles {
             class GarbageCollectionCorpses: Checkbox {
                 property = "keko_common_ModuleInit_GarbageCollectionCorpses";
                 displayName="Garbage Collection (Corpses)";
-                typeName = "BOOL";
-                defaultValue = true;
+                typeName = "NUMBER";
+                defaultValue = 1;
             };
             class GarbageCollectionWrecks: Checkbox {
                 property = "keko_common_ModuleInit_GarbageCollectionWrecks";
                 displayName="Garbage Collection (Wrecks)";
-                typeName = "BOOL";
-                defaultValue = true;
+                typeName = "NUMBER";
+                defaultValue = 1;
             };
             class ModuleDescription: ModuleDescription{};
         };
