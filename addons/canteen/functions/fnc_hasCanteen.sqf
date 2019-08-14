@@ -2,11 +2,4 @@
 
 params ["_unit"];
 
-/*private _unitItems = items _unit;
-private _hasCanteen = false;
-
-{
-    if (_x in _unitItems) exitWith {_hasCanteen = true;};
-} forEach CANTEEN_ITEMS;*/
-
-QGVAR(canteen) in (magazines _unit) || QGVAR(canteenEmpty) in (items _unit)
+([_unit, QGVAR(canteen)] call ace_common_fnc_hasMagazine) || QGVAR(canteenEmpty) in ([_unit] call ace_common_fnc_uniqueItems)

@@ -18,8 +18,8 @@ PREP_RECOMPILE_END;
     QGVAR(refill),
     localize LSTRING(actionRefill),
     QPATHTOF(ui\icon_canteen_action),
-    { _player call FUNC(fillCanteen) },
-    { _player call FUNC(hasCanteen) }
+    { ACE_player call FUNC(fillCanteen) },
+    { ACE_player call FUNC(hasCanteen) }
 ] call ace_interact_menu_fnc_createAction;
 
 {

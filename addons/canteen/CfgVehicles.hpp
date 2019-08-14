@@ -13,7 +13,7 @@ class CfgVehicles {
 
                 class GVAR(drink) {
                     displayName = CSTRING(actionDrink);
-                    condition = QUOTE(_player call FUNC(hasCanteen));
+                    condition = QUOTE(ACE_player call FUNC(hasCanteen));
                     exceptions[] = {};
                     icon = QPATHTOF(ui\icon_canteen_action.paa);
                     statement = QUOTE(_player call FUNC(canteenDrink));
@@ -33,8 +33,8 @@ class CfgVehicles {
                 class GVAR(pour) {
                     displayName = CSTRING(actionPour);
                     distance = 2.0;
-                    condition = QUOTE(_player call FUNC(hasCanteen) && alive _target);
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(pourWater));
+                    condition = QUOTE(ACE_player call FUNC(hasCanteen) && alive _target);
+                    statement = QUOTE([ARR_2(ACE_player, _target)] call FUNC(pourWater));
                     exceptions[] = {};
                     showDisabled = 1;
                     priority = 1;
