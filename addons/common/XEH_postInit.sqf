@@ -116,3 +116,6 @@ GVAR(killCount) = 0;
         [QGVAR(kill), [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addClassEventHandler;
+
+// fix for RHS engine spool-up
+RHS_ENGINE_STARTUP_OFF = true;
