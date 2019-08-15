@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(isServer) exitWith {_this remoteExecCall [QFUNC(heliDrop), 2]};
+if !(isServer) exitWith {};
 
 if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) <= 0) exitWith {
     "[KEKO] (logistics) You have used all of your helos already, no more available!" remoteExec ["systemChat", 0];
