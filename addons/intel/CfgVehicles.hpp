@@ -147,6 +147,13 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = false;
             };
+            class Condition: Edit {
+                property = QGVAR(Condition);
+                displayName = CSTRING(condition);
+                tooltip = CSTRING(conditionTooltip);
+                typeName = "STRING";
+                defaultValue = "'true'";
+            };
             class CodeOnInteraction: Edit {
                 property = QGVAR(CodeOnInteraction);
                 displayName = CSTRING(codeOnInteraction);

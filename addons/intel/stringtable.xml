@@ -151,6 +151,14 @@
             <English>The code to be execute after player has interacted. Code will be executed on client machine. The intel can be referenced as _object.</English>
             <German>Der Code, der ausgeführt werden soll, sobald der Spieler mit dem Intel interagiert. Das Objekt kann als referenziert werden als _object.</German>
         </Key>
+        <Key ID="STR_keko_intel_condition">
+            <English>Condition for interaction</English>
+            <German>Condition for interaction</German>
+        </Key>
+        <Key ID="STR_keko_intel_conditionTooltip">
+            <English>The code to be evaluated whether or not the action should be shown. Action will be shown if value is true. Do not use double quotes ("), instead use single quotes (') if needed!</English>
+            <German>Der Code, der evaluiert wird um zu prüfen ob die Action angezeigt wird. Falls der Wert true ist, wird die Action angezeigt. Keine doppelten Anführungszeichen (") benutzen, stattdessen die einfachen (') benutzen falls notwendig!</German>
+        </Key>
         <Key ID="STR_keko_intel_openMap">
             <English>Open map</English>
             <German>Karte öffnen</German>
