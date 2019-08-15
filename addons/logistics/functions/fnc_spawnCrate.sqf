@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-INFO_1("_this %1", _this);
-
 private _returnCrate = "";
 
 params ["_position", "_crate_name", ["_isDeletable", true, [true]]];
