@@ -7,8 +7,8 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        client = QUOTE(call COMPILE_FILE(XEH_postInitClient));
-        server = QUOTE(call COMPILE_FILE(XEH_postInitServer));
+        clientInit = QUOTE(call COMPILE_FILE(XEH_postInitClient));
+        serverInit = QUOTE(call COMPILE_FILE(XEH_postInitServer));
         disableModuload = true;
     };
 };

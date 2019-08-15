@@ -6,14 +6,11 @@ if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) <= 0) exitWith {
     "[KEKO] (logistics) You have used all of your helos already, no more available!" remoteExec ["systemChat", 0];
 };
 
-//[_targetPos select 0, _targetPos select 1, 300]
-private _targetPos = [];
-private _crate = "";
-
 params ["_position", "_crate_name"];
-_targetPos = _position;
+
+private _targetPos = _position;
 _targetPos set [2, 100];
-_crate = [GVAR(heliEntryPoint), _crate_name] call FUNC(spawnCrate);
+private _crate = [GVAR(heliEntryPoint), _crate_name] call FUNC(spawnCrate);
 
 
 private _helicopterCfgClass = "B_Heli_Transport_03_unarmed_F";
@@ -49,7 +46,7 @@ if(GVAR(virtualHeliAmount) != -1 && GVAR(virtualHeliAmount) > 0) then {
     (format ["[KEKO] (logistics) Number of remaining helos: %1", GVAR(virtualHeliAmount)])  remoteExec ["systemChat"];
 };
 
-[_crate, _vehicle, true] call FUNC(aceForceLoadItem);
+[_crate, _vehicle] call FUNC(aceForceLoadItem);
 
 _vehicle allowDamage false;
 _vehicle flyInHeight 100;

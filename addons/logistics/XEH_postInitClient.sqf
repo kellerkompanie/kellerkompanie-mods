@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-
 if(GVAR(virtualHeliLogistics) > ACCESS_DISABLED) then {
     if (isNil QGVAR(heliEntryPoint)) then {
         systemChat "[KEKO] (Logistics) WARNING: Heli Logistics enabled but no entry point set! Falling back to [0, 0].";
