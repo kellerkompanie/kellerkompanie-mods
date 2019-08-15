@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap", "_shareWith"];
+params ["_object", "_type", "_action", "_actionDuration", "_removeAction", "_title", "_content", "_removeObject", "_codeOnInteraction", "_openMap", "_shareWith", "_condition"];
 
 private _textures = [
     QPATHTOF(ui\background_misc.paa),
@@ -39,7 +39,7 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
 
     // Condition for the action to be shown
-    "_this distance _target < 2",
+    format ["_this distance _target < 2 && (%1)", _condition],
 
     // Condition for the action to progress
     nil,
