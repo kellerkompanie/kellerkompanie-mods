@@ -24,8 +24,7 @@ private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceStr
         [_crate, _entryContents] call FUNC(fillCrate);
 
         if (_isDeletable) then {
-            private _actionDelete = ["DeleteCrate", localize LSTRING(deleteCrate), "", {deleteVehicle _target;}, {true}] call ace_interact_menu_fnc_createAction;
-            [_crate, 0, ["ACE_MainActions"], _actionDelete] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
+            _crate remoteExec [QFUNC(addDeleteCrateAction), [0, -2] select isDedicated];
         };
 
         if(true) exitWith{_returnCrate = _crate;};
