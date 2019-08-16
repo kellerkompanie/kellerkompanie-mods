@@ -60,22 +60,40 @@ class weapons: weapons {
         cfgName = "BWA3_MG4";
         scopes[] = {"bwa3_optic_zo4x30"};
         silencers[] = {"bwa3_muzzle_snds_rotex_iiic"};
-        magazines[] = {"BWA3_200Rnd_556x45_Tracer"};
+        magazines[] = {"BWA3_200Rnd_556x45","BWA3_200Rnd_556x45_Tracer"};
     };
+    class keko_W_MG4_snow: keko_W_MG4
+    {
+        cfgName = "BWAdd_MG4";
+    };
+
 
     // MMG
     class keko_W_MG3: PrimaryWeapon
     {
         cfgName = "BWA3_MG3";
-        magazines[] = {"BWA3_120Rnd_762x51_Tracer"};
+        magazines[] = {"BWA3_120Rnd_762x51_soft","BWA3_120Rnd_762x51_Tracer_soft"};
     };
-
+    class keko_W_MG3_snow: keko_W_MG3
+    {
+        cfgName = "BWAdd_MG3";
+    };
     class keko_W_MG5: PrimaryWeapon
     {
         cfgName = "BWA3_MG5";
         silencers[] = {"bwa3_muzzle_snds_rotex_iia"};
-        magazines[] = {"BWA3_200Rnd_556x45_Tracer"};
+        magazines[] = {"BWA3_120Rnd_762x51_soft","BWA3_120Rnd_762x51_Tracer_soft"};
     };
+    class keko_W_MG5_tan: keko_W_MG5
+    {
+        cfgName = "BWA3_MG5_tan";
+    };
+    class keko_W_MG5_snow: keko_W_MG5
+    {
+        cfgName = "BWAdd_MG5";
+    };
+
+
 
     // Sniper
     class keko_W_G29: PrimaryWeapon

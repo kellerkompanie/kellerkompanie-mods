@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"rhs_acc_pkas"};
         rails[] = {"rhs_acc_2dpZenit"};
         silencers[] = {"rhs_acc_dtk4short"};
-        magazines[] = {"rhs_30Rnd_545x39_AK","rhs_30Rnd_545x39_7N6_AK"};
+        magazines[] = {"rhs_30Rnd_545x39_7N6_AK","rhs_30Rnd_545x39_AK_green"};
     };
     class keko_W_AK74M_FOLDED: keko_W_AK74M
     {
@@ -33,14 +33,14 @@ class weapons: weapons {
         cfgName = "rhs_weap_svdp";
         scopes[] = {"rhs_acc_pso1m2"};
         silencers[] = {"rhs_acc_tgpv"};
-        magazines[] = {"rhs_10Rnd_762x54mmR_7N1"};
+        magazines[] = {"10Rnd_762x54_Mag","ACE_10Rnd_762x54_Tracer_mag"};
     };
 
     // LMG
     class keko_W_M84: PrimaryWeapon
     {
         cfgName = "rhs_weap_m84";
-        magazines[] = {"rhs_100Rnd_762x54mmR_green"};
+        magazines[] = {"rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR_green"};
     };
 
     // MMG
@@ -48,14 +48,7 @@ class weapons: weapons {
     {
         cfgName = "rhs_weap_pkp";
         scopes[] = {"rhs_acc_pkas"};
-        magazines[] = {"rhs_100Rnd_762x54mmR_green"};
-    };
-
-    // Sniper
-    class keko_W_A3_LRR: PrimaryWeapon
-    {
-        cfgName = "srifle_LRR_F";
-        magazines[] = {"ACE_7Rnd_408_305gr_Mag"};
+        magazines[] = {"rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR_green"};
     };
 
 

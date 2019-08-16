@@ -32,14 +32,14 @@ class weapons: weapons {
         cfgName = "arifle_MXM_F";
         scopes[] = {"optic_SOS"};
         rails[] = {"acc_flashlight"};
-        magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
+        magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
     };
 
     // LMG
     class keko_W_A3_MX_SW: keko_W_A3_MX
     {
         cfgName = "arifle_MX_SW_F";
-        magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
+        magazines[] = {"100Rnd_65x39_caseless_mag","100Rnd_65x39_caseless_mag_Tracer"};
     };
 
     // MMG
@@ -51,13 +51,6 @@ class weapons: weapons {
         bipods[] = {"bipod_01_F_blk"};
         silencers[] = {"muzzle_snds_338_black"};
          magazines[] = {"150Rnd_93x64_Mag"};
-    };
-
-    // Sniper
-    class keko_W_A3_LRR: keko_W_A3_MX
-    {
-        cfgName = "srifle_LRR_F";
-        magazines[] = {"ACE_7Rnd_408_305gr_Mag"};
     };
 
 
