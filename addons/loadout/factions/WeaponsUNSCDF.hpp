@@ -7,7 +7,7 @@ class weapons: weapons {
         cfgName = "OPTRE_BR55HB";
         scopes[] = {"optre_br55hb_scope"};
         silencers[] = {"muzzle_snds_65_ti_blk_f"};
-        magazines[] = {"OPTRE_36Rnd_95x40_Mag"};
+        magazines[] = {"OPTRE_36Rnd_95x40_Mag","OPTRE_36Rnd_95x40_Mag_Tracer"};
     };
 
     // Rifleman
@@ -48,7 +48,7 @@ class weapons: weapons {
     {
         cfgName = "OPTRE_M7";
         silencers[] = {"optre_m7_silencer"};
-        magazines[] = {"OPTRE_60Rnd_5x23mm_Mag"};
+        magazines[] = {"OPTRE_60Rnd_5x23mm_Mag","OPTRE_60Rnd_5x23mm_Mag_tracer"};
     };
 
 
