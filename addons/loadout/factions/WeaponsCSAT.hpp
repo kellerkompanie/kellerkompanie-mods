@@ -23,14 +23,14 @@ class weapons: weapons {
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_02_F_hex"};
         silencers[] = {"muzzle_snds_b"};
-        magazines[] = {"30Rnd_65x39_caseless_green"};
+        magazines[] = {"10Rnd_762x54_Mag","ACE_10Rnd_762x54_Tracer_mag"};
     };
     class keko_W_A3_ZAFIR: PrimaryWeapon {
         cfgName = "LMG_Zafir_F";
         scopes[] = {"optic_aco"};
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_02_F_hex"};
-        magazines[] = {"150Rnd_762x54_Box_Tracer"};
+        magazines[] = {"150Rnd_762x54_Box","150Rnd_762x54_Box_Tracer"};
     };
     class keko_W_A3_MMG_CSAT: PrimaryWeapon {
         cfgName = "MMG_01_hex_F";

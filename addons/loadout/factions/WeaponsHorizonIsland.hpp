@@ -4,7 +4,7 @@ class weapons: weapons {
     {
         cfgName = "rhs_weap_m16a4_carryhandle";
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
+        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red"};
     };
 
     // Grenadier
@@ -22,7 +22,7 @@ class weapons: weapons {
         cfgName = "rhs_weap_m14ebrri";
         scopes[] = {"rhsusf_acc_harris_bipod"};
         bipods[] = {"rhsusf_acc_leupoldmk4"};
-        magazines[] = {"rhsusf_20Rnd_762x51_m993_Mag","rhsusf_20Rnd_762x51_m118_special_Mag"};
+        magazines[] = {"rhsusf_20Rnd_762x51_m993_Mag","rhsusf_20Rnd_762x51_m62_Mag"};
     };
 
     // LMG
@@ -30,7 +30,7 @@ class weapons: weapons {
     {
         cfgName = "rhs_weap_m249";
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_200rnd_556x45_M_SAW"};
+        magazines[] = {"rhsusf_200Rnd_556x45_M855_soft_pouch","rhsusf_200Rnd_556x45_M855_mixed_soft_pouch"};
     };
 
     // MMG
@@ -38,7 +38,7 @@ class weapons: weapons {
     {
         cfgName = "rhs_weap_m240B";
         silencers[] = {"muzzle_snds_h_mg"};
-        magazines[] = {"rhsusf_100Rnd_762x51_m62_tracer"};
+        magazines[] = {"rhsusf_100Rnd_762x51_m61_ap","rhsusf_100Rnd_762x51_m62_tracer"};
     };
 
 

@@ -7,7 +7,7 @@ class weapons: weapons {
         rails[] = {"rhs_acc_perst3_2dp_h"};
         bipods[] = {"rhs_acc_grip_rk6"};
         silencers[] = {"rhs_acc_dtk4short"};
-        magazines[] = {"rhs_30Rnd_545x39_7N22_AK", "rhs_30Rnd_545x39_AK_plum_green"};
+        magazines[] = {"rhs_30Rnd_545x39_7N6M_plum_AK", "rhs_30Rnd_545x39_AK_plum_green"};
     };
     class keko_W_AK74MR_GL: keko_W_AK74M
     {
@@ -49,7 +49,7 @@ class weapons: weapons {
         scopes[] = {"rhs_acc_1p87"};
         rails[] = {"rhs_acc_dtkakm"};
         bipods[] = {"rhsusf_acc_grip1"};
-        magazines[] = {"rhs_75Rnd_762x39mm", "rhs_75Rnd_762x39mm_tracer"};
+        magazines[] = {"rhs_75Rnd_762x39mm_89", "rhs_75Rnd_762x39mm_tracer"};
     };
 
 
@@ -59,7 +59,7 @@ class weapons: weapons {
         cfgName = "rhs_weap_svdp";
         scopes[] = {"rhs_acc_pso1m21"};
         silencers[] = {"rhs_acc_tgpv"};
-        magazines[] = {"rhs_10Rnd_762x54mmR_7N1"};
+        magazines[] = {"10Rnd_762x54_Mag","ACE_10Rnd_762x54_Tracer_mag"};
     };
 
 

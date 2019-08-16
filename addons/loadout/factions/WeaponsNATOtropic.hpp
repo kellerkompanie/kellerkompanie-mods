@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"optic_Hamr_khk_F"};
         rails[] = {"acc_pointer_IR"};
         silencers[] = {"muzzle_snds_h_khk_f"};
-        magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
+        magazines[] = {"30Rnd_65x39_caseless_khaki_mag"};
     };
 
     // Staff
@@ -32,14 +32,14 @@ class weapons: weapons {
         scopes[] = {"optic_SOS_khk_F"};
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_01_F_khk"};
-        magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
+        magazines[] = {"30Rnd_65x39_caseless_khaki_mag"};
     };
 
     // LMG
     class keko_W_A3_MX_SW_TROPIC: keko_W_A3_MX_TROPIC
     {
         cfgName = "arifle_MX_SW_khk_F";
-        magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
+        magazines[] = {"100Rnd_65x39_caseless_khaki_mag"};
     };
 
     // MMG

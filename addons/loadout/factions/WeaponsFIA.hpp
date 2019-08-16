@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"optic_ACO_grn"};
         rails[] = {"acc_flashlight"};
         silencers[] = {"muzzle_snds_m"};
-        magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
+        magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Yellow"};
     };
     class keko_W_A3_TRG21: keko_W_A3_Mk20
     {
@@ -37,16 +37,12 @@ class weapons: weapons {
         scopes[] = {"optic_KHS_blk"};
         rails[] = {"acc_flashlight"};
         silencers[] = {"muzzle_snds_b"};
-        magazines[] = {"20Rnd_762x51_Mag"};
+        magazines[] = {"20Rnd_762x51_Mag","ACE_20Rnd_762x51_Mag_Tracer"};
     };
 
-    class keko_W_A3_DMR_SILENCED: PrimaryWeapon
+    class keko_W_A3_DMR_SILENCED: keko_W_A3_DMR
     {
-        cfgName = "srifle_DMR_06_olive_F";
-        scopes[] = {"optic_KHS_blk"};
-        rails[] = {"acc_flashlight"};
         silencers[] = {"muzzle_snds_b"};
-        magazines[] = {"20Rnd_762x51_Mag"};
     };
 
 
@@ -59,7 +55,7 @@ class weapons: weapons {
         rails[] = {"acc_flashlight"};
         bipods[] = {"bipod_03_F_blk"};
         silencers[] = {"muzzle_snds_h_mg"};
-        magazines[] = {"200Rnd_65x39_cased_Box_Tracer"};
+        magazines[] = {"200Rnd_65x39_cased_Box_Red","200Rnd_65x39_cased_Box_Tracer"};
     };
 
     // MMG

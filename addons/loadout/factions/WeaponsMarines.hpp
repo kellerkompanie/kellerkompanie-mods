@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG_RMR"};
         rails[] = {"rhsusf_acc_anpeq15_bk_light"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
+        magazines[] = {"rhs_mag_30Rnd_556x45_M855_PMAG","rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red"};
     };
 
     class keko_W_RHS_M4A1: PrimaryWeapon
@@ -15,7 +15,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG_RMR"};
         rails[] = {"rhsusf_acc_anpeq15_bk_light"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
+        magazines[] = {"rhs_mag_30Rnd_556x45_M855_PMAG","rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red"};
     };
 
     // Grenadier
@@ -42,7 +42,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG3"};
         rails[] = {"rhsusf_acc_anpeq15_bk_light"};
         bipods[] = {"rhsusf_acc_harris_bipod"};
-        magazines[] = {"rhsusf_20Rnd_762x51_m993_Mag","rhsusf_20Rnd_762x51_m118_special_Mag"};
+        magazines[] = {"rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m62_Mag"};
     };
 
     // LMG
@@ -52,7 +52,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG3"};
         rails[] = {"rhsusf_acc_anpeq15_bk_light"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhsusf_200rnd_556x45_mixed_box"};
+        magazines[] = {"rhsusf_200Rnd_556x45_box","rhsusf_200rnd_556x45_mixed_box"};
     };
 
     // MMG
@@ -62,15 +62,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG3"};
         rails[] = {"acc_pointer_IR"};
         silencers[] = {"muzzle_snds_h_mg"};
-        magazines[] = {"rhsusf_100Rnd_762x51_m62_tracer"};
-    };
-
-    // Sniper
-    // TODO replace with faction specific
-    class keko_W_A3_LRR: PrimaryWeapon
-    {
-        cfgName = "srifle_LRR_F";
-        magazines[] = {"ACE_7Rnd_408_305gr_Mag"};
+        magazines[] = {"rhsusf_100Rnd_762x51_m61_ap","rhsusf_100Rnd_762x51_m62_tracer"};
     };
 
 

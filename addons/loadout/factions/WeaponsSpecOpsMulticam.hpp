@@ -34,7 +34,7 @@ class weapons: weapons {
         scopes[] = {"sma_spitfire_03_rds_low_black"};
         rails[] = {"sma_anpeq15_blk"};
         silencers[] = {"sma_gemtech_one_blk"};
-        magazines[] = {"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic"};
+        magazines[] = {"SMA_20Rnd_762x51mm_M80A1_EPR","SMA_20Rnd_762x51mm_M80A1_EPR_Tracer"};
     };
 
     // LMG
@@ -43,7 +43,7 @@ class weapons: weapons {
         cfgName = "sma_minimi_mk3_762tsb";
         scopes[] = {"SMA_ELCAN_SPECTER_RDS"};
         silencers[] = {"sma_gemtech_one_wdl"};
-        magazines[] = {"SMA_150Rnd_762_M80A1_Mixed"};
+        magazines[] = {"SMA_150Rnd_762_M80A1","SMA_150Rnd_762_M80A1_Tracer"};
     };
 
 

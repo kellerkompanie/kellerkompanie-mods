@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_compm4"};
         rails[] = {"rhsusf_acc_anpeq15"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"};
+        magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red"};
     };
 
     // Grenadier
@@ -25,7 +25,7 @@ class weapons: weapons {
         scopes[] = {"rhsusf_acc_ACOG3"};
         rails[] = {"rhsusf_acc_anpeq15"};
         bipods[] = {"rhsusf_acc_harris_bipod"};
-        magazines[] = {"rhsusf_20Rnd_762x51_m993_Mag"};
+        magazines[] = {"rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m62_Mag"};
     };
 
     // LMG
@@ -34,7 +34,7 @@ class weapons: weapons {
         cfgName = "rhs_weap_m249_pip_L";
         scopes[] = {"rhsusf_acc_elcan"};
         silencers[] = {"rhsusf_acc_nt4_black"};
-        magazines[] = {"rhsusf_200rnd_556x45_mixed_box"};
+        magazines[] = {"rhsusf_200Rnd_556x45_box","rhsusf_200rnd_556x45_mixed_box"};
     };
 
     // MMG
@@ -43,7 +43,7 @@ class weapons: weapons {
         cfgName = "rhs_weap_m240B";
         scopes[] = {"rhsusf_acc_elcan"};
         silencers[] = {"muzzle_snds_h_mg"};
-        magazines[] = {"rhsusf_100Rnd_762x51_m62_tracer"};
+        magazines[] = {"rhsusf_100Rnd_762x51_m61_ap","rhsusf_100Rnd_762x51_m62_tracer"};
     };
 
     // Sniper
@@ -59,7 +59,7 @@ class weapons: weapons {
     class keko_W_M9: SecondaryWeapon
     {
         cfgName = "rhsusf_weap_m9";
-        magazines[] = {SECONDARY_MAG};
+        magazines[] = {"rhsusf_mag_15Rnd_9x19_FMJ"};
     };
 
 

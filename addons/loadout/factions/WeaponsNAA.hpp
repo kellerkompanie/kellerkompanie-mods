@@ -5,7 +5,7 @@ class weapons: weapons {
         scopes[] = {"optic_aco"};
         rails[] = {"acc_pointer_IR"};
         silencers[] = {"muzzle_snds_m"};
-        magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Green"};
+        magazines[] = {"30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_Tracer_Green"};
     };
     class keko_W_A3_F2000_UGL: keko_W_A3_F2000 {
         cfgName = "NAA_arifle_Mk20_GL_alpat_ard1";
@@ -23,7 +23,7 @@ class weapons: weapons {
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_03_F_blk"};
         silencers[] = {"muzzle_snds_h_mg"};
-        magazines[] = {"200Rnd_556x45_Box_Red_F"};
+        magazines[] = {"200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Tracer_Red_F"};
     };
     class keko_W_A3_MMG_AAF: PrimaryWeapon {
         cfgName = "NAA_MMG_02_alpat_F";
@@ -39,7 +39,7 @@ class weapons: weapons {
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_03_F_blk"};
         silencers[] = {"muzzle_snds_b"};
-        magazines[] = {"20Rnd_762x51_Mag"};
+        magazines[] = {"20Rnd_762x51_Mag","ACE_20Rnd_762x51_Mag_Tracer"};
     };
     class keko_W_A3_GM6: PrimaryWeapon {
         cfgName = "srifle_GM6_LRPS_F";

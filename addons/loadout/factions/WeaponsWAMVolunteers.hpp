@@ -29,12 +29,12 @@ class weapons: weapons {
 
     // Marksman
     class keko_W_A3_EBR: PrimaryWeapon {
-        cfgName = "srifle_EBR_MRCO_LP_BI_F";
+        cfgName = "NAA_EBR_khaki";
         scopes[] = {"optic_SOS"};
         rails[] = {"acc_pointer_IR"};
         bipods[] = {"bipod_03_F_blk"};
         silencers[] = {"muzzle_snds_b"};
-        magazines[] = {"20Rnd_762x51_Mag"};
+        magazines[] = {"20Rnd_762x51_Mag","ACE_20Rnd_762x51_Mag_Tracer"};
     };
 
     // LMG
@@ -43,7 +43,7 @@ class weapons: weapons {
         cfgName = "LMG_Mk200_F";
         scopes[] = {"optic_holosight"};
         rails[] = {"acc_flashlight"};
-        magazines[] = {"200Rnd_65x39_cased_Box_Tracer"};
+        magazines[] = {"200Rnd_65x39_cased_Box_Red","200Rnd_65x39_cased_Box_Tracer"};
     };
 
     // MMG

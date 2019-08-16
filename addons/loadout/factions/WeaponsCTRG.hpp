@@ -6,7 +6,7 @@ class weapons: weapons {
         scopes[] = {"optic_ERCO_blk_F"};
         rails[] = {"acc_pointer_IR"};
         silencers[] = {"muzzle_snds_m"};
-        magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
+        magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Yellow"};
     };
     class keko_W_A3_HK416_SAND: keko_W_A3_HK416
     {

@@ -32,14 +32,14 @@ class weapons: weapons {
         cfgName = "arifle_MXM_Black_F";
         scopes[] = {"optic_SOS"};
         rails[] = {"acc_pointer_IR"};
-        magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
+        magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
     };
 
     // LMG
     class keko_W_A3_MX_SW: keko_W_A3_MX
     {
         cfgName = "arifle_MX_SW_Black_F";
-        magazines[] = {"100Rnd_65x39_caseless_mag_Tracer"};
+        magazines[] = {"100Rnd_65x39_caseless_black_mag"};
     };
 
     // MMG

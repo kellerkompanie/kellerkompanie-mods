@@ -11,6 +11,7 @@ class weapons: weapons {
     class keko_W_A3_MX_BLACK: keko_W_A3_MX
     {
         cfgName = "arifle_MX_Black_F";
+        magazines[] = {"30Rnd_65x39_caseless_black_mag"};
     };
 
     // Staff
@@ -23,6 +24,7 @@ class weapons: weapons {
     class keko_W_A3_MXC_BLACK: keko_W_A3_MXC
     {
         cfgName = "arifle_MXC_Black_F";
+        magazines[] = {"30Rnd_65x39_caseless_black_mag"};
     };
 
     // Grenadier
@@ -35,9 +37,11 @@ class weapons: weapons {
     };
     class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL {
         cfgName = "arifle_MX_GL_Black_F";
+        magazines[] = {"30Rnd_65x39_caseless_black_mag"};
     };
     class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
         uglMagazines[] = {"ACE_HuntIR_M203"};
+        magazines[] = {"30Rnd_65x39_caseless_black_mag"};
     };
 
     // Marksman
@@ -46,7 +50,7 @@ class weapons: weapons {
         cfgName = "arifle_MXM_F";
         scopes[] = {"optic_SOS"};
         rails[] = {"acc_pointer_IR"};
-        magazines[] = {"ACE_30Rnd_65x47_Scenar_mag"};
+        magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer"};
     };
     class keko_W_A3_MXM_BLACK: keko_W_A3_MXM
     {
