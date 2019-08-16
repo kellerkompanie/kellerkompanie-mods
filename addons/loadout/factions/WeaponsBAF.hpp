@@ -27,21 +27,21 @@ class weapons: weapons {
     {
         cfgName = "UK3CB_BAF_L129A1";
         scopes[] = {"UK3CB_BAF_TA648_308"};
-        magazines[] = {"UK3CB_BAF_762_L42A1_20Rnd"};
+        magazines[] = {"UK3CB_BAF_762_L42A1_20Rnd","UK3CB_BAF_762_L42A1_20Rnd_T"};
     };
 
     // LMG
     class keko_W_BAF_L110: PrimaryWeapon
     {
         cfgName = "UK3CB_BAF_L110A3";
-        magazines[] = {"UK3CB_BAF_556_200Rnd_T"};
+        magazines[] = {"UK3CB_BAF_556_200Rnd","UK3CB_BAF_556_200Rnd_T"};
     };
 
     // MMG
     class keko_W_BAF_L7A2: PrimaryWeapon
     {
         cfgName = "UK3CB_BAF_L7A2";
-        magazines[] = {"UK3CB_BAF_762_100Rnd_T"};
+        magazines[] = {"UK3CB_BAF_762_200Rnd","UK3CB_BAF_762_200Rnd_T"};
     };
 
 
