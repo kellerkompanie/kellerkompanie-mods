@@ -476,6 +476,7 @@ class FactionBase {
 #include "FactionUSMarines.hpp"
 #include "FactionUSBlackOpsTropic.hpp"
 #include "FactionIDAP.hpp"
+#include "FactionLDF.hpp"
 
 #include "FactionAlSirae.hpp"
 #include "FactionHAF.hpp"
