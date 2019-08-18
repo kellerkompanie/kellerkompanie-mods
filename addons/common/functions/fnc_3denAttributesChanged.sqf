@@ -112,12 +112,27 @@ switch(_sideRelations) do {
     };
 };
 
-
-
 // set garbage collection by default
 "Multiplayer" set3DENMissionAttribute ["minPlayerDistance", 50];
 
-if (_garbageCollectionCorpses == 1) then {
+private _doGarbageCollectionCorpses = false;
+private _doGarbageCollectionWrecks = false;
+if (typeName _garbageCollectionCorpses == "SCALAR") then {
+    if(_garbageCollectionCorpses == 1) then {
+        _doGarbageCollectionCorpses = true;
+    };
+} else {
+    _doGarbageCollectionCorpses = _garbageCollectionCorpses;
+};
+if (typeName _gargabeCollectionWrecks == "SCALAR") then {
+    if(_gargabeCollectionWrecks == 1) then {
+        _gargabeCollectionWrecks = true;
+    };
+} else {
+    _doGarbageCollectionWrecks = _gargabeCollectionWrecks;
+};
+
+if (_doGarbageCollectionCorpses) then {
     "Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 1];
     "Multiplayer" set3DENMissionAttribute ["CorpseLimit", 20];
     "Multiplayer" set3DENMissionAttribute ["CorpseRemovalMinTime", 300];
@@ -126,7 +141,7 @@ if (_garbageCollectionCorpses == 1) then {
     "Multiplayer" set3DENMissionAttribute ["CorpseManagerMode", 0];
 };
 
-if (_gargabeCollectionWrecks == 1) then {
+if (_doGarbageCollectionWrecks) then {
     "Multiplayer" set3DENMissionAttribute ["WreckManagerMode", 1];
     "Multiplayer" set3DENMissionAttribute ["WreckLimit", 10];
     "Multiplayer" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
