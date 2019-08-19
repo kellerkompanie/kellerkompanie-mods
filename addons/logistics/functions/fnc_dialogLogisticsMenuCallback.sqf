@@ -9,6 +9,7 @@ private _crateName = _arr select 0;
     params ["_pos", "_crateName"];
     private _crateObject = [_pos, _crateName] call FUNC(spawnCrate);
     [_crateObject, player] remoteExecCall ["disableCollisionWith", 0, _crateObject];
+    [player, _crateObject] call ace_dragging_fnc_startCarry;
 };
 
 closeDialog 1;
