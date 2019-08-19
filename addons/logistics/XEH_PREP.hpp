@@ -3,6 +3,7 @@ PREP(addConfigCrates);
 PREP(addDeleteCrateAction);
 PREP(addFuelConsumptionHandler);
 PREP(addLogisticsMenu);
+PREP(addLogisticsMenuAction);
 PREP(addVirtualHeliLogisticActions);
 PREP(addVirtualUAVLogisticActions);
 PREP(clearCargo);

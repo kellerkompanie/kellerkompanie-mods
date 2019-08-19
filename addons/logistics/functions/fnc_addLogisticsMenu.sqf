@@ -31,4 +31,6 @@ params ["_object"];
         // radius
         5
     ]
-] remoteExec ["addAction", 0, true];
+] remoteExec ["addAction", [0, -2] select isDedicated, true];
+
+[_object] remoteExec [QFUNC(addLogisticsMenuAction), [0, -2] select isDedicated, true];
