@@ -55,7 +55,7 @@ class CfgVehicles {
         function           = QFUNC(moduleSelectivePersistency3den);
     };
 
-    class GVAR(moduleAddPersistencyMenu): GVAR(moduleBase3den) {
+    class GVAR(moduleAddPersistencyMenu): GVAR(moduleBase) {
         displayName        = "Add Persistency Menu";
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleAddPersistencyMenu);
