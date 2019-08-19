@@ -101,4 +101,18 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 0;
     };
+
+    class Items_base_F;
+    class Land_CanisterFuel_F: Items_base_F {
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 0.5, 0};
+        ace_dragging_dragDirection = 0;
+
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 0.5, 1};
+        ace_dragging_carryDirection = 0;
+
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+    };
 };
