@@ -10,4 +10,9 @@ class CfgSounds {
         sound[] = {QPATHTOF(sounds\vending_machine.wav), 4, 1, 15};
         titles[] = {};
     };
+    class GVAR(spongebob) {
+        name = QGVAR(spongebob);
+        sound[] = {QPATHTOF(sounds\spongebob.ogg), 4, 1, 15};
+        titles[] = {};
+    };
 };
