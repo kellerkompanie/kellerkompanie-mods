@@ -18,7 +18,8 @@ class CfgPatches {
         requiredAddons[] = {
             "keko_common",
             "keko_loadout",
-            "ace_modules"
+            "ace_modules",
+            "ace_cargo"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
