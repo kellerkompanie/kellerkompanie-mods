@@ -10,7 +10,8 @@ class CfgPatches {
         requiredAddons[] = {
             "keko_main",
             "CBA_common",
-            "ACE_common"
+            "ACE_common",
+            "plp_containers"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
@@ -19,4 +20,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgSounds.hpp"
