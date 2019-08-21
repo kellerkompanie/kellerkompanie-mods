@@ -41,10 +41,11 @@ private _hasPrimaryWeapon = primaryWeapon _unit != "";
 private _hasSecondaryWeapon = handgunWeapon _unit != "";
 private _hasLauncherWeapon = secondaryWeapon _unit != "";
 
-_primaryMagazines = [_primaryMagazines] call FUNC(sortMagazinesByCount);
+
 
 if (_hasPrimaryWeapon) then {
     if (primaryWeapon _unit in GVAR(machineGuns)) then {
+        _primaryMagazines = [_primaryMagazines] call FUNC(sortMagazinesByCount);
         while {({_x == "keko_MGMag"} count items _unit) > 0} do {
             _unit removeItem "keko_MGMag";
             [_unit, _primaryMagazines select 0] call CBA_fnc_addItem;
