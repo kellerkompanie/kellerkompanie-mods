@@ -88,3 +88,5 @@ class CfgPatches {
 class CfgMissions {
     class MPMissions {};
 };
+
+#include "kekoGenericMagazines.hpp"

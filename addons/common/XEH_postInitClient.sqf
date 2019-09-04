@@ -76,7 +76,7 @@ player addEventHandler ["Fired", {
 
 
 // replace items in loadout, but postpone until settings are propagated
-[{player call FUNC(itemCheck); ["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;}, []] call CBA_fnc_execNextFrame;
+[{player call FUNC(replaceGenericItems); ["loadout", FUNC(replaceGenericItems)] call CBA_fnc_addPlayerEventHandler;}, []] call CBA_fnc_execNextFrame;
 
 // add action to allow group leader to change the name of his group
 private _action = [
