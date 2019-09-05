@@ -39,6 +39,8 @@
  };
 
  if (hasInterface) then {
+     player setVariable ["tf_unable_to_use_radio", false];
+
      [] spawn {
          playMusic "BackgroundTrack03_F_EPC";
          sleep 2;
