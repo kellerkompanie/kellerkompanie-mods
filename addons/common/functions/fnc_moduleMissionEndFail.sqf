@@ -39,6 +39,10 @@
  };
 
  if (hasInterface) then {
+     player setVariable ["tf_unable_to_use_radio", false];
+     call TFAR_fnc_onSwTangentReleased;
+     call TFAR_fnc_onLRTangentReleased;
+
      [] spawn {
          playMusic "BackgroundTrack03_F_EPC";
          sleep 2;
