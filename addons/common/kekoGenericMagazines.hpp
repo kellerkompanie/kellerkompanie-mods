@@ -1,4 +1,4 @@
-class CfgGenericMagazines {
+class kekoGenericMagazines {
     class PrimaryNormal {
         /* Vanilla */
         hgun_PDW2000_F = "30Rnd_9x21_Mag";
@@ -697,22 +697,22 @@ class CfgGenericMagazines {
         srifle_GM6_F = "5Rnd_127x108_Mag";
         srifle_GM6_camo_F = "5Rnd_127x108_Mag";
         arifle_TRG21_GL_F = "30Rnd_556x45_Stanag_Tracer_Yellow";
-        arifle_Katiba_F = "30Rnd_65x39_caseless_green";
-        arifle_Katiba_GL_F = "30Rnd_65x39_caseless_green";
-        arifle_Katiba_C_F = "30Rnd_65x39_caseless_green";
+        arifle_Katiba_F = "30Rnd_65x39_caseless_green_mag_Tracer";
+        arifle_Katiba_GL_F = "30Rnd_65x39_caseless_green_mag_Tracer";
+        arifle_Katiba_C_F = "30Rnd_65x39_caseless_green_mag_Tracer";
         srifle_LRR_F = "7Rnd_408_Mag";
         srifle_LRR_camo_F = "7Rnd_408_Mag";
         srifle_EBR_F = "20Rnd_762x51_Mag";
-        arifle_MX_F =  "30Rnd_65x39_caseless_mag";
-        arifle_MX_Black_F = "30Rnd_65x39_caseless_black_mag";
-        arifle_MX_GL_F = "30Rnd_65x39_caseless_mag";
-        arifle_MX_GL_Black_F = "30Rnd_65x39_caseless_black_mag";
-        arifle_MX_SW_F = "100Rnd_65x39_caseless_mag";
-        arifle_MX_SW_Black_F = "100Rnd_65x39_caseless_black_mag";
-        arifle_MXC_F = "30Rnd_65x39_caseless_mag";
-        arifle_MXC_Black_F = "30Rnd_65x39_caseless_black_mag";
-        arifle_MXM_F = "30Rnd_65x39_caseless_mag";
-        arifle_MXM_Black_F = "30Rnd_65x39_caseless_black_mag";
+        arifle_MX_F =  "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MX_Black_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MX_GL_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MX_GL_Black_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MX_SW_F = "100Rnd_65x39_caseless_mag_Tracer";
+        arifle_MX_SW_Black_F = "100Rnd_65x39_caseless_mag_Tracer";
+        arifle_MXC_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MXC_Black_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MXM_F = "30Rnd_65x39_caseless_mag_Tracer";
+        arifle_MXM_Black_F = "30Rnd_65x39_caseless_mag_Tracer";
         LMG_Zafir_F =  "150Rnd_762x54_Box";
         SMG_03C_black = "50Rnd_570x28_SMG_03";
         arifle_SDAR_F = "20Rnd_556x45_UW_mag";
@@ -1512,6 +1512,157 @@ class CfgGenericMagazines {
     };
 
     class UGL {
+        /* Vanilla */
+        arifle_Mk20_GL_plain_F = "1Rnd_HE_Grenade_shell";
+        arifle_Mk20_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_TRG21_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_Katiba_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_MX_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_MX_GL_Black_F = "1Rnd_HE_Grenade_shell";
 
+        /* Apex DLC */
+        arifle_AK12_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_SPAR_01_GL_blk_F = "1Rnd_HE_Grenade_shell";
+        arifle_SPAR_01_GL_khk_F = "1Rnd_HE_Grenade_shell";
+        arifle_SPAR_01_GL_snd_F = "1Rnd_HE_Grenade_shell";
+        arifle_MX_GL_khk_F = "1Rnd_HE_Grenade_shell";
+        arifle_CTAR_GL_blk_F = "1Rnd_HE_Grenade_shell";
+        arifle_CTAR_GL_ghex_F = "1Rnd_HE_Grenade_shell";
+        arifle_CTAR_GL_hex_F = "1Rnd_HE_Grenade_shell";
+
+        /* After East Wind */
+        NAA_arifle_Mk20_GL_alpat_ard1 = "1Rnd_HE_Grenade_shell";
+        NAA_arifle_Mk20_GL_black_F = "1Rnd_HE_Grenade_shell";
+        GUR_arifle_MX_GL_blkANDkhk_F = "1Rnd_HE_Grenade_shell";
+
+        /* SMA */
+        SMA_ACRREMGL_N = "1Rnd_HE_Grenade_shell";
+        SMA_ACRREMGL_B = "1Rnd_HE_Grenade_shell";
+        SMA_ACRREMGL = "1Rnd_HE_Grenade_shell";
+        SMA_AUG_EGLM = "1Rnd_HE_Grenade_shell";
+        SMA_AUG_EGLM_Olive = "1Rnd_HE_Grenade_shell";
+        SMA_AUG_EGLM_tan = "1Rnd_HE_Grenade_shell";
+        SMA_HK416GL = "1Rnd_HE_Grenade_shell";
+        SMA_HK416_GL_ODPAINTED = "1Rnd_HE_Grenade_shell";
+        SMA_HK416GLOD = "1Rnd_HE_Grenade_shell";
+        SMA_HK416GLCQB_ODP = "1Rnd_HE_Grenade_shell";
+        SMA_HK416GLCQB = "1Rnd_HE_Grenade_shell";
+        SMA_HK416GLCQB_B = "1Rnd_HE_Grenade_shell";
+        SMA_HK416CQBGLOD = "1Rnd_HE_Grenade_shell";
+        SMA_ACRGL_B = "1Rnd_HE_Grenade_shell";
+        SMA_ACRGL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18TANBLK_GL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18BLK_GL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18ODBLK_GL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18OD_GL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18TANBLK_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18BLK_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18ODBLK_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18OD_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18TAN_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18_GL_SM = "1Rnd_HE_Grenade_shell";
+        SMA_MK18TAN_GL = "1Rnd_HE_Grenade_shell";
+        SMA_MK18_GL = "1Rnd_HE_Grenade_shell";
+        SMA_Mk17_EGLM = "1Rnd_HE_Grenade_shell";
+        SMA_MK17_EGLM_black = "1Rnd_HE_Grenade_shell";
+        SMA_MK17_EGLM_Green = "1Rnd_HE_Grenade_shell";
+        SMA_Mk16_EGLM = "1Rnd_HE_Grenade_shell";
+        SMA_MK16_EGLM_black = "1Rnd_HE_Grenade_shell";
+        SMA_MK16_EGLM_Green = "1Rnd_HE_Grenade_shell";
+        SMA_ACRREMCQBGL_B = "1Rnd_HE_Grenade_shell";
+        SMA_ACRREMCQBGL = "1Rnd_HE_Grenade_shell";
+
+        /* RHS AFRF */
+        rhs_weap_ak103_gp25 = "rhs_VOG25P";
+        rhs_weap_ak103_gp25_npz = "rhs_VOG25P";
+        rhs_weap_ak74_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74m_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74m_gp25_npz = "rhs_VOG25P";
+        rhs_weap_ak74m_fullplum_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74m_fullplum_gp25_npz = "rhs_VOG25P";
+        rhs_weap_ak74mr_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74n_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74n_gp25_npz = "rhs_VOG25P";
+        rhs_weap_ak74n_2_gp25 = "rhs_VOG25P";
+        rhs_weap_ak74n_2_gp25_npz = "rhs_VOG25P";
+        rhs_weap_akm_gp25 = "rhs_VOG25P";
+        rhs_weap_akmn_gp25 = "rhs_VOG25P";
+        rhs_weap_akmn_gp25_npz = "rhs_VOG25P";
+        rhs_weap_akms_gp25 = "rhs_VOG25P";
+        rhs_weap_aks74_gp25 = "rhs_VOG25P";
+        rhs_weap_aks74n_gp25 = "rhs_VOG25P";
+        rhs_weap_aks74n_gp25_npz = "rhs_VOG25P";
+
+        /* Contact DLC */
+        arifle_AK12_GL_arid_F = "1Rnd_HE_Grenade_shell";
+        arifle_AK12_GL_lush_F = "1Rnd_HE_Grenade_shell";
+        arifle_MSBS65_GL_F = "1Rnd_HE_Grenade_shell";
+        arifle_MSBS65_GL_black_F = "1Rnd_HE_Grenade_shell";
+        arifle_MSBS65_GL_camo_F = "1Rnd_HE_Grenade_shell";
+        arifle_MSBS65_GL_sand_F = "1Rnd_HE_Grenade_shell";
+
+        /* FSG */
+        fsg_weap_ak74m_gp25 = "rhs_VOG25P";
+
+        /* Gustavo's M16 */
+        gst_m16a2_gl = "1Rnd_HE_Grenade_shell";
+        gst_m16a3_gl = "1Rnd_HE_Grenade_shell";
+
+        /* RHS USAF */
+        rhs_weap_hk416d10_m320 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_hk416d145_m320 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m16a4_carryhandle_M203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m16a4_imod_M203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4_carryhandle_m203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4_carryhandle_m203S = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4_m203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4_m203S = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4_m320 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_carryhandle_m203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_carryhandle_m203S = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_blockII_M203_bk = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_blockII_M203_d = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_blockII_M203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_blockII_M203_wd = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_m203s_d = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_m203 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_m203s = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_m320 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m4a1_m203s_wd = "1Rnd_HE_Grenade_shell";
+        rhs_weap_mk18_m320 = "1Rnd_HE_Grenade_shell";
+
+        /* RHS GREF */
+        rhs_weap_vhsd2_bg = "1Rnd_HE_Grenade_shell";
+        rhs_weap_vhsd2_bg_ct15x = "1Rnd_HE_Grenade_shell";
+
+        /* RHS SAF */
+        rhs_weap_g36kv_ag36 = "1Rnd_HE_Grenade_shell";
+        rhs_weap_m21a_pbg40 = "rhs_VOG25P";
+        rhs_weap_m21a_pr_pbg40 = "rhs_VOG25P";
+        rhs_weap_m70b3n_pbg40 = "rhs_VOG25P";
+
+        /* BW Mod */
+        BWA3_G27_AG40 = "1Rnd_HE_Grenade_shell";
+        BWA3_G27_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A1_AG40 = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A1_AG40_green = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A1_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A2_AG40 = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A2_AG40_green = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A2_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A3_AG40 = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A3_AG40_green = "1Rnd_HE_Grenade_shell";
+        BWA3_G36A3_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G38_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G38K_AG40 = "1Rnd_HE_Grenade_shell";
+        BWA3_G38K_AG40_tan = "1Rnd_HE_Grenade_shell";
+
+        /* BW Add */
+        BWAdd_G27_AG = "1Rnd_HE_Grenade_shell";
+        BWAdd_G36A1_AG40 = "1Rnd_HE_Grenade_shell";
+        BWAdd_G36A2_AG40 = "1Rnd_HE_Grenade_shell";
+        BWAdd_G36_AG = "1Rnd_HE_Grenade_shell";
+        BWAdd_G38_AG = "1Rnd_HE_Grenade_shell";
+        BWAdd_G38K_AG = "1Rnd_HE_Grenade_shell";
     };
 };
