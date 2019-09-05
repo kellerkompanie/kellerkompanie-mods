@@ -40,8 +40,11 @@
 
  if (hasInterface) then {
      player setVariable ["tf_unable_to_use_radio", false];
+<<<<<<< HEAD
      call TFAR_fnc_onSwTangentReleased;
      call TFAR_fnc_onLRTangentReleased;
+=======
+>>>>>>> 44702d193c61d886190bdb3f1472bd207796b087
 
      [] spawn {
          playMusic "BackgroundTrack03_F_EPC";
