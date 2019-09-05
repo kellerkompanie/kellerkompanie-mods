@@ -53,7 +53,7 @@ if (_primaryWeapon != "") then {
     };
 };
 
-if (_handgunWeapon != "") then {
+if (_secondaryWeapon != "") then {
     private _mag = getText(configFile >> "kekoGenericMagazines" >> "Pistol" >> _secondaryWeapon);
 
     while {"keko_PistolMag" in items _unit} do {
@@ -62,10 +62,12 @@ if (_handgunWeapon != "") then {
     };
 };
 
-if (_secondaryWeapon != "") then {
+if (_launcherWeapon != "") then {
     if (!(secondaryWeapon _unit in ["keko_DisposableRocketLauncher", "keko_AntiTankLauncher", "keko_AntiAirLauncher"])) then {
         // unit has a real launcher, replace the dummy missile
         private _launcherMag = getText(configFile >> "kekoGenericMagazines" >> "Launcher" >> _launcherWeapon);
+
+        INFO_1("_launcherMag %1", _launcherMag);
 
         if (_launcherWeapon in GVAR(atLaunchers)) then {
             while {"keko_AntiTankMag" in items _unit} do {
