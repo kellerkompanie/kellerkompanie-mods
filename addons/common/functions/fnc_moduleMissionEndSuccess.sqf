@@ -40,6 +40,10 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
+    player setVariable ["tf_unable_to_use_radio", false];
+    call TFAR_fnc_onSwTangentReleased;
+    call TFAR_fnc_onLRTangentReleased;
+
     [] spawn {
         playMusic "LeadTrack01_F_Tank";
         sleep 2;
