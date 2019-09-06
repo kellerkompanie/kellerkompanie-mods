@@ -38,25 +38,25 @@ class kekoGenericMagazines {
         srifle_DMR_01_Fv = "10Rnd_762x54_Mag";
 
         /* Marksman DLC */
-        srifle_DMR_04_F = "10Rnd_127x54_Mag"
-        srifle_DMR_04_Tan_F = "10Rnd_127x54_Mag"
-        srifle_DMR_05_blk_F = "10Rnd_93x64_DMR_05_Mag"
-        srifle_DMR_05_hex_F = "10Rnd_93x64_DMR_05_Mag"
-        srifle_DMR_05_tan_f = "10Rnd_93x64_DMR_05_Mag"
-        MMG_01_hex_F = "150Rnd_93x64_Mag"
-        MMG_01_tan_F = "150Rnd_93x64_Mag"
-        MMG_02_black_F = "130Rnd_338_Mag"
-        MMG_02_camo_F = "130Rnd_338_Mag"
-        MMG_02_sand_F = "130Rnd_338_Mag"
-        srifle_DMR_06_camo_F = "20Rnd_762x51_Mag"
-        srifle_DMR_02_F = "10Rnd_338_Mag"
-        srifle_DMR_02_camo_F = "10Rnd_338_Mag"
-        srifle_DMR_02_sniper_F = "10Rnd_338_Mag"
-        srifle_DMR_03_F = "20Rnd_762x51_Mag"
-        srifle_DMR_03_multicam_F = "20Rnd_762x51_Mag"
-        srifle_DMR_03_khaki_F = "20Rnd_762x51_Mag"
-        srifle_DMR_03_tan_F = "20Rnd_762x51_Mag"
-        srifle_DMR_03_woodland_F = "20Rnd_762x51_Mag"
+        srifle_DMR_04_F = "10Rnd_127x54_Mag";
+        srifle_DMR_04_Tan_F = "10Rnd_127x54_Mag";
+        srifle_DMR_05_blk_F = "10Rnd_93x64_DMR_05_Mag";
+        srifle_DMR_05_hex_F = "10Rnd_93x64_DMR_05_Mag";
+        srifle_DMR_05_tan_f = "10Rnd_93x64_DMR_05_Mag";
+        MMG_01_hex_F = "150Rnd_93x64_Mag";
+        MMG_01_tan_F = "150Rnd_93x64_Mag";
+        MMG_02_black_F = "130Rnd_338_Mag";
+        MMG_02_camo_F = "130Rnd_338_Mag";
+        MMG_02_sand_F = "130Rnd_338_Mag";
+        srifle_DMR_06_camo_F = "20Rnd_762x51_Mag";
+        srifle_DMR_02_F = "10Rnd_338_Mag";
+        srifle_DMR_02_camo_F = "10Rnd_338_Mag";
+        srifle_DMR_02_sniper_F = "10Rnd_338_Mag";
+        srifle_DMR_03_F = "20Rnd_762x51_Mag";
+        srifle_DMR_03_multicam_F = "20Rnd_762x51_Mag";
+        srifle_DMR_03_khaki_F = "20Rnd_762x51_Mag";
+        srifle_DMR_03_tan_F = "20Rnd_762x51_Mag";
+        srifle_DMR_03_woodland_F = "20Rnd_762x51_Mag";
 
         /* Apex DLC */
         arifle_AK12_F = "30Rnd_762x39_AK12_Mag_F";
