@@ -45,7 +45,18 @@ for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
     } foreach _possiblecontainers;
 };
 
+
 private _weaponHolders = nearestObjects [_unit, ["WeaponHolderSimulated"], 5];
 {
     _x setDamage 1;
 } forEach _weaponHolders;
+
+_unit setVariable [QGVAR(weaponHolders), _weaponHolders];
+_unit addEventHandler ["Deleted", {
+	params ["_unit"];
+
+    private _weaponHolders = _unit getVariable [QGVAR(weaponHolders), []];
+    {
+        deleteVehicle _x;
+    } forEach _weaponHolders;
+}];
