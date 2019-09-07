@@ -195,6 +195,69 @@ for [{_i = 0}, {_i < _smokeGreenMagCount}, {_i = _i + 1}] do {
 
 
 
+
+
+private _defaultSecondaryMagCount = getNumber(_secondaryMagazinesCfg >> "default");
+
+if(count _secondary != 0) then {
+    private _randomSecondaryEntry = selectRandom _secondary;
+    private _secondaryCfg = _weaponCfg >> _randomSecondaryEntry;
+
+    private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
+    private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
+    private _secondary_rails = getArray (_secondaryCfg >> "rails");
+    private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
+    private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
+    private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
+
+    private _secondaryMagCount = _defaultSecondaryMagCount;
+    if(isNumber (_secondaryMagazinesCfg >> _role) ) then {
+        _secondaryMagCount = getNumber (_secondaryMagazinesCfg  >> _role);
+    };
+
+    if(_secondaryMagCount > 0) then {
+        _secondaryMagCount = _secondaryMagCount - 1;
+        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
+    };
+
+    _player addWeapon _secondary_cfgName;
+
+    if(count _secondary_scopes != 0 && GVAR(giveScope)) then {
+        private _item = selectRandom _secondary_scopes;
+        _player addHandgunItem _item;
+    };
+
+    if(count _secondary_rails != 0) then {
+        private _item = selectRandom _secondary_rails;
+        _player addHandgunItem _item;
+    };
+
+    if(count _secondary_bipods != 0) then {
+        private _item = selectRandom _secondary_bipods;
+        _player addHandgunItem _item;
+    };
+
+    if (GVAR(giveSilencer)) then {
+        if(count _secondary_silencers != 0) then {
+            private _item = selectRandom _secondary_silencers;
+            _player addHandgunItem _item;
+        };
+    };
+
+    if(count _secondary_magazines != 0) then {
+        private _item = _secondary_magazines select 0;
+        [_player, _item] call CBA_fnc_addMagazine;
+    };
+
+    private _i = 0;
+    for [{_i = 0}, {_i < _secondaryMagCount}, {_i = _i + 1}] do {
+        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
+    };
+};
+
+
+
+
 private _defaultPrimaryMagCount = getNumber(_primaryMagazinesCfg >> "default");
 private _defaultUglMagCount = getNumber(_uglMagazinesCfg >> "default");
 
@@ -274,63 +337,7 @@ if(count _primary != 0) then {
     };
 };
 
-private _defaultSecondaryMagCount = getNumber(_secondaryMagazinesCfg >> "default");
 
-if(count _secondary != 0) then {
-    private _randomSecondaryEntry = selectRandom _secondary;
-    private _secondaryCfg = _weaponCfg >> _randomSecondaryEntry;
-
-    private _secondary_cfgName = getText (_secondaryCfg >> "cfgName");
-    private _secondary_scopes = getArray (_secondaryCfg >> "scopes");
-    private _secondary_rails = getArray (_secondaryCfg >> "rails");
-    private _secondary_bipods = getArray (_secondaryCfg >> "bipods");
-    private _secondary_silencers = getArray (_secondaryCfg >> "silencers");
-    private _secondary_magazines = getArray (_secondaryCfg >> "magazines");
-
-    private _secondaryMagCount = _defaultSecondaryMagCount;
-    if(isNumber (_secondaryMagazinesCfg >> _role) ) then {
-        _secondaryMagCount = getNumber (_secondaryMagazinesCfg  >> _role);
-    };
-
-    if(_secondaryMagCount > 0) then {
-        _secondaryMagCount = _secondaryMagCount - 1;
-        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
-    };
-
-    _player addWeapon _secondary_cfgName;
-
-    if(count _secondary_scopes != 0 && GVAR(giveScope)) then {
-        private _item = selectRandom _secondary_scopes;
-        _player addHandgunItem _item;
-    };
-
-    if(count _secondary_rails != 0) then {
-        private _item = selectRandom _secondary_rails;
-        _player addHandgunItem _item;
-    };
-
-    if(count _secondary_bipods != 0) then {
-        private _item = selectRandom _secondary_bipods;
-        _player addHandgunItem _item;
-    };
-
-    if (GVAR(giveSilencer)) then {
-        if(count _secondary_silencers != 0) then {
-            private _item = selectRandom _secondary_silencers;
-            _player addHandgunItem _item;
-        };
-    };
-
-    if(count _secondary_magazines != 0) then {
-        private _item = _secondary_magazines select 0;
-        [_player, _item] call CBA_fnc_addMagazine;
-    };
-
-    private _i = 0;
-    for [{_i = 0}, {_i < _secondaryMagCount}, {_i = _i + 1}] do {
-        [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
-    };
-};
 
 private _defaultGrenadeMagCount = getNumber(_grenadeMagazinesCfg >> "default");
 
