@@ -53,7 +53,7 @@ private _weaponHolders = nearestObjects [_unit, ["WeaponHolderSimulated"], 5];
 
 _unit setVariable [QGVAR(weaponHolders), _weaponHolders];
 _unit addEventHandler ["Deleted", {
-	params ["_unit"];
+    params ["_unit"];
 
     private _weaponHolders = _unit getVariable [QGVAR(weaponHolders), []];
     {
