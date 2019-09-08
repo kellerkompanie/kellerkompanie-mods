@@ -1,2 +1,0 @@
-PREP(isAllowedNumberOfItems);
-PREP(processNearHolders);
