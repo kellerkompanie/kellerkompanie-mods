@@ -1,5 +1,5 @@
 #define COMPONENT gunks_vests
-#define COMPONENT_BEAUTIFIED Gunk's Vests
+#define COMPONENT_BEAUTIFIED Gunks Vests
 #include "\x\keko\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
