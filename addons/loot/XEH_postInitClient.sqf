@@ -1,4 +1,3 @@
-// original version by Bear https://steamcommunity.com/sharedfiles/filedetails/?id=1439779114
 #include "script_component.hpp"
 
 private _action = [
@@ -15,7 +14,7 @@ private _action = [
         };
     },
     {
-        (_target isKindOf "WeaponHolderSimulated" || _target isKindOf "WeaponHolder" || !alive _target || _target isKindOf "ReammoBox_F") &&
+        (_target isKindOf "WeaponHolderSimulated" || _target isKindOf "WeaponHolder" || _target isKindOf "GroundWeaponHolder" || !alive _target || _target isKindOf "ReammoBox_F") &&
         {!(_target getVariable [QGVAR(looter), false])} &&
         {[_player, _target] call ace_common_fnc_canInteractWith} &&
         {
@@ -39,17 +38,15 @@ private _action = [
 ] call ace_interact_menu_fnc_createAction;
 
 ["CAManBase", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+["GroundWeaponHolder", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["WeaponHolder", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["ReammoBox_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
+player addEventHandler [ "Put", {
+    params[ "_unit", "_container" ];
 
-if (isServer && GVAR(preventCorpseLooting)) then {
-    [missionNamespace, "EntityKilled", {
-        params ["_unit"];
-
-        if (_unit isKindOf "CAManBase") then {
-            [{(_this select 0) call FUNC(onEntityKilled)}, [_this], 5] call CBA_fnc_waitAndExecute;
-        };
-    }, diag_frameno + 300] call CBA_fnc_addBISEventHandler;
-};
+    if( typeOf _container isEqualTo "GroundWeaponHolder" || typeOf _container isEqualTo "WeaponHolderSimulated" ) then {
+        _container call FUNC(initObject);
+    };
+}];
