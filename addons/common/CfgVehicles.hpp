@@ -387,4 +387,11 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_dance.paa);
         curatorCanAttach   = 1;
     };
+    class GVAR(moduleResurrect): GVAR(moduleBase) {
+        displayName        = "Resurrect AI";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleResurrect);
+        icon = QPATHTOF(ui\icon_resurrect.paa);
+        curatorCanAttach   = 1;
+    };
 };

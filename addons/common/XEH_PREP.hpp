@@ -28,6 +28,7 @@ PREP(moduleMissionEndSuccess);
 PREP(moduleRemoveAllActions);
 PREP(moduleRespawnPosition);
 PREP(moduleRespawnPosition3den);
+PREP(moduleResurrect);
 PREP(moduleUnflipVehicle);
 PREP(replaceGenericItems);
 PREP(replaceString);

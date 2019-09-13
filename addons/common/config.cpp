@@ -23,6 +23,7 @@ class CfgPatches {
             QGVAR(moduleUnflipVehicle),
             QGVAR(moduleMakeSpectator),
             QGVAR(moduleDance),
+            QGVAR(moduleResurrect),
 
             keko_RifleMagItem,
             keko_RifleMagTracerItem,
