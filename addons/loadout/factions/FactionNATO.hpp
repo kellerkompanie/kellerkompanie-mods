@@ -51,9 +51,7 @@ class FactionNato: FactionBase {
             {2,"SmokeShellYellow"}
         };
         UAVOperator[] = {
-            {2,"ACE_UAVBattery"},
-            {1,"ACE_HuntIR_monitor"},
-            {8,"ACE_HuntIR_M203"}
+            {2,"ACE_UAVBattery"}
         };
         HeliPilot[] = {
             {1, "ACE_microDAGR"},
@@ -84,21 +82,7 @@ class FactionNato: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        Sergeant[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        SQL[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        JTAC[] = {
-            {4, Laserbatteries}
-        };
+        JTAC[] = { {4, Laserbatteries} };
     };
 
     class helmet: helmet {
@@ -142,12 +126,12 @@ class FactionNato: FactionBase {
             keko_W_A3_MX_BLACK
         };
         Lead[] = {
-            keko_W_A3_MX_GL_HUNTIR,
-            keko_W_A3_MX_GL_BLACK_HUNTIR
+            keko_W_A3_MX_GL,
+            keko_W_A3_MX_GL_BLACK
         };
         SQL[] = {
-            keko_W_A3_MX_GL_HUNTIR,
-            keko_W_A3_MX_GL_BLACK_HUNTIR
+            keko_W_A3_MX_GL,
+            keko_W_A3_MX_GL_BLACK
         };
         FTL[] = {
             keko_W_A3_MX_GL,
@@ -170,12 +154,12 @@ class FactionNato: FactionBase {
             keko_W_A3_MXM_BLACK
         };
         JTAC[] = {
-            keko_W_A3_MX_GL_HUNTIR,
-            keko_W_A3_MX_GL_BLACK_HUNTIR
+            keko_W_A3_MX_GL,
+            keko_W_A3_MX_GL_BLACK
         };
         UAVOperator[] = {
-            keko_W_A3_MX_GL_HUNTIR,
-            keko_W_A3_MX_GL_BLACK_HUNTIR
+            keko_W_A3_MX_GL,
+            keko_W_A3_MX_GL_BLACK
         };
     };
 

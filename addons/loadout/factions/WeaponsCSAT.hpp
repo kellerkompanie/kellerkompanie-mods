@@ -14,9 +14,6 @@ class weapons: weapons {
         cfgName = "arifle_Katiba_GL_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_KATIBA_GL_HUNTIR: keko_W_A3_KATIBA_GL    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_A3_DMR: PrimaryWeapon {
         cfgName = "srifle_DMR_01_F";
         scopes[] = {"optic_DMS"};

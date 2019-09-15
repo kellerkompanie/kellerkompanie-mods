@@ -48,8 +48,6 @@ class FactionBlackorderRedBerets: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         JTAC[] = { { 4, "Laserbatteries" } };
     };
 
@@ -65,16 +63,16 @@ class FactionBlackorderRedBerets: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_Tavor };
-        Lead[] = { keko_W_MK18_M320_HUNTIR };
-        Sergeant[] = { keko_W_MK18_M320_HUNTIR };
-        SQL[] = { keko_W_MK18_M320_HUNTIR };
+        Lead[] = { keko_W_MK18_M320 };
+        Sergeant[] = { keko_W_MK18_M320 };
+        SQL[] = { keko_W_MK18_M320 };
         FTL[] = { keko_W_MK18_M320 };
         Grenadier[] = { keko_W_MK18_M320 };
         LMG[] = { keko_W_M249 };
         MMG[] = { keko_W_MG42 };
         Marksman[] = { keko_W_SIG556 };
-        JTAC[] = { keko_W_MK18_M320_HUNTIR };
-        UAVOperator[] = { keko_W_MK18_M320_HUNTIR };
+        JTAC[] = { keko_W_MK18_M320 };
+        UAVOperator[] = { keko_W_MK18_M320 };
     };
 
     class secondary: secondary {

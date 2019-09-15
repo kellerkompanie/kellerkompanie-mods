@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+params ["_player"];
+
 // give map and compass
 if (GVAR(giveMap)) then {
     player linkItem "ItemMap";
@@ -81,7 +83,7 @@ switch(GVAR(giveNvg)) do {
     };
 };
 
-if(GVAR(giveGps) > 0) then {
+if (GVAR(giveGps) > 0) then {
     switch (GVAR(giveGps)) do {
         case 1: {
             //GPS
@@ -101,6 +103,39 @@ if(GVAR(giveGps) > 0) then {
             player linkItem "itemAndroid";
         };
         default {};
+    };
+};
+
+if (GVAR(giveIRStrobe)) then {
+    [player, "ACE_IR_Strobe_Item", true] call CBA_fnc_addItem;
+};
+
+if (GVAR(giveHuntIR)) then {
+    // add for Lead, Sergeant, SQL and UAV operator only
+    private _role = _player getVariable [QGVAR(role), ""];
+    private _giveHuntIR = false;
+    switch (_role) do {
+        case "Lead": {
+            _giveHuntIR = true;
+        };
+        case "Sergeant": {
+            _giveHuntIR = true;
+        };
+        case "SQL": {
+            _giveHuntIR = true;
+        };
+        case "UAVOperator": {
+            _giveHuntIR = true;
+        };
+        default {};
+    };
+
+    private _primaryWeapon = primaryWeapon _player;
+    if !(isNil "_primaryWeapon") then {
+        if ("ACE_HuntIR_M203" in ([_primaryWeapon] call CBA_fnc_compatibleMagazines)) then {
+            for "_i" from 1 to 5 do { [_player, "ACE_HuntIR_M203", -1, true] call CBA_fnc_addMagazine; };
+            [_player, "ACE_HuntIR_monitor", true] call CBA_fnc_addItem;
+        };
     };
 };
 

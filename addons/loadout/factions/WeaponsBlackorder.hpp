@@ -16,11 +16,6 @@ class weapons: weapons {
         uglMagazines[] = {"rhs_mag_M441_HE"};
     };
 
-    class keko_W_MK18_M320_HUNTIR: keko_W_MK18_M320
-    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
-
     class keko_W_SIG556: PrimaryWeapon
     {
         cfgName = "srifle_DMR_03_blackorder_F";

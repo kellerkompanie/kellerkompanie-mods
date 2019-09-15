@@ -24,16 +24,6 @@ class weapons: weapons {
         cfgName = "BWA3_G36A2_AG40_tan";
     };
 
-    class keko_W_G36_GL_HuntIR: keko_W_G36
-    {
-        cfgName = "BWA3_G36A2_AG40";
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
-    class keko_W_G36_GL_HuntIR_D: keko_W_G36_GL_HuntIR
-    {
-        cfgName = "BWA3_G36A2_AG40_tan";
-    };
-
     class keko_W_G36_GL_JTAC: keko_W_G36
     {
         cfgName = "BWA3_G36A2_AG40";

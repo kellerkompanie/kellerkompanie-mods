@@ -133,7 +133,11 @@ class FactionSpecOpsTropic: FactionBase {
                 keko_HK416_GL_PaintedOD,
                 keko_HK416_GL_CustomOD
             };
-        UAVOperator[] = { keko_W_A3_MX_GL_HUNTIR, keko_W_A3_MX_GL_BLACK_HUNTIR };
+        UAVOperator[] = {
+                keko_HK416_GL,
+                keko_HK416_GL_PaintedOD,
+                keko_HK416_GL_CustomOD
+            };
     };
 
     class secondary: secondary {

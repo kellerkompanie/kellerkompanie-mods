@@ -20,9 +20,6 @@ class weapons: weapons {
         cfgName = "NAA_arifle_Mk20_GL_black_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_Mk20_GL_HuntIR: keko_W_A3_Mk20_GL    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
 
     // Marksman

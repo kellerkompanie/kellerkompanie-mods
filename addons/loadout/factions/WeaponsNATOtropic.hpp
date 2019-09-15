@@ -20,10 +20,6 @@ class weapons: weapons {
         cfgName = "arifle_MX_GL_khk_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_MX_GL_TROPIC_HUNTIR: keko_W_A3_MX_GL_TROPIC {
-        cfgName = "arifle_MX_GL_khk_F";
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
     // Marksman
     class keko_W_A3_MXM_TROPIC: keko_W_A3_MX_TROPIC

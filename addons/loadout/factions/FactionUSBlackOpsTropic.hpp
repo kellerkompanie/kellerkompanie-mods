@@ -164,11 +164,6 @@ class FactionUSBlackOpsTropic: FactionBase {
 
     class backpackInventory: backpackInventory {
         Default[] = {  };
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Lead416[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL416[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         RiflemanATGustav[] = { { 1, "MRAWS_HEAT_F" } };
         RiflemanATGustav416[] = { { 1, "MRAWS_HEAT_F" } };
         JTAC[] = { { 4, "Laserbatteries" } };
@@ -201,10 +196,10 @@ class FactionUSBlackOpsTropic: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_A3_P90, keko_W_A3_P90_TROPIC };
-        Lead[] = { keko_W_A3_MX_GL_BLACK_HUNTIR, keko_W_A3_MX_GL_TROPIC_HUNTIR };
-        Lead416[] = { keko_W_A3_HK416_GL_HUNTIR, keko_W_A3_HK416_GL_TROPIC_HUNTIR };
-        SQL[] = { keko_W_A3_MX_GL_BLACK_HUNTIR, keko_W_A3_MX_GL_TROPIC_HUNTIR };
-        SQL416[] = { keko_W_A3_HK416_GL_HUNTIR, keko_W_A3_HK416_GL_TROPIC_HUNTIR };
+        Lead[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
+        Lead416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
+        SQL[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
+        SQL416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
         FTL[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
         FTL416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
         Grenadier[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
@@ -216,10 +211,10 @@ class FactionUSBlackOpsTropic: FactionBase {
         MMGMinimi[] = { keko_W_A3_MINIMI };
         Marksman[] = { keko_W_A3_MXM_BLACK, keko_W_A3_MXM_TROPIC };
         Marksman417[] = { keko_W_A3_HK417, keko_W_A3_HK417_TROPIC };
-        JTAC[] = { keko_W_A3_MX_GL_BLACK_HUNTIR, keko_W_A3_MX_GL_TROPIC_HUNTIR };
-        JTAC416[] = { keko_W_A3_HK416_GL_HUNTIR, keko_W_A3_HK416_GL_TROPIC_HUNTIR };
-        UAVOperator[] = { keko_W_A3_MX_GL_BLACK_HUNTIR, keko_W_A3_MX_GL_TROPIC_HUNTIR };
-        UAVOperator416[] = { keko_W_A3_HK416_GL_HUNTIR, keko_W_A3_HK416_GL_TROPIC_HUNTIR };
+        JTAC[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
+        JTAC416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
+        UAVOperator[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
+        UAVOperator416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
     };
 
     class secondary: secondary {

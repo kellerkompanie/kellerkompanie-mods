@@ -21,9 +21,6 @@ class weapons: weapons {
         cfgName = "arifle_TRG21_GL_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_CTAR_GL_HuntIR: keko_W_A3_CTAR_GL    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
 
     // Marksman

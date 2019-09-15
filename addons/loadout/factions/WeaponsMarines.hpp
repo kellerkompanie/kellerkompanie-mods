@@ -23,16 +23,10 @@ class weapons: weapons {
         cfgName = "rhs_weap_m16a4_carryhandle_M203";
         uglMagazines[] = {"rhs_mag_M441_HE"};
     };
-    class keko_W_RHS_M16A4_GL_HUNTIR: keko_W_RHS_M16A4_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
     class keko_W_RHS_M4A1_GL: keko_W_RHS_M4A1 {
         cfgName = "rhs_weap_m4a1_carryhandle_m203";
         uglMagazines[] = {"rhs_mag_M441_HE"};
-    };
-    class keko_W_RHS_M4A1_GL_HUNTIR: keko_W_RHS_M4A1_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
     };
 
     // Marksman

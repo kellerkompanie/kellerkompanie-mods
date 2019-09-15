@@ -11,9 +11,6 @@ class weapons: weapons {
         cfgName = "arifle_Mk20_GL_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_F2000_UGL_HUNTIR: keko_W_A3_F2000_UGL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_A3_F2000_SHORT: keko_W_A3_F2000 {
         cfgName = "arifle_Mk20C_F";
     };

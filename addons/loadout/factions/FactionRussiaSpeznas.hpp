@@ -59,9 +59,6 @@ class FactionRussiaSpeznas: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         JTAC[] = { { 4, "Laserbatteries" } };
     };
 

@@ -12,9 +12,6 @@ class weapons: weapons {
         cfgName = "arifle_MSBS65_GL_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_PrometOlive_GL_HuntIR: keko_W_PrometOlive_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
     // LMG
     class keko_W_Mk200: PrimaryWeapon {

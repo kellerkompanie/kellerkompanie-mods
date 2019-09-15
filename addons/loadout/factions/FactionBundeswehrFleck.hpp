@@ -79,9 +79,6 @@ class FactionBundeswehrFleck: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         JTAC[] = { { 4, "Laserbatteries" } };
     };
 
@@ -104,15 +101,15 @@ class FactionBundeswehrFleck: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_G36 };
-        Lead[] = { keko_W_G36_GL_HuntIR };
-        SQL[] = { keko_W_G36_GL_HuntIR };
+        Lead[] = { keko_W_G36_GL };
+        SQL[] = { keko_W_G36_GL };
         FTL[] = { keko_W_G36_GL };
         Grenadier[] = { keko_W_G36_GL };
         LMG[] = { keko_W_MG4 };
         MMG[] = { keko_W_MG3 };
         Marksman[] = { keko_W_G28 };
         JTAC[] = { keko_W_G36_GL_JTAC };
-        UAVOperator[] = { keko_W_G36_GL_HuntIR };
+        UAVOperator[] = { keko_W_G36_GL };
     };
 
     class secondary: secondary {

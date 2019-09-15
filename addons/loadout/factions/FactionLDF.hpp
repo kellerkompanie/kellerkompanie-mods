@@ -51,21 +51,7 @@ class FactionLDF: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        Sergeant[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        SQL[] = {
-            {1, ACE_HuntIR_monitor},
-            {4, ACE_HuntIR_M203}
-        };
-        JTAC[] = {
-            {4, Laserbatteries}
-        };
+        JTAC[] = { {4, Laserbatteries} };
     };
 
     class helmet: helmet {
@@ -85,15 +71,15 @@ class FactionLDF: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_PrometOlive };
-        Lead[] = { keko_W_PrometOlive_GL_HuntIR };
-        SQL[] = { keko_W_PrometOlive_GL_HuntIR };
+        Lead[] = { keko_W_PrometOlive_GL };
+        SQL[] = { keko_W_PrometOlive_GL };
         FTL[] = { keko_W_PrometOlive_GL };
         Grenadier[] = { keko_W_PrometOlive_GL };
         LMG[] = { keko_W_Mk200 };
         MMG[] = { keko_W_A3_MMG_BLACK };
         Marksman[] = { keko_W_PrometMR };
-        JTAC[] = { keko_W_PrometOlive_GL_HuntIR };
-        UAVOperator[] = { keko_W_PrometOlive_GL_HuntIR };
+        JTAC[] = { keko_W_PrometOlive_GL };
+        UAVOperator[] = { keko_W_PrometOlive_GL };
         Crewman[] = {keko_W_P90};
         HeliPilot[] = {keko_W_P90};
         HeliCrew[] = {keko_W_P90};

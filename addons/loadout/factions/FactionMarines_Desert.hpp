@@ -53,9 +53,6 @@ class FactionMarines_Desert: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         ATSpecialist[] = { { 4, "rhs_mag_smaw_SR" } };
         JTAC[] = { { 4, "Laserbatteries" } };
         ATSpecialistAsst[] += { { 4, "rhs_mag_smaw_SR" } };
@@ -85,8 +82,8 @@ class FactionMarines_Desert: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_RHS_M16A4 };
-        Lead[] = { keko_W_RHS_M4A1_GL_HUNTIR };
-        SQL[] = { keko_W_RHS_M4A1_GL_HUNTIR };
+        Lead[] = { keko_W_RHS_M4A1_GL };
+        SQL[] = { keko_W_RHS_M4A1_GL };
         FTL[] = { keko_W_RHS_M16A4_GL };
         Doctor[] = { keko_W_RHS_M4A1 };
         Medic[] = { keko_W_RHS_M4A1 };
@@ -94,8 +91,8 @@ class FactionMarines_Desert: FactionBase {
         LMG[] = { keko_W_RHS_M249 };
         MMG[] = { keko_W_RHS_M240B };
         Marksman[] = { keko_W_RHS_M14EBR };
-        JTAC[] = { keko_W_RHS_M16A4_GL_HUNTIR };
-        UAVOperator[] = { keko_W_RHS_M16A4_GL_HUNTIR };
+        JTAC[] = { keko_W_RHS_M4A1_GL };
+        UAVOperator[] = { keko_W_RHS_M4A1_GL };
     };
 
     class secondary: secondary {

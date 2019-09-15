@@ -79,8 +79,7 @@ class FactionBase {
             {1, "KAT_Painkiller"},
             {3, "ACE_tourniquet"},
             {1, "ACE_MapTools"},
-            {1, "ACE_Flashlight_XL50"},
-            {1, "ACE_IR_Strobe_Item"},
+            {1, "ACE_Flashlight_XL50"},            
             {1, "keko_canteen_canteen"}
         };
     };

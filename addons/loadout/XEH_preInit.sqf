@@ -175,4 +175,31 @@ private _factionNames = ["Custom"];
 ] call cba_settings_fnc_init;
 
 
+[
+    QGVAR(giveIRStrobe), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(giveIRStrobe), localize LSTRING(giveIRStrobeTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(giveHuntIR), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(giveHuntIR), localize LSTRING(giveHuntIRTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+
 ADDON = true;

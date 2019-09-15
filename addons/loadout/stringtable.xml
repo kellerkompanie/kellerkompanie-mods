@@ -95,6 +95,24 @@
             <German>Visier geben aktivieren/deaktivieren</German>
         </Key>
 
+        <Key ID="STR_keko_loadout_giveIRStrobe">
+            <English>Give IR strobe</English>
+            <German>IR Stroboskop</German>
+        </Key>
+        <Key ID="STR_keko_loadout_giveIRStrobeTooltip">
+            <English>Enable/Disable IR strobe to player</English>
+            <German>IR Stroboskop geben aktivieren/deaktivieren</German>
+        </Key>
+
+        <Key ID="STR_keko_loadout_giveHuntIR">
+            <English>Give Hunt IR</English>
+            <German>Hunt IR</German>
+        </Key>
+        <Key ID="STR_keko_loadout_giveHuntIRTooltip">
+            <English>Enable/Disable giving Hunt IR to lead positions</English>
+            <German>Hunt IR für Lead Positionen geben aktivieren/deaktivieren</German>
+        </Key>
+
 
     </Package>
 </Project>

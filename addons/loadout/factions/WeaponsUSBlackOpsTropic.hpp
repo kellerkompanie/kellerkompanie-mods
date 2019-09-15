@@ -64,31 +64,19 @@ class weapons: weapons {
         cfgName = "arifle_MX_GL_khk_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_MX_GL_TROPIC_HUNTIR: keko_W_A3_MX_GL_TROPIC {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL_TROPIC {
         cfgName = "arifle_MX_GL_Black_F";
         scopes[] = {"optic_Hamr"};
         rails[] = {"acc_pointer_IR"};
-    };
-    class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
     };
 
     class keko_W_A3_HK416_GL: keko_W_A3_HK416 {
         cfgName = "arifle_SPAR_01_GL_blk_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_HK416_GL_HUNTIR: keko_W_A3_HK416_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_A3_HK416_GL_TROPIC: keko_W_A3_HK416_TROPIC {
         cfgName = "arifle_SPAR_01_GL_khk_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
-    };
-    class keko_W_A3_HK416_GL_TROPIC_HUNTIR: keko_W_A3_HK416_GL_TROPIC {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
     };
 
 

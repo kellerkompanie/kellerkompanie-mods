@@ -22,9 +22,6 @@ class weapons: weapons {
         cfgName = "GUR_arifle_MX_GL_blkANDkhk_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_MX_GL_HUNTIR: keko_W_A3_MX_GL    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
     // Marksman
     class keko_W_A3_MXM: PrimaryWeapon

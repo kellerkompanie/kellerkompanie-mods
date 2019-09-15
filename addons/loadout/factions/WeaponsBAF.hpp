@@ -13,11 +13,7 @@ class weapons: weapons {
         cfgName = "UK3CB_BAF_L85A2_UGL";
         uglMagazines[] = {"UK3CB_BAF_1Rnd_HE_Grenade_Shell"};
     };
-    class keko_W_BAF_L85A2_UGL_HUNTIR: keko_W_BAF_L85A2_UGL
-    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
-    class keko_W_BAF_L85A2_UGL_SMOKE: keko_W_BAF_L85A2_UGL_HUNTIR
+    class keko_W_BAF_L85A2_UGL_SMOKE: keko_W_BAF_L85A2_UGL
     {
         uglMagazines[] = {"1Rnd_Smoke_Grenade_shell"};
     };

@@ -17,9 +17,6 @@ class weapons: weapons {
         scopes[] = {"rhs_acc_pkas"};
         uglMagazines[] = {"rhs_VOG25"};
     };
-    class keko_W_AK74M_GL_HUNTIR: keko_W_AK74M_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_AKS74U: keko_W_AK74M
     {
         cfgName = "rhs_weap_aks74u";

@@ -32,15 +32,8 @@ class weapons: weapons {
         cfgName = "arifle_MX_GL_F";
         uglMagazines[] = {"1Rnd_HE_Grenade_shell"};
     };
-    class keko_W_A3_MX_GL_HUNTIR: keko_W_A3_MX_GL    {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
     class keko_W_A3_MX_GL_BLACK: keko_W_A3_MX_GL {
         cfgName = "arifle_MX_GL_Black_F";
-        magazines[] = {"30Rnd_65x39_caseless_black_mag"};
-    };
-    class keko_W_A3_MX_GL_BLACK_HUNTIR: keko_W_A3_MX_GL_BLACK {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
         magazines[] = {"30Rnd_65x39_caseless_black_mag"};
     };
 

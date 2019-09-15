@@ -14,9 +14,6 @@ class weapons: weapons {
         cfgName = "rhs_weap_m4_m320";
         uglMagazines[] = {"rhs_mag_M441_HE"};
     };
-    class keko_W_M4_GL_HUNTIR: keko_W_M4_GL {
-        uglMagazines[] = {"ACE_HuntIR_M203"};
-    };
 
     // Marksman
     class keko_W_M14: PrimaryWeapon

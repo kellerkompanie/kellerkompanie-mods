@@ -2,7 +2,7 @@
 
 params ["_player", "_faction", "_role"];
 
-player setVariable [QGVAR(role), _role, true];
+_player setVariable [QGVAR(role), _role, true];
 
 private _customLoadout = _faction isEqualTo "Custom";
 
@@ -262,78 +262,69 @@ private _defaultPrimaryMagCount = getNumber(_primaryMagazinesCfg >> "default");
 private _defaultUglMagCount = getNumber(_uglMagazinesCfg >> "default");
 
 if(count _primary != 0) then {
-    private _randomPrimaryEntry = selectRandom _primary;
-    private _primaryCfg = _weaponCfg >> _randomPrimaryEntry;
+    private _primaryCfg = _weaponCfg >> (selectRandom _primary);
 
-    private _primary_cfgName = getText (_primaryCfg >> "cfgName");
-    private _primary_scopes = getArray (_primaryCfg >> "scopes");
-    private _primary_rails = getArray (_primaryCfg >> "rails");
-    private _primary_bipods = getArray (_primaryCfg >> "bipods");
-    private _primary_silencers = getArray (_primaryCfg >> "silencers");
-    private _primary_magazines = getArray (_primaryCfg >> "magazines");
-    private _primary_uglMagazines = getArray (_primaryCfg >> "uglMagazines");
+    private _primaryWeaponClassname = getText (_primaryCfg >> "cfgName");
+    private _scopes = getArray (_primaryCfg >> "scopes");
+    private _rails = getArray (_primaryCfg >> "rails");
+    private _bipods = getArray (_primaryCfg >> "bipods");
+    private _silencers = getArray (_primaryCfg >> "silencers");
+    private _magazines = getArray (_primaryCfg >> "magazines");
+    private _magazinesUGL = getArray (_primaryCfg >> "uglMagazines");
 
-    private _primaryMagCount = _defaultPrimaryMagCount;
+    private _mag = _magazines select 0;
+    private _magTracer = if(count _magazines > 1) then {_magazines select 1} else {_magazines select 0};
+    private _magUGL = _magazinesUGL select 0;
+
+    private _magCount = _defaultPrimaryMagCount;
     if(isNumber (_primaryMagazinesCfg >> _role) ) then {
-        _primaryMagCount = getNumber (_primaryMagazinesCfg  >> _role);
+        _magCount = getNumber (_primaryMagazinesCfg  >> _role);
     };
 
-    if(_primaryMagCount > 0) then {
-        _primaryMagCount = _primaryMagCount - 1;
-        [_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
+    if(_magCount > 0) then {
+        _magCount = _magCount - 1;
+        [_player, _mag] call CBA_fnc_addMagazine;
     };
 
-    private _uglMagCount = _defaultUglMagCount;
+    private _magCountUGL = _defaultUglMagCount;
     if(isNumber (_uglMagazinesCfg >> _role) ) then {
-        _uglMagCount = getNumber (_uglMagazinesCfg  >> _role);
+        _magCountUGL = getNumber (_uglMagazinesCfg  >> _role);
     };
 
-    if(_uglMagCount > 0) then {
-        _uglMagCount = _uglMagCount - 1;
-        [_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
+    if(_magCountUGL > 0 && !(isNil "_magUGL") && {_magUGL != "ACE_HuntIR_M203"}) then {
+        _magCountUGL = _magCountUGL - 1;
+        [_player, _magUGL] call CBA_fnc_addMagazine;
     };
 
-    _player addWeapon _primary_cfgName;
+    _player addWeapon _primaryWeaponClassname;
 
-    if(count _primary_scopes != 0 && GVAR(giveScope)) then {
-        private _item = selectRandom _primary_scopes;
+    if(count _scopes != 0 && GVAR(giveScope)) then {
+        private _item = selectRandom _scopes;
         _player addPrimaryWeaponItem _item;
     };
 
-    if(count _primary_rails != 0) then {
-        private _item = selectRandom _primary_rails;
+    if(count _rails != 0) then {
+        private _item = selectRandom _rails;
         _player addPrimaryWeaponItem _item;
     };
 
-    if(count _primary_bipods != 0) then {
-        private _item = selectRandom _primary_bipods;
+    if(count _bipods != 0) then {
+        private _item = selectRandom _bipods;
         _player addPrimaryWeaponItem _item;
     };
 
     if (GVAR(giveSilencer)) then {
-        if(count _primary_silencers != 0) then {
-            private _item = selectRandom _primary_silencers;
+        if(count _silencers != 0) then {
+            private _item = selectRandom _silencers;
             _player addPrimaryWeaponItem _item;
         };
     };
 
-    if(count _primary_magazines != 0) then {
-        private _item = _primary_magazines select 0;
-        [_player, _item] call CBA_fnc_addMagazine;
-    };
+    for "_i" from 0 to (_magCount / 2) do { [_player, _mag] call CBA_fnc_addMagazine; };
+    for "_i" from 0 to (_magCount / 2) do { [_player, _magTracer] call CBA_fnc_addMagazine; };
 
-    if(count _primary_uglMagazines != 0) then {
-        private _item = _primary_uglMagazines select 0;
-        [_player, _item] call CBA_fnc_addMagazine;
-    };
-
-    private _i = 0;
-    for [{_i = 0}, {_i < _primaryMagCount}, {_i = _i + 1}] do {
-        [_player, selectRandom _primary_magazines] call CBA_fnc_addMagazine;
-    };
-
-    for [{_i = 0}, {_i < _uglMagCount}, {_i = _i + 1}] do {
-        [_player, selectRandom _primary_uglMagazines] call CBA_fnc_addMagazine;
+    if (!(isNil "_magUGL") && {_magUGL != "ACE_HuntIR_M203"}) then {
+        for "_i" from 0 to _magCountUGL do { [_player, _magUGL] call CBA_fnc_addMagazine; };
     };
 };
 
@@ -421,7 +412,7 @@ if(count _optics != 0) then {
 };
 
 // add compass/map, nvg etc. based on mission's preset
-call FUNC(addPresetItems);
+_player call FUNC(addPresetItems);
 
 if(count _items != 0) then {
     {

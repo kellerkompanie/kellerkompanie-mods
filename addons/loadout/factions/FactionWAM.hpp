@@ -60,9 +60,6 @@ class FactionWAM: FactionBase {
     };
 
     class backpackInventory: backpackInventory {
-        Lead[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        Sergeant[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
-        SQL[] = { { 1, "ACE_HuntIR_monitor" }, { 4, "ACE_HuntIR_M203" } };
         JTAC[] = { { 4, "Laserbatteries" } };
     };
 
@@ -77,16 +74,16 @@ class FactionWAM: FactionBase {
 
     class primary: primary {
         Default[] = { keko_W_A3_CTARC };
-        Lead[] = { keko_W_A3_CTAR_GL_HuntIR };
-        Sergeant[] = { keko_W_A3_CTAR_GL_HuntIR };
-        SQL[] = { keko_W_A3_CTAR_GL_HuntIR };
+        Lead[] = { keko_W_A3_CTAR_GL };
+        Sergeant[] = { keko_W_A3_CTAR_GL };
+        SQL[] = { keko_W_A3_CTAR_GL };
         FTL[] = { keko_W_A3_CTAR_GL };
         Grenadier[] = { keko_W_A3_CTAR_GL };
         LMG[] = { keko_W_A3_Stoner };
         MMG[] = { keko_W_A3_MMG };
         Marksman[] = { keko_W_A3_EBR };
-        JTAC[] = { keko_W_A3_CTAR_GL_HuntIR };
-        UAVOperator[] = { keko_W_A3_CTAR_GL_HuntIR };
+        JTAC[] = { keko_W_A3_CTAR_GL };
+        UAVOperator[] = { keko_W_A3_CTAR_GL };
     };
 
     class secondary: secondary {
