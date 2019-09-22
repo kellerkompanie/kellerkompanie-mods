@@ -26,7 +26,7 @@ class FactionMarines_Desert: FactionBase {
         LMG[] = { "rhsusf_spc_iar" };
         MMG[] = { "rhsusf_spc_mg" };
         Marksman[] = { "rhsusf_spc_marksman" };
-        Driver[] = { "V_BandollierB_rgr" };
+        Driver[] = { "rhsusf_spc_crewman" };
         HeliPilot[] = { "V_TacVest_blk" };
         JetPilot[] = { "V_TacVest_blk" };
     };
@@ -74,7 +74,11 @@ class FactionMarines_Desert: FactionBase {
             };
         Lead[] = { "rhs_8point_marpatd" };
         Command[] = { "rhs_booniehat2_marpatd" };
-        Driver[] = { "H_HelmetCrew_B" };
+        Driver[] = {
+                "rhsusf_cvc_helmet",
+                "rhsusf_cvc_alt_helmet",
+                "rhsusf_cvc_ess"
+            };
         HeliPilot[] = { "rhsusf_hgu56p_black" };
         HeliCrew[] = { "rhsusf_hgu56p_visor_mask_black" };
         JetPilot[] = { "RHS_jetpilot_usaf" };

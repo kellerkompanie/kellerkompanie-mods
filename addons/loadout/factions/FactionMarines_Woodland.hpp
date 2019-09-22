@@ -28,6 +28,11 @@ class FactionMarines_Woodland: FactionMarines_Desert {
                 "rhsusf_lwh_helmet_marpatwd_ess",
                 "rhsusf_lwh_helmet_marpatwd_headset"
             };
+        Driver[] = {
+                "rhsusf_cvc_green_helmet",
+                "rhsusf_cvc_green_alt_helmet",
+                "rhsusf_cvc_green_ess"
+            };
         Lead[] = { "rhs_8point_marpatwd" };
         Command[] = { "rhs_booniehat2_marpatwd" };
     };
