@@ -58,7 +58,7 @@ class FactionBase {
         Lead = 2;
         Engineer = 2;
         EOD = 2;
-        Driver = 1;
+        Driver = 2;
     };
 
     class medicClass {
@@ -79,7 +79,7 @@ class FactionBase {
             {1, "KAT_Painkiller"},
             {3, "ACE_tourniquet"},
             {1, "ACE_MapTools"},
-            {1, "ACE_Flashlight_XL50"},            
+            {1, "ACE_Flashlight_XL50"},
             {1, "keko_canteen_canteen"}
         };
     };

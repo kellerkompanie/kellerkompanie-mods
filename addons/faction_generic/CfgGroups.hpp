@@ -511,19 +511,19 @@ class CfgGroups
 
                     class Unit0
                     {
-                        vehicle = QGVAR(blufor_sql);
+                        vehicle = QGVAR(blufor_driver);
                         rank = "SERGEANT";
                         position[] = {0,0,0};
                     };
                     class Unit1
                     {
-                        vehicle = QGVAR(blufor_engineer);
+                        vehicle = QGVAR(blufor_driver);
                         rank = "CORPORAL";
                         position[] = {3,0,0};
                     };
                     class Unit2
                     {
-                        vehicle = QGVAR(blufor_engineer);
+                        vehicle = QGVAR(blufor_driver);
                         rank = "CORPORAL";
                         position[] = {6,0,0};
                     };
@@ -1170,19 +1170,19 @@ class CfgGroups
 
                     class Unit0
                     {
-                        vehicle = QGVAR(opfor_sql);
+                        vehicle = QGVAR(opfor_driver);
                         rank = "SERGEANT";
                         position[] = {0,0,0};
                     };
                     class Unit1
                     {
-                        vehicle = QGVAR(opfor_engineer);
+                        vehicle = QGVAR(opfor_driver);
                         rank = "CORPORAL";
                         position[] = {3,0,0};
                     };
                     class Unit2
                     {
-                        vehicle = QGVAR(opfor_engineer);
+                        vehicle = QGVAR(opfor_driver);
                         rank = "CORPORAL";
                         position[] = {6,0,0};
                     };
@@ -1828,19 +1828,19 @@ class CfgGroups
 
                     class Unit0
                     {
-                        vehicle = QGVAR(indfor_sql);
+                        vehicle = QGVAR(indfor_driver);
                         rank = "SERGEANT";
                         position[] = {0,0,0};
                     };
                     class Unit1
                     {
-                        vehicle = QGVAR(indfor_engineer);
+                        vehicle = QGVAR(indfor_driver);
                         rank = "CORPORAL";
                         position[] = {3,0,0};
                     };
                     class Unit2
                     {
-                        vehicle = QGVAR(indfor_engineer);
+                        vehicle = QGVAR(indfor_driver);
                         rank = "CORPORAL";
                         position[] = {6,0,0};
                     };
