@@ -16,6 +16,26 @@
 
 params ["_unit"];
 
+private _allItems = [player] call CBA_fnc_uniqueUnitItems;
+
+{
+    _x params["_item","_replacement"];
+    if(_item in _allItems) then {
+        while {_item in items _unit} do {
+            _unit removeItem _item;
+            [_unit, _replacement, true] call CBA_fnc_addItem;
+        };
+    };
+} forEach [
+    [QGVAR(canteen_generic), QEGVAR(canteen,canteen)],
+    [QGVAR(painkiller_generic), "KAT_Painkiller"],
+    [QGVAR(cigpack_generic), "murshun_cigs_cigpack"],
+    [QGVAR(lighter_generic), "murshun_cigs_lighter"],
+    [QGVAR(matches_generic), "murshun_cigs_matches"],
+    [QGVAR(lollipop_generic), "immersion_pops_poppack"]
+];
+
+
 private _primaryWeapon = primaryWeapon _unit;
 private _secondaryWeapon = handgunWeapon _unit;
 private _launcherWeapon = secondaryWeapon _unit;

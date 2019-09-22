@@ -2,6 +2,7 @@ class CfgWeapons {
 
     class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
+    class ACE_ItemCore;
 
     class keko_RifleMag: CBA_MiscItem {
         author = "Schwaggot";
@@ -101,6 +102,67 @@ class CfgWeapons {
         displayName = "Anti-Air Launcher";
         descriptionShort = "Anti-Air Launcher";
         descriptionUse = "A Anti-Air Launcher.";
+    };
+
+    class GVAR(canteen_generic) : ACE_ItemCore {
+        displayName = "Canteen (KeKo)";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        picture = "\x\keko\addons\canteen\ui\icon_canteen.paa";
+    };
+    class GVAR(painkiller_generic) : ACE_ItemCore {
+        displayName = "Painkiller";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        picture = "\kat_acecirculation\images\icon_painkillers.paa";
+    };
+    class GVAR(cigpack_generic) : ACE_ItemCore {
+        displayName = "Cig Pack";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        picture = "\murshun_cigs\UI\gear_cigpack_x_ca";
+    };
+    class GVAR(lighter_generic) : ACE_ItemCore {
+        displayName = "Lighter";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        picture = "\murshun_cigs\UI\gear_lighter_x_ca";
+    };
+    class GVAR(matches_generic) : ACE_ItemCore {
+        displayName = "Matches";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+        picture = "\murshun_cigs\UI\gear_matches_x_ca";
+    };
+    class GVAR(lollipop_generic) : ACE_ItemCore {
+        displayName = "Lollipop (Packed)";
+        count = 1;
+        scopeCurator = 2;
+        scope = 2;
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        picture = "\immersion_pops\UI\gear_cigpack_x_ca";
     };
 
 

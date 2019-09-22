@@ -49,7 +49,14 @@ class CfgPatches {
             keko_AntiAirMag,
             keko_DisposableRocketLauncher,
             keko_AntiTankLauncher,
-            keko_AntiAirLauncher
+            keko_AntiAirLauncher,
+
+            GVAR(canteen_generic),
+            GVAR(painkiller_generic),
+            GVAR(cigpack_generic),
+            GVAR(lighter_generic),
+            GVAR(matches_generic),
+            GVAR(lollipop_generic)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
