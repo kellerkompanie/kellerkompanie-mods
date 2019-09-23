@@ -2,12 +2,13 @@
 
 disableSerialization;
 
+private _faction = GVAR(menuDialogFaction);
 private _display = _this select 0;
 private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-private _customLoadout = GVAR(loadoutFaction) isEqualTo "Custom";
+private _customLoadout = _faction isEqualTo "Custom";
 if(_customLoadout) then {
 
     if (isNil QGVAR(customLoadouts)) then {
@@ -19,12 +20,12 @@ if(_customLoadout) then {
         _x params ["_role", "_role_name"];
 
         lbAdd [1500, _role_name];
-        lbSetData [1500, _i, format ["%1 %2", GVAR(loadoutFaction), _role]];
+        lbSetData [1500, _i, format ["%1 %2", _faction, _role]];
         _i = _i + 1;
     } forEach GVAR(customLoadouts);
 
 } else {
-    private _roles = configproperties [configFile >> "kekoFactions" >> GVAR(loadoutFaction) >> "role"];
+    private _roles = configproperties [configFile >> "kekoFactions" >> _faction >> "role"];
 
     private _i = 0;
     {
@@ -32,11 +33,9 @@ if(_customLoadout) then {
         private _role_name = getText _x;
 
         lbAdd [1500, _role_name];
-        lbSetData [1500, _i, format ["%1 %2", GVAR(loadoutFaction), _role_identifier]];
+        lbSetData [1500, _i, format ["%1 %2", _faction, _role_identifier]];
         _i = _i + 1;
     } forEach _roles;
 };
 
-
-
-true;
+true

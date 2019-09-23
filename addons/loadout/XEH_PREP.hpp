@@ -17,6 +17,7 @@ PREP(moduleAddLoadouts3den);
 PREP(moduleModifyLoadout3den);
 PREP(moduleApplyLoadout);
 PREP(moduleCustomLoadouts3den);
+PREP(openLoadoutMenu);
 PREP(parseStringToList);
 PREP(replaceItem);
 PREP(setChannels);

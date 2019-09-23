@@ -511,6 +511,7 @@ class FactionBase {
 #include "FactionBAFWDL.hpp"
 
 #include "FactionWehrmacht.hpp"
+#include "FactionWehrmachtAfrica.hpp"
 #include "FactionArmiaKrajowaPartyzanci.hpp"
 #include "FactionArmiaKrajowaCamo.hpp"
 #include "FactionArmiaKrajowaGrade.hpp"

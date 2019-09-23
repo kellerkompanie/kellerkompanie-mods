@@ -1,14 +1,19 @@
 #include "script_component.hpp"
 
-private _logic = _this select 0;
+params["_logic"];
 
 if (!isServer) exitWith {};
-INFO("running moduleAddLoadoutMenu3den");
+
+private _faction = _logic getVariable ["Faction", "DEFAULT"];
+if(_faction isEqualTo "DEFAULT") then {
+    _faction = GVAR(loadoutFaction);
+};
 
 private _objects = synchronizedObjects _logic;
 {
-    TRACE_1("adding menu to object", _x);
-    [_x] call FUNC(addLoadoutMenu);
+    [_x, _faction] call FUNC(addLoadoutMenu);
 } forEach _objects;
 
 deleteVehicle _logic;
+
+true

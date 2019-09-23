@@ -32,6 +32,15 @@
             <German>Standard Fraktion für Ausrüstung auswählen</German>
         </Key>
 
+        <Key ID="STR_keko_loadout_faction">
+            <English>Faction</English>
+            <German>Fraktion</German>
+        </Key>
+        <Key ID="STR_keko_loadout_factionTooltip">
+            <English>Choose faction for this loadout menu</English>
+            <German>Fraktion für dieses Loadout Menü auswählen</German>
+        </Key>
+
         <Key ID="STR_keko_loadout_giveMap">
             <English>Give map</English>
             <German>Karte</German>

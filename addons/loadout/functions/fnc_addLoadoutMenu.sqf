@@ -1,18 +1,26 @@
 #include "script_component.hpp"
 
-params ["_object"];
+params [["_object", objNull, [objNull]],["_faction", "DEFAULT", [""]]];
 
-//_object addAction [("<t color='#A6A600' size='2' align='center'>" + ("Fast-Travel") + "</t>"), {createDialog "keko_teleport_mainDialog";}];
+if(_faction isEqualTo "DEFAULT") then {
+    _faction = GVAR(loadoutFaction);
+};
+
 [_object,
     [
         // title
         ("<t color='#008800' size='2' align='center'>" + ("Loadout") + "</t>"),
 
         // script
-        {createDialog QGVAR(menuDialog);},
+        {
+            params ["_target", "_caller", "_actionId", "_arguments"];
+            _arguments params ["_faction"];
+
+            [_caller, _faction, _target] call FUNC(openLoadoutMenu);
+        },
 
         // arguments
-        _object,
+        [_faction],
 
         // priority
         1.5,
@@ -32,4 +40,4 @@ params ["_object"];
         // radius
         5
     ]
-] remoteExec ["addAction", 0, true];
+] remoteExec ["addAction", [0, -2] select isDedicated, true];
