@@ -122,6 +122,27 @@
             <German>Hunt IR für Lead Positionen geben aktivieren/deaktivieren</German>
         </Key>
 
+        <Key ID="STR_keko_loadout_3denCategory">
+            <English>Kellerkompanie Loadout</English>
+            <German>Kellerkompanie Loadout</German>
+        </Key>
 
+        <Key ID="STR_keko_loadout_makeCustomLoadout">
+            <English>Custom loadout</English>
+            <German>Custom Loadout</German>
+        </Key>
+        <Key ID="STR_keko_loadout_makeCustomLoadoutTooltip">
+            <English>Converts this object to a custom loadout</English>
+            <German>Konvertiert dieses Objekt zu einem Custom Loadout</German>
+        </Key>
+
+        <Key ID="STR_keko_loadout_nameCustomLoadout">
+            <English>Custom loadout name</English>
+            <German>Name des Custom Loadouts</German>
+        </Key>
+        <Key ID="STR_keko_loadout_nameCustomLoadoutTooltip">
+            <English>Sets a specified name for this type of custom loadout that will be visible in the loadout menu</English>
+            <German>Bestimmt den Namen dieses Typs von Custom Loadout, wie er nachher im Loadout Menü auftaucht</German>
+        </Key>
     </Package>
 </Project>

@@ -2,8 +2,7 @@
 
 params ["_crate"];
 
-if (!isServer) exitWith {};
-if !(_crate getVariable [QGVAR(isCustomCrate), false]) exitWith {};
+if !(_crate getVariable [QGVAR(isCustomCrate), false]) exitWith {false};
 
 if (isNil QGVAR(customCrates)) then {
     GVAR(customCrates) = [];
@@ -14,6 +13,7 @@ private _name = _crate getVariable [QGVAR(customCrateName), getText (configFile 
 private _content = _crate call FUNC(getCrateInventory);
 GVAR(customCrates) pushBack [_name, _classname, _content];
 
-deleteVehicle _crate;
+_crate enableSimulation false;
+_crate hideObject true;
 
-publicVariable QGVAR(customCrates);
+true
