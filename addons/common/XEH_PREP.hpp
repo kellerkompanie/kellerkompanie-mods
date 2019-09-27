@@ -7,6 +7,7 @@ PREP(breakWindow);
 PREP(canBreakWindow);
 PREP(changeGroupNameDialogCallback);
 PREP(changeGroupNameDialogInit);
+PREP(check3denIncompatibility);
 PREP(check64bit);
 PREP(checkCustomFace);
 PREP(createZeus);
