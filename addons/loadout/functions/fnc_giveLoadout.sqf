@@ -7,7 +7,7 @@ _player setVariable [QGVAR(role), _role, true];
 private _customLoadout = _faction isEqualTo "Custom";
 
 if(_customLoadout) exitWith {
-    _role call FUNC(applyCustomLoadout);
+    [_player, _role] call FUNC(applyCustomLoadout);
 };
 
 
