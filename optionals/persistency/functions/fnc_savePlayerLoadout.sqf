@@ -9,11 +9,6 @@ params [
     ["_forceSave", false]
 ];
 
-if !(isPlayer _playerUnit) exitWith {
-    WARNING("savePlayerLoadout: not a player, exiting!");
-    false
-};
-
 if (_forceSave) then {
     INFO_1("savePlayerLoadout: performing force save on player %1", name _playerUnit);
 };
