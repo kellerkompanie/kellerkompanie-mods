@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="enoch_cbrn">
+        <Key ID="STR_keko_enoch_cbrn_Sand_Mask02">
+            <English>APR Without Filter (Sand) [CSAT]</English>
+    		<German>Atemschutzgerät Ohne Filter (Sand) [CSAT]</German>
+        </Key>
+        <Key ID="STR_keko_enoch_cbrn_Olive_Mask02">
+            <English>APR Without Filter (Olive) [CSAT]</English>
+    		<German>Atemschutzgerät Ohne Filter (oliv) [CSAT]</German>
+        </Key>
+        <Key ID="STR_keko_enoch_cbrn_Black_Mask02">
+            <English>APR Without Filter (Black) [CSAT]</English>
+    		<German>Atemschutzgerät Ohne Filter (schwarz) [CSAT]</German>
+        </Key>
+    </Package>
+</Project>
