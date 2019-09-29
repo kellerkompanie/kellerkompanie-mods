@@ -21,7 +21,7 @@ private _successfulSaves = 0;
     private _selectivePersistencyEnabled = _x getVariable [QGVAR(persistencyEnabled), false];
 
     if(!_isBlacklisted && ( GVAR(playersEnabled) == PERSISTENCY_ENABLED || (GVAR(playersEnabled) == PERSISTENCY_SELECTIVE && _selectivePersistencyEnabled) ) ) then {
-        private _retVal = [_x, _forceSave] call FUNC(savePlayerLoadout);
+        private _retVal = [_x, _forceSave, getPlayerUID _x] call FUNC(savePlayerLoadout);
         if(_retVal) then {
             _successfulSaves = _successfulSaves + 1;
         };

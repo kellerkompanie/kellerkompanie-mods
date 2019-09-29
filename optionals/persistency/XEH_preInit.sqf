@@ -9,28 +9,20 @@ PREP_RECOMPILE_END;
 if !(GVAR(enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
 if (GVAR(key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
 
-INFO("running XEH_preInit");
-
 addMissionEventHandler ["HandleDisconnect",
 {
-    TRACE_1("HandleDisconnect", _this);
+    params ["_unit", "", "_uid", "_name"];
 
-    // params ["_unit,", "_id", "_uid", "_name"];
-    private _unit = _this select 0;
-    private _name = _this select 3;
+    if (_name == "__SERVER__" || _name in ["HC1","HC2","HC3"]) exitWith {false};
 
-    if(_name == "__SERVER__" ) exitWith {};
-
-    _unit call FUNC(savePlayerLoadout);
+    [_unit, true, _uid] call FUNC(savePlayerLoadout);
+    false
 }];
 
 [QEGVAR(loadout,onLoadoutFinished), {
     params ["_player"];
-
-    if (_player == player) then {
-        _player setVariable [QGVAR(hasReceivedLoadout), true, true];
-        _player call FUNC(loadPlayerLoadout);
-    };
+    _player setVariable [QGVAR(hasReceivedLoadout), true, true];
+    _player call FUNC(loadPlayerLoadout);
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

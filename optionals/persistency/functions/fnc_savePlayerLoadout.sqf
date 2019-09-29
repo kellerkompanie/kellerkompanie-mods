@@ -6,7 +6,8 @@ if (GVAR(playersEnabled) == 0) exitWith{WARNING("savePlayerLoadout: persistency 
 
 params [
     ["_playerUnit", nil],
-    ["_forceSave", false]
+    ["_forceSave", false],
+    ["_playerUID", nil]
 ];
 
 if (_forceSave) then {
@@ -27,8 +28,9 @@ if (!_forceSave && (_hasDBLoadoutEntry && !_hasReceivedDBLoadout)) exitWith {
     false
 };
 
-private _playerUID = getPlayerUID _playerUnit;
 private _playerName = name _playerUnit;
+
+INFO_3("savePlayerLoadout: _playerUID=%1 _playerName=%2 _playerUnit=%3", _playerUID, _playerName, _playerUnit);
 
 if (_playerUID find "HC" >= 0) exitWith {
     WARNING("savePlayerLoadout: HC detected, exiting!");
@@ -40,8 +42,6 @@ private _medicClass = _playerUnit getVariable ["ace_medical_medicClass", 0];
 private _engineerClass = _playerUnit getVariable ["ACE_isEngineer", 0];
 private _rank = rank _playerUnit;
 private _position = getPos _playerUnit;
-
-TRACE_2("savePlayerLoadout", _playerUID, _playerName);
 
 "extDB3" callExtension format [ "1:keko_persistency:setPlayerLoadout:%1:%2:%3:%4:%5:%6:%7:%8",
     GVAR(key),
@@ -57,8 +57,6 @@ if (GVAR(moneyEnabled)) then {
     _playerUnit call FUNC(saveMoney);
 };
 
-if (_playerUnit == player) then {
-    hintC "Dein Loadout wurde gespeichert.";
-};
+INFO_1("saved loadout of %1", _playerUnit);
 
 true

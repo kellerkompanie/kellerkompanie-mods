@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-TRACE_1("preStart", keko_logging_db_setupComplete);
-
 if(isNil "keko_logging_db_setupComplete") then {
     INFO("keko_logging_db_setupComplete not set or false");
 

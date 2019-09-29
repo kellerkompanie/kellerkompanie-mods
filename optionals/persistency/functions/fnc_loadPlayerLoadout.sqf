@@ -6,19 +6,11 @@ if (GVAR(playersEnabled) == 0) exitWith{WARNING("loadPlayerLoadout: persistency 
 
 params ["_playerUnit"];
 
-if !(isPlayer _playerUnit) exitWith {
-    ERROR("loadPlayerLoadout: not a player, exiting!");
-    false
-};
-
 private _playerUID = getPlayerUID _playerUnit;
-
-if (_playerUID find "HC" >= 0) exitWith{
-    ERROR("loadPlayerLoadout: not a player!");
+if (_playerUID find "HC" >= 0) exitWith {
+    INFO("loadPlayerLoadout exiting beacuse playerUID contains 'HC'");
     false
 };
-
-TRACE_3("loadPlayerLoadout", _playerUID, _playerName, GVAR(key));
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", GVAR(key), _playerUID]);
 
@@ -37,15 +29,16 @@ INFO_1("loadPlayerLoadout: loading sucessful %1", _ret);
     "_rank",
     "_position"];
 
-TRACE_5("loadPlayerLoadout", _loadout, _medicClass, _engineerClass, _rank, _position);
-
 _playerUnit setUnitLoadout _loadout;
 _playerUnit setVariable ["ace_medical_medicClass", _medicClass, true];
 _playerUnit setVariable ["ACE_isEngineer", _engineerClass, true];
 _playerUnit setRank _rank;
 
 if (GVAR(synchronizePlayerPosition)) then {
-    _playerUnit setPos _position;
+    [{
+        params ["_playerUnit", "_position"];
+        _playerUnit setPos _position;
+    }, [_playerUnit, _position], 3] call CBA_fnc_waitAndExecute;
 };
 
 if (GVAR(moneyEnabled)) then {

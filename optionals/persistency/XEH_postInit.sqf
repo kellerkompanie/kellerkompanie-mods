@@ -20,8 +20,10 @@ if(GVAR(autosaveInterval) > 0) then {
                 if ( GVAR(cratesEnabled) > 0 ) then {
                     call FUNC(saveAllCrates);
                 };
-
-            }, [], GVAR(autosaveInterval)] call CBA_fnc_waitAndExecute;
+            },
+            [],
+            GVAR(autosaveInterval)
+        ] call CBA_fnc_waitAndExecute;
     };
 };
 

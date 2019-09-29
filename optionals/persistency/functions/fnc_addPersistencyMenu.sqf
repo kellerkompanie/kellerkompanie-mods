@@ -9,7 +9,7 @@ params ["_object"];
         ("<t color='#8B008B' size='2' align='center'>" + ("Save Loadout") + "</t>"),
 
         // script
-        {[player, true] call FUNC(savePlayerLoadout);},
+        {[player, true, getPlayerUID player] call FUNC(savePlayerLoadout);},
 
         // arguments
         _object,
