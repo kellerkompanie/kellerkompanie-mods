@@ -144,7 +144,7 @@ Parameters:
     QEGVAR(persistency,loadPlayersOnStart), // key/reference variable
     "LIST", // type of setting
     ["Load players", "Enable/Disable loading players from DB upon mission start."], // name and tooltip
-    localize LSTRING(cbaSettingsCategory), "Load on mission start"], // category
+    [localize LSTRING(cbaSettingsCategory), "Load on mission start"], // category
     [
         [false,true], // values
         [localize LSTRING(disabled), localize LSTRING(enabled)], // names
