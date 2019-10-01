@@ -56,3 +56,12 @@ _allPossibleVehicles = _allPossibleVehicles + _allTankObjects;
         _x call FUNC(loadVehicleObject);
     };
 } forEach _allPossibleVehicles;
+
+
+if (GVAR(loadCratesOnStart)) then {
+    call FUNC(loadAllCrates);
+};
+
+if (GVAR(loadVehiclesOnStart)) then {
+    call FUNC(loadAllVehicles);
+};

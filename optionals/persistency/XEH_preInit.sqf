@@ -19,10 +19,12 @@ addMissionEventHandler ["HandleDisconnect",
     false
 }];
 
-[QEGVAR(loadout,onLoadoutFinished), {
-    params ["_player"];
-    _player setVariable [QGVAR(hasReceivedLoadout), true, true];
-    _player call FUNC(loadPlayerLoadout);
-}] call CBA_fnc_addEventHandler;
+if (GVAR(loadPlayersOnStart)) then {
+    [QEGVAR(loadout,onLoadoutFinished), {
+        params ["_player"];
+        _player call FUNC(loadPlayerLoadout);
+        _player setVariable [QGVAR(hasReceivedLoadout), true, true];
+    }] call CBA_fnc_addEventHandler;
+};
 
 ADDON = true;

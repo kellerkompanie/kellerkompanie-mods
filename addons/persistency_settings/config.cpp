@@ -9,7 +9,13 @@ class CfgPatches {
             QGVAR(moduleSelectivePersistency3den),
             QGVAR(moduleAddPersistencyMenu),
             QGVAR(moduleManualLoad),
+            QGVAR(moduleManualLoadCrates),
+            QGVAR(moduleManualLoadPlayers),
+            QGVAR(moduleManualLoadVehicles),
             QGVAR(moduleManualSave),
+            QGVAR(moduleManualSaveCrates),
+            QGVAR(moduleManualSavePlayers),
+            QGVAR(moduleManualSaveVehicles),
             QGVAR(moduleEnablePersistency)
         };
         requiredVersion = REQUIRED_VERSION;

@@ -62,12 +62,12 @@ class CfgVehicles {
         curatorCanAttach   = 1;
     };
     class GVAR(moduleManualSave): GVAR(moduleBase) {
-        displayName        = "Manual Save";
+        displayName        = "Manual Save (everything)";
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleManualSave);
     };
     class GVAR(moduleManualLoad): GVAR(moduleBase) {
-        displayName        = "Manual Load";
+        displayName        = "Manual Load (everything)";
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleManualLoad);
     };
@@ -76,5 +76,38 @@ class CfgVehicles {
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleEnablePersistency);
         curatorCanAttach   = 1;
+    };
+
+    class GVAR(moduleManualSaveCrates): GVAR(moduleBase) {
+        displayName        = "Manual Save (crates)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualSaveCrates);
+    };
+    class GVAR(moduleManualLoadCrates): GVAR(moduleBase) {
+        displayName        = "Manual Load (crates)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualLoadCrates);
+    };
+
+    class GVAR(moduleManualSaveVehicles): GVAR(moduleBase) {
+        displayName        = "Manual Save (vehicles)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualSaveVehicles);
+    };
+    class GVAR(moduleManualLoadVehicles): GVAR(moduleBase) {
+        displayName        = "Manual Load (vehicles)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualLoadVehicles);
+    };
+
+    class GVAR(moduleManualSavePlayers): GVAR(moduleBase) {
+        displayName        = "Manual Save (players)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualSavePlayers);
+    };
+    class GVAR(moduleManualLoadPlayers): GVAR(moduleBase) {
+        displayName        = "Manual Load (players)";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleManualLoadPlayers);
     };
 };

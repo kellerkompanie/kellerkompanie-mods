@@ -115,6 +115,45 @@ Parameters:
 ] call cba_settings_fnc_init;
 
 [
+    QEGVAR(persistency,loadCratesOnStart), // key/reference variable
+    "LIST", // type of setting
+    ["Load crates", "Enable/Disable loading crates from DB upon mission start."], // name and tooltip
+    [localize LSTRING(cbaSettingsCategory), "Load on mission start"], // category
+    [
+        [false,true], // values
+        [localize LSTRING(disabled), localize LSTRING(enabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QEGVAR(persistency,loadVehiclesOnStart), // key/reference variable
+    "LIST", // type of setting
+    ["Load vehicles", "Enable/Disable loading vehicles from DB upon mission start."], // name and tooltip
+    [localize LSTRING(cbaSettingsCategory), "Load on mission start"], // category
+    [
+        [false,true], // values
+        [localize LSTRING(disabled), localize LSTRING(enabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QEGVAR(persistency,loadPlayersOnStart), // key/reference variable
+    "LIST", // type of setting
+    ["Load players", "Enable/Disable loading players from DB upon mission start."], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), "Load on mission start"], // category
+    [
+        [false,true], // values
+        [localize LSTRING(disabled), localize LSTRING(enabled)], // names
+        1 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
     QEGVAR(persistency,moneyEnabled), // key/reference variable
     "LIST", // type of setting
     ["Money Persistency", "Enable/Disable money persistency"], // name and tooltip
