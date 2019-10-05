@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="garbage_collection">
+        <Key ID="STR_keko_garbage_collection_3denCategory">
+            <English>Kellerkompanie Garbage Collection</English>
+            <German>Kellerkompanie Garbage Collection</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_isBlacklisted">
+            <English>Disable GC</English>
+            <German>GC deaktivieren</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_isBlacklistedTooltip">
+            <English>Disables garbage collection on this object.</English>
+            <German>Deaktiviert Garbage Collection auf diesem Objekt.</German>
+        </Key>
+
+        <Key ID="STR_keko_garbage_collection_cbaSettingsCategory">
+            <English>Kellerkompanie Garbage Collection</English>
+            <German>Kellerkompanie Garbage Collection</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+
+        <Key ID="STR_keko_garbage_collection_option">
+            <English>Garbage Collection</English>
+            <German>Garbage Collection</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_optionTooltip">
+            <English>Enable/disable Garbage Collection</English>
+            <German>Aktiviert/dekativiert die Garbage Collection</German>
+        </Key>
+
+        <Key ID="STR_keko_garbage_collection_corpseMode">
+            <English>Clean corpses</English>
+            <German>Leichen aufräumen</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_corpseModeTooltip">
+            <English>Enables/disables the interval for removing corpses</English>
+            <German>Aktiviert/deaktiviert das Entfernen von Leichen</German>
+        </Key>
+
+        <Key ID="STR_keko_garbage_collection_wreckMode">
+            <English>Clean wrecks</English>
+            <German>Wracks aufräumen</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_wreckModeTooltip">
+            <English>Enables/disables the interval for removing wrecks</English>
+            <German>Aktiviert/deaktiviert das Entfernen von Wracks</German>
+        </Key>
+
+        <Key ID="STR_keko_garbage_collection_everyMinute">
+            <English>Every minute</English>
+            <German>Jede Minute</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_everyFiveMinutes">
+            <English>Every 5 minutes</English>
+            <German>Alle 5 Minuten</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_everyTenMinutes">
+            <English>Every 10 minutes</English>
+            <German>Alle 10 Minuten</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_everyFifteenMinutes">
+            <English>Every 15 minutes</English>
+            <German>Alle 15 Minuten</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_everyTwentyMinutes">
+            <English>Every 20 minutes</English>
+            <German>Alle 20 Minuten</German>
+        </Key>
+        <Key ID="STR_keko_garbage_collection_everyThirtyMinutes">
+            <English>Every 30 minutes</English>
+            <German>Alle 30 Minuten</German>
+        </Key>
+    </Package>
+</Project>
