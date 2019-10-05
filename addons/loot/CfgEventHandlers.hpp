@@ -13,6 +13,11 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Init_EventHandlers {
+    class WeaponHolder {
+        class ADDON {
+            init = QUOTE(_this call FUNC(initObject));
+        };
+    };
     class WeaponHolderSimulated {
         class ADDON {
             init = QUOTE(_this call FUNC(initObject));

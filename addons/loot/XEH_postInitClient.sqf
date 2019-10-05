@@ -42,11 +42,3 @@ private _action = [
 ["WeaponHolder", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["ReammoBox_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-
-player addEventHandler [ "Put", {
-    params[ "_unit", "_container" ];
-
-    if( typeOf _container isEqualTo "GroundWeaponHolder" || typeOf _container isEqualTo "WeaponHolderSimulated" ) then {
-        _container call FUNC(initObject);
-    };
-}];

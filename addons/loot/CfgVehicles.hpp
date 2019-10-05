@@ -1,6 +1,11 @@
 class CfgVehicles {
-    class WeaponHolder;
+    class ReammoBox;
+    class WeaponHolder: ReammoBox {
+        XEH_ENABLED;
+    };
     class GroundWeaponHolder: WeaponHolder {
+        XEH_ENABLED;
+        
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0,1,0};
         ace_dragging_dragDirection = 0;
@@ -12,6 +17,8 @@ class CfgVehicles {
 
     class ThingX;
     class WeaponHolderSimulated: ThingX {
+        XEH_ENABLED;
+
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0,1,0};
         ace_dragging_dragDirection = 0;
