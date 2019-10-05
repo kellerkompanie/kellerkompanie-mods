@@ -27,7 +27,8 @@ if(isServer) then {
         params ["_unit"];
 
         if (_unit isKindOf "Man") then {
-            if (!(isPlayer _unit)) then {
+            private _unitSide = side _unit;
+            if (!(isPlayer _unit) && _unitSide != GVAR(playerSide)) then {
                 GVAR(aiKilled) = GVAR(aiKilled) + 1;
             };
             private _faction = faction _unit;

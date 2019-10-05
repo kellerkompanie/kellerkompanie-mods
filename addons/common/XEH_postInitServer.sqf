@@ -20,3 +20,14 @@ GVAR(emptyGroupsDeleter) = addMissionEventHandler ["EntityKilled", {private _grp
     },
     1800
 ] call CBA_fnc_addPerFrameHandler;
+
+
+GVAR(playerSide) = west;
+private _max = playersNumber west;
+{
+    private _playersNumber = playersNumber _x;
+    if (_playersNumber > _max) then {
+        GVAR(playerSide) = _x;
+        _max = _playersNumber;
+    };
+} forEach [east, resistance, civilian];
