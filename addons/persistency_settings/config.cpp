@@ -16,7 +16,8 @@ class CfgPatches {
             QGVAR(moduleManualSaveCrates),
             QGVAR(moduleManualSavePlayers),
             QGVAR(moduleManualSaveVehicles),
-            QGVAR(moduleEnablePersistency)
+            QGVAR(moduleEnablePersistency),
+            QGVAR(moduleEditMoney)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -32,3 +33,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
+
+#include "defines.hpp"
+#include "ui\dialog_editMoney.hpp"

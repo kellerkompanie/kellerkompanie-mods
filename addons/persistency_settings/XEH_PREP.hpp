@@ -1,6 +1,9 @@
+PREP(dialogEditMoneyCallback);
+PREP(dialogEditMoneyInit);
 PREP(initializeUI);
 PREP(moduleAddPersistencyMenu);
 PREP(moduleAddPersistencyMenu3den);
+PREP(moduleEditMoney);
 PREP(moduleEnablePersistency);
 PREP(moduleManualLoad);
 PREP(moduleManualLoadCrates);

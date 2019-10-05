@@ -110,4 +110,11 @@ class CfgVehicles {
         category           = QGVAR(Persistency);
         function           = QFUNC(moduleManualLoadPlayers);
     };
+
+    class GVAR(moduleEditMoney): GVAR(moduleBase) {
+        displayName        = "Edit Money";
+        category           = QGVAR(Persistency);
+        function           = QFUNC(moduleEditMoney);
+        curatorCanAttach   = 1;
+    };
 };
