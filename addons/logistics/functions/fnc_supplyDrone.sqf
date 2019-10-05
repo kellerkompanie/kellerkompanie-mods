@@ -71,14 +71,7 @@ _group deleteGroupWhenEmpty true;
 
 _uav flyInHeight 30;
 
-private _actionTurnoff = [QGVAR(UAVFlyHome), "Turn off engine", "", {[_target, false] remoteExec ["engineOn", _target];}, {true}] call ace_interact_menu_fnc_createAction;
-private _actionFlyHome = [QGVAR(UAVFlyHome), "Return to Base", "", {_target remoteExec [QFUNC(droneReturnHome), _target];}, {true}] call ace_interact_menu_fnc_createAction;
-
-[_uav, 0, ["ACE_MainActions"], _actionTurnoff] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
-[_uav, 0, ["ACE_MainActions"], _actionFlyHome] remoteExec ["ace_interact_menu_fnc_addActionToObject", [0, -2] select isDedicated];
-
-//_uav move _targetPos;
-//[{unitReady _this}, {_this land "LAND";}, _uav] call CBA_fnc_waitUntilAndExecute;
+_uav remoteExec [QFUNC(addDroneActions), [0, -2] select isDedicated];
 
 private _dropLocationWaypoint = _group addWaypoint [_targetPos, 0];
 _dropLocationWaypoint setWaypointCompletionRadius 5;
