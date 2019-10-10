@@ -10,15 +10,10 @@ class CfgFunctions {
 
     class 3denEnhanced {
         tag = "Enh";
-        class Placement {
-            class garrisonNearest {
-                file = QPATHTOF(functions\fnc_garrisonNearest.sqf);
+        class Garrison {
+			class garrison_garrison {
+                file = QPATHTOF(functions\fnc_garrison.sqf);
             };
-        };
-        class PlacementTools {
-            class placementTools_garrison {
-                file = QPATHTOF(functions\fnc_placementTools_garrison.sqf);
-            };
-        };
+		};
     };
 };

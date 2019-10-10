@@ -10,7 +10,6 @@ PREP(check3denIncompatibility);
 PREP(check64bit);
 PREP(checkCustomFace);
 PREP(createZeus);
-PREP(garrisonNearest);
 PREP(getNumOpenWounds);
 PREP(lockDoors);
 PREP(lockDoorsDialogCallback);
