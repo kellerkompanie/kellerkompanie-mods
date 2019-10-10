@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="statistics">
+        <Key ID="STR_keko_statistics_settingEnabled">
+            <English>Collect statistics</English>
+            <German>Statistik sammeln</German>
+        </Key>
+        <Key ID="STR_keko_statistics_settingEnabledTooltip">
+            <English>Enable/Disable collection of statistics throughout mission.</English>
+            <German>Sammeln von Statistiken während der Mission aktivieren/deaktivieren.</German>
+        </Key>
+        <Key ID="STR_keko_statistics_cbaSettingsCategory">
+            <English>Kellerkompanie Statistics</English>
+            <German>Kellerkompanie Statistik</German>
+        </Key>
+        <Key ID="STR_keko_statistics_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_statistics_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+        <Key ID="STR_keko_statistics_statsKills">
+            <English>Your kill statistics</English>
+            <German>Deine Kill Statistik</German>
+        </Key>
+    </Package>
+</Project>
