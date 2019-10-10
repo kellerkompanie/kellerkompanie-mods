@@ -29,6 +29,8 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
+    EGVAR(punch,enabled) = false;
+
     player setVariable ["tf_unable_to_use_radio", false];
     call TFAR_fnc_onSwTangentReleased;
     call TFAR_fnc_onLRTangentReleased;
