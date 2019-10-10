@@ -10,6 +10,7 @@ PREP(check3denIncompatibility);
 PREP(check64bit);
 PREP(checkCustomFace);
 PREP(createZeus);
+PREP(exportToClipboard);
 PREP(getNumOpenWounds);
 PREP(lockDoors);
 PREP(lockDoorsDialogCallback);
