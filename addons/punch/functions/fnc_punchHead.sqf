@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
-
 params ["_player", "_target"];
 
 if !([_player, _target] call FUNC(canPunch)) exitWith {false};

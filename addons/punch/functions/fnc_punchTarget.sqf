@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {WARNING("punching disabled, exiting"); false};
-
 params ["_player"];
 
 [_player, cursorTarget] spawn {
@@ -11,7 +9,7 @@ params ["_player"];
     if (_dist <= 3) then {
         if (_target isKindOf "Man") then {
             if ([_player, _target] call FUNC(canPunch)) then {
-                
+
                 _player playActionNow "PutDown";
 
                 sleep 0.5;

@@ -17,7 +17,6 @@ params ["_player"];
 
                 [_player, QGVAR(KillSound)] remoteExec ["say3D", 0, false];
 
-                //[_target, true, 60, true] call ace_medical_fnc_setUnconscious;
                 _target call ace_medical_fnc_setDead;
 
                 if(isPlayer _target) then {
