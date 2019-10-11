@@ -17,7 +17,6 @@ profileNamespace setVariable [QGVAR(lastAction), _remove];
 private _logic = profileNamespace getVariable QGVAR(logic);
 
 private _object = attachedTo _logic;
-TRACE_1("dialogIntelCallback", _object);
 
 // TODO spawn object if not placed on object
 // ["Land_File1_F","Land_File2_F","Land_FilePhotos_F","Land_Map_F","Land_Map_unfolded_F","Land_Laptop_unfolded_F","Land_MobilePhone_smart_F","Land_Tablet_01_F","Land_Tablet_02_F"]
@@ -25,7 +24,6 @@ TRACE_1("dialogIntelCallback", _object);
 
 switch (true) do {
     case (isNull _object): {
-        ERROR("_object is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
