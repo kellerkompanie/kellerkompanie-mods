@@ -5,8 +5,6 @@ params ["_object", "_item"];
 private _load = _object getVariable QGVAR(load);
 private _type = _object getVariable QGVAR(type);
 
-INFO_3("refillVendingMachine _object=%1 _item=%2 _load=%3",_object,_item,_load);
-
 private _newLoad = [];
 {
     _x params ["_itemClass", "_itemAmount"];
@@ -30,8 +28,6 @@ switch (_type) do {
         [player, _item] call CBA_fnc_removeMagazine;
     };
 };
-
-INFO_1("refillVendingMachine _newLoad=%1",_newLoad);
 
 [] spawn {
     hint "Vending machine refilled";

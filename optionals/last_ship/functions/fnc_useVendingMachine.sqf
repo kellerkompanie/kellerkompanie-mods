@@ -5,8 +5,6 @@ params ["_object", "_item"];
 private _type = _object getVariable QGVAR(type);
 private _load = _object getVariable QGVAR(load);
 
-INFO_4("useVendingMachine _type=%1 _load=%2 _object=%3 _item=%4",_type,_load,_object,_item);
-
 private _prices = [
     ["murshun_cigs_cigpack",6],
     ["murshun_cigs_matches",1],
@@ -69,5 +67,3 @@ private _newLoad = [];
 } forEach _load;
 
 _object setVariable [QGVAR(load), _newLoad, true];
-
-INFO_1("useVendingMachine _newLoad=%1",_newLoad);

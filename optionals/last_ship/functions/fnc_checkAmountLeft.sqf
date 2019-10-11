@@ -5,8 +5,6 @@ params ["_object"];
 private _type = _object getVariable QGVAR(type);
 private _load = _object getVariable QGVAR(load);
 
-INFO_3("checkAmountLeft _type=%1 _load=%2 _object=%3",_type,_load,_object);
-
 private _messages = [];
 {
     _x params ["_itemClass", "_itemAmount"];
@@ -38,8 +36,6 @@ private _messages = [];
 
     _messages pushBack (format ["%1: %2", _itemString, _itemAmount]);
 } forEach _load;
-
-INFO_1("checkAmountLeft _messages=%1",_messages);
 
 [_messages] spawn {
     params ["_messages"];
