@@ -18,7 +18,6 @@
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits"];
-TRACE_4("statBarStatement_accuracy",_stat,_config,_statMinMax,_barLimits);
 
 private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
@@ -30,7 +29,6 @@ private _dispersion = [];
 } foreach _fireModes;
 
 _dispersion sort true;
-TRACE_1("",_dispersion);
 
 private _minFrom = _statMinMax select 0;
 private _maxFrom = _statMinMax select 1;
