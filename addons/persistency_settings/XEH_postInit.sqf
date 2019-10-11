@@ -10,10 +10,10 @@ if !(isServer) then {
     };
 };
 
-if (count EGVAR(persistency,key) > 32) then {
-    systemChat "[KEKO] (Persistency) WARNING: persistency key has more than 32 characters!";
-};
-
 if (hasInterface) then {
+    if (count EGVAR(persistency,key) > 32) then {
+        systemChat "[KEKO] (Persistency) WARNING: persistency key has more than 32 characters!";
+    };
+
     call FUNC(initializeUI);
 };

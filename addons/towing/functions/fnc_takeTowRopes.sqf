@@ -2,8 +2,6 @@
 
 params ["_player", "_vehicle"];
 
-TRACE_2("takeTowRopes", _player, _vehicle);
-
 if(local _vehicle) then {
     private ["_existingTowRopes","_hitchPoint","_rope"];
 

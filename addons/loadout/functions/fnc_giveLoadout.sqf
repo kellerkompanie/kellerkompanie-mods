@@ -14,7 +14,6 @@ if(_customLoadout) exitWith {
 private _specialLoadout = [];
 {
     _x params ["_loadoutDummyClass", "", "_loadout"];
-    INFO_2("_loadoutDummyClass = %1 | _role = %2", _loadoutDummyClass, _role);
     if (_role ==  _loadoutDummyClass) then {
         _specialLoadout = _loadout;
     };
@@ -158,16 +157,10 @@ if(count _backpack != 0) then {
     };
 };
 
-
-
 if(count _helmet != 0) then {
     private _random_helmet = selectRandom _helmet;
     _player addHeadgear _random_helmet;
 };
-
-
-
-
 
 private _defaultSmokeWhiteMagCount = getNumber(_smokeWhiteMagazinesCfg >> "default");
 private _defaultSmokeGreenMagCount = getNumber(_smokeGreenMagazinesCfg >> "default");
@@ -191,11 +184,6 @@ for [{_i = 0}, {_i < _smokeGreenMagCount}, {_i = _i + 1}] do {
     // TODO replace this with faction specific variant
     [_player, _smokeGreen] call CBA_fnc_addMagazine;
 };
-
-
-
-
-
 
 private _defaultSecondaryMagCount = getNumber(_secondaryMagazinesCfg >> "default");
 
@@ -254,9 +242,6 @@ if(count _secondary != 0) then {
         [_player, selectRandom _secondary_magazines] call CBA_fnc_addMagazine;
     };
 };
-
-
-
 
 private _defaultPrimaryMagCount = getNumber(_primaryMagazinesCfg >> "default");
 private _defaultUglMagCount = getNumber(_uglMagazinesCfg >> "default");
@@ -328,8 +313,6 @@ if(count _primary != 0) then {
     };
 };
 
-
-
 private _defaultGrenadeMagCount = getNumber(_grenadeMagazinesCfg >> "default");
 
 private _grenadeMagCount = _defaultGrenadeMagCount;
@@ -342,8 +325,6 @@ for [{_i = 0}, {_i < _grenadeMagCount}, {_i = _i + 1}] do {
     // TODO replace this with faction specific variant
     [_player, _grenade] call CBA_fnc_addMagazine;
 };
-
-
 
 private _defaultLauncherMagCount = getNumber(_launcherMagazinesCfg >> "default");
 
@@ -395,12 +376,6 @@ if(count _launcher != 0) then {
     };
 };
 
-
-
-
-
-
-
 if(count _goggles != 0) then {
     private _random_goggles = selectRandom _goggles;
     _player addGoggles _random_goggles;
@@ -425,13 +400,7 @@ if (!(_faces isEqualTo [])) then {
     [_player, _face] remoteExec ["setFace", 0, true];
 };
 
-
 _player enableSimulation true;
-
-
-
-// let TFAR initialize
-// sleep 3;
 
 // give radio
 if (GVAR(giveRadio) > 0) then {

@@ -2,8 +2,6 @@
 
 params ["_player", "_vehicle", ["_cargoCount",1]];
 
-INFO_3("deployRopes _player=%1 _vehicle=%2 _cargoCount=%3",_player,_vehicle,_cargoCount);
-
 if(local _vehicle) then {
     private _slingLoadPoints = [_vehicle] call FUNC(getSlingLoadPoints);
     private _existingRopes = _vehicle getVariable [QGVAR(Ropes),[]];

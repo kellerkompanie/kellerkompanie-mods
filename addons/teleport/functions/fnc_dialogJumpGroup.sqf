@@ -2,11 +2,7 @@
 
 params ["_player","_teleporterName"];
 
-TRACE_2("fnc_dialogJumpGroup", _player, _teleporterName);
-
 if (!isServer) exitWith {WARNING("fnc_dialogJumpGroup only permitted on server"); false};
-
-INFO("jumping group @ marker", _teleporterName);
 
 private _playerGroup = group _player;
 private _groupLeader = leader _playerGroup;

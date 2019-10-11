@@ -2,13 +2,10 @@
 
 private _logic = _this select 0;
 
-INFO("running modulePersistencyBlacklist3den");
-
 private _objects = synchronizedObjects _logic;
 
 if ((count _objects) > 0) then {
     {
-        TRACE_1("blacklisting object: %1", _x);
         _x setVariable [QEGVAR(persistency,isBlacklisted), true, true];
     } forEach _objects;
 } else {

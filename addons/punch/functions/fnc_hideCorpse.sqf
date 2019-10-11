@@ -1,9 +1,6 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {
-    WARNING("punching disabled, exiting");
-    false
-};
+if (!GVAR(enabled)) exitWith {false};
 
 params ["_player", "_target"];
 
@@ -20,3 +17,5 @@ params ["_player", "_target"];
 
     [_target] remoteExec ["deleteVehicle", _target];
 };
+
+true

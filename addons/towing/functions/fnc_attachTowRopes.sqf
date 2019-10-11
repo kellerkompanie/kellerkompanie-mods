@@ -5,8 +5,6 @@ private ["_vehicle"];
 
 _vehicle = _player getVariable [QGVAR(towRopesVehicle), objNull];
 
-TRACE_3("attachTowRopes", _player, _cargo, _vehicle);
-
 if(!isNull _vehicle) then {
     if(local _vehicle) then {
         private ["_towRopes","_vehicleHitch","_cargoHitch","_objDistance","_ropeLength"];

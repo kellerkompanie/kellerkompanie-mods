@@ -1,9 +1,6 @@
 #include "script_component.hpp"
 
-TRACE_1("addKekoFactionWeapons, whitelist before", GVAR(whitelist));
-
 private _weapon_config = configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction) >> "weapons";
-
 private _classNames = "true" configClasses _weapon_config apply {getText (_x >> "cfgName")};
 
 // weapons from config class
@@ -24,7 +21,6 @@ if !(isNil QEGVAR(loadout,customLoadouts)) then {
 private _crates = [["Kisten", EGVAR(logistics,customCrates)]];
 
 if(isNil "_crates") then {
-    INFO("_crates isNil");
     _crates = [];
 };
 
@@ -48,5 +44,3 @@ if(isNil "_crates") then {
         };
     } forEach EGVAR(logistics,customCrates) select 0;
 } forEach _crates;
-
-TRACE_1("addKekoFactionWeapons, whitelist after", GVAR(whitelist));

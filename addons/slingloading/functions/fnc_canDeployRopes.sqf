@@ -2,8 +2,6 @@
 
 params ["_player", "_vehicle"];
 
-INFO_2("canDeployRopes _player=%1 _vehicle=%2",_player,_vehicle);
-
 if!(_vehicle call FUNC(isSupportedVehicle)) exitWith { false };
 
 private _existingVehicle = _player getVariable [QGVAR(RopesVehicle), []];

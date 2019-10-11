@@ -28,3 +28,5 @@ if !([_player, _target] call FUNC(canPunch)) exitWith {false};
 
     };
 };
+
+true

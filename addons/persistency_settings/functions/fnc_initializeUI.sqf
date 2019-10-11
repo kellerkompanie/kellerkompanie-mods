@@ -5,7 +5,7 @@ private _isAdmin = (call BIS_fnc_admin) == 2;
 private _isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf QEGVAR(faction_generic,blufor_command) || (player isKindOf QEGVAR(faction_generic,indfor_command)) || (player isKindOf QEGVAR(faction_generic,opfor_command)));
 if !(_isCurator || _isAdmin) exitWith {};
 
-keko_persistency_crates = allMissionObjects "ReammoBox_F";
+EGVAR(persistency,crates) = allMissionObjects "ReammoBox_F";
 
 addMissionEventHandler ["Draw3D", {
     private _showUI = EGVAR(persistency,showUI);
@@ -36,6 +36,6 @@ addMissionEventHandler ["Draw3D", {
 }];
 
 [
-    {keko_persistency_crates = allMissionObjects "ReammoBox_F";},
-    keko_persistency_uiUpdateInterval
+    {EGVAR(persistency,crates) = allMissionObjects "ReammoBox_F";},
+    EGVAR(persistency,uiUpdateInterval)
 ] call CBA_fnc_addPerFrameHandler;

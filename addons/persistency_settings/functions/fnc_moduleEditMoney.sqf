@@ -12,7 +12,6 @@ switch (true) do {
         createDialog QGVAR(editMoneyDialog);
     };
     default {
-        ERROR_3("_object is null, destroyed, or not a player: isNull=%1 alive=%2 isPlayer=%3", isNull _object, alive _object, isPlayer _object);
         [objNull, "place on not destroyed object/player"] call bis_fnc_showCuratorFeedbackMessage;
     };
 };

@@ -9,8 +9,6 @@ lbClear _listBox;
 
 private _crates = GVAR(customCrates);
 
-TRACE_1("logisticsMenuInit", _crates);
-
 private _i = 0;
 {
     private _crate_name = "";

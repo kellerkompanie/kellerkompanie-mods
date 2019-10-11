@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {ERROR("addDeleteCrateAction can only be called on clients that have an interface!");};
+if !(hasInterface) exitWith {};
 
 params ["_uav"];
 

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {WARNING("killing disabled, exiting"); false};
+if (!GVAR(enabled)) exitWith {false};
 
 params ["_player", "_target"];
 
@@ -20,3 +20,5 @@ params ["_player", "_target"];
         _msg remoteExec ["diag_log", 2, false];
     };
 };
+
+true

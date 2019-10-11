@@ -11,7 +11,6 @@ switch (true) do {
         _object remoteExec [QEFUNC(persistency,enableObjectPersistency), 2];
     };
     default {
-        ERROR("_object is null or destroyed");
         [objNull, "place on not destroyed object/player"] call bis_fnc_showCuratorFeedbackMessage;
     };
 };

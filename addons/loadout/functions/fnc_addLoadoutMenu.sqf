@@ -13,7 +13,7 @@ if(_faction isEqualTo "DEFAULT") then {
 
         // script
         {
-            params ["_target", "_caller", "_actionId", "_arguments"];
+            params ["_target", "_caller", "", "_arguments"];
             _arguments params ["_faction"];
 
             [_caller, _faction, _target] call FUNC(openLoadoutMenu);

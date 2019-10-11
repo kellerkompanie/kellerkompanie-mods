@@ -151,11 +151,6 @@ GVAR(currentUAVs) = 0;
 
 
 
-
-
-
-
-
 // Fuel Consumption Settings
 
 [

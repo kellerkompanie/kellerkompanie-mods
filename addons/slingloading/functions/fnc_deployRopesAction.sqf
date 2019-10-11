@@ -2,8 +2,6 @@
 
 params ["_player", "_vehicle"];
 
-INFO_2("deployRopesAction _player=%1 _vehicle=%2",_player,_vehicle);
-
 private _canDeployRopes = true;
 
 if!(missionNamespace getVariable [QGVAR(LockedVehiclesEnabled),false]) then {
