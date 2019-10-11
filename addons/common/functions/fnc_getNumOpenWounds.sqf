@@ -67,5 +67,4 @@ private _rightLegWounds = 0;
     };
 } forEach _openWounds;
 
-INFO_1("# of _openWounds = %1", _headWounds + _bodyWounds + _leftArmWounds + _leftLegWounds + _rightArmWounds + _rightLegWounds);
 _headWounds + _bodyWounds + _leftArmWounds + _leftLegWounds + _rightArmWounds + _rightLegWounds

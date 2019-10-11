@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-INFO("running check3denIncompatibility");
-
 private _incompatibleAddonPrefixes = [
     "warfxpe",
     "blastcore",

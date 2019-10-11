@@ -17,8 +17,6 @@
 
 params ["_position", "_respawnSide"];
 
-INFO_2("setting respawn position %1 for side %2", _position, _respawnSide);
-
 private _respawnSuffix = "";
 
 switch(_respawnSide) do {

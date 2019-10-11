@@ -25,8 +25,6 @@ private _handle = _this spawn {
     // give enough time for headless clients to take over AI
     waitUntil{time > 30};
 
-    INFO("running moduleACEGarrison3den");
-
     private _pos = getPos _logic;
     private _radiusStr = _logic getVariable ["Radius", 100];
     private _radius = parseNumber _radiusStr;
@@ -45,9 +43,7 @@ private _handle = _this spawn {
             } forEach _group;
         } forEach _objects;
 
-        TRACE_5("calling ace_ai_fnc_garrison", _units, _radius, _mode, _topDownMode, _teleport);
         [_pos, ["Building"], _units, _radius, _mode, _topDownMode, _teleport] call ace_ai_fnc_garrison;
-
     };
     deleteVehicle _logic;
 };

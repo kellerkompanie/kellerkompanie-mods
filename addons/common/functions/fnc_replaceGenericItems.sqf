@@ -87,8 +87,6 @@ if (_launcherWeapon != "") then {
         // unit has a real launcher, replace the dummy missile
         private _launcherMag = getText(configFile >> "kekoGenericMagazines" >> "Launcher" >> _launcherWeapon);
 
-        INFO_1("_launcherMag %1", _launcherMag);
-
         if (_launcherWeapon in GVAR(atLaunchers)) then {
             while {"keko_AntiTankMag" in items _unit} do {
                 _unit removeItem "keko_AntiTankMag";

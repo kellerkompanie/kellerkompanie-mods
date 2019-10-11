@@ -23,11 +23,9 @@ private _target = attachedTo _logic;
 
 switch (true) do {
     case (isNull _target): {
-        ERROR("_target is null");
         [objNull, "nothing selected"] call bis_fnc_showCuratorFeedbackMessage;
     };
     case (alive _target): {
-        ERROR("moduleResurrect: _target is alive");
         [objNull, "place on dead"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {

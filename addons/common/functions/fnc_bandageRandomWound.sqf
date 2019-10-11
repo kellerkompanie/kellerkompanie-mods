@@ -72,8 +72,6 @@ private _woundedBodyParts = [];
     };
 } forEach _openWounds;
 
-INFO_1("_woundedBodyParts %1",_woundedBodyParts);
-
 // preferablly bandage head and torso wounds first
 if("head" in _woundedBodyParts) then {
     private _i = 0;
