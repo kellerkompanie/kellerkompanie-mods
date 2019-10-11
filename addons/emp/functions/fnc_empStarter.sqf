@@ -1,8 +1,6 @@
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 #include "script_component.hpp"
 
-TRACE_1("empStarter", _this);
-
 if (!isServer) exitWith {};
 
 params ["_empSourceObject", "_empRange", "_hasVisualEffect", "_hasVisualEffectOnPlayer"];

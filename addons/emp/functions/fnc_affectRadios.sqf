@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!isServer) exitWith {WARNING("function affectRadios needs to be run on server! exiting.")};
+if (!isServer) exitWith {};
 
 params ["_origin", "_range"];
 
