@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-if !(GVAR(enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
-if (GVAR(key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
-
-INFO("running XEH_postInit");
+if !(GVAR(enabled)) exitWith{};
+if (GVAR(key) == "") exitWith{};
 
 if(GVAR(autosaveInterval) > 0) then {
     [] spawn {

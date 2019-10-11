@@ -2,7 +2,7 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if (GVAR(vehiclesEnabled) == 0) exitWith{WARNING("loadVehicle: persistency for vehicles is disabled, exiting!"); false};
+if (GVAR(vehiclesEnabled) == 0) exitWith{false};
 
 params ["_vehicle"];
 
@@ -21,8 +21,6 @@ private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency
 
 if !((_ret select 0) == 1) exitWith {ERROR("loadVehicleObject: loading unsucessful", _ret); false};
 
-TRACE_1("loadVehicle: loading sucessful", _ret);
-
 // assume loading was sucess
 ((_ret select 1) select 0) params [
     "", // _class
@@ -34,8 +32,6 @@ TRACE_1("loadVehicle: loading sucessful", _ret);
     "_containers",
     "_fuel",
     "_damage"];
-
-TRACE_6("loadVehicle", _class, _position, _orientation, _fuel, _damage, _items);
 
 // spawn vehicle slightly higher to prevent getting it stucked in the surface
 private _z = _position select 2;

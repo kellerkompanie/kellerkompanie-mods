@@ -6,8 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-if !(GVAR(enabled)) exitWith{WARNING("preInit: persistency disabled, exiting!"); false};
-if (GVAR(key) == "") exitWith{WARNING("preInit: persistency key not set, exiting!"); false};
+if !(GVAR(enabled)) exitWith{};
+if (GVAR(key) == "") exitWith{};
 
 addMissionEventHandler ["HandleDisconnect",
 {

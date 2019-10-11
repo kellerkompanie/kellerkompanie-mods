@@ -2,13 +2,12 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if (GVAR(playersEnabled) == 0) exitWith{WARNING("loadPlayerLoadout: persistency for players is disabled, exiting!"); false};
+if (GVAR(playersEnabled) == 0) exitWith{false};
 
 params ["_playerUnit"];
 
 private _playerUID = getPlayerUID _playerUnit;
 if (_playerUID find "HC" >= 0) exitWith {
-    INFO("loadPlayerLoadout exiting beacuse playerUID contains 'HC'");
     false
 };
 
@@ -18,8 +17,6 @@ if ((_ret select 0) != 1) exitWith {
     ERROR("loadPlayerLoadout: loading unsucessful", _ret);
     false
 };
-
-INFO_1("loadPlayerLoadout: loading sucessful %1", _ret);
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [

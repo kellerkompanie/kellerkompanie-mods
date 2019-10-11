@@ -7,8 +7,6 @@ private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency
 
 private _existingVariables = allVariables missionNamespace;
 if ((_ret select 0) == 1) then {
-    INFO("generateNewObjectVariable: loading from db sucessful");
-
     {
         private _objectVariable = _x select 0;
         _existingVariables pushBack _objectVariable;

@@ -2,15 +2,11 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if (GVAR(playersEnabled) == 0) exitWith{WARNING("saveAllPlayers: persistency for players is disabled, exiting!"); 0};
+if (GVAR(playersEnabled) == 0) exitWith{0};
 
 params [
     ["_forceSave", false]
 ];
-
-if (_forceSave) then {
-    INFO("saveAllPlayers: performing force save");
-};
 
 private _allHCs = entities "HeadlessClient_F";
 private _allPlayers = allPlayers - _allHCs;
@@ -27,7 +23,5 @@ private _successfulSaves = 0;
         };
     };
 } forEach _allPlayers;
-
-INFO_2("saveAllPlayers: saved %1/%2 crates successfully", _successfulSaves, count _allPlayers);
 
 _successfulSaves

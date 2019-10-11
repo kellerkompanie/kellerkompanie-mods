@@ -18,7 +18,6 @@ clearItemCargoGlobal _crate;
     _crate addMagazineAmmoCargo [_magazineType, 1, _magazineAmmo];
 } forEach _magazines;
 
-
 {
     private _elem = _x;
     {
@@ -41,8 +40,6 @@ clearItemCargoGlobal _crate;
         };
     } forEach _elem;
 } forEach _weapons;
-
-
 
 {
     _x params ["_containerType", "_containerItems", "_containerMagazines", "_containerWeapons"];

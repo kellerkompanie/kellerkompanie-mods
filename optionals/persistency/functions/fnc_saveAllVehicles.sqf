@@ -2,7 +2,7 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if (GVAR(vehiclesEnabled) == 0) exitWith{WARNING("saveAllVehicles: persistency for vehicles is disabled, exiting!"); 0};
+if (GVAR(vehiclesEnabled) == 0) exitWith{0};
 
 private _allPlaneObjects = allMissionObjects "Plane";
 private _allHelicopterObjects = allMissionObjects "Helicopter";
@@ -17,8 +17,6 @@ _allPossibleVehicles = _allPossibleVehicles + _allShipObjects;
 _allPossibleVehicles = _allPossibleVehicles + _allCarObjects;
 _allPossibleVehicles = _allPossibleVehicles + _allTankObjects;
 
-INFO_1("saveAllVehicles: saving vehicles", count _allPossibleVehicles);
-
 private _successfulSaves = 0;
 {
     private _isBlacklisted = _x getVariable [QGVAR(isBlacklisted), false];
@@ -31,7 +29,5 @@ private _successfulSaves = 0;
         };
     };
 } forEach _allPossibleVehicles;
-
-INFO_2("saveAllVehicles: saved %1/%2 vehicles successfully", _successfulSaves, count _allPossibleVehicles);
 
 _successfulSaves

@@ -2,7 +2,7 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if (GVAR(playersEnabled) == 0) exitWith{WARNING("savePlayerLoadout: persistency for players is disabled, exiting!"); false};
+if (GVAR(playersEnabled) == 0) exitWith{false};
 
 params [
     ["_playerUnit", nil],
@@ -29,13 +29,7 @@ if (!_forceSave && (_hasDBLoadoutEntry && !_hasReceivedDBLoadout)) exitWith {
 };
 
 private _playerName = name _playerUnit;
-
-INFO_3("savePlayerLoadout: _playerUID=%1 _playerName=%2 _playerUnit=%3", _playerUID, _playerName, _playerUnit);
-
-if (_playerUID find "HC" >= 0) exitWith {
-    WARNING("savePlayerLoadout: HC detected, exiting!");
-    false
-};
+if (_playerUID find "HC" >= 0) exitWith {false};
 
 private _loadout = getUnitLoadout _playerUnit;
 private _medicClass = _playerUnit getVariable ["ace_medical_medicClass", 0];
@@ -56,7 +50,5 @@ private _position = getPos _playerUnit;
 if (GVAR(moneyEnabled)) then {
     _playerUnit call FUNC(saveMoney);
 };
-
-INFO_1("saved loadout of %1", _playerUnit);
 
 true

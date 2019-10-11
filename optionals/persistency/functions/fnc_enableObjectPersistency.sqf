@@ -3,12 +3,12 @@
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
 
-if !(isServer) exitWith {ERROR("enableObjectPersistency needs to be run on server, exiting");};
+if !(isServer) exitWith {};
 
 params ["_object"];
 
-if (isNull _object) exitWith {ERROR("enableObjectPersistency object is null, exiting");};
-if (!alive _object) exitWith {ERROR("enableObjectPersistency object is destroyed, exiting");};
+if (isNull _object) exitWith {};
+if (!alive _object) exitWith {};
 
 _object setVariable [QGVAR(persistencyEnabled), true, true];
 

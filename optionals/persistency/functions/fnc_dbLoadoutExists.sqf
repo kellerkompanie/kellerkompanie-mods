@@ -10,7 +10,6 @@ private _playerUID = getPlayerUID _player;
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:containsLoadout:%1:%2", GVAR(key), _playerUID]);
 private _playerExists = false;
 if ((_ret select 0) == 1) then {
-    INFO_1("dbLoadoutExists: loading sucessful %1", _ret);
     if (count (_ret select 1) == 1) then {
         _playerExists = true;
     };

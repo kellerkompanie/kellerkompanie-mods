@@ -2,7 +2,7 @@
 
 EXIT_IF_PERSISTENCY_DISABLED;
 EXIT_IF_KEY_INVALID;
-if !(GVAR(moneyEnabled)) exitWith {WARNING("saveMoney: persistency for money is disabled, exiting!"); false};
+if !(GVAR(moneyEnabled)) exitWith {false};
 
 params ["_playerUnit"];
 
@@ -18,5 +18,3 @@ private _bank = _playerUnit getVariable [QGVAR(bank), GVAR(defaultMoneyBank)];
     _playerName,
     _money,
     _bank];
-
-INFO_3("saving money of player", _playerName, _money, _bank);
