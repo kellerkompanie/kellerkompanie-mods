@@ -3,11 +3,9 @@
 params ["_endType"];
 
 _ret = "extDB3" callExtension format [ "0:keko_logging:onMissionEnd:%1:%2:%3", missionName, missionVersion, worldName ];
-TRACE_3("endMission", missionName, missionVersion, worldName);
-TRACE_1("endMission", _ret);
 
 {
-	disableUserInput true;
+    disableUserInput true;
 } remoteExec ["bis_fnc_call", 0];
 
 if(_endType == "WIN") then {
