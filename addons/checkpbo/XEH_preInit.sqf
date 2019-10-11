@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 if (isServer) then {
-    private _onPlayerConnectedHandler = addMissionEventHandler ["PlayerConnected",
+    addMissionEventHandler ["PlayerConnected",
     {
         params ["_id", "_uid", "_name", "_jip", "_owner"];
 
