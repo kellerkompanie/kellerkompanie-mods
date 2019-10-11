@@ -17,6 +17,4 @@ if (_isRuin) then {
     } forEach _aiInBuilding;
 
     {deleteVehicle _x} forEach _objectsInBuilding;
-
-    INFO("Killed AI and removed objects from a ruin");
 };
