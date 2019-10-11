@@ -1,60 +1,60 @@
 class CfgSounds {
-	sounds[] = {};
-	class GVAR(02_gangster_gesichtet)	{
-		name = QGVAR(02_gangster_gesichtet);
-		sound[] = {QPATHTOF(sounds\02_gangster_gesichtet.ogg), db+10, 1, 100};
-		titles[] = { 1, "Gangster gesichtet!" };
-	};
-	class GVAR(02_ganz_ruhig)	{
-		name = QGVAR(02_ganz_ruhig);
-		sound[] = {QPATHTOF(sounds\02_ganz_ruhig.ogg), db+10, 1, 100};
-		titles[] = { 1, "Ganz ruhig!" };
-	};
-	class GVAR(02_halt_oder_ich_schiesse)	{
-		name = QGVAR(02_halt_oder_ich_schiesse);
-		sound[] = {QPATHTOF(sounds\02_halt_oder_ich_schiesse.ogg), db+10, 1, 100};
-		titles[] = { 1, "Halt, oder ich schieße!" };
-	};
-	class GVAR(02_keine_bewegung)	{
-		name = QGVAR(02_keine_bewegung);
-		sound[] = {QPATHTOF(sounds\02_keine_bewegung.ogg), db+10, 1, 100};
-		titles[] = { 1, "Keine Bewegung, dann passiert dir nichts!" };
-	};
-	class GVAR(02_polizei01)	{
-		name = QGVAR(02_polizei01);
-		sound[] = {QPATHTOF(sounds\02_polizei01.ogg), db+10, 1, 100};
-		titles[] = { 1, "Polizei!" };
-	};
-	class GVAR(02_polizei02)	{
-		name = QGVAR(02_polizei02);
-		sound[] = {QPATHTOF(sounds\02_polizei02.ogg), db+10, 1, 100};
-		titles[] = { 1, "Polizei!" };
-	};
-	class GVAR(02_polizei03)	{
-		name = QGVAR(02_polizei03);
-		sound[] = {QPATHTOF(sounds\02_polizei03.ogg), db+10, 1, 100};
-		titles[] = { 1, "Polizei!" };
-	};
-	class GVAR(02_polizei04)	{
-		name = QGVAR(02_polizei04);
-		sound[] = {QPATHTOF(sounds\02_polizei04.ogg), db+10, 1, 100};
-		titles[] = { 1, "Polizei!" };
-	};
-	class GVAR(02_polizei05)	{
-		name = QGVAR(02_polizei05);
-		sound[] = {QPATHTOF(sounds\02_polizei05.ogg), db+10, 1, 100};
-		titles[] = { 1, "Polizei!" };
-	};
-	class GVAR(02_sofort_stehenbleiben)	{
-		name = QGVAR(02_sofort_stehenbleiben);
-		sound[] = {QPATHTOF(sounds\02_sofort_stehenbleiben.ogg), db+10, 1, 100};
-		titles[] = { 1, "Sofort stehenbleiben!" };
-	};
-	class GVAR(02_waffe_weg)	{
-		name = QGVAR(02_waffe_weg);
-		sound[] = {QPATHTOF(sounds\02_waffe_weg.ogg), db+10, 1, 100};
-		titles[] = { 1, "Waffe weg!" };
-	};
+    sounds[] = {};
+    class GVAR(02_gangster_gesichtet)    {
+        name = QGVAR(02_gangster_gesichtet);
+        sound[] = {QPATHTOF(sounds\02_gangster_gesichtet.ogg), db+10, 1, 100};
+        titles[] = { 1, "Gangster gesichtet!" };
+    };
+    class GVAR(02_ganz_ruhig)    {
+        name = QGVAR(02_ganz_ruhig);
+        sound[] = {QPATHTOF(sounds\02_ganz_ruhig.ogg), db+10, 1, 100};
+        titles[] = { 1, "Ganz ruhig!" };
+    };
+    class GVAR(02_halt_oder_ich_schiesse)    {
+        name = QGVAR(02_halt_oder_ich_schiesse);
+        sound[] = {QPATHTOF(sounds\02_halt_oder_ich_schiesse.ogg), db+10, 1, 100};
+        titles[] = { 1, "Halt, oder ich schieße!" };
+    };
+    class GVAR(02_keine_bewegung)    {
+        name = QGVAR(02_keine_bewegung);
+        sound[] = {QPATHTOF(sounds\02_keine_bewegung.ogg), db+10, 1, 100};
+        titles[] = { 1, "Keine Bewegung, dann passiert dir nichts!" };
+    };
+    class GVAR(02_polizei01)    {
+        name = QGVAR(02_polizei01);
+        sound[] = {QPATHTOF(sounds\02_polizei01.ogg), db+10, 1, 100};
+        titles[] = { 1, "Polizei!" };
+    };
+    class GVAR(02_polizei02)    {
+        name = QGVAR(02_polizei02);
+        sound[] = {QPATHTOF(sounds\02_polizei02.ogg), db+10, 1, 100};
+        titles[] = { 1, "Polizei!" };
+    };
+    class GVAR(02_polizei03)    {
+        name = QGVAR(02_polizei03);
+        sound[] = {QPATHTOF(sounds\02_polizei03.ogg), db+10, 1, 100};
+        titles[] = { 1, "Polizei!" };
+    };
+    class GVAR(02_polizei04)    {
+        name = QGVAR(02_polizei04);
+        sound[] = {QPATHTOF(sounds\02_polizei04.ogg), db+10, 1, 100};
+        titles[] = { 1, "Polizei!" };
+    };
+    class GVAR(02_polizei05)    {
+        name = QGVAR(02_polizei05);
+        sound[] = {QPATHTOF(sounds\02_polizei05.ogg), db+10, 1, 100};
+        titles[] = { 1, "Polizei!" };
+    };
+    class GVAR(02_sofort_stehenbleiben)    {
+        name = QGVAR(02_sofort_stehenbleiben);
+        sound[] = {QPATHTOF(sounds\02_sofort_stehenbleiben.ogg), db+10, 1, 100};
+        titles[] = { 1, "Sofort stehenbleiben!" };
+    };
+    class GVAR(02_waffe_weg)    {
+        name = QGVAR(02_waffe_weg);
+        sound[] = {QPATHTOF(sounds\02_waffe_weg.ogg), db+10, 1, 100};
+        titles[] = { 1, "Waffe weg!" };
+    };
 
     class GVAR(03_ergeben_guuut_guuut)    {
         name = QGVAR(03_ergeben_guuut_guuut);
@@ -447,7 +447,7 @@ class CfgSounds {
         titles[] = { 1, "Verdammt!"};
     };
     class GVAR(13_verdammt_cops)   {
-		name = QGVAR(13_verdammt_cops);
+        name = QGVAR(13_verdammt_cops);
         sound[] = {QPATHTOF(sounds\13_verdammt_cops.ogg), 1, 1, 100};
         titles[] = { 1, "Verdammt, Cops!"};
     };

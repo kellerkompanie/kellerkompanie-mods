@@ -2,8 +2,6 @@
 
 if !(isServer) exitWith {};
 
-INFO_1("_this %1" , _this);
-
 params ["_target", "_player", "_params"];
 _params params ["_loc_id","_loc_name","_loc_type","_loc_radius"];
 
@@ -24,9 +22,9 @@ private _musicTrack = selectRandom [QGVAR(capture01),QGVAR(capture02),QGVAR(capt
 private _allHCs = entities "HeadlessClient_F";
 private _allHPs = allPlayers - _allHCs;
 {
-	_musicTrack remoteExec ["playMusic", _x];
-	[250,0] remoteExecCall ["HG_fnc_addOrSubXP",_x];
-	[["Location captured (+250XP)", "PLAIN"]] remoteExec ["cutText", _x];
+    _musicTrack remoteExec ["playMusic", _x];
+    [250,0] remoteExecCall ["HG_fnc_addOrSubXP",_x];
+    [["Location captured (+250XP)", "PLAIN"]] remoteExec ["cutText", _x];
 } forEach _allHPs;
 
 [QGVAR(onLocationCaptured), [_player,_loc_id,_loc_name,_loc_type,_loc_radius]] call CBA_fnc_globalEvent;
@@ -39,14 +37,14 @@ _smokerRed hideObjectGlobal true;
 _smokerBlue hideObjectGlobal true;
 
 [_fireworksLocation] spawn {
-	params ["_fireworksLocation"];
+    params ["_fireworksLocation"];
 
-	sleep 5;
-	[_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
-	sleep 1;
-	[_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
-	sleep 1;
-	[_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
+    sleep 5;
+    [_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
+    sleep 1;
+    [_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
+    sleep 1;
+    [_fireworksLocation, 'random','random'] call GRAD_fireworks_fnc_prepareFireworks;
 };
 
 

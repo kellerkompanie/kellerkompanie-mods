@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS redneck_locations (
-	LocationID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	PersistencyKey CHAR(32) NOT NULL,
-	LocationVariable CHAR(64) NOT NULL,
-	Side ENUM('BLACKORDER','REDNECK') NOT NULL,
-	UNIQUE (PersistencyKey, LocationVariable))
+    LocationID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    PersistencyKey CHAR(32) NOT NULL,
+    LocationVariable CHAR(64) NOT NULL,
+    Side ENUM('BLACKORDER','REDNECK') NOT NULL,
+    UNIQUE (PersistencyKey, LocationVariable))
 CHARACTER SET 'utf8'
 COLLATE 'utf8_german2_ci';

@@ -1,5 +1,5 @@
 class CfgMusicClasses {
-	class GVAR(audio) {
-		displayName = "Redneck";
-	};
+    class GVAR(audio) {
+        displayName = "Redneck";
+    };
 };

@@ -17,16 +17,16 @@ PREP_RECOMPILE_END;
 
 
 [
-	QGVAR(enable), // key/reference variable
-	"LIST", // type of setting
-	["Enabled", "Enable/Disable police functions"], // name and tooltip
-	CBA_SETTINGS_CATEGORY, // category
-	[
-		[true,false], // values
-		["Enabled","Disabled"], // names
-		1 // default index
-	],
-	1
+    QGVAR(enable), // key/reference variable
+    "LIST", // type of setting
+    ["Enabled", "Enable/Disable police functions"], // name and tooltip
+    CBA_SETTINGS_CATEGORY, // category
+    [
+        [true,false], // values
+        ["Enabled","Disabled"], // names
+        1 // default index
+    ],
+    1
 ] call cba_settings_fnc_init;
 
 [

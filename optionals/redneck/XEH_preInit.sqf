@@ -17,16 +17,16 @@ GVAR(LocationMapKeys) = [];
 GVAR(LocationMapValues) = [];
 
 if (isServer) then {
-	private _dbLocations = call FUNC(dbGetLocations);
+    private _dbLocations = call FUNC(dbGetLocations);
 
-	{
-		_x params ["_locationVariable", "_side"];
-		GVAR(LocationMapKeys) pushBack _locationVariable;
-		GVAR(LocationMapValues) pushBack ["", "", "", _side, ""];
-	} forEach _dbLocations;
+    {
+        _x params ["_locationVariable", "_side"];
+        GVAR(LocationMapKeys) pushBack _locationVariable;
+        GVAR(LocationMapValues) pushBack ["", "", "", _side, ""];
+    } forEach _dbLocations;
 
-	publicVariable QGVAR(LocationMapKeys);
-	publicVariable QGVAR(LocationMapValues);
+    publicVariable QGVAR(LocationMapKeys);
+    publicVariable QGVAR(LocationMapValues);
 };
 
 ADDON = true;

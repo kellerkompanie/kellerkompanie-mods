@@ -20,125 +20,125 @@ private _markerColor = "colorCivilian";
 private _markerScale = 1.0;
 
 switch (_poi_type) do {
-		case 0: {
-			/* ATM */
-			_entityClass = QGVAR(civilian_atm);
-			_markerType = QGVAR(icon_atm);
-			_markerColor = "ColorGUER";
-			_markerScale = 0.8;
-		};
-		case 1: {
-			/* Item Shop */
-			_entityClass = QGVAR(civilian_item_shop);
-			_markerType = QGVAR(icon_itemshop);
-		};
-		case 2: {
-			/* Gear Shop */
-			_entityClass = QGVAR(civilian_gear_shop);
-			_markerType = QGVAR(icon_gearshop);
-		};
-		case 3: {
-			/* Vehicle Shop */
-			_entityClass = QGVAR(civilian_vehicle_shop);
-			_markerType = QGVAR(icon_vehicleshop);
-			_markerColor = "ColorBlue";
-			_markerScale = 0.9;
-		};
-		case 4: {
-			/* Garage */
-			_entityClass = QGVAR(civilian_garage);
-			_markerType = QGVAR(icon_garage);
-			_markerColor = "ColorBlue";
-		};
-		case 5: {
-			/* Parking */
-			_entityClass = QGVAR(civilian_parking);
-			_markerType = QGVAR(icon_parking);
-			_markerColor = "ColorBlue";
-			_markerScale = 0.6;
-		};
-		case 6: {
-			/* Car Dealer */
-			_entityClass = QGVAR(civilian_cardealer);
-			_markerType = QGVAR(icon_cardealer);
-			_markerColor = "ColorBlue";
-			_markerScale = 0.6;
-		};
-		case 7: {
-			/* Trader */
-			_entityClass = QGVAR(civilian_trader);
-			_markerType = QGVAR(icon_trader);
-			_markerColor = "ColorGUER";
-			_markerScale = 0.7;
-		};
-		case 8: {
-			/* Pharmacy */
-			_entityClass = QGVAR(civilian_pharmacist);
-			_markerType = QGVAR(icon_pharmacy);
-			_markerColor = "ColorRed";
-			_markerScale = 0.7;
-		};
-		case 9: {
-			/* Hangar */
-			_entityClass = QGVAR(civilian_hangar);
-			_markerType = QGVAR(icon_hangar);
-			_markerColor = "ColorOrange";
-		};
-		case 10: {
-			/* Weapon Shop */
-			_entityClass = QGVAR(civilian_weapon_shop);
-			_markerType = QGVAR(icon_weaponshop);
-		};
-		case 11: {
-			/* Mechanic */
-			_entityClass = QGVAR(civilian_mechanic);
-			_markerType = QGVAR(icon_mechanic);
-			_markerScale = 0.7;
-			_markerColor = "ColorUNKNOWN";
-		};
-		case 12: {
-			/* Doctor */
-			_entityClass = QGVAR(civilian_doctor);
-			_markerType = QGVAR(icon_doctor);
-			_markerColor = "ColorRed";
-		};
-		case 13: {
-			/* Fuel Shop */
-			_entityClass = QGVAR(civilian_fuel_shop);
-			_markerType = QGVAR(icon_fuelshop);
-			_markerScale = 0.6;
-			_markerColor = "ColorUNKNOWN";
-		};
-		case 14: {
-			/* Heli Shop */
-			_entityClass = QGVAR(civilian_helipilot);
-			_markerType = QGVAR(icon_helicopter);
-			_markerColor = "ColorOrange";
-		};
-		case 15: {
-			/* Plane Shop */
-			_entityClass = QGVAR(civilian_pilot);
-			_markerType = QGVAR(icon_plane);
-			_markerColor = "ColorOrange";
-		};
-		case 16: {
-			/* Helipad */
-			_entityClass = QGVAR(civilian_hangar);
-			_markerType = QGVAR(icon_helipad);
-			_markerColor = "ColorOrange";
-		};
-		case 17: {
-			/* Aircraft Dealer */
-			_entityClass = QGVAR(civilian_cardealer);
-			_markerType = QGVAR(icon_aircraftdealer);
-			_markerColor = "ColorOrange";
-		};
-		case 18: {
-			/* Base Builder */
-			_entityClass = QGVAR(civilian_builder);
-			_markerType = QGVAR(icon_pickaxe);
-			_markerScale = 0;
-		};
+        case 0: {
+            /* ATM */
+            _entityClass = QGVAR(civilian_atm);
+            _markerType = QGVAR(icon_atm);
+            _markerColor = "ColorGUER";
+            _markerScale = 0.8;
+        };
+        case 1: {
+            /* Item Shop */
+            _entityClass = QGVAR(civilian_item_shop);
+            _markerType = QGVAR(icon_itemshop);
+        };
+        case 2: {
+            /* Gear Shop */
+            _entityClass = QGVAR(civilian_gear_shop);
+            _markerType = QGVAR(icon_gearshop);
+        };
+        case 3: {
+            /* Vehicle Shop */
+            _entityClass = QGVAR(civilian_vehicle_shop);
+            _markerType = QGVAR(icon_vehicleshop);
+            _markerColor = "ColorBlue";
+            _markerScale = 0.9;
+        };
+        case 4: {
+            /* Garage */
+            _entityClass = QGVAR(civilian_garage);
+            _markerType = QGVAR(icon_garage);
+            _markerColor = "ColorBlue";
+        };
+        case 5: {
+            /* Parking */
+            _entityClass = QGVAR(civilian_parking);
+            _markerType = QGVAR(icon_parking);
+            _markerColor = "ColorBlue";
+            _markerScale = 0.6;
+        };
+        case 6: {
+            /* Car Dealer */
+            _entityClass = QGVAR(civilian_cardealer);
+            _markerType = QGVAR(icon_cardealer);
+            _markerColor = "ColorBlue";
+            _markerScale = 0.6;
+        };
+        case 7: {
+            /* Trader */
+            _entityClass = QGVAR(civilian_trader);
+            _markerType = QGVAR(icon_trader);
+            _markerColor = "ColorGUER";
+            _markerScale = 0.7;
+        };
+        case 8: {
+            /* Pharmacy */
+            _entityClass = QGVAR(civilian_pharmacist);
+            _markerType = QGVAR(icon_pharmacy);
+            _markerColor = "ColorRed";
+            _markerScale = 0.7;
+        };
+        case 9: {
+            /* Hangar */
+            _entityClass = QGVAR(civilian_hangar);
+            _markerType = QGVAR(icon_hangar);
+            _markerColor = "ColorOrange";
+        };
+        case 10: {
+            /* Weapon Shop */
+            _entityClass = QGVAR(civilian_weapon_shop);
+            _markerType = QGVAR(icon_weaponshop);
+        };
+        case 11: {
+            /* Mechanic */
+            _entityClass = QGVAR(civilian_mechanic);
+            _markerType = QGVAR(icon_mechanic);
+            _markerScale = 0.7;
+            _markerColor = "ColorUNKNOWN";
+        };
+        case 12: {
+            /* Doctor */
+            _entityClass = QGVAR(civilian_doctor);
+            _markerType = QGVAR(icon_doctor);
+            _markerColor = "ColorRed";
+        };
+        case 13: {
+            /* Fuel Shop */
+            _entityClass = QGVAR(civilian_fuel_shop);
+            _markerType = QGVAR(icon_fuelshop);
+            _markerScale = 0.6;
+            _markerColor = "ColorUNKNOWN";
+        };
+        case 14: {
+            /* Heli Shop */
+            _entityClass = QGVAR(civilian_helipilot);
+            _markerType = QGVAR(icon_helicopter);
+            _markerColor = "ColorOrange";
+        };
+        case 15: {
+            /* Plane Shop */
+            _entityClass = QGVAR(civilian_pilot);
+            _markerType = QGVAR(icon_plane);
+            _markerColor = "ColorOrange";
+        };
+        case 16: {
+            /* Helipad */
+            _entityClass = QGVAR(civilian_hangar);
+            _markerType = QGVAR(icon_helipad);
+            _markerColor = "ColorOrange";
+        };
+        case 17: {
+            /* Aircraft Dealer */
+            _entityClass = QGVAR(civilian_cardealer);
+            _markerType = QGVAR(icon_aircraftdealer);
+            _markerColor = "ColorOrange";
+        };
+        case 18: {
+            /* Base Builder */
+            _entityClass = QGVAR(civilian_builder);
+            _markerType = QGVAR(icon_pickaxe);
+            _markerScale = 0;
+        };
 };
 
 //INFO_2("creating agent _entityClass=%1 _poi_type=%2",_entityClass,_poi_type);
@@ -150,39 +150,39 @@ private _location = objNull;
 private _syncedObjects = synchronizedObjects _logic;
 
 if(count _syncedObjects > 0) then {
-	{
-		//systemChat format ["synced object %1 _typeOf=%2", _x, typeOf _x];
+    {
+        //systemChat format ["synced object %1 _typeOf=%2", _x, typeOf _x];
 
-		if(_x isKindOf QGVAR(moduleLocation3den)) then {
-			//INFO("_x isKindOf moduleLocation3den");
-			_location = _x;
-		} else {
-			if(_x isKindOf QGVAR(moduleSpawnPoint3den)) then {
-				//INFO("_x isKindOf moduleSpawnPoint3den");
-				_spawnPointMarker = _poi_id + "_Spawn";
-			} else {
-				if(_x isKindOf QGVAR(moduleStorePoint3den)) then {
-					//INFO("_x isKindOf moduleStorePoint3den");
-					_storePointMarker = _poi_id + "_Store";
-				} else {
-					_entity = _x;
-				};
-			};
-		};
-	} forEach _syncedObjects;
+        if(_x isKindOf QGVAR(moduleLocation3den)) then {
+            //INFO("_x isKindOf moduleLocation3den");
+            _location = _x;
+        } else {
+            if(_x isKindOf QGVAR(moduleSpawnPoint3den)) then {
+                //INFO("_x isKindOf moduleSpawnPoint3den");
+                _spawnPointMarker = _poi_id + "_Spawn";
+            } else {
+                if(_x isKindOf QGVAR(moduleStorePoint3den)) then {
+                    //INFO("_x isKindOf moduleStorePoint3den");
+                    _storePointMarker = _poi_id + "_Store";
+                } else {
+                    _entity = _x;
+                };
+            };
+        };
+    } forEach _syncedObjects;
 };
 
 if (isNull _entity) then {
-	_entity = createAgent [_entityClass, _entityPosition, [], 0, "FORM"];
-	_entity setVariable ["acex_headless_blacklist", true];
+    _entity = createAgent [_entityClass, _entityPosition, [], 0, "FORM"];
+    _entity setVariable ["acex_headless_blacklist", true];
 };
 
 private _location_id = "";
 if (isNull _location) then {
-	systemChat format ["WARNING: POI %1 has no location attached!", _poi_id];
+    systemChat format ["WARNING: POI %1 has no location attached!", _poi_id];
 } else {
-	_location_id = format ['%1',_location];
-	_entity setVariable [QGVAR(location), _location_id, true];
+    _location_id = format ['%1',_location];
+    _entity setVariable [QGVAR(location), _location_id, true];
 };
 
 _entity allowDamage false;
@@ -194,87 +194,87 @@ _entity setVariable [QGVAR(POI_SHOP), _poi_shop, true];
 private _accessCondition = format ['(alive player) && !dialog && player distance _target < 3 && "%1" call keko_redneck_fnc_canPOIBeUsed', _location_id];
 
 switch (_poi_type) do {
-		case 0: {
-			/* ATM */
-			[_entity, ["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 1: {
-			/* Item Shop */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 2: {
-			/* Gear Shop */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 3: {
-			/* Vehicle Shop */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 4: {
-			/* Garage */
-			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 5: {
-			/* Parking */
-			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-			[_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 6: {
-			/* Car Dealer */
-			[_entity, ["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 7: {
-			/* Trader */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 8: {
-			/* Pharmacy */
-			[_entity, ["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 9: {
-			/* Hangar */
-			[_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-			[_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 10: {
-			/* Weapon Shop */
-			[_entity, ["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 11: {
-			/* Mechanic */
-			[_entity, ["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 12: {
-			/* Doctor */
-			[_entity, ["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 13: {
-			/* Fuel Shop */
-			[_entity, ["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 14: {
-			/* Heli Shop */
-			[_entity, ["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 15: {
-			/* Plane Shop */
-			[_entity, ["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 16: {
-			/* Helipad */
-			[_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-			[_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 17: {
-			/* Aircraft Dealer */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
-		case 18: {
-			/* Base Builder */
-			[_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
-		};
+        case 0: {
+            /* ATM */
+            [_entity, ["<img image='HG\UI\Icons\atm.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_atmAction},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 1: {
+            /* Item Shop */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 2: {
+            /* Gear Shop */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 3: {
+            /* Vehicle Shop */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 4: {
+            /* Garage */
+            [_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+            [_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Parking</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 5: {
+            /* Parking */
+            [_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+            [_entity, ["<img image='HG\UI\Icons\garage.paa' size='1.5'/><t color='#FF0000'>Garage</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 6: {
+            /* Car Dealer */
+            [_entity, ["<img image='HG\UI\Icons\car.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 7: {
+            /* Trader */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadTrader},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 8: {
+            /* Pharmacy */
+            [_entity, ["<img image='HG\UI\Icons\painkiller.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 9: {
+            /* Hangar */
+            [_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+            [_entity, ["<img image='HG\UI\Icons\hangar.paa' size='1.5'/><t color='#FF0000'>Park Plane</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 10: {
+            /* Weapon Shop */
+            [_entity, ["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGear},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>Ammo Shop</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_MagazinesShop",0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 11: {
+            /* Mechanic */
+            [_entity, ["<img image='HG\UI\Icons\wrench.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 12: {
+            /* Doctor */
+            [_entity, ["<img image='HG\UI\Icons\medic.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 13: {
+            /* Fuel Shop */
+            [_entity, ["<img image='HG\UI\Icons\fuel.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 14: {
+            /* Heli Shop */
+            [_entity, ["<img image='HG\UI\Icons\helicopter.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 15: {
+            /* Plane Shop */
+            [_entity, ["<img image='HG\UI\Icons\plane.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadVehicles},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 16: {
+            /* Helipad */
+            [_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadGarage},[_poi_shop,_spawnPointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+            [_entity, ["<img image='HG\UI\Icons\helipad.paa' size='1.5'/><t color='#FF0000'>Park Helo</t>",{_this call HG_fnc_storeVehicleClient},[_poi_shop,_storePointMarker],0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 17: {
+            /* Aircraft Dealer */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadDealer},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
+        case 18: {
+            /* Base Builder */
+            [_entity, ["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>"+ _poi_name +"</t>",{_this call HG_fnc_dialogOnLoadItems},_poi_shop,0,false,false,"",_accessCondition]] remoteExec ["addAction", [0, -2] select isDedicated, true];
+        };
 };
 
 
