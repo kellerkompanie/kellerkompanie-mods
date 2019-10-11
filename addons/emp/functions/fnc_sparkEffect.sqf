@@ -1,6 +1,6 @@
+#include "script_component.hpp"
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 // Creates 1 spark at object position (objSrc) and waits for specified amount of time afterwards
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 

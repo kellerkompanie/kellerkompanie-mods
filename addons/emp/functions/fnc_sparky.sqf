@@ -1,6 +1,6 @@
+#include "script_component.hpp"
 // Original by ALIAS http://www.armaholic.com/page.php?id=34293
 // Creates a random amount of sparks at given object (objSrc)
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
