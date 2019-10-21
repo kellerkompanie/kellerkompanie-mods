@@ -4,7 +4,7 @@ params ["_crate"];
 
 if !(isServer) exitWith {};
 
-if !(_crate getVariable [QGVAR(isCustomCrate), false]) exitWith {false};
+if (_crate isKindOf "ReammoBox_F" && !(_crate getVariable [QGVAR(isCustomCrate), false])) exitWith {false};
 
 if (isNil QGVAR(customCrates)) then {
     GVAR(customCrates) = [];
