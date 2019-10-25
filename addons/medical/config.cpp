@@ -18,8 +18,7 @@ class CfgPatches {
             "ace_main",
             "ace_medical",
             "adv_aceCPR",
-            "adv_aceSplint",
-            "kat_aceAirway"
+            "adv_aceSplint"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};

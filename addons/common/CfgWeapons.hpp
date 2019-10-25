@@ -122,7 +122,7 @@ class CfgWeapons {
         class ItemInfo : CBA_MiscItem_ItemInfo {
             mass = 2;
         };
-        picture = "\kat_acecirculation\images\icon_painkillers.paa";
+        picture = QPATHTOF(ui\icon_painkillers.paa);
     };
     class GVAR(cigpack_generic) : ACE_ItemCore {
         displayName = "Cig Pack";

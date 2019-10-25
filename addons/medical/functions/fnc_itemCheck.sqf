@@ -8,7 +8,6 @@ params ["_unit"];
 
 private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_aceSplint_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
-private _airwaysRequired = kat_aceAirway_enable || kat_aceBreathing_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
 
 private _addToBackpack = {
@@ -73,15 +72,6 @@ if ( _isMedic > 0) then {
 
         if ( _splintsRequired ) then {
             [_unit, "adv_aceSplint_splint", 12] call _addToBackpack;
-        };
-
-        if ( _airwaysRequired ) then {
-            if ( _isMedic == 1) then {
-                [_unit, "KAT_guedel", 10] call _addToBackpack;
-            } else {
-                [_unit, "KAT_larynx", 10] call _addToBackpack;
-                [_unit, "KAT_accuvac", 1] call _addToBackpack;
-            };
         };
     };
 };

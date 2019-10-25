@@ -2,7 +2,6 @@
 
 params ["_unit","_param"];
 
-private _airwaysRequired = kat_aceAirway_enable;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage && adv_aceSplint_enable;
 private _isMedic = _unit getVariable ["ACE_medical_medicClass", 0];
@@ -70,15 +69,6 @@ call {
 
         if ( _splintsRequired ) then {
             _return pushBack ["adv_aceSplint_splint", 12];
-        };
-
-        if ( _airwaysRequired ) then {
-            if ( _isMedic == 1) then {
-                _return pushBack ["KAT_guedel", 10];
-            } else {
-                _return pushBack ["KAT_larynx", 10];
-                _return pushBack ["KAT_accuvac", 1];
-            };
         };
     };
 };
