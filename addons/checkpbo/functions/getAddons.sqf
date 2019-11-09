@@ -5,7 +5,8 @@ private _addonsWhitelist = [
     "asm",
     "warfxpe",
     "blastcore_maincore",
-    "blastcore_vep"
+    "blastcore_vep",
+    "armazeuscache"
 ];
 
 private _cfgPatches = (configFile >> "CfgPatches");
