@@ -14,8 +14,8 @@
  *
  */
 
-private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage;
-private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
+private _splintsRequired = ace_medical_fractures > 0;
+private _surgicalKitRequired = ace_medical_treatment_woundReopening;
 
 player createDiarySubject ["missionSettings", "Mission Settings"];
 player createDiaryRecord ["missionSettings", ["Medical", format ["
@@ -31,6 +31,6 @@ player createDiaryRecord ["missionSettings", ["Medical", format ["
 Medical:
 <br/>
     ace_medical_maxReviveTime: %1 seconds<br/>
-    ace_medical_healHitPointAfterAdvBandage: %2<br/>
-    ace_medical_enableAdvancedWounds: %3",
-    ace_medical_maxReviveTime, ace_medical_healHitPointAfterAdvBandage, ace_medical_enableAdvancedWounds]]];
+    ace_medical_fractures: %2<br/>
+    ace_medical_treatment_woundReopening: %3",
+    ace_medical_maxReviveTime, ace_medical_fractures, ace_medical_treatment_woundReopening]]];
