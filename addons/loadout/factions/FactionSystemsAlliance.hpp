@@ -152,8 +152,7 @@ class FactionSystemsAlliance: FactionBase {
                     {10, "ACE_salineIV_500"},
                     {2, "ACE_surgicalKit"},
                     {10, "ACE_tourniquet"},
-                    {30, "adv_aceSplint_splint"},
-                    {5, "KAT_Painkillers"}
+                    {30, "ACE_splint"}
                 };
         };
 

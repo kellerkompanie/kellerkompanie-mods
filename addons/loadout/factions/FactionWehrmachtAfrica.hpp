@@ -120,7 +120,7 @@ class FactionWehrmachtAfrica: FactionBase {
 
     class backpackInventory: backpackInventory {
         Funker[] = {  };
-        Sani[] = { { 40, "ACE_elasticBandage" }, { 6, "adv_aceSplint_splint" } };
+        Sani[] = { { 40, "ACE_elasticBandage" }, { 6, "ACE_splint" } };
         Grenadier[] = {
                 { 2, "fow_e_m24_at" },
                 { 4, "fow_e_m24" },

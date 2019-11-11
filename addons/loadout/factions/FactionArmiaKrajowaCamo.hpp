@@ -79,7 +79,7 @@ class FactionArmiaKrajowaCamo: FactionBase {
         Sanitariusz[] = {
                 { 30, "ACE_elasticBandage" },
                 { 2, "ACE_salineIV_500" },
-                { 8, "adv_aceSplint_splint" }
+                { 8, "ACE_splint" }
             };
     };
 

@@ -18,7 +18,7 @@ private _possiblecontainers = [_uniform, _vest, _backpack];
 
 for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
     private _bandage = selectRandom ["ACE_fieldDressing","ACE_quikclot","ACE_elasticBandage","ACE_packingBandage"];
-    private _medicalItem = selectRandom ["ACE_fieldDressing","KAT_Painkiller","ACE_tourniquet","ACE_quikclot","adv_aceSplint_splint","ACE_elasticBandage","ACE_packingBandage"];
+    private _medicalItem = selectRandom ["ACE_fieldDressing","ACE_morphine","ACE_tourniquet","ACE_quikclot","ACE_splint","ACE_elasticBandage","ACE_packingBandage"];
 
     _bandage = _bandage call EFUNC(loadout,replaceItem);
     _medicalItem = _medicalItem call EFUNC(loadout,replaceItem);
@@ -26,11 +26,7 @@ for "_i" from 0 to (floor random [1, 3, 6]) step 1 do {
     {
         if !(isNull _x) then {
             if (_medicalItem call EFUNC(loadout,isItemRequired)) then {
-                if (_medicalItem == "KAT_Painkiller") then {
-                    _x addMagazineCargoGlobal [_medicalItem, 1];
-                } else {
-                    _x addItemCargoGlobal [_medicalItem, 1];
-                };
+                _x addItemCargoGlobal [_medicalItem, 1];
             };
             if (_bandage call EFUNC(loadout,isItemRequired)) then {
                 _x addItemCargoGlobal [_bandage, 1];

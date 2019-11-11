@@ -14,7 +14,7 @@
  *
  */
 
-private _splintsRequired = (!ace_medical_healHitPointAfterAdvBandage) && adv_aceSplint_enable;
+private _splintsRequired = !ace_medical_healHitPointAfterAdvBandage;
 private _surgicalKitRequired = ace_medical_enableAdvancedWounds;
 
 player createDiarySubject ["missionSettings", "Mission Settings"];

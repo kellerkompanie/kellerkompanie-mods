@@ -28,7 +28,7 @@ private _allItems = [player] call CBA_fnc_uniqueUnitItems;
     };
 } forEach [
     [QGVAR(canteen_generic), QEGVAR(canteen,canteen)],
-    [QGVAR(painkiller_generic), "KAT_Painkiller"],
+    [QGVAR(painkiller_generic), "ACE_morphine"],
     [QGVAR(cigpack_generic), "murshun_cigs_cigpack"],
     [QGVAR(lighter_generic), "murshun_cigs_lighter"],
     [QGVAR(matches_generic), "murshun_cigs_matches"],

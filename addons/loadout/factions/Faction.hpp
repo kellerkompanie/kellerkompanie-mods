@@ -76,7 +76,7 @@ class FactionBase {
     class uniformInventory {
         Default[] = {
             {15, "ACE_fieldDressing"},
-            {1, "KAT_Painkiller"},
+            {2, "ACE_morphine"},
             {3, "ACE_tourniquet"},
             {1, "ACE_MapTools"},
             {1, "ACE_Flashlight_XL50"},
@@ -100,8 +100,8 @@ class FactionBase {
 
     class backpackInventory {
         Default[] = { };
-        Medic[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"adv_aceSplint_splint"},{10, "KAT_guedel"},{1, "KAT_Pulseoximeter"}};
-        Doctor[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{1,"KAT_X_AED"},{20,"adv_aceSplint_splint"},{10, "KAT_larynx"},{1, "KAT_accuvac"}};
+        Medic[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"ACE_splint"}};
+        Doctor[] = {{50, "ACE_elasticBandage"},{20, "ACE_fieldDressing"},{6, "ACE_salineIV_500"},{4, "ACE_salineIV"},{10, "ACE_tourniquet"},{20,"ACE_splint"}};
         EOD[] = {{6,"DemoCharge_Remote_Mag"},{2,"SatchelCharge_Remote_Mag"},{1,"ACE_DefusalKit"},{1,"ACE_Clacker"}};
         Engineer[] = {{1, "ToolKit"},{1, "ACE_wirecutter"},{1, "ACE_EntrenchingTool"},{1, "ACE_Fortify"}};
 
@@ -283,12 +283,11 @@ class FactionBase {
                     {4, "SmokeShell"},
                     {4, "SmokeShellGreen"},
                     {20, "ACE_fieldDressing"},
-                    {4, "ACE_morphine"},
+                    {6, "ACE_morphine"},
                     {4, "ACE_epinephrine"},
                     {8, "ACE_tourniquet"},
-                    {10, "adv_aceSplint_splint"},
-                    {2, "ACE_CableTie"},
-                    {2, "KAT_Painkillers"}
+                    {10, "ACE_splint"},
+                    {2, "ACE_CableTie"}
                 };
         };
 
@@ -375,8 +374,7 @@ class FactionBase {
                     {10, "ACE_salineIV_500"},
                     {2, "ACE_surgicalKit"},
                     {10, "ACE_tourniquet"},
-                    {30, "adv_aceSplint_splint"},
-                    {5, "KAT_Painkillers"}
+                    {30, "ACE_splint"}
                 };
         };
 
@@ -400,11 +398,8 @@ class FactionBase {
                     {1, "ACE_RangeTable_82mm"},
                     {4, "ACE_IR_Strobe"},
                     {8, "ACE_HandFlare_Red"},
-                    {1, "adv_aceCPR_AED"},
                     {1, "ACE_personalAidKit"},
-                    {4, "ACE_bodyBag"},
-                    {1, "KAT_X_AED"},
-                    {5, "KAT_Painkillers"}
+                    {4, "ACE_bodyBag"}
                 };
         };
 
@@ -435,8 +430,7 @@ class FactionBase {
                     {20, "murshun_cigs_matches"},
                     {20, "murshun_cigs_cigpack"},
                     {10, "immersion_pops_poppack"},
-                    {10, "ACE_banana"},
-                    {10, "KAT_Painkillers"}
+                    {10, "ACE_banana"}
                 };
         };
 

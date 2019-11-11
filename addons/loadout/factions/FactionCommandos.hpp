@@ -92,7 +92,7 @@ class FactionCommandos: FactionBase {
                 { 2, "ACE_salineIV" },
                 { 2, "ACE_salineIV_500" },
                 { 40, "ACE_elasticBandage" },
-                { 10, "adv_aceSplint_splint" }
+                { 10, "ACE_splint" }
             };
         Sapper[] = {
                 { 1, "ACE_EntrenchingTool" },

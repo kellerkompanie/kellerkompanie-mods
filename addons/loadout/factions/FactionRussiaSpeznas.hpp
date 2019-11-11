@@ -26,7 +26,7 @@ class FactionRussiaSpeznas: FactionBase {
                 { 2, "ACE_tourniquet" },
                 { 1, "ACE_CableTie" },
                 { 1, "rhs_mag_9x19_17" },
-                { 1, "adv_aceSplint_splint" }
+                { 1, "ACE_splint" }
             };
     };
 
