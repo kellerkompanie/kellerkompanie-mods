@@ -8,8 +8,6 @@ class CfgPatches {
         requiredVersion= REQUIRED_VERSION;
         requiredAddons[]= {
             "rhs_main",
-            "rhssaf_main",
-            "rhssaf_backpacks",
             "rhsgref_main",
             "rhsusf_main",
             "A3_Weapons_F_Ammoboxes",
