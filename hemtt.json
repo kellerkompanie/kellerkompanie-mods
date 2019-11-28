@@ -1,0 +1,9 @@
+{
+  "name": "keko",
+  "prefix": "keko",
+  "author": "Schwaggot",
+  "files": [
+    "mod.cpp"
+  ],
+  "sigversion": 3
+}
