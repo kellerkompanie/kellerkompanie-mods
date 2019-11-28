@@ -10,8 +10,7 @@ class CfgPatches {
         requiredAddons[] = {
             "keko_common",
             "A3_Weapons_F",
-            "rhsusf_c_weapons",
-            "rhsgref_c_weapons",
+            "rhssaf_c_weapons",
             "cba_jam"
         };
         author = "Schwaggot";
