@@ -35,7 +35,7 @@ class CfgVehicles {
         author = "Schwaggot";
         class TransportItems {
             class RifleMag {
-                name = keko_RifleMag;
+                name = "keko_RifleMag";
                 count = 1;
             };
         };
@@ -44,7 +44,7 @@ class CfgVehicles {
         displayName = "Rifle Mag (Tracer)";
         class TransportItems {
             class RifleMagTracer {
-                name = keko_RifleMag_Tracer;
+                name = "keko_RifleMag_Tracer";
                 count = 1;
             };
         };
@@ -54,7 +54,7 @@ class CfgVehicles {
         displayName = "MG Mag";
         class TransportItems {
             class MGMag {
-                name = keko_MGMag;
+                name = "keko_MGMag";
                 count = 1;
             };
         };
@@ -63,7 +63,7 @@ class CfgVehicles {
         displayName = "MG Mag (Tracer)";
         class TransportItems {
             class MGMagTracer {
-                name = keko_MGMag_Tracer;
+                name = "keko_MGMag_Tracer";
                 count = 1;
             };
         };
@@ -73,7 +73,7 @@ class CfgVehicles {
         displayName = "Pistol Mag";
         class TransportItems {
             class PistolMag {
-                name = keko_PistolMag;
+                name = "keko_PistolMag";
                 count = 1;
             };
         };
@@ -83,7 +83,7 @@ class CfgVehicles {
         displayName = "UGL Mag";
         class TransportItems {
             class UGLMag {
-                name = keko_UGLMag;
+                name = "keko_UGLMag";
                 count = 1;
             };
         };
@@ -94,7 +94,7 @@ class CfgVehicles {
         model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at";
         class TransportItems {
             class AntiTankMag {
-                name = keko_AntiTankMag;
+                name = "keko_AntiTankMag";
                 count = 1;
             };
         };
@@ -105,7 +105,7 @@ class CfgVehicles {
         model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_atl";
         class TransportItems {
             class AntiAirMag {
-                name = keko_AntiAirMag;
+                name = "keko_AntiAirMag";
                 count = 1;
             };
         };
@@ -190,7 +190,7 @@ class CfgVehicles {
                 property = "keko_common_ModuleInit_MissionAuthor";
                 displayName = "Author";
                 typeName = "STRING";
-                defaultValue = profileName;
+                defaultValue = "profileName";
             };
             class MissionPicture: Edit {
                 property = "keko_common_ModuleInit_MissionPicture";
@@ -274,13 +274,13 @@ class CfgVehicles {
                 property = "keko_common_ModuleACEGarrison_Teleport";
                 displayName = "Teleport";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class TopDown: Checkbox {
                 property = "keko_common_ModuleACEGarrison_TopDown";
                 displayName = "Fill from top to bottom";
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class Mode: Combo {
                 property = "keko_common_ModuleACEGarrison_Mode";

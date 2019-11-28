@@ -1,18 +1,18 @@
 class GVAR(changeGroupName) {
 
     idd = -1;
-    movingEnable = true;
-    enableSimulation = true;
+    movingEnable = 1;
+    enableSimulation = 1;
 
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(changeGroupName), _this select 0)]; _this call FUNC(changeGroupNameDialogInit));
 
     controls[] = {
-        Back,
-        TitleText,
-        GroupNameText,
-        GroupNameEdit,
-        Button,
-        CancelButton
+        "Back",
+        "TitleText",
+        "GroupNameText",
+        "GroupNameEdit",
+        "Button",
+        "CancelButton"
     };
 
     class Back: IGUIBack
