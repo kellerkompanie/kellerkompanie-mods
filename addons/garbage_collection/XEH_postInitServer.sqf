@@ -5,9 +5,9 @@ addMissionEventHandler ["EntityKilled", {
 }];
 
 if (GVAR(corpseMode) > 0) then {
-    GVAR(handleCorpsePFH) = [{INFO("running corpse PFH"); call FUNC(cleanCorpses);}, GVAR(corpseMode)] call CBA_fnc_addPerFrameHandler;
+    GVAR(handleCorpsePFH) = [{call FUNC(cleanCorpses);}, GVAR(corpseMode)] call CBA_fnc_addPerFrameHandler;
 };
 
 if (GVAR(wreckMode) > 0) then {
-    GVAR(handleWreckPFH) = [{INFO("running wrecks PFH"); call FUNC(cleanWrecks);}, GVAR(wreckMode)] call CBA_fnc_addPerFrameHandler;
+    GVAR(handleWreckPFH) = [{call FUNC(cleanWrecks);}, GVAR(wreckMode)] call CBA_fnc_addPerFrameHandler;
 };
