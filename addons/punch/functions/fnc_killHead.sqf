@@ -11,7 +11,7 @@ params ["_player", "_target"];
 
     [_player, QGVAR(KillSound)] remoteExec ["say3D", 0, false];
 
-    _target call ace_medical_fnc_setDead;
+    _target call ace_medical_status_fnc_setDead;
 
     if(isPlayer _target) then {
         private "_msg";
