@@ -103,5 +103,9 @@
             <English>Decide if unit should be garrisonned via ACE.</English>
             <German>Entscheidet ob für die Einheit ACE garrison aktiv ist.</German>
         </Key>
+        <Key ID="STR_keko_common_Painkiller_Display">
+            <English>Painkiller</English>
+            <German>Schmerzmittel</German>
+        </Key>
     </Package>
 </Project>

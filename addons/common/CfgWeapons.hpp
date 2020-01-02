@@ -115,12 +115,12 @@ class CfgWeapons {
         picture = "\x\keko\addons\canteen\ui\icon_canteen.paa";
     };
     class GVAR(painkiller_generic) : ACE_ItemCore {
-        displayName = "Painkiller";
+        displayName = CSTRING(Painkiller_Display);
         count = 1;
-        scopeCurator = 2;
-        scope = 2;
+        scopeCurator = 1;
+        scope = 1;
         class ItemInfo : CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 0.1;
         };
         picture = QPATHTOF(ui\icon_painkillers.paa);
     };
