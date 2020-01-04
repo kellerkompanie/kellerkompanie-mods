@@ -16,6 +16,9 @@ INFO_1("clientAddons: %1", _clientAddons);
 private _missingAddonsOnClient = _serverAddonNames - _clientAddonNames;
 private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 
+INFO_1("_missingAddonsOnClient: %1", _missingAddonsOnClient);
+INFO_1("_missingAddonsOnServer: %1", _missingAddonsOnServer);
+
 private _errorMessagesMissingAddonsOnClient = [];
 if(count _missingAddonsOnClient > 0) then {
     _errorMessagesMissingAddonsOnClient pushBack (format [localize LSTRING(errorAddonsOnServer), _playerName, _missingAddonsOnClient]);
