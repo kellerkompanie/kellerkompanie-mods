@@ -10,14 +10,8 @@ private _serverAddons = call FUNC(determineAddons);
 _serverAddons params ["_serverAddonNames", "_serverAddonVersions"];
 _clientAddons params ["_clientAddonNames", "_clientAddonVersions"];
 
-INFO_1("serverAddons: %1", _serverAddons);
-INFO_1("clientAddons: %1", _clientAddons);
-
 private _missingAddonsOnClient = _serverAddonNames - _clientAddonNames;
 private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
-
-INFO_1("_missingAddonsOnClient: %1", _missingAddonsOnClient);
-INFO_1("_missingAddonsOnServer: %1", _missingAddonsOnServer);
 
 private _errorMessagesMissingAddonsOnClient = [];
 if(count _missingAddonsOnClient > 0) then {
@@ -37,12 +31,9 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
         private _serverAddonVersion = _serverAddonVersions select _i;
         private _clientAddonVersion = _clientAddonVersions select _i;
 
-        INFO_2("comparing version %1 to version %2", _serverAddonVersion, _clientAddonVersion);
-
         if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
             private _serverAddonName = _serverAddonNames select _i;
             private _clientAddonName = _clientAddonNames select _i;
-            INFO_2("comparing addon %1 to version %2", _serverAddonName, _clientAddonName);
             _errorMessagesVersionMismatch pushBack (format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion]);
         };
     };
