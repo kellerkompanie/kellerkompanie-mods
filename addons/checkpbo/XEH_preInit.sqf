@@ -13,9 +13,11 @@ if (isServer) then {
 
         params ["", "", "_name", "", "_owner"];
 
-        if(_name == "__SERVER__" ) exitWith {};
+        if (_name == "__SERVER__" ) exitWith {};
 
         {
+            if !(hasInterface) exitWith {};
+
             private _addons = call FUNC(determineAddons);
             _addons params ["_loadedAddons", "_loadedVersions"];
 
