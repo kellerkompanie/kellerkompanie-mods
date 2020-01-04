@@ -37,6 +37,8 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
         private _serverAddonVersion = _serverAddonVersions select _i;
         private _clientAddonVersion = _clientAddonVersions select _i;
 
+        INFO_4("comparing version %1 to version %2 for %3 and %4", _serverAddonVersion, _clientAddonVersion, _serverAddonName, _clientAddonName);
+
         if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
             private _serverAddonName = _serverAddonNames select _i;
             private _clientAddonName = _clientAddonNames select _i;
