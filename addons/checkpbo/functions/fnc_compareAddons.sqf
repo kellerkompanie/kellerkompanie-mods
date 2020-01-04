@@ -37,11 +37,12 @@ if( ((count _missingAddonsOnClient) == 0) && ((count _missingAddonsOnServer) == 
         private _serverAddonVersion = _serverAddonVersions select _i;
         private _clientAddonVersion = _clientAddonVersions select _i;
 
-        INFO_4("comparing version %1 to version %2 for %3 and %4", _serverAddonVersion, _clientAddonVersion, _serverAddonName, _clientAddonName);
+        INFO_2("comparing version %1 to version %2", _serverAddonVersion, _clientAddonVersion);
 
         if !(_serverAddonVersion isEqualTo _clientAddonVersion) then {
             private _serverAddonName = _serverAddonNames select _i;
             private _clientAddonName = _clientAddonNames select _i;
+            INFO_2("comparing addon %1 to version %2", _serverAddonName, _clientAddonName);
             _errorMessagesVersionMismatch pushBack (format [localize LSTRING(errorDifferentVersions), _serverAddonName, _serverAddonVersion, _playerName, _clientAddonName, _clientAddonVersion]);
         };
     };
