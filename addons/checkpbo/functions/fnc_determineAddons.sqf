@@ -31,7 +31,7 @@ private _loadedVersions = [];
 {
     _x params ["_loadedAddon", "_loadedVersion"];
     _loadedAddons pushBack _loadedAddon;
-    _loadedVersion pushBack _loadedVersion;
+    _loadedVersions pushBack _loadedVersion;
 } forEach _loaded;
 
 [_loadedAddons, _loadedVersions]
