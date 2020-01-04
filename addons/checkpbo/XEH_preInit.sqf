@@ -9,16 +9,16 @@ PREP_RECOMPILE_END;
 if (isServer) then {
     addMissionEventHandler ["PlayerConnected",
     {
-        params ["_id", "_uid", "_name", "_jip", "_owner"];
-
-        diag_log text format ["EH:PlayerConnected _id=%1 _uid=%2 _name=%3 _jip=%4 _owner=%5", _id, _uid, _name, _jip, _owner];
+        params ["", "", "_name", "", "_owner"];
 
         if(_name == "__SERVER__" ) exitWith {};
 
         {
-            #include "functions\getAddons.sqf"
+            private _addons = call FUNC(determineAddons);
+            _addons params ["_loadedAddons", "_loadedVersions"];
 
-            if !(GVAR(reaction) isEqualTo "NOTHING") then {
+            private _reaction = QGVAR(reaction) call CBA_settings_fnc_get;
+            if !(_reaction isEqualTo "NOTHING") then {
                 [[_loadedAddons, _loadedVersions], player] remoteExec [QFUNC(compareAddons), 2];
             };
         } remoteExec ["call", _owner];
