@@ -9,6 +9,8 @@ PREP_RECOMPILE_END;
 if (isServer) then {
     addMissionEventHandler ["PlayerConnected",
     {
+        if !( QGVAR(checkAddons) call CBA_settings_fnc_get ) exitWith {};
+
         params ["", "", "_name", "", "_owner"];
 
         if(_name == "__SERVER__" ) exitWith {};

@@ -10,6 +10,9 @@ private _serverAddons = call FUNC(determineAddons);
 _serverAddons params ["_serverAddonNames", "_serverAddonVersions"];
 _clientAddons params ["_clientAddonNames", "_clientAddonVersions"];
 
+INFO_1("serverAddons: %1", _serverAddons);
+INFO_1("clientAddons: %1", _clientAddons);
+
 private _missingAddonsOnClient = _serverAddonNames - _clientAddonNames;
 private _missingAddonsOnServer = _clientAddonNames - _serverAddonNames;
 
