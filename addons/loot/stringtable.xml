@@ -2,8 +2,8 @@
 <Project name="keko">
     <Package name="loot">
         <Key ID="STR_keko_loot_cbaSettingsCategory">
-            <English>Kellerkompanie Logistics</English>
-            <German>Kellerkompanie Logistik</German>
+            <English>Kellerkompanie Loot</English>
+            <German>Kellerkompanie Loot</German>
         </Key>
         <Key ID="STR_keko_loot_enabled">
             <English>Enabled</English>
