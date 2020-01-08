@@ -23,7 +23,9 @@ if !([_player, _target] call FUNC(canPunch)) exitWith {false};
 
     if (isPlayer _target) then {
         private _msg = format ["[KEKO] (punch) %1 punched %2 in the head", name _player, name _target];
-        _msg remoteExec ["systemChat", 0, false];
+        if (GVAR(showChatMessages)) then {
+            _msg remoteExec ["systemChat", 0, false];
+        };
         _msg remoteExec ["diag_log", 2, false];
 
     };

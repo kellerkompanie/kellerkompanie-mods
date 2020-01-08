@@ -40,5 +40,14 @@
             <English>Enable/Disable kill people by snapping the neck</English>
             <German>Genick brechen aktivieren/deaktivieren</German>
         </Key>
+
+        <Key ID="STR_keko_punch_showChatMessages">
+            <English>Show chat messages</English>
+            <German>Chatnachrichten anzeigen</German>
+        </Key>
+        <Key ID="STR_keko_punch_showChatMessagesTooltip">
+            <English>Display messages in chat when someone uses punch or kill</English>
+            <German>Zeige Nachrichten im Chat an wenn jemand boxt oder Genickbruch nutzt</German>
+        </Key>
     </Package>
 </Project>

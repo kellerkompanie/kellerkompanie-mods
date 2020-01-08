@@ -16,7 +16,9 @@ params ["_player", "_target"];
     if(isPlayer _target) then {
         private "_msg";
         _msg = format ["[KEKO] (kill) %1 killed %2 by snapping the neck", name _player, name _target];
-        _msg remoteExec ["systemChat", 0, false];
+        if (GVAR(showChatMessages)) then {
+            _msg remoteExec ["systemChat", 0, false];
+        };
         _msg remoteExec ["diag_log", 2, false];
     };
 };

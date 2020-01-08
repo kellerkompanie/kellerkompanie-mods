@@ -46,6 +46,19 @@ PREP_RECOMPILE_END;
     1
 ] call cba_settings_fnc_init;
 
+[
+    QGVAR(showChatMessages), // key/reference variable
+    "LIST", // type of setting
+    [localize LSTRING(showChatMessages), localize LSTRING(showChatMessagesTooltip)], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [true,false], // values
+        [localize LSTRING(enabled), localize LSTRING(disabled)], // names
+        0 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h";
 
