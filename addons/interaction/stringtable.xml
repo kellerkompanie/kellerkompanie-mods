@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="interaction">
+        <Key ID="STR_keko_interaction_addInteraction">
+            <English>Add Interaction</English>
+            <German>Interaktion hinzufügen</German>
+        </Key>
+        <Key ID="STR_keko_interaction_type">
+            <English>Interaction type</English>
+            <German>Interaktionstyp</German>
+        </Key>
+        <Key ID="STR_keko_interaction_typeTooltip">
+            <English>The type of interaction, used for action icon.</English>
+            <German>Die Art der Interaktion, genutzt für das Aktionsicon.</German>
+        </Key>
+
+        <Key ID="STR_keko_interaction_action">
+            <English>Action</English>
+            <German>Aktion</German>
+        </Key>
+        <Key ID="STR_keko_interaction_actionTooltip">
+            <English>Text of the action to be displayed.</English>
+            <German>Der Text, der Aktion, die angezeigt wird.</German>
+        </Key>
+        <Key ID="STR_keko_interaction_actionDuration">
+            <English>Action duration</English>
+            <German>Aktionsdauer</German>
+        </Key>
+        <Key ID="STR_keko_interaction_actionDurationTooltip">
+            <English>The duration of the action in seconds.</English>
+            <German>Die Dauer der Interaktion in Sekunden.</German>
+        </Key>
+        <Key ID="STR_keko_interaction_removeActionAfter">
+            <English>Remove action afterwards</English>
+            <German>Aktion danach entfernen</German>
+        </Key>
+        <Key ID="STR_keko_interaction_removeActionAfterTooltip">
+            <English>Should the action be removed for all players after first activation?</English>
+            <German>Soll die Aktion nach der ersten Interaktion für alle Spieler entfernt werden?</German>
+        </Key>
+        <Key ID="STR_keko_interaction_interact">
+            <English>'Interact'</English>
+            <German>'Interagieren'</German>
+        </Key>
+        <Key ID="STR_keko_interaction_removeObjectAfter">
+            <English>Remove object afterwards</English>
+            <German>Objeckt danach entfernen</German>
+        </Key>
+        <Key ID="STR_keko_interaction_removeObjectAfterTooltip">
+            <English>Should the object be removed after first interaction?</English>
+            <German>Soll das Objekt nach der ersten Interaktion gelöscht werden?</German>
+        </Key>
+        <Key ID="STR_keko_interaction_codeOnInteraction">
+            <English>Player execute onInteraction</English>
+            <German>Player execute onInteraction</German>
+        </Key>
+        <Key ID="STR_keko_interaction_codeOnInteractionTooltip">
+            <English>The code to be execute after player has interacted. Code will be executed on client machine. The interaction can be referenced as _object.</English>
+            <German>Der Code, der ausgeführt werden soll, sobald der Spieler mit dem Intel interagiert. Das Objekt kann als referenziert werden als _object.</German>
+        </Key>
+        <Key ID="STR_keko_interaction_condition">
+            <English>Condition for interaction</English>
+            <German>Condition for interaction</German>
+        </Key>
+        <Key ID="STR_keko_interaction_conditionTooltip">
+            <English>The code to be evaluated whether or not the action should be shown. Action will be shown if value is true. Do not use double quotes ("), instead use single quotes (') if needed!</English>
+            <German>Der Code, der evaluiert wird um zu prüfen ob die Action angezeigt wird. Falls der Wert true ist, wird die Action angezeigt. Keine doppelten Anführungszeichen (") benutzen, stattdessen die einfachen (') benutzen falls notwendig!</German>
+        </Key>
+
+        <Key ID="STR_keko_interaction_holdaction_connect">
+            <English>Connect</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_forcerespawn">
+            <English>Force respawn</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_hack">
+            <English>Hack</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_loaddevice">
+            <English>Load device</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_passleadership">
+            <English>Pass leadership</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_requestleadership">
+            <English>Request leadership</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_revive">
+            <English>Revive</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_revivemedic">
+            <English>Revive medic</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_search">
+            <English>Search</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_secure">
+            <English>Secure</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_takeoff1">
+            <English>Takeoff 1</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_takeoff2">
+            <English>Takeoff 2</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_thumbsdown">
+            <English>Thumbs down</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_thumbsup">
+            <English>Thumbs up</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_unbind">
+            <English>Unbind</English>
+        </Key>
+        <Key ID="STR_keko_interaction_holdaction_unloaddevice">
+            <English>Unload device</English>
+        </Key>
+    </Package>
+</Project>
