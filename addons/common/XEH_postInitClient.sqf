@@ -22,8 +22,8 @@ if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf Q
 call FUNC(checkCustomFace);
 ["ace_arsenal_displayClosed", FUNC(checkCustomFace)] call CBA_fnc_addPlayerEventHandler;
 
-// fix for settings not yet being propagated properly
-[{call FUNC(addBriefingEntries);}, []] call CBA_fnc_execNextFrame;
+// display settings in briefing area
+call FUNC(addBriefingEntries);
 
 // replace items in loadout, but postpone until settings are propagated
 [{player call FUNC(replaceGenericItems); ["loadout", FUNC(replaceGenericItems)] call CBA_fnc_addPlayerEventHandler;}, []] call CBA_fnc_execNextFrame;
