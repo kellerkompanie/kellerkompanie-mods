@@ -1,6 +1,6 @@
 class CfgFactionClasses {
-    class GVAR(Intel) {
-        displayName = "Kellerkompanie Interaction";
+    class GVAR(Interaction) {
+        displayName = CSTRING(faction);
         priority = 2;
         side = 7;
     };

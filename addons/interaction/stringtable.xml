@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="interaction">
+        <Key ID="STR_keko_interaction_faction">
+            <English>Kellerkompanie Interaction</English>
+            <German>Kellerkompanie Interaktion</German>
+        </Key>
         <Key ID="STR_keko_interaction_addInteraction">
             <English>Add Interaction</English>
             <German>Interaktion hinzufügen</German>
