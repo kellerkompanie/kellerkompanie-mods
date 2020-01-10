@@ -1,1 +1,1 @@
-#include "\x\keko\addons\intel\script_component.hpp"
+#include "\x\keko\addons\interaction\script_component.hpp"
