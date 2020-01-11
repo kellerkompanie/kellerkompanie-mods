@@ -4,7 +4,7 @@ params ["_player", "_target"];
 
 if !(GVAR(enabled)) exitWith {false};
 if !(alive _target) exitWith {false};
-if (_target getVariable ['ACE_isUnconscious', false]) exitWith {false};
+if !(_target call ace_common_fnc_isAwake) exitWith {false};
 
 if !(isPlayer _target) exitWith {true};
 

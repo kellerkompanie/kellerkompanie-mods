@@ -14,7 +14,7 @@ class CfgVehicles {
                 };
                 class GVAR(inhale) {
                     displayName = "Use smelling salt";
-                    condition = "alive _target && (_target getVariable ['ACE_isUnconscious', false]) && !([_target] call ace_medical_fnc_getUnconsciousCondition)";
+                    condition = "alive _target && (_target getVariable ['ACE_isUnconscious', false]) && !(_target call ace_common_fnc_isAwake)";
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(wakeHead));
                     showDisabled = 0;
                     priority = 1;
@@ -23,7 +23,7 @@ class CfgVehicles {
                 };
                 class GVAR(Kill) {
                     displayName = "Kill";
-                    condition = "(alive _target) && (_target getVariable ['ACE_isUnconscious', false])";
+                    condition = "(alive _target) && !(_target call ace_common_fnc_isAwake)";
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(killHead));
                     showDisabled = 0;
                     priority = 1;

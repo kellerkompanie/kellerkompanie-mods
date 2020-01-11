@@ -33,7 +33,7 @@ class CfgVehicles {
                 class GVAR(pour) {
                     displayName = CSTRING(actionPour);
                     distance = 2.0;
-                    condition = QUOTE(ACE_player call FUNC(hasCanteen) && alive _target);
+                    condition = QUOTE(ACE_player call FUNC(hasCanteen) && alive _target && !(_target call ace_common_fnc_isAwake));
                     statement = QUOTE([ARR_2(ACE_player, _target)] call FUNC(pourWater));
                     exceptions[] = {};
                     showDisabled = 1;
