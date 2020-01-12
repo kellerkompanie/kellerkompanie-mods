@@ -75,7 +75,7 @@ _content = "<t align='left' font='EtelkaMonospaceProBold'>" + _content + "</t>";
         // here code after close
         if (count _codeOnInteraction > 0) then {
             [_object, _codeOnInteraction] spawn {
-                params ["", "_codeOnInteraction"];
+                params ["_object", "_codeOnInteraction"];
                 call compile _codeOnInteraction;
             };
         };
