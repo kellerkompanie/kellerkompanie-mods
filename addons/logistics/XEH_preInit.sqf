@@ -6,6 +6,12 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+if (isNil QGVAR(crates)) then {
+    GVAR(crates) = [];
+} else {
+    WARNING_1("%1 was already defined before executing XEH_preInit", QGVAR(crates));
+};
+
 [
     QGVAR(accessLevel), // key/reference variable
     "LIST", // type of setting
@@ -314,7 +320,7 @@ GVAR(currentUAVs) = 0;
     1
 ] call cba_settings_fnc_init;
 
-if (GVAR(addConfigCrates)) then {
+if (QGVAR(addConfigCrates) call CBA_settings_fnc_get) then {
     call FUNC(addConfigCrates);
 };
 

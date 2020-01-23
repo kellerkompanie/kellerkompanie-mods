@@ -2,8 +2,6 @@
 
 params ["_player"];
 
-private _crates = GVAR(customCrates);
-
 private _action = [QGVAR(supplyDropUAV), "Call UAV Supply", QPATHTOF(ui\icon_uav), {}, {true}] call ace_interact_menu_fnc_createAction;
 [_player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
@@ -22,4 +20,4 @@ private _i = 0;
     [_player, 1, ["ACE_SelfActions", QGVAR(supplyDropUAV)], _action] call ace_interact_menu_fnc_addActionToObject;
 
     _i = _i + 1;
-} forEach _crates;
+} forEach GVAR(crates);

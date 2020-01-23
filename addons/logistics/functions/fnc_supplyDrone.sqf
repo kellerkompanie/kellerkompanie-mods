@@ -27,7 +27,7 @@ private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceStr
     if(_entryName isEqualTo _descapedString) then {
         _droneInventory = _x select 2;
     };
-} forEach GVAR(customCrates) select 0;
+} forEach GVAR(crates) select 0;
 
 private _uav = createVehicle ["B_UAV_06_F", _spawnPos, [], 0,""];
 createVehicleCrew _uav;

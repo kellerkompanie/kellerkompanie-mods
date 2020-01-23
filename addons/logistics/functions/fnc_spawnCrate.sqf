@@ -29,7 +29,7 @@ private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceStr
 
         if(true) exitWith{_returnCrate = _crate;};
     };
-} forEach GVAR(customCrates);
+} forEach GVAR(crates);
 
 
 _returnCrate

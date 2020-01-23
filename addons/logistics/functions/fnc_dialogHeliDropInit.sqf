@@ -7,7 +7,7 @@ private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-private _crates = GVAR(customCrates);
+private _crates = GVAR(crates);
 
 private _logicPos = missionNamespace getVariable QGVAR(heli_drop_pos);
 private _xPos = _logicPos select 0;

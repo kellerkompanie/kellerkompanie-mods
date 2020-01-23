@@ -7,8 +7,6 @@ private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-private _crates = GVAR(customCrates);
-
 private _logicPos = missionNamespace getVariable QGVAR(supply_drop_pos);
 private _xPos = _logicPos select 0;
 private _yPos = _logicPos select 1;
@@ -22,4 +20,4 @@ private _i = 0;
     lbSetData [1500, _i, format ["%1 %2 %3", _escapedString, _xPos, _yPos]];
 
     _i = _i + 1;
-} forEach _crates;
+} forEach GVAR(crates);

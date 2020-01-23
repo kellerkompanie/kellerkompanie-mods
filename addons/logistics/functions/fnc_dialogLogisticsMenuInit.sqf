@@ -7,8 +7,6 @@ private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-private _crates = GVAR(customCrates);
-
 private _i = 0;
 {
     private _crate_name = "";
@@ -18,4 +16,4 @@ private _i = 0;
     lbSetData [1500, _i, format ["%1", _escapedString]];
 
     _i = _i + 1;
-} forEach _crates;
+} forEach GVAR(crates);
