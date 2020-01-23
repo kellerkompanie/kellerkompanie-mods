@@ -35,7 +35,7 @@ class CfgVehicles {
           isTriggerActivated = 1;
           isDisposable = 0;
           is3DEN = 0;
-          class Arguments : ArgumentsBaseUnits {
+          class Arguments: ArgumentsBaseUnits {
                class Units: Units {};
                class classname {
                     displayName = "Chestpack classname"; // Argument label
@@ -62,7 +62,7 @@ class CfgVehicles {
                     defaultValue = "_this setObjectTextureGlobal [0, ""#(rgb,8,8,3)color(0,0,1,1)""];";
                };
           };
-          class ModuleDescription : ModuleDescription {
+          class ModuleDescription: ModuleDescription {
               sync[]={"AnyPerson1","AnyPerson2"};
               description = CSTRING(moduleAdd_desc);
               class AnyPerson1 {
@@ -85,7 +85,7 @@ class CfgVehicles {
           isTriggerActivated = 1;
           isDisposable = 0;
           is3DEN = 0;
-          class Arguments : ArgumentsBaseUnits {
+          class Arguments: ArgumentsBaseUnits {
                class Units: Units {};
                class classname {
                     displayName = "Backpack classname"; // Argument label
@@ -100,7 +100,7 @@ class CfgVehicles {
                     defaultValue = 0;
                };
           };
-          class ModuleDescription : ModuleDescription {
+          class ModuleDescription: ModuleDescription {
                sync[]={"AnyPerson1","AnyPerson2"};
                description = CSTRING(moduleOnChest_desc);
                class AnyPerson1
@@ -120,20 +120,20 @@ class CfgVehicles {
                class ACE_Equipment {
                    class GVAR(onChest) {
                         displayName = CSTRING(OnChest);
-                        condition = QUOTE(!(missionNamespace getVariable [ARR_2(QQGVAR(disabled), false)]) && !(backpack _player isEqualTo '') && ([_player] call zade_boc_fnc_chestpack isEqualTo ''));
+                        condition = QUOTE(!(missionNamespace getVariable [ARR_2(QQGVAR(disabled), false)]) && !(backpack _player isEqualTo '') && ([_player] call FUNC(chestpack) isEqualTo ''));
                         exceptions[] = {"isNotInside"};
                         statement = QUOTE([_player] call FUNC(actionOnChest));
                         showDisabled = 0;
                         priority = 2.5;
                         icon = QPATHTOF(ui\onchest_ca.paa);
                    };
-                   class GVAR(onBack) : GVAR(onChest) {
+                   class GVAR(onBack): GVAR(onChest) {
                         displayName = CSTRING(OnBack);
                         condition = QUOTE(!(missionNamespace getVariable [ARR_2(QQGVAR(disabled), false)]) && (backpack _player isEqualTo '') && !([_player] call FUNC(chestpack) isEqualTo ''));
                         statement = QUOTE([_player] call FUNC(actionOnBack));
                         icon = QPATHTOF(ui\onback_ca.paa);
                    };
-                   class GVAR(swap) : GVAR(onChest) {
+                   class GVAR(swap): GVAR(onChest) {
                         displayName = CSTRING(swap);
                         condition = QUOTE(!(missionNamespace getVariable [ARR_2(QQGVAR(disabled), false)]) && !(backpack _player isEqualTo '') && !([_player] call FUNC(chestpack) isEqualTo ''));
                         statement = QUOTE([_player] call FUNC(actionSwap));
