@@ -3,9 +3,9 @@
 if (isServer and isDedicated) exitWith {};
 waitUntil {!isNull player && player == player};
 
-if(isNil QGVAR(enableFuelConsumption)) exitWith{WARNING("isNil enableFuelConsumption, exiting"); true};
+if(isNil QGVAR(enableFuelConsumption)) exitWith{true};
 
-if(!GVAR(enableFuelConsumption)) exitWith{WARNING("fuelConsumption disabled, exiting"); true};
+if(!GVAR(enableFuelConsumption)) exitWith{true};
 
 if (isNil QGVAR(fuelUptake)) then {
    GVAR(fuelUptake) = [] spawn {
