@@ -25,3 +25,7 @@
 #define ACCESS_ZEUS 6
 #define ACCESS_JTAC 7
 #define ACCESS_UAVOPERATOR 8
+
+#define ADD_CRATE_NOBODY 0
+#define ADD_CRATE_ALL 1
+#define ADD_CRATE_ZEUS 2

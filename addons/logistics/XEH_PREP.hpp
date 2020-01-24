@@ -1,5 +1,6 @@
 PREP(aceForceLoadItem);
 PREP(addConfigCrates);
+PREP(addCrate);
 PREP(addDeleteCrateAction);
 PREP(addDroneActions);
 PREP(addFuelConsumptionHandler);

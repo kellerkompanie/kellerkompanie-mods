@@ -6,11 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-if (isNil QGVAR(crates)) then {
-    GVAR(crates) = [];
-} else {
-    WARNING_1("%1 was already defined before executing XEH_preInit", QGVAR(crates));
-};
+
 
 [
     QGVAR(accessLevel), // key/reference variable
@@ -37,19 +33,6 @@ if (isNil QGVAR(crates)) then {
             "Zeus only"
         ], // names
         2 // default index
-    ],
-    1
-] call cba_settings_fnc_init;
-
-[
-    QGVAR(addConfigCrates), // key/reference variable
-    "LIST", // type of setting
-    ["Add Faction crates", "Add default crates that belong to the faction."], // name and tooltip
-    localize LSTRING(cbaSettingsCategory), // category
-    [
-        [true, false], // values
-        ["Enabled", "Disabled"], // names
-        0 // default index
     ],
     1
 ] call cba_settings_fnc_init;
@@ -152,6 +135,217 @@ GVAR(currentUAVs) = 0;
     ["Automatic return", "Set after how many seconds UAV should automatically return to base."],
     [localize LSTRING(cbaSettingsCategory), "UAV Logistics"],
     [-1, 1200, 600, 0],
+    1
+] call cba_settings_fnc_init;
+
+
+
+// crate specific settings
+[
+    QGVAR(addCrateEmpty),
+    "LIST",
+    ["Empty crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateFireTeam),
+    "LIST",
+    ["Fire-team crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateInfantry),
+    "LIST",
+    ["Infantry crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateGrenades),
+    "LIST",
+    ["Grenades crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateMG),
+    "LIST",
+    ["MG crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateAT),
+    "LIST",
+    ["AT crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateATGustav),
+    "LIST",
+    ["AT crate (Gustav)", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateAA),
+    "LIST",
+    ["AA crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateMedic),
+    "LIST",
+    ["Medic crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateSupport),
+    "LIST",
+    ["Support crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateEOD),
+    "LIST",
+    ["EOD crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateRations),
+    "LIST",
+    ["Rations crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateCQB),
+    "LIST",
+    ["CQB crate", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateSpareWheel),
+    "LIST",
+    ["Spare wheel", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateSpareTrack),
+    "LIST",
+    ["Spare track", "Decide whether the crate should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(addCrateOther),
+    "LIST",
+    ["Other", "Some factions may have special crates. Decide whether these crates should be visible in the logistics menus."],
+    [localize LSTRING(cbaSettingsCategory), "Crates"],
+    [
+        [ADD_CRATE_ALL, ADD_CRATE_NOBODY, ADD_CRATE_ZEUS],
+        [localize LSTRING(addCrateAll), localize LSTRING(addCrateNobody), localize LSTRING(addCrateZeus)],
+        0
+    ],
     1
 ] call cba_settings_fnc_init;
 
@@ -320,8 +514,5 @@ GVAR(currentUAVs) = 0;
     1
 ] call cba_settings_fnc_init;
 
-if (QGVAR(addConfigCrates) call CBA_settings_fnc_get) then {
-    call FUNC(addConfigCrates);
-};
 
 ADDON = true;

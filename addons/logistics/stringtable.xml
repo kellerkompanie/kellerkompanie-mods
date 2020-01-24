@@ -44,5 +44,18 @@
             <English>Sets a specified name for this type of custom crate that will be visible in the logistics menu</English>
             <German>Bestimmt den Namen dieses Typs von Custom Kiste, wie er nachher im Logistik Menü auftaucht</German>
         </Key>
+
+        <Key ID="STR_keko_logistics_addCrateAll">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_logistics_addCrateNobody">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+        <Key ID="STR_keko_logistics_addCrateZeus">
+            <English>Only for Zeus</English>
+            <German>Nur für Zeus</German>
+        </Key>
     </Package>
 </Project>

@@ -9,4 +9,6 @@ private _objects = synchronizedObjects _logic;
     [_x, true] call FUNC(convertCustomCrate);
 } forEach _objects;
 
+deleteVehicle _logic;
+
 true
