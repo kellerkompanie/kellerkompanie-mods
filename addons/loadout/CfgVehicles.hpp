@@ -50,7 +50,7 @@ class CfgVehicles {
                 displayName = CSTRING(faction);
                 tooltip = CSTRING(factionTooltip);
                 typeName = "STRING";
-                defaultValue = 0;
+                defaultValue = "'DEFAULT'";
                 class Values {
                     class FactionDefault {
                         name = "DEFAULT";

@@ -6,8 +6,13 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(customLoadouts) = [];
 GVAR(addLoadouts) = [];
+
+if (isNil QGVAR(customLoadoutUnitsQueue)) then {
+    GVAR(customLoadoutUnitsQueue) = [];
+} else {
+    WARNING_1("%1 was initialized before XEH_preInit", QGVAR(customLoadoutUnitsQueue));
+};
 
 if (hasInterface) then {
     ["TFAR_event_OnRadiosReceived", {[player] call FUNC(setChannels);}] call CBA_fnc_addEventHandler;

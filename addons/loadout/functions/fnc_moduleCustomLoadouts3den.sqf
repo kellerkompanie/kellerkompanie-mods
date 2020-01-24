@@ -1,9 +1,12 @@
 #include "script_component.hpp"
 
+if !(isServer) exitWith {false};
+
+if (isNil QGVAR(customLoadouts)) then {
+    GVAR(customLoadouts) = [];
+};
+
 private _logic = _this select 0;
-
-if (!isServer) exitWith {};
-
 private _objects = synchronizedObjects _logic;
 
 {
@@ -18,7 +21,10 @@ private _objects = synchronizedObjects _logic;
     GVAR(customLoadouts) pushBack [_loadoutDummyClass, _name, _loadout, _medicClass, _engineerClass];
 
     deleteVehicle _x;
-
 } forEach _objects;
 
+deleteVehicle _logic;
+
 publicVariable QGVAR(customLoadouts);
+
+true

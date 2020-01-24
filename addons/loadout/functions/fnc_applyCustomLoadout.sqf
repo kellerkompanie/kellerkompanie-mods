@@ -7,8 +7,10 @@ _player enableSimulation false;
 _player setVariable ["ace_medical_medicClass", 0, true];
 _player setVariable ["ACE_isEngineer", 0, true];
 
+INFO_1("applyCustomLoadout GVAR(customLoadouts) = %1", GVAR(customLoadouts));
+
 if (isNil QGVAR(customLoadouts)) then {
-    GVAR(customLoadouts) = [];
+    WARNING_1("%1 is nil", QGVAR(customLoadouts));
 };
 
 {
@@ -41,6 +43,13 @@ _player call FUNC(addPresetItems);
 
 _player enableSimulation true;
 
-if !(weaponLowered player) then {
-    _player action ["WeaponOnBack", _player];
-};
+[
+    {
+        params ["_player"];
+        if !(weaponLowered _player) then {
+            _player action ["WeaponOnBack", _player];
+        };
+    },
+    [_player],
+    2
+] call CBA_fnc_waitAndExecute;

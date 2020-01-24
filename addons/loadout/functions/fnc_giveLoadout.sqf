@@ -2,14 +2,27 @@
 
 params ["_player", "_faction", "_role"];
 
+INFO_3("_player = %1 _faction = %2 _role = %3", _player, _faction, _role);
+
 _player setVariable [QGVAR(role), _role, true];
 
 private _customLoadout = _faction isEqualTo "Custom";
 
-if(_customLoadout) exitWith {
-    [_player, _role] call FUNC(applyCustomLoadout);
+INFO_1("_customLoadout = %1", _customLoadout);
+
+if (_customLoadout) exitWith {
+    // delay until custom loadouts have been initialized
+    [
+        {!isNil QGVAR(customLoadouts)},
+        {
+            params ["_player", "_role"];
+            [_player, _role] call FUNC(applyCustomLoadout);
+        },
+        [_player, _role]
+    ] call CBA_fnc_waitUntilAndExecute;
 };
 
+INFO("applying normal loadout");
 
 private _specialLoadout = [];
 {
@@ -479,10 +492,13 @@ if !(weaponLowered _player) then {
 };
 
 // lower weapon after initial spawn
-[_player] spawn {
-    params ["_player"];
-    sleep 2;
-    if !(weaponLowered _player) then {
-        _player action ["WeaponOnBack", _player];
-    };
-};
+[
+    {
+        params ["_player"];
+        if !(weaponLowered _player) then {
+            _player action ["WeaponOnBack", _player];
+        };
+    },
+    [_player],
+    2
+] call CBA_fnc_waitAndExecute;

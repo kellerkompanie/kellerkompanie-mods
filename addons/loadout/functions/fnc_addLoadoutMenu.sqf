@@ -1,6 +1,9 @@
 #include "script_component.hpp"
 
-params [["_object", objNull, [objNull]],["_faction", "DEFAULT", [""]]];
+params [
+    ["_object", objNull, [objNull]],
+    ["_faction", "DEFAULT", [""]]
+];
 
 if(_faction isEqualTo "DEFAULT") then {
     _faction = GVAR(loadoutFaction);
