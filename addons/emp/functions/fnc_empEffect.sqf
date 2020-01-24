@@ -27,7 +27,6 @@ private _delay_check = 0.01;
 
 {
     [_x] remoteExec [QFUNC(tgtSFX), [0,-2] select isDedicated];
-    removeGoggles _x;
 
     _x removeWeaponGlobal "Rangefinder";
     _x removeWeaponGlobal "Laserdesignator";
