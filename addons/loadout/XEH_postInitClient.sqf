@@ -2,7 +2,6 @@
 
 // wait until CBA variables are propagated, then give loadout
 [{
-
     if (GVAR(loadoutOnSpawn)) then {
         // Legacy code
         if( (player isKindOf "keko_blufor_soldier") || (player isKindOf "keko_opfor_soldier") || (player isKindOf "keko_indfor_soldier") ) then {
@@ -21,5 +20,4 @@
 
     [QGVAR(onLoadoutFinished), [player]] call CBA_fnc_localEvent;
     [QGVAR(onLoadoutFinished), [player]] call CBA_fnc_serverEvent;
-
 }, []] call CBA_fnc_execNextFrame;
