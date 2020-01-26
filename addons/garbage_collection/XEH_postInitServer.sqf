@@ -1,7 +1,10 @@
 #include "script_component.hpp"
 
 addMissionEventHandler ["EntityKilled", {
-    _this call FUNC(onEntityKilled);
+    params ["_unit"];
+    if !(isNull _unit) then {
+        _unit call FUNC(onEntityKilled);
+    };
 }];
 
 if (GVAR(corpseMode) > 0) then {

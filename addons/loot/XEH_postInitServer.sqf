@@ -3,13 +3,15 @@
 if (GVAR(preventCorpseLooting)) then {
     addMissionEventHandler ["EntityKilled", {
         params ["_unit"];
-
         if (_unit isKindOf "CAManBase") then {
             [
                 {
-                    (_this select 0) call FUNC(onEntityKilled)
+                    params ["_unit"];
+                    if !(isNull _unit) then {
+                        _unit call FUNC(onEntityKilled);
+                    };
                 },
-                [_this],
+                [_unit],
                 5
             ] call CBA_fnc_waitAndExecute;
         };

@@ -3,7 +3,7 @@
 params ["_unit"];
 
 if (isNull _unit) exitWith { };
-if !(local _unit) exitWith { _this remoteExecCall [QFUNC(onEntityKilled), _unit]; };
+if !(local _unit) exitWith { _unit remoteExecCall [QFUNC(onEntityKilled), _unit]; };
 
 removeAllWeapons _unit;
 removeAllAssignedItems _unit;

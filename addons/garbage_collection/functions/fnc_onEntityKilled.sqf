@@ -2,6 +2,10 @@
 
 params ["_entity"];
 
+if (isNull _entity) exitWith {
+    false
+};
+
 if (_entity getVariable [QGVAR(isBlacklisted), false]) exitWith {
     false
 };
