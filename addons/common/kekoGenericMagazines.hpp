@@ -682,6 +682,47 @@ class kekoGenericMagazines {
         /* Project OPFOR */
         LOP_Weap_LeeEnfield = "LOP_10rnd_77mm_mag";
         LOP_Weap_LeeEnfield_railed = "LOP_10rnd_77mm_mag";
+
+        /* 3CB BAF */
+        UK3CB_BAF_L103A2 = "30Rnd_556x45_Stanag_green";
+        UK3CB_BAF_L110_762 = "UK3CB_BAF_762_200Rnd";
+        UK3CB_BAF_L110A1 = "UK3CB_BAF_556_200Rnd";
+        UK3CB_BAF_L110A2 = "UK3CB_BAF_556_200Rnd";
+        UK3CB_BAF_L110A2RIS = "UK3CB_BAF_556_200Rnd";
+        UK3CB_BAF_L110A3 = "UK3CB_BAF_556_200Rnd";
+        UK3CB_BAF_L115A3 = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L115A3_BL = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L115A3_DE = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L115A3_Ghillie = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L115A3_BL_Ghillie = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L115A3_DE_Ghillie = "UK3CB_BAF_338_5Rnd";
+        UK3CB_BAF_L118A1_Covert = "UK3CB_BAF_762_L42A1_10Rnd";
+        UK3CB_BAF_L118A1_Covert_BL = "UK3CB_BAF_762_L42A1_10Rnd";
+        UK3CB_BAF_L118A1_Covert_DE = "UK3CB_BAF_762_L42A1_10Rnd";
+        UK3CB_BAF_L119A1 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L119A1_CQB = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L119A1_UKUGL = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L119A1_FG = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L128A1 = "UK3CB_BAF_12G_Pellets";
+        UK3CB_BAF_L129A1 = "UK3CB_BAF_762_L42A1_20Rnd";
+        UK3CB_BAF_L1A1 = "UK3CB_BAF_762_20Rnd";
+        UK3CB_BAF_L1A1_Wood = "UK3CB_BAF_762_20Rnd";
+        UK3CB_BAF_L22 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L22A2 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L7A2 = "UK3CB_BAF_762_200Rnd";
+        UK3CB_BAF_L85A2 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_RIS_AFG = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_EMAG = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_RIS = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_RIS_Green = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_RIS_Tan = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_UGL = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L85A2_UGL_HWS = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L86A2 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L86A3 = "UK3CB_BAF_556_30Rnd";
+        UK3CB_BAF_L91A1 = "UK3CB_BAF_9_30Rnd";
+        UK3CB_BAF_L92A1 = "UK3CB_BAF_9_30Rnd";
+        UK3CB_BAF_L98A2 = "UK3CB_BAF_556_30Rnd";
     };
 
     class PrimaryTracer {
@@ -1367,6 +1408,47 @@ class kekoGenericMagazines {
         /* Project OPFOR */
         LOP_Weap_LeeEnfield = "LOP_10rnd_77mm_mag";
         LOP_Weap_LeeEnfield_railed = "LOP_10rnd_77mm_mag";
+
+        /* 3CB BAF */
+        UK3CB_BAF_L103A2 = "30Rnd_556x45_Stanag_Tracer_Green";
+        UK3CB_BAF_L110_762 = "UK3CB_BAF_762_200Rnd_T";
+        UK3CB_BAF_L110A1 = "UK3CB_BAF_556_200Rnd_T";
+        UK3CB_BAF_L110A2 = "UK3CB_BAF_556_200Rnd_T";
+        UK3CB_BAF_L110A2RIS = "UK3CB_BAF_556_200Rnd_T";
+        UK3CB_BAF_L110A3 = "UK3CB_BAF_556_200Rnd_T";
+        UK3CB_BAF_L115A3 = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L115A3_BL = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L115A3_DE = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L115A3_Ghillie = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L115A3_BL_Ghillie = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L115A3_DE_Ghillie = "UK3CB_BAF_338_5Rnd_Tracer";
+        UK3CB_BAF_L118A1_Covert = "UK3CB_BAF_762_L42A1_10Rnd_T";
+        UK3CB_BAF_L118A1_Covert_BL = "UK3CB_BAF_762_L42A1_10Rnd_T";
+        UK3CB_BAF_L118A1_Covert_DE = "UK3CB_BAF_762_L42A1_10Rnd_T";
+        UK3CB_BAF_L119A1 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L119A1_CQB = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L119A1_UKUGL = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L119A1_FG = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L128A1 = "UK3CB_BAF_12G_Pellets";
+        UK3CB_BAF_L129A1 = "UK3CB_BAF_762_L42A1_20Rnd_T";
+        UK3CB_BAF_L1A1 = "UK3CB_BAF_762_20Rnd_T";
+        UK3CB_BAF_L1A1_Wood = "UK3CB_BAF_762_20Rnd_T";
+        UK3CB_BAF_L22 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L22A2 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L7A2 = "UK3CB_BAF_762_200Rnd";
+        UK3CB_BAF_L85A2 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_RIS_AFG = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_EMAG = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_RIS = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_RIS_Green = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_RIS_Tan = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_UGL = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L85A2_UGL_HWS = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L86A2 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L86A3 = "UK3CB_BAF_556_30Rnd_T";
+        UK3CB_BAF_L91A1 = "UK3CB_BAF_9_30Rnd";
+        UK3CB_BAF_L92A1 = "UK3CB_BAF_9_30Rnd";
+        UK3CB_BAF_L98A2 = "UK3CB_BAF_556_30Rnd_T";
     };
 
     class Pistol {
@@ -1460,6 +1542,14 @@ class kekoGenericMagazines {
         RH_usp = "RH_12Rnd_45cal_usp";
         RH_vp70 = "RH_18Rnd_9x19_VP";
         RH_vz61 = "RH_20Rnd_32cal_vz61";
+
+        /* 3CB BAF */
+        UK3CB_BAF_L105A1 = "UK3CB_BAF_9_15Rnd";
+        UK3CB_BAF_L105A2 = "UK3CB_BAF_9_15Rnd";
+        UK3CB_BAF_L107A1 = "UK3CB_BAF_9_15Rnd";
+        UK3CB_BAF_L117A2 = "UK3CB_BAF_9_15Rnd";
+        UK3CB_BAF_L131A1 = "UK3CB_BAF_9_17Rnd";
+        UK3CB_BAF_L9A1 = "UK3CB_BAF_9_13Rnd";
     };
 
     class Launcher {
@@ -1664,5 +1754,11 @@ class kekoGenericMagazines {
         BWAdd_G36_AG = "1Rnd_HE_Grenade_shell";
         BWAdd_G38_AG = "1Rnd_HE_Grenade_shell";
         BWAdd_G38K_AG = "1Rnd_HE_Grenade_shell";
+
+        /* 3CB BAF */
+        UK3CB_BAF_L119A1_UKUGL = "UK3CB_BAF_1Rnd_HE_Grenade_Shell";
+        UK3CB_BAF_L85A2_UGL = "UK3CB_BAF_1Rnd_HE_Grenade_Shell";
+        UK3CB_BAF_L85A2_UGL_HWS = "UK3CB_BAF_1Rnd_HE_Grenade_Shell";
+
     };
 };
