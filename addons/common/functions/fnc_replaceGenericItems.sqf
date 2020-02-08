@@ -55,6 +55,17 @@ if (_primaryWeapon != "") then {
             [_unit, _tracerMag, true] call CBA_fnc_addItem;
         };
     } else {
+        // BWA3 makes some strange derivations of weapons, try to find
+        // the base weapon and derive mag from there
+        if (_mag == "") then {
+            private _baseWeapon = getText(configFile >> "CfgWeapons" >> _primaryWeapon >> "baseWeapon");
+            _mag = getText(configFile >> "kekoGenericMagazines" >> "PrimaryNormal" >> _baseWeapon);
+        };
+        if (_tracerMag == "") then {
+            private _baseWeapon = getText(configFile >> "CfgWeapons" >> _primaryWeapon >> "baseWeapon");
+            _tracerMag = getText(configFile >> "kekoGenericMagazines" >> "PrimaryTracer" >> _baseWeapon);
+        };
+
         while {"keko_RifleMag" in items _unit} do {
             _unit removeItem "keko_RifleMag";
             [_unit, _mag, true] call CBA_fnc_addItem;
