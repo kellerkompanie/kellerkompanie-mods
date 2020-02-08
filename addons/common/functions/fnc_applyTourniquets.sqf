@@ -25,9 +25,9 @@ private _rightArmWounds = 0;
 private _rightLegWounds = 0;
 
 {
-    _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+    _x params ["", "_bodyPart", "_amountOf", "_bleeding"];
 
-    if(_bloodLoss > 0) then {
+    if(_bleeding > 0) then {
         switch (_bodyPart) do {
             // Head
             case 0: {
@@ -41,36 +41,36 @@ private _rightLegWounds = 0;
 
             // Left Arm
             case 2: {
-                _leftArmWounds = _leftArmWounds + _numOpenWounds;
+                _leftArmWounds = _leftArmWounds + _amountOf;
             };
 
             // Right Arm
             case 3: {
-                _rightArmWounds = _rightArmWounds + _numOpenWounds;
+                _rightArmWounds = _rightArmWounds + _amountOf;
             };
 
             // Left Leg
             case 4: {
-                _leftLegWounds = _leftLegWounds + _numOpenWounds;
+                _leftLegWounds = _leftLegWounds + _amountOf;
             };
 
             // Right Leg
             case 5: {
-                _rightLegWounds = _rightLegWounds + _numOpenWounds;
+                _rightLegWounds = _rightLegWounds + _amountOf;
             };
         };
     };
 } forEach _openWounds;
 
 if(_leftArmWounds > 0) then {
-    [_unit, "", "hand_l"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
+    [_unit, "leftarm"] remoteExec ["ace_medical_treatment_fnc_tourniquetLocal", _unit];
 };
 if(_rightArmWounds > 0) then {
-    [_unit, "", "hand_r"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
+    [_unit, "rightarm"] remoteExec ["ace_medical_treatment_fnc_tourniquetLocal", _unit];
 };
 if(_leftLegWounds > 0) then {
-    [_unit, "", "leg_l"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
+    [_unit, "leftleg"] remoteExec ["ace_medical_treatment_fnc_tourniquetLocal", _unit];
 };
 if(_rightLegWounds > 0) then {
-    [_unit, "", "leg_r"] remoteExec ["ace_medical_fnc_treatmentTourniquetLocal", _unit];
+    [_unit, "rightleg"] remoteExec ["ace_medical_treatment_fnc_tourniquetLocal", _unit];
 };

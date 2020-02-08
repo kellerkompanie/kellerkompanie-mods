@@ -10,13 +10,13 @@
  * Number of open/bleeding wounds <NUMBER>
  *
  * Example:
- * _unit call keko_common_fnc_getNumOpenWounds
+ * _patient call keko_common_fnc_getNumOpenWounds
  *
  */
 
-params ["_unit"];
+params ["_patient"];
 
-private _openWounds = _unit getVariable ["ace_medical_openWounds", []];
+private _openWounds = GET_OPEN_WOUNDS(_patient);
 
 // nothing to do here
 if(count _openWounds == 0) exitWith {0};
@@ -30,38 +30,38 @@ private _rightLegWounds = 0;
 
 // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
 {
-    _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+    _x params ["", "_bodyPart", "_amountOf", "_bleeding"];
 
-    if(_bloodLoss > 0) then {
+    if(_bleeding > 0) then {
         switch (_bodyPart) do {
             // Head
             case 0: {
-                _headWounds = _headWounds + _numOpenWounds;
+                _headWounds = _headWounds + _amountOf;
             };
 
             // Body
             case 1: {
-                _bodyWounds = _bodyWounds + _numOpenWounds;
+                _bodyWounds = _bodyWounds + _amountOf;
             };
 
             // Left Arm
             case 2: {
-                _leftArmWounds = _leftArmWounds + _numOpenWounds;
+                _leftArmWounds = _leftArmWounds + _amountOf;
             };
 
             // Right Arm
             case 3: {
-                _rightArmWounds = _rightArmWounds + _numOpenWounds;
+                _rightArmWounds = _rightArmWounds + _amountOf;
             };
 
             // Left Leg
             case 4: {
-                _leftLegWounds = _leftLegWounds + _numOpenWounds;
+                _leftLegWounds = _leftLegWounds + _amountOf;
             };
 
             // Right Leg
             case 5: {
-                _rightLegWounds = _rightLegWounds + _numOpenWounds;
+                _rightLegWounds = _rightLegWounds + _amountOf;
             };
         };
     };

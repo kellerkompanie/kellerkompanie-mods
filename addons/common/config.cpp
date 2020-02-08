@@ -63,6 +63,8 @@ class CfgPatches {
             "keko_main",
             "ace_ai",
             "ace_hearing",
+            "ace_medical",
+            "ace_medical_treatment",
             "acex_main",
             "3denEnhanced"
         };

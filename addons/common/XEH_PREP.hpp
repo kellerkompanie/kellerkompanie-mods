@@ -32,6 +32,7 @@ PREP(moduleRespawnPosition);
 PREP(moduleRespawnPosition3den);
 PREP(moduleResurrect);
 PREP(moduleUnflipVehicle);
+PREP(removeWound);
 PREP(replaceGenericItems);
 PREP(replaceString);
 PREP(setRespawnPosition);

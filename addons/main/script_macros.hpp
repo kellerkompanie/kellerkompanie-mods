@@ -122,4 +122,9 @@
 #define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
 
+// ACE Medical
+#define VAR_OPEN_WOUNDS "ace_medical_openWounds"
+#define GET_OPEN_WOUNDS(unit) (unit getVariable [VAR_OPEN_WOUNDS, []])
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
+
 #include "script_debug.hpp"

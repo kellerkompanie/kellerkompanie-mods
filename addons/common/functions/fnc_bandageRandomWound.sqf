@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-private _openWounds = _unit getVariable ["ace_medical_openWounds", []];
+private _openWounds = GET_OPEN_WOUNDS(_unit);
 
 private _headWounds = 0;
 private _bodyWounds = 0;
@@ -29,7 +29,7 @@ private _rightLegWounds = 0;
 // get all bleeding body parts
 private _woundedBodyParts = [];
 {
-    _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+    _x params ["", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
 
     if(_bloodLoss > 0) then {
         switch (_bodyPart) do {
@@ -47,25 +47,25 @@ private _woundedBodyParts = [];
 
             // Left Arm
             case 2: {
-                _woundedBodyParts pushBackUnique "hand_l";
+                _woundedBodyParts pushBackUnique "leftarm";
                 _leftArmWounds = _leftArmWounds + _numOpenWounds;
             };
 
             // Right Arm
             case 3: {
-                _woundedBodyParts pushBackUnique "hand_r";
+                _woundedBodyParts pushBackUnique "rightarm";
                 _rightArmWounds = _rightArmWounds + _numOpenWounds;
             };
 
             // Left Leg
             case 4: {
-                _woundedBodyParts pushBackUnique "leg_l";
+                _woundedBodyParts pushBackUnique "leftleg";
                 _leftLegWounds = _leftLegWounds + _numOpenWounds;
             };
 
             // Right Leg
             case 5: {
-                _woundedBodyParts pushBackUnique "leg_r";
+                _woundedBodyParts pushBackUnique "rightleg";
                 _rightLegWounds = _rightLegWounds + _numOpenWounds;
             };
         };
@@ -76,14 +76,14 @@ private _woundedBodyParts = [];
 if("head" in _woundedBodyParts) then {
     private _i = 0;
     for [{ _i = 0 }, { _i < _headWounds }, { _i = _i + 1 }] do    {
-        [_unit, _unit, "head", "Bandage"] call ace_medical_fnc_treatmentAdvanced_bandage;
+        [_unit, "head"] call FUNC(removeWound);
     };
 };
 
 if("body" in _woundedBodyParts) then {
     private _i = 0;
     for [{ _i = 0 }, { _i < _bodyWounds }, { _i = _i + 1 }] do    {
-        [_unit, _unit, "body", "Bandage"] call ace_medical_fnc_treatmentAdvanced_bandage;
+        [_unit, "body"] call FUNC(removeWound);
     };
 };
 
@@ -91,6 +91,6 @@ private _sumOpenWounds = _leftArmWounds + _leftLegWounds + _rightArmWounds + _ri
 
 // if no head or torso wound was closed, chose at random
 if(_sumOpenWounds > 4) then {
-    private _selection = selectRandom (_woundedBodyParts - ["head","body"]);
-    [_unit, _unit, _selection, "Bandage"] call ace_medical_fnc_treatmentAdvanced_bandage;
+    private _selection = selectRandom (_woundedBodyParts - ["head", "body"]);
+    [_unit, _selection] call FUNC(removeWound);
 };
