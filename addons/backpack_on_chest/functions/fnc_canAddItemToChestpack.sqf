@@ -13,30 +13,30 @@
  * Can add item? <BOOL>
  *
  * Example:
- * [player,"FirstAidKit",2] call keko_backpack_on_chest_fnc_canAddItemToChestpack;
+ * [player, "FirstAidKit", 2] call keko_backpack_on_chest_fnc_canAddItemToChestpack;
  *
  * Public: No
  */
-params ["_unit","_item",["_amount",1]];
+params ["_unit", "_item", ["_amount", 1]];
 
 //calculate space left in chestpack
-private _freeSpace = getNumber(configFile >> "CfgVehicles" >> ([_unit] call FUNC(chestpack)) >> "maximumLoad") - ([_unit] call FUNC(loadChestpack));
+private _freeSpace = getNumber (configFile >> "CfgVehicles" >> ([_unit] call FUNC(chestpack)) >> "maximumLoad") - ([_unit] call FUNC(loadChestpack));
 
 private _itemMass = 0;
-if (isClass (configFile>>"CfgWeapons">> _item >> "ItemInfo")) then {
-     _itemMass = getNumber(configFile>>"CfgWeapons">> _item >> "ItemInfo" >> "Mass");
+if (isClass (configFile >> "CfgWeapons" >> _item >> "ItemInfo")) then {
+     _itemMass = getNumber (configFile >> "CfgWeapons" >> _item >> "ItemInfo" >> "Mass");
 };
-if (isClass (configFile>>"CfgWeapons">> _item >> "WeaponSlotsInfo")) then {
-     _itemMass = getNumber(configFile>>"CfgWeapons">> _item >> "WeaponSlotsInfo" >> "Mass")
+if (isClass (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo")) then {
+     _itemMass = getNumber (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo" >> "Mass")
 };
-if (isClass (configFile>>"CfgMagazines">> _item)) then {
-     _itemMass = getNumber(configFile>>"CfgMagazines">> _item >> "Mass");
+if (isClass (configFile >> "CfgMagazines" >> _item)) then {
+     _itemMass = getNumber (configFile >> "CfgMagazines">> _item >> "Mass");
 };
-if (isClass (configFile>>"CfgVehicles">> _item)) then  {
-     _itemMass = getNumber(configFile>>"CfgVehicles">> _item >> "Mass");
+if (isClass (configFile >> "CfgVehicles" >> _item)) then  {
+     _itemMass = getNumber (configFile >> "CfgVehicles">> _item >> "Mass");
 };
-if (isClass (configFile>>"CfgGlasses">> _item)) then  {
-     _itemMass = getNumber(configFile>>"CfgGlasses">> _item >> "Mass");
+if (isClass (configFile >> "CfgGlasses">> _item)) then  {
+     _itemMass = getNumber (configFile >> "CfgGlasses">> _item >> "Mass");
 };
 
 if (_itemMass * _amount > _freeSpace) then {false} else {true};

@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-params ["_player","_settings"];
+params ["_player", "_settings"];
 
 //only if TFAR is loaded
 if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) exitWith {

@@ -18,14 +18,14 @@
  *
  * Public: No
  */
-params ["_unit","_item","_ammo"];
+params ["_unit", "_item", "_ammo"];
 
 //exit if there is no such item in chestpack
-if ((compile format ["(_x select 0) isEqualTo '%1' and (_x select 1) isEqualTo %2",_item,_ammo]) count ([_unit] call FUNC(chestpackMagazines)) isEqualTo 0) exitWith {};
+if ((compile format ["(_x select 0) isEqualTo '%1' and (_x select 1) isEqualTo %2", _item, _ammo]) count ([_unit] call FUNC(chestpackMagazines)) isEqualTo 0) exitWith {};
 
 private _var = _unit getVariable [QGVAR(chestpack),nil];
 
-(_var select 3) deleteAt ((_var select 3) find [_item,_ammo]);
+(_var select 3) deleteAt ((_var select 3) find [_item, _ammo]);
 
 //update variable
-_unit setVariable [QGVAR(chestpack),_var,true];
+_unit setVariable [QGVAR(chestpack), _var, true];

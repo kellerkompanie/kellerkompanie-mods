@@ -19,10 +19,10 @@
  *
  * Public: No
  */
-params ["_unit","_item","_ammo"];
+params ["_unit", "_item", "_ammo"];
 
 //exit if there is not enough space left
-if !([_unit,_item,1] call FUNC(canAddItemToChestpack)) exitWith {};
+if !([_unit, _item, 1] call FUNC(canAddItemToChestpack)) exitWith {};
 
 private _var = _unit getVariable [QGVAR(chestpack), nil];
 

@@ -49,15 +49,14 @@ if ((_backpack isEqualTo "") or !(([_player] call FUNC(chestpack)) isEqualTo "")
           _mag pushBack 1;
           _backpackmags pushBack _mag;
      };
-
 } forEach weaponsItems (backpackContainer _player);
 
 //add pack
-[_player,_backpack] call FUNC(addChestpack);
+[_player, _backpack] call FUNC(addChestpack);
 
 //add items
 {
-     [_player,_x] call FUNC(addItemToChestpack);
+     [_player, _x] call FUNC(addItemToChestpack);
 } forEach _backpackitems;
 
 //add magazines

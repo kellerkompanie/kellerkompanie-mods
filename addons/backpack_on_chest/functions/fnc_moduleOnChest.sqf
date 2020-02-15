@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-params ["_module","_syncedUnits"];
+params ["_module", "_syncedUnits"];
 
 private _backpackClass = _module getVariable "classname";
 private _delay = _module getVariable "delay";

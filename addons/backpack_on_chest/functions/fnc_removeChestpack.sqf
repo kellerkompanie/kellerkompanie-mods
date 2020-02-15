@@ -23,10 +23,10 @@ private _var = _unit getVariable [QGVAR(chestpack),nil];
      deleteVehicle ([_unit] call FUNC(chestpackContainer));
 
 //remove all EHs
-_unit removeEventHandler ["GetInMan",(_var select 1) select 0];
-_unit removeEventHandler ["GetOutMan",(_var select 1) select 1];
-_unit removeEventHandler ["AnimDone",(_var select 1) select 2];
-_unit removeEventHandler ["Killed",(_var select 1) select 3];
+_unit removeEventHandler ["GetInMan", (_var select 1) select 0];
+_unit removeEventHandler ["GetOutMan", (_var select 1) select 1];
+_unit removeEventHandler ["AnimDone", (_var select 1) select 2];
+_unit removeEventHandler ["Killed", (_var select 1) select 3];
 
 [_unit, "forceWalk", "BackpackOnChest", false] call ace_common_fnc_statusEffect_set;
 

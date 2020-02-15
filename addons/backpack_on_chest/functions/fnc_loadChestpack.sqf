@@ -21,7 +21,6 @@ private _items = [_unit] call FUNC(chestpackItems);
 private _mass = 0;
 
 {
-
      //get mass of item
      private _itemMass = 0;
      if (isClass (configFile>>"CfgWeapons">> _x >> "ItemInfo")) then {
@@ -40,9 +39,7 @@ private _mass = 0;
           _itemMass = getNumber(configFile>>"CfgGlasses">> _x >> "Mass");
      };
 
-     _mass = _mass + _itemMass
-
+     _mass = _mass + _itemMass;
 } forEach _items;
-
 
 _mass

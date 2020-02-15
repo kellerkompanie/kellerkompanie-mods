@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-params ["_unit","_chestpackClass"];
+params ["_unit", "_chestpackClass"];
 
 //add HandleDisconnect-EH on server if not done yet
 if !(missionNamespace getVariable [QGVAR(HDCEHadded),false]) then {

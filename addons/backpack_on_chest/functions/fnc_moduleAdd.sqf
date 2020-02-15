@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_module","_units"];
+params ["_module", "_units"];
 
 private _class = _module getVariable "classname";
 private _items = call compile format ["[%1]",_module getVariable "items"];

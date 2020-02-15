@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-params ["_unit",["_returnMags",true]];
+params ["_unit", ["_returnMags", true]];
 
 private _var = _unit getVariable [QGVAR(chestpack), nil];
 private _items = +(_var select 2);

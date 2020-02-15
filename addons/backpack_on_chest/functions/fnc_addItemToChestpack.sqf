@@ -18,15 +18,15 @@
  *
  * Public: No
  */
-params ["_unit","_item",["_amount",1]];
+params ["_unit", "_item", ["_amount", 1]];
 
 //exit if there is not enough space left
-if !([_unit,_item,_amount] call FUNC(canAddItemToChestpack)) exitWith {};
+if !([_unit, _item, _amount] call FUNC(canAddItemToChestpack)) exitWith {};
 
 //exit if is magazine
 if (isClass (configFile >> "CfgMagazines" >> _item)) exitWith {
      for "_i" from 1 to _amount do {
-          [_unit,_item,(getNumber (configFile >> "CfgMagazines" >> _item >> "count"))] call FUNC(addMagToChestpack);
+          [_unit, _item, getNumber (configFile >> "CfgMagazines" >> _item >> "count")] call FUNC(addMagToChestpack);
      };
 };
 
