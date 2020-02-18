@@ -19,6 +19,8 @@
  */
 params ["_unit", "_item", ["_amount", 1]];
 
+INFO_1("canAddItemToChestpack _item=%1", _item);
+
 //calculate space left in chestpack
 private _freeSpace = getNumber (configFile >> "CfgVehicles" >> ([_unit] call FUNC(chestpack)) >> "maximumLoad") - ([_unit] call FUNC(loadChestpack));
 
