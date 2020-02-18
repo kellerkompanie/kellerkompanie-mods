@@ -10,6 +10,6 @@
 */
 params ["_unit", "_change"];
 
-private _currentAmount = _unit call FUNC(getMoney) + _change;
+private _currentAmount = (_unit call FUNC(getMoney)) + _change;
 _unit setVariable [QEGVAR(persistency,cash), _currentAmount, true];
 _unit remoteExec [QEFUNC(persistency,manualSave), 2];
