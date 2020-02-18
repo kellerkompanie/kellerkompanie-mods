@@ -1,5 +1,6 @@
 PREP(dialogEditMoneyCallback);
 PREP(dialogEditMoneyInit);
+PREP(getMoney);
 PREP(initializeUI);
 PREP(moduleAddPersistencyMenu);
 PREP(moduleAddPersistencyMenu3den);
@@ -15,3 +16,4 @@ PREP(moduleManualSavePlayers);
 PREP(moduleManualSaveVehicles);
 PREP(modulePersistencyBlacklist3den);
 PREP(moduleSelectivePersistency3den);
+PREP(setMoney);
