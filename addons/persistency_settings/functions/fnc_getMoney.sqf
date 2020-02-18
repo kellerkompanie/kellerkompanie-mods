@@ -9,4 +9,4 @@
 */
 params ["_unit"];
 
-_unit getVariable [QEGVAR(persistency,cash), EGVAR(persistency,defaultMoney)]
+parseNumber (_unit getVariable [QEGVAR(persistency,cash), EGVAR(persistency,defaultMoney)])
