@@ -9,4 +9,10 @@
 */
 params ["_unit"];
 
-parseNumber (_unit getVariable [QEGVAR(persistency,cash), EGVAR(persistency,defaultMoney)])
+private _value = _unit getVariable [QEGVAR(persistency,cash), EGVAR(persistency,defaultMoney)];
+
+if ((typeName _value) == "STRING") exitWith {
+    parseNumber _value
+};
+
+_value
