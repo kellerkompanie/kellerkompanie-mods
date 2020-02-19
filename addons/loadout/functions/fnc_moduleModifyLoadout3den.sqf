@@ -4,18 +4,18 @@ private _logic = _this select 0;
 
 if !(isServer) exitWith {};
 
-private _replaceUniform     = _logic getVariable ["ReplaceUniform",     ""] call FUNC(parseStringToList);
-private _replaceVest        = _logic getVariable ["ReplaceVest",         ""] call FUNC(parseStringToList);
-private _replaceBackpack     = _logic getVariable ["ReplaceBackpack",     ""] call FUNC(parseStringToList);
-private _replaceHelmet         = _logic getVariable ["ReplaceHelmet",         ""] call FUNC(parseStringToList);
-private _replaceGoggles        = _logic getVariable ["ReplaceGoggles",        ""] call FUNC(parseStringToList);
+private _replaceUniform = _logic getVariable ["ReplaceUniform", ""] call FUNC(parseStringToList);
+private _replaceVest = _logic getVariable ["ReplaceVest", ""] call FUNC(parseStringToList);
+private _replaceBackpack = _logic getVariable ["ReplaceBackpack", ""] call FUNC(parseStringToList);
+private _replaceHelmet = _logic getVariable ["ReplaceHelmet", ""] call FUNC(parseStringToList);
+private _replaceGoggles = _logic getVariable ["ReplaceGoggles", ""] call FUNC(parseStringToList);
 
-private _addToUniform     = _logic getVariable ["AddToUniform",     ""] call FUNC(parseStringToList);
-private _addToVest        = _logic getVariable ["AddToVest",         ""] call FUNC(parseStringToList);
-private _addToBackpack     = _logic getVariable ["AddToBackpack",     ""] call FUNC(parseStringToList);
+private _addToUniform = _logic getVariable ["AddToUniform", ""] call FUNC(parseStringToList);
+private _addToVest = _logic getVariable ["AddToVest", ""] call FUNC(parseStringToList);
+private _addToBackpack = _logic getVariable ["AddToBackpack", ""] call FUNC(parseStringToList);
 
-private _removeFromUniform     = _logic getVariable ["RemoveFromUniform",     ""] call FUNC(parseStringToList);
-private _removeFromVest        = _logic getVariable ["RemoveFromVest",     ""] call FUNC(parseStringToList);
+private _removeFromUniform = _logic getVariable ["RemoveFromUniform", ""] call FUNC(parseStringToList);
+private _removeFromVest = _logic getVariable ["RemoveFromVest", ""] call FUNC(parseStringToList);
 private _removeFromBackpack = _logic getVariable ["RemoveFromBackpack", ""] call FUNC(parseStringToList);
 
 private _objects = synchronizedObjects _logic;
@@ -51,10 +51,10 @@ private _objects = synchronizedObjects _logic;
         _x setVariable [QGVAR(removeFromUniform), _removeFromUniform,  true];
     };
     if (count _removeFromVest > 0) then {
-        _x setVariable [QGVAR(removeFromVest), _removeFromVest,     true];
+        _x setVariable [QGVAR(removeFromVest), _removeFromVest, true];
     };
     if (count _removeFromBackpack > 0) then {
-        _x setVariable [QGVAR(removeFromBackpack),     _removeFromBackpack, true];
+        _x setVariable [QGVAR(removeFromBackpack), _removeFromBackpack, true];
     };
 } forEach _objects;
 
