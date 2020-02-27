@@ -124,12 +124,15 @@ if (_launcherWeapon != "") then {
         };
 
         if (secondaryWeapon _unit == "keko_DisposableRocketLauncher") then {
+            _unit removeWeapon (secondaryWeapon _unit);
             [_unit, _disposableRocketLauncher, true] call CBA_fnc_addWeapon;
         };
         if (secondaryWeapon _unit == "keko_AntiTankLauncher") then {
+            _unit removeWeapon (secondaryWeapon _unit);
             [_unit, _antiTankLauncher, true] call CBA_fnc_addWeapon;
         };
         if (secondaryWeapon _unit == "keko_AntiAirLauncher") then {
+            _unit removeWeapon (secondaryWeapon _unit); 
             [_unit, _antiAirLauncher, true] call CBA_fnc_addWeapon;
         };
     };
