@@ -80,7 +80,7 @@ class FactionRussiaEMRDesert: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_AK74M_FOLDED };
+        Default[] = { keko_W_AK74M };
         FTL[] = { keko_W_AK74M_GL };
         Grenadier[] = { keko_W_AK74M_GL };
         LMG[] = { keko_W_M84 };

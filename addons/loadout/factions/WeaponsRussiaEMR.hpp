@@ -8,10 +8,6 @@ class weapons: weapons {
         silencers[] = {"rhs_acc_dtk4short"};
         magazines[] = {"rhs_30Rnd_545x39_7N6_AK","rhs_30Rnd_545x39_AK_green"};
     };
-    class keko_W_AK74M_FOLDED: keko_W_AK74M
-    {
-        cfgName = "rhs_weap_ak74m_folded_dtk";
-    };
     class keko_W_AK74M_GL: keko_W_AK74M    {
         cfgName = "rhs_weap_ak74m_gp25_dtk";
         scopes[] = {"rhs_acc_pkas"};
