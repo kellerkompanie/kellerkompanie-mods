@@ -44,6 +44,25 @@ if (isNil QGVAR(crates)) then {
 ] call cba_settings_fnc_init;
 
 [
+    QGVAR(enableUnflipAction), // key/reference variable
+    "LIST", // type of setting
+    ["Unflip ACE interaction", "Add an ACE interaction for all players to unflip a vehicle."], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        [
+            0,
+            1
+        ],
+        [
+            "Disabled",
+            "Enabled"
+        ], // names
+        0 // default index
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
     QGVAR(virtualHeliLogistics), // key/reference variable
     "LIST", // type of setting
     ["Access Level", "Enable/Disable virtual heli logistics."], // name and tooltip
