@@ -10,6 +10,7 @@ class CfgPatches {
             QGVAR(moduleHeliDrop),
             QGVAR(moduleCustomLogistics3den),
             QGVAR(moduleUAVBase3den),
+            QGVAR(moduleAddCrate),
             "keko_ModuleAddLogisticsMenu3den",
             "keko_ModuleCustomLogistics3den"
         };

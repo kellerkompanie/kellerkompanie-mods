@@ -23,6 +23,7 @@ PREP(fillCrate);
 PREP(getCrateInventory);
 PREP(hasAccess);
 PREP(heliDrop);
+PREP(moduleAddCrate);
 PREP(moduleAddLogisticsMenu);
 PREP(moduleAddLogisticsMenu3den);
 PREP(moduleCustomLogistics3den);

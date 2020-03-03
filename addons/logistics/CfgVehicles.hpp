@@ -101,6 +101,13 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 0;
     };
+    class GVAR(moduleAddCrate): GVAR(moduleBase) {
+        displayName        = "Add Crate";
+        category           = QGVAR(Logistics);
+        function           = QFUNC(moduleAddCrate);
+        icon               = QPATHTOF(ui\icon_crate.paa);
+        curatorCanAttach   = 1;
+    };
 
     class Items_base_F;
     class Land_CanisterFuel_F: Items_base_F {
