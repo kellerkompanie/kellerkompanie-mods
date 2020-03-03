@@ -13,7 +13,7 @@ class CfgPatches {
             "ace_medical_treatment",
             "keko_medical"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

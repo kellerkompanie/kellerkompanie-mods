@@ -11,7 +11,7 @@ class CfgPatches {
             "rhs_c_a2port_car",
             "rhs_cti_insurgents"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

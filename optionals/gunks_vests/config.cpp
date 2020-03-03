@@ -17,7 +17,7 @@ class CfgPatches {
             "rhsusf_c_uav",
             "rhs_c_troops"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

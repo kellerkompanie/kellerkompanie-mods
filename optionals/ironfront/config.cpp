@@ -27,7 +27,7 @@ class CfgPatches {
             "GEISTL_EDITORPREVIEWS_C",
             "GEISTL_ASSETS_C_GER_BAG"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

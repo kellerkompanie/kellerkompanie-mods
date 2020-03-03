@@ -14,7 +14,7 @@ class CfgPatches {
             "ace_compat_rhs_afrf3",
             "rhs_c_weapons"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

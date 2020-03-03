@@ -10,7 +10,7 @@ class CfgPatches {
             "keko_common",
             "rhsusf_c_troops"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

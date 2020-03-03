@@ -15,7 +15,7 @@ class CfgPatches {
             "bwa3_rgw90",
             "bwa3_comp_ace"
         };
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

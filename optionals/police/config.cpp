@@ -10,7 +10,7 @@ class CfgPatches {
             "3den",
             "cba_main",
             "ace_main"};
-        author = ECSTRING(common,Schwaggot);
+        author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
