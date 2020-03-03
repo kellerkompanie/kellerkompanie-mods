@@ -1,12 +1,5 @@
 #include "script_component.hpp"
 
-// Initialize crates
-if (isNil QGVAR(crates)) then {
-    GVAR(crates) = [];
-} else {
-    WARNING_1("%1 was already defined before executing XEH_postInit", QGVAR(crates));
-};
-
 if (hasInterface) then {
     call FUNC(addConfigCrates);
 

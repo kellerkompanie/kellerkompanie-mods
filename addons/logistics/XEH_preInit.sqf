@@ -6,6 +6,12 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+// Initialize crates
+if (isNil QGVAR(crates)) then {
+    GVAR(crates) = [];
+} else {
+    WARNING_1("%1 was already defined before executing XEH_preInit", QGVAR(crates));
+};
 
 
 [
