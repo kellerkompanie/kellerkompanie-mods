@@ -21,3 +21,11 @@
     [QGVAR(onLoadoutFinished), [player]] call CBA_fnc_localEvent;
     [QGVAR(onLoadoutFinished), [player]] call CBA_fnc_serverEvent;
 }, []] call CBA_fnc_execNextFrame;
+
+// make sure that no matter what the medic units are always medics
+if( (player isKindOf QEGVAR(faction_generic,blufor_doctor)) || (player isKindOf QEGVAR(faction_generic,opfor_doctor)) || (player isKindOf QEGVAR(faction_generic,indfor_doctor)) ) then {
+    player setVariable ["ace_medical_medicClass", 2, true];
+};
+if( (player isKindOf QEGVAR(faction_generic,blufor_medic)) || (player isKindOf QEGVAR(faction_generic,opfor_medic)) || (player isKindOf QEGVAR(faction_generic,indfor_medic)) ) then {
+    player setVariable ["ace_medical_medicClass", 1, true];
+};
