@@ -10,6 +10,11 @@ class CfgWeapons {
             mass = 88.2; // ~4kg
         };
     };
+    class BWA3_PzF3_Used: BWA3_PzF3 {
+        class WeaponSlotsInfo {
+            mass = 88.2; // ~4kg
+        };
+    };
 
     class BWA3_Bunkerfaust: BWA3_PzF3 {
         class WeaponSlotsInfo {
@@ -40,6 +45,11 @@ class CfgWeapons {
         };
     };
     class BWA3_RGW90_Loaded: BWA3_RGW90 {
+        class WeaponSlotsInfo {
+            mass = 88.2; // ~4kg
+        };
+    };
+    class BWA3_RGW90_Used: BWA3_RGW90 {
         class WeaponSlotsInfo {
             mass = 88.2; // ~4kg
         };
