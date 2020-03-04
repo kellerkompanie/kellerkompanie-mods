@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="ai_nvgs">
-        <Key ID="STR_keko_ai_nvgs_descriptionShort">
+        <Key ID="STR_keko_ai_descriptionShort">
             <English>Night Vision Goggles - AI Only</English>
             <German>Restlichtverstärker - Nur KI</German>
         </Key>
-        <Key ID="STR_keko_ai_nvgs_displayName">
+        <Key ID="STR_keko_ai_displayName">
             <English>NV Goggles (AI Only)</English>
             <German>Restlichtverstärker (nur KI)</German>
         </Key>
