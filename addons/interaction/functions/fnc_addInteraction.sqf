@@ -59,7 +59,7 @@ private _typeTexture = _textures select _type;
         if (count _codeOnInteraction > 0) then {
             [_object, _codeOnInteraction] spawn {
                 params ["_object", "_codeOnInteraction"];
-                call compile _codeOnInteraction;
+                [_object] call compile _codeOnInteraction;
             };
         };
 
