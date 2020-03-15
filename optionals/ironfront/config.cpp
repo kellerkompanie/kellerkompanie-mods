@@ -23,9 +23,7 @@ class CfgPatches {
             "cba_jam",
             "WW2_Assets_c_Characters_Germans_c_GER_Wehrmacht_Gear",
             "WW2_Core_c_WW2_EditorPreviews_c",
-            "fow_characters_c",
-            "GEISTL_EDITORPREVIEWS_C",
-            "GEISTL_ASSETS_C_GER_BAG"
+            "fow_characters_c"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
