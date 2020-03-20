@@ -19,7 +19,7 @@
     private _splints = ["Disabled", "Splints fully heal fractures", "Splints heal, but cannot sprint"] select ("ace_medical_fractures" call CBA_settings_fnc_get);
     private _fatalInjuriesPlayer = ["Always", "In Cardiac Arrest", "Never"] select ("ace_medical_statemachine_fatalInjuriesPlayer" call CBA_settings_fnc_get);
     private _aiUnconsciousness = ["Disabled", "Enabled"] select ("ace_medical_statemachine_AIUnconsciousness" call CBA_settings_fnc_get);
-    private _surgicalKitRequired = ["Not required", "Required"] select ("ace_medical_treatment_woundReopening" call CBA_settings_fnc_get);
+    private _surgicalKitRequired = ["Not required", "Not required", "Required"] select ("ace_medical_treatment_advancedBandages" call CBA_settings_fnc_get);
     private _cardiacArrestTimer = "ace_medical_statemachine_cardiacArrestTime" call CBA_settings_fnc_get;
 
     player createDiarySubject ["missionSettings", "Mission Settings"];
