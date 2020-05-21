@@ -8,7 +8,10 @@ private _addonsWhitelist = [
     "warfxpe",
     "blastcore_maincore",
     "blastcore_vep",
-    "armazeuscache"
+    "armazeuscache",
+    "l_es_es_main",
+    "l_es_es_sounds",
+    "l_es_es_sys"
 ];
 
 private _cfgPatches = (configFile >> "CfgPatches");
