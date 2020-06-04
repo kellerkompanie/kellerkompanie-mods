@@ -24,6 +24,9 @@ private _gameMasterModuleExists = false;
 private _hc1Exists = false;
 private _hc2Exists = false;
 private _hc3Exists = false;
+private _hc4Exists = false;
+private _hc5Exists = false;
+private _hc6Exists = false;
 
 {
     private _logicName = (_x get3DENAttribute "name") select 0;
@@ -48,6 +51,18 @@ private _hc3Exists = false;
         };
         case "HC3": {
             _hc3Exists = true;
+            break;
+        };
+        case "HC4": {
+            _hc4Exists = true;
+            break;
+        };
+        case "HC5": {
+            _hc5Exists = true;
+            break;
+        };
+        case "HC6": {
+            _hc6Exists = true;
             break;
         };
     };
@@ -149,4 +164,31 @@ if !(_hc3Exists) then {
     _hc3Entity set3DENAttribute ["ControlSP", false];
     _hc3Entity set3DENAttribute ["ControlMP", true];
     _hc3Entity set3DENAttribute ["Description", "HC3"];
+};
+
+if !(_hc4Exists) then {
+    private _hc4Pos = [(_modulePos select 0) + 6, _modulePos select 1, _modulePos select 2];
+    private _hc4Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc4Pos];
+    _hc4Entity set3DENAttribute ["Name", "HC4"];
+    _hc4Entity set3DENAttribute ["ControlSP", false];
+    _hc4Entity set3DENAttribute ["ControlMP", true];
+    _hc4Entity set3DENAttribute ["Description", "HC4"];
+};
+
+if !(_hc5Exists) then {
+    private _hc5Pos = [(_modulePos select 0) + 7, _modulePos select 1, _modulePos select 2];
+    private _hc5Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc5Pos];
+    _hc5Entity set3DENAttribute ["Name", "HC5"];
+    _hc5Entity set3DENAttribute ["ControlSP", false];
+    _hc5Entity set3DENAttribute ["ControlMP", true];
+    _hc5Entity set3DENAttribute ["Description", "HC5"];
+};
+
+if !(_hc6Exists) then {
+    private _hc6Pos = [(_modulePos select 0) + 8, _modulePos select 1, _modulePos select 2];
+    private _hc6Entity = create3DENEntity ["Logic", "HeadlessClient_F", _hc6Pos];
+    _hc6Entity set3DENAttribute ["Name", "HC6"];
+    _hc6Entity set3DENAttribute ["ControlSP", false];
+    _hc6Entity set3DENAttribute ["ControlMP", true];
+    _hc6Entity set3DENAttribute ["Description", "HC6"];
 };
