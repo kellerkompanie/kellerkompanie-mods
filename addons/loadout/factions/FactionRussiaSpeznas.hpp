@@ -90,7 +90,7 @@ class FactionRussiaSpeznas: FactionBase {
         Grenadier[] = { keko_W_AK74MR_GL };
         LMG[] = { keko_W_RPK };
         Marksman[] = { keko_W_SVD };
-        HeliPilot[] = { keko_W_ASVAL };
+        HeliPilot[] = { };
         JTAC[] = { keko_W_AK74MR_GL };
     };
 
