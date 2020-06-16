@@ -16,6 +16,8 @@ SR-Kreise:
 5. 34 Delta
 6. 35 Echo
 7. 36 Fox
+8. 37 Golf
+9. 30 Kampfkreis
 
 LR-Kreise:
 1. 50 Konvoi / Fahrzeuge
