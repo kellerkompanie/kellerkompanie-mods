@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// according to BIKI this should set the maximum viewDistance at server
+setViewDistance 10000;
+
 //stops the blabbering of AI units and players
 {_x setVariable ["BIS_noCoreConversations", true, true]} count allUnits;
 

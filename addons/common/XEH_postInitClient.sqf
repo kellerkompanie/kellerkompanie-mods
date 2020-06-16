@@ -3,6 +3,9 @@
 player setVariable ["BIS_noCoreConversations", true];
 enableRadio false;
 
+// according to the BIKI, this should reset viewDistance to Video Setting values
+setViewDistance -1;
+
 //failsafe for missing curator interface:
 if ( player isKindOf QEGVAR(faction_generic,blufor_command) || player isKindOf QEGVAR(faction_generic,opfor_command) || player isKindOf QEGVAR(faction_generic,indfor_command) ) then {
     if (TFAR_pluginTimeout < 15) then {
