@@ -76,8 +76,8 @@ class FactionBase {
     class uniformInventory {
         Default[] = {
             {15, "ACE_fieldDressing"},
-            {2, "ACE_morphine"},
-            {3, "ACE_tourniquet"},
+            {10, "keko_painkiller"},
+            {4, "ACE_tourniquet"},
             {1, "ACE_MapTools"},
             {1, "ACE_Flashlight_XL50"},
             {1, "keko_canteen_canteen"}
