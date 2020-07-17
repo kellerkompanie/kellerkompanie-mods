@@ -107,5 +107,18 @@
             <English>Painkiller</English>
             <German>Schmerzmittel</German>
         </Key>
+
+        <Key ID="STR_keko_common_Arsenal_buttonMedicalTooltip">
+            <English>Medical Items</English>
+            <German>Erste Hilfe Items</German>
+        </Key>
+        <Key ID="STR_keko_common_Arsenal_buttonFoodTooltip">
+            <English>Food Items</English>
+            <German>Essen Items</German>
+        </Key>
+        <Key ID="STR_keko_common_Arsenal_buttonRoleplayTooltip">
+            <English>Roleplay Items</English>
+            <German>Rollenspiel Items</German>
+        </Key>
     </Package>
 </Project>
