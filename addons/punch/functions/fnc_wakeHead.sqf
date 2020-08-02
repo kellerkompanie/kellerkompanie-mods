@@ -15,5 +15,5 @@ params ["_player", "_target"];
 
     sleep 4;
 
-    ["ace_medical_WakeUp", _target] call CBA_fnc_localEvent;
+    ["ace_medical_WakeUp", _target, _target] call CBA_fnc_targetEvent;
 };
