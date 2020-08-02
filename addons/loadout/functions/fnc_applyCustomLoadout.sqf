@@ -7,6 +7,8 @@ _player enableSimulation false;
 _player setVariable ["ace_medical_medicClass", 0, true];
 _player setVariable ["ACE_isEngineer", 0, true];
 
+removeGoggles _player;
+
 INFO_1("applyCustomLoadout GVAR(customLoadouts) = %1", GVAR(customLoadouts));
 
 if (isNil QGVAR(customLoadouts)) then {
