@@ -16,7 +16,7 @@ switch (true) do {
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-        [_object, true] call FUNC(convertCustomCrate);
+        [_object, true] remoteExec [QFUNC(convertCustomCrate), 2];
     };
 };
 
