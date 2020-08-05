@@ -95,6 +95,6 @@ class cfgMarkers {
 class Extended_PreInit_EventHandlers {
     class vqi_frogs_preinit {
         init = "call compile preprocessFileLineNumbers '\vqi_frogs\XEH_preInit.sqf'";
-        disableModuload = true;
+        disableModuload = 1;
     };
 };

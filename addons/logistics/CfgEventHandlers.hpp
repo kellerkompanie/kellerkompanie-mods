@@ -1,7 +1,7 @@
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
-        disableModuload = true;
+        disableModuload = 1;
     };
 };
 
@@ -10,7 +10,7 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
         clientInit = QUOTE(call COMPILE_FILE(XEH_postInitClient));
         serverInit = QUOTE(call COMPILE_FILE(XEH_postInitServer));
-        disableModuload = true;
+        disableModuload = 1;
     };
 };
 
