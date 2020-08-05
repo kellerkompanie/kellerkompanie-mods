@@ -2,9 +2,9 @@ class FactionChinesePLAWoodland: FactionBase {
     name = "[Main] Chinese PLA (Woodland)";
     logisticsHelicopter = "VME_PLA_Mi17";
 
-    disposableRocketLauncher = vme_pla_PF89;
-    antiTankLauncher = launch_O_Titan_short_F;
-    antiAirLauncher = launch_O_Titan_F;
+    disposableRocketLauncher = "vme_pla_PF89";
+    antiTankLauncher = "launch_O_Titan_short_F";
+    antiAirLauncher = "launch_O_Titan_F";
 
     #include "WeaponsChinesePLA.hpp"
 
@@ -68,23 +68,23 @@ class FactionChinesePLAWoodland: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_QBZ95 };
-        FTL[] = { keko_W_QBZ95_GL };
-        Grenadier[] = { keko_W_QBZ95_GL };
-        LMG[] = { keko_W_QJB95 };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_QBU88 };
-        JTAC[] = { keko_W_QBZ95_GL };
+        Default[] = { "keko_W_QBZ95" };
+        FTL[] = { "keko_W_QBZ95_GL" };
+        Grenadier[] = { "keko_W_QBZ95_GL" };
+        LMG[] = { "keko_W_QJB95" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_QBU88" };
+        JTAC[] = { "keko_W_QBZ95_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Rook };
+        Default[] = { "keko_W_Rook" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_PF89 };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_PF89" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

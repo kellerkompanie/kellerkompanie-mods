@@ -2,9 +2,9 @@ class FactionFIA: FactionBase {
     name = "[Minimal] FIA - Freedom and Independence Alliance";
     logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
-    disposableRocketLauncher = keko_W_RPG32;
-    antiTankLauncher = launch_RPG32_F;
-    antiAirLauncher = launch_B_Titan_F;
+    disposableRocketLauncher = "keko_W_RPG32";
+    antiTankLauncher = "launch_RPG32_F";
+    antiAirLauncher = "launch_B_Titan_F";
 
     #include "WeaponsFIA.hpp"
 
@@ -89,23 +89,23 @@ class FactionFIA: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_Mk20C };
-        Lead[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
-        Sergeant[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
-        SQL[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
-        FTL[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
-        Grenadier[] = { keko_W_A3_Mk20_GL, keko_W_A3_TRG21_GL };
-        LMG[] = { keko_W_A3_Mk200 };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_A3_DMR };
+        Default[] = { "keko_W_A3_Mk20C" };
+        Lead[] = { "keko_W_A3_Mk20_GL", "keko_W_A3_TRG21_GL" };
+        Sergeant[] = { "keko_W_A3_Mk20_GL", "keko_W_A3_TRG21_GL" };
+        SQL[] = { "keko_W_A3_Mk20_GL", "keko_W_A3_TRG21_GL" };
+        FTL[] = { "keko_W_A3_Mk20_GL", "keko_W_A3_TRG21_GL" };
+        Grenadier[] = { "keko_W_A3_Mk20_GL", "keko_W_A3_TRG21_GL" };
+        LMG[] = { "keko_W_A3_Mk200" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_A3_DMR" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_M1911 };
+        Default[] = { "keko_W_M1911" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RPG32 };
+        RiflemanAT[] = { "keko_W_RPG32" };
     };
 
 };

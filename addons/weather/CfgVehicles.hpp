@@ -24,7 +24,7 @@ class CfgVehicles {
         scope              = 1;
         scopeCurator       = 2;
         displayName        = "Snow Storm";
-        category           = GVAR(Weather);
+        category           = QGVAR(Weather);
         function           = QFUNC(moduleSnowStorm);
         functionPriority   = 1;
         isGlobal           = 1;
@@ -37,7 +37,7 @@ class CfgVehicles {
         scope              = 1;
         scopeCurator       = 2;
         displayName        = "Dust Storm";
-        category           = GVAR(Weather);
+        category           = QGVAR(Weather);
         function           = QFUNC(moduleDustStorm);
         functionPriority   = 1;
         isGlobal           = 1;
@@ -50,7 +50,7 @@ class CfgVehicles {
         scope              = 1;
         scopeCurator       = 2;
         displayName        = "Tornado";
-        category           = GVAR(Weather);
+        category           = QGVAR(Weather);
         function           = QFUNC(moduleTornado);
         functionPriority   = 1;
         isGlobal           = 1;
@@ -63,7 +63,7 @@ class CfgVehicles {
         scope              = 1;
         scopeCurator       = 2;
         displayName        = "Stop Storm";
-        category           = GVAR(Weather);
+        category           = QGVAR(Weather);
         function           = QFUNC(moduleDisableStorm);
         functionPriority   = 1;
         isGlobal           = 1;

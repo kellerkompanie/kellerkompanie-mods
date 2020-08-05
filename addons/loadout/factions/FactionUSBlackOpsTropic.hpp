@@ -195,42 +195,42 @@ class FactionUSBlackOpsTropic: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_P90, keko_W_A3_P90_TROPIC };
-        Lead[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        Lead416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
-        SQL[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        SQL416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
-        FTL[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        FTL416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
-        Grenadier[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        Grenadier416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
-        LMG[] = { keko_W_A3_MX_SW_TROPIC, keko_W_A3_MX_SW_BLACK };
-        LMG416[] = { keko_W_A3_HK416_DRUM, keko_W_A3_HK416_DRUM_TROPIC };
-        LMGStoner[] = { keko_W_A3_STONER };
-        MMG[] = { keko_W_A3_MMG_BLACK };
-        MMGMinimi[] = { keko_W_A3_MINIMI };
-        Marksman[] = { keko_W_A3_MXM_BLACK, keko_W_A3_MXM_TROPIC };
-        Marksman417[] = { keko_W_A3_HK417, keko_W_A3_HK417_TROPIC };
-        JTAC[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        JTAC416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
-        UAVOperator[] = { keko_W_A3_MX_GL_BLACK, keko_W_A3_MX_GL_TROPIC };
-        UAVOperator416[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_TROPIC };
+        Default[] = { "keko_W_A3_P90", "keko_W_A3_P90_TROPIC" };
+        Lead[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        Lead416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
+        SQL[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        SQL416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
+        FTL[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        FTL416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
+        Grenadier[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        Grenadier416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
+        LMG[] = { "keko_W_A3_MX_SW_TROPIC", "keko_W_A3_MX_SW_BLACK" };
+        LMG416[] = { "keko_W_A3_HK416_DRUM", "keko_W_A3_HK416_DRUM_TROPIC" };
+        LMGStoner[] = { "keko_W_A3_STONER" };
+        MMG[] = { "keko_W_A3_MMG_BLACK" };
+        MMGMinimi[] = { "keko_W_A3_MINIMI" };
+        Marksman[] = { "keko_W_A3_MXM_BLACK", "keko_W_A3_MXM_TROPIC" };
+        Marksman417[] = { "keko_W_A3_HK417", "keko_W_A3_HK417_TROPIC" };
+        JTAC[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        JTAC416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
+        UAVOperator[] = { "keko_W_A3_MX_GL_BLACK", "keko_W_A3_MX_GL_TROPIC" };
+        UAVOperator416[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_TROPIC" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_P99_TROPIC };
+        Default[] = { "keko_W_P99_TROPIC" };
     };
 
     class launcher: launcher {
         Default[] = {  };
-        RiflemanAT[] = { keko_W_NLAW };
-        RiflemanAT416[] = { keko_W_NLAW };
-        RiflemanATGustav[] = { keko_W_GUSTAV };
-        RiflemanATGustav416[] = { keko_W_GUSTAV };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        ATSpecialist416[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
-        AASpecialist416[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        RiflemanAT416[] = { "keko_W_NLAW" };
+        RiflemanATGustav[] = { "keko_W_GUSTAV" };
+        RiflemanATGustav416[] = { "keko_W_GUSTAV" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        ATSpecialist416[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
+        AASpecialist416[] = { "keko_W_TITAN_AA" };
     };
 
 };

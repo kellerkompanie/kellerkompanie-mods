@@ -40,16 +40,16 @@ class FactionUNSCDF_ODST: FactionUNSCDF {
     };
 
     class primary: primary {
-        Default[] = { keko_W_OPTRE_MA37 };
-        Sergeant[] = { keko_W_OPTRE_BR55HB };
-        SQL[] = { keko_W_OPTRE_BR55HB };
-        FTL[] = { keko_W_OPTRE_MA37GL };
-        Grenadier[] = { keko_W_OPTRE_MA37GL };
-        LMG[] = { keko_W_OPTRE_M73 };
-        Marksman[] = { keko_W_OPTRE_M392_DMR };
+        Default[] = { "keko_W_OPTRE_MA37" };
+        Sergeant[] = { "keko_W_OPTRE_BR55HB" };
+        SQL[] = { "keko_W_OPTRE_BR55HB" };
+        FTL[] = { "keko_W_OPTRE_MA37GL" };
+        Grenadier[] = { "keko_W_OPTRE_MA37GL" };
+        LMG[] = { "keko_W_OPTRE_M73" };
+        Marksman[] = { "keko_W_OPTRE_M392_DMR" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_OPTRE_M6G };
+        Default[] = { "keko_W_OPTRE_M6G" };
     };
 };

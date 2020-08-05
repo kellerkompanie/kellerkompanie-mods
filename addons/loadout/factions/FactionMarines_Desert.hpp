@@ -2,9 +2,9 @@ class FactionMarines_Desert: FactionBase {
     name = "[Main] U.S. Marine Corps - Marine Pattern Desert";
     logisticsHelicopter = "rhsusf_CH53E_USMC_D";
 
-    disposableRocketLauncher = rhs_weap_M136;
-    antiTankLauncher = rhs_weap_smaw;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "rhs_weap_M136";
+    antiTankLauncher = "rhs_weap_smaw";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsMarines.hpp"
 
@@ -85,28 +85,27 @@ class FactionMarines_Desert: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_RHS_M16A4 };
-        Lead[] = { keko_W_RHS_M4A1_GL };
-        SQL[] = { keko_W_RHS_M4A1_GL };
-        FTL[] = { keko_W_RHS_M16A4_GL };
-        Doctor[] = { keko_W_RHS_M4A1 };
-        Medic[] = { keko_W_RHS_M4A1 };
-        Grenadier[] = { keko_W_RHS_M16A4_GL };
-        LMG[] = { keko_W_RHS_M249 };
-        MMG[] = { keko_W_RHS_M240B };
-        Marksman[] = { keko_W_RHS_M14EBR };
-        JTAC[] = { keko_W_RHS_M4A1_GL };
-        UAVOperator[] = { keko_W_RHS_M4A1_GL };
+        Default[] = { "keko_W_RHS_M16A4" };
+        Lead[] = { "keko_W_RHS_M4A1_GL" };
+        SQL[] = { "keko_W_RHS_M4A1_GL" };
+        FTL[] = { "keko_W_RHS_M16A4_GL" };
+        Doctor[] = { "keko_W_RHS_M4A1" };
+        Medic[] = { "keko_W_RHS_M4A1" };
+        Grenadier[] = { "keko_W_RHS_M16A4_GL" };
+        LMG[] = { "keko_W_RHS_M249" };
+        MMG[] = { "keko_W_RHS_M240B" };
+        Marksman[] = { "keko_W_RHS_M14EBR" };
+        JTAC[] = { "keko_W_RHS_M4A1_GL" };
+        UAVOperator[] = { "keko_W_RHS_M4A1_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_RHS_M9 };
+        Default[] = { "keko_W_RHS_M9" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RHS_M136_HEDP };
-        ATSpecialist[] = { keko_W_RHS_SMAW };
-        AASpecialist[] = { keko_W_RHS_STINGER };
+        RiflemanAT[] = { "keko_W_RHS_M136_HEDP" };
+        ATSpecialist[] = { "keko_W_RHS_SMAW" };
+        AASpecialist[] = { "keko_W_RHS_STINGER" };
     };
-
 };

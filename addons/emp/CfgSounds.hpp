@@ -15,43 +15,43 @@ class CfgSounds
     class spark1
     {
         name = "spark1";
-        sound[] = {QPATHTOF(sounds\spark1.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark1.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark11
     {
         name = "spark11";
-        sound[] = {QPATHTOF(sounds\spark11.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark11.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark2
     {
         name = "spark2";
-        sound[] = {QPATHTOF(sounds\spark2.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark2.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark22
     {
         name = "spark22";
-        sound[] = {QPATHTOF(sounds\spark22.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark22.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark3
     {
         name = "spark3";
-        sound[] = {QPATHTOF(sounds\spark3.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark3.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark4
     {
         name = "spark4";
-        sound[] = {QPATHTOF(sounds\spark4.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark4.ogg), "db+5", 1};
         titles[] = {};
     };
     class spark5
     {
         name = "spark5";
-        sound[] = {QPATHTOF(sounds\spark5.ogg), db+5, 1};
+        sound[] = {QPATHTOF(sounds\spark5.ogg), "db+5", 1};
         titles[] = {};
     };
     class earthquake_02

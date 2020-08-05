@@ -149,10 +149,10 @@ class ctrlControlsGroupNoScrollbars: ctrlControlsGroup {};
 
 class RscText //Text Resource Class
 {
-    font = PuristaMedium;
+    font = "PuristaMedium";
 };
 
 class RscPicture
 {
-    font = TahomaB;
+    font = "TahomaB";
 };

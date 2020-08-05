@@ -2,9 +2,9 @@ class FactionBAFMTP: FactionBase {
     name = "[Event] BAF MTP - British Armed Forces MTP";
     logisticsHelicopter = "UK3CB_BAF_Chinook_HC2_MTP";
 
-    disposableRocketLauncher = UK3CB_BAF_AT4_CS_AP_Launcher;
-    antiTankLauncher = UK3CB_BAF_Javelin_Slung_Tube;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "UK3CB_BAF_AT4_CS_AP_Launcher";
+    antiTankLauncher = "UK3CB_BAF_Javelin_Slung_Tube";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsBAF.hpp"
 
@@ -178,27 +178,27 @@ class FactionBAFMTP: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_BAF_L85A2 };
-        Lead[] = { keko_W_BAF_L85A2_UGL };
-        Sergeant[] = { keko_W_BAF_L85A2_UGL };
-        SQL[] = { keko_W_BAF_L85A2_UGL };
-        FTL[] = { keko_W_BAF_L85A2_UGL };
-        Grenadier[] = { keko_W_BAF_L85A2_UGL };
-        LMG[] = { keko_W_BAF_L110 };
-        MMG[] = { keko_W_BAF_L7A2 };
-        Marksman[] = { keko_W_BAF_L129A1 };
-        JTAC[] = { keko_W_BAF_L85A2_UGL_SMOKE };
-        UAVOperator[] = { keko_W_BAF_L85A2_UGL };
+        Default[] = { "keko_W_BAF_L85A2" };
+        Lead[] = { "keko_W_BAF_L85A2_UGL" };
+        Sergeant[] = { "keko_W_BAF_L85A2_UGL" };
+        SQL[] = { "keko_W_BAF_L85A2_UGL" };
+        FTL[] = { "keko_W_BAF_L85A2_UGL" };
+        Grenadier[] = { "keko_W_BAF_L85A2_UGL" };
+        LMG[] = { "keko_W_BAF_L110" };
+        MMG[] = { "keko_W_BAF_L7A2" };
+        Marksman[] = { "keko_W_BAF_L129A1" };
+        JTAC[] = { "keko_W_BAF_L85A2_UGL_SMOKE" };
+        UAVOperator[] = { "keko_W_BAF_L85A2_UGL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_BAF_L131A1 };
+        Default[] = { "keko_W_BAF_L131A1" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_AT4 };
-        ATSpecialist[] = { keko_W_BAF_JAVELIN };
-        AASpecialist[] = { keko_W_STRINGER };
+        RiflemanAT[] = { "keko_W_AT4" };
+        ATSpecialist[] = { "keko_W_BAF_JAVELIN" };
+        AASpecialist[] = { "keko_W_STRINGER" };
     };
 
 };

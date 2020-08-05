@@ -81,28 +81,28 @@ class FactionUNTOFIAAS: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_Mk20C };
-        Lead[] = { keko_W_A3_Mk20_GL };
-        SQL[] = { keko_W_A3_Mk20_GL };
-        FTL[] = { keko_W_A3_Mk20_GL };
-        Grenadier[] = { keko_W_A3_Mk20_GL };
-        LMG[] = { keko_W_A3_Stoner };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_A3_EBR };
-        JTAC[] = { keko_W_A3_Mk20_GL };
-        UAVOperator[] = { keko_W_A3_Mk20_GL };
+        Default[] = { "keko_W_A3_Mk20C" };
+        Lead[] = { "keko_W_A3_Mk20_GL" };
+        SQL[] = { "keko_W_A3_Mk20_GL" };
+        FTL[] = { "keko_W_A3_Mk20_GL" };
+        Grenadier[] = { "keko_W_A3_Mk20_GL" };
+        LMG[] = { "keko_W_A3_Stoner" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_A3_EBR" };
+        JTAC[] = { "keko_W_A3_Mk20_GL" };
+        UAVOperator[] = { "keko_W_A3_Mk20_GL" };
         ObserverCanada[] = {  };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_TACTICAL };
+        Default[] = { "keko_W_TACTICAL" };
         ObserverCanada[] = {  };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

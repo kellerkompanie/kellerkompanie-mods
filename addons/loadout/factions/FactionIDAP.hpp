@@ -188,7 +188,7 @@ class FactionIDAP: FactionBase {
     };
 
     class secondary: secondary {
-        EOD[] = { keko_W_VMH3, keko_W_VMM3 };
+        EOD[] = { "keko_W_VMH3", "keko_W_VMM3" };
     };
 
 };

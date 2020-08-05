@@ -2,8 +2,8 @@ class FactionGuerilla: FactionBase {
     name = "[Minimal] Guerilla";
     logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
-    antiTankLauncher = launch_RPG7_F;
-    antiAirLauncher = launch_I_Titan_F;
+    antiTankLauncher = "launch_RPG7_F";
+    antiAirLauncher = "launch_I_Titan_F";
 
     #include "WeaponsGuerilla.hpp"
 
@@ -189,25 +189,25 @@ class FactionGuerilla: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_TRG21 };
-        Lead[] = { keko_W_A3_TRG21_GL };
-        Sergeant[] = { keko_W_A3_TRG21_GL };
-        SQL[] = { keko_W_A3_TRG21_GL };
-        FTL[] = { keko_W_A3_TRG21_GL };
-        Grenadier[] = { keko_W_A3_TRG21_GL };
-        LMG[] = { keko_W_A3_Mk200 };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_A3_DMR };
+        Default[] = { "keko_W_A3_TRG21" };
+        Lead[] = { "keko_W_A3_TRG21_GL" };
+        Sergeant[] = { "keko_W_A3_TRG21_GL" };
+        SQL[] = { "keko_W_A3_TRG21_GL" };
+        FTL[] = { "keko_W_A3_TRG21_GL" };
+        Grenadier[] = { "keko_W_A3_TRG21_GL" };
+        LMG[] = { "keko_W_A3_Mk200" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_A3_DMR" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Rook };
+        Default[] = { "keko_W_Rook" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        ATSpecialist[] = { keko_W_RPG7 };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        ATSpecialist[] = { "keko_W_RPG7" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

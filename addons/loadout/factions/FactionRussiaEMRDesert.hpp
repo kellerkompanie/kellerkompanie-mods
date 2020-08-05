@@ -2,9 +2,9 @@ class FactionRussiaEMRDesert: FactionBase {
     name = "[Main] Russia EMR (Desert)";
     logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
 
-    disposableRocketLauncher = rhs_weap_rpg26;
-    antiTankLauncher = rhs_weap_rpg7;
-    antiAirLauncher = rhs_weap_igla;
+    disposableRocketLauncher = "rhs_weap_rpg26";
+    antiTankLauncher = "rhs_weap_rpg7";
+    antiAirLauncher = "rhs_weap_igla";
 
     #include "WeaponsRussiaEMR.hpp"
 
@@ -80,26 +80,26 @@ class FactionRussiaEMRDesert: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_AK74M };
-        FTL[] = { keko_W_AK74M_GL };
-        Grenadier[] = { keko_W_AK74M_GL };
-        LMG[] = { keko_W_M84 };
-        MMG[] = { keko_W_PKP };
-        Marksman[] = { keko_W_SVD };
-        Driver[] = { keko_W_AKS74U };
-        HeliPilot[] = { keko_W_AKS74U };
-        JTAC[] = { keko_W_AK74M_GL };
-        UAVOperator[] = { keko_W_AK74M };
+        Default[] = { "keko_W_AK74M" };
+        FTL[] = { "keko_W_AK74M_GL" };
+        Grenadier[] = { "keko_W_AK74M_GL" };
+        LMG[] = { "keko_W_M84" };
+        MMG[] = { "keko_W_PKP" };
+        Marksman[] = { "keko_W_SVD" };
+        Driver[] = { "keko_W_AKS74U" };
+        HeliPilot[] = { "keko_W_AKS74U" };
+        JTAC[] = { "keko_W_AK74M_GL" };
+        UAVOperator[] = { "keko_W_AK74M" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Makarov };
+        Default[] = { "keko_W_Makarov" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RPG26 };
-        ATSpecialist[] = { keko_W_RPG7 };
-        AASpecialist[] = { keko_W_Igla };
+        RiflemanAT[] = { "keko_W_RPG26" };
+        ATSpecialist[] = { "keko_W_RPG7" };
+        AASpecialist[] = { "keko_W_Igla" };
     };
 
 };

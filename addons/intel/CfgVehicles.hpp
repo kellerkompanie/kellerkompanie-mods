@@ -124,7 +124,7 @@ class CfgVehicles {
                 displayName = CSTRING(removeActionAfter);
                 tooltip = CSTRING(removeActionAfterTooltip);
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class Title: Edit {
                 property = QGVAR(Title);
@@ -145,7 +145,7 @@ class CfgVehicles {
                 displayName = CSTRING(removeObjectAfter);
                 tooltip = CSTRING(removeObjectAfterTooltip);
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class Condition: Edit {
                 property = QGVAR(Condition);
@@ -166,7 +166,7 @@ class CfgVehicles {
                 displayName = CSTRING(openMap);
                 tooltip = CSTRING(openMapTooltip);
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class ShareWith: Combo {
                 property = QGVAR(ShareWith);

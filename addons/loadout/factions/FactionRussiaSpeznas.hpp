@@ -2,9 +2,9 @@ class FactionRussiaSpeznas: FactionBase {
     name = "[Main] Russia - GRU Speznas";
     logisticsHelicopter = "RHS_Mi8mt_Cargo_vdv";
 
-    disposableRocketLauncher = rhs_weap_rpg7;
-    antiTankLauncher = launch_O_Vorona_green_F;
-    antiAirLauncher = rhs_weap_igla;
+    disposableRocketLauncher = "rhs_weap_rpg7";
+    antiTankLauncher = "launch_O_Vorona_green_F";
+    antiAirLauncher = "rhs_weap_igla";
 
     #include "WeaponsRussiaSpeznas.hpp"
 
@@ -82,27 +82,27 @@ class FactionRussiaSpeznas: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_ASVAL };
-        Lead[] = { keko_W_AK74MR_GL };
-        Sergeant[] = { keko_W_AK74MR_GL };
-        SQL[] = { keko_W_AK74MR_GL };
-        FTL[] = { keko_W_AK74MR_GL };
-        Grenadier[] = { keko_W_AK74MR_GL };
-        LMG[] = { keko_W_RPK };
-        Marksman[] = { keko_W_SVD };
+        Default[] = { "keko_W_ASVAL" };
+        Lead[] = { "keko_W_AK74MR_GL" };
+        Sergeant[] = { "keko_W_AK74MR_GL" };
+        SQL[] = { "keko_W_AK74MR_GL" };
+        FTL[] = { "keko_W_AK74MR_GL" };
+        Grenadier[] = { "keko_W_AK74MR_GL" };
+        LMG[] = { "keko_W_RPK" };
+        Marksman[] = { "keko_W_SVD" };
         HeliPilot[] = { };
-        JTAC[] = { keko_W_AK74MR_GL };
+        JTAC[] = { "keko_W_AK74MR_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Grach };
+        Default[] = { "keko_W_Grach" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RPG };
-        RiflemanAT_MAAWS[] = { keko_W_MAAWS };
-        ATSpecialist[] = { keko_W_Vorona };
-        AASpecialist[] = { keko_W_Igla };
+        RiflemanAT[] = { "keko_W_RPG" };
+        RiflemanAT_MAAWS[] = { "keko_W_MAAWS" };
+        ATSpecialist[] = { "keko_W_Vorona" };
+        AASpecialist[] = { "keko_W_Igla" };
     };
 
 };

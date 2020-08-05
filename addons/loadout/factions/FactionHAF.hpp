@@ -65,27 +65,27 @@ class FactionHAF: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_MXC };
-        Lead[] = { keko_W_A3_MX_GL };
-        Sergeant[] = { keko_W_A3_MX_GL };
-        SQL[] = { keko_W_A3_MX_GL };
-        FTL[] = { keko_W_A3_MX_GL };
-        Grenadier[] = { keko_W_A3_MX_GL };
-        LMG[] = { keko_W_A3_MX_SW };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_A3_MXM };
-        JTAC[] = { keko_W_A3_MX_GL };
-        UAVOperator[] = { keko_W_A3_MX_GL };
+        Default[] = { "keko_W_A3_MXC" };
+        Lead[] = { "keko_W_A3_MX_GL" };
+        Sergeant[] = { "keko_W_A3_MX_GL" };
+        SQL[] = { "keko_W_A3_MX_GL" };
+        FTL[] = { "keko_W_A3_MX_GL" };
+        Grenadier[] = { "keko_W_A3_MX_GL" };
+        LMG[] = { "keko_W_A3_MX_SW" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_A3_MXM" };
+        JTAC[] = { "keko_W_A3_MX_GL" };
+        UAVOperator[] = { "keko_W_A3_MX_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_TACTICAL };
+        Default[] = { "keko_W_TACTICAL" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

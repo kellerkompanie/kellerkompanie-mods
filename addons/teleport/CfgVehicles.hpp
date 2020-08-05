@@ -41,25 +41,25 @@ class CfgVehicles {
                 displayName = "BLUFOR";
                 description = "Allow BLUFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowINDFOR {
                 displayName = "INDFOR";
                 description = "Allow INDFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowOPFOR {
                 displayName = "OPFOR";
                 description = "Allow OPFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowCIV {
                 displayName = "Civilian";
                 description = "Allow Civilian to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
         };
     };
@@ -80,25 +80,25 @@ class CfgVehicles {
                 displayName = "BLUFOR";
                 description = "Allow BLUFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowINDFOR {
                 displayName = "INDFOR";
                 description = "Allow INDFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowOPFOR {
                 displayName = "OPFOR";
                 description = "Allow OPFOR to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
             class allowCIV {
                 displayName = "Civilian";
                 description = "Allow Civilian to travel here.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
         };
     };

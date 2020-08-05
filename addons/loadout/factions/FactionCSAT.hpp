@@ -2,9 +2,9 @@ class FactionCSAT: FactionBase {
     name = "[Minimal] CSAT - Canton-Protocol Strategic Alliance Treaty";
     logisticsHelicopter = "O_Heli_Transport_04_box_F";
 
-    disposableRocketLauncher = keko_W_RPG32;
-    antiTankLauncher = launch_O_Titan_short_F;
-    antiAirLauncher = launch_O_Titan_F;
+    disposableRocketLauncher = "keko_W_RPG32";
+    antiTankLauncher = "launch_O_Titan_short_F";
+    antiAirLauncher = "launch_O_Titan_F";
 
     #include "WeaponsCSAT.hpp"
 
@@ -63,27 +63,27 @@ class FactionCSAT: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_KATIBA_SHORT };
-        Lead[] = { keko_W_A3_KATIBA_GL };
-        Sergeant[] = { keko_W_A3_KATIBA_GL };
-        SQL[] = { keko_W_A3_KATIBA_GL };
-        FTL[] = { keko_W_A3_KATIBA_GL };
-        Grenadier[] = { keko_W_A3_KATIBA_GL };
-        LMG[] = { keko_W_A3_ZAFIR };
-        MMG[] = { keko_W_A3_MMG_CSAT };
-        Marksman[] = { keko_W_A3_DMR };
-        JTAC[] = { keko_W_A3_KATIBA_GL };
-        UAVOperator[] = { keko_W_A3_KATIBA_GL };
+        Default[] = { "keko_W_A3_KATIBA_SHORT" };
+        Lead[] = { "keko_W_A3_KATIBA_GL" };
+        Sergeant[] = { "keko_W_A3_KATIBA_GL" };
+        SQL[] = { "keko_W_A3_KATIBA_GL" };
+        FTL[] = { "keko_W_A3_KATIBA_GL" };
+        Grenadier[] = { "keko_W_A3_KATIBA_GL" };
+        LMG[] = { "keko_W_A3_ZAFIR" };
+        MMG[] = { "keko_W_A3_MMG_CSAT" };
+        Marksman[] = { "keko_W_A3_DMR" };
+        JTAC[] = { "keko_W_A3_KATIBA_GL" };
+        UAVOperator[] = { "keko_W_A3_KATIBA_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_ROOK };
+        Default[] = { "keko_W_ROOK" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RPG32 };
-        ATSpecialist[] = { keko_W_TITAN_AT_CSAT };
-        AASpecialist[] = { keko_W_TITAN_AA_CSAT };
+        RiflemanAT[] = { "keko_W_RPG32" };
+        ATSpecialist[] = { "keko_W_TITAN_AT_CSAT" };
+        AASpecialist[] = { "keko_W_TITAN_AA_CSAT" };
     };
 
 };

@@ -109,20 +109,20 @@ class FactionCommandos: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_Lee };
-        Officer[] = { keko_W_Thompson };
-        SectionCommander[] = { keko_W_Thompson };
-        TeamLeader[] = { keko_W_Thompson };
-        BrenGunner[] = { keko_W_Bren };
-        ATGunner[] = { keko_W_Piat };
+        Default[] = { "keko_W_Lee" };
+        Officer[] = { "keko_W_Thompson" };
+        SectionCommander[] = { "keko_W_Thompson" };
+        TeamLeader[] = { "keko_W_Thompson" };
+        BrenGunner[] = { "keko_W_Bren" };
+        ATGunner[] = { "keko_W_Piat" };
     };
 
     class secondary: secondary {
         Default[] = {  };
-        Officer[] = { keko_W_Webley };
-        SectionCommander[] = { keko_W_Webley };
-        TeamLeader[] = { keko_W_Webley };
-        ATGunner[] = { keko_W_Webley };
+        Officer[] = { "keko_W_Webley" };
+        SectionCommander[] = { "keko_W_Webley" };
+        TeamLeader[] = { "keko_W_Webley" };
+        ATGunner[] = { "keko_W_Webley" };
     };
 
 };

@@ -2,9 +2,9 @@ class FactionUSArmyOCP: FactionBase {
     name = "[Main] U.S. Army (OCP)";
     logisticsHelicopter = "RHS_UH60M";
 
-    disposableRocketLauncher = rhs_weap_M136;
-    antiTankLauncher = rhs_weap_fgm148;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "rhs_weap_M136";
+    antiTankLauncher = "rhs_weap_fgm148";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsUSArmy.hpp"
 
@@ -81,27 +81,27 @@ class FactionUSArmyOCP: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_M4 };
-        Lead[] = { keko_W_M4_GL };
-        Sergeant[] = { keko_W_M4_GL };
-        SQL[] = { keko_W_M4_GL };
-        FTL[] = { keko_W_M4_GL };
-        Grenadier[] = { keko_W_M4_GL };
-        LMG[] = { keko_W_M249 };
-        MMG[] = { keko_W_M240B };
-        Marksman[] = { keko_W_M14 };
-        JTAC[] = { keko_W_M4_GL };
-        UAVOperator[] = { keko_W_M4_GL };
+        Default[] = { "keko_W_M4" };
+        Lead[] = { "keko_W_M4_GL" };
+        Sergeant[] = { "keko_W_M4_GL" };
+        SQL[] = { "keko_W_M4_GL" };
+        FTL[] = { "keko_W_M4_GL" };
+        Grenadier[] = { "keko_W_M4_GL" };
+        LMG[] = { "keko_W_M249" };
+        MMG[] = { "keko_W_M240B" };
+        Marksman[] = { "keko_W_M14" };
+        JTAC[] = { "keko_W_M4_GL" };
+        UAVOperator[] = { "keko_W_M4_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_M9 };
+        Default[] = { "keko_W_M9" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_M136 };
-        ATSpecialist[] = { keko_W_Javelin };
-        AASpecialist[] = { keko_W_Stinger };
+        RiflemanAT[] = { "keko_W_M136" };
+        ATSpecialist[] = { "keko_W_Javelin" };
+        AASpecialist[] = { "keko_W_Stinger" };
     };
 
 };

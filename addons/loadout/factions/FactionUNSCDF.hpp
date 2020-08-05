@@ -2,13 +2,13 @@ class FactionUNSCDF: FactionBase {
     name = "[Sci-Fi] UNSCDF (Olive) - U.N. Space Command Defense Force (Olive)";
     logisticsHelicopter = "OPTRE_Pelican_unarmed";
 
-    disposableRocketLauncher = OPTRE_M41_SSR;
-    antiTankLauncher = OPTRE_M41_SSR;
-    antiAirLauncher = OPTRE_M41_SSR_G;
+    disposableRocketLauncher = "OPTRE_M41_SSR";
+    antiTankLauncher = "OPTRE_M41_SSR";
+    antiAirLauncher = "OPTRE_M41_SSR_G";
 
-    grenade = OPTRE_M9_Frag;
-    smokeWhite = OPTRE_M2_Smoke;
-    smokeGreen = OPTRE_M2_Smoke_Green;
+    grenade = "OPTRE_M9_Frag";
+    smokeWhite = "OPTRE_M2_Smoke";
+    smokeGreen = "OPTRE_M2_Smoke_Green";
 
     #include "WeaponsUNSCDF.hpp"
 
@@ -76,25 +76,25 @@ class FactionUNSCDF: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_OPTRE_MA37 };
+        Default[] = { "keko_W_OPTRE_MA37" };
         Lead[] = {  };
-        Sergeant[] = { keko_W_OPTRE_BR55HB };
-        SQL[] = { keko_W_OPTRE_BR55HB };
-        FTL[] = { keko_W_OPTRE_MA37GL };
-        Grenadier[] = { keko_W_OPTRE_MA37GL };
-        LMG[] = { keko_W_OPTRE_M73 };
-        Marksman[] = { keko_W_OPTRE_M392_DMR };
-        Driver[] = { keko_W_OPTRE_M7 };
+        Sergeant[] = { "keko_W_OPTRE_BR55HB" };
+        SQL[] = { "keko_W_OPTRE_BR55HB" };
+        FTL[] = { "keko_W_OPTRE_MA37GL" };
+        Grenadier[] = { "keko_W_OPTRE_MA37GL" };
+        LMG[] = { "keko_W_OPTRE_M73" };
+        Marksman[] = { "keko_W_OPTRE_M392_DMR" };
+        Driver[] = { "keko_W_OPTRE_M7" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_OPTRE_M6G };
+        Default[] = { "keko_W_OPTRE_M6G" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_OPTRE_M41_SSR };
-        ATSpecialist[] = { keko_W_OPTRE_M41_SSR };
-        AASpecialist[] = { keko_W_OPTRE_M41_SSR_G };
+        RiflemanAT[] = { "keko_W_OPTRE_M41_SSR" };
+        ATSpecialist[] = { "keko_W_OPTRE_M41_SSR" };
+        AASpecialist[] = { "keko_W_OPTRE_M41_SSR_G" };
     };
 
 };

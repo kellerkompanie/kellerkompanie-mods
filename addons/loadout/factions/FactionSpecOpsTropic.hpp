@@ -2,9 +2,9 @@ class FactionSpecOpsTropic: FactionBase {
     name = "[Main] Western Special Forces (Tropic)";
     logisticsHelicopter = "RHS_UH60M";
 
-    disposableRocketLauncher = rhs_weap_m72a7;
-    antiTankLauncher = rhs_weap_smaw;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "rhs_weap_m72a7";
+    antiTankLauncher = "rhs_weap_smaw";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsSpecOpsTropic.hpp"
 
@@ -97,55 +97,55 @@ class FactionSpecOpsTropic: FactionBase {
 
     class primary: primary {
         Default[] = {
-                keko_HK416,
-                keko_HK416_PaintedOD,
-                keko_HK416_CustomOD
+                "keko_HK416",
+                "keko_HK416_PaintedOD",
+                "keko_HK416_CustomOD"
             };
         Lead[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
         Sergeant[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
         SQL[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
         FTL[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
         Grenadier[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
-        LMG[] = { keko_MINIMI };
-        Marksman[] = { keko_HK417 };
+        LMG[] = { "keko_MINIMI" };
+        Marksman[] = { "keko_HK417" };
         JTAC[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
         UAVOperator[] = {
-                keko_HK416_GL,
-                keko_HK416_GL_PaintedOD,
-                keko_HK416_GL_CustomOD
+                "keko_HK416_GL",
+                "keko_HK416_GL_PaintedOD",
+                "keko_HK416_GL_CustomOD"
             };
     };
 
     class secondary: secondary {
-        Default[] = { keko_FIVESEVEN };
+        Default[] = { "keko_FIVESEVEN" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_M72 };
+        RiflemanAT[] = { "keko_M72" };
     };
 
 };

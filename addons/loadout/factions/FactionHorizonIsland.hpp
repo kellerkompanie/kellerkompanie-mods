@@ -2,9 +2,9 @@ class FactionHorizonIsland: FactionBase {
     name = "[Main] Horizon Island Defense Forces";
     logisticsHelicopter = "rhs_uh1h_hidf_unarmed";
 
-    disposableRocketLauncher = rhs_weap_M136;
-    antiTankLauncher = rhs_weap_smaw;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "rhs_weap_M136";
+    antiTankLauncher = "rhs_weap_smaw";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsHorizonIsland.hpp"
 
@@ -57,16 +57,16 @@ class FactionHorizonIsland: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_RHS_M16A4 };
-        Lead[] = { keko_W_RHS_M16A4 };
-        Sergeant[] = { keko_W_RHS_M16A4_GL };
-        SQL[] = { keko_W_RHS_M16A4_GL };
-        FTL[] = { keko_W_RHS_M16A4_GL };
-        Grenadier[] = { keko_W_RHS_M16A4_GL };
-        LMG[] = { keko_W_RHS_M249 };
-        MMG[] = { keko_W_RHS_M240B };
-        Marksman[] = { keko_W_RHS_M14EBR };
-        JTAC[] = { keko_W_RHS_M16A4_GL_SMOKE };
+        Default[] = { "keko_W_RHS_M16A4" };
+        Lead[] = { "keko_W_RHS_M16A4" };
+        Sergeant[] = { "keko_W_RHS_M16A4_GL" };
+        SQL[] = { "keko_W_RHS_M16A4_GL" };
+        FTL[] = { "keko_W_RHS_M16A4_GL" };
+        Grenadier[] = { "keko_W_RHS_M16A4_GL" };
+        LMG[] = { "keko_W_RHS_M249" };
+        MMG[] = { "keko_W_RHS_M240B" };
+        Marksman[] = { "keko_W_RHS_M14EBR" };
+        JTAC[] = { "keko_W_RHS_M16A4_GL_SMOKE" };
     };
 
     class secondary: secondary {
@@ -74,7 +74,7 @@ class FactionHorizonIsland: FactionBase {
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RHS_M136_HEAT };
+        RiflemanAT[] = { "keko_W_RHS_M136_HEAT" };
     };
 
 };

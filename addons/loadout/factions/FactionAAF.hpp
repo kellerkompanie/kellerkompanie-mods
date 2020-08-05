@@ -2,8 +2,8 @@ class FactionAAF: FactionBase {
     name = "[Minimal] AAF - Altis Armed Forces";
     logisticsHelicopter = "I_Heli_Transport_02_F";
 
-    antiTankLauncher = launch_I_Titan_short_F;
-    antiAirLauncher = launch_I_Titan_F;
+    antiTankLauncher = "launch_I_Titan_short_F";
+    antiAirLauncher = "launch_I_Titan_F";
 
     #include "WeaponsAAF.hpp"
 
@@ -73,27 +73,27 @@ class FactionAAF: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_F2000_SHORT };
-        Lead[] = { keko_W_A3_F2000_UGL };
-        SQL[] = { keko_W_A3_F2000_UGL };
-        FTL[] = { keko_W_A3_F2000_UGL };
-        Grenadier[] = { keko_W_A3_F2000_UGL };
-        LMG[] = { keko_W_A3_STONER };
-        MMG[] = { keko_W_A3_MMG_AAF };
-        Marksman[] = { keko_W_A3_EBR };
-        JTAC[] = { keko_W_A3_F2000_UGL };
-        UAVOperator[] = { keko_W_A3_F2000_UGL };
+        Default[] = { "keko_W_A3_F2000_SHORT" };
+        Lead[] = { "keko_W_A3_F2000_UGL" };
+        SQL[] = { "keko_W_A3_F2000_UGL" };
+        FTL[] = { "keko_W_A3_F2000_UGL" };
+        Grenadier[] = { "keko_W_A3_F2000_UGL" };
+        LMG[] = { "keko_W_A3_STONER" };
+        MMG[] = { "keko_W_A3_MMG_AAF" };
+        Marksman[] = { "keko_W_A3_EBR" };
+        JTAC[] = { "keko_W_A3_F2000_UGL" };
+        UAVOperator[] = { "keko_W_A3_F2000_UGL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_A3_ACP };
+        Default[] = { "keko_W_A3_ACP" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        RiflemanATTanks[] = { keko_W_MAAWS };
-        ATSpecialist[] = { keko_W_TITAN_AT_AAF };
-        AASpecialist[] = { keko_W_TITAN_AA_AAF };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        RiflemanATTanks[] = { "keko_W_MAAWS" };
+        ATSpecialist[] = { "keko_W_TITAN_AT_AAF" };
+        AASpecialist[] = { "keko_W_TITAN_AA_AAF" };
     };
 
 };

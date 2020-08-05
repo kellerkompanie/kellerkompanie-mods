@@ -1,8 +1,8 @@
 class FactionNatoTropic: FactionNato {
     name = "[Minimal] NATO (Tropic) - North Atlantic Treaty Organization (Tropic)";
 
-    antiTankLauncher = launch_B_Titan_short_tna_F;
-    antiAirLauncher = launch_B_Titan_tna_F;
+    antiTankLauncher = "launch_B_Titan_short_tna_F";
+    antiAirLauncher = "launch_B_Titan_tna_F";
 
     #include "WeaponsNATOtropic.hpp"
 
@@ -53,26 +53,26 @@ class FactionNatoTropic: FactionNato {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_MX_TROPIC };
-        Lead[] = { keko_W_A3_MX_GL_TROPIC };
-        Sergeant[] = { keko_W_A3_MX_GL_TROPIC };
-        SQL[] = { keko_W_A3_MX_GL_TROPIC };
-        FTL[] = { keko_W_A3_MX_GL_TROPIC };
-        Grenadier[] = { keko_W_A3_MX_GL_TROPIC };
-        LMG[] = { keko_W_A3_MX_SW_TROPIC };
-        MMG[] = { keko_W_A3_MMG_BLACK };
-        Marksman[] = { keko_W_A3_MXM_TROPIC };
-        JTAC[] = { keko_W_A3_MX_GL_TROPIC };
-        UAVOperator[] = { keko_W_A3_MX_GL_TROPIC };
+        Default[] = { "keko_W_A3_MX_TROPIC" };
+        Lead[] = { "keko_W_A3_MX_GL_TROPIC" };
+        Sergeant[] = { "keko_W_A3_MX_GL_TROPIC" };
+        SQL[] = { "keko_W_A3_MX_GL_TROPIC" };
+        FTL[] = { "keko_W_A3_MX_GL_TROPIC" };
+        Grenadier[] = { "keko_W_A3_MX_GL_TROPIC" };
+        LMG[] = { "keko_W_A3_MX_SW_TROPIC" };
+        MMG[] = { "keko_W_A3_MMG_BLACK" };
+        Marksman[] = { "keko_W_A3_MXM_TROPIC" };
+        JTAC[] = { "keko_W_A3_MX_GL_TROPIC" };
+        UAVOperator[] = { "keko_W_A3_MX_GL_TROPIC" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_P99_TROPIC };
+        Default[] = { "keko_W_P99_TROPIC" };
     };
 
     class launcher: launcher {
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

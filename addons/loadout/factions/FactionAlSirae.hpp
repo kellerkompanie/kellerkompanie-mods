@@ -2,8 +2,8 @@ class FactionAlSirae: FactionBase {
     name = "[Minimal] Al Sirae (Terrorists)";
     logisticsHelicopter = "MU_CIV_Orca";
 
-    antiTankLauncher = launch_I_Titan_short_F;
-    antiAirLauncher = launch_I_Titan_F;
+    antiTankLauncher = "launch_I_Titan_short_F";
+    antiAirLauncher = "launch_I_Titan_F";
 
     #include "WeaponsAlSirae.hpp"
 
@@ -81,24 +81,24 @@ class FactionAlSirae: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_F2000_SHORT };
-        Lead[] = { keko_W_A3_F2000_UGL, keko_W_A3_TRG21_GL };
-        SQL[] = { keko_W_A3_F2000_UGL, keko_W_A3_TRG21_GL };
-        FTL[] = { keko_W_A3_F2000_UGL, keko_W_A3_TRG21_GL };
-        Grenadier[] = { keko_W_A3_F2000_UGL, keko_W_A3_TRG21_GL };
-        LMG[] = { keko_W_A3_STONER };
-        MMG[] = { keko_W_A3_MMG_AAF };
-        Marksman[] = { keko_W_A3_EBR };
+        Default[] = { "keko_W_A3_F2000_SHORT" };
+        Lead[] = { "keko_W_A3_F2000_UGL", "keko_W_A3_TRG21_GL" };
+        SQL[] = { "keko_W_A3_F2000_UGL", "keko_W_A3_TRG21_GL" };
+        FTL[] = { "keko_W_A3_F2000_UGL", "keko_W_A3_TRG21_GL" };
+        Grenadier[] = { "keko_W_A3_F2000_UGL", "keko_W_A3_TRG21_GL" };
+        LMG[] = { "keko_W_A3_STONER" };
+        MMG[] = { "keko_W_A3_MMG_AAF" };
+        Marksman[] = { "keko_W_A3_EBR" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_A3_ACP };
+        Default[] = { "keko_W_A3_ACP" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

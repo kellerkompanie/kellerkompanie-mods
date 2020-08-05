@@ -2,9 +2,9 @@ class FactionBlackorderRedBerets: FactionBase {
     name = "[Main] Black Order (Red Berets)";
     logisticsHelicopter = "O_RHS_UH60M2_BlackOrder_F";
 
-    disposableRocketLauncher = rhs_weap_M136;
-    antiTankLauncher = rhs_weap_maaws;
-    antiAirLauncher = rhs_weap_fim92;
+    disposableRocketLauncher = "rhs_weap_M136";
+    antiTankLauncher = "rhs_weap_maaws";
+    antiAirLauncher = "rhs_weap_fim92";
 
     #include "WeaponsBlackorderRedBerets.hpp"
 
@@ -62,31 +62,31 @@ class FactionBlackorderRedBerets: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_Tavor };
-        Lead[] = { keko_W_MK18_M320 };
-        Sergeant[] = { keko_W_MK18_M320 };
-        SQL[] = { keko_W_MK18_M320 };
-        FTL[] = { keko_W_MK18_M320 };
-        Grenadier[] = { keko_W_MK18_M320 };
-        LMG[] = { keko_W_M249 };
-        MMG[] = { keko_W_MG42 };
-        Marksman[] = { keko_W_SIG556 };
-        JTAC[] = { keko_W_MK18_M320 };
-        UAVOperator[] = { keko_W_MK18_M320 };
+        Default[] = { "keko_W_Tavor" };
+        Lead[] = { "keko_W_MK18_M320" };
+        Sergeant[] = { "keko_W_MK18_M320" };
+        SQL[] = { "keko_W_MK18_M320" };
+        FTL[] = { "keko_W_MK18_M320" };
+        Grenadier[] = { "keko_W_MK18_M320" };
+        LMG[] = { "keko_W_M249" };
+        MMG[] = { "keko_W_MG42" };
+        Marksman[] = { "keko_W_SIG556" };
+        JTAC[] = { "keko_W_MK18_M320" };
+        UAVOperator[] = { "keko_W_MK18_M320" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Glock };
+        Default[] = { "keko_W_Glock" };
     };
 
     class launcher: launcher {
         RiflemanAT[] = {
-                keko_W_M136,
-                keko_W_M80,
-                keko_W_M72
+                "keko_W_M136",
+                "keko_W_M80",
+                "keko_W_M72"
             };
-        ATSpecialist[] = { keko_W_MAAWS };
-        AASpecialist[] = { keko_W_STINGER };
+        ATSpecialist[] = { "keko_W_MAAWS" };
+        AASpecialist[] = { "keko_W_STINGER" };
     };
 
 };

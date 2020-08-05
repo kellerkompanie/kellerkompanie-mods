@@ -1,14 +1,14 @@
 class FactionBase {
-    name = objNull;
+    name = "";
     faces[] = { };
     logisticsHelicopter = "B_Heli_Transport_03_F";
 
-    disposableRocketLauncher = launch_NLAW_F;
-    antiTankLauncher = launch_B_Titan_short_F;
-    antiAirLauncher = launch_B_Titan_F;
-    grenade = HandGrenade;
-    smokeWhite = SmokeShell;
-    smokeGreen = SmokeShellGreen;
+    disposableRocketLauncher = "launch_NLAW_F";
+    antiTankLauncher = "launch_B_Titan_short_F";
+    antiAirLauncher = "launch_B_Titan_F";
+    grenade = "HandGrenade";
+    smokeWhite = "SmokeShell";
+    smokeGreen = "SmokeShellGreen";
 
     class role {
         Command = "Zeus";
@@ -42,14 +42,14 @@ class FactionBase {
     };
 
     class rank {
-        Default = PRIVATE;
-        Command = COLONEL;
-        Lead = LIEUTENANT;
-        Sergeant = SERGEANT;
-        SQL = SERGEANT;
-        FTL = CORPORAL;
-        Doctor = SERGEANT;
-        Medic = CORPORAL;
+        Default = "PRIVATE";
+        Command = "COLONEL";
+        Lead = "LIEUTENANT";
+        Sergeant = "SERGEANT";
+        SQL = "SERGEANT";
+        FTL = "CORPORAL";
+        Doctor = "SERGEANT";
+        Medic = "CORPORAL";
     };
 
     class engineerClass {
@@ -122,22 +122,22 @@ class FactionBase {
 
     class optics {
         Default[] = { };
-        Lead[] = { Rangefinder };
-        SQL[] = { Rangefinder };
-        FTL[] = { Binocular };
-        LMGAsst[] = { Binocular };
-        MMGAsst[] = { Binocular };
-        ATSpecialistAsst[] = { Rangefinder };
-        AASpecialistAsst[] = { Rangefinder };
-        Driver[] = { Binocular };
-        JTAC[] = { Laserdesignator };
-        HeliPilot[] = { Binocular };
-        JetPilot[] = { Binocular };
+        Lead[] = { "Rangefinder" };
+        SQL[] = { "Rangefinder" };
+        FTL[] = { "Binocular" };
+        LMGAsst[] = { "Binocular" };
+        MMGAsst[] = { "Binocular" };
+        ATSpecialistAsst[] = { "Rangefinder" };
+        AASpecialistAsst[] = { "Rangefinder" };
+        Driver[] = { "Binocular" };
+        JTAC[] = { "Laserdesignator" };
+        HeliPilot[] = { "Binocular" };
+        JetPilot[] = { "Binocular" };
     };
 
     class items {
         Default[] = { };
-        UAVOperator[] = { B_UavTerminal };
+        UAVOperator[] = { "B_UavTerminal" };
     };
 
     class goggles {
@@ -158,7 +158,7 @@ class FactionBase {
 
     class weapons {
         class WeaponBase {
-            cfgName = objNull;
+            cfgName = "";
             scopes[] = {};
             rails[] = {};
             silencers[] = {};

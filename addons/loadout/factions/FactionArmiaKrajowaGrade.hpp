@@ -105,21 +105,21 @@ class FactionArmiaKrajowaGrade: FactionBase {
 
     class primary: primary {
         Default[] = {  };
-        Porucznik[] = { keko_W_THOMPSON };
-        Sierszant[] = { keko_W_PPSH };
-        Kapral[] = { keko_W_G33 };
-        RadioOperator[] = { keko_W_MOSIN };
-        SzeregowyThompson[] = { keko_W_THOMPSON };
-        SzeregowyBAR[] = { keko_W_BAR };
-        SzeregowyMosin[] = { keko_W_MOSIN };
-        SzeregowyK98[] = { keko_W_K98 };
+        Porucznik[] = { "keko_W_THOMPSON" };
+        Sierszant[] = { "keko_W_PPSH" };
+        Kapral[] = { "keko_W_G33" };
+        RadioOperator[] = { "keko_W_MOSIN" };
+        SzeregowyThompson[] = { "keko_W_THOMPSON" };
+        SzeregowyBAR[] = { "keko_W_BAR" };
+        SzeregowyMosin[] = { "keko_W_MOSIN" };
+        SzeregowyK98[] = { "keko_W_K98" };
     };
 
     class secondary: secondary {
         Default[] = {  };
-        Porucznik[] = { keko_W_MAUSER };
-        Sierszant[] = { keko_W_P38 };
-        Sanitariusz[] = { keko_W_REV };
+        Porucznik[] = { "keko_W_MAUSER" };
+        Sierszant[] = { "keko_W_P38" };
+        Sanitariusz[] = { "keko_W_REV" };
     };
 
 };

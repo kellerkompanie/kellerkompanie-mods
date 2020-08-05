@@ -72,27 +72,27 @@ class FactionCTRG: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_HK416, keko_W_A3_HK416_SAND };
-        Lead[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        Sergeant[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        SQL[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        FTL[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        Grenadier[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        LMG[] = { keko_W_A3_HK416_DRUM, keko_W_A3_HK416_DRUM_SAND };
-        MMG[] = { keko_W_A3_MINIMI };
-        Marksman[] = { keko_W_A3_HK417, keko_W_A3_HK417_SAND };
-        JTAC[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
-        UAVOperator[] = { keko_W_A3_HK416_GL, keko_W_A3_HK416_GL_SAND };
+        Default[] = { "keko_W_A3_HK416", "keko_W_A3_HK416_SAND" };
+        Lead[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        Sergeant[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        SQL[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        FTL[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        Grenadier[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        LMG[] = { "keko_W_A3_HK416_DRUM", "keko_W_A3_HK416_DRUM_SAND" };
+        MMG[] = { "keko_W_A3_MINIMI" };
+        Marksman[] = { "keko_W_A3_HK417", "keko_W_A3_HK417_SAND" };
+        JTAC[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
+        UAVOperator[] = { "keko_W_A3_HK416_GL", "keko_W_A3_HK416_GL_SAND" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_P99 };
+        Default[] = { "keko_W_P99" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_NLAW };
-        ATSpecialist[] = { keko_W_TITAN_AT };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_NLAW" };
+        ATSpecialist[] = { "keko_W_TITAN_AT" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };

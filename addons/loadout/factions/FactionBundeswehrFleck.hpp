@@ -2,9 +2,9 @@ class FactionBundeswehrFleck: FactionBase {
     name = "[Main] Bundeswehr (Flecktarn)";
     logisticsHelicopter = "kyo_MH47E_base";
 
-    disposableRocketLauncher = BWA3_PzF3_Tandem_Loaded;
-    antiTankLauncher = BWA3_PzF3_Tandem_Loaded;
-    antiAirLauncher = BWA3_Fliegerfaust;
+    disposableRocketLauncher = "BWA3_PzF3_Tandem_Loaded";
+    antiTankLauncher = "BWA3_PzF3_Tandem_Loaded";
+    antiAirLauncher = "BWA3_Fliegerfaust";
 
     #include "WeaponsBundeswehr.hpp"
 
@@ -100,25 +100,25 @@ class FactionBundeswehrFleck: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_G36 };
-        Lead[] = { keko_W_G36_GL };
-        SQL[] = { keko_W_G36_GL };
-        FTL[] = { keko_W_G36_GL };
-        Grenadier[] = { keko_W_G36_GL };
-        LMG[] = { keko_W_MG4 };
-        MMG[] = { keko_W_MG3 };
-        Marksman[] = { keko_W_G28 };
-        JTAC[] = { keko_W_G36_GL_JTAC };
-        UAVOperator[] = { keko_W_G36_GL };
+        Default[] = { "keko_W_G36" };
+        Lead[] = { "keko_W_G36_GL" };
+        SQL[] = { "keko_W_G36_GL" };
+        FTL[] = { "keko_W_G36_GL" };
+        Grenadier[] = { "keko_W_G36_GL" };
+        LMG[] = { "keko_W_MG4" };
+        MMG[] = { "keko_W_MG3" };
+        Marksman[] = { "keko_W_G28" };
+        JTAC[] = { "keko_W_G36_GL_JTAC" };
+        UAVOperator[] = { "keko_W_G36_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_P8 };
+        Default[] = { "keko_W_P8" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_PZF3 };
-        AASpecialist[] = { keko_W_Fliegerfaust };
+        RiflemanAT[] = { "keko_W_PZF3" };
+        AASpecialist[] = { "keko_W_Fliegerfaust" };
     };
 
 };

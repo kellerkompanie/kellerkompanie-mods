@@ -120,14 +120,14 @@ class CfgVehicles {
                 displayName = CSTRING(removeActionAfter);
                 tooltip = CSTRING(removeActionAfterTooltip);
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class RemoveObject: Checkbox {
                 property = QGVAR(RemoveObject);
                 displayName = CSTRING(removeObjectAfter);
                 tooltip = CSTRING(removeObjectAfterTooltip);
                 typeName = "BOOL";
-                defaultValue = false;
+                defaultValue = 0;
             };
             class Condition: Edit {
                 property = QGVAR(Condition);

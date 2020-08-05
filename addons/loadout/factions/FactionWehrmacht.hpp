@@ -133,24 +133,24 @@ class FactionWehrmacht: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_K98 };
-        GruppenFuehrerMP40[] = { keko_W_MP40 };
-        GruppenFuehrerSTG44[] = { keko_W_STG44 };
-        GruppenFuehrerAsst[] = { keko_W_MP40 };
-        TruppFuehrer[] = { keko_W_MP40 };
-        SchuetzeG43[] = { keko_W_G43 };
-        SchuetzeMP40[] = { keko_W_MP40 };
-        SchuetzeMP40PzF[] = { keko_W_MP40 };
-        MG34[] = { keko_W_MG34 };
-        MG42[] = { keko_W_MG42 };
+        Default[] = { "keko_W_K98" };
+        GruppenFuehrerMP40[] = { "keko_W_MP40" };
+        GruppenFuehrerSTG44[] = { "keko_W_STG44" };
+        GruppenFuehrerAsst[] = { "keko_W_MP40" };
+        TruppFuehrer[] = { "keko_W_MP40" };
+        SchuetzeG43[] = { "keko_W_G43" };
+        SchuetzeMP40[] = { "keko_W_MP40" };
+        SchuetzeMP40PzF[] = { "keko_W_MP40" };
+        MG34[] = { "keko_W_MG34" };
+        MG42[] = { "keko_W_MG42" };
     };
 
     class secondary: secondary {
         Default[] = {  };
-        GruppenFuehrerMP40[] = { keko_W_P08 };
-        GruppenFuehrerSTG44[] = { keko_W_P08 };
-        MG34[] = { keko_W_P38 };
-        MG42[] = { keko_W_P38 };
+        GruppenFuehrerMP40[] = { "keko_W_P08" };
+        GruppenFuehrerSTG44[] = { "keko_W_P08" };
+        MG34[] = { "keko_W_P38" };
+        MG42[] = { "keko_W_P38" };
     };
 
 };

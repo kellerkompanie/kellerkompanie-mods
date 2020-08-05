@@ -2,8 +2,8 @@ class FactionWAM: FactionBase {
     name = "[Minimal] WAM - West Altian Militia (Paramilitary)";
     logisticsHelicopter = "I_Heli_light_03_unarmed_F";
 
-    disposableRocketLauncher = launch_RPG7_F;
-    antiTankLauncher = RPG32_Brown;
+    disposableRocketLauncher = "launch_RPG7_F";
+    antiTankLauncher = "RPG32_Brown";
 
     #include "WeaponsWAM.hpp"
 
@@ -73,27 +73,27 @@ class FactionWAM: FactionBase {
     };
 
     class primary: primary {
-        Default[] = { keko_W_A3_CTARC };
-        Lead[] = { keko_W_A3_CTAR_GL };
-        Sergeant[] = { keko_W_A3_CTAR_GL };
-        SQL[] = { keko_W_A3_CTAR_GL };
-        FTL[] = { keko_W_A3_CTAR_GL };
-        Grenadier[] = { keko_W_A3_CTAR_GL };
-        LMG[] = { keko_W_A3_Stoner };
-        MMG[] = { keko_W_A3_MMG };
-        Marksman[] = { keko_W_A3_EBR };
-        JTAC[] = { keko_W_A3_CTAR_GL };
-        UAVOperator[] = { keko_W_A3_CTAR_GL };
+        Default[] = { "keko_W_A3_CTARC" };
+        Lead[] = { "keko_W_A3_CTAR_GL" };
+        Sergeant[] = { "keko_W_A3_CTAR_GL" };
+        SQL[] = { "keko_W_A3_CTAR_GL" };
+        FTL[] = { "keko_W_A3_CTAR_GL" };
+        Grenadier[] = { "keko_W_A3_CTAR_GL" };
+        LMG[] = { "keko_W_A3_Stoner" };
+        MMG[] = { "keko_W_A3_MMG" };
+        Marksman[] = { "keko_W_A3_EBR" };
+        JTAC[] = { "keko_W_A3_CTAR_GL" };
+        UAVOperator[] = { "keko_W_A3_CTAR_GL" };
     };
 
     class secondary: secondary {
-        Default[] = { keko_W_Grach };
+        Default[] = { "keko_W_Grach" };
     };
 
     class launcher: launcher {
-        RiflemanAT[] = { keko_W_RPG };
-        ATSpecialist[] = { keko_W_RPG32 };
-        AASpecialist[] = { keko_W_TITAN_AA };
+        RiflemanAT[] = { "keko_W_RPG" };
+        ATSpecialist[] = { "keko_W_RPG32" };
+        AASpecialist[] = { "keko_W_TITAN_AA" };
     };
 
 };
