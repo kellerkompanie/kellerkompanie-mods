@@ -11,7 +11,7 @@ class cfgVehicles {
         editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_FirstAidKit_01_open_F.jpg";
         class TransportItems {
             class manualKit {
-                name = GVAR(manualKit);
+                name = QGVAR(manualKit);
                 count = 1;
             };
         };
@@ -21,7 +21,7 @@ class cfgVehicles {
         displayName = CSTRING(refillNameAuto);
         class TransportItems {
             class autoKit {
-                name = GVAR(autoKit);
+                name = QGVAR(autoKit);
                 count = 1;
             };
         };
@@ -33,7 +33,7 @@ class cfgVehicles {
         editorPreview = QPATHTOF(ui\FAK.jpg);
         class TransportItems {
             class FAK {
-                name = GVAR(FAK);
+                name = QGVAR(FAK);
                 count = 1;
             };
         };
