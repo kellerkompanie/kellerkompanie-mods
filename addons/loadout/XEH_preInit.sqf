@@ -34,7 +34,7 @@ if (hasInterface) then {
 
 
 
-private _factionClassConfigs = "getText (_x >> 'name') != 'objNull'" configClasses (configFile >> "kekoFactions");
+private _factionClassConfigs = "getText (_x >> 'name') != ''" configClasses (configFile >> "kekoFactions");
 private _factionClasses = ["Custom"];
 private _factionNames = ["Custom"];
 
