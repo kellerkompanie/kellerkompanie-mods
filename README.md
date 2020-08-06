@@ -1,11 +1,19 @@
-# kellerkompanie-mods
+<p align="center">
+    <img src="https://github.com/kellerkompanie/kellerkompanie-mods/raw/master/media/kk-logo-full-0.5x.png">
+</p>
+
+<p align="center">
+    <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA</a> and <a href="https://github.com/acemod/ACE3/releases">ACE3</a>.<br/>
+    Visit us on <a href="https://kellerkompanie.com/">kellerkompanie.com</a> | <a href="ts3server://ts.kellerkompanie.com?port=9987">Teamspeak 3</a> | <a href="https://www.youtube.com/c/Kellerkompanie">YouTube</a> | <a href="https://steamcommunity.com/groups/kellerkompanie">Steam</a></strong></sup>
+</p>
+
 This project contains modifications for the Arma 3 game, custom tailored towards the needs of the [Kellerkompanie](https://kellerkompanie.com/) community. Not all parts are self-written. Where indicated the content does not belong to us, but rather to the original authors. The rest may be used by anyone in any way.
 
 The project's file structure is based on the [ACE3](https://github.com/acemod/ACE3)/[CBA_A3](https://github.com/CBATeam/CBA_A3) templates.
 
 
 ## Development
-We are contiously looking for way to improve our addons or ideas for new content. Feel free to drop as a message, create an issue or open a pull request.
+We are continously looking for way to improve our addons or ideas for new content. Feel free to drop as a message, create an issue or open a pull request.
 
 ### Requirements
 1. A copy of this repository, either via git or as download. If downloading manually make sure to unpack the repository before continuing.
