@@ -4,7 +4,7 @@
 
 <p align="center">
     <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA</a> and <a href="https://github.com/acemod/ACE3/releases">ACE3</a>.<br/>
-    Visit us on <a href="https://kellerkompanie.com/">kellerkompanie.com</a> | <a href="ts3server://ts.kellerkompanie.com?port=9987">Teamspeak 3</a> | <a href="https://www.youtube.com/c/Kellerkompanie">YouTube</a> | <a href="https://steamcommunity.com/groups/kellerkompanie">Steam</a></strong></sup>
+    Visit us on <a href="https://kellerkompanie.com/">kellerkompanie.com</a> | <a href="https://www.youtube.com/c/Kellerkompanie">YouTube</a> | <a href="https://steamcommunity.com/groups/kellerkompanie">Steam</a></strong></sup>
 </p>
 
 This project contains modifications for the Arma 3 game, custom tailored towards the needs of the [Kellerkompanie](https://kellerkompanie.com/) community. Not all parts are self-written. Where indicated the content does not belong to us, but rather to the original authors. The rest may be used by anyone in any way.
