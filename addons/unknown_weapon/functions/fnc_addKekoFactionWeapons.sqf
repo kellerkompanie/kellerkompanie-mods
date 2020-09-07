@@ -18,29 +18,16 @@ if !(isNil QEGVAR(loadout,customLoadouts)) then {
 };
 
 // weapons from crates
-private _crates = [["Kisten", EGVAR(logistics,customCrates)]];
-
-if(isNil "_crates") then {
-    _crates = [];
-};
-
-{
-    private _crate_name = _x select 0;
+{   
+    _x params ["", "", "_content"]; 
 
     {
-        private _entryName = _x select 0;
-        private _entryContents = _x select 2;
+        private _item = _x select 1;
 
-        if(_entryName isEqualTo _crate_name) then {
-            {
-                private _item = _x select 1;
-
-                if (isClass (configFile >> "CfgWeapons" >> _item)) then {
-                    if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
-                        GVAR(whitelist) pushBackUnique toUpper(_item);
-                    };
-                }
-            } forEach _entryContents;
-        };
-    } forEach EGVAR(logistics,customCrates) select 0;
-} forEach _crates;
+        if (isClass (configFile >> "CfgWeapons" >> _item)) then {
+            if !(_item isKindOf ["ItemCore", configFile >> "CfgWeapons"]) then {
+                GVAR(whitelist) pushBackUnique toUpper(_item);
+            };
+        }
+    } forEach _content;
+} forEach EGVAR(logistics,crates);
