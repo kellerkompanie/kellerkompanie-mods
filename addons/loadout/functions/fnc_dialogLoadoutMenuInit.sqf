@@ -8,7 +8,7 @@ private _listBox = _display displayCtrl 1500;
 
 lbClear _listBox;
 
-private _customLoadout = _faction isEqualTo "Custom";
+private _customLoadout = _faction isEqualTo "FactionCustom";
 if(_customLoadout) then {
 
     if (isNil QGVAR(customLoadouts)) then {

@@ -1,9 +1,6 @@
 #include "script_component.hpp"
 
-private _faction = EGVAR(loadout,loadoutFaction);
-if (EGVAR(loadout,loadoutFaction) == "Custom") exitWith {};
-
-private _cratesCfgs = "true" configClasses (configFile >> "kekoFactions" >> _faction >> "crates");
+private _cratesCfgs = "true" configClasses (configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction) >> "crates");
 {
     private _crateConfig = _x;
 

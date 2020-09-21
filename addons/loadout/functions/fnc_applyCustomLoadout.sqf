@@ -9,8 +9,6 @@ _player setVariable ["ACE_isEngineer", 0, true];
 
 removeGoggles _player;
 
-INFO_1("applyCustomLoadout GVAR(customLoadouts) = %1", GVAR(customLoadouts));
-
 if (isNil QGVAR(customLoadouts)) then {
     WARNING_1("%1 is nil", QGVAR(customLoadouts));
 };

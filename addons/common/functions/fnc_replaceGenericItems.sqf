@@ -116,7 +116,7 @@ if (_launcherWeapon != "") then {
         private _antiTankLauncher = "launch_B_Titan_short_F";
         private _antiAirLauncher = "launch_B_Titan_F";
 
-        if (EGVAR(loadout,loadoutFaction) != "Custom") then {
+        if (EGVAR(loadout,loadoutFaction) != "FactionCustom") then {
             private _factionCfg = configFile >> "kekoFactions" >> EGVAR(loadout,loadoutFaction);
             _disposableRocketLauncher = getText (_factionCfg >> "disposableRocketLauncher");
             _antiTankLauncher = getText (_factionCfg >> "antiTankLauncher");

@@ -6,9 +6,7 @@ INFO_3("_player = %1 _faction = %2 _role = %3", _player, _faction, _role);
 
 _player setVariable [QGVAR(role), _role, true];
 
-private _customLoadout = _faction isEqualTo "Custom";
-
-INFO_1("_customLoadout = %1", _customLoadout);
+private _customLoadout = _faction isEqualTo "FactionCustom";
 
 if (_customLoadout) exitWith {
     // delay until custom loadouts have been initialized
@@ -21,8 +19,6 @@ if (_customLoadout) exitWith {
         [_player, _role]
     ] call CBA_fnc_waitUntilAndExecute;
 };
-
-INFO("applying normal loadout");
 
 private _specialLoadout = [];
 {

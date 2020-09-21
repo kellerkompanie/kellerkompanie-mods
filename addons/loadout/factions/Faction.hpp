@@ -456,6 +456,8 @@ class FactionBase {
     };
 };
 
+#include "FactionCustom.hpp"
+
 #include "FactionNATO.hpp"
 #include "FactionAAF.hpp"
 #include "FactionNATOtropic.hpp"

@@ -58,7 +58,7 @@ class CfgVehicles {
                     };
                     class FactionCustom {
                         name = "Custom";
-                        value = "Custom";
+                        value = "FactionCustom";
                     };
                     class FactionMission {
                         name = "Mission (experimental)";
