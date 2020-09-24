@@ -31,6 +31,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 #include "defines.hpp"
 
 #include "ui\dialog_loadoutMenu.hpp"

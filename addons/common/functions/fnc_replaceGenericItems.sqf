@@ -35,6 +35,16 @@ private _allItems = [player] call CBA_fnc_uniqueUnitItems;
     [QGVAR(lollipop_generic), "immersion_pops_poppack"]
 ];
 
+if ("keko_basicEquipment" in _allItems) then {
+    while {"keko_basicEquipment" in items _unit} do {
+        _unit removeItem "keko_basicEquipment";
+        [_unit, "FirstAidKit", true] call CBA_fnc_addItem;
+        [_unit, "ACE_MapTools", true] call CBA_fnc_addItem;
+        [_unit, "ACE_Flashlight_MX991", true] call CBA_fnc_addItem;
+        [_unit, QEGVAR(canteen,canteen), true] call CBA_fnc_addItem;
+        [_unit, "ACE_EntrenchingTool", true] call CBA_fnc_addItem;        
+    };
+};
 
 private _primaryWeapon = primaryWeapon _unit;
 private _secondaryWeapon = handgunWeapon _unit;

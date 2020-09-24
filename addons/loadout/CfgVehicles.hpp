@@ -427,4 +427,16 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_change_loadout.paa);
         curatorCanAttach   = 1;
     };
+
+    class Item_Base_F;
+    class keko_basicEquipmentItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "Kellerkompanie";
+        displayName = CSTRING(BasicEquipment_Display);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(keko_basicEquipment,1);
+        };
+    };
 };

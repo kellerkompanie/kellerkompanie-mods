@@ -144,5 +144,18 @@
             <English>Sets a specified name for this type of custom loadout that will be visible in the loadout menu</English>
             <German>Bestimmt den Namen dieses Typs von Custom Loadout, wie er nachher im Loadout Menü auftaucht</German>
         </Key>
+
+        <Key ID="STR_keko_loadout_BasicEquipment_Display">
+            <English>Basic Equipment</English>
+            <German>Grundausrüstung</German>
+        </Key>
+        <Key ID="STR_keko_loadout_BasicEquipment_Desc_Short">
+            <English>Used to combat moderate to severe pain experiences</English>
+            <German>Wird verwendet um moderate bis starke Schmerzen zu lindern.</German>
+        </Key>
+        <Key ID="STR_keko_loadout_BasicEquipment_Desc_Use">
+            <English>An analgesic used to combat moderate to severe pain experiences.</English>
+            <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln</German>
+        </Key>
     </Package>
 </Project>
