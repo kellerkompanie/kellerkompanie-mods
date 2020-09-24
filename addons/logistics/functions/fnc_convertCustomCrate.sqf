@@ -4,6 +4,10 @@ if !(isServer) exitWith {false};
 
 params ["_crate", ["_force", false]];
 
+// make sure crate is only converted once
+if (_crate getVariable [QGVAR(converted),false]) exitWith {false};
+_crate setVariable [QGVAR(converted), true];
+
 // delay until next frame so that GVAR(crates) is initialized in XEH_postInit
 [
     {
