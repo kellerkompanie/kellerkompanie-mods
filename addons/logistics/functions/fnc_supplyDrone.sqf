@@ -10,24 +10,8 @@ if(GVAR(virtualUAVAmount) != -1 && GVAR(virtualUAVAmount) <= 0) exitWith {
     "[KEKO] (logistics) You have used all of your UAVs already, no more available!" remoteExec ["systemChat", 0];
 };
 
-private _spawnPos = [];
-private _targetPos = [];
-private _droneInventory = [];
 
-params ["_spawn", "_target", "_crate_name"];
-
-_spawnPos = _spawn;
-_targetPos = _target;
-
-private _descapedString = [_crate_name, "%20", " "] call EFUNC(common,replaceString);
-
-{
-    private _entryName = _x select 0;
-
-    if(_entryName isEqualTo _descapedString) then {
-        _droneInventory = _x select 2;
-    };
-} forEach GVAR(crates) select 0;
+params ["_spawnPos", "_targetPos", "_droneInventory"];
 
 private _uav = createVehicle ["B_UAV_06_F", _spawnPos, [], 0,""];
 createVehicleCrew _uav;
