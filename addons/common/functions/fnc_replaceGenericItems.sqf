@@ -75,6 +75,10 @@ if (_primaryWeapon != "") then {
             private _baseWeapon = getText(configFile >> "CfgWeapons" >> _primaryWeapon >> "baseWeapon");
             _tracerMag = getText(configFile >> "kekoGenericMagazines" >> "PrimaryTracer" >> _baseWeapon);
         };
+        if (_uglMag == "") then {
+            private _baseWeapon = getText(configFile >> "CfgWeapons" >> _primaryWeapon >> "baseWeapon");
+            _uglMag = getText(configFile >> "kekoGenericMagazines" >> "UGL" >> _baseWeapon);
+        };
 
         while {"keko_RifleMag" in items _unit} do {
             _unit removeItem "keko_RifleMag";
@@ -84,9 +88,6 @@ if (_primaryWeapon != "") then {
             _unit removeItem "keko_RifleMag_Tracer";
             [_unit, _tracerMag, true] call CBA_fnc_addItem;
         };
-    };
-
-    if !(_uglMag isEqualTo "") then {
         while {"keko_UGLMag" in items _unit} do {
             _unit removeItem "keko_UGLMag";
             [_unit, _uglMag, true] call CBA_fnc_addItem;
