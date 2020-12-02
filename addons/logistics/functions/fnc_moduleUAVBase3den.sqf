@@ -1,12 +1,11 @@
 #include "script_component.hpp"
 
-private _logic = _this select 0;
+if (isServer) then {
+	params ["_logic"];
+	private _pos = getPos _logic;
 
-if !(isServer) exitWith {};
+	GVAR(uavSupplyBase) = _pos;
+	publicVariable QGVAR(uavSupplyBase);
 
-private _pos = getPos _logic;
-
-GVAR(uavSupplyBase) = _pos;
-publicVariable QGVAR(uavSupplyBase);
-
-deleteVehicle _logic;
+	deleteVehicle _logic;
+};

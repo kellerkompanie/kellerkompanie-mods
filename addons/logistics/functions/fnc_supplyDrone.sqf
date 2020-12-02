@@ -14,6 +14,7 @@ if(GVAR(virtualUAVAmount) != -1 && GVAR(virtualUAVAmount) <= 0) exitWith {
 params ["_spawnPos", "_targetPos", "_droneInventory"];
 
 private _uav = createVehicle ["B_UAV_06_F", _spawnPos, [], 0,""];
+_uav enableWeaponDisassembly false;
 createVehicleCrew _uav;
 
 GVAR(currentUAVs) = GVAR(currentUAVs) + 1;
