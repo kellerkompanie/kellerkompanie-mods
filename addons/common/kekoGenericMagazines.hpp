@@ -1845,6 +1845,7 @@ class kekoGenericMagazines {
         BWA3_G36A3_AG40 = "1Rnd_HE_Grenade_shell";
         BWA3_G36A3_AG40_green = "1Rnd_HE_Grenade_shell";
         BWA3_G36A3_AG40_tan = "1Rnd_HE_Grenade_shell";
+        BWA3_G38_AG40 = "1Rnd_HE_Grenade_shell";
         BWA3_G38_AG40_tan = "1Rnd_HE_Grenade_shell";
         BWA3_G38K_AG40 = "1Rnd_HE_Grenade_shell";
         BWA3_G38K_AG40_tan = "1Rnd_HE_Grenade_shell";
