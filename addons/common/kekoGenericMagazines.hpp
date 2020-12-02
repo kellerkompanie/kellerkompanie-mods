@@ -1449,6 +1449,55 @@ class kekoGenericMagazines {
         UK3CB_BAF_L91A1 = "UK3CB_BAF_9_30Rnd";
         UK3CB_BAF_L92A1 = "UK3CB_BAF_9_30Rnd";
         UK3CB_BAF_L98A2 = "UK3CB_BAF_556_30Rnd_T";
+
+        /* 3CB Factions */
+        uk3cb_ak47 = "UK3CB_AK47_30Rnd_Magazine_R";
+        UK3CB_Bren = "UK3CB_Bren_30Rnd_762x51_Magazine";
+        UK3CB_M16_Carbine = "UK3CB_M16_20rnd_556x45";
+        UK3CB_FNFAL_FULL = "UK3CB_FNFAL_20rnd_762x51";
+        UK3CB_FNFAL_PARA = "UK3CB_FNFAL_20rnd_762x51";
+        UK3CB_G3SG1 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3SG1_RIS = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3A3 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3A3_RIS = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3A3V = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3A3V_RIS = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3KA4 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_G3KA4_GL = "UK3CB_M14_20rnd_762x51";
+        UK3CB_PSG1A1 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_PSG1A1_RIS = "UK3CB_M14_20rnd_762x51";
+        UK3CB_HK33KA2_RIS = "UK3CB_HK33_30rnd_556x45";
+        UK3CB_HK33KA2_RIS_GL = "UK3CB_HK33_30rnd_556x45";
+        UK3CB_HK33KA1 = "UK3CB_HK33_30rnd_556x45";
+        UK3CB_HK33KA2 = "UK3CB_HK33_30rnd_556x45";
+        UK3CB_HK33KA3 = "UK3CB_HK33_30rnd_556x45";
+        UK3CB_Enfield = "UK3CB_Enfield_10rnd_Mag";
+        UK3CB_Enfield_Rail = "UK3CB_Enfield_10rnd_Mag";
+        UK3CB_M14 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M14_Railed = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M14DMR = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M14DMR_Railed = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M16A1 = "UK3CB_M16_20rnd_556x45";
+        UK3CB_M16A1_LSW = "UK3CB_M16_20rnd_556x45";
+        UK3CB_M16A2 = "UK3CB_M16_20rnd_556x45";
+        UK3CB_M16A2_UGL = "UK3CB_M16_20rnd_556x45";
+        UK3CB_M21 = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M21_Bipod_Railed = "UK3CB_M14_20rnd_762x51";
+        UK3CB_M60 = "UK3CB_M60_100rnd_762x51";
+        UK3CB_M79 = "1Rnd_HE_Grenade_shell";
+        UK3CB_MG3_Railed = "UK3CB_MG3_100rnd_762x51";
+        UK3CB_MG3_KWS_B = "UK3CB_MG3_100rnd_762x51";
+        UK3CB_MG3_KWS_G = "UK3CB_MG3_100rnd_762x51";
+        UK3CB_MG3_KWS_T = "UK3CB_MG3_100rnd_762x51";
+        UK3CB_MG3 = "UK3CB_MG3_100rnd_762x51";
+        UK3CB_MP5 = "UK3CB_MP5_30Rnd_Magazine";
+        UK3CB_MP5_SD = "UK3CB_MP5_30Rnd_Magazine";
+        UK3CB_RPK = "UK3CB_AK47_30Rnd_Magazine";
+        UK3CB_RPK_74 = "UK3CB_RPK74_60rnd_545x39";
+        UK3CB_RPK_74_BLK = "UK3CB_RPK74_60rnd_545x39";
+        UK3CB_Sten = "UK3CB_Sten_34Rnd_Magazine";
+        UK3CB_SVD_OLD = "10Rnd_762x54_Mag";
+        UK3CB_SVD_OLD_NPZ = "10Rnd_762x54_Mag";
     };
 
     class Pistol {
@@ -1550,6 +1599,9 @@ class kekoGenericMagazines {
         UK3CB_BAF_L117A2 = "UK3CB_BAF_9_15Rnd";
         UK3CB_BAF_L131A1 = "UK3CB_BAF_9_17Rnd";
         UK3CB_BAF_L9A1 = "UK3CB_BAF_9_13Rnd";
+
+        /* 3CB Factions */
+        UK3CB_BHP = "UK3CB_BHP_9_13Rnd";
     };
 
     class Launcher {
@@ -1599,6 +1651,9 @@ class kekoGenericMagazines {
         launch_MRAWS_sand_F = "MRAWS_HEAT_F";
         launch_O_Vorona_brown_F = "Vorona_HEAT";
         launch_O_Vorona_green_F = "Vorona_HEAT";
+
+        /* 3CB Factions */
+        UK3CB_Blowpipe = "UK3CB_Blowpipe_Round";
     };
 
     class UGL {
@@ -1760,5 +1815,10 @@ class kekoGenericMagazines {
         UK3CB_BAF_L85A2_UGL = "UK3CB_BAF_1Rnd_HE_Grenade_Shell";
         UK3CB_BAF_L85A2_UGL_HWS = "UK3CB_BAF_1Rnd_HE_Grenade_Shell";
 
+        /* 3CB Factions */
+        UK3CB_G3KA4_GL = "1Rnd_HE_Grenade_shell";
+        UK3CB_HK33KA2_RIS_GL = "1Rnd_HE_Grenade_shell";
+        UK3CB_M16A2_UGL = "1Rnd_HE_Grenade_shell";
+        UK3CB_M79 = "1Rnd_HE_Grenade_shell";
     };
 };
