@@ -44,4 +44,7 @@ class CfgMainMenuSpotlight {
     delete gm_campaign_01;
     delete Contact_Campaign;
     delete OldMan;
+    delete Tacops_Campaign_01;
+    delete SP_FD14;
+    delete Orange_Campaign;
 };
