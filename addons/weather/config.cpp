@@ -12,7 +12,14 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "keko_common",
-            "ace_zeus"
+            "ace_zeus",
+
+            /* based on https://steamcommunity.com/sharedfiles/filedetails/?id=1397683809 */
+            "A3_Map_Tanoabuka",
+            "A3_Map_Altis",
+            "A3_Map_Stratis",
+            "A3_Map_Malden",
+            "A3_Map_Data"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
@@ -33,3 +40,4 @@ class CfgPatches {
 
 
 #include "CfgSounds.hpp"
+#include "CfgWorlds.hpp"
