@@ -11,7 +11,7 @@ class CfgVehicles {
         scope = 1;
         curatorScope = 1;
         side = 0;
-        faction = GVAR(opfor);
+        faction = QGVAR(opfor);
         vehicleClass = "Men";
         model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
         modelSides[]={3,2,1,0};
@@ -193,7 +193,7 @@ class CfgVehicles {
         scope = 1;
         curatorScope = 1;
         side = 0;
-        faction = GVAR(opfor);
+        faction = QGVAR(opfor);
         vehicleClass = "Men";
         model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
         modelSides[]={3,2,1,0};

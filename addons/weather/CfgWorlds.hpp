@@ -7,7 +7,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-005;
+		hazeBaseBeta0 = 0.00008;
 		hazeDensityDecay = 0.00536;
 		class SimulWeather
 		{
@@ -130,7 +130,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-005;
+		hazeBaseBeta0 = 0.00008;
 		hazeDensityDecay = 0.00536;
 		class DefaultKeyframe
 		{
@@ -142,7 +142,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-005;
+		hazeBaseBeta0 = 0.00008;
 		hazeDensityDecay = 0.00536;
 		class DefaultKeyframe
 		{
@@ -154,7 +154,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-005;
+		hazeBaseBeta0 = 0.00008;
 		hazeDensityDecay = 0.00536;
 		class DefaultKeyframe
 		{
@@ -166,7 +166,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-005;
+		hazeBaseBeta0 = 0.00008;
 		hazeDensityDecay = 0.00536;
 		class DefaultKeyframe
 		{
