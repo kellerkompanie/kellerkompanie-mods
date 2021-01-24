@@ -2,7 +2,10 @@
 
 cba_settings_whitelist[] = {"76561197987754545"};
 enableTargetDebug = 1;
-enableDebugConsole[] = {"76561197987754545"};
+enableDebugConsole[] = {
+    "76561197987754545",
+    "76561198060725525"
+};
 
 class CfgPatches {
     class ADDON {
