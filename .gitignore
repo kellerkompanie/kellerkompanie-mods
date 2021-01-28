@@ -74,3 +74,8 @@ CHANGELOG.md
 
 releases/
 keys/
+## Added by HEMTT
+releases/*
+keys/*
+.hemtt/local
+####

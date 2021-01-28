@@ -1,0 +1,9 @@
+name = "Kellerkompanie Mods"
+prefix = "keko"
+author = "Schwaggot"
+template = "cba"
+mainprefix = "z"
+include = ["./include"]
+files = ["mod.cpp"]
+folder_optionals = true
+sig_version = 3
