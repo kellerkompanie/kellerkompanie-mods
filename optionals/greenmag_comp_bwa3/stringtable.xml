@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">    
+    <Package name="greenmag_comp_bwa3">
+        <Container name="46x30_basic">
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_1Rnd">
+                <English>4.6x30mm - 1 Rnd</English>
+                <German>4,6x30mm - 1 Patrone</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_10Rnd">
+                <English>4.6x30mm - 10 Rnd</English>
+                <German>4,6x30mm - 10 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_20Rnd">
+                <English>4.6x30mm - 20 Rnd</English>
+                <German>4,6x30mm - 20 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_30Rnd">
+                <English>4.6x30mm - 30 Rnd</English>
+                <German>4,6x30mm - 30 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_40Rnd">
+                <English>4.6x30mm - 40 Rnd</English>
+                <German>4,6x30mm - 40 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_50Rnd">
+                <English>4.6x30mm - 50 Rnd</English>
+                <German>4,6x30mm - 50 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_basic_60Rnd">
+                <English>4.6x30mm - 60 Rnd</English>
+                <German>4,6x30mm - 60 Patronen</German>
+            </Key>
+        </Container>
+        <Container name="46x30_sd">
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_1Rnd">
+                <English>4.6x30mm - 1 Rnd [SD]</English>
+                <German>4,6x30mm - 1 Patrone [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_10Rnd">
+                <English>4.6x30mm - 10 Rnd [SD]</English>
+                <German>4,6x30mm - 10 Patronen [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_20Rnd">
+                <English>4.6x30mm - 20 Rnd [SD]</English>
+                <German>4,6x30mm - 20 Patronen [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_30Rnd">
+                <English>4.6x30mm - 30 Rnd [SD]</English>
+                <German>4,6x30mm - 30 Patronen [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_40Rnd">
+                <English>4.6x30mm - 40 Rnd [SD]</English>
+                <German>4,6x30mm - 40 Patronen [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_50Rnd">
+                <English>4.6x30mm - 50 Rnd [SD]</English>
+                <German>4,6x30mm - 50 Patronen [SD]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_46x30_sd_60Rnd">
+                <English>4.6x30mm - 60 Rnd [SD]</English>
+                <German>4,6x30mm - 60 Patronen [SD]</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
