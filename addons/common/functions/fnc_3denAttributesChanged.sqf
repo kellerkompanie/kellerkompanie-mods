@@ -27,37 +27,32 @@ private _hc3Exists = false;
 
 {
     private _logicName = (_x get3DENAttribute "name") select 0;
-    //systemChat _logicName;
-    switch(_logicName) do {
+
+    switch (_logicName) do {
         case QGVAR(3den_initModule): {
             _initModuleExists = true;
             _existingInitModule = _x;
-            break;
         };
         case QGVAR(3den_gameMaster): {
             _gameMasterModuleExists = true;
-            break;
         };
         case "HC1": {
             _hc1Exists = true;
-            break;
         };
         case "HC2": {
             _hc2Exists = true;
-            break;
         };
         case "HC3": {
             _hc3Exists = true;
-            break;
         };        
     };
 } forEach (all3DENEntities select 3);
 
 if (_initModuleExists) then {
-    if(_module != _existingInitModule) then {
+    if (_module != _existingInitModule) then {
         ERROR_MSG("There can be only one Init Module");
         delete3DENEntities _this;
-        if(true) exitWith {};
+        if (true) exitWith {};
     };
 };
 
