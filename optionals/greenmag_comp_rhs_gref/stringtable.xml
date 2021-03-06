@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">    
+    <Package name="greenmag_comp_bwa3">
+        <Container name="792x57_basic">
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_1Rnd">
+                <English>7.92x57mm - 1 Rnd</English>
+                <German>7,92x57mm - 1 Patrone</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_10Rnd">
+                <English>7.92x57mm - 10 Rnd</English>
+                <German>7,92x57mm - 10 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_20Rnd">
+                <English>7.92x57mm - 20 Rnd</English>
+                <German>7,92x57mm - 20 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_30Rnd">
+                <English>7.92x57mm - 30 Rnd</English>
+                <German>7,92x57mm - 30 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_40Rnd">
+                <English>7.92x57mm - 40 Rnd</English>
+                <German>7,92x57mm - 40 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_50Rnd">
+                <English>7.92x57mm - 50 Rnd</English>
+                <German>7,92x57mm - 50 Patronen</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_basic_60Rnd">
+                <English>7.92x57mm - 60 Rnd</English>
+                <German>7,92x57mm - 60 Patronen</German>
+            </Key>
+        </Container>
+        <Container name="792x57_sd">
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_1Rnd">
+                <English>7.92x57mm - 1 Rnd [Tracer]</English>
+                <German>7,92x57mm - 1 Patrone [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_10Rnd">
+                <English>7.92x57mm - 10 Rnd [Tracer]</English>
+                <German>7,92x57mm - 10 Patronen [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_20Rnd">
+                <English>7.92x57mm - 20 Rnd [Tracer]</English>
+                <German>7,92x57mm - 20 Patronen [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_30Rnd">
+                <English>7.92x57mm - 30 Rnd [Tracer]</English>
+                <German>7,92x57mm - 30 Patronen [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_40Rnd">
+                <English>7.92x57mm - 40 Rnd [Tracer]</English>
+                <German>7,92x57mm - 40 Patronen [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_50Rnd">
+                <English>7.92x57mm - 50 Rnd [Tracer]</English>
+                <German>7,92x57mm - 50 Patronen [Tracer]</German>
+            </Key>
+            <Key ID="STR_keko_greenmag_comp_bwa3_792x57_sd_60Rnd">
+                <English>7.92x57mm - 60 Rnd [Tracer]</English>
+                <German>7,92x57mm - 60 Patronen [Tracer]</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
