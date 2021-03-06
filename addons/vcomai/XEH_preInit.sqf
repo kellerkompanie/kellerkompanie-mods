@@ -15,13 +15,16 @@ GVAR(ARTYLST) = []; //List of all AI inside of artillery pieces, leave this alon
 
 //AI SKILL SETTINGS HERE!!!!!!!!!!!!
 //LOW DIFFICULTY
-// keko_vcomai_AIDIFA = [['aimingAccuracy',0.15],['aimingShake',0.1],['aimingSpeed',0.25],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
+// GVAR(AIDIFA) = [['aimingAccuracy',0.15],['aimingShake',0.1],['aimingSpeed',0.25],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
 	
 //MEDIUM DIFFICULTY
-GVAR(AIDIFA) = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];
+// GVAR(AIDIFA) = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];
 
 //HIGH DIFFICULTY
-// keko_vcomai_AIDIFA = [['aimingAccuracy',0.35],['aimingShake',0.4],['aimingSpeed',0.45],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
+// GVAR(AIDIFA) = [['aimingAccuracy',0.35],['aimingShake',0.4],['aimingSpeed',0.45],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
+
+//CUSTOM DIFFICULTY
+GVAR(AIDIFA) = [['aimingAccuracy',0.20],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',1],['courage',1],['endurance',1],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];
 
 //SIDE SPECIFIC
 GVAR(AIDIFWEST) = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];
@@ -34,24 +37,20 @@ GVAR(PSQUADE) = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.3
 GVAR(PSQUADR) = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];	
 
 
-GVAR(AISIDESPEC) =
-{
+GVAR(AISIDESPEC) = {
 	private _Side = (side (group _this));
 	switch (_Side) do {
-		case west: 
-		{
+		case west: {
 			{
 				_this setSkill _x;
 			} forEach GVAR(AIDIFWEST);				
 		};
-		case east: 
-		{
+		case east: {
 			{
 				_this setSkill _x;
 			} forEach GVAR(AIDIFEAST);					
 		}; 
-		case resistance: 
-		{
+		case resistance: {
 			{
 				_this setSkill _x;
 			} forEach GVAR(AIDIFRESISTANCE);					
@@ -68,9 +67,9 @@ EXAMPLE FOR keko_vcomai_SKILL_CLASSNAMES
 
 keko_vcomai_SKILL_CLASSNAMES = [["Classname1",[aimingaccuracy,aimingshake,spotdistance,spottime,courage,commanding,aimingspeed,general,endurance,reloadspeed]],["Classname2",[aimingaccuracy,aimingshake,spotdistance,spottime,courage,commanding,aimingspeed,general,endurance,reloadspeed]]];
 keko_vcomai_SKILL_CLASSNAMES = 	[
-													["B_GEN_Soldier_F",[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]],
-													["B_G_Soldier_AR_F",[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]]
-												]; 
+									["B_GEN_Soldier_F",[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]],
+									["B_G_Soldier_AR_F",[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]]
+								]; 
 
 */
 	
@@ -82,8 +81,7 @@ GVAR(AIDIFSET) = {
 		{
 			_unit setSkill _x;
 		} forEach GVAR(AIDIFA);
-		
-		
+				
 		if (GVAR(CLASSNAMESPECIFIC) && {count GVAR(SKILL_CLASSNAMES) > 0}) then {
 			{
 				if (typeOf _unit isEqualTo (_x select 0)) exitWith {
@@ -104,8 +102,7 @@ GVAR(AIDIFSET) = {
 		
 		if (GVAR(SIDESPECIFICSKILL)) then {
 			_unit call GVAR(AISIDESPEC);
-		};
-		
+		};		
 	} forEach (units _this);
 };
 			
@@ -123,13 +120,12 @@ GVAR(CoverQueue) = [];
 
 #define VCOM_SETTINGS "Vcom-AI Settings"
 
-
 //Set this to false to disable VcomAI. It can be set to true at any time to re-enable Vcom AI
 [
 	QGVAR(ActivateAI),
 	"CHECKBOX",
-	"Vcom Active", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Vcom Active", 
+	VCOM_SETTINGS, 
 	false,
 	true
 ] call CBA_Settings_fnc_init;
@@ -138,8 +134,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(Debug),
 	"CHECKBOX",
-	"Enable Debug Mode. Mostly systemchat messages.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Enable Debug Mode", 
+	VCOM_SETTINGS, 
 	false,
 	true
 ] call CBA_Settings_fnc_init;
@@ -148,8 +144,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(SIDEENABLED),
 	"LIST",
-	"Sides impacted by Vcom.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Sides impacted by Vcom-AI", 
+	VCOM_SETTINGS, 
 	[
 		[[west,east,resistance],[west,east],[west],[east],[resistance],[resistance,west],[resistance,east]],
 		[["West, East, Resistance"],["West, East"],["West"],["East"],["Resistance"],["Resistance, West"],["Resistance, East"]],
@@ -162,8 +158,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(ARTYENABLE),
 	"CHECKBOX",
-	"Enable AI use of Artillery", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Enable AI use of artillery", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -172,8 +168,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(ARTYSIDES),
 	"LIST",
-	"Sides that will use VCOM Artillery", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Sides that will use VCOM artillery", 
+	VCOM_SETTINGS, 
 	[
 		[[west,east,Resistance],[west,east],[west],[east],[Resistance],[Resistance,west],[Resistance,east]],
 		[["West, East, Resistance"],["West, East"],["West"],["East"],["Resistance"],["Resistance, West"],["Resistance, East"]],
@@ -186,8 +182,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(MEDICALACTIVE),
 	"CHECKBOX",
-	"AI attempt to heal themselves. Medics heal others.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI attempt to heal themselves", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;		
@@ -196,8 +192,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(CARGOCHNG),
 	"CHECKBOX",
-	"Vcom handling of disembark/embarking for AI?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Vcom handling of disembark/embarking for AI?", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -206,8 +202,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(TURRETUNLOAD),
 	"CHECKBOX",
-	"Disembark from turret positions?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Disembark from turret positions?", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -216,8 +212,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(DISEMBARKRANGE),
 	"SLIDER",
-	"Distance AI disembark from the enemy?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Distance AI disembark from the enemy?", 
+	VCOM_SETTINGS, 
 	[50,1000,200,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -226,8 +222,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(StealVeh),
 	"CHECKBOX",
-	"AI steal empty/unlocked vehicles?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI steal empty/unlocked vehicles?", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -236,8 +232,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(ClassSteal),
 	"CHECKBOX",
-	"Class restriction for stealing vehicles", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Class restriction for stealing vehicles", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -246,8 +242,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(FullSpeed),
 	"CHECKBOX",
-	"Enforce AI Speed 'FULL'?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Enforce AI Speed 'FULL'?", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -256,8 +252,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(ADVANCEDMOVEMENT),
 	"CHECKBOX",
-	"AI generate new waypoints to flank.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI generate new waypoints to flank", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -266,8 +262,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(FRMCHANGE),
 	"CHECKBOX",
-	"AI change formations based on location.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI change formations based on location", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -276,8 +272,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(SKILLCHANGE),
 	"CHECKBOX",
-	"AI impacted by Vcom skill settings.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI impacted by Vcom skill settings", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -286,8 +282,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AIDISTANCEVEHPATH),
 	"SLIDER",
-	"Distance AI will steal vehicles from.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Distance AI will steal vehicles from", 
+	VCOM_SETTINGS, 
 	[0,1000,100,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -296,8 +292,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(RAGDOLL),
 	"CHECKBOX",
-	"AI Ragdoll when hit?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI Ragdoll when hit?", 
+	VCOM_SETTINGS, 
 	false,
 	true
 ] call CBA_Settings_fnc_init;
@@ -306,8 +302,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(RAGDOLLCHC),
 	"SLIDER",
-	"Chance for AI to ragdoll when hit.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Chance for AI to ragdoll when hit", 
+	VCOM_SETTINGS, 
 	[0,100,100,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -316,8 +312,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(HEARINGDISTANCE),
 	"SLIDER",
-	"Distance AI can hear gunfire.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Distance AI can hear gunfire", 
+	VCOM_SETTINGS, 
 	[0,10000,1200,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -326,8 +322,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(SUPDIST),
 	"SLIDER",
-	"Distance AI can hear suppressed gunfire.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Distance AI can hear suppressed gunfire", 
+	VCOM_SETTINGS, 
 	[0,10000,200,0],
 	true
 ] call CBA_Settings_fnc_init;		
@@ -336,8 +332,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(WARNDIST),
 	"SLIDER",
-	"Distance AI will call for reinforcements from.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Distance AI will call for reinforcements from", 
+	VCOM_SETTINGS, 
 	[0,10000,1000,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -346,8 +342,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(WARNDELAY),
 	"SLIDER",
-	"Time (seconds) AI wait before support called.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Time (seconds) AI wait before support called", 
+	VCOM_SETTINGS, 
 	[0,10000,30,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -356,8 +352,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(STATICARMT),
 	"SLIDER",
-	"Time (seconds) AI stay on unarmed Static Weapons", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Time AI stay on unarmed static weapons - in secs", 
+	VCOM_SETTINGS, 
 	[0,10000,300,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -366,8 +362,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(MINEENABLED),
 	"CHECKBOX",
-	"Enable AI placing mines", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Enable AI placing mines", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -376,8 +372,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(MINECHANCE),
 	"SLIDER",
-	"Chance for AI to place a mine, once in combat.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Chance for AI to place a mine, once in combat", 
+	VCOM_SETTINGS, 
 	[0,100,75,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -386,8 +382,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(ARTYDELAY),
 	"SLIDER",
-	"Delay before artillery requests. SIDE BASED.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Delay before artillery requests. SIDE BASED.", 
+	VCOM_SETTINGS, 
 	[0,5000,30,0],
 	true,
 	{
@@ -402,8 +398,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AIMagLimit),
 	"SLIDER",
-	"Mag count AI begin to look for additional mags.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Mag count AI begin to look for additional mags", 
+	VCOM_SETTINGS, 
 	[2,10,5,0],
 	true
 ] call CBA_Settings_fnc_init;
@@ -412,8 +408,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISNIPERS),
 	"CHECKBOX",
-	"Special marksman/sniper AI", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Special marksman/sniper AI", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -422,8 +418,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISUPPRESS),
 	"CHECKBOX",
-	"AI attempt to suppress enemies more, and at a further range.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI attempt to suppress enemies more, and at a further range", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -432,8 +428,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(DrivingActivated),
 	"CHECKBOX",
-	"Experimental Improvements to AI driving.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Experimental Improvements to AI driving", 
+	VCOM_SETTINGS, 
 	false,
 	true
 ] call CBA_Settings_fnc_init;
@@ -442,8 +438,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(PlayerAISkills),
 	"CHECKBOX",
-	"Player AI recieve unique skill settings", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Player AI recieve unique skill settings", 
+	VCOM_SETTINGS, 
 	true,
 	true
 ] call CBA_Settings_fnc_init;
@@ -452,8 +448,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(SmokeChance),
 	"SLIDER",
-	"Chance AI throw smoke", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Chance AI throw smoke", 
+	VCOM_SETTINGS, 
 	[0,100,10,2],
 	true
 ] call CBA_Settings_fnc_init;		
@@ -462,8 +458,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(GrenadeChance),
 	"SLIDER",
-	"Chance AI throw grenades", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Chance AI throw grenades", 
+	VCOM_SETTINGS, 
 	[0,100,10,2],
 	true
 ] call CBA_Settings_fnc_init;			
@@ -474,8 +470,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_SideSpecific),
 	"CHECKBOX",
-	"AI skill settings are side specific", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	VCOM_SETTINGS, // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"AI skill settings are side specific", 
+	VCOM_SETTINGS, 
 	false,
 	true,
 	{  
@@ -488,8 +484,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_AimingAccuracy),
 	"SLIDER",
-	"West aiming accuracy", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West aiming accuracy", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.25,2],
 	false,
 	{
@@ -501,8 +497,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_aimingShake),
 	"SLIDER",
-	"West aiming shake", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West aiming shake", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -514,8 +510,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_aimingSpeed),
 	"SLIDER",
-	"West aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West aiming speed", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -527,8 +523,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_commanding),
 	"SLIDER",
-	"West commanding", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West commanding", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -540,8 +536,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_courage),
 	"SLIDER",
-	"West courage", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West courage", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -553,8 +549,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_general),
 	"SLIDER",
-	"West general", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West general", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -566,8 +562,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_reloadSpeed),
 	"SLIDER",
-	"West reloadSpeed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West reloadSpeed", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,1,2],
 	false,
 	{
@@ -579,8 +575,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_spotDistance),
 	"SLIDER",
-	"West spotDistance", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West spotDistance", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -592,8 +588,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_West_spotTime),
 	"SLIDER",
-	"West spotTime", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"West spotTime", 
+	[VCOM_SETTINGS, "West AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -609,8 +605,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_AimingAccuracy),
 	"SLIDER",
-	"East aiming accuracy", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East aiming accuracy", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.25,2],
 	false,
 	{
@@ -622,8 +618,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_aimingShake),
 	"SLIDER",
-	"East aiming shake", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East aiming shake", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -635,8 +631,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_aimingSpeed),
 	"SLIDER",
-	"East aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East aiming speed", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -648,8 +644,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_commanding),
 	"SLIDER",
-	"East commanding", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East commanding", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -661,8 +657,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_courage),
 	"SLIDER",
-	"East courage", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East courage", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -674,8 +670,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_general),
 	"SLIDER",
-	"East general", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East general", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -687,8 +683,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_reloadSpeed),
 	"SLIDER",
-	"East reloadSpeed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East reloadSpeed", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,1,2],
 	false,
 	{
@@ -700,8 +696,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_spotDistance),
 	"SLIDER",
-	"East spotDistance", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East spotDistance", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -713,8 +709,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_East_spotTime),
 	"SLIDER",
-	"East spotTime", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"East spotTime", 
+	[VCOM_SETTINGS, "East AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -730,8 +726,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_AimingAccuracy),
 	"SLIDER",
-	"Resistance aiming accuracy", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent aiming accuracy", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.25,2],
 	false,
 	{
@@ -743,8 +739,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_aimingShake),
 	"SLIDER",
-	"Resistance aiming shake", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent aiming shake", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -756,8 +752,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_aimingSpeed),
 	"SLIDER",
-	"Resistance aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent aiming speed", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -769,8 +765,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_commanding),
 	"SLIDER",
-	"Resistance commanding", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent commanding", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -782,8 +778,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_courage),
 	"SLIDER",
-	"Resistance courage", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent courage", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -795,8 +791,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_general),
 	"SLIDER",
-	"Resistance general", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent general", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -808,8 +804,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_reloadSpeed),
 	"SLIDER",
-	"Resistance reloadSpeed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent reloadSpeed", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,1,2],
 	false,
 	{
@@ -821,8 +817,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_spotDistance),
 	"SLIDER",
-	"Resistance spotDistance", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent spotDistance", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -834,8 +830,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_Resistance_spotTime),
 	"SLIDER",
-	"Resistance spotTime", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"Independent spotTime", 
+	[VCOM_SETTINGS, "Independent AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -850,8 +846,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_AimingAccuracy),
 	"SLIDER",
-	"General aiming accuracy", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General aiming accuracy", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.25,2],
 	false,
 	{
@@ -863,8 +859,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_aimingShake),
 	"SLIDER",
-	"General aiming shake", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General aiming shake", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.15,2],
 	false,
 	{
@@ -876,8 +872,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_aimingSpeed),
 	"SLIDER",
-	"General aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General aiming speed", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.35,2],
 	false,
 	{
@@ -889,8 +885,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_commanding),
 	"SLIDER",
-	"General commanding", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General commanding", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -902,8 +898,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_courage),
 	"SLIDER",
-	"General courage", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General courage", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -915,8 +911,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_general),
 	"SLIDER",
-	"General general", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General general", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.5,2],
 	false,
 	{
@@ -928,8 +924,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_reloadSpeed),
 	"SLIDER",
-	"General reloadSpeed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General reloadSpeed", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,1,2],
 	false,
 	{
@@ -941,8 +937,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_spotDistance),
 	"SLIDER",
-	"General spotDistance", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General spotDistance", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
@@ -954,8 +950,8 @@ GVAR(CoverQueue) = [];
 [
 	QGVAR(AISkills_General_spotTime),
 	"SLIDER",
-	"General spotTime", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-	"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
+	"General spotTime", 
+	[VCOM_SETTINGS, "General AI skill"], 
 	[0,1,0.85,2],
 	false,
 	{
