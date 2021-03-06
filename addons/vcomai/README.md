@@ -1,0 +1,2 @@
+# keko_vcomai
+Kellerkompanie adaption of Vcom-AI by Genesis (https://github.com/genesis92x/VcomAI-3.0). The code is based on the Steam Workshop version 3.4.0 (https://steamcommunity.com/sharedfiles/filedetails/?id=721359761).
