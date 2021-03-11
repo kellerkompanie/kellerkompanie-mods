@@ -70,7 +70,8 @@ private _action = [
         "ACE_medicalSupplyCrate_advanced",
         "KEKO_painkiller",
         "FirstAidKit",
-        "Medikit"
+        "Medikit",
+        "keko_firstAidKit"
     ],
     localize LSTRING(Arsenal_buttonMedicalTooltip),
     QPATHTOF(ui\icon_medical.paa)

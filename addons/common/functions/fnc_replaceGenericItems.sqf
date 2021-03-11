@@ -46,6 +46,13 @@ if ("keko_basicEquipment" in _allItems) then {
     };
 };
 
+if ("keko_firstAidKit" in _allItems) then {
+    while {"keko_firstAidKit" in items _unit} do {
+        _unit removeItem "keko_firstAidKit";
+        [_unit, "FirstAidKit", true] call CBA_fnc_addItem;              
+    };
+};
+
 private _primaryWeapon = primaryWeapon _unit;
 private _secondaryWeapon = handgunWeapon _unit;
 private _launcherWeapon = secondaryWeapon _unit;
