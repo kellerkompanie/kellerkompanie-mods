@@ -112,5 +112,7 @@ private _umi_roleplay_items = "(toLower configName _x) find 'umi_' == 0" configC
     QPATHTOF(ui\icon_roleplay.paa)
 ] call ace_arsenal_fnc_addRightPanelButton;
 
-// check if player runs 32bit ArmA
-[{ time > 15 }, {call FUNC(check64bit);}, []] call CBA_fnc_waitUntilAndExecute;
+[] spawn {
+    // check if player runs 32bit ArmA
+    [{ time > 15 }, {call FUNC(check64bit);}, []] call CBA_fnc_waitUntilAndExecute;
+};
