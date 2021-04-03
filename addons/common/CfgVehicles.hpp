@@ -382,4 +382,10 @@ class CfgVehicles {
         icon = QPATHTOF(ui\icon_resurrect.paa);
         curatorCanAttach   = 1;
     };
+    class GVAR(moduleFixMapBug): GVAR(moduleBase) {
+        displayName        = "Fix Map Bug";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleFixMapBug);
+        curatorCanAttach   = 1;
+    };
 };

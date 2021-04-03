@@ -27,6 +27,7 @@ class CfgPatches {
             QGVAR(moduleMakeSpectator),
             QGVAR(moduleDance),
             QGVAR(moduleResurrect),
+            QGVAR(moduleFixMapBug),
 
             "keko_RifleMagItem",
             "keko_RifleMagTracerItem",

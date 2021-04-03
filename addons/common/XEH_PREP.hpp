@@ -20,6 +20,7 @@ PREP(lockDoorsDialogInit);
 PREP(moduleACEGarrison3den);
 PREP(moduleCuratorCamEars);
 PREP(moduleDance);
+PREP(moduleFixMapBug);
 PREP(moduleInitMission3den);
 PREP(moduleLightning);
 PREP(moduleLimitWounds);
