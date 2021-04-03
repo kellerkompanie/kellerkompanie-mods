@@ -1,0 +1,17 @@
+name = "Kellerkompanie"
+prefix = "keko"
+author = "Schwaggot"
+mainprefix = "x"
+files = [
+    "mod.cpp",
+    "LICENSE",
+    "README.md",
+    "logo_keko_ca.paa"
+]
+include = ["./include"]
+
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+
+[header_exts]
+version = "{{git \"id 8\"}}"
