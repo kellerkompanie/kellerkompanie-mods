@@ -17,6 +17,10 @@
             <English>Change groupname</English>
             <German>Gruppennamen ändern</German>
         </Key>
+        <Key ID="STR_keko_common_fixMapBug">
+            <English>Fix map bug</English>
+            <German>Map Bug beheben</German>
+        </Key>
         <Key ID="STR_keko_common_cancel">
             <English>Cancel</English>
             <German>Abbrechen</German>

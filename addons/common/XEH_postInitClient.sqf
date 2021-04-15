@@ -117,3 +117,19 @@ private _umi_roleplay_items = "(toLower configName _x) find 'umi_' == 0" configC
     // check if player runs 32bit ArmA
     [{ time > 15 }, {call FUNC(check64bit);}, []] call CBA_fnc_waitUntilAndExecute;
 };
+
+// add action to allow player to fix map bug
+private _fixMapBugaction = [
+    QGVAR(fixMapBug),
+    localize LSTRING(fixMapBug),
+    "",
+    { 
+        false call RR_mapStuff_fnc_mapEH;
+		{
+			detach _x; 
+			deleteVehicle _x;
+		} forEach attachedObjects player; 
+    },
+    { count attachedObjects player > 0 }
+] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions", "ACE_Equipment"], _fixMapBugaction] call ace_interact_menu_fnc_addActionToObject;
