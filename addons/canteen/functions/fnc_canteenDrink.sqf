@@ -2,7 +2,7 @@
 
 params ["_unit"];
 
-if !(_unit call FUNC(hasCanteen)) exitWith {false};
+if !(_unit call FUNC(hasNonEmptyCanteen)) exitWith {false};
 
 private _stanceIndex = ["STAND", "CROUCH", "PRONE"] find stance _unit;
 

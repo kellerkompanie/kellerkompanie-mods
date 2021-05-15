@@ -13,19 +13,11 @@ class CfgVehicles {
 
                 class GVAR(drink) {
                     displayName = CSTRING(actionDrink);
-                    condition = QUOTE(ACE_player call FUNC(hasCanteen));
+                    condition = QUOTE(ACE_player call FUNC(hasNonEmptyCanteen));
                     exceptions[] = {};
                     icon = QPATHTOF(ui\icon_canteen_action.paa);
                     statement = QUOTE(_player call FUNC(canteenDrink));
                 };
-
-                /*class GVAR(fill) {
-                    displayName = "Fill canteen";
-                    condition = QUOTE(_player call QQFUNC(hasCanteen));
-                    exceptions[] = {};
-                    icon = QPATHTOF(ui\icon_canteen_action.paa);
-                    statement = QUOTE(_player call QQFUNC(fillCanteen));
-                };*/
             };
         };
         class ACE_Actions {
@@ -33,7 +25,7 @@ class CfgVehicles {
                 class GVAR(pour) {
                     displayName = CSTRING(actionPour);
                     distance = 2.0;
-                    condition = QUOTE(ACE_player call FUNC(hasCanteen) && alive _target && !(_target call ace_common_fnc_isAwake));
+                    condition = QUOTE(ACE_player call FUNC(hasNonEmptyCanteen) && alive _target && !(_target call ace_common_fnc_isAwake));
                     statement = QUOTE([ARR_2(ACE_player, _target)] call FUNC(pourWater));
                     exceptions[] = {};
                     showDisabled = 1;

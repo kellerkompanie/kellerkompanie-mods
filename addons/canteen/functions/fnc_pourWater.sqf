@@ -2,7 +2,7 @@
 
 params ["_unit", "_target"];
 
-if (!(_unit call FUNC(hasCanteen)) || _target call ace_common_fnc_isAwake) exitWith {false};
+if (!(_unit call FUNC(hasNonEmptyCanteen)) || _target call ace_common_fnc_isAwake) exitWith {false};
 
 _unit playActionNow "Medic";
 
