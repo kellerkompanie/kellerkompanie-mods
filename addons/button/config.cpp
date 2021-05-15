@@ -47,4 +47,6 @@ class CfgMainMenuSpotlight {
     delete Tacops_Campaign_01;
     delete SP_FD14;
     delete Orange_Campaign;
+    delete AoW_Showcase_AOW;
+    delete AoW_Showcase_Future;
 };
