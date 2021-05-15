@@ -100,6 +100,65 @@ class kekoGenericMagazines {
         arifle_ARX_ghex_F = "30Rnd_65x39_caseless_green";
         arifle_ARX_hex_F = "30Rnd_65x39_caseless_green";
 
+        /* Global Mobilization Creator DLC */
+        gm_akm_wud = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_akm_pallad_wud = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_akmn_wud = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_c7a1_oli = "gm_30Rnd_556x45mm_B_M855_stanag_gry";
+        gm_c7a1_blk = "gm_30Rnd_556x45mm_B_M855_stanag_gry";
+        gm_g36a1_blk = "gm_30Rnd_556x45mm_B_DM11_g36_blk";
+        gm_g36a1_des = "gm_30Rnd_556x45mm_B_DM11_g36_des";
+        gm_g36e_blk = "gm_30Rnd_556x45mm_B_DM11_g36_blk";
+        gm_g3a3_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm95_blk = "gm_30Rnd_556x45mm_B_M855_stanag_gry";
+        gm_hmgpkm_prp = "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn";
+        gm_lmgm62_blk = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_lmgrpk74n_brn = "gm_45Rnd_545x39mm_B_7N6_ak74_org";
+        gm_lmgrpk74n_prp = "gm_45Rnd_545x39mm_B_7N6_ak74_org";
+        gm_lmgrpk_brn = "gm_75Rnd_762x39mm_B_M43_ak47_blk";
+        gm_lmgrpk_prp = "gm_75Rnd_762x39mm_B_M43_ak47_blk";
+        gm_m16a1_blk = "gm_30Rnd_556x45mm_B_M855_stanag_gry";
+        gm_m16a2_blk = "gm_30Rnd_556x45mm_B_M855_stanag_gry";
+        gm_mg3_blk = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_mg3_des = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_mp2a1_blk = "gm_32Rnd_9x19mm_B_DM51_mp2_blk";
+        gm_mpiak74n_brn = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpiak74n_prp = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpiaks74n_brn = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpiaks74n_prp = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpiaks74nk_brn = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpiaks74nk_prp = "gm_30Rnd_545x39mm_B_7N6_ak74_prp";
+        gm_mpikm72_brn = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_mpikm72_prp = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_mpikms72_brn = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_mpikms72_prp = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
+        gm_pm63_blk = "gm_15Rnd_9x18mm_B_pst_pm63_blk";
+        gm_rpk_wud = "gm_75Rnd_762x39mm_B_M43_ak47_blk";
+        gm_mp5a2_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5a3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5sd2_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5sd3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_svd_wud = "gm_10Rnd_762x54mmR_AP_7N1_svd_blk";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -874,6 +933,65 @@ class kekoGenericMagazines {
         arifle_ARX_ghex_F = "30Rnd_65x39_caseless_green";
         arifle_ARX_hex_F = "30Rnd_65x39_caseless_green";
 
+        /* Global Mobilization Creator DLC */
+        gm_akm_wud = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_akm_pallad_wud = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_akmn_wud = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_c7a1_oli = "gm_30Rnd_556x45mm_B_T_M856_stanag_gry";
+        gm_c7a1_blk = "gm_30Rnd_556x45mm_B_T_M856_stanag_gry";
+        gm_g36a1_blk = "gm_30Rnd_556x45mm_B_T_DM21_g36_blk";
+        gm_g36a1_des = "gm_30Rnd_556x45mm_B_T_DM21_g36_blk";
+        gm_g36e_blk = "gm_30Rnd_556x45mm_B_T_DM21_g36_blk";
+        gm_g3a3_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a3_dmr_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_g3a4_ebr_des = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_oli = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_blk = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm75carb_grn = "gm_20Rnd_762x51mm_B_T_DM21_g3_blk";
+        gm_gvm95_blk = "gm_30Rnd_556x45mm_B_T_M856_stanag_gry";
+        gm_hmgpkm_prp = "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn";
+        gm_lmgm62_blk = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_lmgrpk74n_brn = "gm_45Rnd_545x39mm_B_T_7T3_ak74_org";
+        gm_lmgrpk74n_prp = "gm_45Rnd_545x39mm_B_T_7T3_ak74_org";
+        gm_lmgrpk_brn = "gm_75Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_lmgrpk_prp = "gm_75Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_m16a1_blk = "gm_30Rnd_556x45mm_B_T_M856_stanag_gry";
+        gm_m16a2_blk = "gm_30Rnd_556x45mm_B_T_M856_stanag_gry";
+        gm_mg3_blk = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_mg3_des = "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn";
+        gm_mp2a1_blk = "gm_32Rnd_9x19mm_B_DM51_mp2_blk";
+        gm_mpiak74n_brn = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpiak74n_prp = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpiaks74n_brn = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpiaks74n_prp = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpiaks74nk_brn = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpiaks74nk_prp = "gm_30Rnd_545x39mm_B_T_7T3_ak74_prp";
+        gm_mpikm72_brn = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_mpikm72_prp = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_mpikms72_brn = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_mpikms72_prp = "gm_30Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_pm63_blk = "gm_15Rnd_9x18mm_B_pst_pm63_blk";
+        gm_rpk_wud = "gm_75Rnd_762x39mm_B_T_M43_ak47_blk";
+        gm_mp5a2_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5a3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5sd2_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_mp5sd3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
+        gm_svd_wud = "gm_10Rnd_762x54mmR_AP_7N1_svd_blk";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -1562,6 +1680,13 @@ class kekoGenericMagazines {
         hgun_Pistol_01_F = "10Rnd_9x21_Mag";
         hgun_P07_khk_F = "16Rnd_9x21_Mag";
 
+        /* Global Mobilization Creator DLC */
+        gm_lp1_blk = "gm_1Rnd_265mm_flare_single_wht_gc";
+        gm_p1_blk = "gm_8Rnd_9x19mm_B_DM11_p1_blk";
+        gm_p2a1_blk = "gm_1Rnd_265mm_flare_single_wht_gc";
+        gm_pm_blk = "gm_8Rnd_9x18mm_B_pst_pm_blk";
+        gm_wz78_blk = "gm_1Rnd_265mm_flare_single_wht_gc";
+
         /* After East Wind */
         MYR_pistol_heavy_1_black = "11Rnd_45ACP_Mag";
         MYR_pistol_heavy_1_black_sage = "11Rnd_45ACP_Mag";
@@ -1669,6 +1794,21 @@ class kekoGenericMagazines {
         launch_O_Titan_short_ghex_F = "Titan_AT";
         launch_B_Titan_short_tna_F = "Titan_AT";
 
+        /* Global Mobilization Creator DLC */
+        gm_fim43_oli = "gm_1Rnd_70mm_he_m585_fim43";
+        gm_m72a3_oli = "gm_1Rnd_66mm_heat_m72a3";
+        gm_p2a1_launcher_blk = "gm_1Rnd_2650mm_potato_dm11";
+        gm_pzf3_blk = "gm_1Rnd_60mm_heat_dm12_pzf3";
+        gm_pzf44_2_oli = "gm_1Rnd_44x537mm_heat_dm32_pzf44_2";
+        gm_pzf44_2_des = "gm_1Rnd_44x537mm_heat_dm32_pzf44_2";
+        gm_pzf44_2_win = "gm_1Rnd_44x537mm_heat_dm32_pzf44_2";
+        gm_pzf84_oli = "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf";
+        gm_pzf84_des = "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf";
+        gm_pzf84_win = "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf";
+        gm_rpg7_wud = "gm_1Rnd_40mm_heat_pg7vl_rpg7";
+        gm_rpg7_prp = "gm_1Rnd_40mm_heat_pg7vl_rpg7";
+        gm_9k32m_oli = "gm_1Rnd_72mm_he_9m32m" ;
+
         /* RHS AFRF */
         rhs_weap_igla = "rhs_weap_igla";
         rhs_weap_rpg7 = "rhs_rpg7_PG7VL_mag";
@@ -1721,6 +1861,11 @@ class kekoGenericMagazines {
         arifle_CTAR_GL_blk_F = "1Rnd_HE_Grenade_shell";
         arifle_CTAR_GL_ghex_F = "1Rnd_HE_Grenade_shell";
         arifle_CTAR_GL_hex_F = "1Rnd_HE_Grenade_shell";
+
+        /* Global Mobilization Creator DLC */
+        gm_akm_pallad_wud = "1Rnd_HE_Grenade_shell";
+        gm_hk69a1_blk = "1Rnd_HE_Grenade_shell";
+        gm_pallad_d_brn = "1Rnd_HE_Grenade_shell";
 
         /* After East Wind */
         NAA_arifle_Mk20_GL_alpat_ard1 = "1Rnd_HE_Grenade_shell";
