@@ -133,3 +133,19 @@ private _fixMapBugaction = [
     { count attachedObjects player > 0 }
 ] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "ACE_Equipment"], _fixMapBugaction] call ace_interact_menu_fnc_addActionToObject;
+
+
+// disable certain HUD elements, see https://community.bistudio.com/wiki/showHUD
+showHUD [
+  true, // scriptedHUD
+  true, // info
+  true, // radar
+  true, // compass
+  true, // direction
+  false, // menu
+  false, // group
+  true, // cursors
+  true, // panels
+  false, // kills
+  false  // showIcon3D
+];
