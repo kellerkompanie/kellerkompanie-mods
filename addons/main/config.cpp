@@ -32,8 +32,3 @@ class CfgMods {
         description = "Issue Tracker: https://github.com/Schwaggot/kellerkompanie-mods/issues";
     };
 };
-
-// remove BI default missions
-class CfgMissions {
-    delete MPMissions;
-};

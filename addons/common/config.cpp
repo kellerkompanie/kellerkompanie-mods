@@ -99,8 +99,8 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 
 // remove BI default missions
-class CfgMissions {
+/*class CfgMissions {
     class MPMissions {};
-};
+};*/
 
 #include "kekoGenericMagazines.hpp"
