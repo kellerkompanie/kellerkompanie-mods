@@ -159,6 +159,63 @@ class kekoGenericMagazines {
         gm_mp5sd3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
         gm_svd_wud = "gm_10Rnd_762x54mmR_AP_7N1_svd_blk";
 
+        /* Vietnam Creator DLC */
+        vn_dp28 = "vn_dp28_mag";
+        vn_izh54 = "vn_izh54_mag";
+        vn_izh54_shorty = "vn_izh54_mag";
+        vn_k50m = "vn_ppsh41_35_mag";
+        vn_m45 = "vn_m45_mag";
+        vn_m45_camo = "vn_m45_mag";
+        vn_m45_fold = "vn_m45_mag";
+        vn_m1carbine = "vn_carbine_15_mag";
+        vn_m1carbine_gl = "vn_carbine_15_mag";
+        vn_m14 = "vn_m14_mag";
+        vn_m14_camo = "vn_m14_mag";
+        vn_m16 = "vn_m16_20_mag";
+        vn_m16_camo = "vn_m16_20_mag";
+        vn_m16_xm148 = "vn_m16_20_mag";
+        vn_m1891 = "vn_m38_mag";
+        vn_m1897 = "vn_m1897_fl_mag";
+        vn_m2carbine = "vn_carbine_30_mag";
+        vn_m2carbine_gl = "vn_carbine_30_mag";
+        vn_m3carbine = "vn_carbine_30_mag";
+        vn_m38 = "vn_m38_mag";
+        vn_m3a1 = "vn_m3a1_mag";
+        vn_m40a1 = "vn_m40a1_mag";
+        vn_m40a1_camo = "vn_m40a1_mag";
+        vn_m4956 = "vn_m4956_10_mag";
+        vn_m4956_gl = "vn_m4956_10_mag";
+        vn_m60 = "vn_m60_100_mag";
+        vn_m60_shorty = "vn_m60_100_mag";
+        vn_m60_shorty_camo = "vn_m60_100_mag";
+        vn_m63a = "vn_m63a_30_mag";
+        vn_m9130 = "vn_m38_mag";
+        vn_mat49 = "vn_mat49_mag";
+        vn_mat49_f = "vn_mat49_mag";
+        vn_mat49_vc = "vn_mat49_mag";
+        vn_mc10 = "vn_mc10_mag";
+        vn_mp40 = "vn_mp40_mag";
+        vn_pk = "vn_pk_100_mag";
+        vn_pps43 = "vn_pps_mag";
+        vn_pps52 = "vn_pps_mag";
+        vn_ppsh41 = "vn_ppsh41_35_mag";
+        vn_rpd = "vn_rpd_100_mag";
+        vn_rpd_shorty_01 = "vn_rpd_100_mag";
+        vn_rpd_shorty = "vn_rpd_100_mag";
+        vn_sks = "vn_sks_mag";
+        vn_sks_gl = "vn_sks_mag";
+        vn_sten = "vn_sten_mag";
+        vn_type56 = "vn_type56_mag";
+        vn_xm177 = "vn_m16_20_mag";
+        vn_revive_weapon = "vn_m16_20_mag";
+        vn_xm177_camo = "vn_m16_20_mag";
+        vn_xm177_fg = "vn_m16_20_mag";
+        vn_xm177_short = "vn_m16_20_mag";
+        vn_xm177_stock = "vn_m16_20_mag";
+        vn_xm177_stock_camo = "vn_m16_20_mag";
+        vn_xm177_xm148 = "vn_m16_20_mag";
+        vn_xm177_xm148_camo = "vn_m16_20_mag";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -992,6 +1049,63 @@ class kekoGenericMagazines {
         gm_mp5sd3_blk = "gm_30Rnd_9x19mm_B_DM51_mp5_blk";
         gm_svd_wud = "gm_10Rnd_762x54mmR_AP_7N1_svd_blk";
 
+        /* Vietnam Creator DLC */
+        vn_dp28 = "vn_dp28_t_mag";
+        vn_izh54 = "vn_izh54_t_mag";
+        vn_izh54_shorty = "vn_izh54_t_mag";
+        vn_k50m = "vn_ppsh41_35_t_mag";
+        vn_m45 = "vn_m45_t_mag";
+        vn_m45_camo = "vn_m45_t_mag";
+        vn_m45_fold = "vn_m45_t_mag";
+        vn_m1carbine = "vn_carbine_15_t_mag";
+        vn_m1carbine_gl = "vn_carbine_15_t_mag";
+        vn_m14 = "vn_m14_t_mag";
+        vn_m14_camo = "vn_m14_t_mag";
+        vn_m16 = "vn_m16_20_t_mag";
+        vn_m16_camo = "vn_m16_20_t_mag";
+        vn_m16_xm148 = "vn_m16_20_t_mag";
+        vn_m1891 = "vn_m38_t_mag";
+        vn_m1897 = "vn_m1897_fl_t_mag";
+        vn_m2carbine = "vn_carbine_30_t_mag";
+        vn_m2carbine_gl = "vn_carbine_30_t_mag";
+        vn_m3carbine = "vn_carbine_30_t_mag";
+        vn_m38 = "vn_m38_t_mag";
+        vn_m3a1 = "vn_m3a1_t_mag";
+        vn_m40a1 = "vn_m40a1_t_mag";
+        vn_m40a1_camo = "vn_m40a1_t_mag";
+        vn_m4956 = "vn_m4956_10_t_mag";
+        vn_m4956_gl = "vn_m4956_10_t_mag";
+        vn_m60 = "vn_m60_100_t_mag";
+        vn_m60_shorty = "vn_m60_100_t_mag";
+        vn_m60_shorty_camo = "vn_m60_100_t_mag";
+        vn_m63a = "vn_m63a_30_t_mag";
+        vn_m9130 = "vn_m38_t_mag";
+        vn_mat49 = "vn_mat49_t_mag";
+        vn_mat49_f = "vn_mat49_t_mag";
+        vn_mat49_vc = "vn_mat49_t_mag";
+        vn_mc10 = "vn_mc10_t_mag";
+        vn_mp40 = "vn_mp40_t_mag";
+        vn_pk = "vn_pk_100_t_mag";
+        vn_pps43 = "vn_pps_t_mag";
+        vn_pps52 = "vn_pps_t_mag";
+        vn_ppsh41 = "vn_ppsh41_35_t_mag";
+        vn_rpd = "vn_rpd_100_t_mag";
+        vn_rpd_shorty_01 = "vn_rpd_100_t_mag";
+        vn_rpd_shorty = "vn_rpd_100_t_mag";
+        vn_sks = "vn_sks_t_mag";
+        vn_sks_gl = "vn_sks_t_mag";
+        vn_sten = "vn_sten_t_mag";
+        vn_type56 = "vn_type56_t_mag";
+        vn_xm177 = "vn_m16_20_t_mag";
+        vn_revive_weapon = "vn_m16_20_t_mag";
+        vn_xm177_camo = "vn_m16_20_t_mag";
+        vn_xm177_fg = "vn_m16_20_t_mag";
+        vn_xm177_short = "vn_m16_20_t_mag";
+        vn_xm177_stock = "vn_m16_20_t_mag";
+        vn_xm177_stock_camo = "vn_m16_20_t_mag";
+        vn_xm177_xm148 = "vn_m16_20_t_mag";
+        vn_xm177_xm148_camo = "vn_m16_20_t_mag";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -1687,6 +1801,22 @@ class kekoGenericMagazines {
         gm_pm_blk = "gm_8Rnd_9x18mm_B_pst_pm_blk";
         gm_wz78_blk = "gm_1Rnd_265mm_flare_single_wht_gc";
 
+        /* Vietnam Creator DLC */
+        vn_p38s = "vn_m10_mag";
+        vn_hd = "vn_hd_mag";
+        vn_hp = "vn_hp_mag";
+        vn_izh54_p = "vn_izh54_so_mag";
+        vn_m1895 = "vn_m1895_mag";
+        vn_m1911 = "vn_m1911_mag";
+        vn_mx991_m1911 = "vn_m1911_mag";
+        vn_m712 = "vn_m712_mag";
+        vn_mk22 = "vn_mk22_mag";
+        vn_m10 = "vn_m10_mag";
+        vn_pm = "vn_pm_mag";
+        vn_fkb1_pm = "vn_pm_mag";
+        vn_tt33 = "vn_tt33_mag";
+        vn_welrod = "vn_welrod";
+
         /* After East Wind */
         MYR_pistol_heavy_1_black = "11Rnd_45ACP_Mag";
         MYR_pistol_heavy_1_black_sage = "11Rnd_45ACP_Mag";
@@ -1809,6 +1939,14 @@ class kekoGenericMagazines {
         gm_rpg7_prp = "gm_1Rnd_40mm_heat_pg7vl_rpg7";
         gm_9k32m_oli = "gm_1Rnd_72mm_he_9m32m" ;
 
+        /* Vietnam Creator DLC */
+        vn_sa7 = "vn_sa7_mag";
+        vn_sa7b = "vn_sa7b_mag";
+        vn_rpg2 = "vn_rpg2_mag";
+        vn_rpg7 = "vn_rpg7_mag";
+        vn_m127 = "vn_m127_mag";
+        vn_m72 = "vn_m72_mag";
+
         /* RHS AFRF */
         rhs_weap_igla = "rhs_weap_igla";
         rhs_weap_rpg7 = "rhs_rpg7_PG7VL_mag";
@@ -1867,6 +2005,16 @@ class kekoGenericMagazines {
         gm_hk69a1_blk = "1Rnd_HE_Grenade_shell";
         gm_pallad_d_brn = "1Rnd_HE_Grenade_shell";
 
+        /* Vietnam Creator DLC */
+        vn_m1carbine_gl = "vn_22mm_m1a2_frag_mag";
+        vn_m16_xm148 = "vn_40mm_m406_he_mag";
+        vn_m2carbine_gl = "vn_22mm_m1a2_frag_mag";
+        vn_m4956_gl = "vn_22mm_he_mag";
+        vn_m79 = "vn_40mm_m381_he_mag";
+        vn_sks_gl = "vn_22mm_m60_frag_mag";
+        vn_xm177_xm148 = "vn_40mm_m406_he_mag";
+        vn_xm177_xm148_camo = "vn_40mm_m406_he_mag";
+        
         /* After East Wind */
         NAA_arifle_Mk20_GL_alpat_ard1 = "1Rnd_HE_Grenade_shell";
         NAA_arifle_Mk20_GL_black_F = "1Rnd_HE_Grenade_shell";

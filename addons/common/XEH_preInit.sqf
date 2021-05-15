@@ -105,7 +105,15 @@ GVAR(machineGuns) = [
     "gm_lmgrpk_prp",
     "gm_mg3_blk",
     "gm_mg3_des",
-    "gm_rpk_wud"
+    "gm_rpk_wud",
+    "vn_dp28",
+    "vn_m60",
+    "vn_m60_shorty",
+    "vn_m60_shorty_camo",
+    "vn_pk",
+    "vn_rpd",
+    "vn_rpd_shorty_01",
+    "vn_rpd_shorty"
 ];
 
 GVAR(atLaunchers) = [
@@ -151,7 +159,11 @@ GVAR(atLaunchers) = [
     "gm_pzf84_des",
     "gm_pzf84_win",
     "gm_rpg7_wud",
-    "gm_rpg7_prp"
+    "gm_rpg7_prp",
+    "vn_rpg2",
+    "vn_rpg7",
+    "vn_m127",
+    "vn_m72"
 ];
 
 GVAR(aaLaunchers) = [
@@ -167,7 +179,9 @@ GVAR(aaLaunchers) = [
     "BWA3_Fliegerfaust",
     "OPTRE_M41_SSR_G",
     "gm_fim43_oli",
-    "gm_9k32m_oli"
+    "gm_9k32m_oli",
+    "vn_sa7",
+    "vn_sa7b"
 ];
 
 ADDON = true;
