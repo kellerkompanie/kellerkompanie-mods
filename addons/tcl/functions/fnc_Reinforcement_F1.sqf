@@ -19,7 +19,7 @@ if (isNil { (_logic getVariable QGVAR(Reinforcement)) } ) then {
 	if (_group in (GVAR(Hold) select 0) ) exitWith {};
 	
 	if (floor (random 100) < 15) then {
-		[_enemy, _group] call FUNC(Sneaking_F1);
+		[_enemy, _group] call FUNC(Sneaking_F);
 	}
 	else {
 		if ( (floor (random 100) < 35) && { ( { (alive _x) } count (units _group) < { (alive _x) } count (units _enemy) ) } ) then {
@@ -37,7 +37,7 @@ else {
 	_groups pushBack _group;
 	
 	if (floor (random 100) < 15) then {
-		[_enemy, _group] call FUNC(Sneaking_F1);
+		[_enemy, _group] call FUNC(Sneaking_F);
 	};
 };
 

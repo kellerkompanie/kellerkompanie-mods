@@ -51,7 +51,7 @@ else {
 if (_group in (GVAR(Sneaking) select 0) ) then {
 	private _leader = (leader _group);
 	
-	if ( (_leader distance _logic < 100) || ( [_enemy, _group] call FUNC(Sneaking_F1) ) ) then {
+	if ( (_leader distance _logic < 100) || ( [_enemy, _group] call FUNC(Sneaking_F) ) ) then {
 		private _units = (units _group);		
 		{_x setUnitPos "AUTO"} count _units;		
 		DELETE_AT(GVAR(Sneaking), 0, _group);		

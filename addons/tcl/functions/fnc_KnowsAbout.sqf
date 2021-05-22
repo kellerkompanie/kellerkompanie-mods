@@ -23,7 +23,7 @@
 						_time = (_group getVariable QGVAR(Watch));
 						
 						if (time > _time) then {
-							[_group] spawn FUNC(Watch_F1);
+							[_group] spawn FUNC(Watch_F);
 						};
 						
 						_random = (random 15);					
@@ -36,8 +36,8 @@
 				
 				if (_group in (GVAR(Location) select 0) ) then {
 					_array = (_group getVariable QGVAR(Location));				
-					DELETE_AT(GVAR(Location), 0, _group);				
-					_array deleteAt (_array find _group);				
+					DELETE_AT(GVAR(Location), 0, _group);
+					_array deleteAt (_array find _group);			
 					{
 						_delete = (_x getVariable QGVAR(Location)); 
 						_delete deleteAt (_delete find _group) 

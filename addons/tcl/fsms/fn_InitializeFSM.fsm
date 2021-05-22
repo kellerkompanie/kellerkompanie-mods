@@ -174,7 +174,7 @@ class FSM
                          "	" \n
                          "	keko_tcl_Vehicles = [ [], [] ];" \n
                          "	" \n
-                         "	[vehicles] call keko_tcl_fnc_Vehicles_F1;" \n
+                         "	[vehicles] call keko_tcl_fnc_Vehicles_F;" \n
                          "	" \n
                          "	if (keko_tcl_System select 7) then" \n
                          "	{" \n
@@ -393,7 +393,7 @@ class FSM
                          "	" \n
                          "	call keko_tcl_fnc_EH_Respawn_F;" \n
                          "	" \n
-                         "	player addEventHandler [""Killed"", {_this call keko_tcl_fnc_EH_Respawn_F1 } ];" \n
+                         "	player addEventHandler [""Killed"", {_this call keko_tcl_fnc_EH_Respawn_F } ];" \n
                          "};" \n
                          "" \n
                          "private _curators = allCurators;" \n
