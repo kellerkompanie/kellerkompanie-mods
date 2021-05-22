@@ -4,11 +4,11 @@ class CfgFunctions {
 		class FSM {
 			file = "x\keko\addons\tcl\fsms";
 			
-			class keko_tcl_Initialize {
+			class InitializeFSM {
 				ext = ".fsm";
 			};
 			
-			class keko_tcl_System {
+			class SystemFSM {
 				ext = ".fsm";
 			};			
 		};

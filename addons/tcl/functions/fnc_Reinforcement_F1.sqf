@@ -68,6 +68,8 @@ if (GVAR(Feature) select 19) then {
 
 private _time = _ai select 10;
 _group setVariable [QGVAR(Time), (time + _time) ];
-[_enemy, _group, _logic] execFSM QPATHTOF(GVAR(System.fsm));
+
+// [_enemy, _group, _logic] execFSM QPATHTOF(GVAR(System.fsm));
+[_enemy, _group, _logic] spawn FUNC(SystemFSM);
 
 True

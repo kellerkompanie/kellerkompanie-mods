@@ -33,6 +33,7 @@ if !(is3DEN) then {
 			};
 		};
 				
-		execFSM QPATHTOF(GVAR(Initialize.fsm));
+		// execFSM QPATHTOF(GVAR(Initialize.fsm));
+		[] spawn FUNC(InitializeFSM);
 	};
 };
