@@ -6,6 +6,15 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+[
+    QGVAR(Enabled), // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+    "CHECKBOX", // setting type
+    ["TCL enabled", "Enable or disable TCL for AI"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+    localize LSTRING(cbaSettingsCategory), // category
+    false, // default setting
+    true // global - synchronized accross all clients and server
+] call CBA_fnc_addSetting;
+
 GVAR(AI) = [		
 	// 0 - 2 ( Reinforcement )
 	1,
@@ -248,43 +257,6 @@ GVAR(Tweak) = [
 	// 3 ( Push Factor )
 	1
 ];
-
-if !(is3DEN) then {
-	if (isNil QGVAR(Preprocess)) then {
-		GVAR(Server) = False;	
-		GVAR(Database) = False;	
-		GVAR(Preprocess) = True;	
-		GVAR(Initialize) = False;
-		
-		if (isServer) then {
-			GVAR(Server) = True;
-		};
-		
-		GVAR(Headless) = False;	
-		GVAR(Dedicated) = False;	
-		GVAR(Multiplayer) = False;
-		
-		if (isMultiplayer) then	{
-			GVAR(Interface) = False;		
-			GVAR(Multiplayer) = True;
-			
-			if (isDedicated) then {
-				GVAR(Dedicated) = True;
-			};
-			
-			if (hasInterface) then {
-				GVAR(Interface) = True;
-			};
-			
-			if ( (!isDedicated) && (!hasInterface)) then {
-				GVAR(Headless) = True;		
-				GVAR(Dedicated) = True;
-			};
-		};
-				
-		execFSM QPATHTOF(TCL_Initialize.fsm);
-	};
-};
 
 
 ADDON = true;

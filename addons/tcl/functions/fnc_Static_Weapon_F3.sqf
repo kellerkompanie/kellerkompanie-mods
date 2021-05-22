@@ -5,8 +5,8 @@ params ["_unit","_group","_logic","_vehicle"];
 _unit assignAsGunner _vehicle;
 _unit doMove (getPos _vehicle);
 
-(GVAR(Static_Weapon select 0) pushBack _unit;
-(GVAR(Static_Weapon select 1) pushBack _vehicle;
+(GVAR(Static_Weapon) select 0) pushBack _unit;
+(GVAR(Static_Weapon) select 1) pushBack _vehicle;
 
 [_unit] orderGetIn True; [_unit] allowGetIn True;
 

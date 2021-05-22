@@ -25,8 +25,8 @@ if (_knowsAbout > 0) then {
 		};
 		
 		private _units = (units _group);		
-		private _range = GVAR(Tweak) select 1);		
-		private _random = GVAR(Tweak) select 2);
+		private _range = GVAR(Tweak) select 1;		
+		private _random = GVAR(Tweak) select 2;
 		
 		if (_leader distance _logic < _range) then {
 			if (combatmode _group isEqualTo "RED") then	{

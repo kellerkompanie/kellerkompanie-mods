@@ -91,6 +91,7 @@ PREP(House_Search_F2);
 PREP(House_Search_F3);
 PREP(House_Search_F4);
 PREP(Impact_FX_F);
+PREP(Initialize);
 PREP(Join_F1);
 PREP(Join_F2);
 PREP(Knowledge_F);

@@ -62,10 +62,10 @@ if (_unit == gunner _vehicle) then {
 	[_unit] allowGetIn False;
 };
 
-DELETE_AT(GVAR(Static_Weapon,0,_unit);
+DELETE_AT(GVAR(Static_Weapon),0,_unit);
 
 sleep 10 + (random 30);
 
-DELETE_AT(GVAR(Static_Weapon,1,_vehicle);
+DELETE_AT(GVAR(Static_Weapon),1,_vehicle);
 	
 	

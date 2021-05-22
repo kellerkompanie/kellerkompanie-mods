@@ -19,7 +19,7 @@ if (_unit in _array) exitWith {
 private ["_group","_color","_vehicle","_displayName","_unitType","_groupType","_array","_enemy","_string"];
 
 while { alive _unit } do {
-	if ( visibleMap || (GVAR(Multiplayer) ) then {
+	if ( visibleMap || GVAR(Multiplayer) ) then {
 		_group = (group _unit);
 		
 		if (leader _unit in _array) exitWith {
@@ -35,119 +35,118 @@ while { alive _unit } do {
 		
 		_color = "colorYellow";
 		
-		if (True) then {
-			_unitType = "I.D.L.E.";
+		
+		_unitType = "I.D.L.E.";
+		
+		if (fleeing _unit) exitWith {
+			_unitType = "Fleeing"; _color = "colorWhite";
+		};
+		
+		if (captive _unit) exitWith {
+			_unitType = "Captive"; _color = "colorWhite";
+		};
+		
+		if (side _unit == CIVILIAN) exitWith {
+			_unitType = "Civilian"; _color = "colorWhite";
+		};
+		
+		if (_group in (GVAR(Artillery) select 0) ) exitWith {
+			_unitType = "Artillery"; _color = "colorGreen";
+		};
+		
+		if (_unit in (GVAR(Heal) select 0) ) exitWith {
+			_unitType = "( Heal )"; _color = "colorGreen";
+		};
+		
+		if (_unit in (GVAR(Rearm) select 0) ) exitWith {
+			_unitType = "( Rearm )"; _color = "colorGreen";
+		};
+		
+		if (_unit in (GVAR(Static_Weapon) select 0) ) exitWith {
+			_unitType = "( Static Weapon )"; _color = "colorGreen";
+		};
+		
+		if (_unit in (GVAR(House_Search) select 0) ) exitWith {
+			_unitType = "( House Search )"; _color = "colorGreen";
+		};
+		
+		if (_group in (GVAR(Suppressed) select 0) ) exitWith {
+			_unitType = "( Suppressed )"; _color = "colorGreen";
+		};
+		
+		if (_unit in (GVAR(Take_Cover) select 0) ) exitWith {
+			_unitType = "( Take Cover )"; _color = "colorGreen";
 			
-			if (fleeing _unit) exitWith {
-				_unitType = "Fleeing"; _color = "colorWhite";
+			if (_unit in (GVAR(Flanking) select 1) ) exitWith {
+				_unitType = "( Flanking )"; _color = "colorGreen";
 			};
 			
-			if (captive _unit) exitWith {
-				_unitType = "Captive"; _color = "colorWhite";
-			};
-			
-			if (side _unit == CIVILIAN) exitWith {
-				_unitType = "Civilian"; _color = "colorWhite";
-			};
-			
-			if (_group in (GVAR(Artillery) select 0) ) exitWith {
-				_unitType = "Artillery"; _color = "colorGreen";
-			};
-			
-			if (_unit in (GVAR(Heal) select 0) ) exitWith {
-				_unitType = "( Heal )"; _color = "colorGreen";
-			};
-			
-			if (_unit in (GVAR(Rearm) select 0) ) exitWith {
-				_unitType = "( Rearm )"; _color = "colorGreen";
-			};
-			
-			if (_unit in (GVAR(Static_Weapon) select 0) ) exitWith {
-				_unitType = "( Static Weapon )"; _color = "colorGreen";
-			};
-			
-			if (_unit in (GVAR(House_Search) select 0) ) exitWith {
-				_unitType = "( House Search )"; _color = "colorGreen";
-			};
-			
-			if (_group in (GVAR(Suppressed) select 0) ) exitWith {
-				_unitType = "( Suppressed )"; _color = "colorGreen";
-			};
-			
-			if (_unit in (GVAR(Take_Cover) select 0) ) exitWith {
-				_unitType = "( Take Cover )"; _color = "colorGreen";
-				
-				if (_unit in (GVAR(Flanking) select 1) ) exitWith {
-					_unitType = "( Flanking )"; _color = "colorGreen";
-				};
-				
-				if (_unit in (GVAR(Flanking) select 2) ) exitWith {
-					_unitType = "( Flanking )"; _color = "colorBlue";
-				};
-			};
-			
-			if (_unit in (GVAR(Regroup) select 0) ) exitWith {
-				_unitType = "( Regroup )"; _color = "ColorBlue";
-			};
-			
-			if (_group in (GVAR(Advancing) select 0) ) exitWith {
-				_unitType = "Advancing";
-			};
-			
-			if (_group in (GVAR(Zeus) select 1) ) exitWith {
-				_unitType = "Zeus";
-			};
-			
-			if (_group in (GVAR(Behaviour) select 0) ) exitWith {
-				_unitType = "Behaviour";
-			};
-			
-			if (_group in (GVAR(Waiting) select 0) ) exitWith {
-				_unitType = "Waiting";
-			};
-			
-			if (_group in (GVAR(Sneaking) select 0) ) exitWith {
-				_unitType = "Sneaking";
-			};
-			
-			if (_group in (GVAR(Join) select 0) ) exitWith {
-				_unitType = "Joined";
-			};
-			
-			if (_group in (GVAR(Enhanced) select 0) ) exitWith {
-				_unitType = "Enhanced";
-			};
-			
-			if (_group in (GVAR(Freeze) select 0) ) exitWith {
-				_unitType = "Freeze";
-			};
-			
-			if (_group in (GVAR(Default) select 0) ) exitWith {
-				_unitType = "Default";
-			};
-			
-			if (_group in (GVAR(Reinforcement) select 1) ) exitWith {
-				_unitType = "Reinforcement";
-			};
-			
-			if (_group in (GVAR(Reinforcement) select 0) ) exitWith {
-				if (_group in (GVAR(Request) select 0) ) then {
-					_unitType = "Request";
-				}
-				else {
-					_unitType = "Requested";
-				};
-			};
-			
-			if (_unit in (GVAR(Watch) select 0) ) exitWith {
-				_unitType = "( Watch )"; _color = "colorGreen";
-			};
-			
-			if (_group in (GVAR(Garrison) select 0) ) exitWith {
-				_unitType = "Garrison";
+			if (_unit in (GVAR(Flanking) select 2) ) exitWith {
+				_unitType = "( Flanking )"; _color = "colorBlue";
 			};
 		};
 		
+		if (_unit in (GVAR(Regroup) select 0) ) exitWith {
+			_unitType = "( Regroup )"; _color = "ColorBlue";
+		};
+		
+		if (_group in (GVAR(Advancing) select 0) ) exitWith {
+			_unitType = "Advancing";
+		};
+		
+		if (_group in (GVAR(Zeus) select 1) ) exitWith {
+			_unitType = "Zeus";
+		};
+		
+		if (_group in (GVAR(Behaviour) select 0) ) exitWith {
+			_unitType = "Behaviour";
+		};
+		
+		if (_group in (GVAR(Waiting) select 0) ) exitWith {
+			_unitType = "Waiting";
+		};
+		
+		if (_group in (GVAR(Sneaking) select 0) ) exitWith {
+			_unitType = "Sneaking";
+		};
+		
+		if (_group in (GVAR(Join) select 0) ) exitWith {
+			_unitType = "Joined";
+		};
+		
+		if (_group in (GVAR(Enhanced) select 0) ) exitWith {
+			_unitType = "Enhanced";
+		};
+		
+		if (_group in (GVAR(Freeze) select 0) ) exitWith {
+			_unitType = "Freeze";
+		};
+		
+		if (_group in (GVAR(Default) select 0) ) exitWith {
+			_unitType = "Default";
+		};
+		
+		if (_group in (GVAR(Reinforcement) select 1) ) exitWith {
+			_unitType = "Reinforcement";
+		};
+		
+		if (_group in (GVAR(Reinforcement) select 0) ) exitWith {
+			if (_group in (GVAR(Request) select 0) ) then {
+				_unitType = "Request";
+			}
+			else {
+				_unitType = "Requested";
+			};
+		};
+		
+		if (_unit in (GVAR(Watch) select 0) ) exitWith {
+			_unitType = "( Watch )"; _color = "colorGreen";
+		};
+		
+		if (_group in (GVAR(Garrison) select 0) ) exitWith {
+			_unitType = "Garrison";
+		};
+				
 		_groupType = "Combat";
 		
 		if (_group in (GVAR(Location) select 0) ) exitWith {

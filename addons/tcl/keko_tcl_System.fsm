@@ -44,7 +44,7 @@ window[] = {2,-1,-1,-32000,-32030,944,225,1185,225,3,869};
 *//*%FSM</HEAD>*/
 class FSM
 {
-        fsmName = "TCL_System";
+        fsmName = "keko_tcl_System";
         class States
         {
                 /*%FSM<STATE "Initialize">*/
