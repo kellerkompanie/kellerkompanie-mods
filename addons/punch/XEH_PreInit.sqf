@@ -60,7 +60,9 @@ PREP_RECOMPILE_END;
 ] call cba_settings_fnc_init;
 
 
-#include "\a3\editor_f\Data\Scripts\dikCodes.h";
+// #include "\a3\editor_f\Data\Scripts\dikCodes.h";
+#define DIK_HOME            0xC7    /* Home on arrow keypad */
+#define DIK_END             0xCF    /* End on arrow keypad */
 
 ["Kellerkompanie", "keko_punch", "Punch", {[player] call FUNC(punchTarget)}, {}, [DIK_HOME, [false,false,false]]] call cba_fnc_addKeybind;
 ["Kellerkompanie", "keko_kill", "Snap neck", {[player] call FUNC(killTarget)}, {}, [DIK_END, [false,false,false]]] call cba_fnc_addKeybind;
