@@ -1,4 +1,4 @@
-#include "\x\keko\addons\suppress\script_component.hpp"
+#include "\x\keko\addons\tcl\script_component.hpp"
 
 #define DELETE_AT(_array, _index, _object) (_array select _index) deleteAt ( (_array select _index) find _object)
 
