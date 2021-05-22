@@ -86,7 +86,7 @@ class FSM
                          "" \n
                          "keko_tcl_EH_Fired = [ [] ];" \n
                          "" \n
-                         "spawn keko_tcl_fnc_EH_Fired;"/*%FSM</STATEINIT""">*/;
+                         "call keko_tcl_fnc_EH_Fired;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -135,14 +135,14 @@ class FSM
                          "{" \n                         
                          "	if (keko_tcl_Debug select 0) then" \n
                          "	{" \n
-                         "		[""TypeX"", ""Initialize""] spawn (keko_tcl_Debug_F select 0);" \n
+                         "		[""TypeX"", ""Initialize""] call keko_tcl_fnc_Debug_F1;" \n
                          "	};" \n
                          "	" \n
                          "	keko_tcl_Database = True;" \n
                          "	" \n
                          "	keko_tcl_Players = [ [], [], [] ];" \n
                          "	" \n
-                         "	[ (playableUnits + switchableUnits) ] call keko_tcl_fnc_Players_F1;" \n
+                         "	[ (playableUnits + switchableUnits) ] call keko_tcl_fnc_Players_F;" \n
                          "	" \n
                          "	keko_tcl_Idle = [ [] ];" \n
                          "	" \n
@@ -178,7 +178,7 @@ class FSM
                          "	" \n
                          "	if (keko_tcl_System select 7) then" \n
                          "	{" \n
-                         "		spawn keko_tcl_fnc_Spawn;" \n
+                         "		call keko_tcl_fnc_Spawn;" \n
                          "	};" \n
                          "	" \n
                          "	keko_tcl_Logic = [ [] ];" \n
@@ -235,19 +235,19 @@ class FSM
                          "	" \n
                          "	keko_tcl_House_Search = [ [], [] ];" \n
                          "	" \n
-                         "	spawn keko_tcl_fnc_KnowsAbout;" \n
+                         "	call keko_tcl_fnc_KnowsAbout;" \n
                          "	" \n
                          "	if (keko_tcl_Debug select 4) then" \n
                          "	{" \n
-                         "		[""TypeX"", ""Cursor""] spawn keko_tcl_fnc_Debug_F2;" \n
+                         "		[""TypeX"", ""Cursor""] call keko_tcl_fnc_Debug_F2;" \n
                          "	};" \n
                          "	" \n
                          "	if (keko_tcl_Debug select 5) then" \n
                          "	{" \n
-                         "		[""TypeX"", ""Mission""] spawn keko_tcl_fnc_Debug_F3;" \n
+                         "		[""TypeX"", ""Mission""] call keko_tcl_fnc_Debug_F3;" \n
                          "	};" \n
                          "	" \n
-                         "	spawn keko_tcl_fnc_Monitor;" \n
+                         "	call keko_tcl_fnc_Monitor;" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -340,12 +340,12 @@ class FSM
                          "		};" \n
                          "		if (keko_tcl_FX select 4) then" \n
                          "		{" \n
-                         "			spawn keko_tcl_fnc_Church;" \n
+                         "			call keko_tcl_fnc_Church;" \n
                          "		};" \n
                          "		" \n
                          "		if (keko_tcl_FX select 5) then" \n
                          "		{" \n
-                         "			spawn keko_tcl_fnc_Lighthouse;" \n
+                         "			call keko_tcl_fnc_Lighthouse;" \n
                          "		};" \n
                          "	}" \n
                          "	else" \n
@@ -393,7 +393,7 @@ class FSM
                          "	" \n
                          "	call keko_tcl_fnc_EH_Respawn_F;" \n
                          "	" \n
-                         "	player addEventHandler [""Killed"", {_this spawn keko_tcl_fnc_EH_Respawn_F1 } ];" \n
+                         "	player addEventHandler [""Killed"", {_this call keko_tcl_fnc_EH_Respawn_F1 } ];" \n
                          "};" \n
                          "" \n
                          "private _curators = allCurators;" \n
@@ -402,7 +402,7 @@ class FSM
                          "" \n
                          "keko_tcl_Curator = [ [] ];" \n
                          "" \n
-                         "[_curators] spawn keko_tcl_fnc_Zeus;"/*%FSM</STATEINIT""">*/;
+                         "[_curators] call keko_tcl_fnc_Zeus;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

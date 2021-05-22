@@ -85,7 +85,7 @@ class FSM
                          "" \n
                          "_knowledge = (_group getVariable ""keko_tcl_AI"" select 0);" \n
                          "" \n
-                         "[_enemy, _group, _logic] spawn keko_tcl_fnc_Unassign_F1;" \n
+                         "[_enemy, _group, _logic] call keko_tcl_fnc_Unassign_F1;" \n
                          "" \n
                          "_radio = False;" \n
                          "" \n
@@ -349,7 +349,7 @@ class FSM
                          "		" \n
                          "		// if (leader _group distance _waypoint > 300) then" \n
                          "		// {" \n
-                         "				[_enemy, _group, _logic, _waypoint] spawn keko_tcl_fnc_Behaviour_F2;" \n
+                         "				[_enemy, _group, _logic, _waypoint] call keko_tcl_fnc_Behaviour_F2;" \n
                          "		// };" \n
                          "	};" \n
                          "};" \n
@@ -443,7 +443,7 @@ class FSM
                 {
                         name = "Remount";
                         itemno = 15;
-                        init = /*%FSM<STATEINIT""">*/"[_group] spawn keko_tcl_fnc_Remount_F1;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[_group] call keko_tcl_fnc_Remount_F1;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

@@ -42,7 +42,7 @@ _array = _array select { (side _x in (GVAR(System) select 2) ) };
 { 
 	[_x] call FUNC(Get_In_F1); 
 	[_x] call FUNC(Groups_F8); 
-	[units _x] call FUNC(Units_F1); 
+	[units _x] call FUNC(Units_F); 
 	[_x] spawn FUNC(Garrison_F1) 
 } forEach _array;
 

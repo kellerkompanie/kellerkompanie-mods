@@ -16,7 +16,7 @@ while { True } do {
 	
 	if (_players isEqualTo [] ) exitWith {};
 	
-	[_players] call FUNC(Players_F1);
+	[_players] call FUNC(Players_F);
 		
 	
 	_groups	= allGroups;
