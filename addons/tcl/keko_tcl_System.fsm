@@ -1,0 +1,483 @@
+/*%FSM<COMPILE "G:\ArmA\ArmA3\Tools\FSMEditor\scriptedFSM.cfg, keko_tcl_System">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Initialize",0,250,100.000000,-150.000000,200.000000,-100.000000,0.000000,"Initialize"};
+item1[] = {"Always",8,218,100.000000,-50.000000,200.000000,0.000000,0.000000,"Always"};
+item2[] = {"Regroup",2,250,100.000000,50.000000,200.000000,100.000000,0.000000,"Regroup"};
+item3[] = {"Alive",4,218,100.000000,150.000000,200.000000,200.000000,1.000000,"Alive"};
+item4[] = {"Enemy",2,250,100.000000,250.000000,200.000000,300.000000,0.000000,"Enemy"};
+item5[] = {"Lock",4,218,-50.000000,350.000000,50.000000,400.000000,1.000000,"Lock"};
+item6[] = {"Feature",2,4346,-48.035065,444.105225,51.964935,494.105225,0.000000,"Feature"};
+item7[] = {"Always",8,218,-50.000000,550.000000,50.000000,600.000000,0.000000,"Always"};
+item8[] = {"Move",2,250,-200.000000,550.000000,-100.000000,600.000000,0.000000,"Move"};
+item9[] = {"Always",8,218,-200.000000,450.000000,-100.000000,500.000000,0.000000,"Always"};
+item10[] = {"Always",8,218,-50.000000,250.000000,50.000000,300.000000,0.000000,"Always"};
+item11[] = {"Request",2,250,-200.000000,250.000000,-100.000000,300.000000,0.000000,"Request"};
+item12[] = {"Time",4,218,-200.000000,50.000000,-100.000000,100.000000,0.000000,"Time"};
+item13[] = {"Always",8,218,250.000000,50.000000,350.000000,100.000000,0.000000,"Always"};
+item14[] = {"Time",4,218,100.000000,350.000000,200.000000,400.000000,2.000000,"Time"};
+item15[] = {"Remount",2,250,100.000000,450.000000,200.000000,500.000000,0.000000,"Remount"};
+item16[] = {"Always",8,218,250.000000,450.000000,350.000000,500.000000,0.000000,"Always"};
+item17[] = {"End",1,250,250.000000,250.000000,350.000000,300.000000,0.000000,"End"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,13};
+link4[] = {3,4};
+link5[] = {4,5};
+link6[] = {4,10};
+link7[] = {4,14};
+link8[] = {5,6};
+link9[] = {6,7};
+link10[] = {7,8};
+link11[] = {8,9};
+link12[] = {9,11};
+link13[] = {10,11};
+link14[] = {11,12};
+link15[] = {12,2};
+link16[] = {13,17};
+link17[] = {14,15};
+link18[] = {15,16};
+link19[] = {16,17};
+globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-343.852997,492.227051,672.140503,-207.168152,851,895,1};
+window[] = {2,-1,-1,-32000,-32030,944,225,1185,225,3,869};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "TCL_System";
+        class States
+        {
+                /*%FSM<STATE "Initialize">*/
+                class Initialize
+                {
+                        name = "Initialize";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"" \n                         
+                         "private [""_enemy"",""_group"",""_logic"",""_key"",""_time"",""_array"",""_knowsAbout"",""_lock"",""_knowledge"",""_radio"",""_move"",""_request"",""_sleep"",""_spot"",""_units"",""_count"",""_random"",""_bool"",""_waypoint""];" \n
+                         "" \n
+                         "_enemy = _this select 0;" \n
+                         "_group = _this select 1;" \n
+                         "_logic = _this select 2;" \n
+                         "" \n
+                         "_key = 5;" \n
+                         "" \n
+                         "_time = 0;" \n
+                         "" \n
+                         "_array = [];" \n
+                         "" \n
+                         "_knowsAbout = 0;" \n
+                         "" \n
+                         "_group lockWP True;" \n
+                         "" \n
+                         "_lock = [1, 3, 5, 7];" \n
+                         "" \n
+                         "_leader = (leader _group);" \n
+                         "" \n
+                         "_position = (getPos _logic);" \n
+                         "" \n
+                         "_group setVariable [""keko_tcl_KnowsAbout"", 0];" \n
+                         "" \n
+                         "_group setVariable [""keko_tcl_Logic"", _logic];" \n
+                         "" \n
+                         "[_group] call keko_tcl_fnc_Behaviour_F1;" \n
+                         "" \n
+                         "_group setVariable [""keko_tcl_Waypoint"", _position];" \n
+                         "" \n
+                         "_knowledge = (_group getVariable ""keko_tcl_AI"" select 0);" \n
+                         "" \n
+                         "[_enemy, _group, _logic] spawn keko_tcl_fnc_Unassign_F1;" \n
+                         "" \n
+                         "_radio = False;" \n
+                         "" \n
+                         "if (keko_tcl_Radio select 0) then" \n
+                         "{" \n
+                         "	_radio = True;" \n
+                         "};" \n
+                         "" \n
+                         "_move = True;" \n
+                         "" \n
+                         "if (_group in (keko_tcl_Freeze select 0) ) then" \n
+                         "{" \n
+                         "	_move = False;" \n
+                         "}" \n
+                         "else" \n
+                         "{" \n
+                         "	if (_group getVariable ""keko_tcl_AI"" select 7) then" \n
+                         "	{" \n
+                         "		_move = False;" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "_request = True;" \n
+                         "" \n
+                         "if (_move) then" \n
+                         "{" \n
+                         "	if (_group in (keko_tcl_Default select 0) ) then" \n
+                         "	{" \n
+                         "		_request = False;" \n
+                         "	}" \n
+                         "	else" \n
+                         "	{" \n
+                         "		if (_group getVariable ""keko_tcl_AI"" select 8) then" \n
+                         "		{" \n
+                         "			_request = False;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "if (_request) then" \n
+                         "{" \n
+                         "	_sleep = 0;" \n
+                         "};" \n
+                         "" \n
+                         "_spot = objNull;" \n
+                         "" \n
+                         "if (keko_tcl_Debug select 6) then" \n
+                         "{" \n
+                         "	_spot = createVehicle [""Sign_Arrow_Large_Pink_F"", _position, [], 0, ""CAN_COLLIDE""];" \n
+                         "};" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > %1 > %2 > %3"", _radio, _move, _request];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Regroup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Regroup">*/
+                class Regroup
+                {
+                        name = "Regroup";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_units = (units _group);" \n
+                         "" \n
+                         "_units = _units select { ( (alive _x) && { (isNull objectParent _x) } ) };" \n
+                         "" \n
+                         "if (_key == 3) then" \n
+                         "{	" \n
+                         "	if ( (alive _enemy) && { (_knowsAbout > 0) } ) then" \n
+                         "	{" \n
+                         "		_count = (count _units);" \n
+                         "		" \n
+                         "		if (_count > 0) then" \n
+                         "		{" \n
+                         "			_random = 5;" \n
+                         "			" \n
+                         "			_random = (_random / _count);" \n
+                         "			" \n
+                         "			if (floor (random 100) < _random) then" \n
+                         "			{" \n
+                         "				[_group, _logic, _count] call keko_tcl_fnc_Regroup_F1;" \n
+                         "			};" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Alive">*/
+                                class Alive
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Enemy";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(units _group) findIf { (alive _x) } > -1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Enemy">*/
+                class Enemy
+                {
+                        name = "Enemy";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_enemy = [_enemy, _group] call keko_tcl_fnc_Enemy_F1;" \n
+                         "" \n
+                         "_group setVariable [""keko_tcl_Enemy"", _enemy];" \n
+                         "" \n
+                         "[_enemy, _group, _logic]  call keko_tcl_fnc_Enemy_F2;" \n
+                         "" \n
+                         "_knowsAbout = (_group knowsAbout vehicle _enemy);" \n
+                         "" \n
+                         "if (_knowsAbout > 0) then" \n
+                         "{" \n
+                         "	if (alive _enemy) then" \n
+                         "	{" \n
+                         "		_logic setPos (getPos _enemy);" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > Enemy > %1 > %2"", _enemy, _group];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Time">*/
+                                class Time
+                                {
+                                        itemno = 14;
+                                        priority = 2.000000;
+                                        to="Remount";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"( (time > (_logic getVariable ""keko_tcl_Time"") ) || (_group in (keko_tcl_Retreat select 0) ) )"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Lock">*/
+                                class Lock
+                                {
+                                        itemno = 5;
+                                        priority = 1.000000;
+                                        to="Feature";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_key in _lock)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="Request";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Feature">*/
+                class Feature
+                {
+                        name = "Feature";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"if (_knowsAbout > 0) then" \n
+                         "{" \n
+                         "	[_enemy, _group, _logic] call keko_tcl_fnc_Reveal_F2;" \n
+                         "	" \n
+                         "	if (_key == 5) then" \n
+                         "	{" \n
+                         "		if (floor (random 100) < 15) then" \n
+                         "		{" \n
+                         "			[_group] call keko_tcl_fnc_Flanking_F4;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "_array = [];" \n
+                         "" \n
+                         "if (_key == 5) then" \n
+                         "{" \n
+                         "	// _array = [];" \n
+                         "	" \n
+                         "	[_group, _units] call keko_tcl_fnc_Feature_F1;" \n
+                         "};" \n
+                         "" \n
+                         "// [_enemy, _group, _logic, _units] call keko_tcl_fnc_Tank_F1;" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > %1 > %2"", _group, _array];" \n
+                         "" \n
+                         "_array = [_enemy, _group, _logic, _array, _knowsAbout] call keko_tcl_fnc_Feature_F2;" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > %1 > %2 > %3 > %4 > %5"", _group, (behaviour leader _group), (combatMode _group), round time, _key];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Move";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Move">*/
+                class Move
+                {
+                        name = "Move";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"if (_group in (keko_tcl_Zeus select 1) ) exitWith {};" \n
+                         "" \n
+                         "if (_move) then" \n
+                         "{" \n
+                         "	_waypoint = (_group getVariable ""keko_tcl_Waypoint"");" \n
+                         "	" \n
+                         "	// if (_key == 5) then" \n
+                         "	" \n
+                         "	if ( (_key == 3) || (_key == 5) ) then" \n
+                         "	{" \n
+                         "		// player sideChat format [""keko_tcl_System > %1 > %2"", _group, _key];" \n
+                         "		" \n
+                         "		[_enemy, _group, _logic, _array, _spot, _waypoint] call keko_tcl_fnc_Move_F1;" \n
+                         "	};" \n
+                         "	" \n
+                         "	if (_group in (keko_tcl_Reinforcement select 2) ) then" \n
+                         "	{" \n
+                         "		if (_group in (keko_tcl_Behaviour select 0) ) exitWith {};" \n
+                         "		" \n
+                         "		// if (leader _group distance _waypoint > 300) then" \n
+                         "		// {" \n
+                         "				[_enemy, _group, _logic, _waypoint] spawn keko_tcl_fnc_Behaviour_F2;" \n
+                         "		// };" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "if (_key == 5) then" \n
+                         "{" \n
+                         "	_key = -1;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Request";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Request">*/
+                class Request
+                {
+                        name = "Request";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_key = _key + 1;" \n
+                         "" \n
+                         "_time = (time + 5);" \n
+                         "" \n
+                         "if (_knowsAbout > _knowledge) then" \n
+                         "{" \n
+                         "	if (_request) then" \n
+                         "	{" \n
+                         "		_bool = True;" \n
+                         "		" \n
+                         "		if (_radio) then" \n
+                         "		{" \n
+                         "			_bool = False;" \n
+                         "			" \n
+                         "			if (units _group findIf { ( (alive _x) && ( (""ItemRadio"" in items _x) || (""ItemRadio"" in assigneditems _x) ) ) } > -1) then {_bool = True};" \n
+                         "			" \n
+                         "			// player sideChat format [""keko_tcl_System > Radio > %1 > %2"", _group, _bool];" \n
+                         "		};" \n
+                         "		" \n
+                         "		if (_bool) then" \n
+                         "		{" \n
+                         "			if (_sleep == 0) then" \n
+                         "			{" \n
+                         "				_sleep = [_enemy, _group, _logic] call keko_tcl_fnc_KnowsAbout_F4;" \n
+                         "			};" \n
+                         "			" \n
+                         "			if (time > _sleep) then" \n
+                         "			{" \n
+                         "				[_enemy, _group, _logic] call keko_tcl_fnc_Reinforcement_F2;" \n
+                         "				" \n
+                         "				_sleep = 0;" \n
+                         "			};" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > Key > %1"", _key];" \n
+                         "" \n
+                         "{ [_x, _enemy, _group, _logic] call keko_tcl_fnc_Marker_F1 } count [""keko_tcl_Spot"",""keko_tcl_Enemy"",""keko_tcl_KnowsAbout""];" \n
+                         "" \n
+                         "// player sideChat format [""keko_tcl_System > %1 > %2 > %3 > %4 > %5 > %6"", _group, (behaviour leader _group), (combatMode _group), round time, _key, round (leader _group distance _waypoint) ];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Time">*/
+                                class Time
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Regroup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time > _time)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Remount">*/
+                class Remount
+                {
+                        name = "Remount";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"[_group] spawn keko_tcl_fnc_Remount_F1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"[_group, _logic, _spot] call keko_tcl_fnc_Logic_F2;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Initialize";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

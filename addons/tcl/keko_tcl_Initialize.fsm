@@ -1,0 +1,480 @@
+/*%FSM<COMPILE "G:\ArmA\ArmA3\Tools\FSMEditor\scriptedFSM.cfg, keko_tcl_Initialize">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Initialize",0,250,-25.000000,75.000000,75.000000,125.000000,0.000000,"Initialize"};
+item1[] = {"Delay",4,218,-25.000000,175.000000,75.000000,225.000000,0.000000,"Delay"};
+item2[] = {"E_H_",2,250,-25.000000,275.000000,75.000000,325.000000,0.000000,"E.H."};
+item3[] = {"Server",4,218,125.000000,275.000000,225.000000,325.000000,2.000000,"Server"};
+item4[] = {"A_I_",2,4346,125.000000,375.000000,225.000000,425.000000,0.000000,"A.I."};
+item5[] = {"Always",8,218,125.000000,475.000000,225.000000,525.000000,0.000000,"Always"};
+item6[] = {"_",2,250,125.000000,575.000000,225.000000,625.000000,0.000000,""};
+item7[] = {"Always",8,218,125.000000,675.000000,225.000000,725.000000,0.000000,"Always"};
+item8[] = {"F_X_",2,250,-25.000000,675.000000,75.000000,725.000000,0.000000,"F.X."};
+item9[] = {"Always",8,218,-25.000000,775.000000,75.000000,825.000000,0.000000,"Always"};
+item10[] = {"End",1,250,-25.000000,875.000000,75.000000,925.000000,0.000000,"End"};
+item11[] = {"Client",4,218,-175.000000,275.000000,-75.000000,325.000000,1.000000,"Client"};
+item12[] = {"Player",2,250,-175.000000,375.000000,-75.000000,425.000000,0.000000,"Player"};
+item13[] = {"Always",8,218,-175.000000,475.000000,-75.000000,525.000000,0.000000,"Always"};
+item14[] = {"__1",2,250,-175.000000,575.000000,-75.000000,625.000000,0.000000,""};
+item15[] = {"Always",8,218,-175.000000,675.000000,-75.000000,725.000000,0.000000,"Always"};
+item16[] = {"Disabled",4,218,-25.000000,375.000000,75.000000,425.000000,0.000000,"Disabled"};
+item17[] = {"End_1",1,250,-25.000000,475.000000,75.000000,525.000000,0.000000,"End"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,11};
+link4[] = {2,16};
+link5[] = {3,4};
+link6[] = {4,5};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,9};
+link11[] = {9,10};
+link12[] = {11,12};
+link13[] = {12,13};
+link14[] = {13,14};
+link15[] = {14,15};
+link16[] = {15,8};
+link17[] = {16,17};
+globals[] = {0.000000,0,0,0,0,640,480,1,23,6316128,1,-286.323914,359.888031,938.887573,65.232391,662,895,1};
+window[] = {2,-1,-1,-1,-1,819,100,1060,100,3,680};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "TCL_Initialize";
+        class States
+        {
+                /*%FSM<STATE "Initialize">*/
+                class Initialize
+                {
+                        name = "Initialize";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private _delay = (keko_tcl_System select 0);" \n
+                         "" \n
+                         "if (keko_tcl_Multiplayer) then" \n
+                         "{" \n
+                         "	if (_delay == 0) then" \n
+                         "	{" \n
+                         "		_delay = 0.1;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Delay">*/
+                                class Delay
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="E_H_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"( (time >= _delay) || (keko_tcl_Initialize) )"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "E_H_">*/
+                class E_H_
+                {
+                        name = "E_H_";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"keko_tcl_Zeus = [ [], [] ];" \n                         
+                         "if (isDedicated) exitWith {};" \n
+                         "" \n
+                         "keko_tcl_EH_Fired = [ [] ];" \n
+                         "" \n
+                         "spawn keko_tcl_fnc_EH_Fired;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Server">*/
+                                class Server
+                                {
+                                        itemno = 3;
+                                        priority = 2.000000;
+                                        to="A_I_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"( (keko_tcl_Preprocess) && ( (keko_tcl_Server) || (keko_tcl_Headless) ) )"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Client">*/
+                                class Client
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="Player";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(keko_tcl_Preprocess)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Disabled">*/
+                                class Disabled
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="End_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "A_I_">*/
+                class A_I_
+                {
+                        name = "A_I_";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"if (keko_tcl_System select 1) then" \n
+                         "{" \n                         
+                         "	if (keko_tcl_Debug select 0) then" \n
+                         "	{" \n
+                         "		[""TypeX"", ""Initialize""] spawn (keko_tcl_Debug_F select 0);" \n
+                         "	};" \n
+                         "	" \n
+                         "	keko_tcl_Database = True;" \n
+                         "	" \n
+                         "	keko_tcl_Players = [ [], [], [] ];" \n
+                         "	" \n
+                         "	[ (playableUnits + switchableUnits) ] call keko_tcl_fnc_Players_F1;" \n
+                         "	" \n
+                         "	keko_tcl_Idle = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Hold = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Groups = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Defend = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Custom = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Freeze = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Default = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Location = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Disabled = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Enhanced = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Artillery = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Initialized = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Static_Weapon = [ [], [], [] ];" \n
+                         "	" \n
+                         "	[allGroups] call keko_tcl_fnc_Groups_F1;" \n
+                         "	" \n
+                         "	keko_tcl_Vehicles = [ [], [] ];" \n
+                         "	" \n
+                         "	[vehicles] call keko_tcl_fnc_Vehicles_F1;" \n
+                         "	" \n
+                         "	if (keko_tcl_System select 7) then" \n
+                         "	{" \n
+                         "		spawn keko_tcl_fnc_Spawn;" \n
+                         "	};" \n
+                         "	" \n
+                         "	keko_tcl_Logic = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Request = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Reinforcement = [ [], [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Red = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Join = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Speed = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Flare = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Stuck = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Assign = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Retreat = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Regroup = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Vehicle = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Remount = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Waiting = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Sneaking = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Behaviour = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Helicopter = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Heal = [ [], [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Watch = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Rearm = [ [], [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Garrison = [ [], [], [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Flanking = [ [], [], [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Surrender = [ [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Advancing = [ [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Suppressed = [ [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_Take_Cover = [ [], [] ];" \n
+                         "	" \n
+                         "	keko_tcl_House_Search = [ [], [] ];" \n
+                         "	" \n
+                         "	spawn keko_tcl_fnc_KnowsAbout;" \n
+                         "	" \n
+                         "	if (keko_tcl_Debug select 4) then" \n
+                         "	{" \n
+                         "		[""TypeX"", ""Cursor""] spawn keko_tcl_fnc_Debug_F2;" \n
+                         "	};" \n
+                         "	" \n
+                         "	if (keko_tcl_Debug select 5) then" \n
+                         "	{" \n
+                         "		[""TypeX"", ""Mission""] spawn keko_tcl_fnc_Debug_F3;" \n
+                         "	};" \n
+                         "	" \n
+                         "	spawn keko_tcl_fnc_Monitor;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "" \n
+                         """keko_tcl_Host"" addPublicVariableEventHandler { (_this select 1) call keko_tcl_fnc_Public_F2 };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="F_X_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "F_X_">*/
+                class F_X_
+                {
+                        name = "F_X_";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"if (keko_tcl_System select 9) then" \n
+                         "{" \n
+                         "	" \n
+                         "	if (keko_tcl_Dedicated) exitWith {};" \n
+                         "	" \n
+                         "	keko_tcl_Sound = False;" \n
+                         "	" \n
+                         "	if (isClass (configFile >> ""CfgPatches"" >> ""keko_tcl_Sound"") ) then" \n
+                         "	{" \n
+                         "		keko_tcl_Sound = True;" \n
+                         "		" \n
+                         "		if (keko_tcl_FX select 0) then" \n
+                         "		{" \n
+                         "			keko_tcl_Whiz_FX =" \n
+                         "			[" \n
+                         "				[]," \n
+                         "				" \n
+                         "				call {private ""_detector"";" \n
+                         "				" \n
+                         "				private _object = ""EmptyDetector"";" \n
+                         "				" \n
+                         "				if (keko_tcl_Debug select 6) then" \n
+                         "				{" \n
+                         "					_object = ""Sign_Arrow_Direction_F"";" \n
+                         "				};" \n
+                         "				" \n
+                         "				private _array = [];" \n
+                         "				" \n
+                         "				private _count = 0;" \n
+                         "				" \n
+                         "				for ""_count"" from _count to 15 do" \n
+                         "				{" \n
+                         "					_detector = _object createVehicleLocal [0,0,0];" \n
+                         "					" \n
+                         "					_array pushBack _detector;" \n
+                         "				};" \n
+                         "				" \n
+                         "				_array" \n
+                         "				" \n
+                         "				}" \n
+                         "			];" \n
+                         "		};" \n
+                         "		if (keko_tcl_FX select 4) then" \n
+                         "		{" \n
+                         "			spawn keko_tcl_fnc_Church;" \n
+                         "		};" \n
+                         "		" \n
+                         "		if (keko_tcl_FX select 5) then" \n
+                         "		{" \n
+                         "			spawn keko_tcl_fnc_Lighthouse;" \n
+                         "		};" \n
+                         "	}" \n
+                         "	else" \n
+                         "	{" \n
+                         "		{keko_tcl_FX set [_x, False] } count [0,2,4,5];" \n
+                         "	};" \n
+                         "	" \n
+                         "	keko_tcl_Impact_FX = [0, [] ];" \n
+                         "}" \n
+                         "else" \n
+                         "{" \n
+                         "	_count = 0;" \n
+                         "	" \n
+                         "	{if (_x isEqualType True) then {keko_tcl_FX set [_count, False] }; _count = _count + 1} count keko_tcl_FX;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"keko_tcl_Preprocess = False;" \n
+                         "" \n
+                         "if (keko_tcl_Dedicated) exitWith {};" \n
+                         "" \n
+                         "if (keko_tcl_System select 10) then" \n
+                         "{" \n
+                         "	keko_tcl_Respawn = [0, name player, rank player];" \n
+                         "	" \n
+                         "	call keko_tcl_fnc_EH_Respawn_F;" \n
+                         "	" \n
+                         "	player addEventHandler [""Killed"", {_this spawn keko_tcl_fnc_EH_Respawn_F1 } ];" \n
+                         "};" \n
+                         "" \n
+                         "private _curators = allCurators;" \n
+                         "" \n
+                         "if (_curators isEqualTo [] ) exitWith {};" \n
+                         "" \n
+                         "keko_tcl_Curator = [ [] ];" \n
+                         "" \n
+                         "[_curators] spawn keko_tcl_fnc_Zeus;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Player">*/
+                class Player
+                {
+                        name = "Player";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(alive player)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__1">*/
+                class __1
+                {
+                        name = "__1";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "" \n
+                         """keko_tcl_Public"" addPublicVariableEventHandler { (_this select 1) call keko_tcl_fnc_Public_F1 };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="F_X_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_1">*/
+                class End_1
+                {
+                        name = "End_1";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"// player sideChat format [""keko_tcl_Initialize.fsm > Disabled > %1"", keko_tcl_Preprocess];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Initialize";
+        finalStates[] =
+        {
+                "End",
+                "End_1",
+        };
+};
+/*%FSM</COMPILE>*/
