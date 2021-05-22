@@ -22,8 +22,8 @@ if ( (alive _unit) && { (time < _time) } && { (_unit == gunner _vehicle) } ) the
 	[_unit, _group, _vehicle] spawn FUNC(Static_Weapon_F4);
 }
 else {
-	DELETE_AT(GVAR(Static_Weapon,0,_unit);
-	DELETE_AT(GVAR(Static_Weapon,1,_vehicle);
+	DELETE_AT(GVAR(Static_Weapon),0,_unit);
+	DELETE_AT(GVAR(Static_Weapon),1,_vehicle);
 	_unit leaveVehicle _vehicle; 
 	[_unit] orderGetIn False; 
 	[_unit] allowGetIn False;
