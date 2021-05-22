@@ -22,7 +22,7 @@ for "_count" from _count to (count _units - 1) do {
 		[_unit, _group, _vehicle] spawn FUNC(Static_Weapon_F4);
 	};
 	
-	[_unit] call FUNC(Skill_F1);	
+	[_unit] call FUNC(Skill_F);	
 	[_unit] call FUNC(Marker_F1);	
 	_unit setVariable [QGVAR(Take_Cover), [time, [], (getPos _unit) ] ];
 };
