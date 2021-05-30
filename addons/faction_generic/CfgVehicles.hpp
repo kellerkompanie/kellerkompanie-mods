@@ -31,7 +31,7 @@ class CfgVehicles {
         respawnMagazines[] = {};
         linkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
         respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
-        uniformClass = "U_MU_B_soldier_sage_tshirt";
+        uniformClass = "U_B_Protagonist_VR";
         loadoutDummy = "Soldier";
 
         class EventHandlers: EventHandlers {
@@ -295,7 +295,7 @@ class CfgVehicles {
         respawnMagazines[] = {};
         linkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
         respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
-        uniformClass = "U_MU_B_soldier_sage_tshirt";
+        uniformClass = "U_I_Protagonist_VR";
         loadoutDummy = "Soldier";
 
         class EventHandlers: EventHandlers {
@@ -561,7 +561,7 @@ class CfgVehicles {
         respawnMagazines[] = {};
         linkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
         respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
-        uniformClass = "U_MU_B_soldier_sage_tshirt";
+        uniformClass = "U_O_Protagonist_VR";
         loadoutDummy = "Soldier";
 
         class EventHandlers: EventHandlers {
