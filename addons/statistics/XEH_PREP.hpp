@@ -1,4 +1,4 @@
-PRPE(onAceKilled);
+PREP(onAceKilled);
 PREP(onFired);
 PREP(onMedicalTreatment);
 PREP(onMissionEnd);
