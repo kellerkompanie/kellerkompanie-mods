@@ -2,6 +2,7 @@
 
 GVAR(eventsArray) = [];
 GVAR(outputText) = "Total Kills: 0";
+GVAR(killCount) = 0;
 
 GVAR(kills) = 0;
 GVAR(fragsOut) = 0;
