@@ -24,7 +24,7 @@ if (_reason != "SetSurrendered" || !_state) exitWith {};
 
 // make unit throw away its weapon visibly
 private _weapon = currentWeapon _unit;
-_unit removeWeapon (_weapon);
+[_unit, _weapon] remoteExec ["removeWeapon", _unit];
 private _weaponHolder = "WeaponHolderSimulated" createVehicle [0,0,0];
 _weaponHolder addWeaponCargoGlobal [_weapon, 1];
 _weaponHolder setPos (_unit modelToWorld [0,.2,1.2]);
