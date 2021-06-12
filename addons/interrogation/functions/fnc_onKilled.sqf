@@ -36,7 +36,7 @@ if ( _survivorCount <= _deadThreshold ) then {
         private _isSurrendering = _x getVariable ["ace_captives_isSurrendering", false];
         if (alive _x && _x != _unit && !_isSurrendering) then {
             private _randomChance = random 1;
-            (format ["%1 _randomChance = %2", _x, _randomChance]) remoteExec ["systemChat", [0, -2] select isDedicated];
+            // (format ["%1 _randomChance = %2", _x, _randomChance]) remoteExec ["systemChat", [0, -2] select isDedicated];
             if (_randomChance <= _surrenderChance) then {
                 ["ace_captives_setSurrendered", [_x, true], _x] call CBA_fnc_targetEvent;
             };
