@@ -92,6 +92,7 @@ class FactionRussiaSpeznas: FactionBase {
         Marksman[] = { "keko_W_SVD" };
         HeliPilot[] = { };
         JTAC[] = { "keko_W_AK74MR_GL" };
+        MMG[] = { "keko_W_PKP" };
     };
 
     class secondary: secondary {

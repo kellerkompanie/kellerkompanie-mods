@@ -72,6 +72,14 @@ class weapons: weapons {
         magazines[] = {"rhs_5Rnd_338lapua_t5000"};
     };
 
+    //MMG
+    class keko_W_PKP: PrimaryWeapon
+    {
+        cfgName = "rhs_weap_pkp";
+        scopes[] = {"rhs_acc_1p78"};
+        magazines[] = {"rhs_100Rnd_762x54mmR_green"};
+    };
+
 
     // Secondary
     class keko_W_Grach: SecondaryWeapon
