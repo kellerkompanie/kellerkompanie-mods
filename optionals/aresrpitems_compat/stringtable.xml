@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="keko">
+    <Package name="aresrpitems_compat">
+        <Key ID="STR_keko_aresrpitems_compat_cbaSettingsCategory">
+            <English>Kellerkompanie ARES RP Items</English>
+            <German>Kellerkompanie ARES RP Items</German>
+        </Key>
+        <Key ID="STR_keko_aresrpitems_compat_urinateActionEnabled">
+            <English>Urinate Self-Interaction</English>
+            <German>Urinate Self-Interaction</German>
+        </Key>
+        <Key ID="STR_keko_aresrpitems_compat_urinateActionEnabledTooltip">
+            <English>Enables or disables the urinate self-interaction added by ARES RP Items</English>
+            <German>Aktiviert oder deaktiviert die urinieren Self-Interaction von ARES RP Items</German>
+        </Key>
+        <Key ID="STR_keko_aresrpitems_compat_enabled">
+            <English>Enabled</English>
+            <German>Aktiviert</German>
+        </Key>
+        <Key ID="STR_keko_aresrpitems_compat_disabled">
+            <English>Disabled</English>
+            <German>Deaktiviert</German>
+        </Key>
+    </Package>
+</Project>
