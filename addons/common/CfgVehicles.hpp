@@ -301,6 +301,29 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 0;
     };
+    class GVAR(moduleReplaceMagsWithTracers3den): GVAR(moduleBase3den)    {
+        displayName        = "Replace Mags with Tracers";
+        category           = QGVAR(Default);
+        function           = QFUNC(moduleReplaceMagsWithTracers3den);
+
+        class Attributes: AttributesBase {
+            class GVAR(ReplaceSide): Combo {
+                property = QGVAR(ReplaceSide);
+                displayName = "Units";
+                description = "Choose side of which to replace the mags";
+                typeName = "NUMBER";
+                defaultValue = 0;
+                class Values
+                {
+                    class synchronized {name = "Only synchronized units/groups";      value = 0;};
+                    class all        {name = "All";      value = 1;};
+                    class blufor     {name = "BLUFOR";    value = 2;};
+                    class indfor     {name = "INDFOR";    value = 3;};
+                    class opfor      {name = "OPFOR";    value = 4;};
+                };
+            };
+        };
+    };
     class GVAR(moduleRespawnPosition): GVAR(moduleBase)    {
         displayName        = "Respawn Position";
         category           = QGVAR(Default);
