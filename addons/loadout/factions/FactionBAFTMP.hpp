@@ -3,6 +3,7 @@ class FactionBAFTMP: FactionBAFMTP {
 
     class uniform: uniform {
         Default[] = { "UK3CB_BAF_U_CombatUniform_DPMT", "UK3CB_BAF_U_CombatUniform_DPMT_ShortSleeve" };
+        Lead[] = { "UK3CB_BAF_U_CombatUniform_DPMT" };
         HeliPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
         JetPilot[] = { "UK3CB_BAF_U_HeliPilotCoveralls_RAF" };
     };
