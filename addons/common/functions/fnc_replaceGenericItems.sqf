@@ -28,7 +28,18 @@ private _allItems = [player] call CBA_fnc_uniqueUnitItems;
     };
 } forEach [
     [QGVAR(canteen_generic), QEGVAR(canteen,canteen)],
-    [QGVAR(painkiller_generic), "KEKO_painkiller"],
+    [QGVAR(painkiller_generic), "KEKO_painkiller"]
+];
+
+{
+    _x params["_item","_replacement"];
+    if(_item in _allItems) then {
+        while {_item in items _unit} do {
+            _unit removeItem _item;
+            _unit addMagazine _replacement;
+        };
+    };
+} forEach [
     [QGVAR(cigpack_generic), "murshun_cigs_cigpack"],
     [QGVAR(lighter_generic), "murshun_cigs_lighter"],
     [QGVAR(matches_generic), "murshun_cigs_matches"],
