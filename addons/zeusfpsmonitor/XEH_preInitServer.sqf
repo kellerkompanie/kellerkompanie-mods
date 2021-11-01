@@ -11,3 +11,15 @@ private _playerZeusEH = [QGVAR(Zeus), {
     params ["_player"];
     GVAR(zeusPlayers) pushBack (owner _player);
 }] call CBA_fnc_addEventHandler;
+
+private _playerDisconnectedEH = addMissionEventHandler ["PlayerDisconnected", {
+    params ["", "_uid", "", "", "_owner"];
+
+    // remove disconnected player from zeus/admins
+    GVAR(zeusPlayers) = GVAR(zeusPlayers) - [_owner];
+    
+    // remove diconnected player from FPS mapping
+    if (_uid in GVAR(playerToFPSMap)) then {
+        GVAR(playerToFPSMap) delete _uid;
+    };
+}];
