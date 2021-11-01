@@ -5,6 +5,8 @@ private _isAdmin = (call BIS_fnc_admin) == 2;
 private _isCurator = (!isNull (getAssignedCuratorLogic player)) || (player isKindOf QEGVAR(faction_generic,blufor_command) || (player isKindOf QEGVAR(faction_generic,indfor_command)) || (player isKindOf QEGVAR(faction_generic,opfor_command)));
 if !(_isCurator || _isAdmin) exitWith {};
 
+[QGVAR(Zeus), [player]] call CBA_fnc_serverEvent;
+
 GVAR(players) = allPlayers;
 
 // for curators and admins show FPS counter underneath players
@@ -15,7 +17,7 @@ addMissionEventHandler ["Draw3D", {
         private _distance = (ATLToASL (positionCameraToWorld [0,0,0])) distance _x;
         // if camera is farther than 1200 meters away from the targets the text will not display
         if (_distance < 1000) then {
-            private _playerFPS = _x getVariable [QGVAR(PlayerFPS), 50];
+            private _playerFPS = GVAR(playerToFPSMap) getOrDefault [getPlayerUID _x, 0];
             // if the FPS is below 20 it turns red and becomes more visible for zeus/admin to see so they are aware
             if(GVAR(showUI)) then {
                 drawIcon3D

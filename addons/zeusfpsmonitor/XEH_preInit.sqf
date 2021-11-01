@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(playerToFPSMap) = createHashMap;
+
 [
     QGVAR(enabled), // key/reference variable
     "LIST", // type of setting
@@ -21,12 +23,26 @@ PREP_RECOMPILE_END;
 [
     QGVAR(updateInterval), // key/reference variable
     "SLIDER", // type of setting
-    ["Update interval", "Set the FPS update interval in seconds"], // name and tooltip
+    ["FPS update interval", "Decides how often clients send their FPS to the server (in seconds)"], // name and tooltip
     localize LSTRING(cbaSettingsCategory), // category
     [
         1,  // min value
-        10, // max value
-        3, // default value
+        60, // max value
+        5, // default value
+        0   // number of trailing decimals
+    ],
+    1
+] call cba_settings_fnc_init;
+
+[
+    QGVAR(broadcastInterval), // key/reference variable
+    "SLIDER", // type of setting
+    ["FPS broadcast interval", "Decides how often server sends the FPS information to the admins/zeus (in seconds)"], // name and tooltip
+    localize LSTRING(cbaSettingsCategory), // category
+    [
+        1,  // min value
+        60, // max value
+        5, // default value
         0   // number of trailing decimals
     ],
     1
