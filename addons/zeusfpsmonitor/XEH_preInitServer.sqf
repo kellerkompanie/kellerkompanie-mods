@@ -20,6 +20,6 @@ private _playerDisconnectedEH = addMissionEventHandler ["PlayerDisconnected", {
     
     // remove diconnected player from FPS mapping
     if (_uid in GVAR(playerToFPSMap)) then {
-        GVAR(playerToFPSMap) delete _uid;
+        GVAR(playerToFPSMap) deleteAt _uid;
     };
 }];
