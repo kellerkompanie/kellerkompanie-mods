@@ -38,7 +38,7 @@ if (isNil QGVAR(crates)) then {
             "JTACs only",
             "Zeus only"
         ], // names
-        2 // default index
+        0 // default index
     ],
     1
 ] call cba_settings_fnc_init;
