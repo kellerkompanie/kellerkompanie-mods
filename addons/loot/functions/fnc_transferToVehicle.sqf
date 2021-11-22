@@ -2,7 +2,7 @@
 
 params ["_target", "_vehicle"];
 
-[5, [_target, _vehicle],
+[GVAR(lootingDuration), [_target, _vehicle],
     {
         params ["_args"];
         _args params ["_target", "_vehicle"];

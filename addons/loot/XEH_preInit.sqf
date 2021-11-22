@@ -19,4 +19,13 @@ PREP_RECOMPILE_END;
     1
 ] call cba_settings_fnc_init;
 
+[
+    QGVAR(lootingDuration),
+    "SLIDER",
+    ["Looting duration", "How long it takes to transfer items to the vehicle."],
+    localize LSTRING(cbaSettingsCategory),
+    [1, 30, 3, 0],
+    1
+] call cba_settings_fnc_init;
+
 ADDON = true;
