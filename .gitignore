@@ -79,3 +79,4 @@ releases/*
 keys/*
 .hemtt/local
 ####
+.vscode/settings.json
