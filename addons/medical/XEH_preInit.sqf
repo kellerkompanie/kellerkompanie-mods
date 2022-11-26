@@ -2,6 +2,12 @@
 
 ADDON = false;
 
+
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
+
+
 // unconscious spectator mode donated by shukari/TacticalBacon, see https://github.com/TacticalBaconDevs/TBMod/blob/master/addons/medical/XEH_preInit.sqf#L161-L220
 [
     QGVAR(unconsciousMode),

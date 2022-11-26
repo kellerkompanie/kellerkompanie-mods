@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="keko">
     <Package name="medical">
         <Key ID="STR_keko_medical_cbaSettingsCategory">
@@ -9,6 +9,9 @@
             <English>Unconscious mode</English>
             <German>Modus Bewusstlosigkeit</German>
         </Key>
+
+
+        
         <Key ID="STR_keko_medical_Painkiller_Display">
             <English>Painkiller</English>
             <German>Schmerzmittel</German>
@@ -21,14 +24,83 @@
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
             <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln</German>
         </Key>
-
         <Key ID="STR_keko_medical_Administer_Painkiller">
             <English>Administer Painkiller</English>
             <German>Painkiller verabreichen</German>
         </Key>
         <Key ID="STR_keko_medical_Administering_Painkiller">
             <English>Administering Painkiller...</English>
-            <German>Morphin verabreichen...</German>
+            <German>Schmerzmittel verabreichen...</German>
+        </Key>
+
+
+        
+
+        <Key ID="STR_keko_medical_Bloodstopper_Display">
+            <English>Bloodstopper</English>
+            <German>Blutstopper</German>
+        </Key>
+        <Key ID="STR_keko_medical_Bloodstopper_Desc_Short">
+            <English>Used to combat bloodloss by increasing the blood viscosity of the patient.</English>
+            <German>Wird zur linderung von Blutverlust eingesetzt, indem es die Viskosität des Blutes erhöht.</German>
+        </Key>
+        <Key ID="STR_keko_medical_Bloodstopper_Desc_Use">
+            <English>An injector used to combat bloodloss.</English>
+            <German>Ein Injektor um Blutverlust zu lindern.</German>
+        </Key>
+        <Key ID="STR_keko_medical_Inject_Bloodstopper">
+            <English>Inject Bloodstopper</English>
+            <German>Blutsopper Injezieren</German>
+        </Key>
+        <Key ID="STR_keko_medical_Injecting_Bloodstopper">
+            <English>Injecting Bloodstopper...</English>
+            <German>Injeziere Blutstopper...</German>
+        </Key>
+
+        
+
+        <Key ID="STR_keko_medical_GoJuice_Display">
+            <English>Go-Juice</English>
+            <German>Go-Juice</German>
+        </Key>
+        <Key ID="STR_keko_medical_GoJuice_Desc_Short">
+            <English>Used to enhance combat effectiveness. Increases Bloodflow, supresses pain, increases strenght. Addictive. </English>
+            <German>Wird zur erhöung der Kampfkraft verwendet. Erhöt Blutdruchfluss, underdrückt Schmerzen, erhöt Kraft. Suchtgefahr.</German>
+        </Key>
+        <Key ID="STR_keko_medical_GoJuice_Desc_Use">
+            <English>An injector to enhance combat effectiveness.</English>
+            <German>Ein Injektor um Kampfkraft zu steigern.</German>
+        </Key>
+        <Key ID="STR_keko_medical_Inject_GoJuice">
+            <English>Inject Go-Juice</English>
+            <German>Go-Juice Injezieren</German>
+        </Key>
+        <Key ID="STR_keko_medical_Injecting_GoJuice">
+            <English>Injecting Go-Juice...</English>
+            <German>Injeziere Go-Juice...</German>
+        </Key>
+
+
+        
+        <Key ID="STR_keko_medical_Contrafinil_Display">
+            <English>Contrafinil</English>
+            <German>Contrafinil</German>
+        </Key>
+        <Key ID="STR_keko_medical_Contrafinil_Desc_Short">
+            <English>Used to close wounds. Causes severe pain and extreme exhaustion</English>
+            <German>Wird zum schließen von Wunden verwendet. Verursacht starke Schmerzen und Erschöpfung.</German>
+        </Key>
+        <Key ID="STR_keko_medical_Contrafinil_Desc_Use">
+            <English>An injector to close wounds.</English>
+            <German>Ein Injektor um Wunden zu schließen.</German>
+        </Key>
+        <Key ID="STR_keko_medical_Inject_Contrafinil">
+            <English>Inject Contrafinil</English>
+            <German>Contrafinil Injezieren</German>
+        </Key>
+        <Key ID="STR_keko_medical_Injecting_Contrafinil">
+            <English>Injecting Contrafinil...</English>
+            <German>Injeziere Contrafinil...</German>
         </Key>
     </Package>
 </Project>
