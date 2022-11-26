@@ -17,10 +17,9 @@
 
  // TODO: Handling when someone takes multiple GoJuice 
 
- params ["_patient"];
+params ["_patient"];
 
- _patient setVariable ["onGoJuice", true, false];
-
+_patient setVariable ["onGoJuice", true, false];
 
  // Some Magnified optics cancel this effect :/
 ["RadialBlur", 100, [0.1, 0.1, 0.3, 0.5], -1, _patient] spawn

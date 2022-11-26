@@ -22,5 +22,4 @@ params ["_medic", "_patient"];
 
 hint "contrafinil!!!!";
 
-["keko_medical_fnc_contrafinilLocal", [_patient], _patient] call CBA_fnc_targetEvent;
-//[QGVAR(bloodstopperLocal), [_patient], _patient] call CBA_fnc_targetEvent;
+[QGVAR(contrafinilLocal), [_patient], _patient] call CBA_fnc_targetEvent;

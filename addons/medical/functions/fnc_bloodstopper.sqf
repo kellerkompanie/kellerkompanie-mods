@@ -25,5 +25,4 @@ params ["_medic", "_patient"];
 
 hint format ["bloodStopper for %1", _patient];
 
-["keko_medical_fnc_bloodstopperLocal", [_patient], _patient] call CBA_fnc_targetEvent;
-//[QGVAR(bloodstopperLocal), [_patient], _patient] call CBA_fnc_targetEvent;
+[QGVAR(bloodstopperLocal), [_patient], _patient] call CBA_fnc_targetEvent;

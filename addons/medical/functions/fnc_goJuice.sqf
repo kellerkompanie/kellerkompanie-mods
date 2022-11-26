@@ -20,7 +20,6 @@
  * Public: No
  */
  
- params ["_medic", "_patient"];
+params ["_medic", "_patient"];
 
-["keko_medical_fnc_goJuiceLocal", [_patient], _patient] call CBA_fnc_targetEvent;
-//[QGVAR(goJuiceLocal), [_patient], _patient] call CBA_fnc_targetEvent;
+[QGVAR(goJuiceLocal), [_patient], _patient] call CBA_fnc_targetEvent;
