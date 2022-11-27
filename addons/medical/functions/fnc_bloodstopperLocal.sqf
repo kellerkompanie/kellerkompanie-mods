@@ -18,10 +18,7 @@
 
 params ["_patient"];
 
-private _fatigueFactor = 50;
+private _fatigueFactor = 100;
 
 ace_advanced_fatigue_anReserve = (ace_advanced_fatigue_anReserve - (_fatigueFactor * 20)) max 0;
-ace_advanced_fatigue_anFatigue = (ace_advanced_fatigue_anFatigue + (_fatigueFactor / 100)) min 1.0;
-
-
-hint format ["(Local) Reserve: %1 \n Fatigue: %2", (ace_advanced_fatigue_anReserve - _fatigueFactor * 20) max 0, (ace_advanced_fatigue_anFatigue + _fatigueFactor / 100) min 0.8];
+ace_advanced_fatigue_anFatigue = 1.1;

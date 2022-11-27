@@ -22,13 +22,14 @@ params ["_patient"];
 [_patient] spawn {
 	params ["_patient"];
 	while {[_patient] call ace_medical_blood_fnc_isBleeding} do {
-
-		[_patient] remoteExec  ["keko_common_fnc_bandageRandomWound", _patient, _patient];
+		hint "Bleeding! Lets Contrafinil this";
+		_patient call keko_common_fnc_bandageRandomWound;
 
 		if (random 1 < 0.5) then {
+			systemChat "hurt";
 			private _bodyPart = selectRandom [ "LeftArm", "RightArm", "LeftLeg", "RightLeg", "Head", "Body" ];
- 	   		[_patient, 0.01, _bodyPart, "punch"] remoteExec  ["ace_medical_fnc_addDamageToUnit", _patient, _patient];
-			sleep 0.5;
-		};
+ 	   		[_patient, 0.01, _bodyPart, "punch"] call ace_medical_fnc_addDamageToUnit;
+		};		
+		sleep 0.5;
 	};
 }

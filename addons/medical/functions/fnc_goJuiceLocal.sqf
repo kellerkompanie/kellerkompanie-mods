@@ -33,11 +33,11 @@ _patient setVariable ["onGoJuice", true, false];
 	};
 
     sleep 5; // Give it some time to kick in
-	_handle ppEffectEnable true;
 
     while {
         _patient getVariable "onGoJuice";
     } do {
+        _handle ppEffectEnable true;
         _effect = [
             random [0.1, 0.2, 0.30],
             random [0.1, 0.2, 10],
@@ -59,8 +59,16 @@ _patient setUnitRecoilCoefficient 0;
 private _weaponSway = getCustomAimCoef _patient;
 _patient setCustomAimCoef (_weaponSway - 3) max 0;
 
+[_patient] spawn {
+    params ["_patient"];
+    while {
+        _patient getVariable "onGoJuice";
+    } do {
+        ace_advanced_fatigue_anReserve = ace_advanced_fatigue_anReserve + 500;
+        sleep 30;
+    }; 
+};
 
-ace_advanced_fatigue_anReserve = ace_advanced_fatigue_anReserve + 500;
 
 
 [_patient, _recoil, _weaponSway] spawn {
@@ -72,6 +80,7 @@ ace_advanced_fatigue_anReserve = ace_advanced_fatigue_anReserve + 500;
     _patient setCustomAimCoef _weaponSway;
 
     // Cancel tunnel Vision effect
-    [_patient, "KEKO_GoJuice"] call keko_medical_fnc_addAddiction;
-}
-
+    _patient setVariable ["onGoJuice", false, false];
+    
+    //[_patient, "KEKO_GoJuice"] call keko_medical_fnc_addAddiction;
+};

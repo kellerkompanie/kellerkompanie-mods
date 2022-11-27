@@ -20,6 +20,4 @@
  
 params ["_medic", "_patient"];
 
-hint "contrafinil!!!!";
-
 [QGVAR(contrafinilLocal), [_patient], _patient] call CBA_fnc_targetEvent;
