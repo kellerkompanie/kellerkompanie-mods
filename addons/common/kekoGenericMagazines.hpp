@@ -216,6 +216,43 @@ class kekoGenericMagazines {
         vn_xm177_xm148 = "vn_m16_20_mag";
         vn_xm177_xm148_camo = "vn_m16_20_mag";
 
+        /* Expeditionary Forces DLC */
+        ef_arifle_mx_gl_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mx_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mx_sw_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mxar_gl = "30Rnd_65x39_caseless_mag";
+        ef_arifle_mxar_gl_black = "30Rnd_65x39_caseless_black_mag";
+        ef_arifle_mxar_gl_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mxar_gl_khk = "30Rnd_65x39_caseless_khaki_mag";
+        ef_arifle_mxar = "30Rnd_65x39_caseless_mag";
+        ef_arifle_mxar_black = "30Rnd_65x39_caseless_black_mag";
+        ef_arifle_mxar_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mxar_khk = "30Rnd_65x39_caseless_khaki_mag";
+        ef_arifle_mxc_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+        ef_arifle_mxm_coy = "EF_30Rnd_65x39_caseless_coy_mag";
+
+        /* Reaction Forces DLC */
+        arifle_ash12_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        arifle_ash12_GL_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_GL_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_GL_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_GL_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        arifle_ash12_LR_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_LR_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_LR_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_LR_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        srifle_h6_blk_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_digi_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_gold_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_oli_rf = "30Rnd_556x45_AP_Stanag_red_khk_RF";
+        srifle_h6_tan_rf = "30Rnd_556x45_AP_Stanag_red_Tan_RF";
+        SMG_01_black_RF = "30Rnd_45ACP_Mag_SMG_01";
+        srifle_DMR_01_black_RF = "10Rnd_762x54_Mag";
+        srifle_DMR_01_tan_RF = "10Rnd_762x54_Mag";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -1106,6 +1143,43 @@ class kekoGenericMagazines {
         vn_xm177_xm148 = "vn_m16_20_t_mag";
         vn_xm177_xm148_camo = "vn_m16_20_t_mag";
 
+        /* Expeditionary Forces DLC */
+        ef_arifle_mx_gl_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mx_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mx_sw_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mxar_gl = "30Rnd_65x39_caseless_mag_Tracer";
+        ef_arifle_mxar_gl_black = "30Rnd_65x39_caseless_black_mag_Tracer";
+        ef_arifle_mxar_gl_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mxar_gl_khk = "30Rnd_65x39_caseless_khaki_mag_Tracer";
+        ef_arifle_mxar = "30Rnd_65x39_caseless_mag_Tracer";
+        ef_arifle_mxar_black = "30Rnd_65x39_caseless_black_mag_Tracer";
+        ef_arifle_mxar_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mxar_khk = "30Rnd_65x39_caseless_khaki_mag_Tracer";
+        ef_arifle_mxc_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+        ef_arifle_mxm_coy = "EF_30Rnd_65x39_caseless_coy_mag_Tracer";
+
+        /* Reaction Forces DLC */
+        arifle_ash12_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        arifle_ash12_GL_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_GL_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_GL_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_GL_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        arifle_ash12_LR_blk_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_LR_desert_RF = "20Rnd_127x55_Mag_desert_RF";
+        arifle_ash12_LR_urban_RF = "20Rnd_127x55_Mag_RF";
+        arifle_ash12_LR_wood_RF = "20Rnd_127x55_Mag_wood_RF";
+        srifle_h6_blk_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_digi_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_gold_rf = "30Rnd_556x45_AP_Stanag_red_RF";
+        srifle_h6_oli_rf = "30Rnd_556x45_AP_Stanag_red_khk_RF";
+        srifle_h6_tan_rf = "30Rnd_556x45_AP_Stanag_red_Tan_RF";
+        SMG_01_black_RF = "30Rnd_45ACP_Mag_SMG_01";
+        srifle_DMR_01_black_RF = "ACE_10Rnd_762x54_Tracer_mag";
+        srifle_DMR_01_tan_RF = "ACE_10Rnd_762x54_Tracer_mag";
+
         /* After East Wind */
         NAA_LMG_03_alpat_F = "200Rnd_556x45_Box_Red_F";
         NAA_EBR_alpat = "20Rnd_762x51_Mag";
@@ -1817,6 +1891,24 @@ class kekoGenericMagazines {
         vn_tt33 = "vn_tt33_mag";
         vn_welrod = "vn_welrod";
 
+        /* Expeditionary Forces DLC */
+        ef_hgun_Pistol_heavy_01_coy = "11Rnd_45ACP_Mag";
+        ef_hgun_P07_coy = "16Rnd_9x21_Mag";
+
+        /* Reaction Forces DLC */
+        hgun_DEagle_RF = "7Rnd_50AE_Mag_RF";
+        hgun_DEagle_bronze_RF = "7Rnd_50AE_Mag_RF";
+        hgun_DEagle_camo_RF = "7Rnd_50AE_Mag_RF";
+        hgun_DEagle_classic_RF = "7Rnd_50AE_Mag_RF";
+        hgun_DEagle_copper_RF = "7Rnd_50AE_Mag_RF";
+        hgun_DEagle_gold_RF = "7Rnd_50AE_Mag_RF";
+        hgun_Glock19_RF = "17Rnd_9x19_Mag_RF";
+        hgun_Glock19_khk_RF = "17Rnd_9x19_Mag_RF";
+        hgun_Glock19_Tan_RF = "17Rnd_9x19_Mag_RF";
+        hgun_Glock19_auto_RF = "17Rnd_9x19_Mag_RF";
+        hgun_Glock19_auto_khk_RF = "17Rnd_9x19_Mag_RF";
+        hgun_Glock19_auto_Tan_RF = "17Rnd_9x19_Mag_RF";
+
         /* After East Wind */
         MYR_pistol_heavy_1_black = "11Rnd_45ACP_Mag";
         MYR_pistol_heavy_1_black_sage = "11Rnd_45ACP_Mag";
@@ -1947,6 +2039,21 @@ class kekoGenericMagazines {
         vn_m127 = "vn_m127_mag";
         vn_m72 = "vn_m72_mag";
 
+        /* Expeditionary Forces DLC */
+        EF_launch_B_Titan_Coy = "Titan_AA";
+
+        /* Reaction Forces DLC */
+        launch_PSRL1_black_RF = "PSRL1_AT_RF";
+        launch_PSRL1_digi_RF = "PSRL1_AT_RF";
+        launch_PSRL1_geo_RF = "PSRL1_AT_RF";
+        launch_PSRL1_olive_RF = "PSRL1_AT_RF";
+        launch_PSRL1_sand_RF = "PSRL1_AT_RF";
+        launch_PSRL1_PWS_black_RF = "PSRL1_AT_RF";
+        launch_PSRL1_PWS_digi_RF = "PSRL1_AT_RF";
+        launch_PSRL1_PWS_geo_RF = "PSRL1_AT_RF";
+        launch_PSRL1_PWS_olive_RF = "PSRL1_AT_RF";
+        launch_PSRL1_PWS_sand_RF = "PSRL1_AT_RF";
+
         /* RHS AFRF */
         rhs_weap_igla = "rhs_weap_igla";
         rhs_weap_rpg7 = "rhs_rpg7_PG7VL_mag";
@@ -2014,6 +2121,19 @@ class kekoGenericMagazines {
         vn_sks_gl = "vn_22mm_m60_frag_mag";
         vn_xm177_xm148 = "vn_40mm_m406_he_mag";
         vn_xm177_xm148_camo = "vn_40mm_m406_he_mag";
+
+        /* Expeditionary Forces DLC */
+        ef_arifle_mx_gl_coy = "1Rnd_HE_Grenade_shell";
+        ef_arifle_mxar_gl = "3Rnd_HE_Grenade_shell";
+        ef_arifle_mxar_gl_black = "3Rnd_HE_Grenade_shell";
+        ef_arifle_mxar_gl_coy = "3Rnd_HE_Grenade_shell";
+        ef_arifle_mxar_gl_khk = "3Rnd_HE_Grenade_shell";
+
+        /* Reaction Forces DLC */
+        arifle_ash12_GL_blk_RF = "1Rnd_HE_Grenade_shell";
+        arifle_ash12_GL_desert_RF = "1Rnd_HE_Grenade_shell";
+        arifle_ash12_GL_urban_RF = "1Rnd_HE_Grenade_shell";
+        arifle_ash12_GL_wood_RF = "1Rnd_HE_Grenade_shell";
         
         /* After East Wind */
         NAA_arifle_Mk20_GL_alpat_ard1 = "1Rnd_HE_Grenade_shell";
