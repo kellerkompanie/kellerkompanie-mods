@@ -8,4 +8,4 @@ private _destination = [_uid] call BIS_fnc_getUnitByUID;
 moveOut _player;
 
 // Function takes position AGL and must be ran where local
-["ace_zeus_fnc_moveToRespawnPosition", [_player, _destination modelToWorld [0,0,0]], _player] call CBA_fnc_targetEvent;
+[_player, _destination modelToWorld [0,0,0]] call ace_zeus_fnc_moveToRespawnPosition;
