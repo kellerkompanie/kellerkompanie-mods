@@ -22,8 +22,7 @@ class CfgMainMenuSpotlight {
         textIsQuote = 0; // 1 to add quotation marks around the text
         picture = QPATHTOF(ui\button.paa); // Square picture, ideally 512x512
         //video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover
-        //action = "0 = [_this, 'your.domain.name', '2302', 'yourpasshere'] execVM '\amp_spotlight\joinServer.sqf';";
-        action = "0 = [_this, 'server.kellerkompanie.com', '2302', 'keko'] execVM '\x\keko\addons\button\joinServer.sqf';";
+        action = "connectToServer ['server.kellerkompanie.com', 2302, 'keko']";
         actionText = CSTRING(actionText); // Text displayed in top left corner of on-hover white frame
         condition = "true"; // Condition for showing the spotlight
     };
@@ -49,4 +48,8 @@ class CfgMainMenuSpotlight {
     delete Orange_Campaign;
     delete AoW_Showcase_AOW;
     delete AoW_Showcase_Future;
+    delete EF_ResoluteCyclone;
+    delete Scenario_AirControl_RF;
+    delete Scenario_FireSeason_RF;
+    delete Scenario_TrainingDay_RF;
 };
