@@ -2,20 +2,10 @@
 
 params ["_player", "_uid"];
 
-ACE_player allowDamage false;
-titleText ["", "BLACK OUT", 2];
-sleep 2;
+private _destination = [_uid] call BIS_fnc_getUnitByUID;
 
-private _destinationPlayer = [_uid] call BIS_fnc_getUnitByUID;
-if (_destinationPlayer != ACE_player) then {
-    titleText [format ["Du wirst zu %1 verlegt.", name _destinationPlayer], "BLACK FADED"];
-    sleep 1;
-    _player setPosASL (getPosASL _destinationPlayer);
-} else {
-    titleText ["Das ging schief.", "BLACK FADED"];
-    sleep 1;
-};
+// Move the player out of the vehicle
+moveOut _player;
 
-sleep 1;
-titleFadeOut 2;
-ACE_player allowDamage true;
+// Function takes position AGL and must be ran where local
+["ace_zeus_fnc_moveToRespawnPosition", [_player, _destination modelToWorld [0,0,0]], _player] call CBA_fnc_targetEvent;
