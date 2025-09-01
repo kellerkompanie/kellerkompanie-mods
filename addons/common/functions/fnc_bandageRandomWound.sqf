@@ -17,60 +17,33 @@
 
 params ["_unit"];
 
-private _openWounds = GET_OPEN_WOUNDS(_unit);
-
-private _headWounds = 0;
-private _bodyWounds = 0;
-private _leftArmWounds = 0;
-private _leftLegWounds = 0;
-private _rightArmWounds = 0;
-private _rightLegWounds = 0;
+private _headWounds = count ([player, "head"] call ace_medical_fnc_getOpenWounds);
+private _bodyWounds = count ([player, "body"] call ace_medical_fnc_getOpenWounds);
+private _leftArmWounds = count ([player, "leftarm"] call ace_medical_fnc_getOpenWounds);
+private _leftLegWounds = count ([player, "leftleg"] call ace_medical_fnc_getOpenWounds);
+private _rightArmWounds = count ([player, "rightarm"] call ace_medical_fnc_getOpenWounds);
+private _rightLegWounds = count ([player, "rightleg"] call ace_medical_fnc_getOpenWounds);
 
 // get all bleeding body parts
 private _woundedBodyParts = [];
-{
-    _x params ["", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
-
-    if(_bloodLoss > 0) then {
-        switch (_bodyPart) do {
-            // Head
-            case 0: {
-                _woundedBodyParts pushBackUnique "head";
-                _headWounds = _headWounds + _numOpenWounds;
-            };
-
-            // Body
-            case 1: {
-                _woundedBodyParts pushBackUnique "body";
-                _bodyWounds = _bodyWounds + _numOpenWounds;
-            };
-
-            // Left Arm
-            case 2: {
-                _woundedBodyParts pushBackUnique "leftarm";
-                _leftArmWounds = _leftArmWounds + _numOpenWounds;
-            };
-
-            // Right Arm
-            case 3: {
-                _woundedBodyParts pushBackUnique "rightarm";
-                _rightArmWounds = _rightArmWounds + _numOpenWounds;
-            };
-
-            // Left Leg
-            case 4: {
-                _woundedBodyParts pushBackUnique "leftleg";
-                _leftLegWounds = _leftLegWounds + _numOpenWounds;
-            };
-
-            // Right Leg
-            case 5: {
-                _woundedBodyParts pushBackUnique "rightleg";
-                _rightLegWounds = _rightLegWounds + _numOpenWounds;
-            };
-        };
-    };
-} forEach _openWounds;
+if (_headWounds > 0) then {
+    _woundedBodyParts pushBackUnique "head";
+};
+if (_bodyWounds > 0) then {
+    _woundedBodyParts pushBackUnique "body";
+};
+if (_leftArmWounds > 0) then {
+    _woundedBodyParts pushBackUnique "leftarm";
+};
+if (_leftLegWounds > 0) then {
+    _woundedBodyParts pushBackUnique "leftleg";
+};
+if (_rightArmWounds > 0) then {
+    _woundedBodyParts pushBackUnique "rightarm";
+};
+if (_rightLegWounds > 0) then {
+    _woundedBodyParts pushBackUnique "rightleg";
+};
 
 // preferablly bandage head and torso wounds first
 if("head" in _woundedBodyParts) then {

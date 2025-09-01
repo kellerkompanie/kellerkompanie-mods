@@ -19,48 +19,10 @@ params ["_unit"];
 
 private _openWounds = _unit getVariable ["ace_medical_openWounds", []];
 
-private _leftArmWounds = 0;
-private _leftLegWounds = 0;
-private _rightArmWounds = 0;
-private _rightLegWounds = 0;
-
-{
-    _x params ["", "_bodyPart", "_amountOf", "_bleeding"];
-
-    if(_bleeding > 0) then {
-        switch (_bodyPart) do {
-            // Head
-            case 0: {
-
-            };
-
-            // Body
-            case 1: {
-
-            };
-
-            // Left Arm
-            case 2: {
-                _leftArmWounds = _leftArmWounds + _amountOf;
-            };
-
-            // Right Arm
-            case 3: {
-                _rightArmWounds = _rightArmWounds + _amountOf;
-            };
-
-            // Left Leg
-            case 4: {
-                _leftLegWounds = _leftLegWounds + _amountOf;
-            };
-
-            // Right Leg
-            case 5: {
-                _rightLegWounds = _rightLegWounds + _amountOf;
-            };
-        };
-    };
-} forEach _openWounds;
+private _leftArmWounds = count ([player, "leftarm"] call ace_medical_fnc_getOpenWounds);
+private _leftLegWounds = count ([player, "leftleg"] call ace_medical_fnc_getOpenWounds);
+private _rightArmWounds = count ([player, "rightarm"] call ace_medical_fnc_getOpenWounds);
+private _rightLegWounds = count ([player, "rightleg"] call ace_medical_fnc_getOpenWounds);
 
 if(_leftArmWounds > 0) then {
     [_unit, "leftarm"] remoteExec ["ace_medical_treatment_fnc_tourniquetLocal", _unit];
