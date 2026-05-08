@@ -163,7 +163,19 @@ GVAR(atLaunchers) = [
     "vn_rpg2",
     "vn_rpg7",
     "vn_m127",
-    "vn_m72"
+    "vn_m72",
+    "JCA_launch_M72_black_F",
+    "JCA_launch_M72_olive_F",
+    "JCA_launch_M72_sand_F",
+    "JCA_launch_M72_black_primed_F",
+    "JCA_launch_M72_olive_primed_F",
+    "JCA_launch_M72_sand_primed_F",
+    "JCA_launch_Mk153_black_F",
+    "JCA_launch_Mk153_olive_F",
+    "JCA_launch_Mk153_sand_F",
+    "JCA_launch_Mk153_PWS_black_F",
+    "JCA_launch_Mk153_PWS_olive_F",
+    "JCA_launch_Mk153_PWS_sand_F"
 ];
 
 GVAR(aaLaunchers) = [
