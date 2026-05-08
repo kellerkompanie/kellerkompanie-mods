@@ -113,7 +113,20 @@ GVAR(machineGuns) = [
     "vn_pk",
     "vn_rpd",
     "vn_rpd_shorty_01",
-    "vn_rpd_shorty"
+    "vn_rpd_shorty",
+    "Aegis_MMG_FNMAG_240_F",
+    "Aegis_MMG_FNMAG_F",
+    "Aegis_MMG_FNMAG_MRCO_F",
+    "Aegis_MMG_FNMAG_MRCO_LP_F",
+    "Aegis_MMG_FNMAG_old_F",
+    "Aegis_arifle_RPK12_545_F",
+    "Aegis_arifle_RPK12_545_aco_F",
+    "Aegis_arifle_RPK12_545_arco_pointer_F",
+    "Aegis_arifle_RPK12_545_arid_F",
+    "Aegis_arifle_RPK12_545_lush_F",
+    "Aegis_arifle_RPK12_545_tan_F",
+    "Aegis_arifle_RPK74M_F",
+    "arifle_RPK_F"
 ];
 
 GVAR(atLaunchers) = [
