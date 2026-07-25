@@ -57,11 +57,7 @@ class CfgPatches {
             "keko_AntiAirLauncher",
 
             QGVAR(canteen_generic),
-            QGVAR(painkiller_generic),
-            QGVAR(cigpack_generic),
-            QGVAR(lighter_generic),
-            QGVAR(matches_generic),
-            QGVAR(lollipop_generic)
+            QGVAR(painkiller_generic)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

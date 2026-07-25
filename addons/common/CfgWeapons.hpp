@@ -124,46 +124,7 @@ class CfgWeapons {
         };
         picture = QPATHTOF(ui\icon_painkillers.paa);
     };
-    class GVAR(cigpack_generic) : ACE_ItemCore {
-        displayName = "Cig Pack";
-        count = 1;
-        scopeCurator = 2;
-        scope = 2;
-        class ItemInfo : CBA_MiscItem_ItemInfo {
-            mass = 2;
-        };
-        picture = "\murshun_cigs\UI\gear_cigpack_x_ca";
-    };
-    class GVAR(lighter_generic) : ACE_ItemCore {
-        displayName = "Lighter";
-        count = 1;
-        scopeCurator = 2;
-        scope = 2;
-        class ItemInfo : CBA_MiscItem_ItemInfo {
-            mass = 2;
-        };
-        picture = "\murshun_cigs\UI\gear_lighter_x_ca";
-    };
-    class GVAR(matches_generic) : ACE_ItemCore {
-        displayName = "Matches";
-        count = 1;
-        scopeCurator = 2;
-        scope = 2;
-        class ItemInfo : CBA_MiscItem_ItemInfo {
-            mass = 1;
-        };
-        picture = "\murshun_cigs\UI\gear_matches_x_ca";
-    };
-    class GVAR(lollipop_generic) : ACE_ItemCore {
-        displayName = "Lollipop (Packed)";
-        count = 1;
-        scopeCurator = 2;
-        scope = 2;
-        class ItemInfo : CBA_MiscItem_ItemInfo {
-            mass = 2;
-        };
-        picture = "\immersion_pops\UI\gear_cigpack_x_ca";
-    };
+    // cig, lighter, matches and lollipop placeholders live in keko_cigs_compat
 
 
     // disable hearing protection on helmets

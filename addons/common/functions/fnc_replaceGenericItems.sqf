@@ -31,21 +31,6 @@ private _allItems = [player] call CBA_fnc_uniqueUnitItems;
     [QGVAR(painkiller_generic), "ACE_painkillers"]
 ];
 
-{
-    _x params["_item","_replacement"];
-    if(_item in _allItems) then {
-        while {_item in items _unit} do {
-            _unit removeItem _item;
-            _unit addMagazine _replacement;
-        };
-    };
-} forEach [
-    [QGVAR(cigpack_generic), "murshun_cigs_cigpack"],
-    [QGVAR(lighter_generic), "murshun_cigs_lighter"],
-    [QGVAR(matches_generic), "murshun_cigs_matches"],
-    [QGVAR(lollipop_generic), "immersion_pops_poppack"]
-];
-
 if ("keko_basicEquipment" in _allItems) then {
     while {"keko_basicEquipment" in items _unit} do {
         _unit removeItem "keko_basicEquipment";
