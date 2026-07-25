@@ -11,8 +11,8 @@ class CfgAmmo {
         coefGravity = 0.25;
     };
     class F_40mm_Cir: F_40mm_White {
-		nvgOnly = 1;
-	};
+        nvgOnly = 1;
+    };
     class F_20mm_White: FlareBase {
         intensity = 20000;
         flareSize = 6;

@@ -56,10 +56,10 @@ private _fixMapBugaction = [
     "",
     {
         if (!isNil "RR_mapStuff_fnc_mapEH") then { false call RR_mapStuff_fnc_mapEH; };
-		{
-			detach _x; 
-			deleteVehicle _x;
-		} forEach attachedObjects player; 
+        {
+            detach _x; 
+            deleteVehicle _x;
+        } forEach attachedObjects player; 
     },
     { count attachedObjects player > 0 }
 ] call ace_interact_menu_fnc_createAction;

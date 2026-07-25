@@ -14,11 +14,11 @@ switch (true) do {
         [objNull, "place on not destroyed"] call bis_fnc_showCuratorFeedbackMessage;
     };
     default {
-		if (!isNil "RR_mapStuff_fnc_mapEH") then { false remoteExec ["RR_mapStuff_fnc_mapEH", _target]; };
-		{
-			detach _x; 
-			deleteVehicle _x;
-		} forEach attachedObjects _target;
+        if (!isNil "RR_mapStuff_fnc_mapEH") then { false remoteExec ["RR_mapStuff_fnc_mapEH", _target]; };
+        {
+            detach _x; 
+            deleteVehicle _x;
+        } forEach attachedObjects _target;
     };
 };
 

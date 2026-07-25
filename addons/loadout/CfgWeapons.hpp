@@ -1,5 +1,5 @@
 class CfgWeapons {
-	class ACE_ItemCore;
+    class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
     class keko_firstAidKit: ACE_ItemCore {
         scope = 2;
