@@ -112,6 +112,9 @@ if(count _vest != 0) then {
     _player addVest _random_vest;
 };
 
+// drop backpacks whose mod is not loaded, e.g. the TFAR/FRXA/BWMod radio backpacks
+_backpack = _backpack select {isClass (configFile >> "CfgVehicles" >> _x)};
+
 if(count _backpack != 0) then {
     private _random_backpack = selectRandom _backpack;
     _player addBackpack _random_backpack;
@@ -411,8 +414,8 @@ if (!(_faces isEqualTo [])) then {
 
 _player enableSimulation true;
 
-// give radio
-if (GVAR(giveRadio) > 0) then {
+// give radio, skipped entirely when TFAR is not loaded
+if (GVAR(giveRadio) > 0 && {!isNil "TFAR_fnc_activeSwRadio"}) then {
     switch (GVAR(giveRadio)) do {
         case 1: {
             //Verstellbare für alle
