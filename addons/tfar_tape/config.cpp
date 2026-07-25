@@ -11,6 +11,8 @@ class CfgPatches {
             "tfar_core",
             "tfar_handhelds"
         };
+        // skipped instead of erroring when TFAR is not loaded
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);
