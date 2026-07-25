@@ -9,7 +9,7 @@ params ["_crate"];
 private _objectVariable = _crate getVariable [QGVAR(objectVariable), ""];
 
 if !(_objectVariable call FUNC(dbCrateExists)) exitWith {
-    ERROR("crate %1 does not exist in DB!", _objectVariable);
+    ERROR_1("crate %1 does not exist in DB!", _objectVariable);
     false
 };
 
@@ -22,7 +22,7 @@ if(count _objectVariable == 0) exitWith {
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getCrate:%1:%2", GVAR(key), _objectVariable]);
 
-if !((_ret select 0) == 1) exitWith {ERROR("loadCrate: loading unsucessful", _ret); false};
+if !((_ret select 0) == 1) exitWith {ERROR_1("loadCrate: loading unsucessful %1", _ret); false};
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [

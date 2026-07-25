@@ -7,7 +7,7 @@ class CfgWeapons {
         type = 801;
     };
 
-    class skn_u_nbc_indep_blu: Itemcore {
+    class skn_u_nbc_indep_blu: ItemCore {
         class ItemInfo: UniformItem {
             containerClass = "Supply40";
         };

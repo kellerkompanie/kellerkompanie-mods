@@ -78,5 +78,7 @@ keys/
 releases/*
 keys/*
 .hemtt/local
+.hemttout/
+.hemttprivatekey
 ####
 .vscode/settings.json

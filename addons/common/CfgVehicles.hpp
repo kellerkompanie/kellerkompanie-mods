@@ -213,7 +213,7 @@ class CfgVehicles {
                     class opfBlu {name = "OPFOR + BLUFOR"; value = 3;};
                     class opf {name = "OPFOR"; value = 2;};
                     class blu {name = "BLUFOR"; value = 1;};
-                    class none {name = "keiner"; value = 0;};
+                    class noSide {name = "keiner"; value = 0;};
                 };
             };
             class ModuleDescription: ModuleDescription{};

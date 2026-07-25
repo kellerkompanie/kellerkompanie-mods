@@ -6,7 +6,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "\a3\editor_f\Data\Scripts\dikCodes.h"
+// #include "\a3\editor_f\Data\Scripts\dikCodes.h";
+#define DIK_F               0x21    /* F */
+#define DIK_H               0x23    /* H */
 
 ["Kellerkompanie Police","keko_police_shout_key", "Shout", {_this call FUNC(surrenderUnits)}, "", [DIK_F, [true, false, false]]] call CBA_fnc_addKeybind;
 ["Kellerkompanie Police","keko_police_handcuff_key", "Handcuff", {_this call FUNC(handcuffUnit)}, "", [DIK_H, [true, false, false]]] call CBA_fnc_addKeybind;

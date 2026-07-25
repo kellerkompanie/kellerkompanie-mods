@@ -35,7 +35,7 @@ class GVAR(menuDialog) {
         sizeEx = QUOTE(1 * GUI_GRID_H);
     };
 
-    class List: RscListbox
+    class List: RscListBox
     {
         idc = 1500;
         text = "Loadouts";

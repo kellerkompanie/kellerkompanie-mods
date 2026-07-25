@@ -10,7 +10,7 @@ if ((_ret select 0) == 1) then {
     } forEach (_ret select 1);
     true
 } else {
-    ERROR("dbGetLocations: loading unsucessful %1", _ret);
+    ERROR_1("dbGetLocations: loading unsucessful %1", _ret);
     false
 };
 

@@ -8,7 +8,7 @@ params ["_vehicle"];
 
 private _objectVariable = _vehicle getVariable [QGVAR(objectVariable), ""];
 
-if !(_objectVariable call FUNC(dbVehicleExists)) exitWith {ERROR("vehicle %1 does not exist in DB!", _objectVariable); false};
+if !(_objectVariable call FUNC(dbVehicleExists)) exitWith {ERROR_1("vehicle %1 does not exist in DB!", _objectVariable); false};
 
 if(count _objectVariable == 0) exitWith {
     _vehicle call FUNC(initObject);
@@ -19,7 +19,7 @@ if(count _objectVariable == 0) exitWith {
 
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getVehicle:%1:%2", GVAR(key), _objectVariable]);
 
-if !((_ret select 0) == 1) exitWith {ERROR("loadVehicleObject: loading unsucessful", _ret); false};
+if !((_ret select 0) == 1) exitWith {ERROR_1("loadVehicleObject: loading unsucessful %1", _ret); false};
 
 // assume loading was sucess
 ((_ret select 1) select 0) params [

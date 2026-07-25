@@ -12,7 +12,7 @@ if ((_ret select 0) == 1) then {
         _existingVariables pushBack _objectVariable;
     } forEach (_ret select 1);
 } else {
-    ERROR("generateNewObjectVariable: loading unsucessful %1", _ret);
+    ERROR_1("generateNewObjectVariable: loading unsucessful %1", _ret);
 };
 
 private _objectVariable = format ["keko_persistency_%1", 0];

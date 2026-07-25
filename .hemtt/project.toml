@@ -1,0 +1,12 @@
+name = "Kellerkompanie"
+prefix = "keko"
+author = "Schwaggot"
+mainprefix = "x"
+
+[files]
+include = [
+    "mod.cpp",
+    "LICENSE",
+    "README.md",
+    "logo_keko_ca.paa"
+]

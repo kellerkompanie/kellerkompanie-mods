@@ -14,7 +14,7 @@ if (_playerUID find "HC" >= 0) exitWith {
 private _ret = call compile ("extDB3" callExtension format [ "0:keko_persistency:getPlayerLoadout:%1:%2", GVAR(key), _playerUID]);
 
 if ((_ret select 0) != 1) exitWith {
-    ERROR("loadPlayerLoadout: loading unsucessful", _ret);
+    ERROR_1("loadPlayerLoadout: loading unsucessful %1", _ret);
     false
 };
 
