@@ -19,6 +19,4 @@ class CfgPatches {
 #include "CfgReplacementItems.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "ACE_Medical_Treatment.hpp"
-#include "ACE_Medical_Treatment_Actions.hpp"
 #include "CfgEventHandlers.hpp"

@@ -28,7 +28,7 @@ private _allItems = [player] call CBA_fnc_uniqueUnitItems;
     };
 } forEach [
     [QGVAR(canteen_generic), QEGVAR(canteen,canteen)],
-    [QGVAR(painkiller_generic), "KEKO_painkiller"]
+    [QGVAR(painkiller_generic), "ACE_painkillers"]
 ];
 
 {

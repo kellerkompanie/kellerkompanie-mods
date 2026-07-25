@@ -43,8 +43,4 @@ class CfgWeapons {
     class ACE_surgicalKit: ACE_ItemCore {
         picture = QPATHTOF(ui\surgicalkit_ca.paa);
     };
-
-    class KEKO_painkiller: ACE_ItemCore {
-        picture = QPATHTOF(ui\painkiller_ca.paa);
-    };
 };

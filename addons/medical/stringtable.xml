@@ -21,14 +21,5 @@
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
             <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln</German>
         </Key>
-
-        <Key ID="STR_keko_medical_Administer_Painkiller">
-            <English>Administer Painkiller</English>
-            <German>Painkiller verabreichen</German>
-        </Key>
-        <Key ID="STR_keko_medical_Administering_Painkiller">
-            <English>Administering Painkiller...</English>
-            <German>Morphin verabreichen...</German>
-        </Key>
     </Package>
 </Project>

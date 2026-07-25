@@ -62,7 +62,7 @@ private _action = [
         "ACE_tourniquet",
         "ACE_medicalSupplyCrate",
         "ACE_medicalSupplyCrate_advanced",
-        "KEKO_painkiller",
+        "ACE_painkillers",
         "FirstAidKit",
         "Medikit",
         "keko_firstAidKit"
