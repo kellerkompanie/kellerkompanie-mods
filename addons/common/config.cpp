@@ -65,9 +65,7 @@ class CfgPatches {
             "ace_ai",
             "ace_hearing",
             "ace_medical",
-            "ace_medical_treatment",
-            "acex_main",
-            "3denEnhanced"
+            "ace_medical_treatment"
         };
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
@@ -77,7 +75,6 @@ class CfgPatches {
 };
 
 #include "CfgFactionClasses.hpp"
-#include "CfgFunctions.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

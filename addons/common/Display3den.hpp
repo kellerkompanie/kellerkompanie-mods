@@ -1,4 +1,3 @@
-class ctrlMenu;
 class ctrlMenuStrip;
 class ctrlShortcutButton;
 class Display3den {
@@ -14,22 +13,6 @@ class Display3den {
             shortcuts[] = {
                 "0x00050000 + 0",
                 57
-            };
-        };
-    };
-
-    // adds option for faction config export
-    class ContextMenu: ctrlMenu {
-        class Items {
-            class Log {
-                items[] += {
-                    QGVAR(factionExport)
-                };
-            };
-            class GVAR(factionExport) {
-                text = "Export for Faction Generator";
-                action = QUOTE(call FUNC(exportToClipboard));
-                conditionShow = "selectedObject";
             };
         };
     };

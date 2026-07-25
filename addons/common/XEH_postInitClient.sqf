@@ -54,8 +54,8 @@ private _fixMapBugaction = [
     QGVAR(fixMapBug),
     localize LSTRING(fixMapBug),
     "",
-    { 
-        false call RR_mapStuff_fnc_mapEH;
+    {
+        if (!isNil "RR_mapStuff_fnc_mapEH") then { false call RR_mapStuff_fnc_mapEH; };
 		{
 			detach _x; 
 			deleteVehicle _x;
