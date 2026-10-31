@@ -3,10 +3,10 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[]= {};
+        units[] = {};
         weapons[] = {};
-        requiredVersion= REQUIRED_VERSION;
-        requiredAddons[]= {
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
             "keko_common",
             "bwa3_pzf3",
             "bwa3_fliegerfaust",
@@ -15,6 +15,7 @@ class CfgPatches {
             "bwa3_rgw90",
             "bwa3_comp_ace"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

@@ -3,12 +3,13 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[]= {};
+        units[] = {};
         weapons[] = {};
-        requiredVersion= REQUIRED_VERSION;
-        requiredAddons[]= {
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
             "skn_nbc_units"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

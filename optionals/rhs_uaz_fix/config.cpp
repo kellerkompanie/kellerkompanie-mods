@@ -3,14 +3,15 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[]= {};
+        units[] = {};
         weapons[] = {};
-        requiredVersion= REQUIRED_VERSION;
-        requiredAddons[]= {
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
             "rhs_main",
             "rhs_c_a2port_car",
             "rhs_cti_insurgents"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

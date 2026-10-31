@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON    {
+    class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
         units[] = {};
@@ -10,6 +10,7 @@ class CfgPatches {
         requiredAddons[] = {
             "ar_things"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

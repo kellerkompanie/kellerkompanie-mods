@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[]= {};
+        units[] = {};
         weapons[] = {};
         magazines[] = {
             QGVAR(LIB_75Rnd_792x57),
@@ -13,8 +13,8 @@ class CfgPatches {
             QGVAR(FOW_150Rnd_792x57),
             QGVAR(FOW_250Rnd_792x57)
         };
-        requiredVersion= REQUIRED_VERSION;
-        requiredAddons[]= {
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
             "fow_munitions",
             "fow_weapons",
             "LIB_weapons",
@@ -25,6 +25,7 @@ class CfgPatches {
             "WW2_Core_c_WW2_EditorPreviews_c",
             "fow_characters_c"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

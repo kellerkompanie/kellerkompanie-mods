@@ -10,6 +10,7 @@ class CfgPatches {
             "ace_common",
             "RHS_Missions_Pack"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

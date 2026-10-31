@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-          /* OPFOR units */
+            /* OPFOR units */
             QGVAR(opfor_soldier1),
             QGVAR(opfor_soldier2),
             QGVAR(opfor_soldier3),
@@ -38,15 +38,16 @@ class CfgPatches {
             "A3_Characters_F_INDEP",
             "A3_Characters_F_OPFOR",
             "A3_Characters_F",
-              "MU_core",
-              "A3_Weapons_F",
-              "A3_Air_F",
-              "A3_Air_F_beta",
-              "A3_Soft_F",
-              "A3_Soft_F_Offroad_01",
-              "A3_Static_F",
-              "A3_boat_F"
+            "MU_core",
+            "A3_Weapons_F",
+            "A3_Air_F",
+            "A3_Air_F_beta",
+            "A3_Soft_F",
+            "A3_Soft_F_Offroad_01",
+            "A3_Static_F",
+            "A3_boat_F"
         };
+        skipWhenMissingDependencies = 1;
         author = "Schwaggot";
         authors[] = {"Schwaggot"};
         url = ECSTRING(main,URL);

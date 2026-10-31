@@ -234,11 +234,12 @@ class CfgPatches {
             "A3_Weapons_F",
             "SMA_Weapons",
             "SMA_Weapons_Magazines"
-       };
-       author = "Schwaggot";
-       authors[] = {"Schwaggot"};
-       url = ECSTRING(main,URL);
-       VERSION_CONFIG;
+        };
+        skipWhenMissingDependencies = 1;
+        author = "Schwaggot";
+        authors[] = {"Schwaggot"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG;
     };
 };
 
