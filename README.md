@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/kellerkompanie/kellerkompanie-mods/raw/master/media/kk-logo-full-0.5x.png">
+    <img src="https://github.com/kellerkompanie/kellerkompanie-mods/raw/main/media/kk-logo-full-0.5x.png">
 </p>
 
 <p align="center">
